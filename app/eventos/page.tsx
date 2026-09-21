@@ -75,8 +75,7 @@ export default function Eventos() {
       </section>
 
       <section id="outros" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Outros eventos</p>
-        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Entre outros</h2>
+        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Outros eventos</h2>
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {outros.map((o) => (
             <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">

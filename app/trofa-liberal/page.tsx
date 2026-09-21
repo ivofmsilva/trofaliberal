@@ -9,7 +9,6 @@ type Marco = {
   ano: string;
   titulo: string;
   texto: string;
-  foto?: { src: string; alt: string; w: number; h: number };
 };
 
 const marcos: Marco[] = [
@@ -27,12 +26,6 @@ const marcos: Marco[] = [
     ano: "2022",
     titulo: "Plenário fundador do núcleo",
     texto: "Primeiro grupo de coordenação eleito em São Romão do Coronado.",
-    foto: {
-      src: "/images/geral/plenario-fundador-2022.jpg",
-      alt: "Plenário fundador do núcleo da IL Trofa, em 2022",
-      w: 1440,
-      h: 968,
-    },
   },
   {
     ano: "2024",
@@ -123,18 +116,8 @@ export default function Sobre() {
             {marcos.map((m) => (
               <li
                 key={`${m.ano}-${m.titulo}`}
-                className={`overflow-hidden rounded-2xl bg-navy-soft ${m.foto ? "sm:col-span-2" : ""}`}
+                className="overflow-hidden rounded-2xl bg-navy-soft"
               >
-                {m.foto && (
-                  <Image
-                    src={m.foto.src}
-                    alt={m.foto.alt}
-                    width={m.foto.w}
-                    height={m.foto.h}
-                    sizes="(min-width: 1024px) 560px, 100vw"
-                    className="aspect-[16/9] w-full object-cover"
-                  />
-                )}
                 <div className="p-6">
                   <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
                   <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>

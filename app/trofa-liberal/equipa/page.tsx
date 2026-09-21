@@ -48,10 +48,11 @@ const mandatos = [
   },
   {
     periodo: "2022 – 2024",
+    foto: { src: "/images/geral/plenario-fundador-2022.jpg", alt: "Plenário fundador do núcleo da IL Trofa, em 2022", w: 1440, h: 968 },
     coordenador: "José Pedro Reis",
     mesa: "Ivo Silva",
     texto:
-      "O Plenário fundador ocorreu a 25 de junho de 2022, no auditório da Junta de Freguesia do Coronado (Polo de São Romão), com a presença do antigo presidente da IL, Rui Rocha.",
+      "O Plenário fundador ocorreu a 25 de junho de 2022, no auditório da Junta de Freguesia do Coronado (Polo de São Romão), com a presença do antigo presidente da IL, Rui Rocha. Foi eleito o primeiro grupo de coordenação do núcleo.",
   },
 ];
 
@@ -110,29 +111,41 @@ export default function Equipa() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Órgãos sociais</p>
         <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Mandatos anteriores</h2>
-        <ol className="mt-10 grid gap-5 md:grid-cols-2">
+        <ol className="mt-10 space-y-4">
           {mandatos.map((m) => (
-            <li key={m.periodo} className="overflow-hidden rounded-2xl bg-navy text-white">
-              {m.foto && (
-                <Image
-                  src={m.foto.src}
-                  alt={m.foto.alt}
-                  width={m.foto.w}
-                  height={m.foto.h}
-                  sizes="(min-width: 768px) 560px, 100vw"
-                  className="aspect-[16/9] w-full object-cover"
-                />
-              )}
-              <div className="p-8">
-              <span className="font-display text-3xl font-bold text-sun">{m.periodo}</span>
-              <p className="mt-4 text-sm">
-                <span className="text-white/70">Coordenação:</span> {m.coordenador}
-              </p>
-              <p className="text-sm">
-                <span className="text-white/70">Mesa do Plenário:</span> {m.mesa}
-              </p>
-              <p className="mt-4 text-sm text-white/80">{m.texto}</p>
-              </div>
+            <li key={m.periodo}>
+              <details className="group overflow-hidden rounded-2xl bg-navy text-white">
+                <summary className="flex cursor-pointer list-none items-center gap-5 p-6 [&::-webkit-details-marker]:hidden">
+                  <span className="font-display text-3xl font-bold text-sun">{m.periodo}</span>
+                  <span className="flex-1 text-sm">
+                    <span className="block">
+                      <span className="text-white/70">Coordenação:</span> {m.coordenador}
+                    </span>
+                    <span className="block">
+                      <span className="text-white/70">Mesa do Plenário:</span> {m.mesa}
+                    </span>
+                  </span>
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 24 24"
+                    className="h-7 w-7 shrink-0 fill-none stroke-sun stroke-[3] transition-transform group-open:rotate-180"
+                  >
+                    <path d="M5 9l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="sr-only">Mostrar ou esconder detalhes</span>
+                </summary>
+                <div className="grid gap-6 border-t border-white/10 p-6 md:grid-cols-[1fr_1fr]">
+                  <p className="text-white/85">{m.texto}</p>
+                  <Image
+                    src={m.foto.src}
+                    alt={m.foto.alt}
+                    width={m.foto.w}
+                    height={m.foto.h}
+                    sizes="(min-width: 768px) 520px, 100vw"
+                    className="w-full rounded-xl object-cover"
+                  />
+                </div>
+              </details>
             </li>
           ))}
         </ol>
