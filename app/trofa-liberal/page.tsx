@@ -5,7 +5,14 @@ import { plenario2026 } from "@/lib/equipa";
 
 export const metadata: Metadata = { title: "Sobre a IL Trofa — Iniciativa Liberal Trofa" };
 
-const marcos = [
+type Marco = {
+  ano: string;
+  titulo: string;
+  texto: string;
+  foto?: { src: string; alt: string; w: number; h: number };
+};
+
+const marcos: Marco[] = [
   {
     ano: "2021",
     titulo: "Primeiro encontro liberal na Trofa",
@@ -17,14 +24,36 @@ const marcos = [
     texto: "Primeira campanha liberal a passar na Trofa.",
   },
   {
+    ano: "2022",
+    titulo: "Plenário fundador do núcleo",
+    texto: "Primeiro grupo de coordenação eleito em São Romão do Coronado.",
+    foto: {
+      src: "/images/geral/plenario-fundador-2022.jpg",
+      alt: "Plenário fundador do núcleo da IL Trofa, em 2022",
+      w: 1440,
+      h: 968,
+    },
+  },
+  {
     ano: "2024",
     titulo: "Plenário eletivo",
     texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
   },
   {
+    ano: "2024",
+    titulo: "Primeiros liberais trofenses nas listas à Assembleia da República",
+    texto: "José Pedro Reis e Diamantino Costa integram as listas à Assembleia da República.",
+  },
+  {
     ano: "2025",
     titulo: "Representação no Conselho Municipal de Juventude",
     texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
+  },
+  {
+    ano: "2025",
+    titulo: "Primeiras Autárquicas",
+    texto:
+      "Listas à Câmara e à Assembleia Municipal da Trofa e às juntas de freguesia de Bougado e Alvarelhos.",
   },
   {
     ano: "2026",
@@ -38,7 +67,11 @@ const marcos = [
 export default function Sobre() {
   return (
     <>
-      <PageHero eyebrow="Sobre a IL Trofa" title="Um caminho liberal para a Trofa" image={{ src: "/images/geral/grupo-mar.jpeg", alt: "Membros da IL Trofa junto ao mar", w: 575, h: 575 }}>
+      <PageHero
+        eyebrow="Sobre a IL Trofa"
+        title="Um caminho liberal para a Trofa"
+        image={{ src: "/images/geral/grupo-mar-corte.jpeg", alt: "Membros da IL Trofa junto ao mar", w: 575, h: 304 }}
+      >
         A IL Trofa existe para defender um concelho onde cada trofense possa viver com mais
         liberdade e oportunidades.
       </PageHero>
@@ -64,20 +97,49 @@ export default function Sobre() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-20 sm:px-6 md:grid-cols-2">
-        <Image src="/images/geral/grupo-nucleo.jpg" alt="Membros do núcleo da IL Trofa" width={1440} height={1440} sizes="(min-width: 768px) 560px, 100vw" className="aspect-[4/3] w-full rounded-2xl object-cover" />
-        <Image src="/images/geral/crianca-bandeira.jpeg" alt="Criança com a bandeira da Trofa" width={410} height={410} sizes="(min-width: 768px) 560px, 100vw" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+        <Image
+          src="/images/geral/comunidade-destrave.jpeg"
+          alt="Liberais trofenses reunidos na caminhada Destrave Liberal"
+          width={961}
+          height={630}
+          sizes="(min-width: 768px) 560px, 100vw"
+          className="aspect-[4/3] w-full rounded-2xl object-cover"
+        />
+        <Image
+          src="/images/geral/crianca-bandeira.jpeg"
+          alt="Criança com a bandeira da Trofa"
+          width={410}
+          height={410}
+          sizes="(min-width: 768px) 560px, 100vw"
+          className="aspect-[4/3] w-full rounded-2xl object-cover"
+        />
       </section>
 
       <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
           <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
-          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {marcos.map((m) => (
-              <li key={m.ano} className="rounded-2xl bg-navy-soft p-6">
-                <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
-                <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
-                <p className="mt-2 text-sm text-white/75">{m.texto}</p>
+              <li
+                key={`${m.ano}-${m.titulo}`}
+                className={`overflow-hidden rounded-2xl bg-navy-soft ${m.foto ? "sm:col-span-2" : ""}`}
+              >
+                {m.foto && (
+                  <Image
+                    src={m.foto.src}
+                    alt={m.foto.alt}
+                    width={m.foto.w}
+                    height={m.foto.h}
+                    sizes="(min-width: 1024px) 560px, 100vw"
+                    className="aspect-[16/9] w-full object-cover"
+                  />
+                )}
+                <div className="p-6">
+                  <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
+                  <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
+                  <p className="mt-2 text-sm text-white/80">{m.texto}</p>
+                </div>
               </li>
             ))}
           </ol>

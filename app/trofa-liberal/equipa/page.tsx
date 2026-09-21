@@ -40,6 +40,7 @@ function Pessoa({ m, destaque }: { m: Membro; destaque?: boolean }) {
 const mandatos = [
   {
     periodo: "2024 – 2026",
+    foto: { src: "/images/geral/grupo-bandeira.png", alt: "Plenário de 2024 da IL Trofa, com a bandeira do concelho", w: 732, h: 578 },
     coordenador: "Ivo Silva",
     mesa: "Afonso Couto",
     texto:
@@ -61,7 +62,7 @@ export default function Equipa() {
       <PageHero
         eyebrow="Trofa Liberal"
         title="A equipa que faz a diferença"
-        image={{ src: "/images/geral/grupo-bandeira.png", alt: "Equipa da IL Trofa com a bandeira do concelho", w: 732, h: 578 }}
+        image={{ src: "/images/geral/provisoria-equipa.jpeg", alt: "Liberais trofenses com t-shirts azuis num evento", w: 484, h: 605 }}
       >
         Uma equipa dedicada, comprometida em promover os valores liberais no concelho e em
         encontrar soluções que coloquem a liberdade individual e o progresso no centro das suas
@@ -111,7 +112,18 @@ export default function Equipa() {
         <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Mandatos anteriores</h2>
         <ol className="mt-10 grid gap-5 md:grid-cols-2">
           {mandatos.map((m) => (
-            <li key={m.periodo} className="rounded-2xl bg-navy p-8 text-white">
+            <li key={m.periodo} className="overflow-hidden rounded-2xl bg-navy text-white">
+              {m.foto && (
+                <Image
+                  src={m.foto.src}
+                  alt={m.foto.alt}
+                  width={m.foto.w}
+                  height={m.foto.h}
+                  sizes="(min-width: 768px) 560px, 100vw"
+                  className="aspect-[16/9] w-full object-cover"
+                />
+              )}
+              <div className="p-8">
               <span className="font-display text-3xl font-bold text-sun">{m.periodo}</span>
               <p className="mt-4 text-sm">
                 <span className="text-white/70">Coordenação:</span> {m.coordenador}
@@ -120,6 +132,7 @@ export default function Equipa() {
                 <span className="text-white/70">Mesa do Plenário:</span> {m.mesa}
               </p>
               <p className="mt-4 text-sm text-white/80">{m.texto}</p>
+              </div>
             </li>
           ))}
         </ol>

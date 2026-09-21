@@ -8,17 +8,17 @@ export const plenario2026 = {
 export type Membro = { nome: string; cargo: string; foto?: string };
 
 export const gcl: Membro[] = [
-  { nome: "Bruno Miguel Silva Magalhães", cargo: "Coordenador", foto: "/images/equipa/bruno-magalhaes.png" },
-  { nome: "José Pedro Maia dos Reis", cargo: "Vice-coordenador", foto: "/images/equipa/jose-pedro-reis.png" },
-  { nome: "Paula Cristina Ferreira Peixoto", cargo: "Secretária" },
-  { nome: "Ivo Francisco Matos da Silva", cargo: "Tesoureiro" },
-  { nome: "João Duarte Lourenço Pinheiro", cargo: "Vogal" },
-  { nome: "Filipe Manuel Silva Couto", cargo: "1.º Suplente" },
-  { nome: "Dora Alexandra Martins Costa", cargo: "2.ª Suplente" },
+  { nome: "Bruno Magalhães", cargo: "Coordenador", foto: "/images/equipa/bruno-magalhaes.png" },
+  { nome: "José Pedro Reis", cargo: "Vice-coordenador", foto: "/images/equipa/jose-pedro-reis.png" },
+  { nome: "Paula Peixoto", cargo: "Secretária" },
+  { nome: "Ivo Silva", cargo: "Tesoureiro" },
+  { nome: "Duarte Pinheiro", cargo: "Vogal" },
+  { nome: "Filipe Couto", cargo: "1.º Suplente" },
+  { nome: "Dora Costa", cargo: "2.ª Suplente" },
 ];
 
 export const mesa: Membro[] = [
-  { nome: "José Afonso Miranda Couto", cargo: "Presidente da Mesa do Plenário" },
-  { nome: "Manuel António Maia Vilas Boas", cargo: "1.º Secretário da Mesa do Plenário" },
-  { nome: "João Carlos Sousa Barros", cargo: "2.º Secretário da Mesa do Plenário" },
+  { nome: "Afonso Couto", cargo: "Presidente da Mesa do Plenário" },
+  { nome: "Manuel Vilas Boas", cargo: "1.º Secretário da Mesa do Plenário" },
+  { nome: "João Barros", cargo: "2.º Secretário da Mesa do Plenário" },
 ];
