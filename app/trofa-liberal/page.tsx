@@ -39,14 +39,14 @@ const marcos: Marco[] = [
   },
   {
     ano: "2025",
-    titulo: "Representação no Conselho Municipal de Juventude",
-    texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
+    titulo: "Primeiras Autárquicas",
+    texto:
+      "Listas à Câmara e à Assembleia Municipal da Trofa e às juntas de freguesia de Bougado e Alvarelhos. A IL trouxe uma nova forma de fazer política às eleições.",
   },
   {
     ano: "2025",
-    titulo: "Primeiras Autárquicas",
-    texto:
-      "Listas à Câmara e à Assembleia Municipal da Trofa e às juntas de freguesia de Bougado e Alvarelhos.",
+    titulo: "Representação no Conselho Municipal de Juventude",
+    texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
   },
   {
     ano: "2026",
