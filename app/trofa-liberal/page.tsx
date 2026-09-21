@@ -1,0 +1,85 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import PageHero from "@/components/PageHero";
+
+export const metadata: Metadata = { title: "Sobre a IL Trofa — Iniciativa Liberal Trofa" };
+
+const marcos = [
+  {
+    ano: "2021",
+    titulo: "Primeiro encontro liberal na Trofa",
+    texto: "Primeiro contacto entre simpatizantes e membros da IL no concelho.",
+  },
+  {
+    ano: "2022",
+    titulo: "Deputados liberais eleitos pelo círculo do Porto",
+    texto: "Primeira campanha liberal a passar na Trofa.",
+  },
+  {
+    ano: "2024",
+    titulo: "Plenário eletivo",
+    texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
+  },
+  {
+    ano: "2025",
+    titulo: "Representação no Conselho Municipal de Juventude",
+    texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
+  },
+  {
+    ano: "2026",
+    titulo: "Plenário eletivo",
+    texto: "Novo Grupo de Coordenação da IL Trofa eleito em Alvarelhos.",
+  },
+];
+
+export default function Sobre() {
+  return (
+    <>
+      <PageHero eyebrow="Sobre a IL Trofa" title="Um caminho liberal para a Trofa" image={{ src: "/images/geral/grupo-mar.jpeg", alt: "Membros da IL Trofa junto ao mar", w: 575, h: 575 }}>
+        A IL Trofa existe para defender um concelho onde cada trofense possa viver com mais
+        liberdade e oportunidades.
+      </PageHero>
+
+      <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-2">
+        <div>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">
+            Somos um grupo de cidadãos com iniciativa!
+          </h2>
+        </div>
+        <div className="space-y-5 text-lg text-ink/85">
+          <p>
+            Acreditamos que a Trofa tem potencial para ser um dos concelhos mais prósperos e
+            inovadores de Portugal. Para isso precisamos de menos burocracia na câmara, menos
+            impostos, e mais confiança nas pessoas e nas empresas que aqui vivem e trabalham.
+          </p>
+          <p>
+            Não somos um partido como os outros. Não prometemos tudo a todos. Apenas prometemos
+            defender a liberdade em todas as suas vertentes, porque acreditamos que são as
+            pessoas, não os políticos, que devem decidir o seu futuro.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-20 sm:px-6 md:grid-cols-2">
+        <Image src="/images/geral/grupo-nucleo.jpg" alt="Membros do núcleo da IL Trofa" width={1440} height={1440} sizes="(min-width: 768px) 560px, 100vw" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+        <Image src="/images/geral/crianca-bandeira.jpeg" alt="Criança com a bandeira da Trofa" width={410} height={410} sizes="(min-width: 768px) 560px, 100vw" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+      </section>
+
+      <section className="bg-navy py-20 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
+          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
+          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {marcos.map((m) => (
+              <li key={m.ano} className="rounded-2xl bg-navy-soft p-6">
+                <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
+                <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
+                <p className="mt-2 text-sm text-white/75">{m.texto}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </>
+  );
+}
