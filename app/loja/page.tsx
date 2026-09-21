@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = { title: "Loja e Donativos — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = { title: "Loja — Iniciativa Liberal Trofa" };
 
 const produtos = [
   {
@@ -35,7 +36,11 @@ const produtos = [
 export default function Loja() {
   return (
     <>
-      <PageHero eyebrow="Loja e Donativos" title="Bem-vind@ à nossa loja!" image={{ src: "/images/loja/hero.jpeg", alt: "Apoiantes da IL Trofa com bandeiras", w: 730, h: 912 }}>
+      <PageHero
+        eyebrow="Loja"
+        title="Bem-vind@ à nossa loja!"
+        image={{ src: "/images/loja/hero.jpeg", alt: "Apoiantes da IL Trofa com bandeiras", w: 730, h: 912 }}
+      >
         Estás na montra liberal da Trofa — aqui encontras produtos com estilo, atitude e propósito.
         Veste a causa. Usa com orgulho.
       </PageHero>
@@ -50,23 +55,32 @@ export default function Loja() {
           {produtos.map((p) => (
             <li key={p.nome} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
               {p.imagem ? (
-                <Image src={p.imagem.src} alt={p.nome} width={p.imagem.w} height={p.imagem.h} sizes="(min-width: 1024px) 300px, 50vw" className="aspect-[3/2] w-full bg-white object-contain" />
+                <Image
+                  src={p.imagem.src}
+                  alt={p.nome}
+                  width={p.imagem.w}
+                  height={p.imagem.h}
+                  sizes="(min-width: 1024px) 300px, 50vw"
+                  className="aspect-[3/2] w-full bg-white object-contain"
+                />
               ) : (
-                <div className="flex aspect-[3/2] items-center justify-center bg-navy-soft font-display text-2xl font-bold text-sun">Acelerar a Trofa</div>
+                <div className="font-display flex aspect-[3/2] items-center justify-center bg-navy-soft text-2xl font-bold text-sun">
+                  Acelerar a Trofa
+                </div>
               )}
               <div className="flex flex-1 flex-col p-8">
-              <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
-              <p className="mt-3 text-white/75">{p.texto}</p>
-              <div className="mt-auto space-y-4 pt-6">
-                {p.breve ? (
-                  <span className="text-sm font-bold text-white/50">Em breve</span>
-                ) : (
-                  <>
-                    <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
-                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} />
-                  </>
-                )}
-              </div>
+                <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
+                <p className="mt-3 text-white/80">{p.texto}</p>
+                <div className="mt-auto space-y-4 pt-6">
+                  {p.breve ? (
+                    <span className="text-sm font-bold text-white/60">Em breve</span>
+                  ) : (
+                    <>
+                      <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
+                      <OrderButton produto={p.nome} tamanhos={p.tamanhos} />
+                    </>
+                  )}
+                </div>
               </div>
             </li>
           ))}
@@ -76,48 +90,18 @@ export default function Loja() {
         </p>
       </section>
 
-      <section id="donativos" className="scroll-mt-16 bg-mist py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Donativos</p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            Donativos Iniciativa Liberal Trofa
-          </h2>
-          <div className="mt-8 space-y-4 text-lg text-ink/85">
-            <p className="font-bold text-navy">
-              Obrigado por apoiares o Núcleo da Iniciativa Liberal da Trofa!
-            </p>
-            <p>
-              O sucesso das nossas iniciativas também depende do teu apoio financeiro. Cada donativo
-              permite-nos continuar a lutar por uma Trofa mais livre e próspera. Garantimos total
-              transparência: as nossas contas são públicas e auditadas pelo Departamento Financeiro
-              da Iniciativa Liberal, fiscalizado pelo Tribunal Constitucional, nos termos do Artigo
-              27.º da Lei Orgânica n.º 2/2005, de 10 de janeiro.
-            </p>
-            <p className="rounded-2xl border-l-4 border-cyan bg-white p-5 text-base">
-              Lembra-te que todas as transferências devem obrigatoriamente ser feitas por pessoas
-              singulares e de contas bancárias pessoais. Transferências de contas empresariais são
-              ilegais e terão de ser devolvidas.
-            </p>
-            <p>
-              Podes efetuar o teu donativo diretamente através do formulário abaixo, escolhendo o
-              método de pagamento (Multibanco ou MB WAY) e selecionando <strong>NT TROFA</strong> como
-              beneficiário.
-            </p>
-          </div>
-          <iframe
-            src="https://www.eupago.pt/lp/il_donativos/index.php"
-            title="Formulário de donativos da Iniciativa Liberal"
-            loading="lazy"
-            className="mt-8 h-[900px] w-full rounded-2xl border-2 border-mist bg-white"
-          />
-          <a
-            href="https://www.eupago.pt/lp/il_donativos/index.php"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block font-bold text-cyan-dark hover:underline"
+      <section className="bg-sun py-16 text-center text-navy">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="font-display text-4xl font-bold">Apoia a causa liberal na Trofa</h2>
+          <p className="mt-3 text-lg font-medium">
+            Cada donativo ajuda-nos a levar as ideias da liberdade a mais trofenses.
+          </p>
+          <Link
+            href="/loja/donativos"
+            className="mt-6 inline-block rounded-full bg-navy px-8 py-3 font-bold text-white transition hover:bg-pink"
           >
-            Abrir o formulário numa página própria ↗
-          </a>
+            Fazer um donativo
+          </Link>
         </div>
       </section>
     </>

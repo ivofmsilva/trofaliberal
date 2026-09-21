@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { plenario2026 } from "@/lib/equipa";
 
 export const metadata: Metadata = { title: "Sobre a IL Trofa — Iniciativa Liberal Trofa" };
 
@@ -28,7 +29,9 @@ const marcos = [
   {
     ano: "2026",
     titulo: "Plenário eletivo",
-    texto: "Novo Grupo de Coordenação da IL Trofa eleito em Alvarelhos.",
+    texto: plenario2026.realizado
+      ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}.`
+      : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
   },
 ];
 

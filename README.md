@@ -19,6 +19,8 @@ npm run build    # build de produção
 | Candidatos, programas, diário de campanha | `lib/autarquicas.ts` |
 | Cores | `app/globals.css` |
 | Imagens | `public/images/` · PDFs em `public/programas/` |
+| Galerias de fotos (LIT, Aqui há Parlamento) | copiar as fotos para `public/images/eventos/lit/` ou `public/images/eventos/aqui-ha-parlamento/` — aparecem sozinhas |
+| Equipa e plenário (mudar `realizado` para `true` após o plenário) | `lib/equipa.ts` |
 
 Os formulários (adesão, contactos, ideias, denúncia, encomendas) abrem o programa
 de email do utilizador, dirigidos a `trofa@liberal.pt`.

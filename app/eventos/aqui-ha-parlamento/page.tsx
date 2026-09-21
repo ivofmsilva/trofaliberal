@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Galeria from "@/components/Galeria";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import { links } from "@/lib/eventos";
+import { fotos } from "@/lib/galeria";
 import { itens } from "@/lib/imprensa";
 
 export const metadata: Metadata = { title: "Aqui há Parlamento — Iniciativa Liberal Trofa" };
@@ -46,15 +47,7 @@ export default function AquiHaParlamento() {
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
-          <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-            {["/images/eventos/parlamento-91.jpg"].map((s) => (
-              <li key={s}>
-                <a href={s} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink">
-                  <Image src={s} alt="Foto do evento" width={480} height={480} sizes="(min-width: 1024px) 220px, 50vw" className="aspect-square w-full object-cover" />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <Galeria fotos={fotos("aqui-ha-parlamento")} alt="Aqui há Parlamento" />
         </div>
       </section>
 

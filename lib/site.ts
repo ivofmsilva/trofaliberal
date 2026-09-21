@@ -6,6 +6,21 @@ export const links = {
   nacionais: "https://iniciativaliberal.pt/ideias/",
 };
 
+export const autarquicasNav = [
+  { label: "Trofa Para Cima", href: "/autarquicas-2025" },
+  { label: "Programa eleitoral", href: "/autarquicas-2025/programa" },
+  { label: "Candidatos", href: "/autarquicas-2025/candidatos" },
+  { label: "Apresentação da candidatura", href: "/autarquicas-2025/apresentacao-candidatura" },
+  { label: "Apresentação do programa", href: "/autarquicas-2025/apresentacao-programa" },
+  { label: "Diário de campanha", href: "/autarquicas-2025/diario" },
+  { label: "Brochuras", href: "/autarquicas-2025/brochuras" },
+];
+
+export const lojaNav = [
+  { label: "Loja", href: "/loja" },
+  { label: "Donativos", href: "/loja/donativos" },
+];
+
 export type NavItem = {
   label: string;
   href: string;
@@ -56,6 +71,14 @@ export const nav: NavItem[] = [
       { label: "Outros eventos", href: "/eventos#outros" },
     ],
   },
-  { label: "Autárquicas 2025", href: "/autarquicas-2025" },
-  { label: "Loja e Donativos", href: "/loja" },
+  {
+    label: "Autárquicas 2025",
+    href: "/autarquicas-2025",
+    children: autarquicasNav,
+  },
+  {
+    label: "Loja e Donativos",
+    href: "/loja",
+    children: lojaNav,
+  },
 ];

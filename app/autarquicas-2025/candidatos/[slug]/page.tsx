@@ -34,7 +34,7 @@ export default async function Candidato({ params }: { params: Promise<{ slug: st
             className="aspect-square w-full max-w-xs rounded-2xl object-cover"
           />
           <div>
-            <Link href="/autarquicas-2025#candidatos" className="text-sm font-bold text-sun hover:underline">
+            <Link href="/autarquicas-2025/candidatos" className="text-sm font-bold text-sun hover:underline">
               ← Voltar aos candidatos
             </Link>
             <p className="mt-6 text-sm font-bold uppercase tracking-[0.25em] text-sun">{c.cargo}</p>

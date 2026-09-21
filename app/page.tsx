@@ -88,13 +88,13 @@ export default function Home() {
           </div>
           </div>
           <Image
-            src="/images/geral/comunidade-destrave.jpeg"
-            alt="Liberais trofenses de t-shirt azul na caminhada Destrave Liberal"
-            width={961}
-            height={630}
+            src="/images/geral/bandeiras-no-ar.jpeg"
+            alt="Liberais trofenses a agitar bandeiras da Iniciativa Liberal"
+            width={626}
+            height={782}
             priority
-            sizes="(min-width: 1024px) 560px, 100vw"
-            className="w-full rounded-3xl object-cover shadow-2xl shadow-black/30 ring-4 ring-white/30"
+            sizes="(min-width: 1024px) 420px, 100vw"
+            className="mx-auto max-h-[560px] w-auto max-w-full rounded-3xl object-cover shadow-2xl shadow-black/30 ring-4 ring-white/30"
           />
         </div>
       </section>
