@@ -67,7 +67,7 @@ export const areas: Area[] = [
     lema: "Liberdade para crescer",
     medidas: [
       "Balcão Único do Investidor",
-      "Reduzir derrama para micro e pequenas empresas",
+      "Reduzir a derrama municipal",
       "Criar novas zonas industriais",
       "Eliminar taxas injustificadas",
       "Revitalizar a Rua Conde São Bento",

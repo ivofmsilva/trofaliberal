@@ -11,7 +11,7 @@ export type Publicacao = {
 };
 
 export const ultimasPublicacoes: Publicacao[] = [
-  { id: "DRc-eUEjIQ-", alt: "Comunicado da IL Trofa sobre o acordo de maioria com o PS na Câmara", w: 900, h: 1096 },
-  { id: "DPooU0GDPXr", alt: "Último dia da campanha Trofa Para Cima", w: 900, h: 1200 },
-  { id: "DNEFm6ToO5b", alt: "Apresentação da candidatura Trofa Para Cima", w: 900, h: 1200 },
+  { id: "Dc9grxpKZAR", alt: "Comunicado: Iniciativa Liberal da Trofa reafirma a defesa do Metro ligeiro até à Trofa", w: 900, h: 1125 },
+  { id: "Dco6f0dimgQ", alt: "Parlamento na Praia — Aqui Há Parlamento com Carlos Guimarães Pinto e Miguel Rangel", w: 900, h: 900 },
+  { id: "DbZFGylIVfO", alt: "Reforma da Lei de Bases da Proteção Civil — proposta liberal apresentada", w: 900, h: 1125 },
 ];
