@@ -39,7 +39,7 @@ export default function FazteMembro() {
             ))}
           </ul>
           <p className="mt-8 text-ink/75">
-            Prefere algo mais rápido?{" "}
+            Queres começar já a contribuir com ideias?{" "}
             <a
               href={links.whatsapp}
               target="_blank"
@@ -88,13 +88,14 @@ export default function FazteMembro() {
       </section>
 
       <section className="bg-mist py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[220px_1fr]">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[280px_1fr]">
           <Image
-            src="/images/loja/tshirt.png"
-            alt="T-shirt Trofa para cima"
-            width={473}
-            height={243}
-            className="mx-auto w-44 rounded-2xl bg-white p-4 shadow-lg md:w-full"
+            src="/images/geral/veste-a-camisola.jpg"
+            alt="T-shirt da Iniciativa Liberal: Esquerda, Direita, Liberal — com Liberal marcado"
+            width={1000}
+            height={665}
+            sizes="(min-width: 768px) 280px, 60vw"
+            className="mx-auto w-56 rounded-2xl object-cover shadow-lg md:w-full"
           />
           <div className="text-center md:text-left">
             <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">

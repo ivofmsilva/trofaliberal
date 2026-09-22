@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import InstagramEmbed from "@/components/InstagramEmbed";
+import InstagramImage from "@/components/InstagramImage";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
@@ -126,10 +126,16 @@ export default function Home() {
             Ver mais no Instagram ↗
           </a>
         </div>
-        <ul className="mt-10 grid gap-6 md:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
           {ultimasPublicacoes.map((p) => (
             <li key={p.id}>
-              <InstagramEmbed id={p.id} titulo={p.alt} altura={480} />
+              <InstagramImage
+                src={`/images/instagram/${p.id}.jpg`}
+                alt={p.alt}
+                href={`https://www.instagram.com/p/${p.id}/`}
+                w={p.w}
+                h={p.h}
+              />
             </li>
           ))}
         </ul>

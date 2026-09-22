@@ -10,6 +10,11 @@ export const metadata: Metadata = { title: "Aqui há Parlamento — Iniciativa L
 
 const imprensa = itens.noticias.filter((n) => n.data?.startsWith("2022"));
 
+const intervencoes = [
+  { nome: "Carlos Guimarães Pinto", id: "nnrLmVIAwik" },
+  { nome: "Patrícia Gilvaz", id: "SUoUDfr-9U0" },
+];
+
 export default function AquiHaParlamento() {
   return (
     <>
@@ -52,6 +57,27 @@ export default function AquiHaParlamento() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Intervenções dos deputados</h2>
+        <ul className="mt-8 grid gap-8 md:grid-cols-2">
+          {intervencoes.map((v) => (
+            <li key={v.id}>
+              <div className="overflow-hidden rounded-2xl bg-navy">
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={`Intervenção de ${v.nome} — Aqui há Parlamento`}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="aspect-video w-full"
+                />
+              </div>
+              <p className="mt-3 text-center font-bold text-navy">{v.nome}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
         <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Na imprensa</h2>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {imprensa.map((n) => (
