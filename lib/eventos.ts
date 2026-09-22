@@ -16,12 +16,6 @@ export const outros = [
     imagem: "/images/eventos/fino-liberal-93.jpeg",
   },
   {
-    titulo: "Porto Liberal",
-    texto: "Uma tradição do núcleo da Trofa. Um encontro rápido com pão-de-ló e Porto. Uma tradição sem falha desde 2021.",
-    quando: "Dezembro",
-    imagem: "/images/eventos/porto-liberal-95.png",
-  },
-  {
     titulo: "Aniversário do núcleo",
     texto: "Desde 2022 a lutar por um bolo maior para todos.",
     quando: "Junho",
@@ -32,6 +26,12 @@ export const outros = [
     texto: "Uma caminhada com muita animação e um painel sobre temas da atualidade.",
     quando: "Setembro",
     imagem: "/images/geral/comunidade-destrave.jpeg",
+  },
+  {
+    titulo: "Porto Liberal",
+    texto: "Uma tradição do núcleo da Trofa. Um encontro rápido com pão-de-ló e Porto. Uma tradição sem falha desde 2021.",
+    quando: "Dezembro",
+    imagem: "/images/eventos/porto-liberal-95.png",
   },
 ];
 
