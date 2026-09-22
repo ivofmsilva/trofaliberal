@@ -23,7 +23,7 @@ export const outros = [
   },
   {
     titulo: "Aniversário do núcleo",
-    texto: "Desde 2022 a lutar por uma Trofa mais liberal.",
+    texto: "Desde 2022 a lutar por um bolo maior para todos.",
     quando: "Junho",
     imagem: "/images/eventos/aniversario-99.png",
   },

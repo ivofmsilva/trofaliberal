@@ -109,7 +109,7 @@ export const itens: Record<Categoria, Item[]> = {
       ],
     },
     {
-      titulo: "Comunicado da IL Trofa",
+      titulo: "IL Trofa toma nota do acordo de maioria entre a Câmara e o PS",
       fonte: "Instagram",
       href: "https://www.instagram.com/p/DRc-eUEjIQ-/",
     },

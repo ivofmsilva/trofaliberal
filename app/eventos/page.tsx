@@ -88,6 +88,10 @@ export default function Eventos() {
             </li>
           ))}
         </ul>
+        <p className="mt-10 text-center text-lg font-medium text-ink/75">
+          Entre muitos outros eventos. Promovemos o debate de ideias, a formação e a melhoria do
+          nosso concelho.
+        </p>
       </section>
     </>
   );

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import InstagramEmbed from "@/components/InstagramEmbed";
 import { links } from "@/lib/site";
+import { ultimasPublicacoes } from "@/lib/publicacoes";
 
 const principios = [
   {
@@ -103,6 +105,34 @@ export default function Home() {
         <p className="mx-auto max-w-3xl px-4 font-semibold text-navy">
           Bem-vindo à página oficial do núcleo territorial da Iniciativa Liberal da Trofa
         </p>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">
+              No Instagram
+            </p>
+            <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
+              Últimas publicações
+            </h2>
+          </div>
+          <a
+            href={links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-cyan-dark hover:underline"
+          >
+            Ver mais no Instagram ↗
+          </a>
+        </div>
+        <ul className="mt-10 grid gap-6 md:grid-cols-3">
+          {ultimasPublicacoes.map((p) => (
+            <li key={p.id}>
+              <InstagramEmbed id={p.id} titulo={p.alt} altura={480} />
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28">

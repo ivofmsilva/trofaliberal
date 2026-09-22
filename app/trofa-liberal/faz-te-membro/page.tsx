@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import MailForm from "@/components/MailForm";
 import { links } from "@/lib/site";
@@ -82,6 +84,32 @@ export default function FazteMembro() {
               { name: "freguesia", label: "Freguesia" },
             ]}
           />
+        </div>
+      </section>
+
+      <section className="bg-mist py-16">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[220px_1fr]">
+          <Image
+            src="/images/loja/tshirt.png"
+            alt="T-shirt Trofa para cima"
+            width={473}
+            height={243}
+            className="mx-auto w-44 rounded-2xl bg-white p-4 shadow-lg md:w-full"
+          />
+          <div className="text-center md:text-left">
+            <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">
+              Veste a camisola liberal!
+            </h2>
+            <p className="mt-3 text-ink/75">
+              Depois de te fazeres membro, passa pela loja e mostra o teu apoio com orgulho.
+            </p>
+            <Link
+              href="/loja"
+              className="mt-6 inline-block rounded-full bg-navy px-7 py-3 font-bold text-white transition hover:bg-pink"
+            >
+              Ver a loja →
+            </Link>
+          </div>
         </div>
       </section>
     </>
