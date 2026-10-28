@@ -12,6 +12,10 @@ const marcos: Marco[] = [
     ano: "2021",
     titulo: "Primeiro encontro liberal na Trofa",
     texto: "Primeiro contacto entre simpatizantes e membros da IL no concelho.",
+    foto: {
+      src: "/images/geral/primeiro-encontro-liberais.jpg",
+      alt: "Primeiro encontro de liberais na Trofa",
+    },
   },
   {
     ano: "2022",
@@ -74,10 +78,6 @@ const marcos: Marco[] = [
     texto: plenario2026.realizado
       ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}, a ${plenario2026.data}.`
       : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
-    foto: {
-      src: "/images/equipa/grupo-nucleo.jpg",
-      alt: "Membros do núcleo da IL Trofa reunidos",
-    },
   },
 ];
 

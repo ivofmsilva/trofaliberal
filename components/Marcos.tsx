@@ -30,15 +30,6 @@ export default function Marcos({ marcos }: { marcos: Marco[] }) {
               <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
               <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
               <p className="mt-2 text-sm text-white/80">{m.texto}</p>
-              {m.foto && (
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-sun">
-                  <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
-                    <path d="M3 8h4l2-3h6l2 3h4v11H3z" strokeLinejoin="round" />
-                    <circle cx="12" cy="13" r="3.5" />
-                  </svg>
-                  Ver foto
-                </span>
-              )}
             </div>
           );
           return (
@@ -48,7 +39,7 @@ export default function Marcos({ marcos }: { marcos: Marco[] }) {
                   type="button"
                   onClick={() => setAberto(m)}
                   aria-label={`Ver a foto: ${m.titulo} (${m.ano})`}
-                  className="block h-full w-full transition hover:bg-white/5"
+                  className="block h-full w-full cursor-pointer transition hover:bg-white/10"
                 >
                   {conteudo}
                 </button>
