@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import MailForm from "@/components/MailForm";
 import { links } from "@/lib/site";
@@ -8,7 +9,6 @@ export const metadata: Metadata = { title: "Contacta-nos — Iniciativa Liberal 
 const redes = [
   { label: "Facebook", href: links.facebook },
   { label: "Instagram", href: links.instagram },
-  { label: "WhatsApp", href: links.whatsapp },
 ];
 
 export default function Contactos() {
@@ -29,15 +29,13 @@ export default function Contactos() {
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">WhatsApp</h2>
-            <p className="mt-2 text-white/75">Junta-te ao nosso grupo e conversa connosco em tempo real.</p>
-            <a
-              href={links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block font-bold text-sun hover:underline"
-            >
-              Entrar no grupo →
-            </a>
+            <p className="mt-2 text-white/75">
+              Queres fazer parte da comunidade de liberais trofenses? Pede convite para o nosso
+              grupo.
+            </p>
+            <Link href={links.convite} className="mt-4 inline-block font-bold text-sun hover:underline">
+              Pedir convite →
+            </Link>
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">Redes sociais</h2>

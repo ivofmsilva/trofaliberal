@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { hino } from "@/lib/autarquicas";
-import { autarquicasNav, links } from "@/lib/site";
+import { autarquicasNav } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Autárquicas 2025 — Iniciativa Liberal Trofa" };
 
@@ -83,9 +83,9 @@ export default function Autarquicas() {
             Estas propostas só se tornam realidade com o teu apoio. Vem fazer parte da mudança que a
             Trofa precisa.
           </p>
-          <a href={links.whatsapp} target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-full bg-navy px-8 py-3 font-bold text-white transition hover:bg-pink">
+          <Link href="/trofa-liberal/faz-te-membro" className="mt-6 inline-block rounded-full bg-navy px-8 py-3 font-bold text-white transition hover:bg-pink">
             Aderir agora
-          </a>
+          </Link>
         </div>
       </section>
     </>

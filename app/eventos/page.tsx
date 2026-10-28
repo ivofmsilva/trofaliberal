@@ -45,9 +45,9 @@ export default function Eventos() {
               Facebook
             </a>{" "}
             e{" "}
-            <a href={links.whatsapp} target="_blank" rel="noopener noreferrer" className="font-bold text-cyan-dark hover:underline">
-              WhatsApp
-            </a>
+            <Link href={links.convite} className="font-bold text-cyan-dark hover:underline">
+              WhatsApp (pede convite)
+            </Link>
             .
           </p>
         )}

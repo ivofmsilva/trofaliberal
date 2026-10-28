@@ -12,7 +12,8 @@ npm run build    # build de produção
 
 | O quê | Ficheiro |
 |---|---|
-| Menu, email, redes sociais, link do WhatsApp | `lib/site.ts` |
+| Menu, email e redes sociais | `lib/site.ts` |
+| Pedido de convite para o grupo de WhatsApp (o link do grupo não está no site) | `components/PedirConvite.tsx` |
 | Propostas, manifestos (campo `href` para o PDF) | `lib/propostas.ts` |
 | Notícias, artigos e comunicados (com data) | `lib/imprensa.ts` |
 | Eventos futuros e "outros eventos" | `lib/eventos.ts` |

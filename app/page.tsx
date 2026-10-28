@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InstagramImage from "@/components/InstagramImage";
+import PedirConvite from "@/components/PedirConvite";
 import { proximos } from "@/lib/eventos";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
@@ -202,8 +203,10 @@ export default function Home() {
         </ol>
       </section>
 
+      <PedirConvite />
+
       <section className="bg-navy-soft py-16 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div>
             <h2 className="font-display text-3xl font-bold">Acompanha o núcleo</h2>
             <p className="mt-3 text-white/75">Segue-nos nas redes sociais.</p>
@@ -225,20 +228,6 @@ export default function Home() {
                 Instagram
               </a>
             </div>
-          </div>
-          <div>
-            <h2 className="font-display text-3xl font-bold">Grupo de WhatsApp</h2>
-            <p className="mt-3 text-white/75">
-              Entra também no grupo de WhatsApp dos liberais trofenses.
-            </p>
-            <a
-              href={links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy"
-            >
-              Entrar no grupo
-            </a>
           </div>
         </div>
       </section>

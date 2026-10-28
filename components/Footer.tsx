@@ -39,9 +39,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a className="hover:text-sun" href={links.whatsapp} target="_blank" rel="noopener noreferrer">
-                WhatsApp
-              </a>
+              <Link className="hover:text-sun" href={links.convite}>
+                WhatsApp (pede convite)
+              </Link>
             </li>
           </ul>
         </div>

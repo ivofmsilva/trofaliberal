@@ -40,14 +40,9 @@ export default function FazteMembro() {
           </ul>
           <p className="mt-8 text-ink/75">
             Queres começar já a contribuir com ideias?{" "}
-            <a
-              href={links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold text-cyan-dark hover:underline"
-            >
-              Junta-te já ao nosso grupo de WhatsApp.
-            </a>
+            <Link href={links.convite} className="font-bold text-cyan-dark hover:underline">
+              Pede convite para o nosso grupo de WhatsApp.
+            </Link>
           </p>
         </div>
 
