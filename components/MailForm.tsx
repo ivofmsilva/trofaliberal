@@ -13,32 +13,54 @@ export type Field = {
 const inputClass =
   "mt-1 w-full rounded-lg border-2 border-mist bg-white px-4 py-3 text-ink outline-none transition focus:border-cyan";
 
-// Sem servidor de email: o formulário abre o cliente de email do utilizador
-// com a mensagem preenchida, dirigida ao núcleo.
+type Pronto = { mailto: string; gmail: string; texto: string };
+
+// Sem servidor de email: o formulário prepara a mensagem e abre o programa de email
+// do utilizador, dirigida ao núcleo. Como nem toda a gente tem um programa de email
+// configurado, mostra também "Abrir no Gmail" e "Copiar texto". Nada é guardado nem
+// enviado para terceiros. Não é possível anexar ficheiros por aqui: com `anexos`,
+// avisa-se o utilizador para os anexar ao email (ou enviar para o mesmo endereço).
 export default function MailForm({
   to,
   subject,
   fields,
   consent,
   submitLabel,
+  anexos,
 }: {
   to: string;
   subject: string;
   fields: Field[];
   consent?: React.ReactNode;
   submitLabel: string;
+  anexos?: boolean;
 }) {
-  const [sent, setSent] = useState(false);
+  const [pronto, setPronto] = useState<Pronto | null>(null);
+  const [copiado, setCopiado] = useState(false);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const body = fields
+    let body = fields
       .map((f) => `${f.label.replace(" *", "")}: ${String(data.get(f.name) ?? "").trim()}`)
       .join("\n");
+    if (anexos) body += "\n\n(Se tiveres fotos ou documentos, anexa-os a este email.)";
     const assunto = String(data.get("assunto") ?? "").trim() || subject;
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
+    setPronto({ mailto, gmail, texto: `Para: ${to}\nAssunto: ${assunto}\n\n${body}` });
+    setCopiado(false);
+    window.location.href = mailto;
+  }
+
+  async function copiar() {
+    if (!pronto) return;
+    try {
+      await navigator.clipboard.writeText(pronto.texto);
+      setCopiado(true);
+    } catch {
+      setCopiado(false);
+    }
   }
 
   return (
@@ -82,10 +104,48 @@ export default function MailForm({
       >
         {submitLabel}
       </button>
-      {sent && (
-        <p role="status" className="text-sm text-ink/70">
-          Abrimos o teu programa de email com a mensagem preenchida. Basta enviares.
-        </p>
+
+      {pronto && (
+        <div role="status" className="space-y-3 rounded-2xl bg-mist p-5 text-sm text-ink/85">
+          <p className="font-bold text-navy">Está quase! Falta só enviares o email.</p>
+          <p>
+            Abrimos o teu programa de email com a mensagem pronta para <strong>{to}</strong>. Se não
+            abriu, usa uma destas opções:
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={pronto.gmail}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-navy px-5 py-2 font-bold text-white transition hover:bg-pink"
+            >
+              Abrir no Gmail ↗
+            </a>
+            <a
+              href={pronto.mailto}
+              className="rounded-full border-2 border-navy px-5 py-2 font-bold text-navy transition hover:bg-navy hover:text-white"
+            >
+              Abrir no programa de email
+            </a>
+            <button
+              type="button"
+              onClick={copiar}
+              className="rounded-full border-2 border-navy px-5 py-2 font-bold text-navy transition hover:bg-navy hover:text-white"
+            >
+              {copiado ? "Copiado ✓" : "Copiar texto"}
+            </button>
+          </div>
+          <p>
+            Com o texto copiado, podes colá-lo num email para <strong>{to}</strong> em qualquer
+            aplicação.
+          </p>
+          {anexos && (
+            <p className="rounded-lg bg-white p-3">
+              <strong>Fotos ou documentos?</strong> Anexa-os ao email antes de o enviar. Se não
+              conseguires, envia-os para <strong>{to}</strong> a indicar a freguesia e a morada.
+            </p>
+          )}
+        </div>
       )}
     </form>
   );

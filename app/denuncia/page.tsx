@@ -12,9 +12,8 @@ const passos = [
     texto: "Uma breve descrição e, se possível, a morada.",
   },
   {
-    titulo: "Junta uma foto",
-    texto:
-      "Uma imagem com um ponto de referência ajuda-nos a identificar o local. Anexa-a ao email que se abre ao submeter.",
+    titulo: "Junta fotos ou documentos (opcional)",
+    texto: `Uma imagem com um ponto de referência ajuda-nos a identificar o local. Neste formulário não é possível anexar ficheiros: anexa-os ao email que se abre ao submeter ou, se preferires, envia-os para ${links.email}, a indicar a freguesia e a morada.`,
   },
 ];
 
@@ -54,10 +53,18 @@ export default function Denuncia() {
         </div>
 
         <div className="rounded-2xl border-2 border-mist p-8">
+          <p className="mb-6 text-ink/75">
+            Ao submeter, preparamos a denúncia no teu email, pronta a enviar para{" "}
+            <a href={`mailto:${links.email}`} className="font-bold text-cyan-dark hover:underline">
+              {links.email}
+            </a>
+            . Podes anexar fotos ou documentos antes de a enviar.
+          </p>
           <MailForm
             to={links.email}
             subject="Denúncia — Canal de Denúncias"
             submitLabel="Submeter denúncia"
+            anexos
             fields={[
               { name: "freguesia", label: "Freguesia *", required: true },
               { name: "morada", label: "Morada / referência" },
