@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import { links } from "@/lib/eventos";
 import { fotos } from "@/lib/galeria";
 import { itens } from "@/lib/imprensa";
+import { apresentacoes, relatorio, resumoSemana } from "@/lib/lit";
 
 export const metadata: Metadata = { title: "LIT — Jornadas Liberais da Trofa" };
 
@@ -51,6 +52,19 @@ export default function Lit() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Resumo da semana</h2>
+        <ol className="mt-8 grid gap-5 md:grid-cols-3">
+          {resumoSemana.map((r) => (
+            <li key={r.quando} className="rounded-2xl bg-navy p-6 text-white">
+              <p className="text-sm font-bold uppercase tracking-widest text-sun">{r.quando}</p>
+              <h3 className="font-display mt-2 text-xl font-bold leading-snug">{r.titulo}</h3>
+              <p className="mt-3 text-sm text-white/85">{r.texto}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
@@ -70,10 +84,32 @@ export default function Lit() {
       </section>
 
       <section className="bg-navy py-16 text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3">
+          <div>
+            <h2 className="font-display text-3xl font-bold">Material das apresentações</h2>
+            {apresentacoes.length ? (
+              <ul className="mt-4 space-y-2">
+                {apresentacoes.map((a) => (
+                  <li key={a.href}>
+                    <a href={a.href} target="_blank" rel="noopener noreferrer" className="font-bold text-sun hover:underline">
+                      {a.titulo} (PDF) ↓
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-2 text-white/70">PDFs das apresentações em breve.</p>
+            )}
+          </div>
           <div>
             <h2 className="font-display text-3xl font-bold">Relatório das jornadas</h2>
-            <p className="mt-2 text-white/60">Download em breve.</p>
+            {relatorio ? (
+              <a href={relatorio} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-full bg-pink px-7 py-3 font-bold text-white transition hover:bg-white hover:text-navy">
+                Descarregar relatório (PDF) ↓
+              </a>
+            ) : (
+              <p className="mt-2 text-white/70">Download em breve.</p>
+            )}
           </div>
           <div>
             <h2 className="font-display text-3xl font-bold">Edições futuras</h2>

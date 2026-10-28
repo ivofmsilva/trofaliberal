@@ -85,7 +85,14 @@ export default function Propostas() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-20 sm:px-6 md:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-20 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
+          <h3 className="font-display text-2xl font-bold text-navy">Metro para a Trofa</h3>
+          <p className="mt-3 text-ink/75">A nossa visão: Metro ligeiro até à Trofa. Pela Trofa. Pelo futuro.</p>
+          <Link href="/ideias/metro" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
+            Ver a nossa visão →
+          </Link>
+        </div>
         <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
           <h3 className="font-display text-2xl font-bold text-navy">Cartazes</h3>
           <p className="mt-3 text-ink/75">Consulta os cartazes e mensagens que já espalhámos pela Trofa.</p>

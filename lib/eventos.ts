@@ -5,7 +5,19 @@ export type Evento = {
   href?: string;
 };
 
-// Eventos futuros. Enquanto estiver vazio, o calendário mostra "sem eventos agendados".
+// COMO ADICIONAR UM EVENTO: acrescenta um bloco igual ao exemplo abaixo (entre as
+// chavetas, separado por vírgula). Aparece sozinho na página Eventos (Calendário)
+// E na Home. Para o tirar depois do evento, apaga o bloco.
+//
+//   {
+//     titulo: "Fino Liberal",
+//     data: "17 de dezembro, 16h",
+//     local: "Auditório da Junta de Freguesia de Santiago de Bougado",
+//     href: "https://fb.me/e/...", // opcional: link do evento
+//   },
+//
+// Enquanto estiver vazio, o calendário mostra "sem eventos agendados" e a Home
+// não mostra a secção.
 export const proximos: Evento[] = [];
 
 export const outros = [

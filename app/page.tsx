@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import InstagramImage from "@/components/InstagramImage";
+import { proximos } from "@/lib/eventos";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
@@ -14,9 +15,9 @@ const principios = [
     texto: "Um concelho onde as oportunidades são maximizadas para todos.",
   },
   {
-    titulo: "Mais crescimento económico / menos impostos",
+    titulo: "Mais crescimento económico e sociedade civil forte",
     texto:
-      "Acreditamos que a livre iniciativa e a concorrência geram prosperidade e inovação para todos.",
+      "Acreditamos que a livre iniciativa e a concorrência geram prosperidade e inovação para todos. Onde a iniciativa é valorizada e incentivada.",
   },
   {
     titulo: "Combate ao excesso do Estado e à burocracia",
@@ -29,8 +30,8 @@ const principios = [
       "Melhorar o presente sem condicionar o futuro. Responsabilidade na gestão e na utilização de recursos.",
   },
   {
-    titulo: "Sociedade civil forte",
-    texto: "Onde a iniciativa é valorizada e incentivada.",
+    titulo: "Menos impostos",
+    texto: "Devolver rendimento às famílias e às empresas que fazem a Trofa crescer.",
   },
 ];
 
@@ -106,6 +107,37 @@ export default function Home() {
           Bem-vindo à página oficial do núcleo territorial da Iniciativa Liberal da Trofa
         </p>
       </section>
+
+      {proximos.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Agenda</p>
+          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
+            Próximos eventos
+          </h2>
+          <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {proximos.map((e) => (
+              <li key={`${e.titulo}-${e.data}`} className="rounded-2xl bg-navy p-8 text-white">
+                <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
+                <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
+                {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
+                {e.href && (
+                  <a
+                    href={e.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block font-bold text-sun hover:underline"
+                  >
+                    Mais informação ↗
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+          <Link href="/eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
+            Ver toda a agenda →
+          </Link>
+        </section>
+      )}
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">

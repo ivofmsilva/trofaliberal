@@ -40,10 +40,7 @@ function Pessoa({ m, destaque }: { m: Membro; destaque?: boolean }) {
 const mandatos = [
   {
     periodo: "2024 – 2026",
-    fotos: [
-      { src: "/images/geral/grupo-bandeira.png", alt: "Plenário de 2024 da IL Trofa, com a bandeira do concelho", w: 732, h: 578 },
-      { src: "/images/geral/plenario-2024-bougado.jpg", alt: "Plenário de 2024 no auditório da Junta de Freguesia de Bougado", w: 652, h: 636 },
-    ],
+    foto: { src: "/images/geral/grupo-bandeira.png", alt: "Plenário de 2024 da IL Trofa, com a bandeira do concelho", w: 732, h: 578 },
     coordenador: "Ivo Silva",
     mesa: "Afonso Couto",
     texto:
@@ -51,10 +48,7 @@ const mandatos = [
   },
   {
     periodo: "2022 – 2024",
-    fotos: [
-      { src: "/images/geral/plenario-fundador-2022.jpg", alt: "Plenário fundador do núcleo da IL Trofa, em 2022", w: 1440, h: 968 },
-      { src: "/images/geral/plenario-2022-mesa.jpg", alt: "Mesa do plenário fundador do núcleo, em 2022", w: 546, h: 621 },
-    ],
+    foto: { src: "/images/geral/plenario-fundador-2022.jpg", alt: "Plenário fundador do núcleo da IL Trofa, em 2022", w: 1440, h: 968 },
     coordenador: "José Pedro Reis",
     mesa: "Ivo Silva",
     texto:
@@ -63,13 +57,13 @@ const mandatos = [
 ];
 
 export default function Equipa() {
-  const { realizado, local } = plenario2026;
+  const { realizado, local, data } = plenario2026;
   return (
     <>
       <PageHero
         eyebrow="Trofa Liberal"
         title="A equipa que faz a diferença"
-        image={{ src: "/images/equipa/grupo-nucleo.jpg", alt: "Membros do núcleo da IL Trofa reunidos", w: 789, h: 760 }}
+        image={{ src: "/images/geral/provisoria-equipa.jpeg", alt: "Liberais trofenses com t-shirts azuis num evento", w: 484, h: 605 }}
       >
         Uma equipa dedicada, comprometida em promover os valores liberais no concelho e em
         encontrar soluções que coloquem a liberdade individual e o progresso no centro das suas
@@ -87,11 +81,11 @@ export default function Equipa() {
           O Grupo de Coordenação Local do Núcleo Territorial da Trofa dinamiza a atividade política
           do núcleo, organiza iniciativas e promove a participação dos membros.
         </p>
-        {!realizado && (
-          <p className="mt-4 inline-block rounded-full bg-sun px-4 py-1 text-sm font-bold text-navy">
-            Lista a submeter ao plenário eletivo, no {local}
-          </p>
-        )}
+        <p className="mt-4 inline-block rounded-full bg-sun px-4 py-1 text-sm font-bold text-navy">
+          {realizado
+            ? `Eleito no plenário eletivo de ${data}, na freguesia do ${local}`
+            : `Lista a submeter ao plenário eletivo, no ${local}`}
+        </p>
         <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {gcl.map((m, i) => (
             <Pessoa key={m.nome} m={m} destaque={i < 2} />
@@ -142,19 +136,14 @@ export default function Equipa() {
                 </summary>
                 <div className="grid gap-6 border-t border-white/10 p-6 md:grid-cols-[1fr_1fr]">
                   <p className="text-white/85">{m.texto}</p>
-                  <div className="grid gap-4">
-                    {m.fotos.map((foto) => (
-                      <Image
-                        key={foto.src}
-                        src={foto.src}
-                        alt={foto.alt}
-                        width={foto.w}
-                        height={foto.h}
-                        sizes="(min-width: 768px) 520px, 100vw"
-                        className="w-full rounded-xl object-cover"
-                      />
-                    ))}
-                  </div>
+                  <Image
+                    src={m.foto.src}
+                    alt={m.foto.alt}
+                    width={m.foto.w}
+                    height={m.foto.h}
+                    sizes="(min-width: 768px) 520px, 100vw"
+                    className="w-full rounded-xl object-cover"
+                  />
                 </div>
               </details>
             </li>

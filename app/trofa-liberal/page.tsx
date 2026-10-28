@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import { plenario2026 } from "@/lib/equipa";
 
 export const metadata: Metadata = { title: "Sobre a IL Trofa — Iniciativa Liberal Trofa" };
 
-type Marco = {
-  ano: string;
-  titulo: string;
-  texto: string;
-};
-
+// Os quadrados com `foto` abrem-na ao clicar. Ficheiros em public/images/.
 const marcos: Marco[] = [
   {
     ano: "2021",
@@ -21,39 +17,67 @@ const marcos: Marco[] = [
     ano: "2022",
     titulo: "Deputados liberais eleitos pelo círculo do Porto",
     texto: "Primeira campanha liberal a passar na Trofa.",
+    foto: {
+      src: "/images/geral/sobre-acao-tenda.jpg",
+      alt: "Ação de rua da Iniciativa Liberal na Trofa, com tenda e bandeiras",
+    },
   },
   {
     ano: "2022",
     titulo: "Plenário fundador do núcleo",
     texto: "Primeiro grupo de coordenação eleito em São Romão do Coronado.",
-  },
-  {
-    ano: "2024",
-    titulo: "Plenário eletivo",
-    texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
+    foto: {
+      src: "/images/geral/plenario-2022-mesa.jpg",
+      alt: "Mesa do plenário fundador do núcleo da IL Trofa, em 2022",
+    },
   },
   {
     ano: "2024",
     titulo: "Primeiros liberais trofenses nas listas à Assembleia da República",
     texto: "José Pedro Reis e Diamantino Costa integram as listas à Assembleia da República.",
+    foto: {
+      src: "/images/geral/marco-listas-ar-2024.jpg",
+      alt: "Notícia: Trofenses na lista da Iniciativa Liberal ao Parlamento",
+    },
+  },
+  {
+    ano: "2024",
+    titulo: "Plenário eletivo",
+    texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
+    foto: {
+      src: "/images/geral/plenario-2024-bougado.jpg",
+      alt: "Plenário eletivo de 2024 no auditório da Junta de Freguesia de Bougado",
+    },
   },
   {
     ano: "2025",
     titulo: "Primeiras Autárquicas",
     texto:
       "Listas à Câmara e à Assembleia Municipal da Trofa e às juntas de freguesia de Bougado e Alvarelhos. A IL trouxe uma nova forma de fazer política às eleições.",
+    foto: {
+      src: "/images/geral/sobre-acao-camisolas.jpg",
+      alt: "Liberais trofenses de t-shirt azul numa ação da campanha autárquica",
+    },
   },
   {
     ano: "2025",
     titulo: "Representação no Conselho Municipal de Juventude",
     texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
+    foto: {
+      src: "/images/geral/juventude-cmj.jpg",
+      alt: "Representantes da Iniciativa Liberal no Conselho Municipal da Juventude",
+    },
   },
   {
     ano: "2026",
     titulo: "Plenário eletivo",
     texto: plenario2026.realizado
-      ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}.`
+      ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}, a ${plenario2026.data}.`
       : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
+    foto: {
+      src: "/images/equipa/grupo-nucleo.jpg",
+      alt: "Membros do núcleo da IL Trofa reunidos",
+    },
   },
 ];
 
@@ -78,8 +102,8 @@ export default function Sobre() {
         <div className="space-y-5 text-lg text-ink/85">
           <p>
             Acreditamos que a Trofa tem potencial para ser um dos concelhos mais prósperos e
-            inovadores de Portugal. Para isso precisamos de menos burocracia na câmara, menos
-            impostos, e mais confiança nas pessoas e nas empresas que aqui vivem e trabalham.
+            inovadores de Portugal. Para isso precisamos de inovar na câmara, tirar burocracia, ter
+            menos impostos e mais confiança nas pessoas e nas empresas que aqui vivem e trabalham.
           </p>
           <p>
             Não somos um partido como os outros. Não prometemos tudo a todos. Apenas prometemos
@@ -106,42 +130,13 @@ export default function Sobre() {
           sizes="(min-width: 768px) 560px, 100vw"
           className="aspect-[4/3] w-full rounded-2xl object-cover"
         />
-        <Image
-          src="/images/geral/sobre-acao-tenda.jpg"
-          alt="Ação de rua da Iniciativa Liberal na Trofa, com tenda e bandeiras"
-          width={713}
-          height={681}
-          sizes="(min-width: 768px) 560px, 100vw"
-          className="aspect-[4/3] w-full rounded-2xl object-cover"
-        />
-        <Image
-          src="/images/geral/sobre-acao-camisolas.jpg"
-          alt="Liberais trofenses de t-shirt azul numa ação de campanha"
-          width={515}
-          height={548}
-          sizes="(min-width: 768px) 560px, 100vw"
-          className="aspect-[4/3] w-full rounded-2xl object-cover object-top"
-        />
       </section>
 
       <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
           <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
-          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {marcos.map((m) => (
-              <li
-                key={`${m.ano}-${m.titulo}`}
-                className="overflow-hidden rounded-2xl bg-navy-soft"
-              >
-                <div className="p-6">
-                  <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
-                  <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
-                  <p className="mt-2 text-sm text-white/80">{m.texto}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <Marcos marcos={marcos} />
         </div>
       </section>
     </>

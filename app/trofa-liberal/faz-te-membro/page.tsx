@@ -18,8 +18,8 @@ export default function FazteMembro() {
   return (
     <>
       <PageHero eyebrow="Faz-te Membro" title="Junta-te à Iniciativa Liberal Trofa!" image={{ src: "/images/geral/junta-te-forca-liberal.png", alt: "Cartaz: Junta-te à força liberal", w: 431, h: 537 }}>
-        Torna-te membro e ajuda-nos a construir um futuro mais livre e justo para a Trofa e
-        Portugal. Faz parte desta mudança — pela tua terra, salta do sofá.
+        Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo para a
+        Trofa e Portugal. Faz parte desta mudança — pela tua terra, salta do sofá.
       </PageHero>
 
       <section className="mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-2">
