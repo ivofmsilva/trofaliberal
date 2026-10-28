@@ -61,6 +61,12 @@ export const itens: Record<Categoria, Item[]> = {
       href: "https://trofatv.sapo.pt/jornadas-liberais-na-trofa-debatem-sistema-educativo/",
     },
     {
+      titulo: "Trofenses na lista da Iniciativa Liberal ao Parlamento",
+      fonte: "O Notícias da Trofa",
+      data: "2024-01-24",
+      href: "https://www.onoticiasdatrofa.pt/trofenses-na-lista-da-iniciativa-liberal-ao-parlamento/",
+    },
+    {
       titulo: "Deputados da IL em Bougado",
       fonte: "O Notícias da Trofa",
       data: "2022-12-15",

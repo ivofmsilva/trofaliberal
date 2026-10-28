@@ -106,6 +106,22 @@ export default function Sobre() {
           sizes="(min-width: 768px) 560px, 100vw"
           className="aspect-[4/3] w-full rounded-2xl object-cover"
         />
+        <Image
+          src="/images/geral/sobre-acao-tenda.jpg"
+          alt="Ação de rua da Iniciativa Liberal na Trofa, com tenda e bandeiras"
+          width={713}
+          height={681}
+          sizes="(min-width: 768px) 560px, 100vw"
+          className="aspect-[4/3] w-full rounded-2xl object-cover"
+        />
+        <Image
+          src="/images/geral/sobre-acao-camisolas.jpg"
+          alt="Liberais trofenses de t-shirt azul numa ação de campanha"
+          width={515}
+          height={548}
+          sizes="(min-width: 768px) 560px, 100vw"
+          className="aspect-[4/3] w-full rounded-2xl object-cover object-top"
+        />
       </section>
 
       <section className="bg-navy py-20 text-white">
