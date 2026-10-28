@@ -12,15 +12,15 @@ export type Membro = { nome: string; cargo: string; foto?: string };
 export const gcl: Membro[] = [
   { nome: "Bruno Magalhães", cargo: "Coordenador", foto: "/images/equipa/bruno-magalhaes.png" },
   { nome: "José Pedro Reis", cargo: "Vice-coordenador", foto: "/images/equipa/jose-pedro-reis.png" },
-  { nome: "Paula Peixoto", cargo: "Secretária" },
+  { nome: "Paula Peixoto", cargo: "Secretária", foto: "/images/equipa/paula-peixoto.png" },
   { nome: "Ivo Silva", cargo: "Tesoureiro", foto: "/images/equipa/ivo-silva.png" },
   { nome: "Duarte Pinheiro", cargo: "Vogal", foto: "/images/equipa/duarte-pinheiro.png" },
-  { nome: "Filipe Couto", cargo: "1.º Suplente" },
-  { nome: "Dora Costa", cargo: "2.ª Suplente" },
+  { nome: "Filipe Couto", cargo: "1.º Suplente", foto: "/images/equipa/filipe-couto.png" },
+  { nome: "Dora Costa", cargo: "2.ª Suplente", foto: "/images/equipa/dora-costa.png" },
 ];
 
 export const mesa: Membro[] = [
   { nome: "Afonso Couto", cargo: "Presidente da Mesa do Plenário", foto: "/images/equipa/afonso-couto.png" },
-  { nome: "Manuel Vilas Boas", cargo: "1.º Secretário da Mesa do Plenário" },
-  { nome: "João Barros", cargo: "2.º Secretário da Mesa do Plenário" },
+  { nome: "Manuel Vilas Boas", cargo: "1.º Secretário da Mesa do Plenário", foto: "/images/equipa/manuel-vilas-boas.png" },
+  { nome: "João Barros", cargo: "2.º Secretário da Mesa do Plenário", foto: "/images/equipa/joao-barros.png" },
 ];
