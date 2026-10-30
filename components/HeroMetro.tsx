@@ -113,10 +113,10 @@ export default function HeroMetro() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#posicao"
+                href="#participacao"
                 className="rounded-full bg-white px-7 py-3 font-bold text-[#00558f] transition hover:bg-sun"
               >
-                A nossa posição →
+                A nossa participação →
               </a>
               <Link
                 href="/imprensa/comunicados/metro-ligeiro-ate-a-trofa"

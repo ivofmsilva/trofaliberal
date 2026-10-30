@@ -9,7 +9,6 @@ import { itens } from "@/lib/imprensa";
 import {
   argumentos,
   cartazesMetro,
-  comparacao,
   consulta,
   cronologia,
   destaqueParticipacao,
@@ -67,6 +66,12 @@ export default function Metro() {
               seu lugar. A promessa continua por cumprir. O Metro para a Trofa é uma causa que
               sempre uniu a população.
             </p>
+            <div className="mt-6">
+              <PartilharBotao
+                titulo="Metro ligeiro até à Trofa — Iniciativa Liberal Trofa"
+                texto="Esperámos mais de 9000 dias. A Trofa merece metro, não transbordo."
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -193,34 +198,14 @@ export default function Metro() {
               </li>
             ))}
           </ol>
-          <figure className="mt-10 rounded-3xl bg-white p-8 text-navy md:p-12">
-            <span aria-hidden className="font-display block text-7xl font-bold leading-none text-pink">
-              “
-            </span>
-            <blockquote className="font-display -mt-4 text-2xl font-bold leading-snug md:text-3xl">
-              {gestao.destaque.frase}
+          <figure className="mt-10 max-w-3xl rounded-2xl border-l-8 border-pink bg-white p-6 text-navy md:p-8">
+            <blockquote className="font-display text-lg font-bold leading-snug md:text-xl">
+              “{gestao.destaque.frase}”
             </blockquote>
-            <figcaption className="mt-5 text-sm font-bold uppercase tracking-widest text-ink/60">
+            <figcaption className="mt-3 text-xs font-bold uppercase tracking-widest text-ink/60">
               {gestao.destaque.fonte}
             </figcaption>
           </figure>
-          <p className="mt-10 max-w-3xl text-xl font-medium text-white/90">{gestao.fecho}</p>
-        </div>
-      </section>
-
-      {/* Metro e metrobus, em texto */}
-      <section className="bg-mist py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <p className={`${etiqueta} text-cyan-dark`}>Metro e metrobus</p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            Obra mais barata, mas dura metade
-          </h2>
-          <div className="mt-8 space-y-4 text-lg text-ink/85">
-            {comparacao.paragrafos.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </div>
-          <p className="mt-6 text-sm text-ink/60">Fonte: {comparacao.fonte}</p>
         </div>
       </section>
 
@@ -242,29 +227,6 @@ export default function Metro() {
           </ol>
         </div>
       </section>
-
-      {/* A nossa visão (texto do comunicado) */}
-      <article id="posicao" className="mx-auto max-w-3xl scroll-mt-24 px-4 py-20 sm:px-6">
-        <p className={`${etiqueta} text-cyan-dark`}>A nossa visão</p>
-        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          O que defendemos para o Metro
-        </h2>
-        <div className="mt-12 space-y-12">
-          {c.corpo.map((b, i) => (
-            <section key={i}>
-              <h3 className="font-display mb-4 flex items-baseline gap-4 text-2xl font-bold text-navy md:text-3xl">
-                <span className="text-pink">{String(i + 1).padStart(2, "0")}</span>
-                {b.titulo ?? "A nossa posição"}
-              </h3>
-              <div className="space-y-4 text-lg text-ink/85">
-                {b.paragrafos.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
-      </article>
 
       {/* Campanha */}
       <section className="bg-mist py-20">
@@ -355,6 +317,12 @@ export default function Metro() {
           >
             Participa.pt ↗
           </a>
+          <Link
+            href={c.href}
+            className="rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
+          >
+            Ler o comunicado
+          </Link>
         </div>
       </section>
 

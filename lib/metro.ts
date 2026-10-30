@@ -13,7 +13,7 @@ export const participacao = {
     "Avaliar o metro ligeiro até ao Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
     "Publicar os estudos que fundamentam o metrobus, com dados atualizados, e reabrir a participação pública.",
     "Garantir que o troço ISMAI–Muro avança no calendário previsto, sem depender desta reavaliação.",
-    "Se, contra a nossa posição, a solução BRT vier a ser aprovada, impor na Declaração de Impacte Ambiental que viadutos, túnel, canal e cais sejam dimensionados para metro ligeiro, com o custo de conversão publicado e uma data (ou um patamar de procura) para a desencadear.",
+    "Se, contra a nossa posição, a solução metrobus vier a ser aprovada, impor na Declaração de Impacte Ambiental que viadutos, túnel, canal e cais sejam dimensionados para metro ligeiro, com o custo de conversão publicado e uma data (ou um patamar de procura) para a desencadear.",
     "Detalhar a integração no Interface e aproximar as estações das zonas residenciais, dos serviços e do comércio.",
   ],
 };
@@ -105,43 +105,13 @@ export const cronologia: Facto[] = [
     },
   },
   {
-    quando: "2011",
-    titulo: "A petição pública pelo metro",
+    quando: "2011 a 2016",
+    titulo: "A população protesta: petição e boicotes no Muro",
     texto:
-      "8206 subscritores fazem chegar à Presidência da República uma petição a pedir a construção da linha “com a máxima urgência”.",
+      "Em 2011, 8206 subscritores fazem chegar à Presidência da República uma petição a pedir a construção da linha “com a máxima urgência”. Nesse ano e nos seguintes, o Muro responde nas urnas: as mesas de voto não abrem nas presidenciais de 2011, nas europeias de 2014 e nas presidenciais de 2016, em protesto pelo atraso do metro.",
     fonte: {
-      nome: "Petição Pública",
-      href: "https://peticaopublica.com/pview.aspx?pi=P2010N3571",
-    },
-  },
-  {
-    quando: "23 de janeiro de 2011",
-    titulo: "Primeiro boicote do Muro",
-    texto:
-      "Nas eleições presidenciais, as duas mesas de voto da freguesia do Muro não abrem, em protesto pelo atraso do metro.",
-    fonte: {
-      nome: "TVI (2011)",
-      href: "https://tvi.iol.pt/noticias/sociedade/votar/presidenciais-protestos-e-urnas-encerradas",
-    },
-  },
-  {
-    quando: "25 de maio de 2014",
-    titulo: "Segundo boicote do Muro",
-    texto:
-      "Nas eleições europeias, as duas mesas de voto da freguesia do Muro nem chegam a abrir. A população diz-se enganada por sucessivos governos.",
-    fonte: {
-      nome: "Público (2014)",
-      href: "https://www.publico.pt/2014/05/25/sociedade/noticia/acessibilidades-ditam-boicotes-na-trofa-e-em-sintra-1637383",
-    },
-  },
-  {
-    quando: "24 de janeiro de 2016",
-    titulo: "Terceiro boicote do Muro",
-    texto:
-      "Nas eleições presidenciais, as mesas de voto do Muro voltam a ficar vazias. É o terceiro boicote desde que o protesto começou, em 2006.",
-    fonte: {
-      nome: "RTP (2016)",
-      href: "https://www.rtp.pt/noticias/politica/mesas-de-voto-na-freguesia-de-muro-continuam-sem-ninguem_v890790",
+      nome: "TVI (2016)",
+      href: "https://tvi.iol.pt/noticias/politica/eleicoes/mesas-de-voto-encerradas-em-freguesia-da-trofa",
     },
   },
   {
@@ -246,8 +216,6 @@ export const gestao = {
       "…após a intervenção na área do novo edifício dos Paços do Concelho e Parque Nossa Senhora das Dores, que inviabilizaram o percurso original.",
     fonte: "Documento do projeto da Metro do Porto (Ayesa Grid), sobre a decisão de redefinir o projeto",
   },
-  fecho:
-    "Sucessivos executivos da Câmara não acautelaram o lugar do metro no centro da Trofa. Em 2017, quinze anos depois de o comboio sair, o município foi a tribunal. E, em 2021, ainda se admitia que o túnel não estava acautelado.",
 };
 
 // Frase da nossa participação, em destaque na página.
@@ -279,7 +247,7 @@ export const argumentos = [
   {
     titulo: "Infraestrutura para décadas",
     texto:
-      "A via e os veículos de metro duram décadas e os autocarros são substituídos muito antes. O custo a 30 anos das duas soluções nunca foi apresentado.",
+      "A via e os veículos de metro duram décadas e os autocarros são substituídos muito antes. O metrobus custa menos a construir, mas, ao longo de toda a vida útil e por lugar oferecido, os custos aproximam-se. O custo a 30 anos das duas soluções nunca foi apresentado.",
   },
   {
     titulo: "Efeito estruturante",
@@ -287,17 +255,6 @@ export const argumentos = [
       "Uma linha de metro fixa habitação, emprego e investimento, e mais gente troca o carro pelo metro, com mais conforto e melhor ambiente. Um corredor de autocarros não dá a mesma garantia.",
   },
 ];
-
-// ---- Metro vs metrobus (em texto) -------------------------------------------
-// Ordens de grandeza do Certu (França, 2011); sem tabela, em frases.
-export const comparacao = {
-  paragrafos: [
-    "O autocarro em canal próprio custa menos a construir: cerca de 2 a 10 milhões de euros por quilómetro, contra 13 a 22 do metro ligeiro. Cada veículo também é mais barato, mas dura bem menos: 10 a 15 anos, contra 30 a 40 do metro.",
-    "Por quilómetro percorrido, explorar um autocarro custa menos: 3,5 a 5 euros, contra 6 a 10 do metro. Mas o metro leva muito mais gente de cada vez e os veículos duram o dobro. Por isso o próprio Certu conclui que, medidos ao longo de toda a vida útil e por lugar oferecido, os custos dos dois sistemas se aproximam.",
-  ],
-  fonte:
-    "Certu, Les coûts des transports collectifs urbains en site propre, ficha n.º 18, outubro de 2011 (valores de 2011, em França).",
-};
 
 // ---- Campanha --------------------------------------------------------------
 // Cartazes e materiais da campanha sobre o metro (ficheiros em public/images/cartazes/).
