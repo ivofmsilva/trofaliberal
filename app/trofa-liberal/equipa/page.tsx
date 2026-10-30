@@ -10,23 +10,15 @@ function iniciais(nome: string) {
   return `${p[0]?.[0] ?? ""}${p[p.length - 1]?.[0] ?? ""}`;
 }
 
-function Pessoa({ m, destaque }: { m: Membro; destaque?: boolean }) {
+function Pessoa({ m }: { m: Membro }) {
   return (
     <li className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-navy/10">
       {m.foto ? (
-        <Image
-          src={m.foto}
-          alt={m.nome}
-          width={228}
-          height={228}
-          className={`rounded-full ${destaque ? "h-40 w-40" : "h-32 w-32"}`}
-        />
+        <Image src={m.foto} alt={m.nome} width={228} height={228} className="h-36 w-36 rounded-full" />
       ) : (
         <div
           aria-hidden
-          className={`font-display flex items-center justify-center rounded-full bg-gradient-to-br from-cyan to-navy font-bold text-white ${
-            destaque ? "h-40 w-40 text-5xl" : "h-32 w-32 text-4xl"
-          }`}
+          className="font-display flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-navy text-4xl font-bold text-white"
         >
           {iniciais(m.nome)}
         </div>
@@ -87,8 +79,8 @@ export default function Equipa() {
             : `Lista a submeter ao plenário eletivo, no ${local}`}
         </p>
         <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {gcl.map((m, i) => (
-            <Pessoa key={m.nome} m={m} destaque={i < 2} />
+          {gcl.map((m) => (
+            <Pessoa key={m.nome} m={m} />
           ))}
         </ul>
       </section>
