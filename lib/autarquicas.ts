@@ -174,24 +174,19 @@ export const campanha = {
   ] as Link[],
 };
 
-// Vídeos da campanha agrupados por tema do programa (Instagram).
-export const videosPorTema: { tema: string; slug: string; videos: Link[] }[] = [
-  {
-    tema: "Modernização da Câmara",
-    slug: "modernizacao-da-camara",
-    ids: ["DPjzoIkDFUN", "DPeo6EvDKmG", "DPMnVBcDgTY", "DPCUTa5jRq-"],
-  },
-  { tema: "Economia e Emprego", slug: "economia-e-emprego", ids: ["DPHd4qHAblv", "DOtuBUaEVPo"] },
-  { tema: "Ambiente", slug: "ambiente", ids: ["DOy3kyAldZx", "DO4BHPIAIwH", "DPlpeDfjBVm", "DPRxAeIFQ1S"] },
-  { tema: "Mobilidade", slug: "mobilidade", ids: ["DPmeUWJjCQi"] },
-  { tema: "Impostos e Fiscalidade Local", slug: "impostos-e-fiscalidade-local", ids: ["DPbUNzoDz5Z", "DPjkst1DNwz"] },
-  { tema: "Cultura", slug: "cultura", ids: ["DPgdw5wCGAV"] },
-  { tema: "Saúde e Desporto", slug: "saude-e-desporto", ids: ["DO6lxWujTQY"] },
-].map(({ tema, slug, ids }) => ({
-  tema,
-  slug,
-  videos: ids.map((id, i): Link => ({ titulo: `${tema} — vídeo ${i + 1}`, href: ig(id) })),
-}));
+// Vídeos da campanha (Instagram), no dia do diário com o tema respetivo.
+const videosIds: Record<number, string[]> = {
+  2: ["DPgdw5wCGAV"], // Cultura
+  4: ["DPmeUWJjCQi"], // Mobilidade
+  5: ["DO6lxWujTQY"], // Saúde e Desporto
+  6: ["DPjzoIkDFUN", "DPeo6EvDKmG", "DPMnVBcDgTY", "DPCUTa5jRq-"], // Modernização da Câmara
+  7: ["DOy3kyAldZx", "DO4BHPIAIwH", "DPlpeDfjBVm", "DPRxAeIFQ1S"], // Ambiente
+  8: ["DPbUNzoDz5Z", "DPjkst1DNwz"], // Fiscalidade local
+  9: ["DPHd4qHAblv", "DOtuBUaEVPo"], // Economia e Emprego
+};
+
+export const videosDoDia = (dia: number): Link[] =>
+  (videosIds[dia] ?? []).map((id, i): Link => ({ titulo: `Dia ${dia} — vídeo ${i + 1}`, href: ig(id) }));
 
 export type Dia = {
   dia: number;

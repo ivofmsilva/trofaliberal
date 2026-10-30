@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import InstagramEmbed, { igId } from "@/components/InstagramEmbed";
 import PageHero from "@/components/PageHero";
-import { diario } from "@/lib/autarquicas";
+import { diario, videosDoDia } from "@/lib/autarquicas";
 
 export const dynamicParams = false;
 
@@ -23,6 +23,7 @@ export default async function Dia({ params }: { params: Promise<{ dia: string }>
   if (!d) notFound();
   const anterior = diario.find((x) => x.dia === d.dia - 1);
   const seguinte = diario.find((x) => x.dia === d.dia + 1);
+  const videos = videosDoDia(d.dia);
 
   return (
     <>
@@ -37,7 +38,23 @@ export default async function Dia({ params }: { params: Promise<{ dia: string }>
           <InstagramEmbed id={igId(d.href)} titulo={`Dia ${d.dia} — ${d.tema}`} altura={720} />
         </aside>
       </div>
-      <nav className="mx-auto flex max-w-7xl justify-between gap-4 px-4 pb-20 sm:px-6" aria-label="Dias">
+      {videos.length > 0 && (
+        <section className="bg-mist py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <h2 className="font-display text-3xl font-bold text-navy">
+              {videos.length > 1 ? "Vídeos do dia" : "Vídeo do dia"}
+            </h2>
+            <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {videos.map((v) => (
+                <li key={v.href}>
+                  <InstagramEmbed id={igId(v.href)} titulo={v.titulo} altura={680} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+      <nav className="mx-auto flex max-w-7xl justify-between gap-4 px-4 py-12 sm:px-6" aria-label="Dias">
         {anterior ? (
           <Link href={`/autarquicas-2025/diario/${anterior.dia}`} className="rounded-full border-2 border-navy px-6 py-2 font-bold text-navy transition hover:bg-navy hover:text-white">
             ← Dia {anterior.dia}

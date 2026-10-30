@@ -33,9 +33,6 @@ export default function ApresentacaoPrograma() {
       <div className="mx-auto max-w-7xl space-y-16 px-4 py-20 sm:px-6">
         <section>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">A sessão</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            Primeiro as ideias, depois os nomes
-          </h2>
           <div className="mt-6 max-w-3xl space-y-4 text-lg text-ink/85">
             <p>
               Apresentámos o programa eleitoral no auditório da Escola Secundária da Trofa. Não foi
