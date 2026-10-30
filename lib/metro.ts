@@ -59,10 +59,20 @@ export type Facto = {
 
 export const cronologia: Facto[] = [
   {
+    quando: "1996",
+    titulo: "O primeiro projeto: a Trofa na 1.ª fase do metro",
+    texto:
+      "A linha da Trofa é uma das quatro da primeira fase da rede do Metro do Porto, projetada em 1996.",
+    fonte: {
+      nome: "Público (2020)",
+      href: "https://www.publico.pt/2020/01/23/local/noticia/presidente-camara-trofa-pede-saida-governo-ministro-alucinado-ambiente-1901445",
+    },
+  },
+  {
     quando: "Fevereiro de 2002",
     titulo: "O comboio sai para dar lugar ao metro",
     texto:
-      "A linha da Trofa fazia parte da primeira fase da rede do Metro do Porto, com abertura prevista para 2003. O serviço ferroviário é suprimido para dar lugar ao metro. Os carris do metro nunca chegaram a ser assentes e os autocarros ocuparam o lugar do comboio.",
+      "O serviço ferroviário até à Trofa é suprimido para dar lugar ao metro. Os carris do metro nunca chegaram a ser assentes e os autocarros ocuparam o lugar do comboio.",
     fonte: {
       nome: "O Notícias da Trofa (2019)",
       href: "https://www.onoticiasdatrofa.pt/foi-ha-quase-duas-decadas-que-a-trofa-ficou-mais-pobre/",
