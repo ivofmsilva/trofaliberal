@@ -230,19 +230,29 @@ export const gestao = {
         "O comboio saiu em 2002 com a promessa do metro. Em 2008 o novo projeto prometia a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Foram vários avanços e recuos.",
     },
     {
-      titulo: "A Câmara fez obras no centro sem guardar lugar ao metro",
+      titulo: "A Câmara foi inaugurando o centro sem guardar lugar ao metro",
       texto:
-        "O parque Nossa Senhora das Dores foi inaugurado em 2015 e os novos Paços do Concelho em 2022, com Sérgio Humberto (PSD) na presidência da Câmara. Em 2021, ele próprio admitiu que “o túnel não foi acautelado”. E o documento do projeto da Metro do Porto diz que a intervenção nos Paços do Concelho e no Parque Nossa Senhora das Dores “inviabilizaram o percurso original”, o que obrigou a redefinir o traçado.",
+        "Os parques foram inaugurados em 2015, a Alameda da Estação em 2017 e os novos Paços do Concelho em 2022, todos com Sérgio Humberto (PSD) na presidência da Câmara. Em 2021, ele próprio admitiu que “o túnel não foi acautelado”.",
     },
     {
       titulo: "No fim, quem paga é quem espera",
       texto:
-        "O Muro boicotou eleições em 2011, 2014 e 2016, em protesto. Hoje, o projeto em consulta pára no Muro e passa a autocarro. Não é isto que foi prometido em 2002.",
+        "Em 2011, 2014 e 2016 o Muro deixou as urnas vazias para se fazer ouvir. Vinte e quatro anos depois da promessa, o projeto em consulta leva o metro só até ao Muro e entrega o resto a autocarro: quem vive na Trofa continua a ter de mudar de veículo a meio do caminho para seguir viagem.",
     },
   ],
+  // Frase do documento do projeto da Metro do Porto (fotografia enviada pelo núcleo; sem ligação).
+  destaque: {
+    frase:
+      "…após a intervenção na área do novo edifício dos Paços do Concelho e Parque Nossa Senhora das Dores, que inviabilizaram o percurso original.",
+    fonte: "Documento do projeto da Metro do Porto (Ayesa Grid), sobre a decisão de redefinir o projeto",
+  },
   fecho:
-    "Por isso pedimos mais do que metro. Pedimos que o metro vá até ao Interface e que nenhuma obra volte a ocupar o espaço que ele precisa.",
+    "Sucessivos executivos da Câmara não acautelaram o lugar do metro no centro da Trofa. Em 2017, quinze anos depois de o comboio sair, o município foi finalmente a tribunal. E, em 2021, ainda se admitia que o túnel não estava acautelado.",
 };
+
+// Frase da nossa participação, em destaque na página.
+export const destaqueParticipacao =
+  "O metro deve chegar ao nó que liga a Trofa ao Norte, e não obrigar a mudar de veículo a meio do caminho. Fazer bem agora custa menos do que corrigir depois.";
 
 // ---- Porque o metro até ao Interface (da nossa participação) ----------------
 export const argumentos = [
@@ -258,7 +268,8 @@ export const argumentos = [
   },
   {
     titulo: "Mais capacidade",
-    texto: "O metro tem uma capacidade muito superior à do metrobus.",
+    texto:
+      "O metro tem uma capacidade muito superior à do metrobus. Isso evita esperas desnecessárias, a necessidade de pôr mais autocarros na estrada e os problemas de lotação nas horas de ponta.",
   },
   {
     titulo: "Um sistema, não dois",

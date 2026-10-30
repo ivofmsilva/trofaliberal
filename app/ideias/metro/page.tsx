@@ -12,6 +12,7 @@ import {
   comparacao,
   consulta,
   cronologia,
+  destaqueParticipacao,
   diasDesde,
   esperaDesde,
   gestao,
@@ -191,7 +192,18 @@ export default function Metro() {
               </li>
             ))}
           </ol>
-          <p className="font-display mt-10 max-w-3xl text-2xl font-bold text-sun">{gestao.fecho}</p>
+          <figure className="mt-10 rounded-3xl bg-white p-8 text-navy md:p-12">
+            <span aria-hidden className="font-display block text-7xl font-bold leading-none text-pink">
+              “
+            </span>
+            <blockquote className="font-display -mt-4 text-2xl font-bold leading-snug md:text-3xl">
+              {gestao.destaque.frase}
+            </blockquote>
+            <figcaption className="mt-5 text-sm font-bold uppercase tracking-widest text-ink/60">
+              {gestao.destaque.fonte}
+            </figcaption>
+          </figure>
+          <p className="mt-10 max-w-3xl text-xl font-medium text-white/90">{gestao.fecho}</p>
         </div>
       </section>
 
@@ -302,6 +314,15 @@ export default function Metro() {
         <p className="mt-3 text-sm text-ink/60">
           {participacao.processo} · assinada por {participacao.assinatura} · {participacao.data}
         </p>
+
+        <figure className="mt-10 rounded-3xl bg-pink p-8 text-white md:p-12">
+          <blockquote className="font-display text-2xl font-bold leading-snug md:text-4xl">
+            “{destaqueParticipacao}”
+          </blockquote>
+          <figcaption className="mt-5 text-sm font-bold uppercase tracking-widest text-white/80">
+            Da nossa participação no Participa.pt
+          </figcaption>
+        </figure>
 
         <h3 className="font-display mt-10 text-2xl font-bold text-navy">A nossa posição</h3>
         <p className="mt-3 text-lg text-ink/85">{participacao.posicao}</p>
