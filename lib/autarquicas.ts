@@ -147,17 +147,17 @@ export const campanha = {
   candidatura: {
     evento: "https://www.facebook.com/events/4075416729399915?active_tab=about",
     videos: [
-      "DM-_wr-vgAY",
-      "DNIcFHtxudV",
-      "DNqxIFWh8Oi",
-      "DNv60vx2o-v",
-      "DN8yru2ivPY",
-      "DN_Xpvoj_y0",
-      "DOB8blDEqIC",
-      "DOT9-xECcF1",
-      "DOja186Dn2v",
-      "DOrJPL1ghEl",
-    ].map((id, i): Link => ({ titulo: `Vídeo ${i + 1}`, href: ig(id) })),
+      ["DM-_wr-vgAY", "Obrigado, Trofa!"],
+      ["DNIcFHtxudV", "A apresentação dos candidatos"],
+      ["DNqxIFWh8Oi", "Ivo Silva: uma candidatura de todos"],
+      ["DNv60vx2o-v", "Miguel Rangel: gente séria, livre e competente"],
+      ["DN8yru2ivPY", "Alvarelhos: dinamismo"],
+      ["DN_Xpvoj_y0", "José Pedro Reis: um sinal de esperança e coragem"],
+      ["DOB8blDEqIC", "Miguel Rangel: o poder local não é para infantilizar"],
+      ["DOT9-xECcF1", "Diamantino Costa: a Trofa não pode continuar presa ao passado"],
+      ["DOja186Dn2v", "Miguel Rangel: um concelho travado pela burocracia"],
+      ["DOrJPL1ghEl", "Diamantino Costa: uma Câmara leve, transparente e próxima"],
+    ].map(([id, titulo]): Link => ({ titulo, href: ig(id) })),
     imagens: [{ titulo: "Imagens da apresentação", href: `${ig("DNEFm6ToO5b")}?img_index=4` }] as Link[],
   },
   programa: {
@@ -168,6 +168,19 @@ export const campanha = {
   programaPublicacoes: ["DOhDusXDVtw", "DObsW-kFAyc", "DOdU5O8DGAh"].map(
     (id, i): Link => ({ titulo: `Publicação ${i + 1} sobre a apresentação do programa`, href: ig(id) }),
   ),
+  // Fotos do programa eleitoral móvel pelas freguesias (public/images/programa-movel/).
+  programaMovelFotos: Array.from({ length: 10 }, (_, i) => `/images/programa-movel/${String(i + 1).padStart(2, "0")}.webp`),
+  // Freguesias por onde andou, pela ordem da publicação do Instagram.
+  programaMovelFreguesias: [
+    "São Martinho de Bougado",
+    "Santiago de Bougado",
+    "Guidões",
+    "Alvarelhos",
+    "Muro",
+    "São Mamede do Coronado",
+    "São Romão do Coronado",
+    "Covelas",
+  ],
   programaMovel: [
     { titulo: "Programa eleitoral móvel (1)", href: `${ig("DPmDsSPDIre")}?img_index=1` },
     { titulo: "Programa eleitoral móvel (2)", href: ig("DPGSNdhgt00") },
