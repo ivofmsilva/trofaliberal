@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-// Elétrico de metro ligeiro, desenhado à mão em SVG (ilustração própria).
+// Elétrico de metro ligeiro (articulado, com pantógrafo), desenhado em SVG: ilustração própria.
+// As rodas ficam escondidas sob as saias, como num metro ligeiro; circula sobre a linha amarela.
 function Eletrico() {
   return (
     <svg
@@ -21,53 +22,58 @@ function Eletrico() {
       </defs>
 
       {/* pantógrafo */}
-      <path d="M250 46 L282 24 L318 24 L350 46" fill="none" stroke="#5d6f7e" strokeWidth="4" strokeLinejoin="round" />
-      <rect x="270" y="20" width="60" height="5" rx="2" fill="#3b4b58" />
+      <path d="M118 50 L150 26 L186 26 L218 50" fill="none" stroke="#5d6f7e" strokeWidth="4" strokeLinejoin="round" />
+      <rect x="138" y="21" width="60" height="5" rx="2" fill="#3b4b58" />
 
-      {/* carroçaria */}
-      <path
-        d="M30 72 Q30 46 58 46 H498 Q556 50 586 98 L596 138 Q598 156 580 156 H48 Q30 156 30 138 Z"
-        fill="url(#corpo)"
-      />
-      {/* teto */}
-      <path d="M30 72 Q30 46 58 46 H498 Q528 48 546 62 H30 Z" fill="#b4c2ce" />
+      {/* módulo traseiro */}
+      <path d="M30 76 Q30 50 58 50 H296 V164 H48 Q30 164 30 146 Z" fill="url(#corpo)" />
+      {/* módulo da frente */}
+      <path d="M326 50 H498 Q556 54 586 100 L596 142 Q598 164 580 164 H326 Z" fill="url(#corpo)" />
+      {/* tetos */}
+      <path d="M30 76 Q30 50 58 50 H296 V64 H30 Z" fill="#b4c2ce" />
+      <path d="M326 50 H498 Q528 52 546 66 H326 Z" fill="#b4c2ce" />
+
+      {/* articulação */}
+      <rect x="294" y="52" width="34" height="112" rx="5" fill="#44525e" />
+      {[300, 306, 312, 318, 324].map((x) => (
+        <line key={x} x1={x} y1="56" x2={x} y2="160" stroke="#2c3842" strokeWidth="2" />
+      ))}
 
       {/* janelas */}
-      {[50, 116, 246, 312, 378].map((x) => (
-        <rect key={x} x={x} y="68" width="58" height="40" rx="6" fill="url(#vidro)" />
+      {[50, 114, 244, 340, 398].map((x) => (
+        <rect key={x} x={x} y="72" width={x === 244 ? 46 : 52} height="40" rx="6" fill="url(#vidro)" />
       ))}
       {/* portas */}
-      {[188, 446].map((x) => (
+      {[176, 456].map((x) => (
         <g key={x}>
-          <rect x={x} y="64" width="46" height="82" rx="6" fill="#e9eff4" stroke="#9fb0bf" strokeWidth="2" />
-          <rect x={x + 4} y="68" width="17" height="64" rx="4" fill="url(#vidro)" />
-          <rect x={x + 25} y="68" width="17" height="64" rx="4" fill="url(#vidro)" />
+          <rect x={x} y="68" width="48" height="86" rx="6" fill="#e9eff4" stroke="#9fb0bf" strokeWidth="2" />
+          <rect x={x + 4} y="72" width="18" height="66" rx="4" fill="url(#vidro)" />
+          <rect x={x + 26} y="72" width="18" height="66" rx="4" fill="url(#vidro)" />
         </g>
       ))}
       {/* cabine */}
-      <path d="M506 66 H556 Q574 82 584 108 H506 Z" fill="url(#vidro)" />
-      <path d="M512 72 H548 L560 92 H512 Z" fill="#ffffff" opacity="0.12" />
+      <path d="M508 70 H556 Q574 86 584 112 H508 Z" fill="url(#vidro)" />
+      <path d="M514 76 H548 L560 96 H514 Z" fill="#ffffff" opacity="0.12" />
       {/* destino */}
-      <rect x="518" y="52" width="46" height="11" rx="3" fill="#0c2b45" />
-      <text x="541" y="61" textAnchor="middle" fontSize="9" fontWeight="700" fill="#ffd500" fontFamily="Arial, sans-serif">
+      <rect x="520" y="55" width="46" height="11" rx="3" fill="#0c2b45" />
+      <text x="543" y="64" textAnchor="middle" fontSize="9" fontWeight="700" fill="#ffd500" fontFamily="Arial, sans-serif">
         TROFA
       </text>
 
       {/* faixa azul e linha amarela */}
-      <path d="M30 118 H590 L593 130 H30 Z" fill="#00abe4" />
-      <rect x="30" y="131" width="565" height="3" fill="#ffd500" />
+      <path d="M30 122 H326 V134 H30 Z" fill="#00abe4" />
+      <path d="M326 122 H590 L594 134 H326 Z" fill="#00abe4" />
+      <rect x="30" y="135" width="296" height="3" fill="#ffd500" />
+      <rect x="326" y="135" width="269" height="3" fill="#ffd500" />
 
       {/* farol */}
-      <circle cx="586" cy="124" r="4" fill="#fff6b0" />
+      <circle cx="587" cy="128" r="4" fill="#fff6b0" />
 
-      {/* saia e rodas */}
-      <rect x="44" y="142" width="536" height="13" rx="4" fill="#6f808e" />
-      {[118, 198, 402, 482].map((x) => (
-        <g key={x}>
-          <circle cx={x} cy="160" r="15" fill="#25343f" />
-          <circle cx={x} cy="160" r="5.5" fill="#8fa0ad" />
-        </g>
-      ))}
+      {/* saias: escondem as rodas */}
+      <path d="M44 146 H290 V176 H62 Q44 176 44 160 Z" fill="#6f808e" />
+      <path d="M332 146 H574 V160 Q574 176 556 176 H332 Z" fill="#6f808e" />
+      <rect x="44" y="146" width="246" height="4" fill="#8696a3" />
+      <rect x="332" y="146" width="242" height="4" fill="#8696a3" />
     </svg>
   );
 }
