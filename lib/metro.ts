@@ -98,15 +98,35 @@ export const cronologia: Facto[] = [
     quando: "2010",
     titulo: "O projeto sai do plano",
     texto:
-      "A Metro do Porto retira o prolongamento à Trofa do seu plano de atividades. Uma petição com mais de 8000 assinaturas segue para a Assembleia da República.",
+      "A Metro do Porto retira o prolongamento à Trofa do seu plano de atividades.",
     fonte: {
       nome: "JPN (2012)",
       href: "https://www.jpn.up.pt/2012/12/07/10-anos-do-metro-do-porto-a-trofa-ainda-espera-pela-linha-verde/",
     },
   },
   {
+    quando: "2011",
+    titulo: "A petição pública pelo metro",
+    texto:
+      "8206 subscritores fazem chegar à Presidência da República uma petição a pedir a construção da linha “com a máxima urgência”.",
+    fonte: {
+      nome: "Petição Pública",
+      href: "https://peticaopublica.com/pview.aspx?pi=P2010N3571",
+    },
+  },
+  {
+    quando: "23 de janeiro de 2011",
+    titulo: "Primeiro boicote do Muro",
+    texto:
+      "Nas eleições presidenciais, as duas mesas de voto da freguesia do Muro não abrem, em protesto pelo atraso do metro.",
+    fonte: {
+      nome: "TVI (2011)",
+      href: "https://tvi.iol.pt/noticias/sociedade/votar/presidenciais-protestos-e-urnas-encerradas",
+    },
+  },
+  {
     quando: "25 de maio de 2014",
-    titulo: "O Muro não vota: protesto pelo metro",
+    titulo: "Segundo boicote do Muro",
     texto:
       "Nas eleições europeias, as duas mesas de voto da freguesia do Muro nem chegam a abrir. A população diz-se enganada por sucessivos governos.",
     fonte: {
@@ -217,7 +237,7 @@ export const gestao = {
     {
       titulo: "No fim, quem paga é quem espera",
       texto:
-        "O Muro boicotou eleições três vezes até 2016, em protesto. Hoje, o projeto em consulta pára no Muro e passa a autocarro. Não é isto que foi prometido em 2002.",
+        "O Muro boicotou eleições em 2011, 2014 e 2016, em protesto. Hoje, o projeto em consulta pára no Muro e passa a autocarro. Não é isto que foi prometido em 2002.",
     },
   ],
   fecho:
