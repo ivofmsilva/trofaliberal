@@ -115,16 +115,6 @@ export const cronologia: Facto[] = [
     },
   },
   {
-    quando: "19 de novembro de 2015",
-    titulo: "Inauguram-se os parques no centro da Trofa",
-    texto:
-      "Os Parques Nossa Senhora das Dores e Dr. Lima Carneiro são inaugurados, com um concerto de Mickael Carreira. A estação “Senhora das Dores”, do projeto de 2008, continuava no papel.",
-    fonte: {
-      nome: "O Notícias da Trofa",
-      href: "https://www.onoticiasdatrofa.pt/concha-acustica-sem-medidas-para-receber-concertos/",
-    },
-  },
-  {
     quando: "24 de janeiro de 2016",
     titulo: "Terceiro boicote do Muro",
     texto:
@@ -132,16 +122,6 @@ export const cronologia: Facto[] = [
     fonte: {
       nome: "RTP (2016)",
       href: "https://www.rtp.pt/noticias/politica/mesas-de-voto-na-freguesia-de-muro-continuam-sem-ninguem_v890790",
-    },
-  },
-  {
-    quando: "Junho de 2017",
-    titulo: "A Alameda da Estação ocupa o antigo canal ferroviário",
-    texto:
-      "A primeira fase da Alameda da Estação é inaugurada no espaço onde passava o comboio, hoje uma grande zona pedonal.",
-    fonte: {
-      nome: "Infraestruturas de Portugal",
-      href: "https://www.infraestruturasdeportugal.pt/pt-pt/requalificacao-da-antiga-estacao-da-trofa",
     },
   },
   {
@@ -172,26 +152,6 @@ export const cronologia: Facto[] = [
     fonte: {
       nome: "Jornal de Notícias (2022)",
       href: "https://www.jn.pt/pais/artigo/uma-carta-aberta-e-acoes-a-moda-da-trofa-para-reivindicar-o-metro/14618440",
-    },
-  },
-  {
-    quando: "19 de novembro de 2022",
-    titulo: "O presidente da Câmara quer um novo traçado, em túnel",
-    texto:
-      "Sérgio Humberto diz não querer o metro nos parques nem na Alameda da Estação e propõe um túnel pelo monte de Valdeirigo até à Avenida 19 de Novembro, junto ao interface.",
-    fonte: {
-      nome: "O Notícias da Trofa (2022)",
-      href: "https://www.onoticiasdatrofa.pt/sergio-humberto-nao-quer-metro-a-passar-pelos-parques-e-pela-alameda-e-anuncia-novo-tracado/",
-    },
-  },
-  {
-    quando: "12 de outubro de 2023",
-    titulo: "Uma estação nos Paços do Concelho?",
-    texto:
-      "Com o projeto de metro até ao Muro e metrobus até ao interface, o presidente da Câmara fala numa estação nos Paços do Concelho, com ligação subterrânea ao interface, e avisa: “Se não for agora não é mais”.",
-    fonte: {
-      nome: "O Minho (2023)",
-      href: "https://ominho.pt/chegada-do-metro-a-trofa-e-agora-ou-nunca-diz-autarca/",
     },
   },
   {
@@ -247,12 +207,12 @@ export const gestao = {
     {
       titulo: "O Estado tirou o comboio e não deu o metro",
       texto:
-        "O comboio saiu em 2002 com a promessa do metro. Em 2008 o novo projeto prometia a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. A população percebeu, e foi dizendo que se sentia enganada.",
+        "O comboio saiu em 2002 com a promessa do metro. Em 2008 o novo projeto prometia a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Foram vários avanços e recuos.",
     },
     {
-      titulo: "A Câmara ocupou o canal e depois pediu o túnel",
+      titulo: "A Câmara fez obras no centro sem guardar lugar ao metro",
       texto:
-        "Os parques no centro abriram em 2015 e a Alameda da Estação, no antigo canal da ferrovia, em 2017. Em 2021, o presidente da Câmara reconhece que “o túnel não foi acautelado” e, em 2022, propõe um túnel pelo Valdeirigo para evitar os parques. Pelas palavras do próprio presidente, o espaço para o metro não foi acautelado.",
+        "O parque Nossa Senhora das Dores foi inaugurado em 2015 e os novos Paços do Concelho em 2022, com Sérgio Humberto (PSD) na presidência da Câmara. Em 2021, ele próprio admitiu que “o túnel não foi acautelado”. E o documento do projeto da Metro do Porto diz que a intervenção nos Paços do Concelho e no Parque Nossa Senhora das Dores “inviabilizaram o percurso original”, o que obrigou a redefinir o traçado.",
     },
     {
       titulo: "No fim, quem paga é quem espera",
