@@ -22,7 +22,7 @@ export const consulta = {
   nome: "Estudo de Impacte Ambiental da Linha ISMAI–Paradela (Metro do Porto até à Trofa)",
   inicio: "31 de agosto de 2026",
   fim: "12 de outubro de 2026",
-  portal: "https://participa.pt",
+  portal: "https://participa.pt/pt/consulta/linha-lt-ismai-paradela-do-metro-do-porto",
 };
 
 // Início da contagem de dias à espera (a mesma data da imagem da "senha 9000").
