@@ -135,16 +135,6 @@ export const cronologia: Facto[] = [
     },
   },
   {
-    quando: "23 de fevereiro de 2022",
-    titulo: "“Uma questão de justiça”",
-    texto:
-      "O presidente da Câmara lembra que “foi retirado o comboio com a promessa da vinda do metro, e esta é uma questão de justiça”, e avisa que a Trofa pode avançar com “ações à moda da Trofa”.",
-    fonte: {
-      nome: "Jornal de Notícias (2022)",
-      href: "https://www.jn.pt/pais/artigo/uma-carta-aberta-e-acoes-a-moda-da-trofa-para-reivindicar-o-metro/14618440",
-    },
-  },
-  {
     quando: "26 de outubro de 2023",
     titulo: "A IL denuncia: “não é uma extensão de metro até à Trofa”",
     texto:
@@ -200,7 +190,7 @@ export const gestao = {
         "A Trofa estava no projeto inicial da Metro do Porto. Em 2002 tiram o comboio. Em 2008 o novo projeto promete a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Os governos seguintes continuam a adiar. Foram vários os avanços e recuos.",
     },
     {
-      titulo: "A Câmara foi fazendo obras no centro sem acautelar o metro",
+      titulo: "A Câmara fez obras no centro sem acautelar o metro",
       texto:
         "O Parque N. Senhora das Dores foi requalificado em 2015, a Alameda da Estação inaugurada em 2017 e os novos Paços do Concelho em 2022, projetados e executados por vários executivos da Câmara. Em 2021, Sérgio Humberto admitiu que “o túnel não foi acautelado”.",
     },
