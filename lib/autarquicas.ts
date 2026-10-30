@@ -164,11 +164,34 @@ export const campanha = {
     fotos: [{ titulo: "Fotos da apresentação do programa", href: `${ig("DOjNSFSCJVu")}?img_index=1` }] as Link[],
     videos: [{ titulo: "Vídeo da apresentação do programa", href: ig("DOn0Yx8jVCM") }] as Link[],
   },
+  // Outras publicações sobre a sessão de apresentação do programa.
+  programaPublicacoes: ["DOhDusXDVtw", "DObsW-kFAyc", "DOdU5O8DGAh"].map(
+    (id, i): Link => ({ titulo: `Publicação ${i + 1} sobre a apresentação do programa`, href: ig(id) }),
+  ),
   programaMovel: [
     { titulo: "Programa eleitoral móvel (1)", href: `${ig("DPmDsSPDIre")}?img_index=1` },
     { titulo: "Programa eleitoral móvel (2)", href: ig("DPGSNdhgt00") },
   ] as Link[],
 };
+
+// Vídeos da campanha agrupados por tema do programa (Instagram).
+export const videosPorTema: { tema: string; slug: string; videos: Link[] }[] = [
+  {
+    tema: "Modernização da Câmara",
+    slug: "modernizacao-da-camara",
+    ids: ["DPjzoIkDFUN", "DPeo6EvDKmG", "DPMnVBcDgTY", "DPCUTa5jRq-"],
+  },
+  { tema: "Economia e Emprego", slug: "economia-e-emprego", ids: ["DPHd4qHAblv", "DOtuBUaEVPo"] },
+  { tema: "Ambiente", slug: "ambiente", ids: ["DOy3kyAldZx", "DO4BHPIAIwH", "DPlpeDfjBVm", "DPRxAeIFQ1S"] },
+  { tema: "Mobilidade", slug: "mobilidade", ids: ["DPmeUWJjCQi"] },
+  { tema: "Impostos e Fiscalidade Local", slug: "impostos-e-fiscalidade-local", ids: ["DPbUNzoDz5Z", "DPjkst1DNwz"] },
+  { tema: "Cultura", slug: "cultura", ids: ["DPgdw5wCGAV"] },
+  { tema: "Saúde e Desporto", slug: "saude-e-desporto", ids: ["DO6lxWujTQY"] },
+].map(({ tema, slug, ids }) => ({
+  tema,
+  slug,
+  videos: ids.map((id, i): Link => ({ titulo: `${tema} — vídeo ${i + 1}`, href: ig(id) })),
+}));
 
 export type Dia = {
   dia: number;
