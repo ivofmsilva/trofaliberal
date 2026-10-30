@@ -44,7 +44,11 @@ export default function Programa() {
               </li>
             ))}
           </ul>
-          <Galeria fotos={campanha.programaMovelFotos} alt="Programa eleitoral móvel da IL Trofa numa freguesia do concelho" />
+          <Galeria
+            fotos={campanha.programaMovelFotos}
+            legendas={campanha.programaMovelLegendas}
+            alt="Programa eleitoral móvel da IL Trofa"
+          />
           <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {campanha.programaMovel.map((l) => (
               <li key={l.href}>

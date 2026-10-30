@@ -3,7 +3,16 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
-export default function Galeria({ fotos, alt }: { fotos: string[]; alt: string }) {
+// `legendas` (opcional) tem uma legenda por foto, pela mesma ordem; fotos sem legenda ficam sem texto.
+export default function Galeria({
+  fotos,
+  alt,
+  legendas,
+}: {
+  fotos: string[];
+  alt: string;
+  legendas?: (string | undefined)[];
+}) {
   const [aberta, setAberta] = useState<number | null>(null);
 
   const fechar = useCallback(() => setAberta(null), []);
@@ -38,8 +47,9 @@ export default function Galeria({ fotos, alt }: { fotos: string[]; alt: string }
               className="block w-full overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink"
               aria-label={`Ampliar foto ${i + 1} de ${fotos.length}`}
             >
-              <Image src={s} alt={`${alt} (${i + 1})`} width={600} height={600} sizes="(min-width: 1024px) 25vw, 50vw" className="h-auto w-full" />
+              <Image src={s} alt={legendas?.[i] ? `${alt}: ${legendas[i]}` : `${alt} (${i + 1})`} width={600} height={600} sizes="(min-width: 1024px) 25vw, 50vw" className="h-auto w-full" />
             </button>
+            {legendas?.[i] && <p className="mt-2 text-sm font-bold text-navy">{legendas[i]}</p>}
           </li>
         ))}
       </ul>
@@ -65,8 +75,11 @@ export default function Galeria({ fotos, alt }: { fotos: string[]; alt: string }
               </button>
             </>
           )}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={fotos[aberta]} alt={`${alt} (${aberta + 1})`} className="max-h-[90vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
+          <div className="flex max-h-[95vh] max-w-full flex-col items-center gap-3" onClick={(e) => e.stopPropagation()}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={fotos[aberta]} alt={legendas?.[aberta] ? `${alt}: ${legendas[aberta]}` : `${alt} (${aberta + 1})`} className="max-h-[85vh] max-w-full rounded-lg object-contain" />
+            {legendas?.[aberta] && <p className="text-lg font-bold text-white">{legendas[aberta]}</p>}
+          </div>
         </div>
       )}
     </>

@@ -170,6 +170,19 @@ export const campanha = {
   ),
   // Fotos do programa eleitoral móvel pelas freguesias (public/images/programa-movel/).
   programaMovelFotos: Array.from({ length: 10 }, (_, i) => `/images/programa-movel/${String(i + 1).padStart(2, "0")}.webp`),
+  // Freguesia de cada foto (mesma ordem das fotos); as duas sem legenda são só para embelezar.
+  programaMovelLegendas: [
+    "Santiago de Bougado",
+    "São Martinho de Bougado",
+    undefined,
+    "Guidões",
+    "Alvarelhos",
+    undefined,
+    "Muro",
+    "São Romão do Coronado",
+    "São Mamede do Coronado",
+    "Covelas",
+  ] as (string | undefined)[],
   // Freguesias por onde andou, pela ordem da publicação do Instagram.
   programaMovelFreguesias: [
     "São Martinho de Bougado",
