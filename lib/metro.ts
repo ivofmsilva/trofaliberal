@@ -13,7 +13,7 @@ export const participacao = {
     "Avaliar o metro ligeiro até ao Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
     "Publicar os estudos que fundamentam o metrobus, com dados atualizados, e reabrir a participação pública.",
     "Garantir que o troço ISMAI–Muro avança no calendário previsto, sem depender desta reavaliação.",
-    "Se o metrobus for aprovado, impor na Declaração de Impacte Ambiental que viadutos, túnel, canal e cais sejam dimensionados para metro ligeiro, com o custo de conversão publicado e uma data (ou um patamar de procura) para a desencadear.",
+    "Se, contra a nossa posição, a solução BRT vier a ser aprovada, impor na Declaração de Impacte Ambiental que viadutos, túnel, canal e cais sejam dimensionados para metro ligeiro, com o custo de conversão publicado e uma data (ou um patamar de procura) para a desencadear.",
     "Detalhar a integração no Interface e aproximar as estações das zonas residenciais, dos serviços e do comércio.",
   ],
 };
