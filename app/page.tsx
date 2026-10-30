@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
 import { proximos } from "@/lib/eventos";
@@ -139,6 +140,8 @@ export default function Home() {
           </Link>
         </section>
       )}
+
+      <BannerMetro />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
