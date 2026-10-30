@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Elétrico de metro ligeiro (articulado, com pantógrafo), desenhado em SVG: ilustração própria.
-// As rodas ficam escondidas sob as saias, como num metro ligeiro; circula sobre a linha amarela.
+// As rodas ficam escondidas sob as saias, como num metro ligeiro.
 function Eletrico() {
   return (
     <svg
@@ -82,21 +82,24 @@ export default function HeroMetro() {
   return (
     <section className="px-4 pt-6 sm:px-6">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white shadow-xl">
-        {/* linha de metro a contornar o cartão */}
+        {/* "9000" em marca de água, atrás do elétrico */}
+        <span
+          aria-hidden
+          className="font-display pointer-events-none absolute -right-4 -top-6 select-none text-[11rem] font-bold leading-none text-white/[0.07] sm:text-[15rem] md:text-[20rem]"
+        >
+          9000
+        </span>
+
+        {/* a velha linha do comboio: balastro, travessas e carris onde o metro nunca chegou */}
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-9 left-8 right-8 top-12 rounded-br-[56px] border-b-[7px] border-r-[7px] border-sun"
-        />
-        <span
-          aria-hidden
-          className="absolute bottom-[39px] left-8 h-7 w-7 -translate-x-1/2 translate-y-1/2 rounded-full border-[6px] border-[#003e7a] bg-white"
-        />
-        <span
-          aria-hidden
-          className="absolute right-[35px] top-12 h-7 w-7 translate-x-1/2 -translate-y-1/2 rounded-full border-[6px] border-[#003e7a] bg-white"
-        />
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-9 bg-[#003e7a]/60 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.18)_0_10px,transparent_10px_34px)]"
+        >
+          <div className="absolute inset-x-0 top-0 h-[5px] bg-white/80" />
+          <div className="absolute inset-x-0 top-[14px] h-[5px] bg-white/45" />
+        </div>
 
-        <div className="relative grid items-end gap-6 px-12 pb-16 pt-14 md:grid-cols-[1fr_1.1fr] md:px-16">
+        <div className="relative grid items-end gap-6 px-8 pb-16 pt-14 md:grid-cols-[1fr_1.1fr] md:px-16">
           <div className="self-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/85 sm:text-sm">
               Iniciativa Liberal · Núcleo da Trofa · Mobilidade

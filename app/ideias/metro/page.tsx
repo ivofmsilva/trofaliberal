@@ -14,7 +14,7 @@ import {
   cronologia,
   diasDesde,
   esperaDesde,
-  fontes,
+  gestao,
   participacao,
   projeto,
 } from "@/lib/metro";
@@ -154,20 +154,15 @@ export default function Metro() {
               <p className="text-sm font-bold uppercase tracking-widest text-pink">{f.quando}</p>
               <h3 className="font-display mt-1 text-2xl font-bold text-navy">{f.titulo}</h3>
               <p className="mt-2 text-lg text-ink/85">{f.texto}</p>
-              {f.fontes && (
-                <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                  {f.fontes.map((s) => (
-                    <a
-                      key={s.href}
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-cyan-dark hover:underline"
-                    >
-                      {s.nome} ↗
-                    </a>
-                  ))}
-                </p>
+              {f.fonte && (
+                <a
+                  href={f.fonte.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm font-bold text-cyan-dark hover:underline"
+                >
+                  {f.fonte.nome} ↗
+                </a>
               )}
               {f.ligacao && (
                 <a href={f.ligacao.href} className="mt-2 inline-block text-sm font-bold text-cyan-dark hover:underline">
@@ -179,48 +174,40 @@ export default function Metro() {
         </ol>
       </section>
 
-      {/* Metro e metrobus em números */}
+      {/* Uma causa mal gerida */}
+      <section className="bg-navy py-20 text-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-sun`}>Uma causa mal gerida</p>
+          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">
+            Falharam todos, e a Trofa continua à espera
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-white/85">{gestao.intro}</p>
+          <ol className="mt-10 grid gap-5 md:grid-cols-3">
+            {gestao.blocos.map((b, i) => (
+              <li key={b.titulo} className="rounded-2xl bg-navy-soft p-8">
+                <span className="font-display text-sm font-bold text-sun">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="font-display mt-2 text-2xl font-bold leading-tight">{b.titulo}</h3>
+                <p className="mt-3 text-white/85">{b.texto}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="font-display mt-10 max-w-3xl text-2xl font-bold text-sun">{gestao.fecho}</p>
+        </div>
+      </section>
+
+      {/* Metro e metrobus, em texto */}
       <section className="bg-mist py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <p className={`${etiqueta} text-cyan-dark`}>Metro e metrobus em números</p>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>Metro e metrobus</p>
           <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
             Obra mais barata, mas dura metade
           </h2>
-          <p className="mt-4 max-w-3xl text-ink/75">
-            Valores de referência do Certu, o centro técnico do Estado francês para transportes e
-            urbanismo, medidos em redes já construídas em França.
-          </p>
-
-          <div className="mt-10 overflow-x-auto rounded-2xl bg-white shadow-sm">
-            <table className="w-full min-w-[560px] text-left">
-              <thead>
-                <tr className="text-sm uppercase tracking-widest">
-                  <th scope="col" className="p-5 font-bold text-ink/50">
-                    <span className="sr-only">Critério</span>
-                  </th>
-                  <th scope="col" className="p-5 font-bold text-ink/70">
-                    Metrobus
-                    <span className="block text-xs font-medium normal-case tracking-normal text-ink/50">autocarro em canal próprio</span>
-                  </th>
-                  <th scope="col" className="bg-navy p-5 font-bold text-white">
-                    Metro ligeiro
-                    <span className="block text-xs font-medium normal-case tracking-normal text-white/70">elétrico moderno</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparacao.linhas.map((l) => (
-                  <tr key={l.criterio} className="border-t-2 border-mist">
-                    <th scope="row" className="p-5 font-bold text-navy">{l.criterio}</th>
-                    <td className="p-5 text-ink/80">{l.bus}</td>
-                    <td className="bg-navy/5 p-5 font-bold text-navy">{l.metro}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="mt-8 space-y-4 text-lg text-ink/85">
+            {comparacao.paragrafos.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
           </div>
-          <p className="mt-6 max-w-3xl text-lg text-ink/85">{comparacao.nota}</p>
-          <p className="mt-3 text-sm text-ink/60">Fonte: {comparacao.fonte}</p>
+          <p className="mt-6 text-sm text-ink/60">Fonte: {comparacao.fonte}</p>
         </div>
       </section>
 
@@ -346,22 +333,6 @@ export default function Metro() {
           >
             Participa.pt ↗
           </a>
-        </div>
-      </section>
-
-      {/* Fontes */}
-      <section className="border-t-2 border-mist bg-white py-14">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <h2 className="font-display text-2xl font-bold text-navy">Fontes</h2>
-          <ul className="mt-5 space-y-2 text-sm text-ink/75">
-            {fontes.map((f) => (
-              <li key={f.href}>
-                <a href={f.href} target="_blank" rel="noopener noreferrer" className="font-bold text-cyan-dark hover:underline">
-                  {f.nome} ↗
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
