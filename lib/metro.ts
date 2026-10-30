@@ -108,7 +108,7 @@ export const cronologia: Facto[] = [
     quando: "25 de maio de 2014",
     titulo: "O Muro não vota: protesto pelo metro",
     texto:
-      "Nas eleições europeias, as duas mesas de voto da freguesia do Muro nem chegam a abrir. A população diz-se enganada por sucessivos governos e jura que não volta a votar enquanto o metro não vier.",
+      "Nas eleições europeias, as duas mesas de voto da freguesia do Muro nem chegam a abrir. A população diz-se enganada por sucessivos governos.",
     fonte: {
       nome: "Público (2014)",
       href: "https://www.publico.pt/2014/05/25/sociedade/noticia/acessibilidades-ditam-boicotes-na-trofa-e-em-sintra-1637383",
