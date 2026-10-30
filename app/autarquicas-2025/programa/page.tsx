@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Galeria from "@/components/Galeria";
 import InstagramEmbed, { igId } from "@/components/InstagramEmbed";
 import PageHero from "@/components/PageHero";
 import { campanha, programas } from "@/lib/autarquicas";
@@ -36,7 +37,15 @@ export default function Programa() {
             freguesias, para que as nossas ideias chegassem a todos. Uma campanha diferente, uma
             campanha liberal.
           </p>
-          <ul className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {campanha.programaMovelFreguesias.map((f) => (
+              <li key={f} className="rounded-full bg-navy px-4 py-1.5 text-sm font-bold text-white">
+                {f}
+              </li>
+            ))}
+          </ul>
+          <Galeria fotos={campanha.programaMovelFotos} alt="Programa eleitoral móvel da IL Trofa numa freguesia do concelho" />
+          <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {campanha.programaMovel.map((l) => (
               <li key={l.href}>
                 <InstagramEmbed id={igId(l.href)} titulo={l.titulo} altura={680} />

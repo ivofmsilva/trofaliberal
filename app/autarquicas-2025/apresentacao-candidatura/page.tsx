@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Galeria from "@/components/Galeria";
 import InstagramEmbed, { igId } from "@/components/InstagramEmbed";
 import PageHero from "@/components/PageHero";
 import { campanha, candidatos } from "@/lib/autarquicas";
+import { fotos } from "@/lib/galeria";
 
 export const metadata: Metadata = { title: "Apresentação da candidatura — Autárquicas 2025" };
 
@@ -19,6 +21,25 @@ const frases = [
   {
     texto: "Uma Câmara leve, transparente e próxima.",
     quem: "Diamantino Costa, candidato à Câmara Municipal",
+  },
+];
+
+// Os discursos de cada candidato, resumidos a partir das publicações da campanha (sem aspas).
+const discursos = [
+  {
+    texto:
+      "A Assembleia Municipal tem de ser um órgão de fiscalização e de intervenção, e não um lugar de silêncio.",
+    quem: "José Pedro Reis, candidato à Assembleia Municipal",
+  },
+  {
+    texto:
+      "Dar mais voz às pessoas, reforçar a responsabilidade cívica e garantir uma Junta próxima da comunidade.",
+    quem: "Pedro Rebelo, candidato à União das Freguesias de Bougado",
+  },
+  {
+    texto:
+      "A política não deve ser sobre heranças ou interesses instalados. Deve ser sobre compromisso e ligação genuína às pessoas.",
+    quem: "Bruno Magalhães, candidato à Junta de Freguesia de Alvarelhos",
   },
 ];
 
@@ -54,7 +75,7 @@ export default function ApresentacaoCandidatura() {
               <p>
                 Foi uma candidatura nascida da participação das pessoas: um programa eleitoral aberto
                 a contributos da comunidade e listas compostas por trofenses que quiseram sair do
-                sofá e agir. A Trofa não é dos partidos. É das pessoas.
+                sofá e agir.
               </p>
             </div>
             <a
@@ -71,6 +92,12 @@ export default function ApresentacaoCandidatura() {
               <li key={f.quem} className="rounded-2xl bg-navy p-6 text-white">
                 <p className="font-display text-xl font-bold leading-snug">“{f.texto}”</p>
                 <p className="mt-3 text-xs font-bold uppercase tracking-widest text-sun">{f.quem}</p>
+              </li>
+            ))}
+            {discursos.map((f) => (
+              <li key={f.quem} className="rounded-2xl border-l-8 border-pink bg-mist p-6 text-navy">
+                <p className="font-display text-lg font-bold leading-snug">{f.texto}</p>
+                <p className="mt-3 text-xs font-bold uppercase tracking-widest text-pink">{f.quem}</p>
               </li>
             ))}
           </ul>
@@ -107,13 +134,7 @@ export default function ApresentacaoCandidatura() {
 
         <section>
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Imagens</h2>
-          <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {c.imagens.map((l) => (
-              <li key={l.href}>
-                <InstagramEmbed id={igId(l.href)} titulo={l.titulo} altura={680} />
-              </li>
-            ))}
-          </ul>
+          <Galeria fotos={fotos("candidatura-2025")} alt="Apresentação da candidatura da IL Trofa, no espaço Mordomias" />
         </section>
 
         <section>

@@ -182,8 +182,7 @@ export const campanha = {
     "Covelas",
   ],
   programaMovel: [
-    { titulo: "Programa eleitoral móvel (1)", href: `${ig("DPmDsSPDIre")}?img_index=1` },
-    { titulo: "Programa eleitoral móvel (2)", href: ig("DPGSNdhgt00") },
+    { titulo: "Programa eleitoral móvel", href: ig("DPGSNdhgt00") },
   ] as Link[],
 };
 

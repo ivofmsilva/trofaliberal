@@ -3,6 +3,7 @@ import Galeria from "@/components/Galeria";
 import InstagramEmbed, { igId } from "@/components/InstagramEmbed";
 import PageHero from "@/components/PageHero";
 import { campanha } from "@/lib/autarquicas";
+import { fotos } from "@/lib/galeria";
 
 export const metadata: Metadata = { title: "Apresentação do programa — Autárquicas 2025" };
 
@@ -33,31 +34,13 @@ export default function ApresentacaoPrograma() {
 
       <div className="mx-auto max-w-7xl space-y-16 px-4 py-20 sm:px-6">
         <section>
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-pink">Em destaque</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            O programa eleitoral móvel
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg text-ink/85">
-            Criámos um programa eleitoral móvel que nos acompanhou na campanha por todas as
-            freguesias, para que as nossas ideias chegassem a todos. Uma campanha diferente, uma
-            campanha liberal.
-          </p>
-          <ul className="mt-6 flex flex-wrap gap-2">
-            {campanha.programaMovelFreguesias.map((f) => (
-              <li key={f} className="rounded-full bg-navy px-4 py-1.5 text-sm font-bold text-white">
-                {f}
-              </li>
-            ))}
-          </ul>
-          <Galeria fotos={campanha.programaMovelFotos} alt="Programa eleitoral móvel da IL Trofa numa freguesia do concelho" />
-        </section>
-
-        <section>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">A sessão</p>
           <div className="mt-6 max-w-3xl space-y-4 text-lg text-ink/85">
             <p>
-              Apresentámos o programa eleitoral no auditório da Escola Secundária da Trofa. Não foi
-              por acaso: queríamos mostrar a importância que os liberais dão à educação e às ideias.
+              No dia 12 de setembro, às 21h, apresentámos o programa eleitoral no auditório da Escola
+              Secundária da Trofa, com a presença de Mariana Leitão, presidente da Iniciativa Liberal,
+              e do deputado Miguel Rangel. Não foi por acaso: queríamos mostrar a importância que os
+              liberais dão à educação e às ideias.
             </p>
             <p>
               Fomos o primeiro partido a disponibilizar o programa eleitoral e o único a fazê-lo antes
@@ -78,14 +61,8 @@ export default function ApresentacaoPrograma() {
         </section>
 
         <section>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Fotos</h2>
-          <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {p.fotos.map((l) => (
-              <li key={l.href}>
-                <InstagramEmbed id={igId(l.href)} titulo={l.titulo} altura={680} />
-              </li>
-            ))}
-          </ul>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Imagens</h2>
+          <Galeria fotos={fotos("programa-2025")} alt="Apresentação do programa eleitoral da IL Trofa, na Escola Secundária da Trofa" />
         </section>
         <section>
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Vídeo</h2>
