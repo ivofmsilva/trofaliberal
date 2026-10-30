@@ -28,7 +28,7 @@ export default function BannerMetro() {
         <div className="flex flex-col justify-between gap-8 bg-[#0a4fa0] px-8 py-10 md:px-10 md:py-12">
           <div className="flex flex-col items-start gap-3">
             <p className="text-lg font-extrabold tracking-wide">Metrobus na Trofa:</p>
-            {["7 km de autocarro", "1 transbordo no Muro", "0 metro a chegar aqui"].map((t) => (
+            {["7 km de autocarro", "1 transbordo no Muro"].map((t) => (
               <span key={t} className="bg-pink px-3.5 py-1.5 text-lg font-black uppercase text-sun sm:text-xl">
                 {t}
               </span>
