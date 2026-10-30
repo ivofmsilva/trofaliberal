@@ -31,7 +31,11 @@ export default function Programa() {
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Programa eleitoral móvel</h2>
-          <p className="mt-2 text-ink/75">Uma versão para ver no telemóvel.</p>
+          <p className="mt-3 max-w-3xl text-lg text-ink/85">
+            Criámos um programa eleitoral móvel que nos acompanhou na campanha por todas as
+            freguesias, para que as nossas ideias chegassem a todos. Uma campanha diferente, uma
+            campanha liberal.
+          </p>
           <ul className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {campanha.programaMovel.map((l) => (
               <li key={l.href}>
