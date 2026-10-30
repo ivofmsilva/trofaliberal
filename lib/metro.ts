@@ -222,20 +222,20 @@ export const cronologia: Facto[] = [
 // Resumo dos factos da cronologia (sem novas fontes): ninguém fica de fora.
 export const gestao = {
   intro:
-    "Não é uma questão de cores. Em vinte e quatro anos, vários governos e vários executivos municipais prometeram, adiaram, desenharam e redesenharam o metro da Trofa, e o metro continua por chegar.",
+    "Não é uma questão de cores. Em vinte e quatro anos, vários governos prometeram, adiaram, desenharam e redesenharam o metro da Trofa, e o metro continua por chegar.",
   blocos: [
     {
       titulo: "O Estado tirou o comboio e não deu o metro",
       texto:
-        "O comboio saiu em 2002 com a promessa do metro. Em 2008 o novo projeto prometia a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Foram vários avanços e recuos.",
+        "A Trofa estava no projeto inicial da Metro do Porto. Em 2002 tiram o comboio. Em 2008 o novo projeto promete a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Os governos seguintes continuam a adiar. Foram vários os avanços e recuos.",
     },
     {
-      titulo: "A Câmara foi inaugurando o centro sem guardar lugar ao metro",
+      titulo: "A Câmara foi fazendo obras no centro sem acautelar o metro",
       texto:
-        "Os parques foram inaugurados em 2015, a Alameda da Estação em 2017 e os novos Paços do Concelho em 2022, todos com Sérgio Humberto (PSD) na presidência da Câmara. Em 2021, ele próprio admitiu que “o túnel não foi acautelado”.",
+        "O Parque N. Senhora das Dores foi requalificado em 2015, a Alameda da Estação inaugurada em 2017 e os novos Paços do Concelho em 2022, projetados e executados por vários executivos da Câmara. Em 2021, Sérgio Humberto admitiu que “o túnel não foi acautelado”.",
     },
     {
-      titulo: "No fim, quem paga é quem espera",
+      titulo: "No fim, quem paga são os trofenses",
       texto:
         "Em 2011, 2014 e 2016 o Muro deixou as urnas vazias para se fazer ouvir. Vinte e quatro anos depois da promessa, o projeto em consulta leva o metro só até ao Muro e entrega o resto a autocarro: quem vive na Trofa continua a ter de mudar de veículo a meio do caminho para seguir viagem.",
     },
@@ -247,7 +247,7 @@ export const gestao = {
     fonte: "Documento do projeto da Metro do Porto (Ayesa Grid), sobre a decisão de redefinir o projeto",
   },
   fecho:
-    "Sucessivos executivos da Câmara não acautelaram o lugar do metro no centro da Trofa. Em 2017, quinze anos depois de o comboio sair, o município foi finalmente a tribunal. E, em 2021, ainda se admitia que o túnel não estava acautelado.",
+    "Sucessivos executivos da Câmara não acautelaram o lugar do metro no centro da Trofa. Em 2017, quinze anos depois de o comboio sair, o município foi a tribunal. E, em 2021, ainda se admitia que o túnel não estava acautelado.",
 };
 
 // Frase da nossa participação, em destaque na página.

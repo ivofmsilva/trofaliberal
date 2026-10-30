@@ -79,8 +79,9 @@ export default function Metro() {
             Metro até ao Muro, autocarro até à Trofa
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-white/85">
-            O projeto em consulta liga o ISMAI à Trofa em cerca de 10 km, mas só os primeiros são de
-            metro. Os últimos quilómetros fazem-se em metrobus, depois de um transbordo no Muro.
+            Ao longo dos anos, os trofenses viram vários projetos para o metro da Trofa ficarem no
+            papel. O projeto atual liga o ISMAI à Trofa em cerca de 10 km, mas só os primeiros são
+            de metro. Os últimos quilómetros fazem-se em metrobus, depois de um transbordo no Muro.
           </p>
 
           {/* desenho da linha, à escala 3 km / 7 km */}
