@@ -8,11 +8,9 @@ import PropostasEducacao from "@/components/PropostasEducacao";
 import { eixos, fotosJornadas, numeros, propostas } from "@/lib/educacao";
 import { itens } from "@/lib/imprensa";
 
-// Página ainda não anunciada: fora do menu e dos motores de pesquisa.
 export const metadata: Metadata = {
   title: "Trofa no topo da Educação — Iniciativa Liberal Trofa",
   description: "Manifesto pela Educação: liberdade para aprender, autonomia para crescer.",
-  robots: { index: false, follow: false },
 };
 
 const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";

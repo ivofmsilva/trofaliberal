@@ -28,7 +28,11 @@ export default function Propostas() {
               <h3 className="font-display mt-3 text-2xl font-bold leading-tight">{d.titulo}</h3>
               {d.subtitulo && <p className="mt-3 text-white/75">{d.subtitulo}</p>}
               <div className="mt-auto pt-6">
-                {d.href ? (
+                {d.href?.startsWith("/ideias/") ? (
+                  <Link href={d.href} className="font-bold text-sun hover:underline">
+                    Ver o manifesto →
+                  </Link>
+                ) : d.href ? (
                   <a
                     href={d.href}
                     target="_blank"

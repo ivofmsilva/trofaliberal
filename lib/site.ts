@@ -48,6 +48,7 @@ export const nav: NavItem[] = [
     children: [
       { label: "Propostas", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
+      { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
       { label: "Tens uma ideia?", href: "/ideias/sugestao" },
       { label: "Documentos Nacionais", href: links.nacionais, external: true },

@@ -9,6 +9,7 @@ export const documentos: Documento[] = [
   {
     titulo: "Manifesto pela Educação: Trofa no Topo da Educação",
     subtitulo: "As medidas que colocarão a Trofa no topo da educação a nível nacional.",
+    href: "/ideias/educacao",
   },
   {
     titulo: "Manifesto pela Mobilidade: Menos Sinistralidade, Mais Segurança na Mobilidade",
