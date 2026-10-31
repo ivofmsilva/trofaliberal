@@ -45,6 +45,12 @@ export const categorias: Record<
 export const itens: Record<Categoria, Item[]> = {
   noticias: [
     {
+      titulo: "Diamantino Costa eleito para Conselho de Fiscalização da IL",
+      fonte: "Jornal do Ave",
+      data: "2025-02-03",
+      href: "https://jornaldoave.sapo.pt/diamantino-costa-eleito-para-conselho-de-fiscalizacao-da-il/",
+    },
+    {
       titulo: "Entrevista a Diamantino Costa, candidato da Iniciativa Liberal à Câmara Municipal da Trofa",
       fonte: "Trofa TV",
       data: "2025-09-12",
