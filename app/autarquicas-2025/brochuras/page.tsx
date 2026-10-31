@@ -12,8 +12,14 @@ const hinoId = new URL(hino).searchParams.get("v") ?? "";
 const brochuras = [
   { src: "/images/geral/brochura-1.png", alt: "Brochura 1 da campanha Trofa Para Cima", w: 488, h: 731 },
   { src: "/images/geral/brochura-2.png", alt: "Brochura 2 da campanha Trofa Para Cima", w: 488, h: 731 },
-  { src: "/images/geral/brochura-3.webp", alt: "Brochura de Pedro Rebelo, candidato à Junta de Freguesia de Bougado", w: 1120, h: 1600 },
-  { src: "/images/geral/brochura-4.webp", alt: "Brochura de Bruno Magalhães, candidato à Junta de Freguesia de Alvarelhos", w: 1120, h: 1600 },
+  { src: "/images/geral/brochura-3.webp", alt: "Brochura de Pedro Rebelo, candidato à Junta de Freguesia de Bougado", w: 1086, h: 1600 },
+  { src: "/images/geral/brochura-4.webp", alt: "Brochura de Bruno Magalhães, candidato à Junta de Freguesia de Alvarelhos", w: 1086, h: 1600 },
+];
+const cartazes = [
+  { src: "/images/geral/cartaz-diamantino.webp", alt: "Cartaz de Diamantino Costa, candidato à Câmara Municipal da Trofa" },
+  { src: "/images/geral/cartaz-jose-pedro.webp", alt: "Cartaz de José Pedro Reis, candidato à Assembleia Municipal da Trofa" },
+  { src: "/images/geral/cartaz-pedro-rebelo.webp", alt: "Cartaz de Pedro Rebelo, candidato à Junta de Freguesia de Bougado" },
+  { src: "/images/geral/cartaz-bruno-magalhaes.webp", alt: "Cartaz de Bruno Magalhães, candidato à Junta de Freguesia de Alvarelhos" },
 ];
 
 export default function Outros() {
@@ -21,7 +27,7 @@ export default function Outros() {
   return (
     <>
       <PageHero eyebrow="Autárquicas 2025" title="Outros">
-        Brochuras, t-shirt, hino, sede e notícias da campanha Trofa Para Cima.
+        Brochuras, cartazes, t-shirt, hino, sede e notícias da campanha Trofa Para Cima.
       </PageHero>
 
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
@@ -38,6 +44,21 @@ export default function Outros() {
       </section>
 
       <section className="bg-mist py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Cartazes dos candidatos</h2>
+          <ul className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {cartazes.map((c) => (
+              <li key={c.src}>
+                <a href={c.src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink">
+                  <Image src={c.src} alt={c.alt} width={1120} height={1600} sizes="(min-width: 1024px) 250px, 50vw" className="h-auto w-full" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">T-shirt de campanha</h2>
           <p className="mt-3 max-w-2xl text-lg text-ink/80">
