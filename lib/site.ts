@@ -14,7 +14,7 @@ export const autarquicasNav = [
   { label: "Apresentação da candidatura", href: "/autarquicas-2025/apresentacao-candidatura" },
   { label: "Apresentação do programa", href: "/autarquicas-2025/apresentacao-programa" },
   { label: "Diário de campanha", href: "/autarquicas-2025/diario" },
-  { label: "Brochuras", href: "/autarquicas-2025/brochuras" },
+  { label: "Outros", href: "/autarquicas-2025/brochuras" },
 ];
 
 export const lojaNav = [

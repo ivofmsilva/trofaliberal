@@ -13,6 +13,8 @@ export type Item = {
   slug?: string;
   corpo?: Bloco[];
   documento?: string; // link para o PDF do documento original
+  // Notícias da campanha autárquica 2025: aparecem também na página "Outros" das Autárquicas.
+  tema?: "autarquicas";
 };
 
 export const categorias: Record<
@@ -42,6 +44,87 @@ export const categorias: Record<
 // Acrescentar novos itens aqui. A ordem não importa: são ordenados por data.
 export const itens: Record<Categoria, Item[]> = {
   noticias: [
+    {
+      titulo: "Entrevista a Diamantino Costa, candidato da Iniciativa Liberal à Câmara Municipal da Trofa",
+      fonte: "Trofa TV",
+      data: "2025-09-12",
+      href: "https://trofatv.sapo.pt/entrevista-a-diamantino-costa-candidato-da-iniciativa-liberal-a-camara-municipal-da-trofa/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "IL da Trofa apresenta candidatos às autárquicas no sábado",
+      fonte: "O Notícias da Trofa",
+      data: "2025-07-30",
+      href: "https://www.onoticiasdatrofa.pt/il-da-trofa-apresenta-candidatos-as-autarquicas-no-sabado/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Mais uma força política. Iniciativa Liberal fundou núcleo",
+      fonte: "O Notícias da Trofa",
+      data: "2022-07-12",
+      href: "https://www.onoticiasdatrofa.pt/mais-uma-forca-politica-iniciativa-liberal-fundou-nucleo/",
+    },
+    {
+      titulo: "Presidente da Iniciativa Liberal na Trofa para a apresentação do programa eleitoral do partido para as autárquicas",
+      fonte: "Trofa TV",
+      data: "2025-09-11",
+      href: "https://trofatv.sapo.pt/presidente-da-iniciativa-liberal-na-trofa-para-a-apresentacao-do-programa-eleitoral-do-partido-para-as-autarquicas/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Iniciativa Liberal arranca Jornadas da Educação com visita ao CENFIM da Trofa",
+      fonte: "Jornal do Ave",
+      data: "2026-03-25",
+      href: "https://jornaldoave.sapo.pt/iniciativa-liberal-arranca-jornadas-da-educacao-com-visita-ao-cenfim-da-trofa/",
+    },
+    {
+      titulo: "Com novo líder, Iniciativa Liberal recolhe ideias para programa eleitoral autárquico",
+      fonte: "O Notícias da Trofa",
+      data: "2024-09-26",
+      href: "https://www.onoticiasdatrofa.pt/com-novo-lider-iniciativa-liberal-recolhe-ideias-para-programa-eleitoral-autarquico/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Oficializado núcleo da Iniciativa Liberal",
+      fonte: "O Notícias da Trofa",
+      data: "2022-04-20",
+      href: "https://www.onoticiasdatrofa.pt/oficializado-nucleo-da-iniciativa-liberal/",
+    },
+    {
+      titulo: "IL Trofa lança campanha para formar listas autárquicas",
+      fonte: "O Notícias da Trofa",
+      data: "2025-05-26",
+      href: "https://www.onoticiasdatrofa.pt/il-trofa-lanca-campanha-para-formar-listas-autarquicas/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Iniciativa Liberal entrega listas autárquicas para o concelho da Trofa",
+      fonte: "O Notícias da Trofa",
+      data: "2025-08-14",
+      href: "https://www.onoticiasdatrofa.pt/iniciativa-liberal-entrega-listas-autarquicas-para-o-concelho-da-trofa/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Iniciativa Liberal apresenta candidatos a 3 freguesias",
+      fonte: "O Notícias da Trofa",
+      data: "2025-06-26",
+      href: "https://www.onoticiasdatrofa.pt/iniciativa-liberal-apresenta-candidatos-a-3-freguesias/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Diamantino Costa é o candidato da Iniciativa Liberal à Câmara da Trofa",
+      fonte: "O Notícias da Trofa",
+      data: "2025-06-03",
+      href: "https://www.onoticiasdatrofa.pt/diamantino-costa-e-o-candidato-da-iniciativa-liberal-a-camara-da-trofa/",
+      tema: "autarquicas",
+    },
+    {
+      titulo: "Iniciativa Liberal apresenta candidatos às autárquicas na Trofa",
+      fonte: "Trofa TV",
+      data: "2025-08-03",
+      href: "https://www.facebook.com/trofatv/posts/iniciativa-liberal-apresenta-candidatos-%C3%A0s-aut%C3%A1rquicas-na-trofadecorreu-ontem-s%C3%A1/1328862002580673/",
+      tema: "autarquicas",
+    },
     {
       titulo: "Bruno Magalhães eleito coordenador da Iniciativa Liberal da Trofa",
       fonte: "O Notícias da Trofa",
