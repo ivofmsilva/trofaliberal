@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { hino } from "@/lib/autarquicas";
 import { formatarData, ordenados } from "@/lib/imprensa";
 
 export const metadata: Metadata = { title: "Outros — Autárquicas 2025" };
 
+const hinoId = new URL(hino).searchParams.get("v") ?? "";
 const brochuras = ["/images/geral/brochura-1.png", "/images/geral/brochura-2.png"];
 
 export default function Outros() {
@@ -12,7 +14,7 @@ export default function Outros() {
   return (
     <>
       <PageHero eyebrow="Autárquicas 2025" title="Outros">
-        Brochuras e notícias da campanha Trofa Para Cima.
+        Brochuras, hino e notícias da campanha Trofa Para Cima.
       </PageHero>
 
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
@@ -26,6 +28,22 @@ export default function Outros() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="bg-navy py-20 text-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Hino de campanha</h2>
+          <div className="mt-8 overflow-hidden rounded-2xl bg-black">
+            <iframe
+              src={`https://www.youtube.com/embed/${hinoId}`}
+              title="Hino de campanha da Iniciativa Liberal Trofa, 2025"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="aspect-video w-full"
+            />
+          </div>
+        </div>
       </section>
 
       <section className="bg-mist py-20">
