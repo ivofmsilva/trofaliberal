@@ -49,9 +49,8 @@ export default function Loja() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          Escolhe os teus favoritos
+          Artigos da Trofa
         </h2>
-        <p className="mt-3 text-ink/75">Ajuda-nos a levar mais longe as ideias da liberdade.</p>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {produtos.map((p) => (
             <li key={p.nome} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
@@ -93,16 +92,10 @@ export default function Loja() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">
-            Merchandising da Iniciativa Liberal
-          </p>
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
           <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            Tudo o que há na loja nacional
+            Artigos nacionais
           </h2>
-          <p className="mt-3 max-w-2xl text-ink/75">
-            Os produtos oficiais da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda
-            aqui e tratamos de tudo com o núcleo da Trofa.
-          </p>
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {merchandising.map((p) => (
               <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
@@ -125,9 +118,6 @@ export default function Loja() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-sm text-ink/60">
-            Preços da lista pública da loja nacional (portal.liberal.pt/shop).
-          </p>
         </div>
       </section>
 
