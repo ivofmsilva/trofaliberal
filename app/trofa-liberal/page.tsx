@@ -110,6 +110,17 @@ export default function Sobre() {
             defender a liberdade em todas as suas vertentes, porque acreditamos que são as
             pessoas, não os políticos, que devem decidir o seu futuro.
           </p>
+          <figure className="rounded-2xl border-l-4 border-pink bg-mist p-6">
+            <blockquote className="font-display text-xl font-bold leading-snug text-navy">
+              “O liberalismo é a doutrina que mantém que o indivíduo tem o direito de pensar o que
+              quiser, de exprimir o que pensa como quiser, e de pôr em prática o que pensa como
+              quiser, desde que essa expressão ou essa prática não infrinja diretamente a igual
+              liberdade de qualquer outro indivíduo.”
+            </blockquote>
+            <figcaption className="mt-3 text-sm font-bold uppercase tracking-widest text-pink">
+              Fernando Pessoa
+            </figcaption>
+          </figure>
         </div>
       </section>
 

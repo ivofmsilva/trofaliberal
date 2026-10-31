@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Galeria from "@/components/Galeria";
 import PageHero from "@/components/PageHero";
 import { hino } from "@/lib/autarquicas";
+import { fotos } from "@/lib/galeria";
 import { formatarData, ordenados } from "@/lib/imprensa";
 
 export const metadata: Metadata = { title: "Outros — Autárquicas 2025" };
@@ -14,7 +16,7 @@ export default function Outros() {
   return (
     <>
       <PageHero eyebrow="Autárquicas 2025" title="Outros">
-        Brochuras, hino e notícias da campanha Trofa Para Cima.
+        Brochuras, t-shirt, hino, sede e notícias da campanha Trofa Para Cima.
       </PageHero>
 
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
@@ -28,6 +30,23 @@ export default function Outros() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">T-shirt de campanha</h2>
+          <p className="mt-3 max-w-2xl text-lg text-ink/80">
+            Azul, com o logótipo Trofa Para Cima à frente e a marca da Iniciativa Liberal Trofa nas costas.
+          </p>
+          <Image
+            src="/images/geral/tshirt-campanha.webp"
+            alt="T-shirt azul da campanha Trofa Para Cima, vista da frente e das costas"
+            width={1061}
+            height={544}
+            sizes="(min-width: 1024px) 1024px, 100vw"
+            className="mt-8 h-auto w-full rounded-2xl"
+          />
+        </div>
       </section>
 
       <section className="bg-navy py-20 text-white">
@@ -44,6 +63,14 @@ export default function Outros() {
             />
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Sede de campanha</h2>
+        <p className="mt-3 max-w-2xl text-lg text-ink/80">
+          A montra da sede com os candidatos à Câmara, à Assembleia Municipal e à Junta de Bougado.
+        </p>
+        <Galeria fotos={fotos("sede-2025")} alt="Sede de campanha da Iniciativa Liberal Trofa" />
       </section>
 
       <section className="bg-mist py-20">
