@@ -70,7 +70,7 @@ export const areas: Area[] = [
       "Reduzir a derrama municipal",
       "Criar novas zonas industriais",
       "Eliminar taxas injustificadas",
-      "Revitalizar a Rua Conde São Bento",
+      "Revitalizar o comércio local",
       "Observatório Local da Economia",
     ],
   },
