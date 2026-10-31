@@ -43,6 +43,12 @@ export const categorias: Record<
 export const itens: Record<Categoria, Item[]> = {
   noticias: [
     {
+      titulo: "Bruno Magalhães eleito coordenador da Iniciativa Liberal da Trofa",
+      fonte: "O Notícias da Trofa",
+      data: "2026-10-06",
+      href: "https://www.onoticiasdatrofa.pt/bruno-magalhaes-eleito-coordenador-da-iniciativa-liberal-da-trofa/",
+    },
+    {
       titulo: "Carlos Guimarães Pinto arranca Jornadas Liberais da Educação na Trofa",
       fonte: "Rádio Festival",
       data: "2026-03-24",
