@@ -22,7 +22,7 @@ import { links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Metro para a Trofa — Iniciativa Liberal Trofa",
-  description: "Esperámos mais de 9000 dias. A Trofa merece metro ligeiro, não transbordo.",
+  description: "Esperámos mais de 9000 dias. A Trofa merece o metro ligeiro, não um transbordo.",
   openGraph: {
     title: "Metro ligeiro até à Trofa — Iniciativa Liberal Trofa",
     description: "Esperámos mais de 9000 dias. Agora é a nossa vez.",
@@ -69,7 +69,7 @@ export default function Metro() {
             <div className="mt-6">
               <PartilharBotao
                 titulo="Metro ligeiro até à Trofa — Iniciativa Liberal Trofa"
-                texto="Esperámos mais de 9000 dias. A Trofa merece metro, não transbordo."
+                texto="Esperámos mais de 9000 dias. A Trofa merece o metro, não um transbordo."
               />
             </div>
           </div>
@@ -343,7 +343,7 @@ export default function Metro() {
             </Link>
             <PartilharBotao
               titulo="Metro ligeiro até à Trofa — Iniciativa Liberal Trofa"
-              texto="Esperámos mais de 9000 dias. A Trofa merece metro, não transbordo."
+              texto="Esperámos mais de 9000 dias. A Trofa merece o metro, não um transbordo."
             />
             <Link
               href={c.href}

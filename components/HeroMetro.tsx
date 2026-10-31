@@ -106,7 +106,7 @@ export default function HeroMetro() {
             </p>
             <h1 className="font-display mt-5 text-3xl font-bold leading-[1.08] sm:text-4xl lg:text-5xl">
               Esperámos mais de 9000 dias.
-              <span className="mt-2 block text-sun">A Trofa merece metro, não transbordo.</span>
+              <span className="mt-2 block text-sun">A Trofa merece o metro, não um transbordo.</span>
             </h1>
             <p className="mt-6 text-lg font-medium italic text-white/90 md:text-xl">
               Metro ligeiro até à Trofa. Pela Trofa. Pelo futuro.
