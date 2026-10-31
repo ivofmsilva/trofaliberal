@@ -9,7 +9,12 @@ import { formatarData, ordenados } from "@/lib/imprensa";
 export const metadata: Metadata = { title: "Outros — Autárquicas 2025" };
 
 const hinoId = new URL(hino).searchParams.get("v") ?? "";
-const brochuras = ["/images/geral/brochura-1.png", "/images/geral/brochura-2.png"];
+const brochuras = [
+  { src: "/images/geral/brochura-1.png", alt: "Brochura 1 da campanha Trofa Para Cima", w: 488, h: 731 },
+  { src: "/images/geral/brochura-2.png", alt: "Brochura 2 da campanha Trofa Para Cima", w: 488, h: 731 },
+  { src: "/images/geral/brochura-3.webp", alt: "Brochura de Pedro Rebelo, candidato à Junta de Freguesia de Bougado", w: 1120, h: 1600 },
+  { src: "/images/geral/brochura-4.webp", alt: "Brochura de Bruno Magalhães, candidato à Junta de Freguesia de Alvarelhos", w: 1120, h: 1600 },
+];
 
 export default function Outros() {
   const noticias = ordenados("noticias").filter((n) => n.tema === "autarquicas");
@@ -22,10 +27,10 @@ export default function Outros() {
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
         <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Brochuras</h2>
         <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-          {brochuras.map((s, i) => (
-            <li key={s}>
-              <a href={s} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink">
-                <Image src={s} alt={`Brochura ${i + 1} da campanha Trofa Para Cima`} width={488} height={731} sizes="(min-width: 640px) 480px, 100vw" className="h-auto w-full" />
+          {brochuras.map((b) => (
+            <li key={b.src}>
+              <a href={b.src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink">
+                <Image src={b.src} alt={b.alt} width={b.w} height={b.h} sizes="(min-width: 640px) 480px, 100vw" className="h-auto w-full" />
               </a>
             </li>
           ))}
