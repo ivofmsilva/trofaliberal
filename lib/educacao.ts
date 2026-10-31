@@ -89,10 +89,10 @@ export const propostas: Proposta[] = [
   {
     id: "1.4",
     eixo: 1,
-    titulo: "Biblioteca municipal e salas de estudo",
-    resumo: "Uma biblioteca municipal de excelência, com salas de estudo 24 horas acessíveis por cartão.",
+    titulo: "Uma biblioteca municipal à altura do concelho",
+    resumo: "Uma biblioteca moderna e de excelência, com salas de estudo 24 horas acessíveis por cartão.",
     porque:
-      "A Trofa é dos poucos concelhos da Área Metropolitana do Porto sem uma biblioteca municipal digna desse nome, num território com mais de 38 000 habitantes e duas escolas secundárias. Uma biblioteca moderna reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestrutura escolar já existente torna a medida mais eficiente e sustentável.",
+      "A Trofa tem biblioteca municipal, mas não está à altura de um território com mais de 38 000 habitantes e duas escolas secundárias. Falta uma biblioteca moderna, com salas de estudo em condições. Uma biblioteca assim reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestrutura escolar já existente torna a medida mais eficiente e sustentável.",
   },
   {
     id: "1.5",
@@ -220,11 +220,11 @@ export const propostas: Proposta[] = [
   {
     id: "4.7",
     eixo: 4,
-    titulo: "Creches no Ministério da Educação",
+    titulo: "Creches: ir até ao fim da integração na Educação",
     resumo:
-      "Passar as creches (0 a 3 anos), hoje sob tutela do Ministério do Trabalho, para o Ministério da Educação, como já acontece no pré-escolar.",
+      "Completar a passagem das creches (0 a 3 anos) para o sistema educativo, como já acontece no pré-escolar.",
     porque:
-      "Que as creches dependam do Ministério do Trabalho enquanto o pré-escolar (3 a 5 anos) pertence ao da Educação é uma divisão administrativa sem fundamento científico. A investigação em neurodesenvolvimento infantil é clara: os primeiros três anos de vida são o período de maior plasticidade cerebral e de maior impacto das experiências formativas. Tratar as creches como assistência social, e não como a primeira etapa do percurso educativo, é um erro de paradigma.",
+      "A tutela pedagógica das creches já passou para o Ministério da Educação, mas o financiamento continua separado, na Segurança Social, enquanto o pré-escolar (3 a 5 anos) está todo na Educação. Esta divisão administrativa não tem fundamento científico. A investigação em neurodesenvolvimento infantil é clara: os primeiros três anos de vida são o período de maior plasticidade cerebral e de maior impacto das experiências formativas. Tratar as creches como assistência social, e não como a primeira etapa do percurso educativo, é um erro de paradigma.",
   },
 ];
 
