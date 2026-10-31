@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
+import { merchandising } from "@/lib/loja";
 
 export const metadata: Metadata = { title: "Loja — Iniciativa Liberal Trofa" };
 
@@ -88,6 +89,46 @@ export default function Loja() {
         <p className="mt-6 text-sm text-ink/60">
           A encomenda abre o teu programa de email, dirigida ao núcleo.
         </p>
+      </section>
+
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">
+            Merchandising da Iniciativa Liberal
+          </p>
+          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
+            Tudo o que há na loja nacional
+          </h2>
+          <p className="mt-3 max-w-2xl text-ink/75">
+            Os produtos oficiais da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda
+            aqui e tratamos de tudo com o núcleo da Trofa.
+          </p>
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {merchandising.map((p) => (
+              <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
+                <Image
+                  src={`/images/loja-nacional/${p.id}.webp`}
+                  alt={p.nome}
+                  width={512}
+                  height={512}
+                  sizes="(min-width: 1024px) 280px, 50vw"
+                  className="aspect-square w-full bg-white object-contain p-3"
+                />
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-xl font-bold leading-tight">{p.nome}</h3>
+                  {p.nota && <p className="mt-2 text-sm text-white/80">{p.nota}</p>}
+                  <div className="mt-auto space-y-4 pt-5">
+                    <p className="font-display text-2xl font-bold text-sun">{p.preco}</p>
+                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} />
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-sm text-ink/60">
+            Preços da lista pública da loja nacional (portal.liberal.pt/shop).
+          </p>
+        </div>
       </section>
 
       <section className="bg-sun py-16 text-center text-navy">
