@@ -13,16 +13,16 @@ const programa = documentos.find((d) => d.href?.endsWith(".pdf"));
 // As páginas deste bloco, logo à entrada.
 const paginas = [
   {
-    titulo: "Trofa no topo da Educação",
-    texto: "O nosso manifesto pela Educação: propostas para a Trofa e para o país.",
-    href: "/ideias/educacao",
-    cta: "Ver o manifesto →",
-  },
-  {
     titulo: "Metro para a Trofa",
     texto: "Metro ligeiro até à Trofa. Pela Trofa. Pelo futuro.",
     href: "/ideias/metro",
     cta: "Ver a nossa visão →",
+  },
+  {
+    titulo: "Trofa no topo da Educação",
+    texto: "O nosso manifesto pela Educação: propostas para a Trofa e para o país.",
+    href: "/ideias/educacao",
+    cta: "Ver o manifesto →",
   },
   {
     titulo: "Cartazes",

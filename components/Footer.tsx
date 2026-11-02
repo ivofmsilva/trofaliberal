@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { links, nav } from "@/lib/site";
+import { arquivo, links, nav } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -21,6 +21,13 @@ export default function Footer() {
             <li key={item.label}>
               <Link href={item.href} className="hover:text-sun">
                 {item.label}
+              </Link>
+            </li>
+          ))}
+          {arquivo.map((item) => (
+            <li key={item.label}>
+              <Link href={item.href} className="text-white/50 hover:text-sun">
+                {item.label} (arquivo)
               </Link>
             </li>
           ))}

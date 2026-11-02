@@ -29,6 +29,9 @@ export type NavItem = {
   children?: NavItem[];
 };
 
+// Campanha de 2025: já não está no menu, fica no fim do site.
+export const arquivo: NavItem[] = [{ label: "Autárquicas 2025", href: "/autarquicas-2025" }];
+
 // Menu principal. Cada bloco abre na sua primeira página, que tem as ligações para o resto.
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
@@ -46,8 +49,8 @@ export const nav: NavItem[] = [
     href: "/ideias",
     children: [
       { label: "Propostas", href: "/ideias" },
-      { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
+      { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
     ],
   },
@@ -59,11 +62,6 @@ export const nav: NavItem[] = [
       { label: "Notícias", href: "/imprensa#noticias" },
       { label: "Comunicados", href: "/imprensa#comunicados" },
     ],
-  },
-  {
-    label: "Autárquicas 2025",
-    href: "/autarquicas-2025",
-    children: autarquicasNav,
   },
   {
     label: "Loja e Donativos",
