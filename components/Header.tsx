@@ -57,7 +57,7 @@ export default function Header() {
         </nav>
 
         <Link
-          href="/trofa-liberal/faz-te-membro"
+          href="/participa?t=membro"
           className="hidden rounded-full bg-pink px-5 py-2 text-sm font-bold text-white transition hover:bg-navy lg:inline-block"
         >
           Faz-te Membro
@@ -102,7 +102,7 @@ export default function Header() {
             ))}
           </ul>
           <Link
-            href="/trofa-liberal/faz-te-membro"
+            href="/participa?t=membro"
             onClick={() => setOpen(false)}
             className="mt-4 block rounded-full bg-pink px-5 py-3 text-center font-bold text-white"
           >

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BannerEducacao from "@/components/BannerEducacao";
 import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
@@ -37,27 +38,6 @@ const principios = [
   },
 ];
 
-const atalhos = [
-  {
-    titulo: "Agenda Liberal",
-    texto: "Não percas os nossos eventos.",
-    href: "/eventos",
-    cta: "Ver agenda",
-  },
-  {
-    titulo: "Conhece a equipa",
-    texto: "As pessoas que dão a cara por uma Trofa mais livre.",
-    href: "/trofa-liberal/equipa",
-    cta: "Ver equipa",
-  },
-  {
-    titulo: "Propostas",
-    texto: "As medidas que fazem a diferença.",
-    href: "/ideias",
-    cta: "Ver propostas",
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -79,7 +59,7 @@ export default function Home() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              href="/trofa-liberal/faz-te-membro"
+              href="/participa?t=membro"
               className="rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy"
             >
               Faz-te Membro
@@ -135,13 +115,14 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <Link href="/eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
+          <Link href="/imprensa#eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
             Ver toda a agenda →
           </Link>
         </section>
       )}
 
       <BannerMetro />
+      <BannerEducacao />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
@@ -208,46 +189,7 @@ export default function Home() {
 
       <PedirConvite />
 
-      <section className="bg-navy-soft py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div>
-            <h2 className="font-display text-3xl font-bold">Acompanha o núcleo</h2>
-            <p className="mt-3 text-white/75">Segue-nos nas redes sociais.</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={links.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border-2 border-white/30 px-6 py-2 font-bold transition hover:border-cyan hover:text-sun"
-              >
-                Facebook
-              </a>
-              <a
-                href={links.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border-2 border-white/30 px-6 py-2 font-bold transition hover:border-cyan hover:text-sun"
-              >
-                Instagram
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <ul className="grid gap-6 md:grid-cols-3">
-          {atalhos.map((a) => (
-            <li key={a.titulo} className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
-              <h3 className="font-display text-2xl font-bold text-navy">{a.titulo}</h3>
-              <p className="mt-3 text-ink/75">{a.texto}</p>
-              <Link href={a.href} className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
-                {a.cta} →
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
 
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[1fr_220px]">
@@ -257,7 +199,7 @@ export default function Home() {
               Ajuda-nos a construir um futuro mais livre para a Trofa.
             </p>
             <Link
-              href="/trofa-liberal/faz-te-membro"
+              href="/participa?t=membro"
               className="mt-8 inline-block rounded-full bg-navy px-8 py-3 font-bold text-white transition hover:bg-pink"
             >
               Quero fazer parte

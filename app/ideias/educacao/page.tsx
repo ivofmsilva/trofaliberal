@@ -3,6 +3,7 @@ import Link from "next/link";
 import Galeria from "@/components/Galeria";
 import HeroEducacao from "@/components/HeroEducacao";
 import ItemCard from "@/components/ItemCard";
+import AbrirProposta from "@/components/AbrirProposta";
 import PartilharBotao from "@/components/PartilharBotao";
 import PropostasEducacao from "@/components/PropostasEducacao";
 import { eixos, fotosJornadas, numeros, propostas } from "@/lib/educacao";
@@ -15,25 +16,34 @@ export const metadata: Metadata = {
 
 const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";
 
+// Cada ponto aponta para as propostas que o concretizam (ids em lib/educacao.ts).
 const principios = [
   {
     titulo: "Autonomia para as escolas",
-    texto: "Menos tutela burocrática e mais responsabilidade local, porque as decisões não devem vir todas de Lisboa.",
+    texto:
+      "Menos tutela burocrática e mais responsabilidade local. As decisões que mexem com a escola devem ser tomadas perto dela, e não todas em Lisboa.",
+    propostas: ["4.4", "4.3", "4.1"],
   },
   {
     titulo: "Liberdade de escolha",
-    texto: "Famílias informadas e projetos pedagógicos diversos, para que escolher não seja um privilégio de quem já sabe.",
+    texto:
+      "Famílias informadas e projetos pedagógicos diversos. Escolher não pode ser um privilégio de quem já sabe como funciona o sistema.",
+    propostas: ["2.2", "4.5", "4.2"],
   },
   {
-    titulo: "Sociedade civil na educação",
-    texto: "Abertura, cooperação e criatividade em vez de controlo e despesa sem fim.",
+    titulo: "Sociedade civil e empresas na educação",
+    texto:
+      "Abertura, cooperação e criatividade em vez de controlo e despesa sem fim. A Câmara facilita e junta quem já faz, em vez de fazer tudo sozinha.",
+    propostas: ["2.3", "3.1", "1.2"],
   },
   {
     titulo: "Mérito e apoio certo",
     texto:
-      "Apoio social onde é preciso, temporário, bem direcionado e com resultados medidos, para que todos possam aprender e crescer.",
+      "Apoio social onde é preciso: temporário, bem direcionado e com resultados medidos. Para que o futuro de um jovem dependa do seu talento e esforço, não da origem.",
+    propostas: ["1.6", "1.3", "1.4"],
   },
 ];
+const tituloDe = (id: string) => propostas.find((p) => p.id === id)?.titulo ?? id;
 
 const imprensaJornadas = itens.noticias.filter((n) => n.data?.startsWith("2026-03"));
 const locais = propostas.filter((p) => eixos.find((e) => e.n === p.eixo)?.ambito === "local").length;
@@ -75,12 +85,20 @@ export default function Educacao() {
             centralizado, onde as famílias têm pouca escolha, as escolas pouca autonomia e os alunos pouca
             margem para desenvolver o seu potencial. Na Trofa queremos mudar este cenário.
           </p>
-          <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <ol className="mt-10 grid gap-5 md:grid-cols-2">
             {principios.map((p, i) => (
-              <li key={p.titulo} className="rounded-2xl bg-navy-soft p-8">
+              <li key={p.titulo} className="flex flex-col rounded-2xl bg-navy-soft p-8">
                 <span className="font-display text-sm font-bold text-sun">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="font-display mt-2 text-2xl font-bold leading-tight">{p.titulo}</h3>
                 <p className="mt-3 text-white/85">{p.texto}</p>
+                <p className="mt-6 text-xs font-bold uppercase tracking-widest text-sun">Na prática</p>
+                <ul className="mt-3 space-y-2">
+                  {p.propostas.map((id) => (
+                    <li key={id}>
+                      <AbrirProposta id={id} titulo={tituloDe(id)} />
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ol>
@@ -121,14 +139,6 @@ export default function Educacao() {
             auditório da Escola Secundária da Trofa. Estas propostas nasceram daí.
           </p>
           <Galeria fotos={fotosJornadas} alt="Jornadas Liberais da Trofa, Educação" />
-          <div className="mt-8">
-            <Link
-              href="/eventos/lit"
-              className="inline-block rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
-            >
-              Ver as Jornadas →
-            </Link>
-          </div>
 
           {imprensaJornadas.length > 0 && (
             <>
@@ -154,14 +164,8 @@ export default function Educacao() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
-              href="/trofa-liberal/faz-te-membro"
+              href="/participa?t=ideia"
               className="rounded-full bg-navy px-7 py-3 font-bold text-white transition hover:bg-pink"
-            >
-              Faz-te membro
-            </Link>
-            <Link
-              href="/ideias/sugestao"
-              className="rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
             >
               Tens uma ideia?
             </Link>

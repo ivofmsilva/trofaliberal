@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Ambito, Eixo, Proposta } from "@/lib/educacao";
 
 type Filtro = "todas" | Ambito;
@@ -14,6 +14,18 @@ const etiquetaAmbito: Record<Ambito, { texto: string; classe: string }> = {
 export default function PropostasEducacao({ eixos, propostas }: { eixos: Eixo[]; propostas: Proposta[] }) {
   const [filtro, setFiltro] = useState<Filtro>("todas");
   const [abertas, setAbertas] = useState<Set<string>>(new Set());
+
+  // Os pontos da abordagem (AbrirProposta) pedem para abrir uma proposta e levar até ela.
+  useEffect(() => {
+    const abrir = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      setFiltro("todas");
+      setAbertas((a) => new Set(a).add(id));
+      setTimeout(() => document.getElementById(`item-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 80);
+    };
+    window.addEventListener("abrir-proposta", abrir);
+    return () => window.removeEventListener("abrir-proposta", abrir);
+  }, []);
 
   const ambitoDe = (p: Proposta): Ambito => eixos.find((e) => e.n === p.eixo)?.ambito ?? "local";
   const visiveis = propostas.filter((p) => filtro === "todas" || ambitoDe(p) === filtro);
@@ -91,7 +103,7 @@ export default function PropostasEducacao({ eixos, propostas }: { eixos: Eixo[];
                 {doEixo.map((p) => {
                   const aberta = abertas.has(p.id);
                   return (
-                    <li key={p.id} className="overflow-hidden rounded-2xl bg-white shadow-sm ring-2 ring-transparent transition hover:ring-pink/40">
+                    <li key={p.id} id={`item-${p.id}`} className="scroll-mt-28 overflow-hidden rounded-2xl bg-white shadow-sm ring-2 ring-transparent transition hover:ring-pink/40">
                       <button
                         type="button"
                         onClick={() => alternar(p.id)}

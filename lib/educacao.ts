@@ -235,8 +235,8 @@ export const numeros = [
     fonte: "Ranking de competitividade autárquica 2025 (+Liberdade)",
   },
   {
-    valor: "20 / 12",
-    legenda: "formandos para abrir uma turma no centro de formação da Trofa e nas escolas profissionais do Estado",
+    valor: "20 vs 12",
+    legenda: "alunos para abrir uma turma: 20 no centro de formação da Trofa, 12 nas escolas profissionais do Estado",
     fonte: "Relatório das Jornadas Liberais",
   },
   {

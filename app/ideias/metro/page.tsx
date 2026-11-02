@@ -18,7 +18,6 @@ import {
   participacao,
   projeto,
 } from "@/lib/metro";
-import { links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Metro para a Trofa — Iniciativa Liberal Trofa",
@@ -336,7 +335,7 @@ export default function Metro() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
-              href="/trofa-liberal/faz-te-membro"
+              href="/participa?t=membro"
               className="rounded-full bg-navy px-7 py-3 font-bold text-white transition hover:bg-pink"
             >
               Faz-te membro
@@ -345,20 +344,6 @@ export default function Metro() {
               titulo="Metro ligeiro até à Trofa — Iniciativa Liberal Trofa"
               texto="Esperámos mais de 9000 dias. A Trofa merece o metro, não um transbordo."
             />
-            <Link
-              href={c.href}
-              className="rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
-            >
-              Ler o comunicado
-            </Link>
-            <a
-              href={links.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
-            >
-              Instagram ↗
-            </a>
           </div>
         </div>
       </section>

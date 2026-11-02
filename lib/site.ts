@@ -29,17 +29,16 @@ export type NavItem = {
   children?: NavItem[];
 };
 
+// Menu principal. Cada bloco abre na sua primeira página, que tem as ligações para o resto.
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
   {
-    label: "Trofa Liberal",
+    label: "Quem somos",
     href: "/trofa-liberal",
     children: [
-      { label: "Sobre a IL Trofa", href: "/trofa-liberal" },
-      { label: "Equipa", href: "/trofa-liberal/equipa" },
-      { label: "Faz-te Membro", href: "/trofa-liberal/faz-te-membro" },
-      { label: "Juventude", href: "/trofa-liberal/juventude" },
-      { label: "Contacta-nos", href: "/trofa-liberal/contactos" },
+      { label: "Sobre nós", href: "/trofa-liberal" },
+      { label: "Equipa", href: "/trofa-liberal#equipa" },
+      { label: "Juventude", href: "/trofa-liberal#juventude" },
     ],
   },
   {
@@ -47,31 +46,18 @@ export const nav: NavItem[] = [
     href: "/ideias",
     children: [
       { label: "Propostas", href: "/ideias" },
-      { label: "Metro para a Trofa", href: "/ideias/metro" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
+      { label: "Metro para a Trofa", href: "/ideias/metro" },
       { label: "Cartazes", href: "/ideias/cartazes" },
-      { label: "Tens uma ideia?", href: "/ideias/sugestao" },
-      { label: "Documentos Nacionais", href: links.nacionais, external: true },
     ],
   },
-  { label: "Denúncia", href: "/denuncia" },
   {
-    label: "Na Imprensa",
+    label: "Imprensa e Eventos",
     href: "/imprensa",
     children: [
+      { label: "Eventos", href: "/imprensa#eventos" },
       { label: "Notícias", href: "/imprensa#noticias" },
-      { label: "Artigos de opinião", href: "/imprensa#artigos" },
       { label: "Comunicados", href: "/imprensa#comunicados" },
-    ],
-  },
-  {
-    label: "Eventos",
-    href: "/eventos",
-    children: [
-      { label: "Calendário", href: "/eventos" },
-      { label: "LIT — Jornadas Liberais", href: "/eventos/lit" },
-      { label: "Aqui há Parlamento", href: "/eventos/aqui-ha-parlamento" },
-      { label: "Outros eventos", href: "/eventos#outros" },
     ],
   },
   {
@@ -83,5 +69,15 @@ export const nav: NavItem[] = [
     label: "Loja e Donativos",
     href: "/loja",
     children: lojaNav,
+  },
+  {
+    label: "Participa",
+    href: "/participa",
+    children: [
+      { label: "Faz-te membro", href: "/participa?t=membro" },
+      { label: "Tens uma ideia?", href: "/participa?t=ideia" },
+      { label: "Denúncia", href: "/participa?t=denuncia" },
+      { label: "Contactos", href: "/participa?t=contactos" },
+    ],
   },
 ];

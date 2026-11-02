@@ -8,6 +8,41 @@ export const metadata: Metadata = { title: "Propostas — Iniciativa Liberal Tro
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
+const programa = documentos.find((d) => d.href?.endsWith(".pdf"));
+
+// As páginas deste bloco, logo à entrada.
+const paginas = [
+  {
+    titulo: "Trofa no topo da Educação",
+    texto: "O nosso manifesto pela Educação: propostas para a Trofa e para o país.",
+    href: "/ideias/educacao",
+    cta: "Ver o manifesto →",
+  },
+  {
+    titulo: "Metro para a Trofa",
+    texto: "Metro ligeiro até à Trofa. Pela Trofa. Pelo futuro.",
+    href: "/ideias/metro",
+    cta: "Ver a nossa visão →",
+  },
+  {
+    titulo: "Cartazes",
+    texto: "Os cartazes e mensagens que já espalhámos pela Trofa.",
+    href: "/ideias/cartazes",
+    cta: "Ver cartazes →",
+  },
+  ...(programa
+    ? [
+        {
+          titulo: programa.titulo,
+          texto: "O programa completo, em PDF.",
+          href: programa.href!,
+          cta: "Ler documento ↓",
+          externo: true,
+        },
+      ]
+    : []),
+];
+
 export default function Propostas() {
   return (
     <>
@@ -17,37 +52,22 @@ export default function Propostas() {
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Documentos</p>
-        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          Manifestos e programa
-        </h2>
-        <ol className="mt-10 grid gap-5 md:grid-cols-3">
-          {documentos.map((d, i) => (
-            <li key={d.titulo} className="flex flex-col rounded-2xl bg-navy p-8 text-white">
-              <span className="font-display text-sm font-bold text-sun">{pad(i + 1)}</span>
-              <h3 className="font-display mt-3 text-2xl font-bold leading-tight">{d.titulo}</h3>
-              {d.subtitulo && <p className="mt-3 text-white/75">{d.subtitulo}</p>}
-              <div className="mt-auto pt-6">
-                {d.href?.startsWith("/ideias/") ? (
-                  <Link href={d.href} className="font-bold text-sun hover:underline">
-                    Ver o manifesto →
-                  </Link>
-                ) : d.href ? (
-                  <a
-                    href={d.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-sun hover:underline"
-                  >
-                    Ler documento →
-                  </a>
-                ) : (
-                  <span className="text-sm font-bold text-white/50">Documento em breve</span>
-                )}
-              </div>
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {paginas.map((p, i) => (
+            <li key={p.href}>
+              <Link
+                href={p.href}
+                {...("externo" in p && p.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="group flex h-full flex-col rounded-2xl bg-navy p-8 text-white transition hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/30"
+              >
+                <span className="font-display text-sm font-bold text-sun">{pad(i + 1)}</span>
+                <h2 className="font-display mt-3 text-2xl font-bold leading-tight">{p.titulo}</h2>
+                <p className="mt-3 text-white/75">{p.texto}</p>
+                <span className="mt-auto pt-6 font-bold text-sun group-hover:underline">{p.cta}</span>
+              </Link>
             </li>
           ))}
-        </ol>
+        </ul>
       </section>
 
       <section className="bg-mist py-20">
@@ -86,42 +106,18 @@ export default function Propostas() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-20 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
-          <h3 className="font-display text-2xl font-bold text-navy">Metro para a Trofa</h3>
-          <p className="mt-3 text-ink/75">A nossa visão: Metro ligeiro até à Trofa. Pela Trofa. Pelo futuro.</p>
-          <Link href="/ideias/metro" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
-            Ver a nossa visão →
-          </Link>
-        </div>
-        <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
-          <h3 className="font-display text-2xl font-bold text-navy">Cartazes</h3>
-          <p className="mt-3 text-ink/75">Consulta os cartazes e mensagens que já espalhámos pela Trofa.</p>
-          <Link href="/ideias/cartazes" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
-            Ver cartazes →
-          </Link>
-        </div>
-        <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
-          <h3 className="font-display text-2xl font-bold text-navy">Tens uma ideia?</h3>
-          <p className="mt-3 text-ink/75">As melhores ideias vêm de quem vive a Trofa todos os dias.</p>
-          <Link href="/ideias/sugestao" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
-            Partilhar ideia →
-          </Link>
-        </div>
-        <div className="rounded-2xl border-2 border-mist p-8 transition hover:border-cyan">
-          <h3 className="font-display text-2xl font-bold text-navy">Documentos Nacionais</h3>
-          <p className="mt-3 text-ink/75">As ideias e propostas da Iniciativa Liberal a nível nacional.</p>
-          <a
-            href={links.nacionais}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-block font-bold text-cyan-dark hover:underline"
-          >
-            Ver em iniciativaliberal.pt ↗
-          </a>
+          <p className="mt-10 text-ink/75">
+            As propostas da Iniciativa Liberal a nível nacional estão em{" "}
+            <a
+              href={links.nacionais}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-cyan-dark hover:underline"
+            >
+              iniciativaliberal.pt ↗
+            </a>
+            .
+          </p>
         </div>
       </section>
     </>

@@ -76,18 +76,6 @@ export default function Autarquicas() {
         </div>
       </section>
 
-      <section className="bg-sun py-16 text-center text-navy">
-        <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-4xl font-bold">Junta-te ao movimento liberal</h2>
-          <p className="mt-3 text-lg font-medium">
-            Estas propostas só se tornam realidade com o teu apoio. Vem fazer parte da mudança que a
-            Trofa precisa.
-          </p>
-          <Link href="/trofa-liberal/faz-te-membro" className="mt-6 inline-block rounded-full bg-navy px-8 py-3 font-bold text-white transition hover:bg-pink">
-            Aderir agora
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
