@@ -7,7 +7,7 @@ import { pontos } from "@/lib/habitacao";
 // /ideias/habitacao.
 export default function BannerHabitacao() {
   return (
-    <section className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6">
       <Link
         href="/ideias/habitacao"
         aria-label="Construir para o Futuro: começar já hoje a resolver o problema da habitação na Trofa e em Portugal. Ver as medidas"

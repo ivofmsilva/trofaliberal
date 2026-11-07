@@ -36,7 +36,7 @@ export default function PageHero({
             height={image.h}
             priority
             sizes="(min-width: 768px) 380px, 100vw"
-            className="mx-auto mt-10 max-h-[460px] w-auto max-w-full rounded-2xl object-cover shadow-2xl shadow-black/30 ring-4 ring-white/30 md:mt-0"
+            className="mt-10 aspect-[4/3] w-full rounded-2xl object-cover object-[50%_30%] shadow-2xl shadow-black/30 ring-4 ring-white/30 md:mx-auto md:mt-0 md:aspect-auto md:max-h-[460px] md:w-auto md:max-w-full"
           />
         )}
       </div>

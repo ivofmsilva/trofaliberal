@@ -4,7 +4,7 @@ import Link from "next/link";
 // Todo o cartaz é uma ligação para /ideias/metro.
 export default function BannerMetro() {
   return (
-    <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6">
       <Link
         href="/ideias/metro"
         aria-label="Metro para a Trofa: 9000 dias à espera. Ver a página do Metro"

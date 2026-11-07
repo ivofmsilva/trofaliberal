@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BannerEducacao from "@/components/BannerEducacao";
+import CarrosselBanners from "@/components/CarrosselBanners";
 import BannerHabitacao from "@/components/BannerHabitacao";
 import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
@@ -80,7 +81,7 @@ export default function Home() {
             height={782}
             priority
             sizes="(min-width: 1024px) 420px, 100vw"
-            className="mx-auto max-h-[560px] w-auto max-w-full rounded-3xl object-cover shadow-2xl shadow-black/30 ring-4 ring-white/30"
+            className="aspect-[4/3] w-full rounded-3xl object-cover object-[50%_30%] shadow-2xl shadow-black/30 ring-4 ring-white/30 lg:mx-auto lg:aspect-auto lg:max-h-[560px] lg:w-auto lg:max-w-full"
           />
         </div>
       </section>
@@ -122,9 +123,11 @@ export default function Home() {
         </section>
       )}
 
-      <BannerMetro />
-      <BannerHabitacao />
-      <BannerEducacao />
+      <div className="pt-20">
+        <CarrosselBanners titulos={["Metro para a Trofa", "Construir para o Futuro", "Trofa no topo da Educação"]}>
+          {[<BannerMetro key="metro" />, <BannerHabitacao key="habitacao" />, <BannerEducacao key="educacao" />]}
+        </CarrosselBanners>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">

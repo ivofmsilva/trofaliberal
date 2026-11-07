@@ -10,7 +10,7 @@ export default function BannerEducacao() {
   const nacionais = propostas.length - locais;
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6">
       <Link
         href="/ideias/educacao"
         aria-label="Trofa no topo da Educação: liberdade para aprender, autonomia para crescer. Ver o manifesto"

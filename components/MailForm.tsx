@@ -15,11 +15,11 @@ const inputClass =
 
 type Pronto = { mailto: string; gmail: string; texto: string };
 
-// Sem servidor de email: o formulário prepara a mensagem e abre o programa de email
-// do utilizador, dirigida ao núcleo. Como nem toda a gente tem um programa de email
-// configurado, mostra também "Abrir no Gmail" e "Copiar texto". Nada é guardado nem
-// enviado para terceiros. Não é possível anexar ficheiros por aqui: com `anexos`,
-// avisa-se o utilizador para os anexar ao email (ou enviar para o mesmo endereço).
+// Envia a mensagem para o núcleo por email, através de /api/enviar (o site não a guarda).
+// Se o envio falhar, cai no que havia antes: prepara a mensagem e abre o programa de email
+// do utilizador, com "Abrir no Gmail" e "Copiar texto" para quem não tem programa configurado.
+// Não é possível anexar ficheiros por aqui: com `anexos`, avisa-se o utilizador para os anexar
+// ao email (ou enviar para o mesmo endereço).
 export default function MailForm({
   to,
   subject,
@@ -37,10 +37,12 @@ export default function MailForm({
 }) {
   const [pronto, setPronto] = useState<Pronto | null>(null);
   const [copiado, setCopiado] = useState(false);
+  const [estado, setEstado] = useState<"parado" | "a-enviar" | "enviado">("parado");
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     let body = fields
       .map((f) => `${f.label.replace(" *", "")}: ${String(data.get(f.name) ?? "").trim()}`)
       .join("\n");
@@ -48,9 +50,30 @@ export default function MailForm({
     const assunto = String(data.get("assunto") ?? "").trim() || subject;
     const mailto = `mailto:${to}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
     const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
-    setPronto({ mailto, gmail, texto: `Para: ${to}\nAssunto: ${assunto}\n\n${body}` });
+    const alternativa = { mailto, gmail, texto: `Para: ${to}\nAssunto: ${assunto}\n\n${body}` };
     setCopiado(false);
-    window.location.href = mailto;
+    setPronto(null);
+    setEstado("a-enviar");
+    try {
+      const r = await fetch("/api/enviar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          assunto,
+          texto: body,
+          nome: String(data.get("nome") ?? ""),
+          email: String(data.get("email") ?? ""),
+          hp: String(data.get("site") ?? ""),
+        }),
+      });
+      if (!r.ok) throw new Error("falhou");
+      setEstado("enviado");
+      form.reset();
+    } catch {
+      setEstado("parado");
+      setPronto(alternativa);
+      window.location.href = mailto;
+    }
   }
 
   async function copiar() {
@@ -65,6 +88,8 @@ export default function MailForm({
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
+      {/* Armadilha para robôs: as pessoas não veem nem preenchem. */}
+      <input type="text" name="site" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
       {fields.map((f) => (
         <div key={f.name}>
           <label htmlFor={f.name} className="text-sm font-bold text-navy">
@@ -100,14 +125,25 @@ export default function MailForm({
       )}
       <button
         type="submit"
-        className="rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy hover:text-white"
+        disabled={estado === "a-enviar"}
+        className="rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy hover:text-white disabled:opacity-60"
       >
-        {submitLabel}
+        {estado === "a-enviar" ? "A enviar…" : submitLabel}
       </button>
+      <p className="text-xs text-ink/60">
+        A mensagem segue por email para o núcleo, através de um serviço de envio. O site não a guarda.
+      </p>
+
+      {estado === "enviado" && (
+        <div role="status" className="rounded-2xl bg-mist p-5 text-ink/85">
+          <p className="font-bold text-navy">Mensagem enviada. Obrigado!</p>
+          <p className="mt-1 text-sm">O núcleo recebeu a tua mensagem e responde assim que possível.</p>
+        </div>
+      )}
 
       {pronto && (
         <div role="status" className="space-y-3 rounded-2xl bg-mist p-5 text-sm text-ink/85">
-          <p className="font-bold text-navy">Está quase! Falta só enviares o email.</p>
+          <p className="font-bold text-navy">Não conseguimos enviar a mensagem por aqui.</p>
           <p>
             Abrimos o teu programa de email com a mensagem pronta para <strong>{to}</strong>. Se não
             abriu, usa uma destas opções:
