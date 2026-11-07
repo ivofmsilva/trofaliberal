@@ -186,26 +186,34 @@ export default function Habitacao() {
 
       {/* Na rua */}
       <section className="bg-mist py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[320px_1fr]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>A nossa mensagem na rua</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+            Medidas liberais para a habitação, ao jeito do Monopólio
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-ink/80">
+            Levámos o programa para a rua com humor: um tabuleiro com as medidas, do acelerador de processos
+            à renda resolúvel, e cartazes para as medidas que mais pesam.
+          </p>
           <Image
-            src="/images/cartazes/cartaz-41.jpeg"
-            alt="Faixa da campanha com o Diamantino ao estilo do Monopólio: medidas liberais para a habitação, mais casas, menos custos, mais construção, menos burocracia"
-            width={506}
-            height={675}
-            sizes="(min-width: 768px) 320px, 100vw"
-            className="mx-auto w-full max-w-xs rounded-2xl object-cover shadow-xl ring-1 ring-navy/10"
+            src="/images/geral/habitacao-medidas.jpg"
+            alt="Tabuleiro ao estilo do Monopólio, com o Diamantino de cartola e bengala: medidas liberais para a habitação, mais casas, menos custos, mais construção, menos burocracia"
+            width={1133}
+            height={487}
+            sizes="(min-width: 1152px) 1100px, 100vw"
+            className="mt-10 w-full rounded-2xl shadow-xl ring-1 ring-navy/10"
           />
-          <div>
-            <p className={`${etiqueta} text-cyan-dark`}>A nossa mensagem na rua</p>
-            <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-              Medidas liberais para a habitação, numa só faixa
-            </h2>
-            <p className="mt-4 max-w-2xl text-lg text-ink/80">
-              Levámos o programa para a rua com humor: acelerador de processos com Inteligência Artificial,
-              Gabinete do Construtor 2.0, mapa interativo, plataforma de arrendamento acessível, renda
-              resolúvel, apoio aos jovens e construção em altura.
-            </p>
-          </div>
+          <ul className="mt-10 grid gap-8 sm:grid-cols-2">
+            {[
+              { src: "/images/cartazes/cartaz-42.jpeg", w: 298, h: 372, titulo: "Turbo nos licenciamentos", alt: "Cartaz: turbo nos licenciamentos, redução drástica de tempos" },
+              { src: "/images/cartazes/cartaz-43-recorte.jpeg", w: 188, h: 275, titulo: "Está na hora das gruas voltarem!", alt: "Cartaz: está na hora das gruas voltarem, construir como nunca, com redução de taxas e impostos, mais rapidez nos processos e construção em altura" },
+            ].map((c) => (
+              <li key={c.src} className="flex flex-col items-center text-center">
+                <Image src={c.src} alt={c.alt} width={c.w} height={c.h} sizes="300px" className="w-full max-w-[300px] rounded-xl shadow-lg ring-1 ring-navy/10" />
+                <p className="font-display mt-4 text-xl font-bold text-navy">{c.titulo}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
