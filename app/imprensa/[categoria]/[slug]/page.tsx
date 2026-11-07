@@ -23,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { categoria, slug } = await params;
   const item = encontrar(categoria, slug);
-  return { title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Na Imprensa" };
+  return { title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos" };
 }
 
 export default async function Artigo({

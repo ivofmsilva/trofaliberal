@@ -40,7 +40,7 @@ export default function Donativos() {
           href="https://www.eupago.pt/lp/il_donativos/index.php"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block font-bold text-cyan-dark hover:underline"
+          className="mt-2 inline-block py-2 font-bold text-cyan-dark hover:underline"
         >
           Abrir o formulário numa página própria ↗
         </a>

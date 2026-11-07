@@ -167,13 +167,13 @@ export default function Metro() {
                   href={f.fonte.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm font-bold text-cyan-dark hover:underline"
+                  className="mt-1 inline-block py-1.5 text-sm font-bold text-cyan-dark hover:underline"
                 >
                   {f.fonte.nome} ↗
                 </a>
               )}
               {f.ligacao && (
-                <a href={f.ligacao.href} className="mt-2 inline-block text-sm font-bold text-cyan-dark hover:underline">
+                <a href={f.ligacao.href} className="mt-1 inline-block py-1.5 text-sm font-bold text-cyan-dark hover:underline">
                   {f.ligacao.nome} →
                 </a>
               )}

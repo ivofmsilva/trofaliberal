@@ -106,7 +106,7 @@ export default function Imprensa() {
               <span className="font-display text-sm font-bold text-sun">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="font-display mt-3 text-3xl font-bold">{s.titulo}</h3>
               <p className="mt-3 text-white/75">{s.texto}</p>
-              <Link href={s.href} className="mt-6 inline-block font-bold text-sun hover:underline">
+              <Link href={s.href} className="mt-4 inline-block py-2 font-bold text-sun hover:underline">
                 {s.cta}
               </Link>
             </li>

@@ -106,17 +106,17 @@ export default function Loja() {
           </h2>
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {merchandising.map((p) => (
-              <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
+              <li key={p.id} className="flex flex-row overflow-hidden rounded-2xl bg-navy text-white sm:flex-col">
                 <Image
                   src={`/images/loja-nacional/${p.id}.webp`}
                   alt={p.nome}
                   width={512}
                   height={512}
                   sizes="(min-width: 1024px) 280px, 50vw"
-                  className="aspect-square w-full bg-white object-contain p-3"
+                  className="aspect-square w-28 shrink-0 self-start bg-white object-contain p-2 sm:w-full sm:p-3"
                 />
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-xl font-bold leading-tight">{p.nome}</h3>
+                <div className="flex flex-1 flex-col p-4 sm:p-6">
+                  <h3 className="font-display text-lg font-bold leading-tight sm:text-xl">{p.nome}</h3>
                   {p.nota && <p className="mt-2 text-sm text-white/80">{p.nota}</p>}
                   <div className="mt-auto space-y-4 pt-5">
                     <p className="font-display text-2xl font-bold text-sun">{p.preco}</p>

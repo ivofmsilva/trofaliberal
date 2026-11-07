@@ -12,7 +12,7 @@ export default function Footer() {
             <span className="font-display text-lg font-bold text-white">Iniciativa Liberal Trofa</span>
           </div>
           <p className="mt-4 text-sm">Núcleo territorial da Trofa. Somos a energia que a Trofa precisa!</p>
-          <a href={`mailto:${links.email}`} className="mt-3 inline-block text-sm font-bold text-sun">
+          <a href={`mailto:${links.email}`} className="mt-2 inline-block py-1.5 text-sm font-bold text-sun">
             {links.email}
           </a>
         </div>
@@ -20,11 +20,11 @@ export default function Footer() {
           {nav.map((item) => (
             <li key={item.label}>
               {item.external ? (
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-sun">
+                <a href={item.href} target="_blank" rel="noopener noreferrer" className="inline-block py-1.5 hover:text-sun">
                   {item.label} ↗
                 </a>
               ) : (
-                <Link href={item.href} className="hover:text-sun">
+                <Link href={item.href} className="inline-block py-1.5 hover:text-sun">
                   {item.label}
                 </Link>
               )}
@@ -35,17 +35,17 @@ export default function Footer() {
           <p className="font-bold text-white">Segue-nos</p>
           <ul className="mt-3 space-y-2">
             <li>
-              <a className="hover:text-sun" href={links.facebook} target="_blank" rel="noopener noreferrer">
+              <a className="inline-block py-1.5 hover:text-sun" href={links.facebook} target="_blank" rel="noopener noreferrer">
                 Facebook
               </a>
             </li>
             <li>
-              <a className="hover:text-sun" href={links.instagram} target="_blank" rel="noopener noreferrer">
+              <a className="inline-block py-1.5 hover:text-sun" href={links.instagram} target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </li>
             <li>
-              <Link className="hover:text-sun" href={links.convite}>
+              <Link className="inline-block py-1.5 hover:text-sun" href={links.convite}>
                 WhatsApp (pede convite)
               </Link>
             </li>

@@ -23,7 +23,7 @@ export default function OrderButton({
           <select
             value={tamanho}
             onChange={(e) => setTamanho(e.target.value)}
-            className="ml-1 rounded-lg bg-white px-3 py-2 text-navy"
+            className="ml-1 rounded-lg bg-white px-3 py-2 text-base text-navy sm:text-sm"
           >
             {tamanhos.map((t) => (
               <option key={t}>{t}</option>
@@ -33,7 +33,7 @@ export default function OrderButton({
       )}
       <a
         href={href}
-        className="rounded-full bg-pink px-6 py-2 font-bold text-white transition hover:bg-navy"
+        className="rounded-full bg-pink px-6 py-2.5 font-bold text-white transition hover:bg-navy"
       >
         Encomendar
       </a>

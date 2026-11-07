@@ -21,18 +21,18 @@ function iniciais(nome: string) {
 
 function Pessoa({ m }: { m: Membro }) {
   return (
-    <li className="flex flex-col items-center rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-navy/10">
+    <li className="flex flex-col items-center rounded-2xl bg-white p-4 text-center shadow-sm ring-1 ring-navy/10 sm:p-6">
       {m.foto ? (
-        <Image src={m.foto} alt={m.nome} width={228} height={228} className="h-36 w-36 rounded-full" />
+        <Image src={m.foto} alt={m.nome} width={228} height={228} className="h-24 w-24 rounded-full sm:h-36 sm:w-36" />
       ) : (
         <div
           aria-hidden
-          className="font-display flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-navy text-4xl font-bold text-white"
+          className="font-display flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-cyan to-navy text-3xl font-bold text-white sm:h-36 sm:w-36 sm:text-4xl"
         >
           {iniciais(m.nome)}
         </div>
       )}
-      <p className="font-display mt-4 text-lg font-bold leading-tight text-navy">{m.nome}</p>
+      <p className="font-display mt-3 text-base font-bold leading-tight text-navy sm:mt-4 sm:text-lg">{m.nome}</p>
       <p className="mt-1 text-xs font-bold uppercase tracking-widest text-pink">{m.cargo}</p>
     </li>
   );
@@ -199,14 +199,14 @@ export default function Sobre() {
               ? `Eleito no plenário eletivo de ${data}, na freguesia do ${local}`
               : `Lista a submeter ao plenário eletivo, no ${local}`}
           </p>
-          <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {gcl.map((m) => (
               <Pessoa key={m.nome} m={m} />
             ))}
           </ul>
 
           <h3 className="font-display mt-16 text-2xl font-bold text-navy md:text-3xl">Mesa do Plenário</h3>
-          <ul className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
             {mesa.map((m) => (
               <Pessoa key={m.nome} m={m} />
             ))}

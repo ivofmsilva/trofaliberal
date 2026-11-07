@@ -120,10 +120,10 @@ export default function Educacao() {
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
             Do berço ao primeiro emprego, o que propomos em cada fase
           </h2>
-          <ol className="relative mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <ol className="relative -mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
             <span aria-hidden className="absolute left-0 right-0 top-6 hidden h-1 rounded bg-navy/15 lg:block" />
             {percurso.map((f, i) => (
-              <li key={f.fase} className="relative rounded-2xl bg-mist p-6">
+              <li key={f.fase} className="relative w-[78%] shrink-0 snap-start rounded-2xl bg-mist p-6 sm:w-auto">
                 <span className="font-display relative grid h-12 w-12 place-items-center rounded-full bg-pink text-xl font-bold text-white ring-4 ring-mist">
                   {i + 1}
                 </span>

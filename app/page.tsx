@@ -47,21 +47,21 @@ export default function Home() {
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
         <div className="pointer-events-none absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-pink/25 blur-3xl" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.1fr_1fr]">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:gap-12 sm:px-6 sm:py-20 md:py-28 lg:grid-cols-[1.1fr_1fr]">
           <div>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-white/90">
             Núcleo territorial da Trofa
           </p>
-          <h1 className="font-display mt-6 max-w-4xl text-5xl font-bold leading-[1.05] sm:text-6xl md:text-7xl">
+          <h1 className="font-display mt-4 max-w-4xl text-4xl font-bold leading-[1.05] sm:mt-6 sm:text-6xl md:text-7xl">
             Uma Trofa com mais <span className="text-sun">liberdade</span> começa aqui!
           </h1>
-          <p className="mt-8 max-w-2xl text-lg text-white/80 md:text-xl">
+          <p className="mt-5 max-w-2xl text-lg text-white/80 sm:mt-8 md:text-xl">
             Um concelho onde cada trofense pode viver de forma livre, com mais oportunidades e futuro.
           </p>
           <p className="font-display mt-4 text-xl font-bold text-sun">
             Somos a energia que a Trofa precisa!
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <Link
               href="/participa?t=membro"
               className="rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy"
@@ -125,7 +125,7 @@ export default function Home() {
             href={links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-cyan-dark hover:underline"
+            className="inline-block py-2 font-bold text-cyan-dark hover:underline"
           >
             Ver mais no Instagram ↗
           </a>
@@ -152,11 +152,11 @@ export default function Home() {
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
           O que defendemos?
         </h2>
-        <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ol className="-mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {principios.map((p, i) => (
             <li
               key={p.titulo}
-              className="group relative overflow-hidden rounded-2xl bg-navy p-8 text-white transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan/20"
+              className="group relative w-[80%] shrink-0 snap-start overflow-hidden rounded-2xl bg-navy p-6 text-white transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan/20 sm:w-auto sm:p-8"
             >
               <span
                 aria-hidden

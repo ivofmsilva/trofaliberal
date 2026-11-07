@@ -92,7 +92,7 @@ export const propostas: Proposta[] = [
     titulo: "Uma biblioteca municipal à altura do concelho",
     resumo: "Uma biblioteca moderna e de excelência, com salas de estudo 24 horas acessíveis por cartão.",
     porque:
-      "A Trofa tem biblioteca municipal, mas não está à altura de um território com mais de 38 000 habitantes e duas escolas secundárias. Falta uma biblioteca moderna, com salas de estudo em condições. Uma biblioteca assim reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestrutura escolar já existente torna a medida mais eficiente e sustentável.",
+      "A Trofa tem biblioteca municipal, mas não está à altura de um território com 40 759 habitantes (2023) e duas escolas secundárias. Falta uma biblioteca moderna, com salas de estudo em condições. Uma biblioteca assim reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestrutura escolar já existente torna a medida mais eficiente e sustentável.",
   },
   {
     id: "1.5",

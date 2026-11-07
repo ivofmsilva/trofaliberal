@@ -81,7 +81,7 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
         </div>
       </div>
 
-      <ul className="mt-1 flex items-center justify-center gap-2">
+      <ul className="flex items-center justify-center">
         {titulos.map((t, i) => (
           <li key={t}>
             <button
@@ -89,8 +89,10 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
               onClick={() => ir(i)}
               aria-label={`Ver: ${t}`}
               aria-current={atual === i}
-              className={`h-3 rounded-full transition-all ${atual === i ? "w-8 bg-pink" : "w-3 bg-navy/25 hover:bg-navy/50"}`}
-            />
+              className="group grid h-10 place-items-center px-1"
+            >
+              <span className={`block h-3 rounded-full transition-all ${atual === i ? "w-8 bg-pink" : "w-3 bg-navy/25 group-hover:bg-navy/50"}`} />
+            </button>
           </li>
         ))}
       </ul>

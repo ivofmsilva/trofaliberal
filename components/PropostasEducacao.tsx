@@ -67,7 +67,7 @@ export default function PropostasEducacao({ eixos, propostas }: { eixos: Eixo[];
               return n;
             })
           }
-          className="ml-auto text-sm font-bold text-cyan-dark hover:underline"
+          className="ml-auto py-2 text-sm font-bold text-cyan-dark hover:underline"
         >
           {todasAbertas ? "Fechar todas" : "Abrir todas"}
         </button>
@@ -102,8 +102,8 @@ export default function PropostasEducacao({ eixos, propostas }: { eixos: Eixo[];
                       >
                         <span className="font-display pt-1 text-sm font-bold text-pink">{p.id}</span>
                         <span className="flex-1">
-                          <span className="font-display block text-xl font-bold leading-snug text-navy">{p.titulo}</span>
-                          <span className="mt-1 block text-ink/80">{p.resumo}</span>
+                          <span className="font-display block text-lg font-bold leading-snug text-navy sm:text-xl">{p.titulo}</span>
+                          <span className={`mt-1 block text-ink/80 ${aberta ? "" : "line-clamp-2 sm:line-clamp-none"}`}>{p.resumo}</span>
                         </span>
                         <span
                           aria-hidden
