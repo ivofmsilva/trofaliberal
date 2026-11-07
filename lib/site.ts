@@ -50,7 +50,7 @@ export const nav: NavItem[] = [
     children: [
       { label: "Propostas", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
-      { label: "Habitação", href: "/ideias/habitacao" },
+      { label: "Construir para o Futuro", href: "/ideias/habitacao" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
     ],

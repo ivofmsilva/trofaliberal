@@ -19,7 +19,7 @@ const paginas = [
     cta: "Ver a nossa visão →",
   },
   {
-    titulo: "Construir para o futuro",
+    titulo: "Construir para o Futuro",
     texto: "Habitação: menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível.",
     href: "/ideias/habitacao",
     cta: "Ver as medidas →",

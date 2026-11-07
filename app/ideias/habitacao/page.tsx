@@ -6,7 +6,7 @@ import PartilharBotao from "@/components/PartilharBotao";
 import { numeros, passosParaConstruir, pontos, principios, programaHref } from "@/lib/habitacao";
 
 export const metadata: Metadata = {
-  title: "Construir para o futuro — Iniciativa Liberal Trofa",
+  title: "Construir para o Futuro — Iniciativa Liberal Trofa",
   description: "Menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível.",
 };
 
@@ -26,7 +26,7 @@ export default function Habitacao() {
               </p>
               <h1 className="font-display mt-5 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
                 Construir
-                <span className="block text-sun">para o futuro.</span>
+                <span className="block text-sun">para o Futuro.</span>
               </h1>
               <p className="mt-6 text-lg font-medium italic text-white/90 md:text-xl">
                 Mais liberdade para viver, construir e investir na Trofa.
@@ -240,7 +240,7 @@ export default function Habitacao() {
               Ler o programa completo ↗
             </a>
             <PartilharBotao
-              titulo="Construir para o futuro — Iniciativa Liberal Trofa"
+              titulo="Construir para o Futuro — Iniciativa Liberal Trofa"
               texto="Menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível."
             />
           </div>
