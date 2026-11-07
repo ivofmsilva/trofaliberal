@@ -77,13 +77,22 @@ export async function POST(req: Request) {
           }),
         });
 
-    if (!r.ok) throw new Error(`Serviço de envio respondeu ${r.status}`);
+    if (!r.ok) {
+      const resposta = await r.text().catch(() => "");
+      throw new Error(`${r.status} ${resposta.slice(0, 300)}`);
+    }
     if (!chave) {
       const j = await r.json().catch(() => null);
       if (j && (j.success === false || j.success === "false")) throw new Error("O serviço recusou a mensagem");
     }
     return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ erro: "Não foi possível enviar agora." }, { status: 502 });
+  } catch (e) {
+    // O detalhe vem do serviço de envio (nunca inclui a chave) e ajuda a perceber o que falhou.
+    const detalhe = e instanceof Error ? e.message : "erro desconhecido";
+    console.error("Falha no envio do formulário:", detalhe);
+    return NextResponse.json(
+      { erro: "Não foi possível enviar agora.", via: process.env.RESEND_API_KEY ? "resend" : "formsubmit", detalhe },
+      { status: 502 },
+    );
   }
 }
