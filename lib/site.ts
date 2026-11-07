@@ -5,8 +5,8 @@ export const links = {
   convite: "/#whatsapp",
   email: "trofa@liberal.pt",
   nacionais: "https://iniciativaliberal.pt/ideias/",
-  // Portal de dados abertos. Por agora aponta para o da Maia, só para teste.
-  dados: "https://dadosabertos.maialiberal.pt/",
+  // Portal de dados abertos da Trofa (alojado na Cloudflare Pages).
+  dados: "https://ae5aedd6.white-mode-f771.pages.dev/",
 };
 
 export const autarquicasNav = [
