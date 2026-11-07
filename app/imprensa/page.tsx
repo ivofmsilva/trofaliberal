@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import EntradaBloco from "@/components/EntradaBloco";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import { outros, proximos } from "@/lib/eventos";
@@ -29,9 +30,26 @@ const series = [
 export default function Imprensa() {
   // Categorias sem itens (ex.: artigos de opinião) não aparecem até haver conteúdo.
   const categoriasComItens = ordem.filter((cat) => ordenados(cat).length > 0);
-  const chips = [
-    { id: "eventos", label: "Eventos" },
-    ...categoriasComItens.map((cat) => ({ id: cat, label: categorias[cat].titulo })),
+  const n = (cat: Categoria) => ordenados(cat).length;
+  const entradas = [
+    {
+      titulo: "Eventos",
+      detalhe: proximos.length ? `${proximos.length} agendado${proximos.length > 1 ? "s" : ""}` : "Sem eventos agendados",
+      texto: "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
+      href: "/imprensa#eventos",
+    },
+    ...categoriasComItens.map((cat) => ({
+      titulo: categorias[cat].titulo,
+      detalhe: `${n(cat)} ${n(cat) > 1 ? "publicados" : "publicado"}`,
+      texto: categorias[cat].descricao,
+      href: `/imprensa#${cat}`,
+    })),
+    {
+      titulo: "Autárquicas 2025",
+      detalhe: "Arquivo da campanha",
+      texto: "Programa, candidatos, apresentações, diário de campanha e materiais da Trofa Para Cima.",
+      href: "/autarquicas-2025",
+    },
   ];
 
   return (
@@ -45,17 +63,7 @@ export default function Imprensa() {
         dizem do nosso trabalho.
       </PageHero>
 
-      <nav aria-label="Nesta página" className="border-b border-navy/10 bg-white">
-        <ul className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden">
-          {chips.map((c) => (
-            <li key={c.id} className="shrink-0">
-              <a href={`#${c.id}`} className="block rounded-full bg-mist px-4 py-1.5 text-sm font-bold text-navy transition hover:bg-navy hover:text-white">
-                {c.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <EntradaBloco itens={entradas} />
 
       <section id="eventos" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Eventos</p>

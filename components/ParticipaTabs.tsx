@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-export type Separador = { id: string; label: string; conteudo: React.ReactNode };
+export type Separador = { id: string; label: string; resumo: string; conteudo: React.ReactNode };
 
 // Um só separador visível de cada vez. O escolhido vai no endereço (?t=ideia), por isso
 // as ligações do menu e as páginas antigas abrem logo no separador certo.
@@ -14,7 +14,7 @@ export default function ParticipaTabs({ separadores }: { separadores: Separador[
 
   return (
     <div>
-      <div role="tablist" aria-label="Participa" className="flex flex-wrap gap-3">
+      <div role="tablist" aria-label="Participa" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {separadores.map((s) => (
           <button
             key={s.id}
@@ -24,13 +24,14 @@ export default function ParticipaTabs({ separadores }: { separadores: Separador[
             aria-selected={ativo === s.id}
             aria-controls={`painel-${s.id}`}
             onClick={() => router.replace(`/participa?t=${s.id}`, { scroll: false })}
-            className={`rounded-full px-6 py-3 font-bold transition ${
+            className={`flex flex-col rounded-2xl border-2 p-5 text-left transition ${
               ativo === s.id
-                ? "bg-navy text-white"
-                : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
+                ? "border-navy bg-navy text-white"
+                : "border-mist bg-white text-navy hover:border-cyan"
             }`}
           >
-            {s.label}
+            <span className="font-display text-xl font-bold leading-tight">{s.label}</span>
+            <span className={`mt-1 text-sm ${ativo === s.id ? "text-white/80" : "text-ink/70"}`}>{s.resumo}</span>
           </button>
         ))}
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Ambito, Eixo, Proposta } from "@/lib/educacao";
 
 type Filtro = "todas" | Ambito;
@@ -15,17 +15,6 @@ export default function PropostasEducacao({ eixos, propostas }: { eixos: Eixo[];
   const [filtro, setFiltro] = useState<Filtro>("todas");
   const [abertas, setAbertas] = useState<Set<string>>(new Set());
 
-  // Os pontos da abordagem (AbrirProposta) pedem para abrir uma proposta e levar até ela.
-  useEffect(() => {
-    const abrir = (e: Event) => {
-      const id = (e as CustomEvent<string>).detail;
-      setFiltro("todas");
-      setAbertas((a) => new Set(a).add(id));
-      setTimeout(() => document.getElementById(`item-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 80);
-    };
-    window.addEventListener("abrir-proposta", abrir);
-    return () => window.removeEventListener("abrir-proposta", abrir);
-  }, []);
 
   const ambitoDe = (p: Proposta): Ambito => eixos.find((e) => e.n === p.eixo)?.ambito ?? "local";
   const visiveis = propostas.filter((p) => filtro === "todas" || ambitoDe(p) === filtro);

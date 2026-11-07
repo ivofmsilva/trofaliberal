@@ -5,6 +5,8 @@ export const links = {
   convite: "/#whatsapp",
   email: "trofa@liberal.pt",
   nacionais: "https://iniciativaliberal.pt/ideias/",
+  // Portal de dados abertos. Por agora aponta para o da Maia, só para teste.
+  dados: "https://dadosabertos.maialiberal.pt/",
 };
 
 export const autarquicasNav = [
@@ -29,9 +31,6 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-// Campanha de 2025: já não está no menu, fica no fim do site.
-export const arquivo: NavItem[] = [{ label: "Autárquicas 2025", href: "/autarquicas-2025" }];
-
 // Menu principal. Cada bloco abre na sua primeira página, que tem as ligações para o resto.
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
@@ -44,12 +43,14 @@ export const nav: NavItem[] = [
       { label: "Juventude", href: "/trofa-liberal#juventude" },
     ],
   },
+  { label: "Dados da Trofa", href: links.dados, external: true },
   {
     label: "Ideias",
     href: "/ideias",
     children: [
       { label: "Propostas", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
+      { label: "Habitação", href: "/ideias/habitacao" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
     ],
@@ -61,6 +62,7 @@ export const nav: NavItem[] = [
       { label: "Eventos", href: "/imprensa#eventos" },
       { label: "Notícias", href: "/imprensa#noticias" },
       { label: "Comunicados", href: "/imprensa#comunicados" },
+      { label: "Autárquicas 2025", href: "/autarquicas-2025" },
     ],
   },
   {

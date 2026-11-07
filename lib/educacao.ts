@@ -230,19 +230,19 @@ export const propostas: Proposta[] = [
 
 export const numeros = [
   {
-    valor: "114.º",
-    legenda: "lugar da Trofa em Educação, entre 186 municípios",
-    fonte: "Ranking de competitividade autárquica 2025 (+Liberdade)",
+    valor: "15,3%",
+    legenda: "da população residente na Trofa tem o ensino superior completo, contra 21,2% em Portugal",
+    fonte: "INE, Censos 2021",
   },
   {
-    valor: "20 vs 12",
-    legenda: "alunos para abrir uma turma: 20 no centro de formação da Trofa, 12 nas escolas profissionais do Estado",
+    valor: "+5,6",
+    legenda: "pontos em dez anos, de 9,7% para 15,3%, na população com ensino superior. Portugal subiu 6,2, por isso a distância aumentou",
+    fonte: "INE, Censos 2011 e 2021 (cálculo nosso)",
+  },
+  {
+    valor: "0",
+    legenda: "estabelecimentos de ensino superior no concelho, apesar das empresas que precisam de mão de obra qualificada",
     fonte: "Relatório das Jornadas Liberais",
-  },
-  {
-    valor: "+90%",
-    legenda: "de empregabilidade no CENFIM da Trofa, com parceria com a Airbus",
-    fonte: "Jornadas Liberais da Trofa",
   },
   {
     valor: "1986",

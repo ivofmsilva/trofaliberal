@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { arquivo, links, nav } from "@/lib/site";
+import { links, nav } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -19,16 +19,15 @@ export default function Footer() {
         <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
           {nav.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} className="hover:text-sun">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-          {arquivo.map((item) => (
-            <li key={item.label}>
-              <Link href={item.href} className="text-white/50 hover:text-sun">
-                {item.label} (arquivo)
-              </Link>
+              {item.external ? (
+                <a href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-sun">
+                  {item.label} ↗
+                </a>
+              ) : (
+                <Link href={item.href} className="hover:text-sun">
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

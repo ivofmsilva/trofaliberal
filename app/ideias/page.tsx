@@ -52,7 +52,7 @@ export default function Propostas() {
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {paginas.map((p, i) => (
             <li key={p.href}>
               <Link

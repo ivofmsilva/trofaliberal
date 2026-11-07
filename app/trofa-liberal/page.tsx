@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import EntradaBloco from "@/components/EntradaBloco";
 import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import { gcl, mesa, plenario2026, type Membro } from "@/lib/equipa";
 
 export const metadata: Metadata = { title: "Quem somos — Iniciativa Liberal Trofa" };
 
-const secoes = [
-  { id: "sobre", label: "Sobre nós" },
-  { id: "equipa", label: "Equipa" },
-  { id: "juventude", label: "Juventude" },
-  { id: "historia", label: "História" },
+const entradas = [
+  { titulo: "Sobre nós", texto: "Quem é a Iniciativa Liberal da Trofa e o que defendemos para o concelho.", href: "#sobre" },
+  { titulo: "Equipa", texto: "O grupo de coordenação, a mesa do plenário e os mandatos anteriores.", href: "#equipa" },
+  { titulo: "Juventude", texto: "Os jovens liberais da Trofa e o Conselho Municipal da Juventude.", href: "#juventude" },
+  { titulo: "História", texto: "Os marcos do núcleo, desde o primeiro encontro liberal em 2021.", href: "#historia" },
 ];
 
 function iniciais(nome: string) {
@@ -144,17 +145,7 @@ export default function Sobre() {
         liberdade e oportunidades.
       </PageHero>
 
-      <nav aria-label="Nesta página" className="border-b border-navy/10 bg-white">
-        <ul className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 py-3 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden">
-          {secoes.map((c) => (
-            <li key={c.id} className="shrink-0">
-              <a href={`#${c.id}`} className="block rounded-full bg-mist px-4 py-1.5 text-sm font-bold text-navy transition hover:bg-navy hover:text-white">
-                {c.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <EntradaBloco itens={entradas} />
 
       <section id="sobre" className="mx-auto grid max-w-7xl scroll-mt-24 gap-12 px-4 py-20 sm:px-6 md:grid-cols-2">
         <div>

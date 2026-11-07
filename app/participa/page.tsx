@@ -39,6 +39,7 @@ const separadores: Separador[] = [
   {
     id: "membro",
     label: "Faz-te membro",
+    resumo: "Junta-te à Iniciativa Liberal da Trofa e ajuda a construir o concelho.",
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
@@ -101,6 +102,7 @@ const separadores: Separador[] = [
   {
     id: "ideia",
     label: "Tens uma ideia?",
+    resumo: "Diz-nos o que mudavas na Trofa.",
     conteudo: (
       <div className="mx-auto max-w-2xl">
         <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Partilha a tua ideia</h2>
@@ -126,6 +128,7 @@ const separadores: Separador[] = [
   {
     id: "denuncia",
     label: "Denúncia",
+    resumo: "Um problema na tua rua ou na tua freguesia? Conta-nos onde e o quê.",
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
@@ -176,6 +179,7 @@ const separadores: Separador[] = [
   {
     id: "contactos",
     label: "Contactos",
+    resumo: "Email, WhatsApp, redes sociais, ou escreve-nos diretamente.",
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div className="space-y-6">

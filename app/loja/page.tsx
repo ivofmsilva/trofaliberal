@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import EntradaBloco from "@/components/EntradaBloco";
 import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
 import { merchandising } from "@/lib/loja";
@@ -46,7 +47,14 @@ export default function Loja() {
         Veste a causa. Usa com orgulho.
       </PageHero>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+      <EntradaBloco
+        itens={[
+          { titulo: "Loja", detalhe: "Artigos da Trofa", texto: "O pin, a caneca e as t-shirts da campanha Trofa para cima.", href: "/loja#produtos" },
+          { titulo: "Donativos", detalhe: "Apoiar o núcleo", texto: "Como apoiar o núcleo por Multibanco ou MB WAY. Só donativos de pessoas singulares.", href: "/loja/donativos" },
+        ]}
+      />
+
+      <section id="produtos" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
           Artigos da Trofa
