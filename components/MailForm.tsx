@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export type Field = {
   name: string;
@@ -35,6 +35,7 @@ export default function MailForm({
   submitLabel: string;
   anexos?: boolean;
 }) {
+  const uid = useId();
   const [pronto, setPronto] = useState<Pronto | null>(null);
   const [copiado, setCopiado] = useState(false);
   const [estado, setEstado] = useState<"parado" | "a-enviar" | "enviado">("parado");
@@ -92,13 +93,13 @@ export default function MailForm({
       <input type="text" name="site" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
       {fields.map((f) => (
         <div key={f.name}>
-          <label htmlFor={f.name} className="text-sm font-bold text-navy">
+          <label htmlFor={`${uid}-${f.name}`} className="text-sm font-bold text-navy">
             {f.label}
           </label>
           {f.type === "textarea" ? (
-            <textarea id={f.name} name={f.name} rows={5} required={f.required} className={inputClass} />
+            <textarea id={`${uid}-${f.name}`} name={f.name} rows={5} required={f.required} className={inputClass} />
           ) : f.type === "select" ? (
-            <select id={f.name} name={f.name} required={f.required} className={inputClass} defaultValue="">
+            <select id={`${uid}-${f.name}`} name={f.name} required={f.required} className={inputClass} defaultValue="">
               <option value="">Escolhe um tema</option>
               {f.options?.map((o) => (
                 <option key={o} value={o}>
@@ -108,7 +109,7 @@ export default function MailForm({
             </select>
           ) : (
             <input
-              id={f.name}
+              id={`${uid}-${f.name}`}
               name={f.name}
               type={f.type ?? "text"}
               required={f.required}

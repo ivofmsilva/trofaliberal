@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Galeria from "@/components/Galeria";
 import HeroEducacao from "@/components/HeroEducacao";
 import ItemCard from "@/components/ItemCard";
+import Perguntas from "@/components/Perguntas";
 import PartilharBotao from "@/components/PartilharBotao";
 import PropostasEducacao from "@/components/PropostasEducacao";
 import { eixos, fotosJornadas, numeros, propostas } from "@/lib/educacao";
+import { cartazesEducacao, emTodoOPercurso, percurso, perguntas } from "@/lib/educacao-extra";
 import { itens } from "@/lib/imprensa";
 
 export const metadata: Metadata = {
@@ -33,6 +36,8 @@ const principios = [
     texto: "Apoio social onde é preciso, temporário, bem direcionado e com resultados medidos, para que todos possam aprender e crescer.",
   },
 ];
+
+const tituloDe = (id: string) => propostas.find((p) => p.id === id)?.titulo ?? id;
 
 const imprensaJornadas = itens.noticias.filter((n) => n.data?.startsWith("2026-03"));
 const locais = propostas.filter((p) => eixos.find((e) => e.n === p.eixo)?.ambito === "local").length;
@@ -92,6 +97,45 @@ export default function Educacao() {
         </div>
       </section>
 
+      {/* O percurso de um aluno */}
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>O percurso de um aluno da Trofa</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+            Do berço ao primeiro emprego, o que propomos em cada fase
+          </h2>
+          <ol className="relative mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+            <span aria-hidden className="absolute left-0 right-0 top-6 hidden h-1 rounded bg-navy/15 lg:block" />
+            {percurso.map((f, i) => (
+              <li key={f.fase} className="relative rounded-2xl bg-white p-6 shadow-sm">
+                <span className="font-display relative grid h-12 w-12 place-items-center rounded-full bg-pink text-xl font-bold text-white ring-4 ring-mist">
+                  {i + 1}
+                </span>
+                <h3 className="font-display mt-4 text-xl font-bold leading-tight text-navy">{f.fase}</h3>
+                <p className="text-xs font-bold uppercase tracking-widest text-cyan-dark">{f.idade}</p>
+                <ul className="mt-4 space-y-2 text-sm text-ink/85">
+                  {f.ids.map((id) => (
+                    <li key={id} className="list-disc marker:text-sun ml-4">
+                      {tituloDe(id)}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-6 rounded-2xl bg-navy p-6 text-white">
+            <p className="text-xs font-bold uppercase tracking-widest text-sun">Em todas as fases</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {emTodoOPercurso.map((id) => (
+                <li key={id} className="rounded-full bg-navy-soft px-4 py-1.5 text-sm font-bold">
+                  {tituloDe(id)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Propostas */}
       <section id="propostas" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className={`${etiqueta} text-cyan-dark`}>O manifesto</p>
@@ -133,6 +177,41 @@ export default function Educacao() {
               </ul>
             </>
           )}
+        </div>
+      </section>
+
+      {/* Na campanha */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <p className={`${etiqueta} text-cyan-dark`}>Na campanha</p>
+        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+          Levámos a educação para a rua
+        </h2>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-3">
+          {cartazesEducacao.map((c) => (
+            <li key={c.src} className="flex justify-center">
+              <Image
+                src={c.src}
+                alt={c.alt}
+                width={c.w}
+                height={c.h}
+                sizes="(min-width: 640px) 320px, 100vw"
+                className="w-full max-w-xs rounded-xl object-cover shadow-lg ring-1 ring-navy/10"
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Perguntas */}
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>Perguntas e respostas</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+            As dúvidas que mais ouvimos
+          </h2>
+          <div className="mt-8">
+            <Perguntas itens={perguntas} />
+          </div>
         </div>
       </section>
 

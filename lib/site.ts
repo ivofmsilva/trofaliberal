@@ -2,7 +2,7 @@ export const links = {
   facebook: "https://www.facebook.com/TrofaLiberal",
   instagram: "https://www.instagram.com/liberaltrofa/",
   // O link do grupo de WhatsApp não está no site: as pessoas pedem convite aqui.
-  convite: "/#whatsapp",
+  convite: "/participa?t=contactos",
   email: "trofa@liberal.pt",
   nacionais: "https://iniciativaliberal.pt/ideias/",
   // Portal de dados abertos da Trofa (alojado na Cloudflare Pages).
@@ -34,15 +34,7 @@ export type NavItem = {
 // Menu principal. Cada bloco abre na sua primeira página, que tem as ligações para o resto.
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
-  {
-    label: "Quem somos",
-    href: "/trofa-liberal",
-    children: [
-      { label: "Sobre nós", href: "/trofa-liberal" },
-      { label: "Equipa", href: "/trofa-liberal#equipa" },
-      { label: "Juventude", href: "/trofa-liberal#juventude" },
-    ],
-  },
+  { label: "Quem somos", href: "/trofa-liberal" },
   { label: "Dados da Trofa", href: links.dados, external: true },
   {
     label: "Ideias",
@@ -50,8 +42,8 @@ export const nav: NavItem[] = [
     children: [
       { label: "Propostas", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
-      { label: "Construir para o Futuro", href: "/ideias/habitacao" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
+      { label: "Construir para o Futuro", href: "/ideias/habitacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
     ],
   },

@@ -87,12 +87,8 @@ export async function POST(req: Request) {
     }
     return NextResponse.json({ ok: true });
   } catch (e) {
-    // O detalhe vem do serviço de envio (nunca inclui a chave) e ajuda a perceber o que falhou.
-    const detalhe = e instanceof Error ? e.message : "erro desconhecido";
-    console.error("Falha no envio do formulário:", detalhe);
-    return NextResponse.json(
-      { erro: "Não foi possível enviar agora.", via: process.env.RESEND_API_KEY ? "resend" : "formsubmit", detalhe },
-      { status: 502 },
-    );
+    // O motivo fica só no registo do servidor; quem usa o site não o vê.
+    console.error("Falha no envio do formulário:", e instanceof Error ? e.message : e);
+    return NextResponse.json({ erro: "Não foi possível enviar agora." }, { status: 502 });
   }
 }

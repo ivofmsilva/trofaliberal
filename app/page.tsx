@@ -124,8 +124,8 @@ export default function Home() {
       )}
 
       <div className="pt-20">
-        <CarrosselBanners titulos={["Metro para a Trofa", "Construir para o Futuro", "Trofa no topo da Educação"]}>
-          {[<BannerMetro key="metro" />, <BannerHabitacao key="habitacao" />, <BannerEducacao key="educacao" />]}
+        <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro"]}>
+          {[<BannerMetro key="metro" />, <BannerEducacao key="educacao" />, <BannerHabitacao key="habitacao" />]}
         </CarrosselBanners>
       </div>
 

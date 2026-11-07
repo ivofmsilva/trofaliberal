@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import ObraAnimada from "@/components/ObraAnimada";
 import PartilharBotao from "@/components/PartilharBotao";
+import Perguntas from "@/components/Perguntas";
+import PerfisHabitacao from "@/components/PerfisHabitacao";
 import { numeros, pontos, principios, programaHref } from "@/lib/habitacao";
+import { perfis, perguntas, problemaResposta } from "@/lib/habitacao-extra";
 
 export const metadata: Metadata = {
   title: "Construir para o Futuro — Iniciativa Liberal Trofa",
@@ -101,6 +104,41 @@ export default function Habitacao() {
         </div>
       </section>
 
+      {/* O que muda para ti */}
+      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+        <p className={`${etiqueta} text-cyan-dark`}>O que muda para ti</p>
+        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+          Escolhe a tua situação e vê as medidas que te interessam
+        </h2>
+        <div className="mt-8">
+          <PerfisHabitacao perfis={perfis} />
+        </div>
+      </section>
+
+      {/* Do problema à resposta */}
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>Do problema à resposta</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+            O que trava a habitação na Trofa, e o que propomos
+          </h2>
+          <ul className="mt-10 space-y-4">
+            {problemaResposta.map((l) => (
+              <li key={l.problema} className="grid overflow-hidden rounded-2xl bg-white shadow-sm md:grid-cols-2">
+                <div className="p-6">
+                  <p className="text-xs font-bold uppercase tracking-widest text-pink">O problema</p>
+                  <p className="mt-2 font-bold leading-snug text-navy">{l.problema}</p>
+                </div>
+                <div className="bg-navy p-6 text-white">
+                  <p className="text-xs font-bold uppercase tracking-widest text-sun">A nossa resposta</p>
+                  <p className="mt-2 font-bold leading-snug">{l.resposta}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Medidas do programa */}
       <section id="medidas" className="mx-auto max-w-4xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className={`${etiqueta} text-cyan-dark`}>O programa</p>
@@ -151,6 +189,19 @@ export default function Habitacao() {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* Perguntas */}
+      <section className="bg-mist py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <p className={`${etiqueta} text-cyan-dark`}>Perguntas e respostas</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+            As dúvidas que mais ouvimos
+          </h2>
+          <div className="mt-8">
+            <Perguntas itens={perguntas} />
+          </div>
+        </div>
       </section>
 
       {/* O problema */}

@@ -13,30 +13,30 @@ export default function BannerHabitacao() {
         aria-label="Construir para o Futuro: começar já hoje a resolver o problema da habitação na Trofa e em Portugal. Ver as medidas"
         className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
       >
-        <div className="relative flex flex-col items-start gap-5 px-8 py-10 md:px-12 md:py-12">
+        <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-12 md:py-12">
           <span className="-skew-x-12 bg-pink px-6 py-1.5">
             <span className="block skew-x-12 text-lg font-black uppercase italic tracking-[0.32em] text-sun">
               Trofa
             </span>
           </span>
-          <p className="font-display text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+          <p className="font-display text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl lg:text-7xl">
             Construir
             <span className="block text-sun">para o Futuro</span>
           </p>
-          <p className="max-w-md text-xl font-bold leading-snug sm:text-2xl">
+          <p className="max-w-md text-lg font-bold leading-snug sm:text-xl md:text-2xl">
             Começar já hoje a resolver o problema da habitação na Trofa e em Portugal.
           </p>
-          <div className="mt-auto flex flex-wrap items-center gap-4 pt-4">
+          <div className="mt-auto flex flex-wrap items-center gap-4 pt-2 md:pt-4">
             <span className="rounded-full bg-sun px-6 py-3 font-bold text-navy transition group-hover:bg-white">
               Ver as medidas →
             </span>
-            <p className="font-display text-lg font-black uppercase leading-tight">
+            <p className="font-display hidden text-lg font-black uppercase leading-tight sm:block">
               Liberal faz construir Portugal!
             </p>
           </div>
         </div>
 
-        <div className="relative min-h-72 bg-[#0a4fa0]">
+        <div className="relative order-first h-44 bg-[#0a4fa0] sm:h-64 md:order-none md:h-auto md:min-h-72">
           <Image
             src="/images/geral/habitacao-outdoor.jpg"
             alt="Outdoor da Iniciativa Liberal: mais casas, menos custos, mais construção, menos burocracia"

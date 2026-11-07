@@ -19,16 +19,16 @@ const paginas = [
     cta: "Ver a nossa visão →",
   },
   {
-    titulo: "Construir para o Futuro",
-    texto: "Habitação: menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível.",
-    href: "/ideias/habitacao",
-    cta: "Ver as medidas →",
-  },
-  {
     titulo: "Trofa no topo da Educação",
     texto: "O nosso manifesto pela Educação: propostas para a Trofa e para o país.",
     href: "/ideias/educacao",
     cta: "Ver o manifesto →",
+  },
+  {
+    titulo: "Construir para o Futuro",
+    texto: "Habitação: menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível.",
+    href: "/ideias/habitacao",
+    cta: "Ver as medidas →",
   },
   {
     titulo: "Cartazes",

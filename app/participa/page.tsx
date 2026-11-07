@@ -192,11 +192,20 @@ const separadores: Separador[] = [
           <div className="rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">WhatsApp</h2>
             <p className="mt-2 text-white/75">
-              Queres fazer parte da comunidade de liberais trofenses? Pede convite para o nosso grupo.
+              Queres fazer parte da comunidade de liberais trofenses? Deixa o nome e o telefone e enviamos-te o convite para o grupo.
             </p>
-            <Link href={links.convite} className="mt-4 inline-block font-bold text-sun hover:underline">
-              Pedir convite →
-            </Link>
+            <div className="mt-5 rounded-xl bg-white p-5 text-ink">
+              <MailForm
+                to={links.email}
+                subject="Pedido de convite — grupo de WhatsApp dos liberais trofenses"
+                submitLabel="Pedir convite"
+                consent="Autorizo o núcleo da Iniciativa Liberal da Trofa a usar o meu nome e o meu número de telefone apenas para me enviar o convite para o grupo de WhatsApp."
+                fields={[
+                  { name: "nome", label: "Nome *", required: true },
+                  { name: "telefone", label: "Número de telefone *", type: "tel", required: true },
+                ]}
+              />
+            </div>
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">Redes sociais</h2>
