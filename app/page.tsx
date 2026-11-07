@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BannerEducacao from "@/components/BannerEducacao";
+import BannerHabitacao from "@/components/BannerHabitacao";
 import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
@@ -122,6 +123,7 @@ export default function Home() {
       )}
 
       <BannerMetro />
+      <BannerHabitacao />
       <BannerEducacao />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">

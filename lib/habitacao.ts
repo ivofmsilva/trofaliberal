@@ -78,7 +78,7 @@ export const pontos: Ponto[] = [
     n: 1,
     titulo: "Aumentar a oferta com liberdade e iniciativa privada",
     intro:
-      "A autarquia não deve construir nem planear de forma centralizada. Deve garantir liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.",
+      "A Câmara deve planear de forma descentralizada e transparente a gestão do território. Deve garantir liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.",
     grupos: [
       {
         titulo: "Património público ao serviço da comunidade",

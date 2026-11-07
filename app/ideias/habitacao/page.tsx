@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ObraAnimada from "@/components/ObraAnimada";
 import PartilharBotao from "@/components/PartilharBotao";
 import { numeros, passosParaConstruir, pontos, principios, programaHref } from "@/lib/habitacao";
 
 export const metadata: Metadata = {
-  title: "Habitação: mais casas, menos custos — Iniciativa Liberal Trofa",
+  title: "Construir para o futuro — Iniciativa Liberal Trofa",
   description: "Menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível.",
 };
 
@@ -18,14 +19,14 @@ export default function Habitacao() {
       <section className="px-4 pt-6 sm:px-6">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white shadow-xl">
           <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-pink/25 blur-3xl" />
-          <div className="relative grid items-center gap-10 px-8 py-14 md:grid-cols-[1fr_1.1fr] md:px-16">
+          <div className="relative grid items-center gap-10 px-8 py-14 md:grid-cols-[1.1fr_1fr] md:px-16">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/85 sm:text-sm">
                 Iniciativa Liberal · Núcleo da Trofa · Habitação
               </p>
               <h1 className="font-display mt-5 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
-                Mais casas,
-                <span className="block text-sun">menos custos.</span>
+                Construir
+                <span className="block text-sun">para o futuro.</span>
               </h1>
               <p className="mt-6 text-lg font-medium italic text-white/90 md:text-xl">
                 Mais liberdade para viver, construir e investir na Trofa.
@@ -51,37 +52,11 @@ export default function Habitacao() {
                 </a>
               </div>
             </div>
-            <Image
-              src="/images/geral/habitacao-outdoor.jpg"
-              alt="Outdoor da Iniciativa Liberal: mais casas, menos custos, mais construção, menos burocracia, com o manual de 15 passos para construir uma casa em Portugal"
-              width={1646}
-              height={1273}
-              priority
-              sizes="(min-width: 768px) 560px, 100vw"
-              className="w-full rounded-2xl object-cover shadow-2xl shadow-black/30 ring-4 ring-white/30"
-            />
+            <div className="flex justify-center md:justify-end">
+              <ObraAnimada />
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* O problema */}
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className={`${etiqueta} text-cyan-dark`}>Onde está o problema</p>
-        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-          Para construir uma casa em Portugal são precisos 15 passos
-        </h2>
-        <p className="mt-4 max-w-3xl text-lg text-ink/80">
-          No cartaz da nossa campanha nacional, quase todos terminam com a mesma frase: paga-se e espera-se.
-          Quando o processo se arrasta, a casa fica mais cara e quem queria construir desiste.
-        </p>
-        <ol className="mt-10 grid gap-x-10 gap-y-3 md:grid-cols-2">
-          {passosParaConstruir.map((p, i) => (
-            <li key={p} className="flex items-baseline gap-4 border-b border-mist pb-3">
-              <span className="font-display w-8 shrink-0 text-xl font-bold text-pink">{pad(i + 1)}</span>
-              <span className="font-bold text-navy">{p}</span>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* Compromissos */}
@@ -111,8 +86,8 @@ export default function Habitacao() {
             A forma mais eficaz de baixar os preços é haver mais casas
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-white/85">
-            O papel da Câmara não é construir nem planear de forma centralizada. É garantir liberdade,
-            regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.
+            A Câmara deve planear de forma descentralizada e transparente a gestão do território. Deve garantir
+            liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.
           </p>
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {principios.map((p, i) => (
@@ -178,10 +153,41 @@ export default function Habitacao() {
         </ol>
       </section>
 
+      {/* O cartaz da campanha nacional */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <p className={`${etiqueta} text-cyan-dark`}>Onde está o problema</p>
+        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+          Para construir uma casa em Portugal são precisos 15 passos
+        </h2>
+        <p className="mt-4 max-w-3xl text-lg text-ink/80">
+          É o que diz o cartaz da campanha nacional da Iniciativa Liberal, que traz o manual completo:
+          quase todos os passos terminam com a mesma frase, paga-se e espera-se. Quando o processo se
+          arrasta, a casa fica mais cara e quem queria construir desiste.
+        </p>
+        <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
+          <Image
+            src="/images/geral/habitacao-outdoor.jpg"
+            alt="Outdoor da Iniciativa Liberal: mais casas, menos custos, mais construção, menos burocracia, com o manual de 15 passos para construir uma casa em Portugal"
+            width={1646}
+            height={1273}
+            sizes="(min-width: 1024px) 600px, 100vw"
+            className="w-full rounded-2xl object-cover shadow-xl ring-1 ring-navy/10"
+          />
+          <ol className="space-y-2">
+            {passosParaConstruir.map((p, i) => (
+              <li key={p} className="flex items-baseline gap-4 border-b border-mist pb-2">
+                <span className="font-display w-8 shrink-0 text-xl font-bold text-pink">{pad(i + 1)}</span>
+                <span className="font-bold text-navy">{p}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres mais casas na Trofa?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres construir o futuro da Trofa?</h2>
           <p className="mt-3 text-lg font-medium">
             Estas medidas são um ponto de partida. Diz-nos o que falta e ajuda-nos a pô-las em prática.
           </p>
@@ -201,7 +207,7 @@ export default function Habitacao() {
               Ler o programa completo ↗
             </a>
             <PartilharBotao
-              titulo="Habitação: mais casas, menos custos — Iniciativa Liberal Trofa"
+              titulo="Construir para o futuro — Iniciativa Liberal Trofa"
               texto="Menos burocracia e mais oferta, para que construir, arrendar e viver na Trofa seja possível."
             />
           </div>

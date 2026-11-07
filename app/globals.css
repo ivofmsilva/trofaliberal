@@ -42,3 +42,74 @@ body {
   outline: 3px solid var(--pink);
   outline-offset: 2px;
 }
+
+/* Animação da obra (página da Habitação): cada piso sobe à vez, a grua balança e a bandeira fecha o ciclo.
+   Sem movimento, o desenho aparece já completo. */
+@media (prefers-reduced-motion: no-preference) {
+  .obra-piso-0 {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: obra-piso-0 14s ease-out infinite;
+  }
+  @keyframes obra-piso-0 {
+    0%, 6% { opacity: 0; transform: scaleY(0.05); }
+    14%, 90% { opacity: 1; transform: scaleY(1); }
+    96%, 100% { opacity: 0; transform: scaleY(1); }
+  }
+  .obra-piso-1 {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: obra-piso-1 14s ease-out infinite;
+  }
+  @keyframes obra-piso-1 {
+    0%, 18% { opacity: 0; transform: scaleY(0.05); }
+    26%, 90% { opacity: 1; transform: scaleY(1); }
+    96%, 100% { opacity: 0; transform: scaleY(1); }
+  }
+  .obra-piso-2 {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: obra-piso-2 14s ease-out infinite;
+  }
+  @keyframes obra-piso-2 {
+    0%, 30% { opacity: 0; transform: scaleY(0.05); }
+    38%, 90% { opacity: 1; transform: scaleY(1); }
+    96%, 100% { opacity: 0; transform: scaleY(1); }
+  }
+  .obra-piso-3 {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: obra-piso-3 14s ease-out infinite;
+  }
+  @keyframes obra-piso-3 {
+    0%, 42% { opacity: 0; transform: scaleY(0.05); }
+    50%, 90% { opacity: 1; transform: scaleY(1); }
+    96%, 100% { opacity: 0; transform: scaleY(1); }
+  }
+  .obra-piso-4 {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: obra-piso-4 14s ease-out infinite;
+  }
+  @keyframes obra-piso-4 {
+    0%, 54% { opacity: 0; transform: scaleY(0.05); }
+    62%, 90% { opacity: 1; transform: scaleY(1); }
+    96%, 100% { opacity: 0; transform: scaleY(1); }
+  }
+  .obra-bandeira {
+    animation: obra-bandeira 14s ease-out infinite;
+  }
+  @keyframes obra-bandeira {
+    0%, 66% { opacity: 0; }
+    72%, 90% { opacity: 1; }
+    96%, 100% { opacity: 0; }
+  }
+  .obra-carga {
+    transform-origin: 272px 44px;
+    animation: obra-carga 3.5s ease-in-out infinite alternate;
+  }
+  @keyframes obra-carga {
+    from { transform: rotate(-4deg); }
+    to { transform: rotate(4deg); }
+  }
+}
