@@ -184,6 +184,31 @@ export default function Habitacao() {
         </div>
       </section>
 
+      {/* Na rua */}
+      <section className="bg-mist py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[320px_1fr]">
+          <Image
+            src="/images/cartazes/cartaz-41.jpeg"
+            alt="Faixa da campanha com o Diamantino ao estilo do Monopólio: medidas liberais para a habitação, mais casas, menos custos, mais construção, menos burocracia"
+            width={506}
+            height={675}
+            sizes="(min-width: 768px) 320px, 100vw"
+            className="mx-auto w-full max-w-xs rounded-2xl object-cover shadow-xl ring-1 ring-navy/10"
+          />
+          <div>
+            <p className={`${etiqueta} text-cyan-dark`}>A nossa mensagem na rua</p>
+            <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+              Medidas liberais para a habitação, numa só faixa
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg text-ink/80">
+              Levámos o programa para a rua com humor: acelerador de processos com Inteligência Artificial,
+              Gabinete do Construtor 2.0, mapa interativo, plataforma de arrendamento acessível, renda
+              resolúvel, apoio aos jovens e construção em altura.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
