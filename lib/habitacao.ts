@@ -36,25 +36,6 @@ export const numeros = [
   },
 ];
 
-// O cartaz da campanha nacional "Manual para construir uma casa em Portugal".
-export const passosParaConstruir = [
-  "Consultar o Plano Diretor Municipal",
-  "Fazer um pedido de informação prévia",
-  "Submeter um projeto de Arquitetura",
-  "Submeter projetos de especialidade",
-  "Pedir o alvará de construção",
-  "Certificado energético",
-  "Certificado acústico",
-  "Inspeção da água",
-  "Inspeção da luz",
-  "Inspeção do gás",
-  "Pagar as telas finais",
-  "Licença de utilização",
-  "Certificado de infraestrutura",
-  "Aprovar a ficha técnica",
-  "Alterar os documentos junto das Finanças",
-];
-
 export const principios = [
   {
     titulo: "Mais oferta",

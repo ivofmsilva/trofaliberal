@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ObraAnimada from "@/components/ObraAnimada";
 import PartilharBotao from "@/components/PartilharBotao";
-import { numeros, passosParaConstruir, pontos, principios, programaHref } from "@/lib/habitacao";
+import { numeros, pontos, principios, programaHref } from "@/lib/habitacao";
 
 export const metadata: Metadata = {
   title: "Construir para o Futuro — Iniciativa Liberal Trofa",
@@ -153,18 +153,19 @@ export default function Habitacao() {
         </ol>
       </section>
 
-      {/* O cartaz da campanha nacional */}
+      {/* O problema */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className={`${etiqueta} text-cyan-dark`}>Onde está o problema</p>
-        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-          Para construir uma casa em Portugal são precisos 15 passos
-        </h2>
-        <p className="mt-4 max-w-3xl text-lg text-ink/80">
-          É o que diz o cartaz da campanha nacional da Iniciativa Liberal, que traz o manual completo:
-          quase todos os passos terminam com a mesma frase, paga-se e espera-se. Quando o processo se
-          arrasta, a casa fica mais cara e quem queria construir desiste.
-        </p>
-        <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.1fr_1fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p className={`${etiqueta} text-cyan-dark`}>Onde está o problema</p>
+            <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
+              Para construir uma casa em Portugal são precisos 15 passos
+            </h2>
+            <p className="mt-4 text-lg text-ink/80">
+              Quase todos terminam com a mesma frase: paga-se e espera-se. Quando o processo se arrasta, a
+              casa fica mais cara e quem queria construir desiste.
+            </p>
+          </div>
           <Image
             src="/images/geral/habitacao-outdoor.jpg"
             alt="Outdoor da Iniciativa Liberal: mais casas, menos custos, mais construção, menos burocracia, com o manual de 15 passos para construir uma casa em Portugal"
@@ -173,14 +174,6 @@ export default function Habitacao() {
             sizes="(min-width: 1024px) 600px, 100vw"
             className="w-full rounded-2xl object-cover shadow-xl ring-1 ring-navy/10"
           />
-          <ol className="space-y-2">
-            {passosParaConstruir.map((p, i) => (
-              <li key={p} className="flex items-baseline gap-4 border-b border-mist pb-2">
-                <span className="font-display w-8 shrink-0 text-xl font-bold text-pink">{pad(i + 1)}</span>
-                <span className="font-bold text-navy">{p}</span>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
 
