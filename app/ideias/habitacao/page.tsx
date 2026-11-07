@@ -219,11 +219,10 @@ export default function Habitacao() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className={`${etiqueta} text-cyan-dark`}>A nossa mensagem na rua</p>
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            Medidas liberais para a habitação, ao jeito do Monopólio
+            Medidas liberais para a habitação
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-ink/80">
-            Levámos o programa para a rua com humor: um tabuleiro com as medidas, do acelerador de processos
-            à renda resolúvel, e cartazes para as medidas que mais pesam.
+            Levámos as nossas mensagens para a rua com propostas e humor.
           </p>
           <Image
             src="/images/geral/habitacao-medidas.jpg"
