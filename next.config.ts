@@ -8,7 +8,7 @@ const antigas: [string, string][] = [
   ["/trofa-liberal/contactos", "/participa?t=contactos"],
   ["/denuncia", "/participa?t=denuncia"],
   ["/ideias/sugestao", "/participa?t=ideia"],
-  ["/eventos", "/imprensa#eventos"],
+  ["/eventos", "/imprensa?t=eventos"],
 ];
 
 const nextConfig: NextConfig = {

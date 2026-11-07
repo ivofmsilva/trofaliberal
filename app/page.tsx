@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import BannerCoordenador from "@/components/BannerCoordenador";
+import BannerDados from "@/components/BannerDados";
 import BannerEducacao from "@/components/BannerEducacao";
 import AgendaInicio from "@/components/AgendaInicio";
 import CarrosselBanners from "@/components/CarrosselBanners";
@@ -96,8 +98,14 @@ export default function Home() {
       </section>
 
       <div className="pt-20">
-        <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro"]}>
-          {[<BannerMetro key="metro" />, <BannerEducacao key="educacao" />, <BannerHabitacao key="habitacao" />]}
+        <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro", "Novo coordenador", "Dados da Trofa"]}>
+          {[
+            <BannerMetro key="metro" />,
+            <BannerEducacao key="educacao" />,
+            <BannerHabitacao key="habitacao" />,
+            <BannerCoordenador key="coordenador" />,
+            <BannerDados key="dados" />,
+          ]}
         </CarrosselBanners>
       </div>
 

@@ -56,7 +56,7 @@ export default function AgendaInicio() {
           </li>
         ))}
       </ul>
-      <Link href="/imprensa#eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
+      <Link href="/imprensa?t=eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
         Ver todos os eventos →
       </Link>
     </section>

@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import EntradaBloco from "@/components/EntradaBloco";
+import { Suspense } from "react";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
+import Separadores, { type Separador } from "@/components/Separadores";
 import { outros, proximos } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Imprensa e Eventos — Iniciativa Liberal Trofa" };
-
-const ordem: Categoria[] = ["noticias", "artigos", "comunicados"];
 
 const series = [
   {
@@ -27,49 +26,49 @@ const series = [
   },
 ];
 
-export default function Imprensa() {
-  // Categorias sem itens (ex.: artigos de opinião) não aparecem até haver conteúdo.
-  const categoriasComItens = ordem.filter((cat) => ordenados(cat).length > 0);
-  const n = (cat: Categoria) => ordenados(cat).length;
-  const entradas = [
-    {
-      titulo: "Eventos",
-      detalhe: proximos.length ? `${proximos.length} agendado${proximos.length > 1 ? "s" : ""}` : "Sem eventos agendados",
-      texto: "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
-      href: "/imprensa#eventos",
-    },
-    ...categoriasComItens.map((cat) => ({
-      titulo: categorias[cat].titulo,
-      detalhe: `${n(cat)} ${n(cat) > 1 ? "publicados" : "publicado"}`,
-      texto: categorias[cat].descricao,
-      href: `/imprensa#${cat}`,
-    })),
-    {
-      titulo: "Autárquicas 2025",
-      detalhe: "Arquivo da campanha",
-      texto: "Programa, candidatos, apresentações, diário de campanha e materiais da Trofa Para Cima.",
-      href: "/autarquicas-2025",
-    },
-  ];
+const MAXIMO_POR_SEPARADOR = 6;
 
+// Um separador por categoria de imprensa: mostra os mais recentes e a ligação para a lista toda.
+function PainelImprensa({ cat }: { cat: Categoria }) {
+  const c = categorias[cat];
+  const todos = ordenados(cat);
+  const recentes = todos.slice(0, MAXIMO_POR_SEPARADOR);
   return (
     <>
-      <PageHero
-        eyebrow="Imprensa e Eventos"
-        title="Onde estamos e o que se escreve sobre nós"
-        image={{ src: "/images/geral/imprensa-reportagem.jpeg", alt: "Reportagem sobre a IL Trofa", w: 673, h: 1008 }}
+      <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">{c.titulo}</h2>
+      <p className="mt-3 max-w-2xl text-lg text-ink/75">{c.descricao}</p>
+      <ul className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {recentes.map((item) => (
+          <li key={item.href}>
+            <ItemCard item={item} />
+          </li>
+        ))}
+      </ul>
+      <Link
+        href={`/imprensa/${cat}`}
+        className="mt-8 inline-block rounded-full border-2 border-navy px-7 py-2 font-bold text-navy transition hover:bg-navy hover:text-white"
       >
-        Os nossos encontros, debates e ações na Trofa, e o que a imprensa e os nossos comunicados
-        dizem do nosso trabalho.
-      </PageHero>
+        {c.verTodos} ({todos.length})
+      </Link>
+    </>
+  );
+}
 
-      <EntradaBloco itens={entradas} />
+export default function Imprensa() {
+  // Categorias sem itens (ex.: artigos de opinião) não aparecem até haver conteúdo.
+  const comItens = (["noticias", "artigos", "comunicados"] as Categoria[]).filter((cat) => ordenados(cat).length > 0);
 
-      <section id="eventos" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Eventos</p>
-        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Próximos eventos</h2>
+  const eventos: Separador = {
+    id: "eventos",
+    label: "Eventos",
+    resumo: proximos.length
+      ? `${proximos.length} agendado${proximos.length > 1 ? "s" : ""}. Jornadas Liberais, Aqui há Parlamento e mais.`
+      : "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
+    conteudo: (
+      <>
+        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos eventos</h2>
         {proximos.length ? (
-          <ul className="mt-10 grid gap-5 md:grid-cols-2">
+          <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {proximos.map((e) => (
               <li key={e.titulo} className="rounded-2xl bg-navy p-8 text-white">
                 <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
@@ -127,30 +126,47 @@ export default function Imprensa() {
             </li>
           ))}
         </ul>
-      </section>
+      </>
+    ),
+  };
 
-      <div className="bg-mist">
-        <div className="mx-auto max-w-7xl space-y-20 px-4 py-20 sm:px-6">
-          {categoriasComItens.map((cat) => {
-            const c = categorias[cat];
-            const [maisRecente] = ordenados(cat);
-            return (
-              <section key={cat} id={cat} className="scroll-mt-24">
-                <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">{c.titulo}</h2>
-                <p className="mt-2 max-w-2xl text-ink/75">{c.descricao}</p>
-                <div className="mt-8 max-w-2xl">
-                  <ItemCard item={maisRecente} />
-                  <Link
-                    href={`/imprensa/${cat}`}
-                    className="mt-5 inline-block rounded-full border-2 border-navy px-7 py-2 font-bold text-navy transition hover:bg-navy hover:text-white"
-                  >
-                    {c.verTodos}
-                  </Link>
-                </div>
-              </section>
-            );
-          })}
-        </div>
+  const resumoCategoria = (cat: Categoria) => {
+    const n = ordenados(cat).length;
+    const plural = cat === "noticias" ? ["publicada", "publicadas"] : ["publicado", "publicados"];
+    return `${n} ${n > 1 ? plural[1] : plural[0]}. ${categorias[cat].descricao}`;
+  };
+
+  const separadores: Separador[] = [
+    eventos,
+    ...comItens.map((cat) => ({
+      id: cat,
+      label: categorias[cat].titulo,
+      resumo: resumoCategoria(cat),
+      conteudo: <PainelImprensa cat={cat} />,
+    })),
+    {
+      id: "autarquicas",
+      label: "Autárquicas 2025",
+      resumo: "Arquivo da campanha: programa, candidatos, apresentações e diário.",
+      href: "/autarquicas-2025",
+    },
+  ];
+
+  return (
+    <>
+      <PageHero
+        eyebrow="Imprensa e Eventos"
+        title="Onde estamos e o que se escreve sobre nós"
+        image={{ src: "/images/geral/imprensa-reportagem.jpeg", alt: "Reportagem sobre a IL Trofa", w: 673, h: 1008 }}
+      >
+        Os nossos encontros, debates e ações na Trofa, e o que a imprensa e os nossos comunicados
+        dizem do nosso trabalho.
+      </PageHero>
+
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+        <Suspense fallback={null}>
+          <Separadores separadores={separadores} caminho="/imprensa" etiqueta="Imprensa e Eventos" />
+        </Suspense>
       </div>
     </>
   );

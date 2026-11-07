@@ -164,17 +164,6 @@ export default function Sobre() {
             defender a liberdade em todas as suas vertentes, porque acreditamos que são as
             pessoas, não os políticos, que devem decidir o seu futuro.
           </p>
-          <figure className="rounded-2xl border-l-4 border-pink bg-mist p-6">
-            <blockquote className="font-display text-xl font-bold leading-snug text-navy">
-              “O liberalismo é a doutrina que mantém que o indivíduo tem o direito de pensar o que
-              quiser, de exprimir o que pensa como quiser, e de pôr em prática o que pensa como
-              quiser, desde que essa expressão ou essa prática não infrinja diretamente a igual
-              liberdade de qualquer outro indivíduo.”
-            </blockquote>
-            <figcaption className="mt-3 text-sm font-bold uppercase tracking-widest text-pink">
-              Fernando Pessoa
-            </figcaption>
-          </figure>
         </div>
       </section>
 
@@ -302,6 +291,19 @@ export default function Sobre() {
           <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
           <Marcos marcos={marcos} />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+        <figure className="rounded-2xl border-l-8 border-pink bg-mist p-8 md:p-10">
+          <blockquote className="font-display text-2xl font-bold leading-snug text-navy md:text-3xl">
+            “O liberalismo é a doutrina que mantém que o indivíduo tem o direito de pensar o que quiser, de
+            exprimir o que pensa como quiser, e de pôr em prática o que pensa como quiser, desde que essa
+            expressão ou essa prática não infrinja diretamente a igual liberdade de qualquer outro indivíduo.”
+          </blockquote>
+          <figcaption className="mt-4 text-sm font-bold uppercase tracking-widest text-pink">
+            Fernando Pessoa
+          </figcaption>
+        </figure>
       </section>
     </>
   );

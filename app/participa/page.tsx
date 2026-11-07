@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import MailForm from "@/components/MailForm";
 import PageHero from "@/components/PageHero";
-import ParticipaTabs, { type Separador } from "@/components/ParticipaTabs";
+import Separadores, { type Separador } from "@/components/Separadores";
 import { areas } from "@/lib/propostas";
 import { aderir, links } from "@/lib/site";
 
@@ -322,7 +322,7 @@ export default function Participa() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <Suspense>
-          <ParticipaTabs separadores={separadores} />
+          <Separadores separadores={separadores} caminho="/participa" etiqueta="Participa" />
         </Suspense>
       </section>
     </>
