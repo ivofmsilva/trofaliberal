@@ -6,21 +6,8 @@ export type Perfil = { id: string; titulo: string; resumo: string; medidas: stri
 
 export const perfis: Perfil[] = [
   {
-    id: "jovens",
-    titulo: "Sou jovem",
-    resumo: "Apoio limitado, que promove a autonomia, e menos impostos para quem quer ser independente.",
-    medidas: [
-      "Programa municipal de apoio à renda jovem",
-      "Copagamento temporário de rendas ou de prestações bancárias na fase de instalação",
-      "Alojamento temporário em edifícios municipais reabilitados, para jovens deslocados",
-      "Residências jovens em parceria com instituições de ensino",
-      "Estúdios de curta duração, até seis meses, para quem inicia atividade na Trofa",
-      "Sem taxas urbanísticas na primeira habitação",
-    ],
-  },
-  {
     id: "familias",
-    titulo: "Quero a minha primeira casa",
+    titulo: "Quero comprar casa",
     resumo: "Menos custos e menos espera para quem constrói ou compra a primeira habitação.",
     medidas: [
       "Eliminar as taxas urbanísticas na primeira habitação",
@@ -70,8 +57,13 @@ export const perfis: Perfil[] = [
   {
     id: "apoio",
     titulo: "Preciso de apoio",
-    resumo: "Habitação social por tempo limitado, com dignidade e com caminho para a autonomia.",
+    resumo: "Para os jovens que começam e para quem está em dificuldade: apoio limitado, com caminho para a autonomia.",
     medidas: [
+      "Programa municipal de apoio à renda jovem",
+      "Copagamento temporário de rendas ou de prestações bancárias na fase de instalação",
+      "Alojamento temporário em edifícios municipais reabilitados, para jovens deslocados",
+      "Residências jovens em parceria com instituições de ensino",
+      "Estúdios de curta duração, até seis meses, para quem inicia atividade na Trofa",
       "Renda resolúvel: o inquilino compra a casa de forma progressiva",
       "Resposta urgente para vítimas de violência doméstica, seniores isolados e outras emergências",
       "Apoio municipal a pequenas obras para famílias em situação de carência",
@@ -89,7 +81,7 @@ export const problemaResposta = [
     resposta: "Um portal digital com pedido único, acompanhamento do processo e alertas de atraso, e prazos obrigatórios.",
   },
   {
-    problema: "A construção nova está parada, por falta de incentivos, excesso de taxas e insegurança nos processos",
+    problema: "A construção nova esteve parada, por falta de incentivos, excesso de taxas e insegurança nos processos",
     resposta: "Menos taxas urbanísticas, nenhuma na primeira habitação, e a construção em altura nos centros.",
   },
   {
@@ -99,34 +91,5 @@ export const problemaResposta = [
   {
     problema: "O arrendamento só é viável se for financeiramente atrativo",
     resposta: "Menos peso fiscal e mais estabilidade para quem arrenda, em vez de controlar rendas.",
-  },
-];
-
-export const perguntas: { p: string; r: string; href?: string; hrefLabel?: string }[] = [
-  {
-    p: "Porque é que mais casas baixam os preços?",
-    r: "O aumento dos preços resulta da escassez de oferta e da complexidade dos licenciamentos. A forma mais eficaz de baixar os preços da habitação é aumentar a oferta disponível, removendo entraves à construção, atraindo investimento privado e mobilizando recursos que estão hoje parados.",
-  },
-  {
-    p: "Vão controlar as rendas?",
-    r: "Não. O arrendamento só se torna viável se for financeiramente atrativo, por isso, em vez de controlar rendas, queremos remover barreiras e reduzir o peso fiscal de quem quer pôr casas no mercado. É com incentivos, estabilidade e segurança jurídica que se atrai mais oferta, e é isso que permite baixar os preços.",
-  },
-  {
-    p: "E quem não consegue comprar nem arrendar?",
-    r: "Há apoio direto e limitado para os jovens (renda jovem, copagamento temporário de rendas ou prestações), uma plataforma municipal de arrendamento acessível, e habitação social por tempo limitado, com o modelo de renda resolúvel para quem quiser vir a ser proprietário.",
-  },
-  {
-    p: "O que acontece à propriedade privada?",
-    r: "É respeitada. A propriedade privada é um pilar da liberdade individual e da prosperidade local. As expropriações só devem ser equacionadas em casos absolutamente excecionais, fundamentados e com compensação justa e célere. E há tolerância zero para ocupações indevidas.",
-  },
-  {
-    p: "Como é a habitação social no vosso modelo?",
-    r: "Existe para apoiar quem realmente precisa, por tempo limitado e com responsabilidade, com avaliação periódica das condições de acesso. Quem lá vive pode comprar a casa por renda resolúvel, com preços controlados e sem revenda nem permuta durante 10 anos. Tudo com transparência: a localização, a tipologia e o estado dos fogos publicados online.",
-  },
-  {
-    p: "Isto tem a ver com o Metro?",
-    r: "Tem. O programa propõe zonas especiais de urbanização junto às estações da futura linha de metro, para que a mobilidade e a habitação cresçam juntas.",
-    href: "/ideias/metro",
-    hrefLabel: "Ver a nossa visão do Metro",
   },
 ];

@@ -4,11 +4,10 @@ import Link from "next/link";
 import Galeria from "@/components/Galeria";
 import HeroEducacao from "@/components/HeroEducacao";
 import ItemCard from "@/components/ItemCard";
-import Perguntas from "@/components/Perguntas";
 import PartilharBotao from "@/components/PartilharBotao";
 import PropostasEducacao from "@/components/PropostasEducacao";
 import { eixos, fotosJornadas, numeros, propostas } from "@/lib/educacao";
-import { cartazesEducacao, emTodoOPercurso, percurso, perguntas } from "@/lib/educacao-extra";
+import { cartazesEducacao, emTodoOPercurso, percurso } from "@/lib/educacao-extra";
 import { itens } from "@/lib/imprensa";
 
 export const metadata: Metadata = {
@@ -97,9 +96,24 @@ export default function Educacao() {
         </div>
       </section>
 
+      {/* Propostas */}
+      <section id="propostas" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
+        <p className={`${etiqueta} text-cyan-dark`}>O manifesto</p>
+        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
+          {propostas.length} propostas em 4 eixos
+        </h2>
+        <p className="mt-4 max-w-3xl text-lg text-ink/80">
+          Três eixos são do que a Câmara Municipal pode fazer já. O quarto é o que exigimos ao Governo e
+          à Assembleia da República. Carrega numa proposta para ver o porquê.
+        </p>
+        <div className="mt-10">
+          <PropostasEducacao eixos={eixos} propostas={propostas} />
+        </div>
+      </section>
+
       {/* O percurso de um aluno */}
-      <section className="bg-mist py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <section className="pb-20">
+        <div className="mx-auto max-w-6xl border-t-2 border-mist px-4 pt-16 sm:px-6">
           <p className={`${etiqueta} text-cyan-dark`}>O percurso de um aluno da Trofa</p>
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
             Do berço ao primeiro emprego, o que propomos em cada fase
@@ -107,7 +121,7 @@ export default function Educacao() {
           <ol className="relative mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             <span aria-hidden className="absolute left-0 right-0 top-6 hidden h-1 rounded bg-navy/15 lg:block" />
             {percurso.map((f, i) => (
-              <li key={f.fase} className="relative rounded-2xl bg-white p-6 shadow-sm">
+              <li key={f.fase} className="relative rounded-2xl bg-mist p-6">
                 <span className="font-display relative grid h-12 w-12 place-items-center rounded-full bg-pink text-xl font-bold text-white ring-4 ring-mist">
                   {i + 1}
                 </span>
@@ -133,21 +147,6 @@ export default function Educacao() {
               ))}
             </ul>
           </div>
-        </div>
-      </section>
-
-      {/* Propostas */}
-      <section id="propostas" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
-        <p className={`${etiqueta} text-cyan-dark`}>O manifesto</p>
-        <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          {propostas.length} propostas em 4 eixos
-        </h2>
-        <p className="mt-4 max-w-3xl text-lg text-ink/80">
-          Três eixos são do que a Câmara Municipal pode fazer já. O quarto é o que exigimos ao Governo e
-          à Assembleia da República. Carrega numa proposta para ver o porquê.
-        </p>
-        <div className="mt-10">
-          <PropostasEducacao eixos={eixos} propostas={propostas} />
         </div>
       </section>
 
@@ -200,19 +199,6 @@ export default function Educacao() {
             </li>
           ))}
         </ul>
-      </section>
-
-      {/* Perguntas */}
-      <section className="bg-mist py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <p className={`${etiqueta} text-cyan-dark`}>Perguntas e respostas</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            As dúvidas que mais ouvimos
-          </h2>
-          <div className="mt-8">
-            <Perguntas itens={perguntas} />
-          </div>
-        </div>
       </section>
 
       {/* Fecho */}

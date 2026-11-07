@@ -130,7 +130,7 @@ export const propostas: Proposta[] = [
   {
     id: "2.3",
     eixo: 2,
-    titulo: "Apoiar a sociedade civil e o mecenato educativo",
+    titulo: "Apoiar a sociedade civil e estimular o mecenato educativo",
     resumo: "Protocolos, infraestruturas e reconhecimento para quem melhora a educação no concelho.",
     porque:
       "A Câmara deve apoiar e facilitar o trabalho das entidades da sociedade civil, com protocolos formais, acesso a infraestrutura municipal e reconhecimento, sem cheques em branco e com resultados mensuráveis. O aluno está no centro da ação educativa. O mecenato educativo, a criação de tutores e o envolvimento das empresas locais trazem a sociedade civil para a educação do concelho, em benefício dos alunos.",
