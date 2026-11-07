@@ -5,9 +5,13 @@ import { useId, useState } from "react";
 export type Field = {
   name: string;
   label: string;
-  type?: "text" | "email" | "tel" | "textarea" | "select";
+  type?: "text" | "email" | "tel" | "textarea" | "select" | "number";
   required?: boolean;
   options?: string[];
+  // Texto da primeira opção de uma lista (por defeito, "Escolhe um tema").
+  placeholder?: string;
+  // Valor com que o campo começa.
+  valorInicial?: string;
 };
 
 const inputClass =
@@ -27,6 +31,7 @@ export default function MailForm({
   consent,
   submitLabel,
   anexos,
+  intro,
 }: {
   to: string;
   subject: string;
@@ -34,6 +39,8 @@ export default function MailForm({
   consent?: React.ReactNode;
   submitLabel: string;
   anexos?: boolean;
+  // Linha(s) que vão no início da mensagem (por exemplo, o produto de uma encomenda).
+  intro?: string;
 }) {
   const uid = useId();
   const [pronto, setPronto] = useState<Pronto | null>(null);
@@ -44,7 +51,7 @@ export default function MailForm({
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    let body = fields
+    let body = (intro ? `${intro}\n` : "") + fields
       .map((f) => `${f.label.replace(" *", "")}: ${String(data.get(f.name) ?? "").trim()}`)
       .join("\n");
     if (anexos) body += "\n\n(Se tiveres fotos ou documentos, anexa-os a este email.)";
@@ -99,8 +106,8 @@ export default function MailForm({
           {f.type === "textarea" ? (
             <textarea id={`${uid}-${f.name}`} name={f.name} rows={5} required={f.required} className={inputClass} />
           ) : f.type === "select" ? (
-            <select id={`${uid}-${f.name}`} name={f.name} required={f.required} className={inputClass} defaultValue="">
-              <option value="">Escolhe um tema</option>
+            <select id={`${uid}-${f.name}`} name={f.name} required={f.required} className={inputClass} defaultValue={f.valorInicial ?? ""}>
+              <option value="">{f.placeholder ?? "Escolhe um tema"}</option>
               {f.options?.map((o) => (
                 <option key={o} value={o}>
                   {o}
@@ -113,6 +120,9 @@ export default function MailForm({
               name={f.name}
               type={f.type ?? "text"}
               required={f.required}
+              defaultValue={f.valorInicial}
+              min={f.type === "number" ? 1 : undefined}
+              inputMode={f.type === "number" ? "numeric" : undefined}
               className={inputClass}
             />
           )}
