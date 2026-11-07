@@ -9,7 +9,7 @@ import BannerHabitacao from "@/components/BannerHabitacao";
 import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
-import { aderir, links, membros } from "@/lib/site";
+import { links, membros } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
 const principios = [
@@ -184,9 +184,6 @@ export default function Home() {
             <h2 className="font-display text-4xl font-bold md:text-5xl">Faz-te Membro</h2>
             <p className="mt-4 text-lg font-medium">
               Ajuda-nos a construir um futuro mais livre para a Trofa.
-            </p>
-            <p className="mt-2 font-bold">
-              Quota: {aderir.quotaAnual} € por ano, ou {aderir.quotaJovem} € para jovens.
             </p>
             <Link
               href="/participa?t=membro"

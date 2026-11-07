@@ -92,15 +92,6 @@ const separadores: Separador[] = [
             </li>
           </ul>
 
-          <div className="mt-8 rounded-2xl border-l-8 border-pink bg-mist p-5">
-            <p className="font-display text-xl font-bold leading-snug text-navy">
-              Um pequeno investimento no futuro do país.
-            </p>
-            <p className="mt-2 text-ink/80">
-              Um partido precisa da ajuda dos membros para fazer a política acontecer e ajudar a crescer o país.
-            </p>
-          </div>
-
           <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como funciona</h3>
           <ol className="mt-4 space-y-3">
             {passosAdesao.map((p, i) => (
