@@ -19,11 +19,11 @@ const passosAdesao = [
   },
   {
     titulo: "O coordenador liga-te",
-    texto: "O teu pedido chega ao núcleo, e o coordenador telefona-te para te dar as boas-vindas e aprovar a adesão.",
+    texto: "O teu pedido chega ao núcleo, e o nosso coordenador telefona-te para te dar as boas-vindas.",
   },
   {
     titulo: "Já és membro",
-    texto: "Depois de aprovado, recebes o pedido de pagamento da quota.",
+    texto: "Depois de aprovado, já podes participar na vida interna do partido, nos fóruns de discussão e eventos.",
   },
 ];
 
@@ -91,6 +91,15 @@ const separadores: Separador[] = [
               <p className="mt-1 text-sm text-white/90">por ano</p>
             </li>
           </ul>
+
+          <div className="mt-8 rounded-2xl border-l-8 border-pink bg-mist p-5">
+            <p className="font-display text-xl font-bold leading-snug text-navy">
+              Um pequeno investimento no futuro do país.
+            </p>
+            <p className="mt-2 text-ink/80">
+              Um partido precisa da ajuda dos membros para fazer a política acontecer e ajudar a crescer o país.
+            </p>
+          </div>
 
           <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como funciona</h3>
           <ol className="mt-4 space-y-3">

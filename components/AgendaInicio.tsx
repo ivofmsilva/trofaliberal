@@ -30,23 +30,10 @@ export default function AgendaInicio() {
             </li>
           ))}
         </ul>
-      ) : (
-        <div className="mt-8 flex flex-col gap-5 rounded-2xl bg-navy p-6 text-white sm:p-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-display text-2xl font-bold">Ainda sem data para o próximo encontro.</p>
-            <p className="mt-1 text-white/80">Entra no grupo de WhatsApp e sê dos primeiros a saber.</p>
-          </div>
-          <Link
-            href="/participa?t=contactos"
-            className="shrink-0 self-start rounded-full bg-sun px-6 py-3 font-bold text-navy transition hover:bg-white md:self-auto"
-          >
-            Pedir convite →
-          </Link>
-        </div>
-      )}
+      ) : null}
 
-      <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>
-      <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {proximos.length > 0 && <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>}
+      <ul className={`${proximos.length > 0 ? "mt-6" : "mt-10"} grid gap-5 sm:grid-cols-2 lg:grid-cols-4`}>
         {outros.map((o) => (
           <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">
             <div className="relative">
