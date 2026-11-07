@@ -5,12 +5,27 @@ import MailForm from "@/components/MailForm";
 import PageHero from "@/components/PageHero";
 import ParticipaTabs, { type Separador } from "@/components/ParticipaTabs";
 import { areas } from "@/lib/propostas";
-import { links } from "@/lib/site";
+import { aderir, links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Participa — Iniciativa Liberal Trofa",
   description: "Faz-te membro, partilha uma ideia, faz uma denúncia ou fala connosco.",
 };
+
+const passosAdesao = [
+  {
+    titulo: "Preenche a adesão",
+    texto: "No site da Iniciativa Liberal, escolhendo o núcleo da Trofa.",
+  },
+  {
+    titulo: "O coordenador liga-te",
+    texto: "O teu pedido chega ao núcleo, e o coordenador telefona-te para te dar as boas-vindas e aprovar a adesão.",
+  },
+  {
+    titulo: "Já és membro",
+    texto: "Depois de aprovado, recebes o pedido de pagamento da quota.",
+  },
+];
 
 const razoes = [
   "Participa ativamente na vida política local e nacional",
@@ -64,13 +79,53 @@ const separadores: Separador[] = [
           </p>
         </div>
         <div className={caixa}>
-          <p className="mb-6 text-ink/75">
-            Deixa os teus dados e serás contactado pelo núcleo da Trofa. Parabéns por teres iniciativa.
-          </p>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            <li className="rounded-2xl bg-navy p-6 text-white">
+              <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota anual</p>
+              <p className="font-display mt-1 text-5xl font-bold">{aderir.quotaAnual} €</p>
+              <p className="mt-1 text-sm text-white/80">por ano</p>
+            </li>
+            <li className="rounded-2xl bg-pink p-6 text-white">
+              <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota jovem</p>
+              <p className="font-display mt-1 text-5xl font-bold">{aderir.quotaJovem} €</p>
+              <p className="mt-1 text-sm text-white/90">por ano</p>
+            </li>
+          </ul>
+
+          <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como funciona</h3>
+          <ol className="mt-4 space-y-3">
+            {passosAdesao.map((p, i) => (
+              <li key={p.titulo} className="flex gap-4">
+                <span className="font-display grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sun text-lg font-bold text-navy">
+                  {i + 1}
+                </span>
+                <span>
+                  <strong className="text-navy">{p.titulo}</strong>
+                  <span className="block text-ink/75">{p.texto}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          <a
+            href={aderir.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-navy"
+          >
+            Aderir agora ↗
+          </a>
+          <p className="mt-2 text-xs text-ink/60">Abre o site da Iniciativa Liberal, onde se faz a adesão.</p>
+
+          <details className="mt-8 rounded-2xl bg-mist p-5">
+            <summary className="cursor-pointer font-bold text-navy">Prefiro falar com alguém primeiro</summary>
+            <p className="mb-5 mt-3 text-sm text-ink/75">
+              Deixa o teu contacto e alguém do núcleo da Trofa fala contigo antes de aderires.
+            </p>
           <MailForm
             to={links.email}
-            subject="Quero ser membro da Iniciativa Liberal"
-            submitLabel="Quero ser membro"
+            subject="Quero falar sobre ser membro da Iniciativa Liberal"
+            submitLabel="Quero que me contactem"
             consent={
               <>
                 Li e aceito a{" "}
@@ -95,6 +150,8 @@ const separadores: Separador[] = [
               { name: "freguesia", label: "Freguesia" },
             ]}
           />
+
+          </details>
         </div>
       </div>
     ),

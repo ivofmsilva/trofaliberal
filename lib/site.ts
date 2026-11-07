@@ -1,6 +1,13 @@
 // Número de membros do núcleo. Atualizar quando mudar (aparece na página inicial e na barra de adesão).
 export const membros = 33;
 
+// Adesão: faz-se no site da Iniciativa Liberal; o núcleo aprova o pedido.
+export const aderir = {
+  href: "https://iniciativaliberal.pt/aderir/",
+  quotaAnual: 40,
+  quotaJovem: 25,
+};
+
 export const links = {
   facebook: "https://www.facebook.com/TrofaLiberal",
   instagram: "https://www.instagram.com/liberaltrofa/",
