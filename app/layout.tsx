@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { siteUrl } from "@/lib/url";
+import { Analytics } from "@vercel/analytics/next";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -16,11 +18,7 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteUrl),
   title: "Iniciativa Liberal Trofa — Trofa Para Cima",
   openGraph: {
     title: "Iniciativa Liberal Trofa — Trofa Para Cima",
@@ -40,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

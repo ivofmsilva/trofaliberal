@@ -1,3 +1,4 @@
+import BarraAdesao from "@/components/BarraAdesao";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import PartilharBotao from "@/components/PartilharBotao";
 import PerfisHabitacao from "@/components/PerfisHabitacao";
 import { numeros, pontos, principios, programaHref } from "@/lib/habitacao";
 import { perfis, problemaResposta } from "@/lib/habitacao-extra";
+import { membros } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Construir para o Futuro — Iniciativa Liberal Trofa",
@@ -275,6 +277,7 @@ export default function Habitacao() {
           </div>
         </div>
       </section>
+      <BarraAdesao membros={membros} />
     </>
   );
 }

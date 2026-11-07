@@ -1,3 +1,6 @@
+// Número de membros do núcleo. Atualizar quando mudar (aparece na página inicial e na barra de adesão).
+export const membros = 33;
+
 export const links = {
   facebook: "https://www.facebook.com/TrofaLiberal",
   instagram: "https://www.instagram.com/liberaltrofa/",

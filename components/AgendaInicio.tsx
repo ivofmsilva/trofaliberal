@@ -1,0 +1,77 @@
+import Image from "next/image";
+import Link from "next/link";
+import { outros, proximos } from "@/lib/eventos";
+
+// Agenda na página inicial. Mostra os próximos eventos quando os há (lib/eventos.ts) e, mesmo
+// sem datas marcadas, os encontros do núcleo ao longo do ano, para a agenda nunca parecer vazia.
+export default function AgendaInicio() {
+  return (
+    <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
+      <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Agenda</p>
+      <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Encontra-nos ao vivo</h2>
+
+      {proximos.length > 0 ? (
+        <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {proximos.map((e) => (
+            <li key={`${e.titulo}-${e.data}`} className="rounded-2xl bg-navy p-8 text-white">
+              <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
+              <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
+              {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
+              {e.href && (
+                <a
+                  href={e.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block font-bold text-sun hover:underline"
+                >
+                  Mais informação ↗
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="mt-8 flex flex-col gap-5 rounded-2xl bg-navy p-6 text-white sm:p-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="font-display text-2xl font-bold">Ainda sem data para o próximo encontro.</p>
+            <p className="mt-1 text-white/80">Entra no grupo de WhatsApp e sê dos primeiros a saber.</p>
+          </div>
+          <Link
+            href="/participa?t=contactos"
+            className="shrink-0 self-start rounded-full bg-sun px-6 py-3 font-bold text-navy transition hover:bg-white md:self-auto"
+          >
+            Pedir convite →
+          </Link>
+        </div>
+      )}
+
+      <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>
+      <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {outros.map((o) => (
+          <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">
+            <div className="relative">
+              <Image
+                src={o.imagem}
+                alt={o.titulo}
+                width={480}
+                height={320}
+                sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
+                className="aspect-[3/2] w-full object-cover"
+              />
+              <span className="absolute left-3 top-3 bg-pink px-3 py-1 text-xs font-black uppercase tracking-wider text-sun">
+                {o.quando.startsWith("Está") ? "Sem data fixa" : o.quando}
+              </span>
+            </div>
+            <div className="p-5">
+              <h4 className="font-display text-xl font-bold text-navy">{o.titulo}</h4>
+              <p className="mt-2 text-sm text-ink/75">{o.texto}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <Link href="/imprensa#eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
+        Ver todos os eventos →
+      </Link>
+    </section>
+  );
+}

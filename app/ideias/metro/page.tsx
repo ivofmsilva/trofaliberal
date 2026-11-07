@@ -1,3 +1,4 @@
+import BarraAdesao from "@/components/BarraAdesao";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +19,7 @@ import {
   participacao,
   projeto,
 } from "@/lib/metro";
+import { membros } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Metro para a Trofa — Iniciativa Liberal Trofa",
@@ -347,6 +349,7 @@ export default function Metro() {
           </div>
         </div>
       </section>
+      <BarraAdesao membros={membros} />
     </>
   );
 }

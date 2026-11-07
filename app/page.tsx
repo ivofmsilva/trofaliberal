@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import BannerEducacao from "@/components/BannerEducacao";
+import AgendaInicio from "@/components/AgendaInicio";
 import CarrosselBanners from "@/components/CarrosselBanners";
 import BannerHabitacao from "@/components/BannerHabitacao";
 import BannerMetro from "@/components/BannerMetro";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
-import { proximos } from "@/lib/eventos";
-import { links } from "@/lib/site";
+import { links, membros } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
 const principios = [
@@ -90,44 +90,18 @@ export default function Home() {
         <p className="mx-auto max-w-3xl px-4 font-semibold text-navy">
           Bem-vindo à página oficial do núcleo territorial da Iniciativa Liberal da Trofa
         </p>
+        <p className="font-display mt-2 text-xl font-bold text-pink">
+          Já somos {membros} membros na Trofa. Falta o {membros + 1}.º: tu.
+        </p>
       </section>
-
-      {proximos.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Agenda</p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            Próximos eventos
-          </h2>
-          <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {proximos.map((e) => (
-              <li key={`${e.titulo}-${e.data}`} className="rounded-2xl bg-navy p-8 text-white">
-                <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
-                <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
-                {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
-                {e.href && (
-                  <a
-                    href={e.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block font-bold text-sun hover:underline"
-                  >
-                    Mais informação ↗
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-          <Link href="/imprensa#eventos" className="mt-6 inline-block font-bold text-cyan-dark hover:underline">
-            Ver toda a agenda →
-          </Link>
-        </section>
-      )}
 
       <div className="pt-20">
         <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro"]}>
           {[<BannerMetro key="metro" />, <BannerEducacao key="educacao" />, <BannerHabitacao key="habitacao" />]}
         </CarrosselBanners>
       </div>
+
+      <AgendaInicio />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
