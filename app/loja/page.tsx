@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import EntradaBloco from "@/components/EntradaBloco";
 import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
 import { merchandising, packsNatal } from "@/lib/loja";
@@ -35,6 +34,9 @@ const produtos = [
   },
 ];
 
+// Só aparecem os packs disponíveis; os outros ficam guardados em lib/loja.ts.
+const packsVisiveis = packsNatal.filter((p) => p.disponivel);
+
 export default function Loja() {
   return (
     <>
@@ -43,49 +45,35 @@ export default function Loja() {
         title="Bem-vind@ à nossa loja!"
         image={{ src: "/images/loja/hero.jpeg", alt: "Apoiantes da IL Trofa com bandeiras", w: 730, h: 912 }}
       >
-        Estás na montra liberal da Trofa — aqui encontras produtos com estilo, atitude e propósito.
-        Veste a causa. Usa com orgulho.
+        Pins, canecas, t-shirts e malhas de Natal: tudo para mostrares, com orgulho, de que lado da liberdade
+        estás.
       </PageHero>
-
-      <EntradaBloco
-        itens={[
-          { titulo: "Loja", detalhe: "Artigos da Trofa", texto: "O pin, a caneca e as t-shirts da campanha Trofa para cima.", href: "/loja#produtos" },
-          { titulo: "Packs de Natal", detalhe: "Novidade", texto: "Camisola, cachecol e gorro de malha. Disponível: “O Natal é liberal”, a 50 € o conjunto.", href: "/loja#natal" },
-          { titulo: "Donativos", detalhe: "Apoiar o núcleo", texto: "Como apoiar o núcleo por Multibanco ou MB WAY. Só donativos de pessoas singulares.", href: "/loja/donativos" },
-        ]}
-      />
 
       <section id="natal" className="scroll-mt-24 bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Natal</p>
           <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Packs de Natal</h2>
           <p className="mt-4 max-w-2xl text-lg text-ink/80">
-            Camisola, cachecol e gorro de malha, para vestir o Natal com estilo. Três versões. De
-            momento só está disponível “O Natal é liberal”, por 50€ o conjunto.
+            Camisola, cachecol e gorro de malha, para vestir o Natal com estilo: “O Natal é liberal”, por 50€ o
+            conjunto.
           </p>
-          <ul className="mt-10 grid gap-6 lg:grid-cols-3">
-            {packsNatal.map((p) => (
-              <li key={p.id} className={`flex flex-col overflow-hidden rounded-2xl bg-navy text-white ${p.disponivel ? "" : "opacity-80"}`}>
+          <ul className={`mt-10 grid gap-6 ${packsVisiveis.length === 1 ? "max-w-md" : "lg:grid-cols-3"}`}>
+            {packsVisiveis.map((p) => (
+              <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
                 <Image
                   src={p.imagem}
                   alt={p.alt}
                   width={1200}
                   height={675}
                   sizes="(min-width: 1024px) 400px, 100vw"
-                  className={`aspect-video w-full object-cover ${p.disponivel ? "" : "grayscale-[50%]"}`}
+                  className="aspect-video w-full object-cover"
                 />
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
                   <p className="mt-3 text-white/80">{p.texto}</p>
                   <div className="mt-auto space-y-4 pt-6">
-                    {p.disponivel ? (
-                      <>
-                        <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
-                        <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel="Tamanho da camisola" />
-                      </>
-                    ) : (
-                      <span className="inline-block text-sm font-bold text-white/70">Indisponível de momento</span>
-                    )}
+                    <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
+                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel="Tamanho da camisola" />
                   </div>
                 </div>
               </li>

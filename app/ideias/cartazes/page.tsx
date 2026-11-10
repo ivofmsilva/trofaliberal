@@ -42,7 +42,11 @@ export default function Cartazes() {
               <span className="text-pink">{String(i + 1).padStart(2, "0")}</span>
               {g.titulo}
             </h2>
-            <ul className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <ul
+              className={`mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 ${
+                g.cartazes.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"
+              }`}
+            >
               {g.cartazes.map((c) => (
                 <li key={c}>
                   <a

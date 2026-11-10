@@ -283,16 +283,29 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
-        <figure className="rounded-2xl border-l-8 border-pink bg-mist p-8 md:p-10">
-          <blockquote className="font-display text-2xl font-bold leading-snug text-navy md:text-3xl">
-            “O liberalismo é a doutrina que mantém que o indivíduo tem o direito de pensar o que quiser, de
-            exprimir o que pensa como quiser, e de pôr em prática o que pensa como quiser, desde que essa
-            expressão ou essa prática não infrinja diretamente a igual liberdade de qualquer outro indivíduo.”
-          </blockquote>
-          <figcaption className="mt-4 text-sm font-bold uppercase tracking-widest text-pink">
-            Fernando Pessoa
-          </figcaption>
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <figure className="grid overflow-hidden rounded-3xl bg-cyan shadow-xl md:grid-cols-[0.8fr_1.2fr]">
+          <Image
+            src="/images/geral/pessoa-retrato.webp"
+            alt="Retrato de Fernando Pessoa, de chapéu, em tons de azul"
+            width={900}
+            height={1074}
+            sizes="(min-width: 768px) 440px, 100vw"
+            className="h-72 w-full object-cover object-[50%_25%] sm:h-96 md:h-full"
+          />
+          <div className="flex flex-col justify-center p-8 text-white sm:p-10 md:p-12">
+            <span aria-hidden className="font-display text-7xl font-black leading-none text-sun">“</span>
+            <blockquote className="font-display -mt-4 text-xl font-bold leading-snug sm:text-2xl lg:text-3xl">
+              O <span className="text-pink">liberalismo</span> é a doutrina que mantém que o indivíduo tem o direito
+              de pensar o que quiser, de exprimir o que pensa como quiser, e de pôr em prática o que pensa como
+              quiser, desde que essa expressão ou essa prática não infrinja diretamente a igual liberdade de
+              qualquer outro indivíduo.”
+            </blockquote>
+            <figcaption className="mt-6 self-end text-right">
+              <span className="font-display block text-xl font-bold">Fernando Pessoa</span>
+              <span className="mt-1 block h-1 w-16 ml-auto bg-sun" />
+            </figcaption>
+          </div>
         </figure>
       </section>
     </>

@@ -87,7 +87,7 @@ export default function Propostas() {
           <ol className="mt-10 space-y-3">
             {areas.map((a, i) => (
               <li key={a.nome}>
-                <details className="group rounded-2xl bg-white shadow-sm open:shadow-lg" open={i === 0}>
+                <details className="group rounded-2xl bg-white shadow-sm open:shadow-lg">
                   <summary className="flex cursor-pointer list-none items-center gap-5 p-6 [&::-webkit-details-marker]:hidden">
                     <span className="font-display text-3xl font-bold text-sun">{pad(i + 1)}</span>
                     <span className="flex-1">
@@ -113,7 +113,14 @@ export default function Propostas() {
             ))}
           </ol>
           <p className="mt-10 text-ink/75">
-            As propostas da Iniciativa Liberal a nível nacional estão em{" "}
+            Todas estas medidas estão presentes no{" "}
+            <Link href="/autarquicas-2025/programa" className="font-bold text-cyan-dark hover:underline">
+              programa autárquico liberal de 2025
+            </Link>
+            .
+          </p>
+          <p className="mt-3 text-ink/75">
+            Consulta também as propostas da Iniciativa Liberal a nível nacional em{" "}
             <a
               href={links.nacionais}
               target="_blank"

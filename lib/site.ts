@@ -1,6 +1,3 @@
-// Número de membros do núcleo. Atualizar quando mudar (aparece na página inicial e na barra de adesão).
-export const membros = 33;
-
 // Adesão: faz-se no site da Iniciativa Liberal; o núcleo aprova o pedido.
 export const aderir = {
   href: "https://iniciativaliberal.pt/aderir/",
