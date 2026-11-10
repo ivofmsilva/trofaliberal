@@ -41,3 +41,45 @@ export const merchandising: ProdutoNacional[] = [
   },
   { id: 6, nome: "Fitas de pescoço", preco: "3,00 €" },
 ];
+
+// Packs de Natal do núcleo: camisola, cachecol e gorro de malha, a 50 € cada conjunto.
+// Imagens em public/images/loja/pack-natal-<letra>.webp.
+export type PackNatal = {
+  id: string;
+  nome: string;
+  texto: string;
+  preco: string;
+  imagem: string;
+  alt: string;
+  tamanhos: string[];
+};
+
+export const packsNatal: PackNatal[] = [
+  {
+    id: "a",
+    nome: "Pack de Natal: O Natal é liberal",
+    texto: "Camisola, cachecol e gorro de malha azul-marinho, com a frase “O Natal é liberal”.",
+    preco: "50€",
+    imagem: "/images/loja/pack-natal-a.webp",
+    alt: "Pack de Natal: camisola, gorro e cachecol de malha azul-marinho com a frase O Natal é liberal",
+    tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: "b",
+    nome: "Pack de Natal: Renas da Trofa",
+    texto: "Camisola, cachecol e gorro de malha creme, com renas amarelas e a palavra “Liberal”.",
+    preco: "50€",
+    imagem: "/images/loja/pack-natal-b.webp",
+    alt: "Pack de Natal: camisola, gorro e cachecol de malha creme com renas amarelas",
+    tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: "c",
+    nome: "Pack de Natal: Feliz Natal em liberdade",
+    texto: "Camisola, cachecol e gorro de malha azul, com ondas, árvores e a frase “Feliz Natal em liberdade”.",
+    preco: "50€",
+    imagem: "/images/loja/pack-natal-c.webp",
+    alt: "Pack de Natal: camisola, gorro e cachecol de malha azul com a frase Feliz Natal em liberdade",
+    tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+  },
+];

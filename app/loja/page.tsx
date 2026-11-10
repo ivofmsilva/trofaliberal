@@ -4,7 +4,7 @@ import Link from "next/link";
 import EntradaBloco from "@/components/EntradaBloco";
 import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
-import { merchandising } from "@/lib/loja";
+import { merchandising, packsNatal } from "@/lib/loja";
 
 export const metadata: Metadata = { title: "Loja — Iniciativa Liberal Trofa" };
 
@@ -50,9 +50,44 @@ export default function Loja() {
       <EntradaBloco
         itens={[
           { titulo: "Loja", detalhe: "Artigos da Trofa", texto: "O pin, a caneca e as t-shirts da campanha Trofa para cima.", href: "/loja#produtos" },
+          { titulo: "Packs de Natal", detalhe: "Novidade", texto: "Camisola, cachecol e gorro de malha, em três versões, a 50 € cada conjunto.", href: "/loja#natal" },
           { titulo: "Donativos", detalhe: "Apoiar o núcleo", texto: "Como apoiar o núcleo por Multibanco ou MB WAY. Só donativos de pessoas singulares.", href: "/loja/donativos" },
         ]}
       />
+
+      <section id="natal" className="scroll-mt-24 bg-mist py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Natal</p>
+          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Packs de Natal</h2>
+          <p className="mt-4 max-w-2xl text-lg text-ink/80">
+            Camisola, cachecol e gorro de malha, para vestir o Natal com estilo. Três versões, cada
+            conjunto por 50€.
+          </p>
+          <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+            {packsNatal.map((p) => (
+              <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
+                <Image
+                  src={p.imagem}
+                  alt={p.alt}
+                  width={1200}
+                  height={675}
+                  sizes="(min-width: 1024px) 400px, 100vw"
+                  className="aspect-video w-full object-cover"
+                />
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
+                  <p className="mt-3 text-white/80">{p.texto}</p>
+                  <div className="mt-auto space-y-4 pt-6">
+                    <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
+                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel="Tamanho da camisola" />
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-sm text-ink/60">Imagens ilustrativas.</p>
+        </div>
+      </section>
 
       <section id="produtos" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
@@ -94,7 +129,7 @@ export default function Loja() {
           ))}
         </ul>
         <p className="mt-6 text-sm text-ink/60">
-          A encomenda abre o teu programa de email, dirigida ao núcleo.
+          A encomenda é enviada ao núcleo, que entra em contacto contigo para combinar o pagamento e a entrega.
         </p>
       </section>
 

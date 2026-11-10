@@ -10,15 +10,17 @@ import { links } from "@/lib/site";
 export default function OrderButton({
   produto,
   tamanhos,
+  tamanhoLabel = "Tamanho",
 }: {
   produto: string;
   tamanhos?: string[];
+  tamanhoLabel?: string;
 }) {
   const janela = useRef<HTMLDialogElement>(null);
 
   const campos: Field[] = [
     ...(tamanhos
-      ? [{ name: "tamanho", label: "Tamanho *", type: "select" as const, required: true, options: tamanhos, placeholder: "Escolhe o tamanho" }]
+      ? [{ name: "tamanho", label: `${tamanhoLabel} *`, type: "select" as const, required: true, options: tamanhos, placeholder: "Escolhe o tamanho" }]
       : []),
     { name: "quantidade", label: "Quantidade *", type: "number", required: true, valorInicial: "1" },
     { name: "nome", label: "Nome *", required: true },
