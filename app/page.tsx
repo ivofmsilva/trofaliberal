@@ -92,9 +92,6 @@ export default function Home() {
         <p className="mx-auto max-w-3xl px-4 font-semibold text-navy">
           Bem-vindo à página oficial do núcleo territorial da Iniciativa Liberal da Trofa
         </p>
-        <p className="font-display mt-2 text-xl font-bold text-pink">
-          Já somos {membros} membros na Trofa. Falta o {membros + 1}.º: tu.
-        </p>
       </section>
 
       <div className="pt-20">
@@ -184,6 +181,9 @@ export default function Home() {
             <h2 className="font-display text-4xl font-bold md:text-5xl">Faz-te Membro</h2>
             <p className="mt-4 text-lg font-medium">
               Ajuda-nos a construir um futuro mais livre para a Trofa.
+            </p>
+            <p className="mt-2 text-lg font-bold">
+              Já somos {membros} membros na Trofa. Falta o {membros + 1}.º: tu.
             </p>
             <Link
               href="/participa?t=membro"

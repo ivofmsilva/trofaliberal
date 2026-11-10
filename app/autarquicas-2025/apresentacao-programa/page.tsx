@@ -38,8 +38,8 @@ export default function ApresentacaoPrograma() {
           <div className="mt-6 max-w-3xl space-y-4 text-lg text-ink/85">
             <p>
               No dia 12 de setembro, às 21h, apresentámos o programa eleitoral no auditório da Escola
-              Secundária da Trofa, com a presença de Mariana Leitão, presidente da Iniciativa Liberal,
-              e do deputado Miguel Rangel. Não foi por acaso: queríamos mostrar a importância que os
+              Secundária da Trofa, com a presença de Mariana Leitão, presidente da Iniciativa Liberal.
+              Não foi por acaso: queríamos mostrar a importância que os
               liberais dão à educação e às ideias.
             </p>
             <p>
