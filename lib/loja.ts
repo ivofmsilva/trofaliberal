@@ -66,7 +66,7 @@ export const packsNatal: PackNatal[] = [
   },
   {
     id: "b",
-    nome: "Pack de Natal: Renas da Trofa",
+    nome: "Pack de Natal: Liberal",
     texto: "Camisola, cachecol e gorro de malha creme, com renas amarelas e a palavra “Liberal”.",
     preco: "50€",
     imagem: "/images/loja/pack-natal-b.webp",
