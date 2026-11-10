@@ -201,6 +201,11 @@ export default function TabelaContratos() {
                       <dt className="text-apagado">Fecho do contrato</dt>
                       <dd className="text-tinta">{data(c.data_fecho)}</dd>
                     </div>
+                    <div className="sm:col-span-2 lg:col-span-3">
+                      <a href={`https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=${c.idcontrato}`} target="_blank" rel="noopener noreferrer" className="font-semibold text-acento underline underline-offset-2">
+                        Ver no Portal BASE ↗
+                      </a>
+                    </div>
                     {c.link_pecas_proc && (
                       <div className="sm:col-span-2 lg:col-span-3">
                         <a href={c.link_pecas_proc} target="_blank" rel="noopener noreferrer" className="font-semibold text-acento underline underline-offset-2">

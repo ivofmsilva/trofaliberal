@@ -115,7 +115,8 @@ export default function Contratos() {
 
         <p className="mt-12 text-sm text-apagado">
           Fonte: IMPIC / Portal BASE, através de dados.gov.pt. Os valores são os valores contratuais, sem IVA. O número a
-          seguir a cada empresa ou procedimento é o número de contratos.
+          seguir a cada empresa ou procedimento é o número de contratos. Quando o adjudicatário é uma pessoa singular, o nome não se publica
+          aqui (aparece como “Pessoa singular”) e a pessoa não entra nas listas de quem mais recebe; o nome continua público no Portal BASE.
         </p>
       </div>
     </>

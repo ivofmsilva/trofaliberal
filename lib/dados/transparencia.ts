@@ -23,6 +23,9 @@ export type Contrato = {
   fundAD?: string | null;
   mat?: string | null;
   concorrentes?: number | null;
+  // Pessoa singular: o nome não se publica (scripts/anonimizar-contratos.mjs). pid só serve para contar pessoas diferentes.
+  ps?: number;
+  pid?: number;
 };
 
 export type Projeto = {
@@ -56,10 +59,12 @@ export function resumoContratos() {
     p.n++;
     p.valor += c.valor_contratual;
     porProc.set(c.tipoprocedimento, p);
-    const e = porEmpresa.get(c.adjudicatario) ?? { n: 0, valor: 0 };
-    e.n++;
-    e.valor += c.valor_contratual;
-    porEmpresa.set(c.adjudicatario, e);
+    if (!c.ps) {
+      const e = porEmpresa.get(c.adjudicatario) ?? { n: 0, valor: 0 };
+      e.n++;
+      e.valor += c.valor_contratual;
+      porEmpresa.set(c.adjudicatario, e);
+    }
   }
   return {
     n: contratos.length,
@@ -156,13 +161,19 @@ export function resumoAjustes() {
   const fund = new Map<string, Soma>();
   const motivo = new Map<string, Soma>();
   const empresas = new Map<string, Soma>();
+  const entidadesDiferentes = new Set<string>();
+  const pessoas = { n: 0, valor: 0 };
   const escaloes = ESCALOES.map(([nome, de, ate]) => ({ nome, n: 0, valor: 0, de, ate }));
   let materiais = 0;
   for (const c of ads) {
     somar(porTipo, c.tipo_contrato, c.valor_contratual);
     somar(fund, (c.fund ?? "Sem fundamentação indicada").replace(/ do Código dos Contratos Públicos/, ""), c.valor_contratual);
     somar(motivo, c.fundAD && c.fundAD.trim() ? c.fundAD.trim() : "Sem motivo indicado", c.valor_contratual);
-    somar(empresas, separarEmpresa(c.adjudicatario).nome, c.valor_contratual);
+    entidadesDiferentes.add(c.ps ? `pessoa:${c.pid}` : separarEmpresa(c.adjudicatario).nome);
+    if (c.ps) {
+      pessoas.n++;
+      pessoas.valor += c.valor_contratual;
+    } else somar(empresas, separarEmpresa(c.adjudicatario).nome, c.valor_contratual);
     const e = escaloes.find((x) => c.valor_contratual >= x.de && c.valor_contratual < x.ate);
     if (e) {
       e.n++;
@@ -184,7 +195,8 @@ export function resumoAjustes() {
     empresas: ordenado(empresas, "n").slice(0, 10),
     escaloes,
     materiais,
-    entidades: empresas.size,
+    entidades: entidadesDiferentes.size,
+    pessoas,
   };
 }
 

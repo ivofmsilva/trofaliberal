@@ -47,7 +47,7 @@ export default function AjustesDiretos() {
             <div className="border-t-2 border-tinta pt-3">
               <dt className="text-sm text-texto">Entidades diferentes</dt>
               <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{numero(r.entidades)}</dd>
-              <dd className="text-sm text-apagado">receberam ajustes diretos</dd>
+              <dd className="text-sm text-apagado">receberam ajustes diretos (cada pessoa singular conta uma vez)</dd>
             </div>
           </dl>
         </div>
@@ -166,21 +166,11 @@ export default function AjustesDiretos() {
           </section>
         </div>
 
-        <section aria-label="Empresas">
-          <h2 className="text-2xl font-bold tracking-tight text-tinta">Quem recebe mais ajustes diretos</h2>
-          <p className="mt-2 mb-5 max-w-2xl text-texto">As dez entidades com mais contratos por ajuste direto (e o valor total desses contratos).</p>
-          <div className="max-w-3xl">
-            <Barras
-              titulo="Empresas com mais ajustes diretos"
-              itens={r.empresas.map((t) => ({ rotulo: t.nome, valor: t.n, texto: `${numero(t.n)} contratos`, extra: compacto(t.valor, "€") }))}
-            />
-          </div>
-        </section>
 
         <p className="max-w-3xl text-sm text-apagado">
           Fonte: Portal BASE (IMPIC), através de dados.gov.pt: contratos do Município da Trofa de 2021 a 2026. “Ajuste
           direto” é o procedimento “Ajuste Direto Regime Geral”. Os escalões de valor são só para agrupar, não são os
-          limites da lei. Dois contratos não têm CPV e ficam em “Outras / sem classificação”.{" "}
+          limites da lei. Dois contratos não têm CPV e ficam em “Outras / sem classificação”. Quando o adjudicatário é uma pessoa singular, o nome não se publica aqui; cada pessoa conta uma vez nas entidades diferentes.{" "}
           <Link href="/dados/contratos" className="underline underline-offset-2 hover:text-tinta">
             Ver todos os contratos
           </Link>
