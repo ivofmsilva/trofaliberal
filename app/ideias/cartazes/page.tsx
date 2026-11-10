@@ -98,14 +98,16 @@ export default function Cartazes() {
                   {c.quando && <p className="text-xs font-bold uppercase tracking-widest text-cyan-dark">{c.quando}</p>}
                   <h3 className="font-display mt-1 text-2xl font-bold text-navy">{c.titulo}</h3>
                   <p className="mt-2 text-ink/75">{c.texto}</p>
-                  <a
-                    href={c.fonte.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-block pt-3 text-sm font-bold text-cyan-dark hover:underline"
-                  >
-                    Imagem e notícia: {c.fonte.nome} ↗
-                  </a>
+                  {c.fonte && (
+                    <a
+                      href={c.fonte.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto inline-block pt-3 text-sm font-bold text-cyan-dark hover:underline"
+                    >
+                      Imagem e notícia: {c.fonte.nome} ↗
+                    </a>
+                  )}
                 </div>
               </li>
             ))}

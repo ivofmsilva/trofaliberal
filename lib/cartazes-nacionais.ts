@@ -8,7 +8,7 @@ export type CartazNacional = {
   texto: string;
   w: number;
   h: number;
-  fonte: { nome: string; href: string };
+  fonte?: { nome: string; href: string };
 };
 
 export const cartazesNacionais: CartazNacional[] = [
@@ -25,7 +25,7 @@ export const cartazesNacionais: CartazNacional[] = [
     id: "impostopoly",
     titulo: "Impostopoly",
     quando: "Setembro de 2019",
-    texto: "O Monopólio dos impostos: «o jogo em que todos perdem». Defendia uma taxa única de IRS e teve só dois exemplares, em Lisboa e no Porto.",
+    texto: "O Monopólio dos impostos: «o jogo em que todos perdem».",
     w: 840,
     h: 471,
     fonte: { nome: "Observador", href: "https://observador.pt/2019/09/25/impostopoly-iniciativa-liberal-com-nova-campanha-contra-o-ps-nas-ruas-de-lisboa/" },
@@ -34,7 +34,7 @@ export const cartazesNacionais: CartazNacional[] = [
     id: "com-primos",
     titulo: "#ComPrimos",
     quando: "Agosto de 2019",
-    texto: "A resposta ao «#cumprimos» do PS, colocada mesmo ao lado. O outdoor que mais rendeu à IL na campanha de 2019.",
+    texto: "A resposta ao «#cumprimos» do PS, colocada mesmo ao lado.",
     w: 1200,
     h: 800,
     fonte: { nome: "Correio da Manhã", href: "https://www.cmjornal.pt/politica/detalhe/iniciativa-liberal-inspira-se-em-filme-tres-cartazes-a-beira-da-estrada-para-criticar-partido-socialista" },
@@ -65,20 +65,20 @@ export const cartazesNacionais: CartazNacional[] = [
     fonte: { nome: "Jornal Económico", href: "https://jornaleconomico.sapo.pt/noticias/iniciativa-liberal-repoe-costa-e-marcelo-furtados-na-semana-passada-598728/" },
   },
   {
-    id: "aviao-brincar",
-    titulo: "TAP: Todos a Pagar",
-    texto: "A campanha contra o dinheiro dos contribuintes na TAP, no acesso ao aeroporto Sá Carneiro, no Porto.",
-    w: 960,
-    h: 673,
-    fonte: { nome: "Jornal Económico", href: "https://jornaleconomico.sapo.pt/noticias/pedro-nuno-santos-marxista-e-guevarista-e-estrela-de-novo-cartaz-da-iniciativa-liberal-615865/" },
+    id: "fazer-o-que-ja-foi-feito",
+    titulo: "Fazer o que já foi feito em países liberais",
+    quando: "Legislativas de 2024",
+    texto: "Rui Rocha ao lado do cartaz do Bloco de Esquerda de Mariana Mortágua: «Fazer o que nunca foi feito» contra «Fazer o que já foi feito em países liberais (e funciona)».",
+    w: 1200,
+    h: 796,
+    fonte: { nome: "Creative Samba", href: "https://creativesamba.substack.com/p/compare-then-contrast-4b3" },
   },
   {
-    id: "dia-crianca",
-    titulo: "A TAP é para eu brincar",
-    quando: "Dia da Criança",
-    texto: "A mesma ideia levada às redes sociais no Dia da Criança.",
-    w: 1080,
-    h: 1080,
-    fonte: { nome: "Visão", href: "https://visao.pt/atualidade/politica/2021-07-23-costa-covpide-e-outros-cartazes-polemicos-da-iniciativa-liberal/" },
+    id: "custo-real-imposto",
+    titulo: "Custo real e imposto",
+    quando: "2026",
+    texto: "A bandeira de Portugal dividida entre o custo real do combustível e o imposto: no depósito, mais de metade do que pagamos é imposto.",
+    w: 810,
+    h: 540,
   },
 ];
