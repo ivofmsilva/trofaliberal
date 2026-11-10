@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import EntradaBloco from "@/components/EntradaBloco";
 import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import { gcl, mesa, plenario2026, type Membro } from "@/lib/equipa";
 
 export const metadata: Metadata = { title: "Quem somos — Iniciativa Liberal Trofa" };
-
-const entradas = [
-  { titulo: "Sobre nós", texto: "Quem é a Iniciativa Liberal da Trofa e o que defendemos para o concelho.", href: "#sobre" },
-  { titulo: "Equipa", texto: "O grupo de coordenação, a mesa do plenário e os mandatos anteriores.", href: "#equipa" },
-  { titulo: "Juventude", texto: "Os jovens liberais da Trofa e o Conselho Municipal da Juventude.", href: "#juventude" },
-  { titulo: "História", texto: "Os marcos do núcleo, desde o primeiro encontro liberal em 2021.", href: "#historia" },
-];
 
 function iniciais(nome: string) {
   const p = nome.split(" ").filter((x) => x.length > 2);
@@ -144,8 +136,6 @@ export default function Sobre() {
         A IL Trofa existe para defender um concelho onde cada trofense possa viver com mais
         liberdade e oportunidades.
       </PageHero>
-
-      <EntradaBloco itens={entradas} />
 
       <section id="sobre" className="mx-auto grid max-w-7xl scroll-mt-24 gap-12 px-4 py-20 sm:px-6 md:grid-cols-2">
         <div>

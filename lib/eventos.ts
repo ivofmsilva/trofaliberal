@@ -41,7 +41,7 @@ export const outros = [
   },
   {
     titulo: "Magusto Liberal",
-    texto: "Castanhas assadas, atividades lúdicas e muito convívio, organizado com a Maia e Vila do Conde.",
+    texto: "Castanhas assadas, atividades lúdicas e muito convívio.",
     quando: "Novembro",
     imagem: "/images/eventos/magusto-liberal-07.jpg",
   },
