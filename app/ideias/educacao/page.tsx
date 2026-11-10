@@ -10,7 +10,6 @@ import PropostasEducacao from "@/components/PropostasEducacao";
 import { eixos, fotosJornadas, numeros, propostas } from "@/lib/educacao";
 import { cartazesEducacao, emTodoOPercurso, percurso } from "@/lib/educacao-extra";
 import { itens } from "@/lib/imprensa";
-import { membros } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Trofa no topo da Educação — Iniciativa Liberal Trofa",
@@ -224,7 +223,7 @@ export default function Educacao() {
           </div>
         </div>
       </section>
-      <BarraAdesao membros={membros} />
+      <BarraAdesao />
     </>
   );
 }

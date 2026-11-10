@@ -42,13 +42,6 @@ export default function BannerNatal() {
             sizes="(min-width: 768px) 700px, 100vw"
             className="object-cover object-[50%_55%]"
           />
-          <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-            {["3 versões"].map((t) => (
-              <span key={t} className="bg-pink px-3 py-1 text-base font-black uppercase text-sun sm:px-3.5 sm:py-1.5 sm:text-lg">
-                {t}
-              </span>
-            ))}
-          </div>
         </div>
       </Link>
     </section>

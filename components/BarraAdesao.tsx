@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 // Barra discreta no fundo do ecrã nas páginas de ideias: aparece depois de se ler um bocado
 // e leva a quem gostou diretamente à adesão. Fecha-se com o X até a página ser aberta de novo.
-export default function BarraAdesao({ membros }: { membros: number }) {
+export default function BarraAdesao() {
   const [visivel, setVisivel] = useState(false);
   const [fechada, setFechada] = useState(false);
 
@@ -32,7 +32,7 @@ export default function BarraAdesao({ membros }: { membros: number }) {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 py-3 sm:gap-5 sm:px-6">
         <p className="text-sm font-bold sm:text-base">
-          Gostas disto? <span className="hidden sm:inline">Já somos {membros} membros na Trofa.</span>
+          Gostas disto?
         </p>
         <Link
           href="/participa?t=membro"

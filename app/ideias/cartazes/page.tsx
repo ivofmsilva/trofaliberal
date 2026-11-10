@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { cartazesNacionais } from "@/lib/cartazes-nacionais";
 
 export const metadata: Metadata = { title: "Cartazes — Iniciativa Liberal Trofa" };
 
@@ -30,7 +31,8 @@ export default function Cartazes() {
   return (
     <>
       <PageHero eyebrow="Ideias · Cartazes" title="Cartazes e mensagens">
-        Aqui podes consultar todos os cartazes e mensagens que já espalhámos pela Trofa.
+        Aqui podes consultar todos os cartazes e mensagens que já espalhámos pela Trofa e, no fim, os cartazes que
+        marcaram a Iniciativa Liberal em todo o país.
       </PageHero>
 
       <div className="mx-auto max-w-7xl space-y-16 px-4 py-20 sm:px-6">
@@ -63,6 +65,52 @@ export default function Cartazes() {
             </ul>
           </section>
         ))}
+
+        <section id="nacionais">
+          <h2 className="font-display flex items-baseline gap-4 text-3xl font-bold text-navy">
+            <span className="text-pink">{String(grupos.length + 1).padStart(2, "0")}</span>
+            Cartazes nacionais
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg text-ink/75">
+            Os outdoors que fizeram a Iniciativa Liberal falar-se em todo o país: humor, ideias claras e uma estética
+            que ninguém confunde.
+          </p>
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {cartazesNacionais.map((c) => (
+              <li key={c.id} className="flex flex-col overflow-hidden rounded-2xl border-2 border-mist">
+                <a
+                  href={`/images/cartazes-nacionais/${c.id}.webp`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-mist"
+                  aria-label={`Ver o cartaz «${c.titulo}» em ponto grande`}
+                >
+                  <Image
+                    src={`/images/cartazes-nacionais/${c.id}.webp`}
+                    alt={`Cartaz da Iniciativa Liberal: ${c.titulo}`}
+                    width={c.w}
+                    height={c.h}
+                    sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+                    className="aspect-[4/3] w-full object-contain"
+                  />
+                </a>
+                <div className="flex flex-1 flex-col p-5">
+                  {c.quando && <p className="text-xs font-bold uppercase tracking-widest text-cyan-dark">{c.quando}</p>}
+                  <h3 className="font-display mt-1 text-2xl font-bold text-navy">{c.titulo}</h3>
+                  <p className="mt-2 text-ink/75">{c.texto}</p>
+                  <a
+                    href={c.fonte.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-block pt-3 text-sm font-bold text-cyan-dark hover:underline"
+                  >
+                    Imagem e notícia: {c.fonte.nome} ↗
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </>
   );
