@@ -8,7 +8,7 @@ const fontes = [
   { nome: "Portal de dados abertos da Iniciativa Liberal de Lousada", texto: "A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada, adaptado ao município da Trofa." },
   { nome: "Pordata", texto: "Indicadores sem acesso público automático, como o poder de compra e o rendimento." },
   { nome: "dados.gov.pt", texto: "Contratos públicos (IMPIC / Portal BASE) e projetos de fundos europeus (Portugal 2020 e PRR)." },
-  { nome: "mun-trofa.pt", texto: "Atas da Câmara e documentos da Assembleia Municipal, tal como o município os publica." },
+  { nome: "mun-trofa.pt", texto: "Atas da Câmara e documentos da Assembleia Municipal, relatórios de gestão e contas e orçamento, tal como o município os publica." },
 ];
 
 export default function Fontes() {

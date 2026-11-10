@@ -19,6 +19,7 @@ const paginas = [
   "/dados/taxas",
   "/dados/votos",
   "/dados/orgaos",
+  "/dados/financas",
   "/dados/fontes",
   "/imprensa",
   "/imprensa/noticias",
