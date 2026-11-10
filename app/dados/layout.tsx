@@ -14,7 +14,8 @@ const ligacoes = [
   { href: "/dados#temas", rotulo: "Indicadores" },
   { href: "/dados/contratos", rotulo: "Contratos e fundos" },
   { href: "/dados/financas", rotulo: "Finanças" },
-  { href: "/dados/orgaos", rotulo: "Quem decide" },
+  { href: "/dados/camara", rotulo: "Câmara Municipal" },
+  { href: "/dados/assembleia", rotulo: "Assembleia Municipal" },
   { href: "/dados/fontes", rotulo: "Fontes" },
 ];
 

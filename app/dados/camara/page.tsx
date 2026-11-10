@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ComoVotam from "@/components/dados/ComoVotam";
+import ComposicaoCamara from "@/components/dados/ComposicaoCamara";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { camara } from "@/lib/dados/autarquia";
@@ -19,14 +20,11 @@ export default function Camara() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Autarquia</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Câmara Municipal</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            As deliberações e as atas das reuniões do executivo municipal, tal como a Câmara as publica. Cada ponto traz
-            o resultado e, quando houve votos contra ou abstenções, quem votou em cada sentido.
-          </p>
-          <p className="mt-3 text-sm text-texto">
-            <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">← Quem decide: composição e funções</Link>
+            O executivo do município: quem faz parte da Câmara, o que faz, como vota e as deliberações e atas das reuniões, tal como a Câmara as publica.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {[
+              ["composicao", "Composição"],
               ["como-votam", "Como votam"],
               ["votacoes", "Deliberações"],
               ["atas", "Atas"],
@@ -38,6 +36,16 @@ export default function Camara() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section id="composicao" className="scroll-mt-6 border-b border-linha">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <h2 className="mb-6 text-2xl font-bold tracking-tight text-tinta">Composição e funções</h2>
+          <ComposicaoCamara />
+        <p className="mt-10 max-w-3xl text-sm text-apagado">
+          As freguesias (as juntas de freguesia das 6 freguesias do concelho) não são abordadas para já; serão no futuro.
+        </p>
         </div>
       </section>
 

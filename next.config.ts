@@ -11,6 +11,7 @@ const antigas: [string, string][] = [
   ["/eventos", "/imprensa?t=eventos"],
   ["/dados/taxas", "/dados/financas#taxas"],
   ["/dados/votos", "/dados/camara#como-votam"],
+  ["/dados/orgaos", "/dados/camara#composicao"],
 ];
 
 const nextConfig: NextConfig = {

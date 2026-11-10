@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ComoVotam from "@/components/dados/ComoVotam";
+import ComposicaoAssembleia from "@/components/dados/ComposicaoAssembleia";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { assembleia } from "@/lib/dados/autarquia";
@@ -45,13 +46,14 @@ export default function Assembleia() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Autarquia</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Assembleia Municipal</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Os documentos das sessões da Assembleia Municipal, tal como o município os publica. Cada ligação abre o PDF
-            original.
-          </p>
-          <p className="mt-3 text-sm text-texto">
-            <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">← Quem decide: composição e funções</Link>
+            O órgão que aprova o essencial e fiscaliza a Câmara: quem faz parte, o que faz, como vota e os documentos das sessões, tal como o município os publica.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
+            <li>
+              <a href="#composicao" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
+                Composição
+              </a>
+            </li>
             <li>
               <a href="#como-votam" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
                 Como votam
@@ -70,6 +72,16 @@ export default function Assembleia() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section id="composicao" className="scroll-mt-6 border-b border-linha">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <h2 className="mb-6 text-2xl font-bold tracking-tight text-tinta">Composição e funções</h2>
+          <ComposicaoAssembleia />
+        <p className="mt-10 max-w-3xl text-sm text-apagado">
+          As freguesias (as assembleias e as juntas de freguesia das 6 freguesias do concelho) não são abordadas para já; serão no futuro.
+        </p>
         </div>
       </section>
 
