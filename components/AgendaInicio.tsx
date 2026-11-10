@@ -33,7 +33,7 @@ export default function AgendaInicio() {
       ) : null}
 
       {proximos.length > 0 && <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>}
-      <ul className={`${proximos.length > 0 ? "mt-6" : "mt-8 sm:mt-10"} -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden`}>
+      <ul className={`${proximos.length > 0 ? "mt-6" : "mt-8 sm:mt-10"} -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden`}>
         {outros.map((o) => (
           <li key={o.titulo} className="w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink sm:w-auto">
             <div className="relative">

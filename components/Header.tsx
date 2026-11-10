@@ -35,14 +35,14 @@ export default function Header() {
         </Link>
 
         <nav aria-label="Principal" className="hidden items-center gap-1 lg:flex">
-          {nav.map((item) => (
+          {nav.map((item, i) => (
             <div key={item.label} className="group relative">
               <ItemLink
                 item={item}
                 className="block rounded px-3 py-2 text-xs font-bold uppercase tracking-wide text-white/85 transition hover:text-sun"
               />
               {item.children && (
-                <div className="invisible absolute left-0 top-full min-w-56 translate-y-1 rounded-lg bg-navy-soft p-2 opacity-0 shadow-xl transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className={`invisible absolute ${i >= nav.length - 2 ? "right-0" : "left-0"} top-full min-w-56 translate-y-1 rounded-lg bg-navy-soft p-2 opacity-0 shadow-xl transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100`}>
                   {item.children.map((child) => (
                     <ItemLink
                       key={child.label}

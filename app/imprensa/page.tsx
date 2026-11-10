@@ -114,7 +114,7 @@ export default function Imprensa() {
         </ul>
 
         <h3 className="font-display mt-16 text-3xl font-bold text-navy">Outros eventos</h3>
-        <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {outros.map((o) => (
             <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">
               <Image src={o.imagem} alt={o.titulo} width={480} height={320} sizes="(min-width: 1024px) 300px, 50vw" className="aspect-[3/2] w-full object-cover" />

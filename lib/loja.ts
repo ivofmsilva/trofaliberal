@@ -52,6 +52,8 @@ export type PackNatal = {
   imagem: string;
   alt: string;
   tamanhos: string[];
+  // Só os packs disponíveis se podem encomendar; os outros aparecem como indisponíveis.
+  disponivel: boolean;
 };
 
 export const packsNatal: PackNatal[] = [
@@ -63,6 +65,7 @@ export const packsNatal: PackNatal[] = [
     imagem: "/images/loja/pack-natal-a.webp",
     alt: "Pack de Natal: camisola, gorro e cachecol de malha azul-marinho com a frase O Natal é liberal",
     tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+    disponivel: true,
   },
   {
     id: "b",
@@ -72,6 +75,7 @@ export const packsNatal: PackNatal[] = [
     imagem: "/images/loja/pack-natal-b.webp",
     alt: "Pack de Natal: camisola, gorro e cachecol de malha creme com renas amarelas",
     tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+    disponivel: false,
   },
   {
     id: "c",
@@ -81,5 +85,6 @@ export const packsNatal: PackNatal[] = [
     imagem: "/images/loja/pack-natal-c.webp",
     alt: "Pack de Natal: camisola, gorro e cachecol de malha azul com a frase Feliz Natal em liberdade",
     tamanhos: ["XS", "S", "M", "L", "XL", "XXL"],
+    disponivel: false,
   },
 ];

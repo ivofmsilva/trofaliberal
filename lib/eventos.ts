@@ -40,6 +40,12 @@ export const outros = [
     imagem: "/images/geral/comunidade-destrave.jpeg",
   },
   {
+    titulo: "Magusto Liberal",
+    texto: "Castanhas assadas, atividades lúdicas e muito convívio, organizado com a Maia e Vila do Conde.",
+    quando: "Novembro",
+    imagem: "/images/eventos/magusto-liberal-07.jpg",
+  },
+  {
     titulo: "Porto Liberal",
     texto: "Uma tradição do núcleo da Trofa. Um encontro rápido com pão-de-ló e Porto. Uma tradição sem falha desde 2021.",
     quando: "Dezembro",
