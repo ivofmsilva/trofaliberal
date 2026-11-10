@@ -9,6 +9,14 @@
   --mist: #eaf6fd;
   --pink: #e6007e;
   --sun: #ffd500;
+  /* Portal de dados (/dados): paleta neutra */
+  --fundo: #ffffff;
+  --fundo-suave: #f7f7f5;
+  --tinta: #151515;
+  --texto: #3d3d3d;
+  --apagado: #777777;
+  --linha: #e4e4e0;
+  --acento: #1f3a5f;
 }
 
 @theme inline {
@@ -20,6 +28,13 @@
   --color-mist: var(--mist);
   --color-pink: var(--pink);
   --color-sun: var(--sun);
+  --color-fundo: var(--fundo);
+  --color-suave: var(--fundo-suave);
+  --color-tinta: var(--tinta);
+  --color-texto: var(--texto);
+  --color-apagado: var(--apagado);
+  --color-linha: var(--linha);
+  --color-acento: var(--acento);
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
   --font-display: var(--font-grotesk), var(--font-jakarta), system-ui, sans-serif;
 }

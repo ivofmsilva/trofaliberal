@@ -1,0 +1,6786 @@
+{
+ "atualizado": "07/11/2026, 08:48",
+ "recolhido": "2026-11-10T13:44:36.943Z",
+ "indicadores": [
+  {
+   "slug": "populacao_residente",
+   "titulo": "População residente",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "habitantes",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 39037,
+       "var": null
+      },
+      {
+       "v": 1760404,
+       "var": null
+      },
+      {
+       "v": 751407,
+       "var": null
+      },
+      {
+       "v": 10558950,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 38890,
+       "var": -0.4
+      },
+      {
+       "v": 1753781,
+       "var": -0.4
+      },
+      {
+       "v": 748124,
+       "var": -0.4
+      },
+      {
+       "v": 10503889,
+       "var": -0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 38708,
+       "var": -0.5
+      },
+      {
+       "v": 1746629,
+       "var": -0.4
+      },
+      {
+       "v": 744546,
+       "var": -0.5
+      },
+      {
+       "v": 10444092,
+       "var": -0.6
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 38494,
+       "var": -0.6
+      },
+      {
+       "v": 1739297,
+       "var": -0.4
+      },
+      {
+       "v": 741070,
+       "var": -0.5
+      },
+      {
+       "v": 10395121,
+       "var": -0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 38408,
+       "var": -0.2
+      },
+      {
+       "v": 1736150,
+       "var": -0.2
+      },
+      {
+       "v": 739376,
+       "var": -0.2
+      },
+      {
+       "v": 10368554,
+       "var": -0.3
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 38405,
+       "var": 0
+      },
+      {
+       "v": 1734840,
+       "var": -0.1
+      },
+      {
+       "v": 738541,
+       "var": -0.1
+      },
+      {
+       "v": 10344478,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 38427,
+       "var": 0.1
+      },
+      {
+       "v": 1736162,
+       "var": 0.1
+      },
+      {
+       "v": 738303,
+       "var": 0
+      },
+      {
+       "v": 10335770,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 38447,
+       "var": 0.1
+      },
+      {
+       "v": 1738752,
+       "var": 0.1
+      },
+      {
+       "v": 738767,
+       "var": 0.1
+      },
+      {
+       "v": 10333496,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 38556,
+       "var": 0.3
+      },
+      {
+       "v": 1745308,
+       "var": 0.4
+      },
+      {
+       "v": 740803,
+       "var": 0.3
+      },
+      {
+       "v": 10375395,
+       "var": 0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 38659,
+       "var": 0.3
+      },
+      {
+       "v": 1743272,
+       "var": -0.1
+      },
+      {
+       "v": 743434,
+       "var": 0.4
+      },
+      {
+       "v": 10394297,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 38940,
+       "var": 0.7
+      },
+      {
+       "v": 1763077,
+       "var": 1.1
+      },
+      {
+       "v": 743992,
+       "var": 0.1
+      },
+      {
+       "v": 10599117,
+       "var": 2
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 39758,
+       "var": 2.1
+      },
+      {
+       "v": 1802134,
+       "var": 2.2
+      },
+      {
+       "v": 758060,
+       "var": 1.9
+      },
+      {
+       "v": 10929704,
+       "var": 3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 40759,
+       "var": 2.5
+      },
+      {
+       "v": 1835421,
+       "var": 1.8
+      },
+      {
+       "v": 769594,
+       "var": 1.5
+      },
+      {
+       "v": 11204347,
+       "var": 2.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "empresas",
+   "titulo": "Número de empresas",
+   "categoria": "economia",
+   "fonte": "INE - Sistema de contas integradas das empresas",
+   "unidade": "empresas",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 3960,
+       "var": null
+      },
+      {
+       "v": 191519,
+       "var": null
+      },
+      {
+       "v": 70584,
+       "var": null
+      },
+      {
+       "v": 1145390,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 3877,
+       "var": -2.1
+      },
+      {
+       "v": 186669,
+       "var": -2.5
+      },
+      {
+       "v": 69296,
+       "var": -1.8
+      },
+      {
+       "v": 1113559,
+       "var": -2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 3810,
+       "var": -1.7
+      },
+      {
+       "v": 179986,
+       "var": -3.6
+      },
+      {
+       "v": 67474,
+       "var": -2.6
+      },
+      {
+       "v": 1065173,
+       "var": -4.3
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 3802,
+       "var": -0.2
+      },
+      {
+       "v": 180039,
+       "var": 0
+      },
+      {
+       "v": 68172,
+       "var": 1
+      },
+      {
+       "v": 1098409,
+       "var": 3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 3867,
+       "var": 1.7
+      },
+      {
+       "v": 182940,
+       "var": 1.6
+      },
+      {
+       "v": 69463,
+       "var": 1.9
+      },
+      {
+       "v": 1128258,
+       "var": 2.7
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 3875,
+       "var": 0.2
+      },
+      {
+       "v": 187803,
+       "var": 2.7
+      },
+      {
+       "v": 71485,
+       "var": 2.9
+      },
+      {
+       "v": 1163082,
+       "var": 3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 3994,
+       "var": 3.1
+      },
+      {
+       "v": 193084,
+       "var": 2.8
+      },
+      {
+       "v": 73554,
+       "var": 2.9
+      },
+      {
+       "v": 1196102,
+       "var": 2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 4104,
+       "var": 2.8
+      },
+      {
+       "v": 200898,
+       "var": 4
+      },
+      {
+       "v": 75687,
+       "var": 2.9
+      },
+      {
+       "v": 1242693,
+       "var": 3.9
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 4180,
+       "var": 1.9
+      },
+      {
+       "v": 205419,
+       "var": 2.3
+      },
+      {
+       "v": 77146,
+       "var": 1.9
+      },
+      {
+       "v": 1278164,
+       "var": 2.9
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 4323,
+       "var": 3.4
+      },
+      {
+       "v": 216170,
+       "var": 5.2
+      },
+      {
+       "v": 79010,
+       "var": 2.4
+      },
+      {
+       "v": 1318330,
+       "var": 3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 4320,
+       "var": -0.1
+      },
+      {
+       "v": 217334,
+       "var": 0.5
+      },
+      {
+       "v": 79230,
+       "var": 0.3
+      },
+      {
+       "v": 1301000,
+       "var": -1.3
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 4450,
+       "var": 3
+      },
+      {
+       "v": 221093,
+       "var": 1.7
+      },
+      {
+       "v": 81586,
+       "var": 3
+      },
+      {
+       "v": 1342116,
+       "var": 3.2
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 4731,
+       "var": 6.3
+      },
+      {
+       "v": 239856,
+       "var": 8.5
+      },
+      {
+       "v": 86106,
+       "var": 5.5
+      },
+      {
+       "v": 1437254,
+       "var": 7.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_autossuficiencia_emprego",
+   "titulo": "Índice de auto-suficiência de emprego",
+   "categoria": "economia",
+   "fonte": "Calculado: pessoal ao serviço (INE/SCIE) ÷ população empregada residente (INE/Censos)",
+   "unidade": "índice (100 = tantos empregos locais como residentes empregados)",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 95.29,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 84.98,
+       "var": null
+      },
+      {
+       "v": 83.27,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 117.85,
+       "var": 23.7
+      },
+      {
+       "v": 97.57,
+       "var": null
+      },
+      {
+       "v": 93.05,
+       "var": 9.5
+      },
+      {
+       "v": 95.7,
+       "var": 14.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "poder_compra_per_capita",
+   "titulo": "Poder de compra per capita",
+   "categoria": "economia",
+   "fonte": "INE - Estudo sobre o poder de compra concelhio",
+   "unidade": "índice (Portugal = 100)",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 86.54,
+       "var": null
+      },
+      {
+       "v": 103.45,
+       "var": null
+      },
+      {
+       "v": 77.82,
+       "var": null
+      },
+      {
+       "v": 100,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 89.67,
+       "var": 3.6
+      },
+      {
+       "v": 105.07,
+       "var": 1.6
+      },
+      {
+       "v": 81.71,
+       "var": 5
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 91.14,
+       "var": 1.6
+      },
+      {
+       "v": 104.82,
+       "var": -0.2
+      },
+      {
+       "v": 82.18,
+       "var": 0.6
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 92.7,
+       "var": 1.7
+      },
+      {
+       "v": 104.43,
+       "var": -0.4
+      },
+      {
+       "v": 82.2,
+       "var": 0
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 94.57,
+       "var": 2
+      },
+      {
+       "v": 105.08,
+       "var": 0.6
+      },
+      {
+       "v": 82.72,
+       "var": 0.6
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 93.07,
+       "var": -1.6
+      },
+      {
+       "v": 103.27,
+       "var": -1.7
+      },
+      {
+       "v": 82.75,
+       "var": 0
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 92.55,
+       "var": -0.6
+      },
+      {
+       "v": 105.96,
+       "var": 2.6
+      },
+      {
+       "v": 82.91,
+       "var": 0.2
+      },
+      {
+       "v": 100,
+       "var": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "agua_segura_percentagem",
+   "titulo": "Água segura",
+   "categoria": "economia",
+   "fonte": "INE - ERSAR (Entidade Reguladora dos Serviços de Águas e Resíduos)",
+   "unidade": "% da população servida",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 99.7,
+       "var": null
+      },
+      {
+       "v": 99,
+       "var": null
+      },
+      {
+       "v": 98.7,
+       "var": null
+      },
+      {
+       "v": 98.4,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0.3
+      },
+      {
+       "v": 99.1,
+       "var": 0.1
+      },
+      {
+       "v": 98.8,
+       "var": 0.1
+      },
+      {
+       "v": 98.6,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0
+      },
+      {
+       "v": 99.4,
+       "var": 0.3
+      },
+      {
+       "v": 98.9,
+       "var": 0.2
+      },
+      {
+       "v": 98.7,
+       "var": 0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0
+      },
+      {
+       "v": 99.7,
+       "var": 0.3
+      },
+      {
+       "v": 99,
+       "var": 0.1
+      },
+      {
+       "v": 98.7,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0
+      },
+      {
+       "v": 99.6,
+       "var": -0.1
+      },
+      {
+       "v": 99,
+       "var": 0
+      },
+      {
+       "v": 98.6,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 99.8,
+       "var": -0.2
+      },
+      {
+       "v": 99.7,
+       "var": 0.1
+      },
+      {
+       "v": 98.9,
+       "var": 0
+      },
+      {
+       "v": 98.7,
+       "var": 0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0.2
+      },
+      {
+       "v": 99.3,
+       "var": -0.4
+      },
+      {
+       "v": 98.8,
+       "var": -0.2
+      },
+      {
+       "v": 98.8,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 99.9,
+       "var": -0.1
+      },
+      {
+       "v": 99.7,
+       "var": 0.4
+      },
+      {
+       "v": 99.2,
+       "var": 0.4
+      },
+      {
+       "v": 99,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 100,
+       "var": 0.1
+      },
+      {
+       "v": 99.7,
+       "var": 0
+      },
+      {
+       "v": 99.4,
+       "var": 0.2
+      },
+      {
+       "v": 98.8,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 99.7,
+       "var": -0.3
+      },
+      {
+       "v": 99.6,
+       "var": -0.1
+      },
+      {
+       "v": 99.5,
+       "var": 0.1
+      },
+      {
+       "v": 98.9,
+       "var": 0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 99.9,
+       "var": 0.2
+      },
+      {
+       "v": 99.7,
+       "var": 0
+      },
+      {
+       "v": 99.3,
+       "var": -0.1
+      },
+      {
+       "v": 98.9,
+       "var": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_total_municipal",
+   "titulo": "Receita total do município",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 41172000,
+       "var": null
+      },
+      {
+       "v": 1297394000,
+       "var": null
+      },
+      {
+       "v": 576392000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 35717000,
+       "var": -13.2
+      },
+      {
+       "v": 1404756000,
+       "var": 8.3
+      },
+      {
+       "v": 597656000,
+       "var": 3.7
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 40041000,
+       "var": 12.1
+      },
+      {
+       "v": 1530082000,
+       "var": 8.9
+      },
+      {
+       "v": 665928000,
+       "var": 11.4
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "partido_mais_votado_assembleia_municipal",
+   "titulo": "Concentração do voto (Assembleia Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos válidos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 51.9,
+       "var": null
+      },
+      {
+       "v": 39.2,
+       "var": null
+      },
+      {
+       "v": 48.5,
+       "var": null
+      },
+      {
+       "v": 32.9,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 35.2,
+       "var": -32.2
+      },
+      {
+       "v": 33.8,
+       "var": -13.8
+      },
+      {
+       "v": 47.9,
+       "var": -1.2
+      },
+      {
+       "v": 27.3,
+       "var": -17
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "partido_mais_votado_camara_municipal",
+   "titulo": "Concentração do voto (Câmara Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos válidos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 56.5,
+       "var": null
+      },
+      {
+       "v": 42.2,
+       "var": null
+      },
+      {
+       "v": 52.1,
+       "var": null
+      },
+      {
+       "v": 34.2,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 35.7,
+       "var": -36.8
+      },
+      {
+       "v": 36.1,
+       "var": -14.5
+      },
+      {
+       "v": 50.7,
+       "var": -2.7
+      },
+      {
+       "v": 28.6,
+       "var": -16.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "populacao_inscrita_eleitoral",
+   "titulo": "População inscrita no recenseamento eleitoral",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "eleitores inscritos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 33834,
+       "var": null
+      },
+      {
+       "v": 1551028,
+       "var": null
+      },
+      {
+       "v": 677091,
+       "var": null
+      },
+      {
+       "v": 9323688,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 33997,
+       "var": 0.5
+      },
+      {
+       "v": 1550354,
+       "var": 0
+      },
+      {
+       "v": 682445,
+       "var": 0.8
+      },
+      {
+       "v": 9303840,
+       "var": -0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "taxa_abstencao_camaras_municipais",
+   "titulo": "Abstenção nas eleições autárquicas (Câmara)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos eleitores inscritos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2001",
+     "valores": [
+      {
+       "v": 26.9,
+       "var": null
+      },
+      {
+       "v": 41,
+       "var": null
+      },
+      {
+       "v": 30.4,
+       "var": null
+      },
+      {
+       "v": 39.9,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2005",
+     "valores": [
+      {
+       "v": 27.5,
+       "var": 2.2
+      },
+      {
+       "v": 36.8,
+       "var": -10.2
+      },
+      {
+       "v": 30.4,
+       "var": 0
+      },
+      {
+       "v": 39,
+       "var": -2.3
+      }
+     ]
+    },
+    {
+     "periodo": "2009",
+     "valores": [
+      {
+       "v": 27.2,
+       "var": -1.1
+      },
+      {
+       "v": 37.9,
+       "var": 3
+      },
+      {
+       "v": 33.2,
+       "var": 9.3
+      },
+      {
+       "v": 41,
+       "var": 5.1
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 33,
+       "var": 21.3
+      },
+      {
+       "v": 45.9,
+       "var": 21.1
+      },
+      {
+       "v": 38.4,
+       "var": 15.4
+      },
+      {
+       "v": 47.4,
+       "var": 15.6
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 34.9,
+       "var": 5.8
+      },
+      {
+       "v": 43.4,
+       "var": -5.4
+      },
+      {
+       "v": 36.1,
+       "var": -6
+      },
+      {
+       "v": 45,
+       "var": -5.1
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 37.7,
+       "var": 8
+      },
+      {
+       "v": 48.1,
+       "var": 10.8
+      },
+      {
+       "v": 37.1,
+       "var": 2.7
+      },
+      {
+       "v": 46.4,
+       "var": 3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 32,
+       "var": -15.1
+      },
+      {
+       "v": 40.6,
+       "var": -15.6
+      },
+      {
+       "v": 32.3,
+       "var": -12.8
+      },
+      {
+       "v": 40.7,
+       "var": -12.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "votos_brancos_assembleia_municipal",
+   "titulo": "Votos em branco (Assembleia Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 2.7,
+       "var": null
+      },
+      {
+       "v": 3.2,
+       "var": null
+      },
+      {
+       "v": 2.5,
+       "var": null
+      },
+      {
+       "v": 2.8,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1.7,
+       "var": -37
+      },
+      {
+       "v": 2.1,
+       "var": -34.4
+      },
+      {
+       "v": 1.9,
+       "var": -24.6
+      },
+      {
+       "v": 2,
+       "var": -28.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "votos_brancos_camara_municipal",
+   "titulo": "Votos em branco (Câmara Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 2.4,
+       "var": null
+      },
+      {
+       "v": 2.9,
+       "var": null
+      },
+      {
+       "v": 2.3,
+       "var": null
+      },
+      {
+       "v": 2.5,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1.4,
+       "var": -41.7
+      },
+      {
+       "v": 1.9,
+       "var": -34.5
+      },
+      {
+       "v": 1.7,
+       "var": -27.3
+      },
+      {
+       "v": 1.7,
+       "var": -32
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "votos_nulos_assembleia_municipal",
+   "titulo": "Votos nulos (Assembleia Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 1.6,
+       "var": null
+      },
+      {
+       "v": 1.7,
+       "var": null
+      },
+      {
+       "v": 1.4,
+       "var": null
+      },
+      {
+       "v": 1.7,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1.2,
+       "var": -25
+      },
+      {
+       "v": 1.2,
+       "var": -29.4
+      },
+      {
+       "v": 1,
+       "var": -24.1
+      },
+      {
+       "v": 1.2,
+       "var": -29.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "votos_nulos_camara_municipal",
+   "titulo": "Votos nulos (Câmara Municipal)",
+   "categoria": "democracia",
+   "fonte": "INE - Secretaria-Geral da Administração Interna (Administração Eleitoral)",
+   "unidade": "% dos votos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 1.5,
+       "var": null
+      },
+      {
+       "v": 1.6,
+       "var": null
+      },
+      {
+       "v": 1.3,
+       "var": null
+      },
+      {
+       "v": 1.6,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1.1,
+       "var": -26.7
+      },
+      {
+       "v": 1.2,
+       "var": -25
+      },
+      {
+       "v": 1,
+       "var": -22.5
+      },
+      {
+       "v": 1.2,
+       "var": -25
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "idade_mediana",
+   "titulo": "Idade mediana da população",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "anos",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 45.3,
+       "var": null
+      },
+      {
+       "v": 46.2,
+       "var": null
+      },
+      {
+       "v": 46.9,
+       "var": null
+      },
+      {
+       "v": 46.1,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 45.2,
+       "var": -0.2
+      },
+      {
+       "v": 46.1,
+       "var": -0.2
+      },
+      {
+       "v": 47,
+       "var": 0.2
+      },
+      {
+       "v": 45.8,
+       "var": -0.7
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 45.1,
+       "var": -0.2
+      },
+      {
+       "v": 46.1,
+       "var": 0
+      },
+      {
+       "v": 47.1,
+       "var": 0.3
+      },
+      {
+       "v": 45.6,
+       "var": -0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 45.3,
+       "var": 0.4
+      },
+      {
+       "v": 46.2,
+       "var": 0.2
+      },
+      {
+       "v": 47.5,
+       "var": 0.8
+      },
+      {
+       "v": 45.6,
+       "var": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_dependencia_idosos",
+   "titulo": "Índice de dependência de idosos",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "idosos por 100 pessoas em idade activa",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 18.9,
+       "var": null
+      },
+      {
+       "v": 24.1,
+       "var": null
+      },
+      {
+       "v": 24.2,
+       "var": null
+      },
+      {
+       "v": 29.1,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 19.8,
+       "var": 4.8
+      },
+      {
+       "v": 24.9,
+       "var": 3.3
+      },
+      {
+       "v": 24.7,
+       "var": 2.1
+      },
+      {
+       "v": 29.7,
+       "var": 2.1
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 21,
+       "var": 6.1
+      },
+      {
+       "v": 25.9,
+       "var": 4
+      },
+      {
+       "v": 25.5,
+       "var": 3.5
+      },
+      {
+       "v": 30.6,
+       "var": 3
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 22,
+       "var": 4.8
+      },
+      {
+       "v": 26.9,
+       "var": 3.9
+      },
+      {
+       "v": 26.4,
+       "var": 3.5
+      },
+      {
+       "v": 31.4,
+       "var": 2.6
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 23.1,
+       "var": 5
+      },
+      {
+       "v": 27.9,
+       "var": 3.7
+      },
+      {
+       "v": 27.3,
+       "var": 3.5
+      },
+      {
+       "v": 32.1,
+       "var": 2.2
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 24.2,
+       "var": 4.8
+      },
+      {
+       "v": 28.9,
+       "var": 3.6
+      },
+      {
+       "v": 28.4,
+       "var": 4
+      },
+      {
+       "v": 33,
+       "var": 2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 25.4,
+       "var": 5
+      },
+      {
+       "v": 29.9,
+       "var": 3.5
+      },
+      {
+       "v": 29.6,
+       "var": 4
+      },
+      {
+       "v": 33.8,
+       "var": 2.4
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 26.5,
+       "var": 4.3
+      },
+      {
+       "v": 30.8,
+       "var": 3
+      },
+      {
+       "v": 30.7,
+       "var": 3.9
+      },
+      {
+       "v": 34.6,
+       "var": 2.4
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 27.8,
+       "var": 4.9
+      },
+      {
+       "v": 31.9,
+       "var": 3.6
+      },
+      {
+       "v": 32.3,
+       "var": 5.3
+      },
+      {
+       "v": 35.6,
+       "var": 2.9
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 29.1,
+       "var": 4.7
+      },
+      {
+       "v": 33,
+       "var": 3.4
+      },
+      {
+       "v": 33.6,
+       "var": 4
+      },
+      {
+       "v": 36.5,
+       "var": 2.5
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 30.1,
+       "var": 3.4
+      },
+      {
+       "v": 34.2,
+       "var": 3.6
+      },
+      {
+       "v": 35.1,
+       "var": 4.4
+      },
+      {
+       "v": 36.5,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 30.2,
+       "var": 0.3
+      },
+      {
+       "v": 34.2,
+       "var": 0
+      },
+      {
+       "v": 35.8,
+       "var": 1.8
+      },
+      {
+       "v": 36,
+       "var": -1.4
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 30.5,
+       "var": 1
+      },
+      {
+       "v": 34.5,
+       "var": 0.9
+      },
+      {
+       "v": 36.5,
+       "var": 2.1
+      },
+      {
+       "v": 35.7,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 31.4,
+       "var": 3
+      },
+      {
+       "v": 35.1,
+       "var": 1.7
+      },
+      {
+       "v": 37.6,
+       "var": 3
+      },
+      {
+       "v": 35.8,
+       "var": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_dependencia_jovens",
+   "titulo": "Índice de dependência de jovens",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "jovens por 100 pessoas em idade activa",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 21.4,
+       "var": null
+      },
+      {
+       "v": 21.9,
+       "var": null
+      },
+      {
+       "v": 22.5,
+       "var": null
+      },
+      {
+       "v": 22.8,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 21,
+       "var": -1.9
+      },
+      {
+       "v": 21.7,
+       "var": -0.9
+      },
+      {
+       "v": 21.9,
+       "var": -2.6
+      },
+      {
+       "v": 22.6,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 20.6,
+       "var": -1.9
+      },
+      {
+       "v": 21.4,
+       "var": -1.4
+      },
+      {
+       "v": 21.3,
+       "var": -2.5
+      },
+      {
+       "v": 22.4,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 20.1,
+       "var": -2.4
+      },
+      {
+       "v": 21.1,
+       "var": -1.4
+      },
+      {
+       "v": 20.7,
+       "var": -3.2
+      },
+      {
+       "v": 22.1,
+       "var": -1.3
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 19.8,
+       "var": -1.5
+      },
+      {
+       "v": 20.7,
+       "var": -1.9
+      },
+      {
+       "v": 20.2,
+       "var": -2.3
+      },
+      {
+       "v": 21.8,
+       "var": -1.4
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 19.5,
+       "var": -1.5
+      },
+      {
+       "v": 20.5,
+       "var": -1
+      },
+      {
+       "v": 19.8,
+       "var": -1.9
+      },
+      {
+       "v": 21.6,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 19.3,
+       "var": -1
+      },
+      {
+       "v": 20.2,
+       "var": -1.5
+      },
+      {
+       "v": 19.5,
+       "var": -1.9
+      },
+      {
+       "v": 21.4,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 19.1,
+       "var": -1
+      },
+      {
+       "v": 20,
+       "var": -1
+      },
+      {
+       "v": 19.2,
+       "var": -1.3
+      },
+      {
+       "v": 21.2,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 19,
+       "var": -0.5
+      },
+      {
+       "v": 19.9,
+       "var": -0.5
+      },
+      {
+       "v": 19.1,
+       "var": -0.6
+      },
+      {
+       "v": 21,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 19.1,
+       "var": 0.5
+      },
+      {
+       "v": 19.7,
+       "var": -1
+      },
+      {
+       "v": 18.9,
+       "var": -1
+      },
+      {
+       "v": 20.8,
+       "var": -1
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 18.7,
+       "var": -2.1
+      },
+      {
+       "v": 19.5,
+       "var": -1
+      },
+      {
+       "v": 18.9,
+       "var": -0.1
+      },
+      {
+       "v": 20.5,
+       "var": -1.4
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 18.5,
+       "var": -1.1
+      },
+      {
+       "v": 19.3,
+       "var": -1
+      },
+      {
+       "v": 19,
+       "var": 0.4
+      },
+      {
+       "v": 20.3,
+       "var": -1
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 18.2,
+       "var": -1.6
+      },
+      {
+       "v": 18.9,
+       "var": -2.1
+      },
+      {
+       "v": 18.8,
+       "var": -0.8
+      },
+      {
+       "v": 19.9,
+       "var": -2
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 18.3,
+       "var": 0.5
+      },
+      {
+       "v": 18.6,
+       "var": -1.6
+      },
+      {
+       "v": 18.7,
+       "var": -0.3
+      },
+      {
+       "v": 19.6,
+       "var": -1.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_dependencia_total",
+   "titulo": "Índice de dependência total",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "dependentes por 100 pessoas em idade activa",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 40.3,
+       "var": null
+      },
+      {
+       "v": 46,
+       "var": null
+      },
+      {
+       "v": 46.6,
+       "var": null
+      },
+      {
+       "v": 51.9,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 40.8,
+       "var": 1.2
+      },
+      {
+       "v": 46.5,
+       "var": 1.1
+      },
+      {
+       "v": 46.6,
+       "var": -0.2
+      },
+      {
+       "v": 52.3,
+       "var": 0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 41.6,
+       "var": 2
+      },
+      {
+       "v": 47.4,
+       "var": 1.9
+      },
+      {
+       "v": 46.9,
+       "var": 0.7
+      },
+      {
+       "v": 53,
+       "var": 1.3
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 42.2,
+       "var": 1.4
+      },
+      {
+       "v": 48,
+       "var": 1.3
+      },
+      {
+       "v": 47.1,
+       "var": 0.5
+      },
+      {
+       "v": 53.5,
+       "var": 0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 42.9,
+       "var": 1.7
+      },
+      {
+       "v": 48.7,
+       "var": 1.5
+      },
+      {
+       "v": 47.5,
+       "var": 0.9
+      },
+      {
+       "v": 53.9,
+       "var": 0.7
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 43.7,
+       "var": 1.9
+      },
+      {
+       "v": 49.5,
+       "var": 1.6
+      },
+      {
+       "v": 48.2,
+       "var": 1.4
+      },
+      {
+       "v": 54.6,
+       "var": 1.3
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 44.7,
+       "var": 2.3
+      },
+      {
+       "v": 50.2,
+       "var": 1.4
+      },
+      {
+       "v": 49,
+       "var": 1.6
+      },
+      {
+       "v": 55.2,
+       "var": 1.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 45.6,
+       "var": 2
+      },
+      {
+       "v": 50.8,
+       "var": 1.2
+      },
+      {
+       "v": 49.9,
+       "var": 1.7
+      },
+      {
+       "v": 55.8,
+       "var": 1.1
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 46.8,
+       "var": 2.6
+      },
+      {
+       "v": 51.8,
+       "var": 2
+      },
+      {
+       "v": 51.4,
+       "var": 3.2
+      },
+      {
+       "v": 56.6,
+       "var": 1.4
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 48.1,
+       "var": 2.8
+      },
+      {
+       "v": 52.8,
+       "var": 1.9
+      },
+      {
+       "v": 52.5,
+       "var": 2.1
+      },
+      {
+       "v": 57.3,
+       "var": 1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 48.8,
+       "var": 1.5
+      },
+      {
+       "v": 53.7,
+       "var": 1.7
+      },
+      {
+       "v": 54,
+       "var": 2.7
+      },
+      {
+       "v": 57,
+       "var": -0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 48.8,
+       "var": 0
+      },
+      {
+       "v": 53.6,
+       "var": -0.2
+      },
+      {
+       "v": 54.7,
+       "var": 1.4
+      },
+      {
+       "v": 56.3,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 48.7,
+       "var": -0.2
+      },
+      {
+       "v": 53.4,
+       "var": -0.4
+      },
+      {
+       "v": 55.3,
+       "var": 1.1
+      },
+      {
+       "v": 55.6,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 49.7,
+       "var": 2.1
+      },
+      {
+       "v": 53.7,
+       "var": 0.6
+      },
+      {
+       "v": 56.3,
+       "var": 1.9
+      },
+      {
+       "v": 55.4,
+       "var": -0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_envelhecimento",
+   "titulo": "Índice de envelhecimento",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "idosos por 100 jovens",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 88.6,
+       "var": null
+      },
+      {
+       "v": 110.1,
+       "var": null
+      },
+      {
+       "v": 108.2,
+       "var": null
+      },
+      {
+       "v": 128,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 94.1,
+       "var": 6.2
+      },
+      {
+       "v": 114.7,
+       "var": 4.2
+      },
+      {
+       "v": 113.5,
+       "var": 4.9
+      },
+      {
+       "v": 131.4,
+       "var": 2.7
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 101.9,
+       "var": 8.3
+      },
+      {
+       "v": 121,
+       "var": 5.5
+      },
+      {
+       "v": 120.7,
+       "var": 6.3
+      },
+      {
+       "v": 136.4,
+       "var": 3.8
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 109.4,
+       "var": 7.4
+      },
+      {
+       "v": 127.6,
+       "var": 5.5
+      },
+      {
+       "v": 129.3,
+       "var": 7.2
+      },
+      {
+       "v": 141.9,
+       "var": 4
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 116.7,
+       "var": 6.7
+      },
+      {
+       "v": 134.8,
+       "var": 5.6
+      },
+      {
+       "v": 137.2,
+       "var": 6.1
+      },
+      {
+       "v": 147.6,
+       "var": 4
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 124.1,
+       "var": 6.3
+      },
+      {
+       "v": 140.9,
+       "var": 4.5
+      },
+      {
+       "v": 145.6,
+       "var": 6.1
+      },
+      {
+       "v": 152.5,
+       "var": 3.3
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 132.1,
+       "var": 6.4
+      },
+      {
+       "v": 147.8,
+       "var": 4.9
+      },
+      {
+       "v": 154.7,
+       "var": 6.3
+      },
+      {
+       "v": 157.9,
+       "var": 3.5
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 138.3,
+       "var": 4.7
+      },
+      {
+       "v": 154,
+       "var": 4.2
+      },
+      {
+       "v": 163.1,
+       "var": 5.4
+      },
+      {
+       "v": 163.2,
+       "var": 3.4
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 146.3,
+       "var": 5.8
+      },
+      {
+       "v": 160.8,
+       "var": 4.4
+      },
+      {
+       "v": 172.6,
+       "var": 5.9
+      },
+      {
+       "v": 169.4,
+       "var": 3.8
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 152.5,
+       "var": 4.2
+      },
+      {
+       "v": 167.7,
+       "var": 4.3
+      },
+      {
+       "v": 181.4,
+       "var": 5.1
+      },
+      {
+       "v": 175.6,
+       "var": 3.7
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 160.7,
+       "var": 5.4
+      },
+      {
+       "v": 175.3,
+       "var": 4.5
+      },
+      {
+       "v": 188.9,
+       "var": 4.1
+      },
+      {
+       "v": 178.3,
+       "var": 1.5
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 163.1,
+       "var": 1.5
+      },
+      {
+       "v": 177.1,
+       "var": 1
+      },
+      {
+       "v": 190.8,
+       "var": 1
+      },
+      {
+       "v": 176.9,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 167.4,
+       "var": 2.6
+      },
+      {
+       "v": 182.8,
+       "var": 3.2
+      },
+      {
+       "v": 196.3,
+       "var": 2.9
+      },
+      {
+       "v": 179.5,
+       "var": 1.5
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 171.7,
+       "var": 2.6
+      },
+      {
+       "v": 189.1,
+       "var": 3.4
+      },
+      {
+       "v": 203,
+       "var": 3.4
+      },
+      {
+       "v": 182.4,
+       "var": 1.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "indice_longevidade",
+   "titulo": "Índice de longevidade",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "pessoas com 75+ por 100 pessoas com 65+",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 42.2,
+       "var": null
+      },
+      {
+       "v": 45.8,
+       "var": null
+      },
+      {
+       "v": 47.7,
+       "var": null
+      },
+      {
+       "v": 49.1,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 42.8,
+       "var": 1.4
+      },
+      {
+       "v": 46.1,
+       "var": 0.7
+      },
+      {
+       "v": 48.2,
+       "var": 1
+      },
+      {
+       "v": 49.4,
+       "var": 0.6
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 43.1,
+       "var": 0.7
+      },
+      {
+       "v": 46,
+       "var": -0.2
+      },
+      {
+       "v": 48.3,
+       "var": 0.3
+      },
+      {
+       "v": 49.5,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 43.1,
+       "var": 0
+      },
+      {
+       "v": 45.9,
+       "var": -0.2
+      },
+      {
+       "v": 48.3,
+       "var": 0
+      },
+      {
+       "v": 49.6,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 42.6,
+       "var": -1.2
+      },
+      {
+       "v": 45.5,
+       "var": -0.9
+      },
+      {
+       "v": 47.8,
+       "var": -1
+      },
+      {
+       "v": 49.4,
+       "var": -0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 42.6,
+       "var": 0
+      },
+      {
+       "v": 45,
+       "var": -1.1
+      },
+      {
+       "v": 47.2,
+       "var": -1.3
+      },
+      {
+       "v": 49,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 42.1,
+       "var": -1.2
+      },
+      {
+       "v": 44.8,
+       "var": -0.4
+      },
+      {
+       "v": 46.3,
+       "var": -1.8
+      },
+      {
+       "v": 48.7,
+       "var": -0.6
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 42,
+       "var": -0.2
+      },
+      {
+       "v": 44.9,
+       "var": 0.2
+      },
+      {
+       "v": 45.9,
+       "var": -1
+      },
+      {
+       "v": 48.6,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 42.1,
+       "var": 0.2
+      },
+      {
+       "v": 44.9,
+       "var": 0
+      },
+      {
+       "v": 45.6,
+       "var": -0.7
+      },
+      {
+       "v": 48.6,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 42.5,
+       "var": 1
+      },
+      {
+       "v": 45.2,
+       "var": 0.7
+      },
+      {
+       "v": 45.6,
+       "var": 0.2
+      },
+      {
+       "v": 48.7,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 42.6,
+       "var": 0.2
+      },
+      {
+       "v": 45.8,
+       "var": 1.3
+      },
+      {
+       "v": 46,
+       "var": 0.8
+      },
+      {
+       "v": 49.2,
+       "var": 1
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 43.1,
+       "var": 1.2
+      },
+      {
+       "v": 46,
+       "var": 0.4
+      },
+      {
+       "v": 45.7,
+       "var": -0.6
+      },
+      {
+       "v": 49.2,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 44.8,
+       "var": 3.9
+      },
+      {
+       "v": 47,
+       "var": 2.2
+      },
+      {
+       "v": 46.3,
+       "var": 1.3
+      },
+      {
+       "v": 49.8,
+       "var": 1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 45.3,
+       "var": 1.1
+      },
+      {
+       "v": 47.6,
+       "var": 1.3
+      },
+      {
+       "v": 46.6,
+       "var": 0.7
+      },
+      {
+       "v": 50.1,
+       "var": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "populacao_media_residente",
+   "titulo": "População média anual residente",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "habitantes",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 39082,
+       "var": null
+      },
+      {
+       "v": 1762453,
+       "var": null
+      },
+      {
+       "v": 752412,
+       "var": null
+      },
+      {
+       "v": 10574536,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 38964,
+       "var": -0.3
+      },
+      {
+       "v": 1757093,
+       "var": -0.3
+      },
+      {
+       "v": 749766,
+       "var": -0.4
+      },
+      {
+       "v": 10531420,
+       "var": -0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 38799,
+       "var": -0.4
+      },
+      {
+       "v": 1750205,
+       "var": -0.4
+      },
+      {
+       "v": 746335,
+       "var": -0.5
+      },
+      {
+       "v": 10473991,
+       "var": -0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 38601,
+       "var": -0.5
+      },
+      {
+       "v": 1742963,
+       "var": -0.4
+      },
+      {
+       "v": 742808,
+       "var": -0.5
+      },
+      {
+       "v": 10419607,
+       "var": -0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 38451,
+       "var": -0.4
+      },
+      {
+       "v": 1737724,
+       "var": -0.3
+      },
+      {
+       "v": 740223,
+       "var": -0.3
+      },
+      {
+       "v": 10381838,
+       "var": -0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 38407,
+       "var": -0.1
+      },
+      {
+       "v": 1735495,
+       "var": -0.1
+      },
+      {
+       "v": 738959,
+       "var": -0.2
+      },
+      {
+       "v": 10356516,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 38416,
+       "var": 0
+      },
+      {
+       "v": 1735501,
+       "var": 0
+      },
+      {
+       "v": 738422,
+       "var": -0.1
+      },
+      {
+       "v": 10340124,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 38437,
+       "var": 0.1
+      },
+      {
+       "v": 1737457,
+       "var": 0.1
+      },
+      {
+       "v": 738535,
+       "var": 0
+      },
+      {
+       "v": 10334633,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 38502,
+       "var": 0.2
+      },
+      {
+       "v": 1742030,
+       "var": 0.3
+      },
+      {
+       "v": 739785,
+       "var": 0.2
+      },
+      {
+       "v": 10354446,
+       "var": 0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 38608,
+       "var": 0.3
+      },
+      {
+       "v": 1744290,
+       "var": 0.1
+      },
+      {
+       "v": 742119,
+       "var": 0.3
+      },
+      {
+       "v": 10384846,
+       "var": 0.3
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 38730,
+       "var": 0.3
+      },
+      {
+       "v": 1758361,
+       "var": 0.8
+      },
+      {
+       "v": 741756,
+       "var": 0
+      },
+      {
+       "v": 10561281,
+       "var": 1.7
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 39349,
+       "var": 1.6
+      },
+      {
+       "v": 1782606,
+       "var": 1.4
+      },
+      {
+       "v": 751026,
+       "var": 1.2
+      },
+      {
+       "v": 10764411,
+       "var": 1.9
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 40259,
+       "var": 2.3
+      },
+      {
+       "v": 1818778,
+       "var": 2
+      },
+      {
+       "v": 763827,
+       "var": 1.7
+      },
+      {
+       "v": 11067026,
+       "var": 2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 41037,
+       "var": 1.9
+      },
+      {
+       "v": 1845821,
+       "var": 1.5
+      },
+      {
+       "v": 773294,
+       "var": 1.2
+      },
+      {
+       "v": 11295785,
+       "var": 2.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "proporcao_mulheres_idade_fertil",
+   "titulo": "Mulheres em idade fértil",
+   "categoria": "demografia",
+   "fonte": "INE - Indicadores demográficos",
+   "unidade": "% das mulheres residentes (15-49 anos)",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 50.2,
+       "var": null
+      },
+      {
+       "v": 47.1,
+       "var": null
+      },
+      {
+       "v": 48.3,
+       "var": null
+      },
+      {
+       "v": 45.1,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 49.5,
+       "var": -1.4
+      },
+      {
+       "v": 46.5,
+       "var": -1.3
+      },
+      {
+       "v": 47.5,
+       "var": -1.5
+      },
+      {
+       "v": 44.6,
+       "var": -1.1
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 49,
+       "var": -1
+      },
+      {
+       "v": 45.9,
+       "var": -1.3
+      },
+      {
+       "v": 46.9,
+       "var": -1.3
+      },
+      {
+       "v": 44.1,
+       "var": -1.1
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 48.2,
+       "var": -1.6
+      },
+      {
+       "v": 45.3,
+       "var": -1.3
+      },
+      {
+       "v": 46.1,
+       "var": -1.7
+      },
+      {
+       "v": 43.6,
+       "var": -1.1
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 47.5,
+       "var": -1.5
+      },
+      {
+       "v": 44.7,
+       "var": -1.3
+      },
+      {
+       "v": 45.3,
+       "var": -1.7
+      },
+      {
+       "v": 43.2,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 46.7,
+       "var": -1.7
+      },
+      {
+       "v": 44.1,
+       "var": -1.3
+      },
+      {
+       "v": 44.5,
+       "var": -1.9
+      },
+      {
+       "v": 42.7,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 46,
+       "var": -1.5
+      },
+      {
+       "v": 43.6,
+       "var": -1.1
+      },
+      {
+       "v": 43.8,
+       "var": -1.6
+      },
+      {
+       "v": 42.3,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 45.4,
+       "var": -1.3
+      },
+      {
+       "v": 43.1,
+       "var": -1.1
+      },
+      {
+       "v": 43.1,
+       "var": -1.6
+      },
+      {
+       "v": 41.8,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 44.6,
+       "var": -1.8
+      },
+      {
+       "v": 42.6,
+       "var": -1.2
+      },
+      {
+       "v": 42.2,
+       "var": -2
+      },
+      {
+       "v": 41.4,
+       "var": -1
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 43.9,
+       "var": -1.6
+      },
+      {
+       "v": 42,
+       "var": -1.4
+      },
+      {
+       "v": 41.7,
+       "var": -1.2
+      },
+      {
+       "v": 41,
+       "var": -1
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 43.6,
+       "var": -0.7
+      },
+      {
+       "v": 41.8,
+       "var": -0.5
+      },
+      {
+       "v": 41.6,
+       "var": -0.3
+      },
+      {
+       "v": 41.3,
+       "var": 0.7
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 43.4,
+       "var": -0.5
+      },
+      {
+       "v": 41.9,
+       "var": 0.2
+      },
+      {
+       "v": 41.3,
+       "var": -0.8
+      },
+      {
+       "v": 41.5,
+       "var": 0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 43,
+       "var": -0.9
+      },
+      {
+       "v": 41.9,
+       "var": 0
+      },
+      {
+       "v": 41,
+       "var": -0.8
+      },
+      {
+       "v": 41.7,
+       "var": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "relacao_masculinidade",
+   "titulo": "Relação de masculinidade",
+   "categoria": "demografia",
+   "fonte": "INE - Estimativas anuais da população residente",
+   "unidade": "homens por 100 mulheres",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 92.8,
+       "var": null
+      },
+      {
+       "v": 90.7,
+       "var": null
+      },
+      {
+       "v": 92.5,
+       "var": null
+      },
+      {
+       "v": 91.3,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 92.5,
+       "var": -0.3
+      },
+      {
+       "v": 90.4,
+       "var": -0.3
+      },
+      {
+       "v": 92.4,
+       "var": -0.2
+      },
+      {
+       "v": 91,
+       "var": -0.3
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 92,
+       "var": -0.5
+      },
+      {
+       "v": 90,
+       "var": -0.4
+      },
+      {
+       "v": 92,
+       "var": -0.4
+      },
+      {
+       "v": 90.6,
+       "var": -0.4
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 91.5,
+       "var": -0.5
+      },
+      {
+       "v": 89.7,
+       "var": -0.3
+      },
+      {
+       "v": 91.8,
+       "var": -0.2
+      },
+      {
+       "v": 90.4,
+       "var": -0.2
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 91.5,
+       "var": 0
+      },
+      {
+       "v": 89.6,
+       "var": -0.1
+      },
+      {
+       "v": 91.9,
+       "var": 0.1
+      },
+      {
+       "v": 90.3,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 91.7,
+       "var": 0.2
+      },
+      {
+       "v": 89.8,
+       "var": 0.2
+      },
+      {
+       "v": 92.1,
+       "var": 0.2
+      },
+      {
+       "v": 90.3,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 91.3,
+       "var": -0.4
+      },
+      {
+       "v": 89.7,
+       "var": -0.1
+      },
+      {
+       "v": 92.1,
+       "var": -0.1
+      },
+      {
+       "v": 90.2,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 91.3,
+       "var": 0
+      },
+      {
+       "v": 89.7,
+       "var": 0
+      },
+      {
+       "v": 92,
+       "var": 0
+      },
+      {
+       "v": 90.1,
+       "var": -0.1
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 91.7,
+       "var": 0.4
+      },
+      {
+       "v": 89.9,
+       "var": 0.2
+      },
+      {
+       "v": 92.3,
+       "var": 0.3
+      },
+      {
+       "v": 90.4,
+       "var": 0.3
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 92,
+       "var": 0.3
+      },
+      {
+       "v": 89.9,
+       "var": 0
+      },
+      {
+       "v": 92.4,
+       "var": 0.1
+      },
+      {
+       "v": 90.7,
+       "var": 0.3
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 93.5,
+       "var": 1.6
+      },
+      {
+       "v": 90.8,
+       "var": 1
+      },
+      {
+       "v": 92.7,
+       "var": 0.3
+      },
+      {
+       "v": 92.4,
+       "var": 1.9
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 95.1,
+       "var": 1.7
+      },
+      {
+       "v": 91.6,
+       "var": 0.9
+      },
+      {
+       "v": 93.4,
+       "var": 0.8
+      },
+      {
+       "v": 93.5,
+       "var": 1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 96.8,
+       "var": 1.8
+      },
+      {
+       "v": 92.4,
+       "var": 0.9
+      },
+      {
+       "v": 93.8,
+       "var": 0.5
+      },
+      {
+       "v": 94.7,
+       "var": 1.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "taxa_bruta_mortalidade",
+   "titulo": "Taxa bruta de mortalidade",
+   "categoria": "demografia",
+   "fonte": "INE - Indicadores demográficos",
+   "unidade": "‰ (óbitos por mil habitantes)",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 6.5,
+       "var": null
+      },
+      {
+       "v": 8.1,
+       "var": null
+      },
+      {
+       "v": 8.6,
+       "var": null
+      },
+      {
+       "v": 9.7,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 6.9,
+       "var": 6.2
+      },
+      {
+       "v": 8.4,
+       "var": 3.7
+      },
+      {
+       "v": 8.9,
+       "var": 3.3
+      },
+      {
+       "v": 10.2,
+       "var": 5.2
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 7,
+       "var": 1.4
+      },
+      {
+       "v": 8.4,
+       "var": 0
+      },
+      {
+       "v": 8.8,
+       "var": -0.5
+      },
+      {
+       "v": 10.2,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 7.9,
+       "var": 12.9
+      },
+      {
+       "v": 8.6,
+       "var": 2.4
+      },
+      {
+       "v": 8.5,
+       "var": -3.5
+      },
+      {
+       "v": 10.1,
+       "var": -1
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 7.5,
+       "var": -5.1
+      },
+      {
+       "v": 8.8,
+       "var": 2.3
+      },
+      {
+       "v": 9.1,
+       "var": 6.7
+      },
+      {
+       "v": 10.5,
+       "var": 4
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 7.3,
+       "var": -2.7
+      },
+      {
+       "v": 9,
+       "var": 2.3
+      },
+      {
+       "v": 9.1,
+       "var": 0.6
+      },
+      {
+       "v": 10.7,
+       "var": 1.9
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 7.3,
+       "var": 0
+      },
+      {
+       "v": 9,
+       "var": 0
+      },
+      {
+       "v": 9.5,
+       "var": 3.6
+      },
+      {
+       "v": 10.6,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 8.3,
+       "var": 13.7
+      },
+      {
+       "v": 9.4,
+       "var": 4.4
+      },
+      {
+       "v": 9.6,
+       "var": 1.8
+      },
+      {
+       "v": 10.9,
+       "var": 2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 7.7,
+       "var": -7.2
+      },
+      {
+       "v": 9.2,
+       "var": -2.1
+      },
+      {
+       "v": 9.6,
+       "var": -0.8
+      },
+      {
+       "v": 10.8,
+       "var": -0.9
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 8.4,
+       "var": 9.1
+      },
+      {
+       "v": 10.6,
+       "var": 15.2
+      },
+      {
+       "v": 10.7,
+       "var": 12.3
+      },
+      {
+       "v": 11.9,
+       "var": 10.2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 8.9,
+       "var": 6
+      },
+      {
+       "v": 9.8,
+       "var": -7.5
+      },
+      {
+       "v": 10,
+       "var": -7
+      },
+      {
+       "v": 11.8,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 8.4,
+       "var": -5.6
+      },
+      {
+       "v": 10.2,
+       "var": 4.1
+      },
+      {
+       "v": 10.7,
+       "var": 6.7
+      },
+      {
+       "v": 11.6,
+       "var": -1.7
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 8.7,
+       "var": 3.6
+      },
+      {
+       "v": 9.5,
+       "var": -6.9
+      },
+      {
+       "v": 10.4,
+       "var": -2.9
+      },
+      {
+       "v": 10.7,
+       "var": -7.8
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 7.7,
+       "var": -11.5
+      },
+      {
+       "v": 9.4,
+       "var": -1.1
+      },
+      {
+       "v": 9.8,
+       "var": -4.9
+      },
+      {
+       "v": 10.5,
+       "var": -1.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "taxa_bruta_natalidade",
+   "titulo": "Taxa bruta de natalidade",
+   "categoria": "demografia",
+   "fonte": "INE - Indicadores demográficos",
+   "unidade": "‰ (nados-vivos por mil habitantes)",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 8.6,
+       "var": null
+      },
+      {
+       "v": 9,
+       "var": null
+      },
+      {
+       "v": 8.4,
+       "var": null
+      },
+      {
+       "v": 9.2,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 8.2,
+       "var": -4.7
+      },
+      {
+       "v": 8.2,
+       "var": -8.9
+      },
+      {
+       "v": 7.6,
+       "var": -9.9
+      },
+      {
+       "v": 8.5,
+       "var": -7.6
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 7.2,
+       "var": -12.2
+      },
+      {
+       "v": 7.7,
+       "var": -6.1
+      },
+      {
+       "v": 7.1,
+       "var": -7.1
+      },
+      {
+       "v": 7.9,
+       "var": -7.1
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 6.8,
+       "var": -5.6
+      },
+      {
+       "v": 7.7,
+       "var": 0
+      },
+      {
+       "v": 6.6,
+       "var": -5.8
+      },
+      {
+       "v": 7.9,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 7.8,
+       "var": 14.7
+      },
+      {
+       "v": 8,
+       "var": 3.9
+      },
+      {
+       "v": 7.3,
+       "var": 10.4
+      },
+      {
+       "v": 8.2,
+       "var": 3.8
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 8.9,
+       "var": 14.1
+      },
+      {
+       "v": 8.2,
+       "var": 2.5
+      },
+      {
+       "v": 7.3,
+       "var": -1
+      },
+      {
+       "v": 8.4,
+       "var": 2.4
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 8.5,
+       "var": -4.5
+      },
+      {
+       "v": 8.1,
+       "var": -1.2
+      },
+      {
+       "v": 7.2,
+       "var": -1.1
+      },
+      {
+       "v": 8.3,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 8.2,
+       "var": -3.5
+      },
+      {
+       "v": 8,
+       "var": -1.2
+      },
+      {
+       "v": 7.4,
+       "var": 3.6
+      },
+      {
+       "v": 8.4,
+       "var": 1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 7.2,
+       "var": -12.2
+      },
+      {
+       "v": 8,
+       "var": 0
+      },
+      {
+       "v": 7.1,
+       "var": -4.8
+      },
+      {
+       "v": 8.4,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 8.3,
+       "var": 15.3
+      },
+      {
+       "v": 7.8,
+       "var": -2.5
+      },
+      {
+       "v": 7.2,
+       "var": 2.1
+      },
+      {
+       "v": 8.1,
+       "var": -3.6
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 8.1,
+       "var": -2.4
+      },
+      {
+       "v": 7.2,
+       "var": -7.7
+      },
+      {
+       "v": 6.6,
+       "var": -8
+      },
+      {
+       "v": 7.5,
+       "var": -7.4
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 6.7,
+       "var": -17.3
+      },
+      {
+       "v": 7.4,
+       "var": 2.8
+      },
+      {
+       "v": 7.2,
+       "var": 8.1
+      },
+      {
+       "v": 7.8,
+       "var": 4
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 7.7,
+       "var": 14.9
+      },
+      {
+       "v": 7.2,
+       "var": -2.7
+      },
+      {
+       "v": 7,
+       "var": -2.7
+      },
+      {
+       "v": 7.7,
+       "var": -1.3
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 7.5,
+       "var": -2.6
+      },
+      {
+       "v": 6.9,
+       "var": -4.2
+      },
+      {
+       "v": 6.7,
+       "var": -4.3
+      },
+      {
+       "v": 7.5,
+       "var": -2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "credito_habitacao_por_habitante",
+   "titulo": "Crédito à habitação por habitante",
+   "categoria": "economia",
+   "fonte": "INE - Estatísticas das instituições de crédito e sociedades financeiras",
+   "unidade": "€ por habitante",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 5181,
+       "var": null
+      },
+      {
+       "v": 12433,
+       "var": null
+      },
+      {
+       "v": 5819,
+       "var": null
+      },
+      {
+       "v": 9397,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 5827,
+       "var": 12.5
+      },
+      {
+       "v": 12046,
+       "var": -3.1
+      },
+      {
+       "v": 5741,
+       "var": -1.3
+      },
+      {
+       "v": 8938,
+       "var": -4.9
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 5085,
+       "var": -12.7
+      },
+      {
+       "v": 6361,
+       "var": -47.2
+      },
+      {
+       "v": 4908,
+       "var": -14.5
+      },
+      {
+       "v": 8685,
+       "var": -2.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "dormidas_por_100_habitantes",
+   "titulo": "Dormidas turísticas por 100 habitantes",
+   "categoria": "economia",
+   "fonte": "INE - Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+   "unidade": "dormidas por 100 habitantes",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 232.1,
+       "var": null
+      },
+      {
+       "v": 93.9,
+       "var": null
+      },
+      {
+       "v": 468.3,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 265.7,
+       "var": 14.5
+      },
+      {
+       "v": 86.7,
+       "var": -7.7
+      },
+      {
+       "v": 513.2,
+       "var": 9.6
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 302.7,
+       "var": 13.9
+      },
+      {
+       "v": 93.9,
+       "var": 8.3
+      },
+      {
+       "v": 572.6,
+       "var": 11.6
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 342.2,
+       "var": 13
+      },
+      {
+       "v": 108.3,
+       "var": 15.4
+      },
+      {
+       "v": 634.8,
+       "var": 10.9
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 367.2,
+       "var": 7.3
+      },
+      {
+       "v": 162.4,
+       "var": 49.9
+      },
+      {
+       "v": 657.9,
+       "var": 3.6
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 40.9,
+       "var": null
+      },
+      {
+       "v": 406.5,
+       "var": 10.7
+      },
+      {
+       "v": 168.1,
+       "var": 3.5
+      },
+      {
+       "v": 682.1,
+       "var": 3.7
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 29.3,
+       "var": -28.4
+      },
+      {
+       "v": 134.2,
+       "var": -67
+      },
+      {
+       "v": 104.3,
+       "var": -37.9
+      },
+      {
+       "v": 250.5,
+       "var": -63.3
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 28.3,
+       "var": -3.4
+      },
+      {
+       "v": 192.7,
+       "var": 43.6
+      },
+      {
+       "v": 136.4,
+       "var": 30.7
+      },
+      {
+       "v": 360.3,
+       "var": 43.8
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 35.7,
+       "var": 26.1
+      },
+      {
+       "v": 423.2,
+       "var": 119.6
+      },
+      {
+       "v": 197.3,
+       "var": 44.7
+      },
+      {
+       "v": 667.3,
+       "var": 85.2
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 38.5,
+       "var": 7.8
+      },
+      {
+       "v": 496.8,
+       "var": 17.4
+      },
+      {
+       "v": 208,
+       "var": 5.4
+      },
+      {
+       "v": 729.6,
+       "var": 9.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "pessoal_ao_servico",
+   "titulo": "Postos de trabalho localizados no território",
+   "categoria": "economia",
+   "fonte": "INE - Sistema de contas integradas das empresas",
+   "unidade": "postos de trabalho",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 15970,
+       "var": null
+      },
+      {
+       "v": 648657,
+       "var": null
+      },
+      {
+       "v": 277708,
+       "var": null
+      },
+      {
+       "v": 3732512,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 16082,
+       "var": 0.7
+      },
+      {
+       "v": 631473,
+       "var": -2.6
+      },
+      {
+       "v": 272475,
+       "var": -1.9
+      },
+      {
+       "v": 3631747,
+       "var": -2.7
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 15630,
+       "var": -2.8
+      },
+      {
+       "v": 596897,
+       "var": -5.5
+      },
+      {
+       "v": 260340,
+       "var": -4.5
+      },
+      {
+       "v": 3405269,
+       "var": -6.2
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 15303,
+       "var": -2.1
+      },
+      {
+       "v": 589565,
+       "var": -1.2
+      },
+      {
+       "v": 259479,
+       "var": -0.3
+      },
+      {
+       "v": 3377598,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 15958,
+       "var": 4.3
+      },
+      {
+       "v": 597784,
+       "var": 1.4
+      },
+      {
+       "v": 266402,
+       "var": 2.7
+      },
+      {
+       "v": 3449428,
+       "var": 2.1
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 16894,
+       "var": 5.9
+      },
+      {
+       "v": 619371,
+       "var": 3.6
+      },
+      {
+       "v": 277871,
+       "var": 4.3
+      },
+      {
+       "v": 3578913,
+       "var": 3.8
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 17422,
+       "var": 3.1
+      },
+      {
+       "v": 646444,
+       "var": 4.4
+      },
+      {
+       "v": 285898,
+       "var": 2.9
+      },
+      {
+       "v": 3704740,
+       "var": 3.5
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 18196,
+       "var": 4.4
+      },
+      {
+       "v": 676883,
+       "var": 4.7
+      },
+      {
+       "v": 296911,
+       "var": 3.9
+      },
+      {
+       "v": 3892218,
+       "var": 5.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 18942,
+       "var": 4.1
+      },
+      {
+       "v": 706921,
+       "var": 4.4
+      },
+      {
+       "v": 306658,
+       "var": 3.3
+      },
+      {
+       "v": 4060451,
+       "var": 4.3
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 19959,
+       "var": 5.4
+      },
+      {
+       "v": 737577,
+       "var": 4.3
+      },
+      {
+       "v": 311516,
+       "var": 1.6
+      },
+      {
+       "v": 4225538,
+       "var": 4.1
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 20345,
+       "var": 1.9
+      },
+      {
+       "v": 724016,
+       "var": -1.8
+      },
+      {
+       "v": 305841,
+       "var": -1.8
+      },
+      {
+       "v": 4140136,
+       "var": -2
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 21391,
+       "var": 5.1
+      },
+      {
+       "v": 739565,
+       "var": 2.1
+      },
+      {
+       "v": 312252,
+       "var": 2.1
+      },
+      {
+       "v": 4236222,
+       "var": 2.3
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 22777,
+       "var": 6.5
+      },
+      {
+       "v": 789360,
+       "var": 6.7
+      },
+      {
+       "v": 326078,
+       "var": 4.4
+      },
+      {
+       "v": 4487322,
+       "var": 5.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "populacao_empregada_residente",
+   "titulo": "Residentes empregados",
+   "categoria": "economia",
+   "fonte": "INE - Recenseamento da população e habitação (Censos 2011 e 2021)",
+   "unidade": "residentes empregados",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 16877,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 320637,
+       "var": null
+      },
+      {
+       "v": 4361187,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 18151,
+       "var": 7.5
+      },
+      {
+       "v": 758016,
+       "var": null
+      },
+      {
+       "v": 335557,
+       "var": 4.7
+      },
+      {
+       "v": 4426461,
+       "var": 1.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_derrama",
+   "titulo": "Receita de Derrama",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 984000,
+       "var": null
+      },
+      {
+       "v": 60085000,
+       "var": null
+      },
+      {
+       "v": 24877000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 2157000,
+       "var": 119.2
+      },
+      {
+       "v": 71782000,
+       "var": 19.5
+      },
+      {
+       "v": 30847000,
+       "var": 24
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 2490000,
+       "var": 15.4
+      },
+      {
+       "v": 83064000,
+       "var": 15.7
+      },
+      {
+       "v": 37159000,
+       "var": 20.5
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_imi",
+   "titulo": "Receita de IMI",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 5821000,
+       "var": null
+      },
+      {
+       "v": 232479000,
+       "var": null
+      },
+      {
+       "v": 92121000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 6064000,
+       "var": 4.2
+      },
+      {
+       "v": 232893000,
+       "var": 0.2
+      },
+      {
+       "v": 92623000,
+       "var": 0.5
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 6178000,
+       "var": 1.9
+      },
+      {
+       "v": 237114000,
+       "var": 1.8
+      },
+      {
+       "v": 92828000,
+       "var": 0.2
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_imt",
+   "titulo": "Receita de IMT",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 2096000,
+       "var": null
+      },
+      {
+       "v": 195840000,
+       "var": null
+      },
+      {
+       "v": 48138000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 2938000,
+       "var": 40.2
+      },
+      {
+       "v": 216488000,
+       "var": 10.5
+      },
+      {
+       "v": 59615000,
+       "var": 23.8
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 4177000,
+       "var": 42.2
+      },
+      {
+       "v": 230386000,
+       "var": 6.4
+      },
+      {
+       "v": 63342000,
+       "var": 6.3
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_iuc",
+   "titulo": "Receita de IUC",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 1110000,
+       "var": null
+      },
+      {
+       "v": 46677000,
+       "var": null
+      },
+      {
+       "v": 19442000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 1216000,
+       "var": 9.5
+      },
+      {
+       "v": 50305000,
+       "var": 7.8
+      },
+      {
+       "v": 21360000,
+       "var": 9.9
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 1329000,
+       "var": 9.3
+      },
+      {
+       "v": 53898000,
+       "var": 7.1
+      },
+      {
+       "v": 22978000,
+       "var": 7.6
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receita_participacao_irs",
+   "titulo": "Participação no IRS",
+   "categoria": "economia",
+   "fonte": "INE - Receitas dos municípios (fonte: Direção-Geral das Autarquias Locais)",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 1454000,
+       "var": null
+      },
+      {
+       "v": 102048000,
+       "var": null
+      },
+      {
+       "v": 30089000,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 1444000,
+       "var": -0.7
+      },
+      {
+       "v": 100801000,
+       "var": -1.2
+      },
+      {
+       "v": 30405000,
+       "var": 1.1
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 1667000,
+       "var": 15.4
+      },
+      {
+       "v": 107971000,
+       "var": 7.1
+      },
+      {
+       "v": 34325000,
+       "var": 12.9
+      },
+      {
+       "v": null,
+       "var": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "rendimento_mediano",
+   "titulo": "Rendimento líquido mediano (por agregado fiscal)",
+   "categoria": "economia",
+   "fonte": "INE - Estatísticas do rendimento ao nível local (dados fiscais AT)",
+   "unidade": "€ por agregado fiscal",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 11088,
+       "var": null
+      },
+      {
+       "v": 11546,
+       "var": null
+      },
+      {
+       "v": 10406,
+       "var": null
+      },
+      {
+       "v": 11528,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 11670,
+       "var": 5.2
+      },
+      {
+       "v": 11979,
+       "var": 3.8
+      },
+      {
+       "v": 10818,
+       "var": 4
+      },
+      {
+       "v": 11934,
+       "var": 3.5
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 11632,
+       "var": -0.3
+      },
+      {
+       "v": 12023,
+       "var": 0.4
+      },
+      {
+       "v": 10973,
+       "var": 1.4
+      },
+      {
+       "v": 11992,
+       "var": 0.5
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 12182,
+       "var": 4.7
+      },
+      {
+       "v": 12519,
+       "var": 4.1
+      },
+      {
+       "v": 11430,
+       "var": 4.2
+      },
+      {
+       "v": 12449,
+       "var": 3.8
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 13004,
+       "var": 6.7
+      },
+      {
+       "v": 13307,
+       "var": 6.3
+      },
+      {
+       "v": 12306,
+       "var": 7.7
+      },
+      {
+       "v": 13121,
+       "var": 5.4
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 13864,
+       "var": 6.6
+      },
+      {
+       "v": 14124,
+       "var": 6.1
+      },
+      {
+       "v": 13132,
+       "var": 6.7
+      },
+      {
+       "v": 13842,
+       "var": 5.5
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 15043,
+       "var": 8.5
+      },
+      {
+       "v": 15274,
+       "var": 8.1
+      },
+      {
+       "v": 14335,
+       "var": 9.2
+      },
+      {
+       "v": 14886,
+       "var": 7.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "taxa_credito_habitacao",
+   "titulo": "Taxa de crédito à habitação",
+   "categoria": "economia",
+   "fonte": "INE - Estatísticas das instituições de crédito e sociedades financeiras",
+   "unidade": "%",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 63.1,
+       "var": null
+      },
+      {
+       "v": 55.5,
+       "var": null
+      },
+      {
+       "v": 62.7,
+       "var": null
+      },
+      {
+       "v": 42.1,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 64.5,
+       "var": 2.3
+      },
+      {
+       "v": 55.8,
+       "var": 0.6
+      },
+      {
+       "v": 63,
+       "var": 0.5
+      },
+      {
+       "v": 41,
+       "var": -2.6
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 56.7,
+       "var": -12.1
+      },
+      {
+       "v": 43,
+       "var": -23
+      },
+      {
+       "v": 51.8,
+       "var": -17.8
+      },
+      {
+       "v": 38.6,
+       "var": -6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "vab",
+   "titulo": "Valor acrescentado bruto das empresas",
+   "categoria": "economia",
+   "fonte": "INE - Sistema de contas integradas das empresas",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 325813098,
+       "var": null
+      },
+      {
+       "v": 13681928927,
+       "var": null
+      },
+      {
+       "v": 5458220078,
+       "var": null
+      },
+      {
+       "v": 84955935549,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 308142917,
+       "var": -5.4
+      },
+      {
+       "v": 12790512758,
+       "var": -6.5
+      },
+      {
+       "v": 5102964418,
+       "var": -6.5
+      },
+      {
+       "v": 79339132352,
+       "var": -6.6
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 326958711,
+       "var": 6.1
+      },
+      {
+       "v": 11746276726,
+       "var": -8.2
+      },
+      {
+       "v": 4883468231,
+       "var": -4.3
+      },
+      {
+       "v": 73125519460,
+       "var": -7.8
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 398855979,
+       "var": 22
+      },
+      {
+       "v": 12026087422,
+       "var": 2.4
+      },
+      {
+       "v": 5130890348,
+       "var": 5.1
+      },
+      {
+       "v": 73111436585,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 385430253,
+       "var": -3.4
+      },
+      {
+       "v": 12503957491,
+       "var": 4
+      },
+      {
+       "v": 5392590868,
+       "var": 5.1
+      },
+      {
+       "v": 76130692143,
+       "var": 4.1
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 446705709,
+       "var": 15.9
+      },
+      {
+       "v": 13197946788,
+       "var": 5.6
+      },
+      {
+       "v": 5889718215,
+       "var": 9.2
+      },
+      {
+       "v": 80547613497,
+       "var": 5.8
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 435011757,
+       "var": -2.6
+      },
+      {
+       "v": 14108986572,
+       "var": 6.9
+      },
+      {
+       "v": 6216969370,
+       "var": 5.6
+      },
+      {
+       "v": 85410309530,
+       "var": 6
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 505792018,
+       "var": 16.3
+      },
+      {
+       "v": 15389107095,
+       "var": 9.1
+      },
+      {
+       "v": 6658352310,
+       "var": 7.1
+      },
+      {
+       "v": 92690115941,
+       "var": 8.5
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 512171588,
+       "var": 1.3
+      },
+      {
+       "v": 16431898605,
+       "var": 6.8
+      },
+      {
+       "v": 7011128163,
+       "var": 5.3
+      },
+      {
+       "v": 98652563812,
+       "var": 6.4
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 538812454,
+       "var": 5.2
+      },
+      {
+       "v": 17590879123,
+       "var": 7.1
+      },
+      {
+       "v": 7228149789,
+       "var": 3.1
+      },
+      {
+       "v": 104417694395,
+       "var": 5.8
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 580876796,
+       "var": 7.8
+      },
+      {
+       "v": 16099186647,
+       "var": -8.5
+      },
+      {
+       "v": 6874646348,
+       "var": -4.9
+      },
+      {
+       "v": 94186511795,
+       "var": -9.8
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 635702742,
+       "var": 9.4
+      },
+      {
+       "v": 18890467818,
+       "var": 17.3
+      },
+      {
+       "v": 7862117253,
+       "var": 14.4
+      },
+      {
+       "v": 108914356428,
+       "var": 15.6
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 709960972,
+       "var": 11.7
+      },
+      {
+       "v": 22225965236,
+       "var": 17.7
+      },
+      {
+       "v": 8891206674,
+       "var": 13.1
+      },
+      {
+       "v": 129486491297,
+       "var": 18.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "valor_mediano_habitacao",
+   "titulo": "Valor mediano de venda de habitação",
+   "categoria": "economia",
+   "fonte": "INE - Estatísticas de preços da habitação ao nível local",
+   "unidade": "€/m²",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 815,
+       "var": null
+      },
+      {
+       "v": 1108,
+       "var": null
+      },
+      {
+       "v": 794,
+       "var": null
+      },
+      {
+       "v": 1094,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 917,
+       "var": 12.5
+      },
+      {
+       "v": 1243,
+       "var": 12.2
+      },
+      {
+       "v": 862,
+       "var": 8.6
+      },
+      {
+       "v": 1190,
+       "var": 8.8
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 1033,
+       "var": 12.6
+      },
+      {
+       "v": 1370,
+       "var": 10.2
+      },
+      {
+       "v": 939,
+       "var": 8.8
+      },
+      {
+       "v": 1297,
+       "var": 9
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 1221,
+       "var": 18.2
+      },
+      {
+       "v": 1607,
+       "var": 17.3
+      },
+      {
+       "v": 1035,
+       "var": 10.3
+      },
+      {
+       "v": 1484,
+       "var": 14.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "volume_negocios",
+   "titulo": "Volume de negócios das empresas",
+   "categoria": "economia",
+   "fonte": "INE - Sistema de contas integradas das empresas",
+   "unidade": "€",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "linhas": [
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 1500070401,
+       "var": null
+      },
+      {
+       "v": 60271863940,
+       "var": null
+      },
+      {
+       "v": 22271010254,
+       "var": null
+      },
+      {
+       "v": 349491042733,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 1499488318,
+       "var": 0
+      },
+      {
+       "v": 57809972284,
+       "var": -4.1
+      },
+      {
+       "v": 21820189511,
+       "var": -2
+      },
+      {
+       "v": 341442775962,
+       "var": -2.3
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 1458183568,
+       "var": -2.8
+      },
+      {
+       "v": 53920612290,
+       "var": -6.7
+      },
+      {
+       "v": 20901870592,
+       "var": -4.2
+      },
+      {
+       "v": 320136230028,
+       "var": -6.2
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 1592357860,
+       "var": 9.2
+      },
+      {
+       "v": 52711323385,
+       "var": -2.2
+      },
+      {
+       "v": 21276459864,
+       "var": 1.8
+      },
+      {
+       "v": 317715144719,
+       "var": -0.8
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 1616329323,
+       "var": 1.5
+      },
+      {
+       "v": 53815272661,
+       "var": 2.1
+      },
+      {
+       "v": 22075897827,
+       "var": 3.8
+      },
+      {
+       "v": 323008553915,
+       "var": 1.7
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 1773203160,
+       "var": 9.7
+      },
+      {
+       "v": 55699204295,
+       "var": 3.5
+      },
+      {
+       "v": 23221270147,
+       "var": 5.2
+      },
+      {
+       "v": 331601856055,
+       "var": 2.7
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 1813053210,
+       "var": 2.2
+      },
+      {
+       "v": 58560404355,
+       "var": 5.1
+      },
+      {
+       "v": 24126493544,
+       "var": 3.9
+      },
+      {
+       "v": 340479969424,
+       "var": 2.7
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 2020756174,
+       "var": 11.5
+      },
+      {
+       "v": 63599985233,
+       "var": 8.6
+      },
+      {
+       "v": 26193460798,
+       "var": 8.6
+      },
+      {
+       "v": 371477802487,
+       "var": 9.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 2230060397,
+       "var": 10.4
+      },
+      {
+       "v": 66835089438,
+       "var": 5.1
+      },
+      {
+       "v": 27412586806,
+       "var": 4.7
+      },
+      {
+       "v": 396679490869,
+       "var": 6.8
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 2383677754,
+       "var": 6.9
+      },
+      {
+       "v": 69076484097,
+       "var": 3.4
+      },
+      {
+       "v": 28029737129,
+       "var": 2.3
+      },
+      {
+       "v": 412640613433,
+       "var": 4
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 2316213303,
+       "var": -2.8
+      },
+      {
+       "v": 63832031158,
+       "var": -7.6
+      },
+      {
+       "v": 26201371638,
+       "var": -6.5
+      },
+      {
+       "v": 371475656337,
+       "var": -10
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 2570494004,
+       "var": 11
+      },
+      {
+       "v": 73836960703,
+       "var": 15.7
+      },
+      {
+       "v": 30985338229,
+       "var": 18.3
+      },
+      {
+       "v": 430887867492,
+       "var": 16
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 2964607672,
+       "var": 15.3
+      },
+      {
+       "v": 87467034065,
+       "var": 18.5
+      },
+      {
+       "v": 36237001699,
+       "var": 16.9
+      },
+      {
+       "v": 533462568609,
+       "var": 23.8
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

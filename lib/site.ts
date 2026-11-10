@@ -42,7 +42,15 @@ export type NavItem = {
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
   { label: "Quem somos", href: "/trofa-liberal" },
-  { label: "Dados da Trofa", href: links.dados, external: true },
+  {
+    label: "Dados da Trofa",
+    href: links.dados,
+    external: true,
+    children: [
+      { label: "Portal original", href: links.dados, external: true },
+      { label: "Nova versão IL Trofa", href: "/dados" },
+    ],
+  },
   {
     label: "Ideias",
     href: "/ideias",
