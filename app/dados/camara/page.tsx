@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { camara } from "@/lib/dados/autarquia";
@@ -19,6 +20,9 @@ export default function Camara() {
           <p className="mt-4 max-w-2xl text-lg text-texto">
             As deliberações e as atas das reuniões do executivo municipal, tal como a Câmara as publica. Cada ponto traz
             o resultado e, quando houve votos contra ou abstenções, quem votou em cada sentido.
+          </p>
+          <p className="mt-3 text-sm text-texto">
+            Quem a compõe e o que faz: <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">ver Quem decide</Link>.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {[

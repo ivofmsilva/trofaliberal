@@ -18,6 +18,7 @@ const paginas = [
   "/dados/contratos/ajustes-diretos",
   "/dados/taxas",
   "/dados/votos",
+  "/dados/orgaos",
   "/dados/fontes",
   "/imprensa",
   "/imprensa/noticias",

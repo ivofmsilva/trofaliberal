@@ -15,6 +15,7 @@ const ligacoes = [
   { href: "/dados/contratos", rotulo: "Contratos" },
   { href: "/dados/fundos-europeus", rotulo: "Fundos europeus" },
   { href: "/dados/taxas", rotulo: "Taxas" },
+  { href: "/dados/orgaos", rotulo: "Quem decide" },
   { href: "/dados/camara", rotulo: "Câmara" },
   { href: "/dados/assembleia", rotulo: "Assembleia" },
   { href: "/dados/votos", rotulo: "Como votam" },

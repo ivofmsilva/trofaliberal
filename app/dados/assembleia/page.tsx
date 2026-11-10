@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { assembleia } from "@/lib/dados/autarquia";
@@ -45,6 +46,9 @@ export default function Assembleia() {
           <p className="mt-4 max-w-2xl text-lg text-texto">
             Os documentos das sessões da Assembleia Municipal, tal como o município os publica. Cada ligação abre o PDF
             original.
+          </p>
+          <p className="mt-3 text-sm text-texto">
+            Quem a compõe e o que faz: <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">ver Quem decide</Link>.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             <li>
