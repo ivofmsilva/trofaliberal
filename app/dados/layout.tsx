@@ -7,7 +7,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: { default: "Dados da Trofa — Iniciativa Liberal Trofa", template: "%s · Dados da Trofa" },
-  description: "Números oficiais sobre o concelho da Trofa, do INE e do Pordata, sem interpretação.",
+  description: "Números oficiais sobre o concelho da Trofa, do INE e do Pordata.",
 };
 
 const ligacoes = [

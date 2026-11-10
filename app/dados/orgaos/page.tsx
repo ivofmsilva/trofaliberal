@@ -3,19 +3,24 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Quem decide: Câmara e Assembleia",
-  description: "Quem faz parte da Câmara e da Assembleia Municipal da Trofa no mandato 2025–2029, quantos eleitos tem cada lista e o que cada órgão faz.",
+  description: "Quem faz parte da Câmara e da Assembleia Municipal da Trofa no mandato 2025–2029, quantos lugares tem cada bancada e o que cada órgão faz.",
 };
 
 const FONTE_ASSEMBLEIA = "https://mun-trofa.pt/menu/129/constituicao";
 const FONTE_CAMARA =
   "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Deliberacoes_Ata_25_2025_29_outubro.pdf";
 
-// Mapa da Assembleia (mun-trofa.pt, página Constituição, mandato 2025–2029).
-const assembleia = [
-  { lista: "Unidos pela Trofa (PPD/PSD.CDS-PP)", eleitos: 8 },
-  { lista: "Trofa em Primeiro (PS-PAN-L)", eleitos: 6 },
-  { lista: "TDT (A Trofa é de Todos)", eleitos: 5 },
-  { lista: "Chega", eleitos: 2 },
+type Bancada = { nome: string; cor: string; n: number; nota?: string };
+
+// Assembleia: os lugares por bancada são os que a própria Assembleia conta nas suas votações desde dezembro de 2025
+// (PSD 12 + CDS-PP 2 + PS 6 + TDT 5 + Chega 2 = 27). Dos 21 eleitos, 8 são da lista PSD/CDS-PP; os 6 presidentes de junta
+// completam as 14 desta bancada (os outros grupos têm tantos lugares quanto eleitos).
+const assembleia: Bancada[] = [
+  { nome: "PSD", cor: "#e8812e", n: 12 },
+  { nome: "CDS-PP", cor: "#2b7bbf", n: 2 },
+  { nome: "PS", cor: "#d6457a", n: 6 },
+  { nome: "TDT", cor: "#2f9e6b", n: 5 },
+  { nome: "Chega", cor: "#26306b", n: 2 },
 ];
 const juntas = [
   ["Alvarelhos", "Sónia Vanessa Vieira Maia"],
@@ -25,20 +30,44 @@ const juntas = [
   ["Guidões", "Joaquim Fernando Maia Ferreira"],
   ["Muro", "José Fernando da Costa Martins"],
 ];
-// Câmara: 7 membros (presidente + 6 vereadores), como a própria Câmara descreve a votação de 29 de outubro de 2025.
-const camara = [
-  { lista: "Unidos pela Trofa (PPD/PSD–CDS/PP)", eleitos: 3 },
-  { lista: "Trofa em Primeiro (PS/PAN/L)", eleitos: 2 },
-  { lista: "TDT (A Trofa é de Todos)", eleitos: 2 },
+// Câmara: 7 lugares (presidente + 6 vereadores), como a própria Câmara descreve a votação de 29 de outubro de 2025.
+const camara: Bancada[] = [
+  { nome: "Unidos pela Trofa (PSD/CDS-PP)", cor: "#e8812e", n: 3 },
+  { nome: "Trofa em Primeiro (PS/PAN/L)", cor: "#d6457a", n: 2 },
+  { nome: "TDT (A Trofa é de Todos)", cor: "#2f9e6b", n: 2 },
 ];
 
-function Quadrados({ n, cheio = true }: { n: number; cheio?: boolean }) {
+function Pontos({ bancadas, titulo }: { bancadas: Bancada[]; titulo: string }) {
   return (
-    <span className="inline-flex gap-1" aria-hidden="true">
-      {Array.from({ length: n }).map((_, i) => (
-        <span key={i} className={`h-3 w-3 rounded-sm ${cheio ? "bg-tinta" : "bg-apagado/50"}`} />
+    <div role="img" aria-label={titulo} className="flex flex-wrap gap-x-4 gap-y-3">
+      {bancadas.map((b) => (
+        <span key={b.nome} className="inline-flex gap-1.5">
+          {Array.from({ length: b.n }).map((_, i) => (
+            <span key={i} className="h-5 w-5 rounded-full" style={{ backgroundColor: b.cor }} />
+          ))}
+        </span>
       ))}
-    </span>
+    </div>
+  );
+}
+
+function Legenda({ bancadas }: { bancadas: Bancada[] }) {
+  return (
+    <div className="mt-5 overflow-hidden rounded-xl border border-linha">
+      <table className="w-full text-sm">
+        <tbody>
+          {bancadas.map((b) => (
+            <tr key={b.nome} className="border-t border-linha first:border-t-0">
+              <th scope="row" className="px-4 py-3 text-left font-medium text-tinta">
+                <span className="mr-3 inline-block h-3.5 w-3.5 rounded-full align-[-2px]" style={{ backgroundColor: b.cor }} />
+                {b.nome}
+              </th>
+              <td className="px-4 py-3 text-right text-lg font-bold tabular-nums text-tinta">{b.n}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -82,7 +111,13 @@ export default function Orgaos() {
               <li>Prepara o orçamento e o plano do município e propõe-nos à Assembleia.</li>
               <li>Executa o que a Assembleia aprova.</li>
               <li>Decide obras, urbanismo e licenciamentos, ação social, educação, cultura e desporto.</li>
-              <li>Faz as compras e contratos públicos do município (veja os <Link href="/dados/contratos" className="underline underline-offset-2 hover:text-tinta">contratos</Link>).</li>
+              <li>
+                Faz as compras e contratos públicos do município (veja os{" "}
+                <Link href="/dados/contratos" className="underline underline-offset-2 hover:text-tinta">
+                  contratos
+                </Link>
+                ).
+              </li>
               <li>O presidente pode entregar áreas (pelouros) a vereadores, mas todos os 7 votam nas reuniões.</li>
             </ul>
             <p className="mt-4 max-w-xl text-sm text-apagado">
@@ -94,24 +129,11 @@ export default function Orgaos() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-tinta">Quantos eleitos tem cada lista</h3>
-            <div className="mt-4 overflow-hidden rounded-xl border border-linha">
-              <table className="w-full text-sm">
-                <tbody>
-                  {camara.map((c) => (
-                    <tr key={c.lista} className="border-t border-linha first:border-t-0">
-                      <th scope="row" className="px-4 py-3 text-left font-medium text-tinta">
-                        {c.lista}
-                      </th>
-                      <td className="px-4 py-3">
-                        <Quadrados n={c.eleitos} />
-                      </td>
-                      <td className="px-4 py-3 text-right text-lg font-bold tabular-nums text-tinta">{c.eleitos}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <h3 className="text-lg font-bold text-tinta">Quantos lugares tem cada lista</h3>
+            <div className="mt-4">
+              <Pontos bancadas={camara} titulo="7 lugares na Câmara: 3 Unidos pela Trofa, 2 Trofa em Primeiro, 2 TDT" />
             </div>
+            <Legenda bancadas={camara} />
             <p className="mt-3 text-sm text-texto">
               Presidente: <strong className="font-semibold text-tinta">Sérgio Araújo</strong>, da lista Unidos pela Trofa.
               Nenhuma lista tem sozinha a maioria dos 7 votos (são precisos 4).
@@ -141,7 +163,13 @@ export default function Orgaos() {
             <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.12em] text-apagado">O que faz</h3>
             <ul className="mt-3 max-w-xl list-disc space-y-1.5 pl-5 text-texto marker:text-apagado">
               <li>Aprova o orçamento e as grandes opções do plano do município.</li>
-              <li>Fixa os impostos locais, como o IMI, a participação no IRS e a derrama (veja as <Link href="/dados/taxas" className="underline underline-offset-2 hover:text-tinta">taxas</Link>).</li>
+              <li>
+                Fixa os impostos locais, como o IMI, a participação no IRS e a derrama (veja as{" "}
+                <Link href="/dados/taxas" className="underline underline-offset-2 hover:text-tinta">
+                  taxas
+                </Link>
+                ).
+              </li>
               <li>Aprova regulamentos municipais e autoriza empréstimos.</li>
               <li>Acompanha e fiscaliza a atividade da Câmara, que lhe presta contas em cada sessão.</li>
             </ul>
@@ -155,37 +183,19 @@ export default function Orgaos() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-tinta">Quantos membros tem cada lista</h3>
-            <div className="mt-4 overflow-hidden rounded-xl border border-linha">
-              <table className="w-full text-sm">
-                <tbody>
-                  {assembleia.map((c) => (
-                    <tr key={c.lista} className="border-t border-linha first:border-t-0">
-                      <th scope="row" className="px-4 py-3 text-left font-medium text-tinta">
-                        {c.lista}
-                      </th>
-                      <td className="hidden px-4 py-3 sm:table-cell">
-                        <Quadrados n={c.eleitos} />
-                      </td>
-                      <td className="px-4 py-3 text-right text-lg font-bold tabular-nums text-tinta">{c.eleitos}</td>
-                    </tr>
-                  ))}
-                  <tr className="border-t border-linha bg-suave">
-                    <th scope="row" className="px-4 py-3 text-left font-medium text-tinta">
-                      Presidentes de junta (por inerência)
-                    </th>
-                    <td className="hidden px-4 py-3 sm:table-cell">
-                      <Quadrados n={6} cheio={false} />
-                    </td>
-                    <td className="px-4 py-3 text-right text-lg font-bold tabular-nums text-tinta">6</td>
-                  </tr>
-                </tbody>
-              </table>
+            <h3 className="text-lg font-bold text-tinta">Quantos lugares tem cada bancada</h3>
+            <div className="mt-4">
+              <Pontos bancadas={assembleia} titulo="27 lugares na Assembleia: 12 PSD, 2 CDS-PP, 6 PS, 5 TDT, 2 Chega" />
             </div>
+            <Legenda bancadas={assembleia} />
             <p className="mt-3 text-sm text-texto">
-              São 21 eleitos mais 6 presidentes de junta, ou seja, 27 membros. A mesa é presidida por{" "}
-              <strong className="font-semibold text-tinta">António Rodrigues da Costa Pontes</strong> (Unidos pela Trofa),
-              com Carlos Alberto de Sá Martins e Sónia Cristina Sousa Nunes como secretários.
+              O PSD e o CDS-PP concorreram juntos (coligação Unidos pela Trofa) e votam como uma só bancada: 14 lugares. São
+              os 8 eleitos da lista mais os 6 presidentes de junta. O PAN e o Livre integram a coligação Trofa em Primeiro,
+              mas não elegeram ninguém: a bancada conta-se só como PS. Para a maioria dos 27 lugares são precisos 14.
+            </p>
+            <p className="mt-3 text-sm text-texto">
+              A mesa é presidida por <strong className="font-semibold text-tinta">António Rodrigues da Costa Pontes</strong>{" "}
+              (Unidos pela Trofa), com Carlos Alberto de Sá Martins e Sónia Cristina Sousa Nunes como secretários.
             </p>
 
             <h3 className="mt-8 text-lg font-bold text-tinta">Os 6 presidentes de junta</h3>
@@ -201,9 +211,12 @@ export default function Orgaos() {
               Fonte:{" "}
               <a href={FONTE_ASSEMBLEIA} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
                 Constituição da Assembleia Municipal, mandato 2025–2029 ↗
-              </a>
-              . Os membros por inerência são, por lei, os presidentes das juntas de freguesia; a página da Assembleia não
-              indica a lista de cada um.
+              </a>{" "}
+              (21 eleitos por lista e os 6 membros por inerência). Os lugares por bancada vêm das votações da Assembleia desde
+              dezembro de 2025, onde cada bancada é contada com os seus membros.{" "}
+              <Link href="/dados/assembleia" className="underline underline-offset-2 hover:text-tinta">
+                Ver as deliberações ↗
+              </Link>
             </p>
           </div>
         </section>
