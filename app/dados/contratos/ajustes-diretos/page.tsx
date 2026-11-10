@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
+import SubNav from "@/components/dados/SubNav";
 import { compacto, numero } from "@/lib/dados/formatar";
 import { contratos, resumoAjustes } from "@/lib/dados/transparencia";
 
@@ -18,6 +19,7 @@ export default function AjustesDiretos() {
 
   return (
     <>
+      <SubNav atual="ajustes" />
       <section className="border-b border-linha bg-suave">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <Link href="/dados/contratos" className="text-sm text-apagado hover:text-tinta hover:underline">

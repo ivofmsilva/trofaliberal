@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ComoVotam from "@/components/dados/ComoVotam";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { camara } from "@/lib/dados/autarquia";
@@ -22,10 +23,11 @@ export default function Camara() {
             o resultado e, quando houve votos contra ou abstenções, quem votou em cada sentido.
           </p>
           <p className="mt-3 text-sm text-texto">
-            Quem a compõe e o que faz: <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">ver Quem decide</Link>.
+            <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">← Quem decide: composição e funções</Link>
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {[
+              ["como-votam", "Como votam"],
               ["votacoes", "Deliberações"],
               ["atas", "Atas"],
             ].map(([id, nome]) => (
@@ -40,6 +42,11 @@ export default function Camara() {
       </section>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <section id="como-votam" className="scroll-mt-6 border-b border-linha py-12">
+          <h2 className="text-2xl font-bold tracking-tight text-tinta">Como votam</h2>
+          <p className="mt-2 mb-6 max-w-2xl text-texto">Quantas decisões são tomadas por unanimidade e, nas que não são, como votou cada lista. Contado a partir das deliberações publicadas, sem comentários.</p>
+          <ComoVotam corpo="camara" />
+        </section>
         <section id="votacoes" className="scroll-mt-6 border-b border-linha py-12">
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Deliberações</h2>
           <p className="mt-2 mb-6 max-w-2xl text-texto">

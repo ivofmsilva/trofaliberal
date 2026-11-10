@@ -12,14 +12,9 @@ export const metadata: Metadata = {
 
 const ligacoes = [
   { href: "/dados#temas", rotulo: "Indicadores" },
-  { href: "/dados/contratos", rotulo: "Contratos" },
-  { href: "/dados/fundos-europeus", rotulo: "Fundos europeus" },
+  { href: "/dados/contratos", rotulo: "Contratos e fundos" },
   { href: "/dados/financas", rotulo: "Finanças" },
-  { href: "/dados/taxas", rotulo: "Taxas" },
   { href: "/dados/orgaos", rotulo: "Quem decide" },
-  { href: "/dados/camara", rotulo: "Câmara" },
-  { href: "/dados/assembleia", rotulo: "Assembleia" },
-  { href: "/dados/votos", rotulo: "Como votam" },
   { href: "/dados/fontes", rotulo: "Fontes" },
 ];
 

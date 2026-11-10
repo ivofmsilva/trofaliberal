@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ComoVotam from "@/components/dados/ComoVotam";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import Votacoes from "@/components/dados/Votacoes";
 import { assembleia } from "@/lib/dados/autarquia";
@@ -48,9 +49,14 @@ export default function Assembleia() {
             original.
           </p>
           <p className="mt-3 text-sm text-texto">
-            Quem a compõe e o que faz: <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">ver Quem decide</Link>.
+            <Link href="/dados/orgaos" className="underline underline-offset-2 hover:text-tinta">← Quem decide: composição e funções</Link>
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
+            <li>
+              <a href="#como-votam" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
+                Como votam
+              </a>
+            </li>
             <li>
               <a href="#votacoes" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
                 Votações
@@ -68,6 +74,11 @@ export default function Assembleia() {
       </section>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <section id="como-votam" className="scroll-mt-6 border-b border-linha py-12">
+          <h2 className="text-2xl font-bold tracking-tight text-tinta">Como votam</h2>
+          <p className="mt-2 mb-6 max-w-2xl text-texto">Quantas decisões são tomadas por unanimidade e, nas que não são, como votou cada lista. Contado a partir das deliberações publicadas, sem comentários.</p>
+          <ComoVotam corpo="assembleia" />
+        </section>
         <section id="votacoes" className="scroll-mt-6 border-b border-linha py-12">
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Votações</h2>
           <p className="mt-2 mb-6 max-w-2xl text-texto">

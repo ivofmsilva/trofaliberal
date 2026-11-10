@@ -1,16 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Grafico from "@/components/dados/Grafico";
 import { dataCurta, derrama, imi, irs, pc, textoVoto } from "@/lib/dados/taxas";
 
-export const metadata: Metadata = {
-  title: "Taxas e impostos locais",
-  description: "O IMI, a participação no IRS e a derrama que a Assembleia Municipal da Trofa fixou em cada ano, e como votou.",
-};
-
 const ultimo = <T,>(l: T[], ok: (x: T) => boolean) => [...l].reverse().find(ok);
 
-export default function Taxas() {
+export default function TaxasLocais() {
   const imiAtual = ultimo(imi, (x) => x.urbanos !== null)!;
   const irsAtual = ultimo(irs, (x) => x.percentagem !== null && !x.retificacao)!;
   const derramaAtual = ultimo(derrama, (x) => x.normal !== null)!;
@@ -26,15 +20,15 @@ export default function Taxas() {
 
   return (
     <>
-      <section className="border-b border-linha bg-suave">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Finanças locais</p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Taxas e impostos locais</h1>
-          <p className="mt-4 max-w-2xl text-lg text-texto">
-            Todos os anos, no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a
-            derrama. Aqui está o que decidiu desde 2015 e como votou cada vez.
-          </p>
-          <dl className="mt-8 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
+      <div>
+        <h2 id="taxas" className="scroll-mt-24 text-2xl font-bold tracking-tight text-tinta">
+          Taxas e impostos locais
+        </h2>
+        <p className="mt-2 max-w-2xl text-texto">
+          Todos os anos, no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
+          Aqui está o que decidiu desde 2015 e como votou cada vez.
+        </p>
+        <dl className="mt-6 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">
               <dt className="text-sm text-texto">IMI, prédios urbanos</dt>
               <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{pc(imiAtual.urbanos)}</dd>
@@ -56,12 +50,11 @@ export default function Taxas() {
               <dd className="text-sm text-apagado">reduzida: {pc(derramaAtual.reduzida)}</dd>
             </div>
           </dl>
-        </div>
-      </section>
+      </div>
 
-      <div className="mx-auto max-w-6xl space-y-20 px-4 py-14 sm:px-6">
+      <div className="space-y-14">
         <section aria-label="IMI">
-          <h2 className="text-2xl font-bold tracking-tight text-tinta">IMI: Imposto Municipal sobre Imóveis</h2>
+          <h3 className="text-xl font-bold tracking-tight text-tinta">IMI: Imposto Municipal sobre Imóveis</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             A taxa para os prédios urbanos, ano de aplicação a ano de aplicação. A dos prédios rústicos é 0,8% em todos os
             anos em que o valor consta.
@@ -85,7 +78,7 @@ export default function Taxas() {
         </section>
 
         <section aria-label="IRS">
-          <h2 className="text-2xl font-bold tracking-tight text-tinta">Participação variável no IRS</h2>
+          <h3 className="text-xl font-bold tracking-tight text-tinta">Participação variável no IRS</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             A percentagem do IRS dos residentes que o município fica a receber (o resto vai para o Estado).
           </p>
@@ -115,7 +108,7 @@ export default function Taxas() {
         </section>
 
         <section aria-label="Derrama">
-          <h2 className="text-2xl font-bold tracking-tight text-tinta">Derrama</h2>
+          <h3 className="text-xl font-bold tracking-tight text-tinta">Derrama</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             Imposto sobre o lucro das empresas com sede no concelho. Há uma taxa normal e, desde 2020, uma reduzida para as
             empresas com menor volume de negócios.

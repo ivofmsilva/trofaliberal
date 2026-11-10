@@ -9,6 +9,8 @@ const antigas: [string, string][] = [
   ["/denuncia", "/participa?t=denuncia"],
   ["/ideias/sugestao", "/participa?t=ideia"],
   ["/eventos", "/imprensa?t=eventos"],
+  ["/dados/taxas", "/dados/financas#taxas"],
+  ["/dados/votos", "/dados/camara#como-votam"],
 ];
 
 const nextConfig: NextConfig = {

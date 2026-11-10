@@ -16,19 +16,18 @@ type Bancada = { nome: string; cor: string; n: number; nota?: string };
 // (PSD 12 + CDS-PP 2 + PS 6 + TDT 5 + Chega 2 = 27). Dos 21 eleitos, 8 são da lista PSD/CDS-PP; os 6 presidentes de junta
 // completam as 14 desta bancada (os outros grupos têm tantos lugares quanto eleitos).
 const assembleia: Bancada[] = [
-  { nome: "PSD", cor: "#e8812e", n: 12 },
-  { nome: "CDS-PP", cor: "#2b7bbf", n: 2 },
+  { nome: "PSD/CDS-PP (Unidos pela Trofa)", cor: "#e8812e", n: 14, nota: "12 do PSD e 2 do CDS-PP" },
   { nome: "PS", cor: "#d6457a", n: 6 },
   { nome: "TDT", cor: "#2f9e6b", n: 5 },
   { nome: "Chega", cor: "#26306b", n: 2 },
 ];
 const juntas = [
-  ["Alvarelhos", "Sónia Vanessa Vieira Maia"],
-  ["União das freguesias de Bougado (São Martinho e Santiago)", "Jorge Rodrigues Campos"],
-  ["União das freguesias do Coronado (São Romão e São Mamede)", "Ricardo Augusto Oliveira dos Santos"],
-  ["Covelas", "Alexandra Filipa Campos Ferreira"],
-  ["Guidões", "Joaquim Fernando Maia Ferreira"],
-  ["Muro", "José Fernando da Costa Martins"],
+  ["Alvarelhos", "Sónia Maia"],
+  ["União das freguesias de Bougado (São Martinho e Santiago)", "Jorge Campos"],
+  ["União das freguesias do Coronado (São Romão e São Mamede)", "Ricardo Santos"],
+  ["Covelas", "Alexandra Ferreira"],
+  ["Guidões", "Joaquim Ferreira"],
+  ["Muro", "José Martins"],
 ];
 // Câmara: 7 lugares (presidente + 6 vereadores), como a própria Câmara descreve a votação de 29 de outubro de 2025.
 const camara: Bancada[] = [
@@ -61,6 +60,7 @@ function Legenda({ bancadas }: { bancadas: Bancada[] }) {
               <th scope="row" className="px-4 py-3 text-left font-medium text-tinta">
                 <span className="mr-3 inline-block h-3.5 w-3.5 rounded-full align-[-2px]" style={{ backgroundColor: b.cor }} />
                 {b.nome}
+                {b.nota && <span className="ml-2 font-normal text-apagado">({b.nota})</span>}
               </th>
               <td className="px-4 py-3 text-right text-lg font-bold tabular-nums text-tinta">{b.n}</td>
             </tr>
@@ -120,13 +120,10 @@ export default function Orgaos() {
               </li>
               <li>O presidente pode entregar áreas (pelouros) a vereadores, mas todos os 7 votam nas reuniões.</li>
             </ul>
-            <p className="mt-4 max-w-xl text-sm text-apagado">
-              Reúne de quinze em quinze dias, em reunião pública, e as deliberações ficam publicadas.{" "}
-              <Link href="/dados/camara" className="underline underline-offset-2 hover:text-tinta">
-                Ver deliberações da Câmara
-              </Link>
-              .
-            </p>
+            <p className="mt-4 max-w-xl text-sm text-apagado">Reúne de quinze em quinze dias, em reunião pública, e as deliberações ficam publicadas.</p>
+            <Link href="/dados/camara" className="mt-5 inline-block rounded-full border border-linha bg-fundo px-5 py-2.5 text-sm font-semibold text-tinta transition hover:border-tinta">
+              Deliberações e atas da Câmara →
+            </Link>
           </div>
           <div>
             <h3 className="text-lg font-bold text-tinta">Quantos lugares tem cada lista</h3>
@@ -158,14 +155,14 @@ export default function Orgaos() {
             <p className="mt-2 max-w-xl text-texto">
               É o órgão deliberativo e de fiscalização: onde se votam as decisões mais importantes e se acompanha o que a
               Câmara faz. É composta por membros eleitos diretamente pelos eleitores do concelho e, por inerência de funções,
-              pelos presidentes das juntas de freguesia. Os eleitos têm de ser sempre mais do que os presidentes de junta.
+              pelos presidentes das juntas de freguesia.
             </p>
             <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.12em] text-apagado">O que faz</h3>
             <ul className="mt-3 max-w-xl list-disc space-y-1.5 pl-5 text-texto marker:text-apagado">
               <li>Aprova o orçamento e as grandes opções do plano do município.</li>
               <li>
                 Fixa os impostos locais, como o IMI, a participação no IRS e a derrama (veja as{" "}
-                <Link href="/dados/taxas" className="underline underline-offset-2 hover:text-tinta">
+                <Link href="/dados/financas#taxas" className="underline underline-offset-2 hover:text-tinta">
                   taxas
                 </Link>
                 ).
@@ -174,28 +171,28 @@ export default function Orgaos() {
               <li>Acompanha e fiscaliza a atividade da Câmara, que lhe presta contas em cada sessão.</li>
             </ul>
             <p className="mt-4 max-w-xl text-sm text-apagado">
-              Tem cinco sessões ordinárias por ano (fevereiro, abril, junho, setembro e novembro ou dezembro), abertas ao
-              público.{" "}
-              <Link href="/dados/assembleia" className="underline underline-offset-2 hover:text-tinta">
-                Ver deliberações da Assembleia
-              </Link>
-              .
+              Tem cinco sessões ordinárias por ano (fevereiro, abril, junho, setembro e novembro ou dezembro), abertas ao público.
             </p>
+            <Link href="/dados/assembleia" className="mt-5 inline-block rounded-full border border-linha bg-fundo px-5 py-2.5 text-sm font-semibold text-tinta transition hover:border-tinta">
+              Deliberações e atas da Assembleia →
+            </Link>
           </div>
           <div>
             <h3 className="text-lg font-bold text-tinta">Quantos lugares tem cada bancada</h3>
             <div className="mt-4">
-              <Pontos bancadas={assembleia} titulo="27 lugares na Assembleia: 12 PSD, 2 CDS-PP, 6 PS, 5 TDT, 2 Chega" />
+              <Pontos bancadas={assembleia} titulo="27 lugares na Assembleia: 14 PSD/CDS-PP, 6 PS, 5 TDT, 2 Chega" />
             </div>
             <Legenda bancadas={assembleia} />
             <p className="mt-3 text-sm text-texto">
-              O PSD e o CDS-PP concorreram juntos (coligação Unidos pela Trofa) e votam como uma só bancada: 14 lugares. São
-              os 8 eleitos da lista mais os 6 presidentes de junta. O PAN e o Livre integram a coligação Trofa em Primeiro,
-              mas não elegeram ninguém: a bancada conta-se só como PS. Para a maioria dos 27 lugares são precisos 14.
+              O PSD e o CDS-PP concorreram juntos (coligação Unidos pela Trofa) e somam 14 lugares: 12 do PSD e 2 do CDS-PP.
+              Entre os 14 estão os 8 eleitos da lista e os 6 presidentes de junta. Nas votações da Assembleia os presidentes
+              de junta contam-se na bancada do seu partido e, pelas contas, os 6 estão nesta; as outras bancadas têm tantos
+              lugares como eleitos. O PAN e o Livre integram a coligação Trofa em Primeiro, mas não elegeram ninguém: a
+              bancada conta-se só como PS. Para a maioria dos 27 lugares são precisos 14.
             </p>
             <p className="mt-3 text-sm text-texto">
-              A mesa é presidida por <strong className="font-semibold text-tinta">António Rodrigues da Costa Pontes</strong>{" "}
-              (Unidos pela Trofa), com Carlos Alberto de Sá Martins e Sónia Cristina Sousa Nunes como secretários.
+              A mesa é presidida por <strong className="font-semibold text-tinta">António Pontes</strong>{" "}
+              (Unidos pela Trofa), com Carlos Martins e Sónia Nunes como secretários.
             </p>
 
             <h3 className="mt-8 text-lg font-bold text-tinta">Os 6 presidentes de junta</h3>
@@ -221,10 +218,19 @@ export default function Orgaos() {
           </div>
         </section>
 
+        <p className="max-w-3xl text-sm text-texto">
+          Há ainda as assembleias de freguesia das 6 freguesias do concelho (Alvarelhos, Bougado, Coronado, Covelas, Guidões e
+          Muro), que têm as suas próprias juntas, mas não são abordadas aqui.
+        </p>
+
         <p className="max-w-3xl text-sm text-apagado">
-          Para ver como cada lista votou, abra{" "}
-          <Link href="/dados/votos" className="underline underline-offset-2 hover:text-tinta">
-            Como votam
+          Para ver como cada lista votou, abra as páginas da{" "}
+          <Link href="/dados/camara#como-votam" className="underline underline-offset-2 hover:text-tinta">
+            Câmara
+          </Link>{" "}
+          ou da{" "}
+          <Link href="/dados/assembleia#como-votam" className="underline underline-offset-2 hover:text-tinta">
+            Assembleia
           </Link>
           . Os números são os da instalação dos órgãos, em outubro e novembro de 2025.
         </p>
