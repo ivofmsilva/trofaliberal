@@ -1,0 +1,377 @@
+[
+ {
+  "data": "2026-09-25",
+  "tipo": "ordinária",
+  "pontos": 34
+ },
+ {
+  "data": "2026-06-26",
+  "tipo": "ordinária",
+  "pontos": 26
+ },
+ {
+  "data": "2026-04-28",
+  "tipo": "ordinária",
+  "pontos": 37
+ },
+ {
+  "data": "2025-12-29",
+  "tipo": "ordinária",
+  "pontos": 33
+ },
+ {
+  "data": "2025-12-09",
+  "tipo": "extraordinária",
+  "pontos": 21
+ },
+ {
+  "data": "2025-09-23",
+  "tipo": "extraordinária",
+  "pontos": 2
+ },
+ {
+  "data": "2025-09-05",
+  "tipo": "ordinária",
+  "pontos": 16
+ },
+ {
+  "data": "2025-07-31",
+  "tipo": "extraordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2025-06-16",
+  "tipo": "ordinária",
+  "pontos": 22
+ },
+ {
+  "data": "2025-04-30",
+  "tipo": "ordinária",
+  "pontos": 24
+ },
+ {
+  "data": "2025-03-14",
+  "tipo": "extraordinária",
+  "pontos": 14
+ },
+ {
+  "data": "2025-02-13",
+  "tipo": "ordinária",
+  "pontos": 31
+ },
+ {
+  "data": "2024-12-19",
+  "tipo": "extraordinária",
+  "pontos": 8
+ },
+ {
+  "data": "2024-11-28",
+  "tipo": "ordinária",
+  "pontos": 32
+ },
+ {
+  "data": "2024-09-27",
+  "tipo": "ordinária",
+  "pontos": 28
+ },
+ {
+  "data": "2024-06-27",
+  "tipo": "ordinária",
+  "pontos": 8
+ },
+ {
+  "data": "2024-04-22",
+  "tipo": "ordinária",
+  "pontos": 19
+ },
+ {
+  "data": "2024-02-29",
+  "tipo": "extraordinária",
+  "pontos": 11
+ },
+ {
+  "data": "2024-02-02",
+  "tipo": "ordinária",
+  "pontos": 17
+ },
+ {
+  "data": "2023-12-15",
+  "tipo": "ordinária",
+  "pontos": 32
+ },
+ {
+  "data": "2023-09-15",
+  "tipo": "ordinária",
+  "pontos": 20
+ },
+ {
+  "data": "2023-07-13",
+  "tipo": "extraordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2023-06-28",
+  "tipo": "ordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2023-04-12",
+  "tipo": "ordinária",
+  "pontos": 11
+ },
+ {
+  "data": "2023-02-27",
+  "tipo": "ordinária",
+  "pontos": 31
+ },
+ {
+  "data": "2022-12-07",
+  "tipo": "ordinária",
+  "pontos": 29
+ },
+ {
+  "data": "2022-09-30",
+  "tipo": "ordinária",
+  "pontos": 25
+ },
+ {
+  "data": "2022-07-28",
+  "tipo": "extraordinária",
+  "pontos": 6
+ },
+ {
+  "data": "2022-06-27",
+  "tipo": "ordinária",
+  "pontos": 13
+ },
+ {
+  "data": "2022-04-22",
+  "tipo": "ordinária",
+  "pontos": 21
+ },
+ {
+  "data": "2022-02-25",
+  "tipo": "ordinária",
+  "pontos": 14
+ },
+ {
+  "data": "2022-01-18",
+  "tipo": "extraordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2021-12-06",
+  "tipo": "ordinária",
+  "pontos": 39
+ },
+ {
+  "data": "2021-08-25",
+  "tipo": "extraordinária",
+  "pontos": 18
+ },
+ {
+  "data": "2021-06-22",
+  "tipo": "ordinária",
+  "pontos": 16
+ },
+ {
+  "data": "2021-04-30",
+  "tipo": "ordinária",
+  "pontos": 25
+ },
+ {
+  "data": "2021-02-26",
+  "tipo": "ordinária",
+  "pontos": 15
+ },
+ {
+  "data": "2021-01-19",
+  "tipo": "extraordinária",
+  "pontos": 5
+ },
+ {
+  "data": "2020-12-03",
+  "tipo": "ordinária",
+  "pontos": 21
+ },
+ {
+  "data": "2020-06-26",
+  "tipo": "ordinária",
+  "pontos": 21
+ },
+ {
+  "data": "2020-04-29",
+  "tipo": "ordinária",
+  "pontos": 18
+ },
+ {
+  "data": "2020-02-28",
+  "tipo": "ordinária",
+  "pontos": 15
+ },
+ {
+  "data": "2019-12-23",
+  "tipo": "extraordinária",
+  "pontos": 14
+ },
+ {
+  "data": "2019-12-02",
+  "tipo": "extraordinária",
+  "pontos": 1
+ },
+ {
+  "data": "2019-11-28",
+  "tipo": "ordinária",
+  "pontos": 21
+ },
+ {
+  "data": "2019-09-16",
+  "tipo": "ordinária",
+  "pontos": 22
+ },
+ {
+  "data": "2019-06-27",
+  "tipo": "ordinária",
+  "pontos": 26
+ },
+ {
+  "data": "2019-04-29",
+  "tipo": "ordinária",
+  "pontos": 11
+ },
+ {
+  "data": "2019-02-28",
+  "tipo": "ordinária",
+  "pontos": 14
+ },
+ {
+  "data": "2019-01-28",
+  "tipo": "extraordinária",
+  "pontos": 11
+ },
+ {
+  "data": "2018-11-30",
+  "tipo": "ordinária",
+  "pontos": 26
+ },
+ {
+  "data": "2018-09-13",
+  "tipo": "ordinária",
+  "pontos": 15
+ },
+ {
+  "data": "2018-06-29",
+  "tipo": "ordinária",
+  "pontos": 24
+ },
+ {
+  "data": "2018-04-13",
+  "tipo": "ordinária",
+  "pontos": 19
+ },
+ {
+  "data": "2018-02-26",
+  "tipo": "extraordinária",
+  "pontos": 5
+ },
+ {
+  "data": "2018-02-08",
+  "tipo": "extraordinária",
+  "pontos": 12
+ },
+ {
+  "data": "2017-12-13",
+  "tipo": "extraordinária",
+  "pontos": 5
+ },
+ {
+  "data": "2017-11-23",
+  "tipo": "extraordinária",
+  "pontos": 16
+ },
+ {
+  "data": "2017-09-08",
+  "tipo": "ordinária",
+  "pontos": 17
+ },
+ {
+  "data": "2017-06-30",
+  "tipo": "ordinária",
+  "pontos": 22
+ },
+ {
+  "data": "2017-04-24",
+  "tipo": "ordinária",
+  "pontos": 15
+ },
+ {
+  "data": "2017-02-10",
+  "tipo": "ordinária",
+  "pontos": 19
+ },
+ {
+  "data": "2016-11-30",
+  "tipo": "ordinária",
+  "pontos": 18
+ },
+ {
+  "data": "2016-09-30",
+  "tipo": "ordinária",
+  "pontos": 18
+ },
+ {
+  "data": "2016-06-17",
+  "tipo": "ordinária",
+  "pontos": 14
+ },
+ {
+  "data": "2016-04-26",
+  "tipo": "ordinária",
+  "pontos": 30
+ },
+ {
+  "data": "2016-02-26",
+  "tipo": "ordinária",
+  "pontos": 17
+ },
+ {
+  "data": "2015-12-28",
+  "tipo": "extraordinária",
+  "pontos": 15
+ },
+ {
+  "data": "2015-11-30",
+  "tipo": "ordinária",
+  "pontos": 18
+ },
+ {
+  "data": "2015-09-24",
+  "tipo": "ordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2015-07-24",
+  "tipo": "ordinária",
+  "pontos": 7
+ },
+ {
+  "data": "2015-06-26",
+  "tipo": "ordinária",
+  "pontos": 11
+ },
+ {
+  "data": "2015-04-30",
+  "tipo": "ordinária",
+  "pontos": 13
+ },
+ {
+  "data": "2015-03-30",
+  "tipo": "extraordinária",
+  "pontos": 10
+ },
+ {
+  "data": "2015-02-27",
+  "tipo": "ordinária",
+  "pontos": 27
+ }
+]

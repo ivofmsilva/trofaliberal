@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Fontes e método" };
 
 const fontes = [
   { nome: "INE", texto: "Demografia, economia, habitação, turismo, água e participação eleitoral." },
-  { nome: "Portal de dados abertos da Trofa", texto: "A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem deste portal, que continua disponível na primeira opção do menu \"Dados da Trofa\"." },
+  { nome: "Portal de dados abertos da Trofa", texto: "A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem do portal de dados abertos da Trofa (ae5aedd6.white-mode-f771.pages.dev)." },
   { nome: "Pordata", texto: "Indicadores sem acesso público automático, como o poder de compra e o rendimento." },
   { nome: "dados.gov.pt", texto: "Contratos públicos (IMPIC / Portal BASE) e projetos de fundos europeus (Portugal 2020 e PRR)." },
   { nome: "mun-trofa.pt", texto: "Atas da Câmara e documentos da Assembleia Municipal, tal como o município os publica." },

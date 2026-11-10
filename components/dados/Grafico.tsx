@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { numero, valor as fmtValor } from "@/lib/dados/formatar";
+import { numero, sufixo, valor as fmtValor } from "@/lib/dados/formatar";
 
 export type Serie = { nome: string; valores: (number | null)[] };
 
@@ -26,7 +26,19 @@ function bonitos(min: number, max: number, n = 4) {
   return out;
 }
 
-export default function Grafico({ periodos, series, unidade }: { periodos: string[]; series: Serie[]; unidade: string }) {
+export default function Grafico({
+  periodos,
+  series,
+  unidade,
+  semComparar = false,
+  casas,
+}: {
+  periodos: string[];
+  series: Serie[];
+  unidade: string;
+  semComparar?: boolean;
+  casas?: number;
+}) {
   const caixa = useRef<HTMLDivElement>(null);
   const [largura, setLargura] = useState(720);
   const [modo, setModo] = useState<"valores" | "comparar">("valores");
@@ -42,7 +54,7 @@ export default function Grafico({ periodos, series, unidade }: { periodos: strin
     return () => ro.disconnect();
   }, []);
 
-  const podeComparar = series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
+  const podeComparar = !semComparar && series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
   const modoEfetivo = podeComparar ? modo : "valores";
 
   // No modo "comparar" cada série vira índice (100 = primeiro valor), para se ver quem cresce mais.
@@ -81,7 +93,9 @@ export default function Grafico({ periodos, series, unidade }: { periodos: strin
   const Y = (v: number) => m.t + h - ((v - yMin) / (yMax - yMin)) * h;
 
   const fmtEixo = (v: number) =>
-    modoEfetivo === "comparar"
+    casas !== undefined && modoEfetivo === "valores"
+      ? numero(v, casas) + sufixo(unidade)
+      : modoEfetivo === "comparar"
       ? numero(v, 0)
       : unidade === "€" && Math.abs(v) >= 1_000_000
         ? numero(v / 1_000_000, 0) + " M€"

@@ -14,8 +14,10 @@ const ligacoes = [
   { href: "/dados#temas", rotulo: "Indicadores" },
   { href: "/dados/contratos", rotulo: "Contratos" },
   { href: "/dados/fundos-europeus", rotulo: "Fundos europeus" },
+  { href: "/dados/taxas", rotulo: "Taxas" },
   { href: "/dados/camara", rotulo: "Câmara" },
   { href: "/dados/assembleia", rotulo: "Assembleia" },
+  { href: "/dados/votos", rotulo: "Como votam" },
   { href: "/dados/fontes", rotulo: "Fontes" },
 ];
 

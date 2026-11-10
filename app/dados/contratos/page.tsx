@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Barras from "@/components/dados/Barras";
 import TabelaContratos from "@/components/dados/TabelaContratos";
 import { compacto, numero } from "@/lib/dados/formatar";
-import { resumoContratos, separarEmpresa } from "@/lib/dados/transparencia";
+import { resumoAreas, resumoContratos, separarEmpresa } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
   title: "Contratos públicos",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 
 export default function Contratos() {
   const r = resumoContratos();
+  const areas = resumoAreas();
   const maxAno = Math.max(...r.anos.map((a) => a.valor));
 
   return (
@@ -87,6 +89,23 @@ export default function Contratos() {
             </div>
           </section>
         </div>
+
+        <section aria-label="Por área" className="mt-16 grid gap-10 lg:grid-cols-[1fr_320px]">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-tinta">Em que áreas se gasta</h2>
+            <p className="mt-2 mb-6 max-w-2xl text-texto">Valor dos contratos por área (a partir do código CPV, o vocabulário europeu do que se compra).</p>
+            <Barras
+              titulo="Valor dos contratos por área"
+              itens={areas.map((a) => ({ rotulo: a.nome, valor: a.valor, texto: compacto(a.valor, "€"), extra: `${numero(a.n)}` }))}
+            />
+          </div>
+          <Link href="/dados/contratos/ajustes-diretos" className="group flex flex-col self-start rounded-2xl border border-linha p-6 transition hover:border-tinta">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-apagado">Em destaque</p>
+            <h3 className="mt-2 text-2xl font-bold tracking-tight text-tinta">Ajustes diretos</h3>
+            <p className="mt-2 text-texto">Quanto pesam, em que áreas, com que fundamentação e a quem.</p>
+            <span className="mt-4 text-sm font-semibold text-tinta group-hover:underline">Ver a análise →</span>
+          </Link>
+        </section>
 
         <section aria-label="Todos os contratos" className="mt-16">
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Todos os contratos</h2>

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Cab from "./Cab";
+import { areaDe, AREAS, OUTRAS, divisaoNome } from "@/lib/dados/areas";
 import { numero } from "@/lib/dados/formatar";
 import type { Contrato } from "@/lib/dados/transparencia";
 
@@ -22,6 +23,7 @@ export default function TabelaContratos() {
   const [q, setQ] = useState("");
   const [ano, setAno] = useState("");
   const [proc, setProc] = useState("");
+  const [area, setArea] = useState("");
   const [campo, setCampo] = useState<Campo>("data");
   const [desc, setDesc] = useState(true);
   const [porPagina, setPorPagina] = useState(30);
@@ -45,6 +47,7 @@ export default function TabelaContratos() {
       (c) =>
         (!ano || String(c.ano) === ano) &&
         (!proc || c.tipoprocedimento === proc) &&
+        (!area || areaDe(c.cpv).id === area) &&
         (!t || semAcentos(c.objeto + " " + c.adjudicatario).includes(t)),
     );
     const dir = desc ? -1 : 1;
@@ -55,7 +58,7 @@ export default function TabelaContratos() {
       return empresa(a.adjudicatario).nome.localeCompare(empresa(b.adjudicatario).nome, "pt") * dir;
     });
     return out;
-  }, [lista, q, ano, proc, campo, desc]);
+  }, [lista, q, ano, proc, area, campo, desc]);
 
   const total = filtrada.reduce((s, c) => s + c.valor_contratual, 0);
   const paginas = Math.max(1, Math.ceil(filtrada.length / porPagina));
@@ -76,7 +79,7 @@ export default function TabelaContratos() {
 
   return (
     <div>
-      <div className="grid gap-3 md:grid-cols-[1fr_auto_auto]">
+      <div className="grid gap-3 md:grid-cols-[1fr_auto_auto_auto]">
         <label>
           <span className="sr-only">Pesquisar contratos</span>
           <input
@@ -97,6 +100,17 @@ export default function TabelaContratos() {
             {anos.map((a) => (
               <option key={a} value={a}>
                 {a}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span className="sr-only">Área</span>
+          <select value={area} onChange={(e) => (setArea(e.target.value), setPagina(0))} className={`${campoCls} w-full`}>
+            <option value="">Todas as áreas</option>
+            {[...AREAS, OUTRAS].map((a) => (
+              <option key={a.id} value={a.id}>
+                {a.nome}
               </option>
             ))}
           </select>
@@ -157,6 +171,16 @@ export default function TabelaContratos() {
                       <dt className="text-apagado">Procedimento</dt>
                       <dd className="text-tinta">{c.tipoprocedimento}</dd>
                     </div>
+                    <div>
+                      <dt className="text-apagado">O que se compra (CPV)</dt>
+                      <dd className="text-tinta">{c.cpv ? `${divisaoNome(c.cpv) ?? c.cpvd ?? c.cpv}${c.cpvd && divisaoNome(c.cpv) ? " · " + c.cpvd : ""}` : "—"}</dd>
+                    </div>
+                    {c.fund && (
+                      <div>
+                        <dt className="text-apagado">Fundamentação legal</dt>
+                        <dd className="text-tinta">{c.fund.replace(" do Código dos Contratos Públicos", "")}</dd>
+                      </div>
+                    )}
                     <div>
                       <dt className="text-apagado">Tipo de contrato</dt>
                       <dd className="text-tinta">{c.tipo_contrato}</dd>
