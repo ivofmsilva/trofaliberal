@@ -1,6 +1,10 @@
 import { numero } from "@/lib/dados/formatar";
 import { anosAssembleia, anosCamara, mandatosAssembleia, mandatosCamara, type LinhaAno } from "@/lib/dados/votos";
 
+// Os mesmos nomes na Câmara e na Assembleia.
+const NOMES_LISTA: Record<string, string> = { "PSD/CDS-PP": "Unidos pela Trofa", "PS-PAN-L": "Trofa em Primeiro", CH: "Chega" };
+const nomeLista = (n: string) => NOMES_LISTA[n] ?? n;
+
 const pct = (a: number, b: number) => (b === 0 ? "—" : `${numero((a / b) * 100, 0)}%`);
 
 function total(l: LinhaAno[]) {
@@ -79,7 +83,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
                     {m.tabela.map((l) => (
                       <tr key={l.lista} className="border-t border-linha tabular-nums">
                         <th scope="row" className="px-4 py-2 text-left font-medium text-tinta">
-                          {l.lista === "CH" ? "Chega" : l.lista}
+                          {nomeLista(l.lista)}
                         </th>
                         <td className="px-4 py-2 text-right">{numero(l.favor)}</td>
                         <td className="px-4 py-2 text-right">{numero(l.contra)}</td>

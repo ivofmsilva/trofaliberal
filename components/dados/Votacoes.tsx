@@ -29,10 +29,10 @@ const dataLonga = (iso: string | null, ano?: number) => {
 };
 
 const NOMES: Record<string, string> = {
-  "PSD/CDS-PP": "PSD/CDS-PP",
+  "PSD/CDS-PP": "Unidos pela Trofa",
   PSD: "PSD",
   "CDS-PP": "CDS-PP",
-  "PS-PAN-L": "PS-PAN-L",
+  "PS-PAN-L": "Trofa em Primeiro",
   PS: "PS",
   PAN: "PAN",
   TDT: "TDT",
