@@ -60,8 +60,6 @@ const produtos = [...produtosBase, ...packs];
 // Artigos nacionais, por grupos (ids do portal; ver lib/loja.ts).
 const grupos: { titulo: string; ids: number[] }[] = [
   { titulo: "Roupa", ids: [28, 41, 30, 33, 34, 39, 38, 52, 51] },
-  { titulo: "Para o dia a dia", ids: [48, 45, 54, 44, 50, 43, 9, 6] },
-  { titulo: "Papelaria", ids: [74, 73, 56, 8] },
 ];
 const LOJA_NACIONAL = "https://portal.liberal.pt/shop";
 
@@ -117,7 +115,7 @@ export default function Loja() {
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
               <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Artigos nacionais</h2>
               <p className="mt-3 max-w-2xl text-ink/80">
-                O merchandising da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda por aqui e o núcleo
+                A roupa da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda por aqui e o núcleo
                 trata de tudo.
               </p>
             </div>
@@ -132,8 +130,8 @@ export default function Loja() {
           </div>
 
           {grupos.map((g) => (
-            <div key={g.titulo} className="mt-12">
-              <h3 className="font-display text-2xl font-bold text-navy">{g.titulo}</h3>
+            <div key={g.titulo} className="mt-10">
+              {grupos.length > 1 && <h3 className="font-display text-2xl font-bold text-navy">{g.titulo}</h3>}
               <ul className="mt-5 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
                 {g.ids
                   .map((id) => merchandising.find((p) => p.id === id))

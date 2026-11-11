@@ -52,7 +52,7 @@ const paginas = [
 export default function Propostas() {
   return (
     <>
-      <PageHero eyebrow="Ideias · Propostas" title="As medidas que fazem a diferença" image={{ src: "/images/geral/propostas-cartaz.jpeg", alt: "Membro da IL com cartaz de campanha", w: 1000, h: 1333 }}>
+      <PageHero eyebrow="Ideias · Propostas" title="As medidas que fazem a diferença" image={{ src: "/images/geral/propostas-cartaz-recorte.jpeg", alt: "Cartaz de campanha: A frescura que procuras está aqui", w: 410, h: 615, vertical: true }}>
         Cada área representa um compromisso concreto, com medidas específicas para transformar a
         Trofa. Uma Trofa mais livre, próspera e justa.
       </PageHero>

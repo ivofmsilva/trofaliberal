@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-export type HeroImage = { src: string; alt: string; w: number; h: number };
+// `vertical`: imagem já recortada na vertical (por exemplo, um cartaz): mostra-se inteira, em altura fixa.
+export type HeroImage = { src: string; alt: string; w: number; h: number; vertical?: boolean };
 
 // Faixa azul no topo de cada página: compacta, para o conteúdo aparecer logo.
 // A imagem só se mostra em ecrãs largos (no telemóvel ocuparia demasiado espaço).
@@ -20,7 +21,7 @@ export default function PageHero({
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-pink/25 blur-3xl" />
       <div
         className={`relative mx-auto max-w-7xl gap-8 px-4 py-8 sm:px-6 md:py-10 ${
-          image ? "md:grid md:grid-cols-[1fr_300px] md:items-center" : ""
+          image ? `md:grid md:items-center ${image.vertical ? "md:grid-cols-[1fr_auto]" : "md:grid-cols-[1fr_300px]"}` : ""
         }`}
       >
         <div>
@@ -37,8 +38,10 @@ export default function PageHero({
             width={image.w}
             height={image.h}
             priority
-            sizes="300px"
-            className="hidden aspect-[16/9] w-full rounded-2xl object-cover object-[50%_30%] shadow-xl shadow-black/30 ring-4 ring-white/30 md:block"
+            sizes={image.vertical ? "200px" : "300px"}
+            className={`hidden rounded-2xl shadow-xl shadow-black/30 ring-4 ring-white/30 md:block ${
+              image.vertical ? "h-72 w-auto justify-self-end object-contain" : "aspect-[16/9] w-full object-cover object-[50%_30%]"
+            }`}
           />
         )}
       </div>
