@@ -5,7 +5,7 @@ const FONTE_ASSEMBLEIA = "https://mun-trofa.pt/menu/129/constituicao";
 const FONTE_POSSE = "https://mun-trofa.pt/25279/sergio-araujo-tomou-posse-como-presidente-da-camara-municipal-da-trofa";
 
 // 27 membros: 21 eleitos (8 Unidos pela Trofa, 6 Trofa em Primeiro, 5 TDT, 2 Chega) e 6 presidentes de junta, todos eleitos pela
-// coligação Unidos pela Trofa (assim o diz o município na tomada de posse). Nomes: página "Constituição da Assembleia Municipal".
+// coligação Unidos pela Trofa. Nomes: página "Constituição da Assembleia Municipal".
 // O PSD e o CDS-PP somam 14 lugares na bancada (12 e 2, como a Assembleia conta nas suas votações); não se sabe quais são de cada partido.
 const assembleia: Bancada[] = [
   {
@@ -79,9 +79,10 @@ export default function ComposicaoAssembleia() {
         </div>
         <Legenda bancadas={assembleia} />
         <p className="mt-3 text-sm text-texto">
-          A coligação Unidos pela Trofa (PSD e CDS-PP) tem 14 lugares: os 8 eleitos da lista e os 6 presidentes de junta, que o
-          município diz terem sido todos eleitos por esta coligação. O PAN e o Livre integram a coligação Trofa em Primeiro, mas
-          não elegeram ninguém. Para a maioria dos 27 lugares são precisos 14. Os nomes aparecem pelo primeiro e último.
+          A coligação Unidos pela Trofa (PSD e CDS-PP) tem 14 lugares: os 8 eleitos da lista e os 6 presidentes de junta. O
+          PAN e o Livre integram a coligação Trofa em Primeiro, mas não elegeram ninguém. O presidente e os secretários da mesa
+          são membros da Assembleia e votam como os restantes. Para a maioria dos 27 lugares são precisos 14. Os nomes
+          aparecem pelo primeiro e último.
         </p>
         <p className="mt-2 text-sm text-apagado">
           Fontes:{" "}
