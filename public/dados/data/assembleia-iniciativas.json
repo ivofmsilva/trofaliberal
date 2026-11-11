@@ -1,5 +1,5 @@
 {
- "gerado": "2026-11-11T12:10:13.258Z",
+ "gerado": "2026-11-11T15:03:39.643Z",
  "iniciativas": [
   {
    "data": "2025-09-05",
@@ -367,13 +367,13 @@
   },
   {
    "data": "2017-02-10",
-   "tipo": "Proposta de deliberação",
+   "tipo": "Recomendação",
    "titulo": "Distribuição Alimentar aos mais carenciados",
    "assunto": "Proposta de Deliberação – Distribuição Alimentar aos mais carenciados",
    "resultado": "aprovada",
    "votacao": "por maioria: 15 a favor, 9 contra e 2 abstenções",
    "proponente": "CDS-PP",
-   "nota": null,
+   "nota": "Consta da ata e da deliberação como «proposta de deliberação», mas pelo conteúdo é uma recomendação (propõe que a Assembleia questione o Governo) e conta-se como tal.",
    "fonte": "ata da sessão",
    "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__24_DE_10.02.2017.PDF",
    "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/13Deliberacoes-13.PDF"

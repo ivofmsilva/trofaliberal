@@ -24,7 +24,6 @@ const COLUNAS = [
   { id: "protesto", rotulo: "Votos de protesto", tipos: ["Voto de protesto"] },
   { id: "mocoes", rotulo: "Moções", tipos: ["Moção"] },
   { id: "recomendacoes", rotulo: "Recomendações", tipos: ["Recomendação"] },
-  { id: "propostas", rotulo: "Propostas", tipos: ["Proposta de deliberação"] },
 ];
 const conta = (l: Iniciativa[], tipos: string[]) => l.filter((x) => tipos.includes(x.tipo)).length;
 
@@ -58,7 +57,7 @@ export default function IniciativasAM() {
 
       <h3 className="mt-8 text-lg font-bold text-tinta">Por ano</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
-        <table className="w-full min-w-[44rem] text-sm">
+        <table className="w-full min-w-[40rem] text-sm">
           <thead className="bg-cinza text-left text-apagado">
             <tr>
               <th className="px-4 py-3 font-medium">Ano</th>
@@ -108,7 +107,7 @@ export default function IniciativasAM() {
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Por quem foram apresentadas</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
-        <table className="w-full min-w-[44rem] text-sm">
+        <table className="w-full min-w-[40rem] text-sm">
           <thead className="bg-cinza text-left text-apagado">
             <tr>
               <th className="px-4 py-3 font-medium">Apresentadas por</th>

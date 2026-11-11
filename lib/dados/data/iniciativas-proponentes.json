@@ -9,7 +9,7 @@
   { "data": "2017-02-10", "chave": "Voto de Pesar – Pelo falecimento do ex-presidente", "proponente": "PS" },
   { "data": "2017-02-10", "chave": "Voto de Pesar – Pelo falecimento do Presidente da Câmara Municipal de Matosinhos", "proponente": "PS" },
   { "data": "2017-02-10", "chave": "Voto de Protesto", "proponente": "PS" },
-  { "data": "2017-02-10", "chave": "Proposta de Deliberação", "proponente": "CDS-PP" },
+  { "data": "2017-02-10", "chave": "Proposta de Deliberação", "proponente": "CDS-PP", "tipo": "Recomendação", "nota": "Consta da ata e da deliberação como «proposta de deliberação», mas pelo conteúdo é uma recomendação (propõe que a Assembleia questione o Governo) e conta-se como tal." },
   { "data": "2019-02-28", "chave": "Moção \"EM DEFESA DO PASSE", "proponente": "PCP-PEV" },
   { "data": "2019-02-28", "chave": "Moção sobre \"PREVENÇÃO", "proponente": "PSD" },
   { "data": "2019-02-28", "chave": "Moção sobre o \"PLANO DE DESPOLUIÇÃO", "proponente": "PSD" },
