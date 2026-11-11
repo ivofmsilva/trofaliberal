@@ -54,6 +54,8 @@ export default function MailForm({
     let body = (intro ? `${intro}\n` : "") + fields
       .map((f) => `${f.label.replace(" *", "")}: ${String(data.get(f.name) ?? "").trim()}`)
       .join("\n");
+    // O aviso sobre anexos só serve quando a mensagem é preparada no programa de email de quem escreve.
+    const textoEnviado = body;
     if (anexos) body += "\n\n(Se tiveres fotos ou documentos, anexa-os a este email.)";
     const assunto = String(data.get("assunto") ?? "").trim() || subject;
     const mailto = `mailto:${to}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(body)}`;
@@ -68,7 +70,7 @@ export default function MailForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           assunto,
-          texto: body,
+          texto: textoEnviado,
           nome: String(data.get("nome") ?? ""),
           email: String(data.get("email") ?? ""),
           hp: String(data.get("site") ?? ""),

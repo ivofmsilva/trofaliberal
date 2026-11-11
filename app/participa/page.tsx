@@ -5,7 +5,7 @@ import MailForm from "@/components/MailForm";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
 import { areas } from "@/lib/propostas";
-import { aderir, links } from "@/lib/site";
+import { aderir, freguesias, links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Participa — Iniciativa Liberal Trofa",
@@ -35,11 +35,11 @@ const razoes = [
 ];
 
 const passosDenuncia = [
-  { titulo: "Indica a freguesia", texto: "Diz-nos onde ocorre o problema." },
+  { titulo: "Escolhe a freguesia", texto: "Diz-nos onde ocorre o problema." },
   { titulo: "Descreve o problema", texto: "Uma breve descrição e, se possível, a morada." },
   {
     titulo: "Junta fotos ou documentos (opcional)",
-    texto: `Neste formulário não é possível anexar ficheiros: anexa-os ao email que se abre ao submeter ou envia-os para ${links.email}, a indicar a freguesia e a morada.`,
+    texto: `Neste formulário não é possível anexar ficheiros. Envia-as para ${links.email}, a indicar a freguesia e a morada.`,
   },
 ];
 
@@ -147,7 +147,7 @@ const separadores: Separador[] = [
               { name: "nome", label: "Nome completo *", required: true },
               { name: "telefone", label: "Contacto telefónico *", type: "tel", required: true },
               { name: "email", label: "Email *", type: "email", required: true },
-              { name: "freguesia", label: "Freguesia" },
+              { name: "freguesia", label: "Freguesia", type: "select", options: freguesias, placeholder: "Escolhe a freguesia (opcional)" },
             ]}
           />
 
@@ -211,11 +211,11 @@ const separadores: Separador[] = [
         </div>
         <div className={caixa}>
           <p className="mb-6 text-ink/75">
-            Ao submeter, preparamos a denúncia no teu email, pronta a enviar para{" "}
+            Ao submeter, a denúncia segue diretamente para o núcleo (
             <a href={`mailto:${links.email}`} className="font-bold text-cyan-dark hover:underline">
               {links.email}
             </a>
-            . Podes anexar fotos ou documentos antes de a enviar.
+            ). Para juntar fotos ou documentos, envia-os para esse email, a indicar a freguesia e a morada.
           </p>
           <MailForm
             to={links.email}
@@ -223,7 +223,7 @@ const separadores: Separador[] = [
             submitLabel="Submeter denúncia"
             anexos
             fields={[
-              { name: "freguesia", label: "Freguesia *", required: true },
+              { name: "freguesia", label: "Freguesia *", type: "select", required: true, options: [...freguesias, "Outra ou não sei"], placeholder: "Escolhe a freguesia" },
               { name: "morada", label: "Morada / referência" },
               { name: "descricao", label: "Descrição do problema *", type: "textarea", required: true },
               { name: "contacto", label: "Nome e contacto (opcional)" },

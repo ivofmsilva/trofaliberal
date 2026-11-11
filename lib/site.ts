@@ -88,3 +88,13 @@ export const nav: NavItem[] = [
     ],
   },
 ];
+
+// As 6 freguesias do concelho da Trofa (para os formulários).
+export const freguesias = [
+  "Alvarelhos",
+  "Bougado (São Martinho e Santiago)",
+  "Coronado (São Romão e São Mamede)",
+  "Covelas",
+  "Guidões",
+  "Muro",
+];
