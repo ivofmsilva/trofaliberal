@@ -19,7 +19,9 @@ const todas = (dados as unknown as { iniciativas: Iniciativa[] }).iniciativas;
 
 const COLUNAS = [
   { id: "pesar", rotulo: "Votos de pesar", tipos: ["Voto de pesar"] },
-  { id: "votos", rotulo: "Outros votos", tipos: ["Voto de louvor", "Voto de congratulação", "Voto de protesto"] },
+  { id: "louvor", rotulo: "Votos de louvor", tipos: ["Voto de louvor"] },
+  { id: "congratulacao", rotulo: "Votos de congratulação", tipos: ["Voto de congratulação"] },
+  { id: "protesto", rotulo: "Votos de protesto", tipos: ["Voto de protesto"] },
   { id: "mocoes", rotulo: "Moções", tipos: ["Moção"] },
   { id: "recomendacoes", rotulo: "Recomendações", tipos: ["Recomendação"] },
   { id: "propostas", rotulo: "Propostas", tipos: ["Proposta de deliberação"] },
@@ -56,7 +58,7 @@ export default function IniciativasAM() {
 
       <h3 className="mt-8 text-lg font-bold text-tinta">Por ano</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
-        <table className="w-full min-w-[34rem] text-sm">
+        <table className="w-full min-w-[44rem] text-sm">
           <thead className="bg-cinza text-left text-apagado">
             <tr>
               <th className="px-4 py-3 font-medium">Ano</th>
@@ -106,7 +108,7 @@ export default function IniciativasAM() {
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Por quem foram apresentadas</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
-        <table className="w-full min-w-[34rem] text-sm">
+        <table className="w-full min-w-[44rem] text-sm">
           <thead className="bg-cinza text-left text-apagado">
             <tr>
               <th className="px-4 py-3 font-medium">Apresentadas por</th>
