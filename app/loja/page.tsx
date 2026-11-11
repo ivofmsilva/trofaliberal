@@ -114,10 +114,6 @@ export default function Loja() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
               <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Artigos nacionais</h2>
-              <p className="mt-3 max-w-2xl text-ink/80">
-                A roupa da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda por aqui e o núcleo
-                trata de tudo.
-              </p>
             </div>
             <a
               href={LOJA_NACIONAL}
