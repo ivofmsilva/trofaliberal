@@ -33,8 +33,11 @@ export default function Inicio() {
           <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight text-tinta sm:text-5xl md:text-6xl">
             A Trofa em números
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-texto">
-            Indicadores sobre o concelho da Trofa, com os dados do INE e do Pordata.
+          <p className="mt-5 max-w-2xl text-lg font-medium text-tinta">
+            A transparência que exigimos à Câmara: os dados que permitem a qualquer cidadão ter acesso a informação relevante sobre o município.
+          </p>
+          <p className="mt-3 max-w-2xl text-lg text-texto">
+            Indicadores sobre o concelho da Trofa, com os dados do INE e do Pordata. Dados da Assembleia e da Câmara retirados dos documentos do site do município.
           </p>
           <p className="mt-6 text-sm text-apagado">
             {total} indicadores · última atualização {atualizado ?? "—"} ·{" "}
