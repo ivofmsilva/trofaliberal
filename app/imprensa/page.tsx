@@ -29,12 +29,12 @@ const series = [
 const MAXIMO_POR_SEPARADOR = 6;
 
 // Um separador por categoria de imprensa: mostra os mais recentes e a ligação para a lista toda.
-function PainelImprensa({ cat }: { cat: Categoria }) {
+function PainelImprensa({ cat, primeiro = true }: { cat: Categoria; primeiro?: boolean }) {
   const c = categorias[cat];
   const todos = ordenados(cat);
   const recentes = todos.slice(0, MAXIMO_POR_SEPARADOR);
   return (
-    <>
+    <div className={primeiro ? "" : "mt-16"}>
       <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">{c.titulo}</h2>
       <p className="mt-3 max-w-2xl text-lg text-ink/75">{c.descricao}</p>
       <ul className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -50,7 +50,7 @@ function PainelImprensa({ cat }: { cat: Categoria }) {
       >
         {c.verTodos} ({todos.length})
       </Link>
-    </>
+    </div>
   );
 }
 
@@ -136,14 +136,40 @@ export default function Imprensa() {
     return `${n} ${n > 1 ? plural[1] : plural[0]}. ${categorias[cat].descricao}`;
   };
 
+  // Notícias e comunicados num só separador (cada um com a sua lista); os artigos de opinião têm o seu quando existirem.
+  const juntos = (["noticias", "comunicados"] as Categoria[]).filter((cat) => comItens.includes(cat));
+  const contagem = (cat: Categoria, um: string, varios: string) => {
+    const n = ordenados(cat).length;
+    return `${n} ${n === 1 ? um : varios}`;
+  };
+
   const separadores: Separador[] = [
     eventos,
-    ...comItens.map((cat) => ({
-      id: cat,
-      label: categorias[cat].titulo,
-      resumo: resumoCategoria(cat),
-      conteudo: <PainelImprensa cat={cat} />,
-    })),
+    ...(juntos.length
+      ? [
+          {
+            id: "noticias",
+            label: "Notícias e comunicados",
+            aliases: ["comunicados"],
+            resumo: juntos.map((cat) => (cat === "noticias" ? contagem(cat, "notícia", "notícias") : contagem(cat, "comunicado", "comunicados"))).join(" e ") + ". O que a imprensa escreve e o que dizemos nós.",
+            conteudo: (
+              <>
+                {juntos.map((cat, i) => (
+                  <PainelImprensa key={cat} cat={cat} primeiro={i === 0} />
+                ))}
+              </>
+            ),
+          },
+        ]
+      : []),
+    ...comItens
+      .filter((cat) => !juntos.includes(cat))
+      .map((cat) => ({
+        id: cat,
+        label: categorias[cat].titulo,
+        resumo: resumoCategoria(cat),
+        conteudo: <PainelImprensa cat={cat} />,
+      })),
     {
       id: "autarquicas",
       label: "Autárquicas 2025",

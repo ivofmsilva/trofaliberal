@@ -67,8 +67,7 @@ export const nav: NavItem[] = [
     href: "/imprensa",
     children: [
       { label: "Eventos", href: "/imprensa?t=eventos" },
-      { label: "Notícias", href: "/imprensa?t=noticias" },
-      { label: "Comunicados", href: "/imprensa?t=comunicados" },
+      { label: "Notícias e comunicados", href: "/imprensa?t=noticias" },
       { label: "Autárquicas 2025", href: "/autarquicas-2025" },
     ],
   },

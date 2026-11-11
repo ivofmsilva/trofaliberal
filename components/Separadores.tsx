@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
 // Um separador tem conteúdo (abre aqui, na mesma página) ou um href (cartão que leva a outra página).
-export type Separador = { id: string; label: string; resumo: string; conteudo?: React.ReactNode; href?: string };
+// `aliases`: outros nomes (de ligações antigas) que abrem este separador.
+export type Separador = { id: string; label: string; resumo: string; conteudo?: React.ReactNode; href?: string; aliases?: string[] };
 
 // Um só separador visível de cada vez. O escolhido vai no endereço (?t=ideia), por isso as
 // ligações do menu e as páginas antigas abrem logo no separador certo.
@@ -21,7 +22,7 @@ export default function Separadores({
   const params = useSearchParams();
   const pedido = params.get("t");
   const comConteudo = separadores.filter((s) => s.conteudo !== undefined);
-  const ativo = comConteudo.find((s) => s.id === pedido)?.id ?? comConteudo[0].id;
+  const ativo = (comConteudo.find((s) => s.id === pedido) ?? comConteudo.find((s) => pedido && s.aliases?.includes(pedido)) ?? comConteudo[0]).id;
 
   const cartao = "flex h-full flex-col rounded-2xl border-2 p-5 text-left transition";
 
