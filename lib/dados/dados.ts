@@ -1,4 +1,5 @@
 import bruto from "@/lib/dados/data/indicadores.json";
+import ineBruto from "@/lib/dados/data/indicadores-ine.json";
 import { destaques, temas, temaDe } from "./temas";
 
 export type Ponto = { v: number | null; var: number | null };
@@ -10,11 +11,15 @@ export type Indicador = {
   unidade: string;
   colunas: string[];
   linhas: { periodo: string; valores: Ponto[] }[];
+  // Indicadores obtidos diretamente ao INE (scripts/recolher-ine.mjs): explicação e código no INE.
+  texto?: string;
+  ine?: string;
 };
 
 const dados = bruto as unknown as { atualizado: string | null; recolhido: string; indicadores: Indicador[] };
 
-export const indicadores = dados.indicadores;
+const doIne = (ineBruto as unknown as { indicadores: Indicador[] }).indicadores;
+export const indicadores = [...dados.indicadores, ...doIne];
 export const atualizado = dados.atualizado;
 
 export function porSlug(slug: string) {

@@ -39,15 +39,31 @@ export const temas: Tema[] = [
   },
   {
     id: "habitacao",
-    titulo: "Habitação, turismo e água",
-    texto: "Preços da casa, crédito à habitação, dormidas turísticas e água.",
+    titulo: "Habitação e turismo",
+    texto: "Preços da casa, crédito à habitação e dormidas turísticas.",
     slugs: [
       "valor_mediano_habitacao",
       "credito_habitacao_por_habitante",
       "taxa_credito_habitacao",
       "dormidas_por_100_habitantes",
-      "agua_segura_percentagem",
     ],
+  },
+  {
+    id: "ambiente",
+    titulo: "Água, saneamento e ambiente",
+    texto: "Qualidade da água, águas residuais e o que a Câmara gasta e cobra em ambiente, comparado com os concelhos vizinhos.",
+    slugs: [
+      "agua_segura_percentagem",
+      "aguas_residuais_drenadas_por_habitante",
+      "despesas_ambiente_por_habitante",
+      "receitas_ambiente_por_habitante",
+    ],
+  },
+  {
+    id: "cultura",
+    titulo: "Cultura e desporto",
+    texto: "A parte das despesas da Câmara que vai para cultura e desporto.",
+    slugs: ["despesas_cultura_desporto_no_total"],
   },
   {
     id: "receitas",

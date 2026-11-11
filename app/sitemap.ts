@@ -25,6 +25,7 @@ const paginas = [
   "/eventos/lit",
   "/eventos/aqui-ha-parlamento",
   "/participa",
+  "/privacidade",
   "/loja",
   "/loja/donativos",
   ...autarquicasNav.map((i) => i.href),

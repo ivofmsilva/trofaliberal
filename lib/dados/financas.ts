@@ -133,3 +133,46 @@ export const pesoPessoal = ANOS.map((_, i) => {
   const c = despesaCorrente.valores[i];
   return p !== null && c !== null ? (p / c) * 100 : null;
 });
+
+// ---- Por habitante e comparação ------------------------------------------------------------------------------------
+import { porSlug } from "@/lib/dados/dados";
+
+// População média anual residente da Trofa (INE), por ano, para dividir os valores. Só existe desde 2011.
+const popMedia = porSlug("populacao_media_residente");
+export const populacaoTrofa: (number | null)[] = ANOS.map((a) => popMedia?.linhas.find((l) => l.periodo === a)?.valores[0]?.v ?? null);
+
+export function porHabitante(s: SerieContas, nome?: string): SerieContas {
+  return {
+    id: s.id + "PorHab",
+    nome: nome ?? s.nome + ", por habitante",
+    quadro: s.quadro + ". Dividido pela população média anual residente (INE).",
+    valores: s.valores.map((v, i) => (v !== null && populacaoTrofa[i] ? Math.round(v / populacaoTrofa[i]!) : null)),
+  };
+}
+
+// Receitas dos municípios por habitante: a Trofa, a Área Metropolitana do Porto e "Ave e concelhos vizinhos" (agregados do INE),
+// no último ano em que há dados dos três.
+const RECEITAS = [
+  ["receita_total_municipal", "Receita total"],
+  ["receita_imi", "IMI"],
+  ["receita_imt", "IMT"],
+  ["receita_iuc", "IUC"],
+  ["receita_participacao_irs", "Participação no IRS"],
+  ["receita_derrama", "Derrama"],
+] as const;
+
+export function comparacaoReceitas() {
+  const pop = porSlug("populacao_media_residente");
+  const linhas = RECEITAS.map(([slug, rotulo]) => {
+    const i = porSlug(slug);
+    if (!i || !pop) return null;
+    const ult = [...i.linhas].reverse().find((l) => l.valores.slice(0, 3).every((v) => v.v !== null));
+    if (!ult) return null;
+    const p = pop.linhas.find((l) => l.periodo === ult.periodo);
+    if (!p) return null;
+    const hab = ult.valores.slice(0, 3).map((v, k) => Math.round((v.v as number) / (p.valores[k].v as number)));
+    return { rotulo, ano: ult.periodo, trofa: hab[0], amp: hab[1], ave: hab[2] };
+  });
+  return linhas.filter((x): x is NonNullable<typeof x> => x !== null);
+}
+export const COLUNAS_COMPARACAO = ["Trofa", "Área Metropolitana do Porto", "Ave e concelhos vizinhos"];

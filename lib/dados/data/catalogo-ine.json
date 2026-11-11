@@ -1,0 +1,42 @@
+{
+  "comparar": ["Trofa", "Santo Tirso", "Maia", "Vila do Conde", "Vila Nova de Famalicão"],
+  "nota_comparar": "Os concelhos que fazem fronteira com a Trofa (Santo Tirso, Maia, Vila do Conde e Vila Nova de Famalicão).",
+  "indicadores": [
+    {
+      "slug": "aguas_residuais_drenadas_por_habitante",
+      "varcd": "0009602",
+      "titulo": "Águas residuais drenadas por habitante",
+      "categoria": "ambiente",
+      "unidade": "m³/hab.",
+      "fonte": "INE (ERSAR e entidades gestoras): sistemas públicos de drenagem e tratamento de águas residuais",
+      "texto": "Volume de águas residuais recolhidas pela rede pública de drenagem, por habitante do concelho. Mede quanto se recolhe, não a percentagem da população ligada à rede: este indicador não diz quantas casas estão servidas."
+    },
+    {
+      "slug": "despesas_ambiente_por_habitante",
+      "varcd": "0012082",
+      "titulo": "Despesas em ambiente da Câmara, por habitante",
+      "categoria": "ambiente",
+      "unidade": "€/hab.",
+      "fonte": "INE (Inquérito às despesas dos municípios em ambiente)",
+      "texto": "O que a Câmara gasta em proteção do ambiente (águas residuais, resíduos, biodiversidade, etc.), dividido pelos habitantes do concelho."
+    },
+    {
+      "slug": "receitas_ambiente_por_habitante",
+      "varcd": "0012081",
+      "titulo": "Receitas em ambiente da Câmara, por habitante",
+      "categoria": "ambiente",
+      "unidade": "€/hab.",
+      "fonte": "INE (Inquérito às receitas dos municípios em ambiente)",
+      "texto": "O que a Câmara cobra em serviços de ambiente (por exemplo, tarifas de água, saneamento e resíduos), dividido pelos habitantes do concelho."
+    },
+    {
+      "slug": "despesas_cultura_desporto_no_total",
+      "varcd": "0013557",
+      "titulo": "Despesas em cultura e desporto no total das despesas da Câmara",
+      "categoria": "economia",
+      "unidade": "%",
+      "fonte": "INE (Estatísticas da cultura e do desporto das câmaras municipais)",
+      "texto": "A parte das despesas da Câmara que vai para cultura e desporto."
+    }
+  ]
+}

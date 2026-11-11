@@ -53,6 +53,7 @@ export default async function Pagina({ params }: Props) {
       </nav>
 
       <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-tinta md:text-5xl">{i.titulo}</h1>
+      {i.texto && <p className="mt-4 max-w-2xl text-lg text-texto">{i.texto}</p>}
       <p className="mt-3 text-sm text-apagado">Fonte: {i.fonte}</p>
 
       {u && (
@@ -76,7 +77,7 @@ export default async function Pagina({ params }: Props) {
       {periodos.length >= 2 && (
         <section aria-label="Evolução" className="mt-10">
           <h2 className="mb-4 text-lg font-bold text-tinta">Evolução</h2>
-          <Grafico periodos={periodos} series={series} unidade={i.unidade} />
+          <Grafico periodos={periodos} series={series} unidade={i.unidade} semComparar={Boolean(i.ine)} />
         </section>
       )}
 

@@ -5,8 +5,11 @@ import TaxasLocais from "@/components/dados/TaxasLocais";
 import { compacto, numero } from "@/lib/dados/formatar";
 import {
   ANOS,
+  COLUNAS_COMPARACAO,
   PAGINA_RELATORIOS,
   RELATORIOS,
+  comparacaoReceitas,
+  porHabitante,
   crescimento,
   primeiroAno,
   valorEm,
@@ -50,14 +53,14 @@ function Quadros({ itens }: { itens: SerieContas[] }) {
   );
 }
 
-function Tabela({ series }: { series: SerieContas[] }) {
+function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: boolean }) {
   return (
     <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full min-w-[56rem] text-sm">
         <thead className="bg-cinza text-left text-apagado">
           <tr>
             <th scope="col" className="sticky left-0 bg-cinza px-4 py-3 font-medium">
-              Em milhões de euros
+              {euros ? "Em euros por habitante" : "Em milhões de euros"}
             </th>
             {ANOS.map((a) => (
               <th key={a} scope="col" className="px-3 py-3 text-right font-medium">
@@ -78,7 +81,7 @@ function Tabela({ series }: { series: SerieContas[] }) {
               </th>
               {s.valores.map((v, i) => (
                 <td key={i} className="whitespace-nowrap px-3 py-2.5 text-right text-texto">
-                  {m(v)}
+                  {euros ? (v === null ? "—" : numero(v)) : m(v)}
                 </td>
               ))}
               <td className="whitespace-nowrap px-4 py-2.5 text-right font-medium text-tinta">{pc(crescimento(s.valores))}</td>
@@ -142,6 +145,7 @@ export default function Financas() {
               ["receita", "Receita"],
               ["divida", "Dívida"],
               ["orcamento", "Orçamento 2026"],
+              ["habitante", "Por habitante"],
               ["taxas", "Taxas e impostos"],
             ].map(([id, nome]) => (
               <li key={id}>
@@ -297,6 +301,69 @@ export default function Financas() {
               página de relatórios e contas do município ↗
             </a>
             . Os valores foram copiados dos quadros e conferidos com o texto de cada relatório.
+          </p>
+        </section>
+
+        <section aria-label="Por habitante">
+          <Titulo
+            id="habitante"
+            texto="Os mesmos valores divididos pelo número de habitantes, para se perceber a dimensão e comparar com outros territórios."
+          >
+            Por habitante e comparação
+          </Titulo>
+          <div className="max-w-3xl">
+            <Grafico
+              periodos={ANOS.slice(1, 15)}
+              series={[porHabitante(despesaPessoalPaga, "Despesas com pessoal pagas"), porHabitante(receitaCorrente, "Receitas correntes"), porHabitante(dividaEfetiva, "Dívida efetiva")].map((x) => ({ nome: x.nome, valores: x.valores.slice(1, 15) }))}
+              unidade="€"
+              semComparar
+            />
+          </div>
+          <Tabela euros series={[porHabitante(despesaPessoalPaga), porHabitante(receitaCorrente), porHabitante(receitaTotal), porHabitante(dividaEfetiva), porHabitante(dividaTotal)]} />
+          <p className="mt-3 max-w-3xl text-sm text-apagado">
+            Dividido pela população média anual residente da Trofa (INE), que só existe desde 2011. Os valores arredondam-se ao euro.
+          </p>
+
+          <h3 className="mt-10 text-lg font-bold text-tinta">Receitas por habitante: a Trofa e a sua região</h3>
+          <p className="mt-2 max-w-2xl text-texto">
+            O que a Câmara cobra por habitante, comparado com a Área Metropolitana do Porto e com o grupo “Ave e concelhos vizinhos”
+            (um agregado do portal de origem dos dados, que não indica que concelhos inclui).
+          </p>
+          <div className="mt-4 overflow-x-auto rounded-xl border border-linha">
+            <table className="w-full min-w-[34rem] text-sm">
+              <thead className="bg-cinza text-left text-apagado">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-medium">
+                    Euros por habitante
+                  </th>
+                  {COLUNAS_COMPARACAO.map((c) => (
+                    <th key={c} scope="col" className="px-3 py-3 text-right font-medium">
+                      {c}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {comparacaoReceitas().map((l) => (
+                  <tr key={l.rotulo} className="border-t border-linha tabular-nums">
+                    <th scope="row" className="px-4 py-2.5 text-left font-medium text-tinta">
+                      {l.rotulo} <span className="text-xs font-normal text-apagado">({l.ano})</span>
+                    </th>
+                    <td className="px-3 py-2.5 text-right font-semibold text-tinta">{numero(l.trofa)}</td>
+                    <td className="px-3 py-2.5 text-right text-texto">{numero(l.amp)}</td>
+                    <td className="px-3 py-2.5 text-right text-texto">{numero(l.ave)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 max-w-3xl text-sm text-apagado">
+            Fonte: INE (receitas dos municípios, a partir da Direção-Geral das Autarquias Locais), através do portal de origem, e
+            população média anual residente. Os agregados juntam concelhos de dimensões muito diferentes; para comparar com concelhos concretos, veja os indicadores de{" "}
+            <Link href="/dados#ambiente" className="underline underline-offset-2 hover:text-tinta">
+              água, saneamento e ambiente
+            </Link>
+            , que trazem Santo Tirso, a Maia, Vila do Conde e Vila Nova de Famalicão.
           </p>
         </section>
 

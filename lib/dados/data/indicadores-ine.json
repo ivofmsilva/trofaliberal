@@ -1,0 +1,1328 @@
+{
+ "recolhido": "2026-11-11T15:36:12.480Z",
+ "nota": "Os concelhos que fazem fronteira com a Trofa (Santo Tirso, Maia, Vila do Conde e Vila Nova de Famalicão).",
+ "indicadores": [
+  {
+   "slug": "aguas_residuais_drenadas_por_habitante",
+   "titulo": "Águas residuais drenadas por habitante",
+   "categoria": "ambiente",
+   "fonte": "INE (ERSAR e entidades gestoras): sistemas públicos de drenagem e tratamento de águas residuais",
+   "unidade": "m³/hab.",
+   "texto": "Volume de águas residuais recolhidas pela rede pública de drenagem, por habitante do concelho. Mede quanto se recolhe, não a percentagem da população ligada à rede: este indicador não diz quantas casas estão servidas.",
+   "ine": "0009602",
+   "colunas": [
+    "Trofa",
+    "Santo Tirso",
+    "Maia",
+    "Vila do Conde",
+    "Vila Nova de Famalicão"
+   ],
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 52.4,
+       "var": null
+      },
+      {
+       "v": 29.2,
+       "var": null
+      },
+      {
+       "v": 60.9,
+       "var": null
+      },
+      {
+       "v": 24.8,
+       "var": null
+      },
+      {
+       "v": 53.7,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 53,
+       "var": 1.1
+      },
+      {
+       "v": 33.8,
+       "var": 15.8
+      },
+      {
+       "v": 58.3,
+       "var": -4.3
+      },
+      {
+       "v": 33.9,
+       "var": 36.7
+      },
+      {
+       "v": 39.5,
+       "var": -26.4
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 50,
+       "var": -5.7
+      },
+      {
+       "v": 34.2,
+       "var": 1.2
+      },
+      {
+       "v": 66.3,
+       "var": 13.7
+      },
+      {
+       "v": 45.1,
+       "var": 33
+      },
+      {
+       "v": 58,
+       "var": 46.8
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 48.1,
+       "var": -3.8
+      },
+      {
+       "v": 34.4,
+       "var": 0.6
+      },
+      {
+       "v": 76.3,
+       "var": 15.1
+      },
+      {
+       "v": 50.2,
+       "var": 11.3
+      },
+      {
+       "v": 64.1,
+       "var": 10.5
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 26.7,
+       "var": -44.5
+      },
+      {
+       "v": 23.3,
+       "var": -32.3
+      },
+      {
+       "v": 71,
+       "var": -6.9
+      },
+      {
+       "v": 46.3,
+       "var": -7.8
+      },
+      {
+       "v": 60.4,
+       "var": -5.8
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 44.7,
+       "var": 67.4
+      },
+      {
+       "v": 35.2,
+       "var": 51.1
+      },
+      {
+       "v": 64.3,
+       "var": -9.4
+      },
+      {
+       "v": 52.3,
+       "var": 13
+      },
+      {
+       "v": 65.5,
+       "var": 8.4
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 41.3,
+       "var": -7.6
+      },
+      {
+       "v": 30,
+       "var": -14.8
+      },
+      {
+       "v": 74,
+       "var": 15.1
+      },
+      {
+       "v": 40.4,
+       "var": -22.8
+      },
+      {
+       "v": 56.8,
+       "var": -13.3
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 48.7,
+       "var": 17.9
+      },
+      {
+       "v": 35.5,
+       "var": 18.3
+      },
+      {
+       "v": 75.7,
+       "var": 2.3
+      },
+      {
+       "v": 46,
+       "var": 13.9
+      },
+      {
+       "v": 54.1,
+       "var": -4.8
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 49.5,
+       "var": 1.6
+      },
+      {
+       "v": 42.1,
+       "var": 18.6
+      },
+      {
+       "v": 63.2,
+       "var": -16.5
+      },
+      {
+       "v": 44.2,
+       "var": -3.9
+      },
+      {
+       "v": 55.5,
+       "var": 2.6
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 70.7,
+       "var": 42.8
+      },
+      {
+       "v": 39.8,
+       "var": -5.5
+      },
+      {
+       "v": 66.8,
+       "var": 5.7
+      },
+      {
+       "v": 45.6,
+       "var": 3.2
+      },
+      {
+       "v": 56.9,
+       "var": 2.5
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 66.7,
+       "var": -5.7
+      },
+      {
+       "v": 41.5,
+       "var": 4.3
+      },
+      {
+       "v": 69.7,
+       "var": 4.3
+      },
+      {
+       "v": 45.4,
+       "var": -0.4
+      },
+      {
+       "v": 65.2,
+       "var": 14.6
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 60.2,
+       "var": -9.7
+      },
+      {
+       "v": 42.2,
+       "var": 1.7
+      },
+      {
+       "v": 62.3,
+       "var": -10.6
+      },
+      {
+       "v": 41.7,
+       "var": -8.1
+      },
+      {
+       "v": 60.4,
+       "var": -7.4
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 67.1,
+       "var": 11.5
+      },
+      {
+       "v": 45.8,
+       "var": 8.5
+      },
+      {
+       "v": 60.7,
+       "var": -2.6
+      },
+      {
+       "v": 44.5,
+       "var": 6.7
+      },
+      {
+       "v": 63.6,
+       "var": 5.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "despesas_ambiente_por_habitante",
+   "titulo": "Despesas em ambiente da Câmara, por habitante",
+   "categoria": "ambiente",
+   "fonte": "INE (Inquérito às despesas dos municípios em ambiente)",
+   "unidade": "€/hab.",
+   "texto": "O que a Câmara gasta em proteção do ambiente (águas residuais, resíduos, biodiversidade, etc.), dividido pelos habitantes do concelho.",
+   "ine": "0012082",
+   "colunas": [
+    "Trofa",
+    "Santo Tirso",
+    "Maia",
+    "Vila do Conde",
+    "Vila Nova de Famalicão"
+   ],
+   "linhas": [
+    {
+     "periodo": "2009",
+     "valores": [
+      {
+       "v": 39,
+       "var": null
+      },
+      {
+       "v": 26,
+       "var": null
+      },
+      {
+       "v": 65,
+       "var": null
+      },
+      {
+       "v": 37,
+       "var": null
+      },
+      {
+       "v": 24,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 25,
+       "var": -35.9
+      },
+      {
+       "v": 38,
+       "var": 46.2
+      },
+      {
+       "v": 40,
+       "var": -38.5
+      },
+      {
+       "v": 31,
+       "var": -16.2
+      },
+      {
+       "v": 29,
+       "var": 20.8
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 14,
+       "var": -44
+      },
+      {
+       "v": 40,
+       "var": 5.3
+      },
+      {
+       "v": 32,
+       "var": -20
+      },
+      {
+       "v": 30,
+       "var": -3.2
+      },
+      {
+       "v": 31,
+       "var": 6.9
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 24,
+       "var": 71.4
+      },
+      {
+       "v": 50,
+       "var": 25
+      },
+      {
+       "v": 33,
+       "var": 3.1
+      },
+      {
+       "v": 47,
+       "var": 56.7
+      },
+      {
+       "v": 63,
+       "var": 103.2
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 152,
+       "var": 533.3
+      },
+      {
+       "v": 20,
+       "var": -60
+      },
+      {
+       "v": 30,
+       "var": -9.1
+      },
+      {
+       "v": 59,
+       "var": 25.5
+      },
+      {
+       "v": 64,
+       "var": 1.6
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 181,
+       "var": 19.1
+      },
+      {
+       "v": 22,
+       "var": 10
+      },
+      {
+       "v": 25,
+       "var": -16.7
+      },
+      {
+       "v": 60,
+       "var": 1.7
+      },
+      {
+       "v": 82,
+       "var": 28.1
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 49,
+       "var": -72.9
+      },
+      {
+       "v": 40,
+       "var": 81.8
+      },
+      {
+       "v": 27,
+       "var": 8
+      },
+      {
+       "v": 61,
+       "var": 1.7
+      },
+      {
+       "v": 82,
+       "var": 0
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 26,
+       "var": -46.9
+      },
+      {
+       "v": 53,
+       "var": 32.5
+      },
+      {
+       "v": 26,
+       "var": -3.7
+      },
+      {
+       "v": 48,
+       "var": -21.3
+      },
+      {
+       "v": 81,
+       "var": -1.2
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 29,
+       "var": 11.5
+      },
+      {
+       "v": 39,
+       "var": -26.4
+      },
+      {
+       "v": 28,
+       "var": 7.7
+      },
+      {
+       "v": 78,
+       "var": 62.5
+      },
+      {
+       "v": 88,
+       "var": 8.6
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 31,
+       "var": 6.9
+      },
+      {
+       "v": 46,
+       "var": 17.9
+      },
+      {
+       "v": 30,
+       "var": 7.1
+      },
+      {
+       "v": 78,
+       "var": 0
+      },
+      {
+       "v": 90,
+       "var": 2.3
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 30,
+       "var": -3.2
+      },
+      {
+       "v": 40,
+       "var": -13
+      },
+      {
+       "v": 20,
+       "var": -33.3
+      },
+      {
+       "v": 66,
+       "var": -15.4
+      },
+      {
+       "v": 93,
+       "var": 3.3
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 29,
+       "var": -3.3
+      },
+      {
+       "v": 45,
+       "var": 12.5
+      },
+      {
+       "v": 35,
+       "var": 75
+      },
+      {
+       "v": 64,
+       "var": -3
+      },
+      {
+       "v": 99,
+       "var": 6.5
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 43,
+       "var": 48.3
+      },
+      {
+       "v": 46,
+       "var": 2.2
+      },
+      {
+       "v": 41,
+       "var": 17.1
+      },
+      {
+       "v": 64,
+       "var": 0
+      },
+      {
+       "v": 105,
+       "var": 6.1
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 37,
+       "var": -14
+      },
+      {
+       "v": 50,
+       "var": 8.7
+      },
+      {
+       "v": 56,
+       "var": 36.6
+      },
+      {
+       "v": 92,
+       "var": 43.8
+      },
+      {
+       "v": 116,
+       "var": 10.5
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 44,
+       "var": 18.9
+      },
+      {
+       "v": 59,
+       "var": 18
+      },
+      {
+       "v": 44,
+       "var": -21.4
+      },
+      {
+       "v": 104,
+       "var": 13
+      },
+      {
+       "v": 126,
+       "var": 8.6
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 58,
+       "var": 31.8
+      },
+      {
+       "v": 85,
+       "var": 44.1
+      },
+      {
+       "v": 55,
+       "var": 25
+      },
+      {
+       "v": 101,
+       "var": -2.9
+      },
+      {
+       "v": 80,
+       "var": -36.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "receitas_ambiente_por_habitante",
+   "titulo": "Receitas em ambiente da Câmara, por habitante",
+   "categoria": "ambiente",
+   "fonte": "INE (Inquérito às receitas dos municípios em ambiente)",
+   "unidade": "€/hab.",
+   "texto": "O que a Câmara cobra em serviços de ambiente (por exemplo, tarifas de água, saneamento e resíduos), dividido pelos habitantes do concelho.",
+   "ine": "0012081",
+   "colunas": [
+    "Trofa",
+    "Santo Tirso",
+    "Maia",
+    "Vila do Conde",
+    "Vila Nova de Famalicão"
+   ],
+   "linhas": [
+    {
+     "periodo": "2009",
+     "valores": [
+      {
+       "v": 23,
+       "var": null
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 22,
+       "var": null
+      },
+      {
+       "v": 37,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2010",
+     "valores": [
+      {
+       "v": 3,
+       "var": -87
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": 1,
+       "var": null
+      },
+      {
+       "v": 26,
+       "var": 18.2
+      },
+      {
+       "v": 23,
+       "var": -37.8
+      }
+     ]
+    },
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 2,
+       "var": -33.3
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 24,
+       "var": -7.7
+      },
+      {
+       "v": 24,
+       "var": 4.3
+      }
+     ]
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 2,
+       "var": 0
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": 1,
+       "var": null
+      },
+      {
+       "v": 26,
+       "var": 8.3
+      },
+      {
+       "v": 53,
+       "var": 120.8
+      }
+     ]
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 6,
+       "var": 200
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 27,
+       "var": 3.8
+      },
+      {
+       "v": 54,
+       "var": 1.9
+      }
+     ]
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 0,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 28,
+       "var": 3.7
+      },
+      {
+       "v": 57,
+       "var": 5.6
+      }
+     ]
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 17,
+       "var": null
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 28,
+       "var": 0
+      },
+      {
+       "v": 62,
+       "var": 8.8
+      }
+     ]
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 25,
+       "var": 47.1
+      },
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 28,
+       "var": 0
+      },
+      {
+       "v": 64,
+       "var": 3.2
+      }
+     ]
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 31,
+       "var": 24
+      },
+      {
+       "v": 1,
+       "var": null
+      },
+      {
+       "v": 29,
+       "var": 3.6
+      },
+      {
+       "v": 62,
+       "var": -3.1
+      }
+     ]
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 31,
+       "var": 0
+      },
+      {
+       "v": 3,
+       "var": 200
+      },
+      {
+       "v": 31,
+       "var": 6.9
+      },
+      {
+       "v": 68,
+       "var": 9.7
+      }
+     ]
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 1,
+       "var": null
+      },
+      {
+       "v": 32,
+       "var": 3.2
+      },
+      {
+       "v": 4,
+       "var": 33.3
+      },
+      {
+       "v": 30,
+       "var": -3.2
+      },
+      {
+       "v": 67,
+       "var": -1.5
+      }
+     ]
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 1,
+       "var": 0
+      },
+      {
+       "v": 36,
+       "var": 12.5
+      },
+      {
+       "v": 1,
+       "var": -75
+      },
+      {
+       "v": 29,
+       "var": -3.3
+      },
+      {
+       "v": 72,
+       "var": 7.5
+      }
+     ]
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 40,
+       "var": 11.1
+      },
+      {
+       "v": 4,
+       "var": 300
+      },
+      {
+       "v": 32,
+       "var": 10.3
+      },
+      {
+       "v": 74,
+       "var": 2.8
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 1,
+       "var": null
+      },
+      {
+       "v": 41,
+       "var": 2.5
+      },
+      {
+       "v": 8,
+       "var": 100
+      },
+      {
+       "v": 30,
+       "var": -6.2
+      },
+      {
+       "v": 79,
+       "var": 6.8
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 41,
+       "var": 0
+      },
+      {
+       "v": 2,
+       "var": -75
+      },
+      {
+       "v": 36,
+       "var": 20
+      },
+      {
+       "v": 84,
+       "var": 6.3
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": null,
+       "var": null
+      },
+      {
+       "v": 44,
+       "var": 7.3
+      },
+      {
+       "v": 2,
+       "var": 0
+      },
+      {
+       "v": 34,
+       "var": -5.6
+      },
+      {
+       "v": 44,
+       "var": -47.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "despesas_cultura_desporto_no_total",
+   "titulo": "Despesas em cultura e desporto no total das despesas da Câmara",
+   "categoria": "economia",
+   "fonte": "INE (Estatísticas da cultura e do desporto das câmaras municipais)",
+   "unidade": "%",
+   "texto": "A parte das despesas da Câmara que vai para cultura e desporto.",
+   "ine": "0013557",
+   "colunas": [
+    "Trofa",
+    "Santo Tirso",
+    "Maia",
+    "Vila do Conde",
+    "Vila Nova de Famalicão"
+   ],
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 0.8,
+       "var": null
+      },
+      {
+       "v": 3.6,
+       "var": null
+      },
+      {
+       "v": 11,
+       "var": null
+      },
+      {
+       "v": 6.4,
+       "var": null
+      },
+      {
+       "v": 10.2,
+       "var": null
+      }
+     ]
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 6.2,
+       "var": 675
+      },
+      {
+       "v": 3.9,
+       "var": 8.3
+      },
+      {
+       "v": 14.1,
+       "var": 28.2
+      },
+      {
+       "v": 7.3,
+       "var": 14.1
+      },
+      {
+       "v": 11.5,
+       "var": 12.7
+      }
+     ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 3.1,
+       "var": -50
+      },
+      {
+       "v": 7.8,
+       "var": 100
+      },
+      {
+       "v": 13.5,
+       "var": -4.3
+      },
+      {
+       "v": 9.6,
+       "var": 31.5
+      },
+      {
+       "v": 11.7,
+       "var": 1.7
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 5,
+       "var": 61.3
+      },
+      {
+       "v": 9,
+       "var": 15.4
+      },
+      {
+       "v": 13.8,
+       "var": 2.2
+      },
+      {
+       "v": 11.1,
+       "var": 15.6
+      },
+      {
+       "v": 13.6,
+       "var": 16.2
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 4,
+       "var": -20
+      },
+      {
+       "v": 7.3,
+       "var": -18.9
+      },
+      {
+       "v": 11.6,
+       "var": -15.9
+      },
+      {
+       "v": 14,
+       "var": 26.1
+      },
+      {
+       "v": 11.4,
+       "var": -16.2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
