@@ -11,10 +11,12 @@ export default function OrderButton({
   produto,
   tamanhos,
   tamanhoLabel = "Tamanho",
+  compacto = false,
 }: {
   produto: string;
   tamanhos?: string[];
   tamanhoLabel?: string;
+  compacto?: boolean;
 }) {
   const janela = useRef<HTMLDialogElement>(null);
 
@@ -32,7 +34,7 @@ export default function OrderButton({
       <button
         type="button"
         onClick={() => janela.current?.showModal()}
-        className="rounded-full bg-pink px-6 py-2.5 font-bold text-white transition hover:bg-navy"
+        className={`rounded-full bg-pink font-bold text-white transition hover:bg-navy ${compacto ? "px-4 py-1.5 text-sm" : "px-6 py-2.5"}`}
       >
         Encomendar
       </button>

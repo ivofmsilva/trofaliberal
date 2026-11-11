@@ -51,12 +51,11 @@ export const temas: Tema[] = [
   {
     id: "ambiente",
     titulo: "Água, saneamento e ambiente",
-    texto: "Qualidade da água, águas residuais e o que a Câmara gasta e cobra em ambiente, comparado com os concelhos vizinhos.",
+    texto: "Qualidade da água, águas residuais e o que a Câmara gasta em ambiente, comparado com os concelhos vizinhos.",
     slugs: [
       "agua_segura_percentagem",
       "aguas_residuais_drenadas_por_habitante",
       "despesas_ambiente_por_habitante",
-      "receitas_ambiente_por_habitante",
     ],
   },
   {

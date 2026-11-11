@@ -130,7 +130,7 @@ const separadores: Separador[] = [
               <>
                 Li e aceito a{" "}
                 <a
-                  href="https://iniciativaliberal.pt/politica-privacidade-cookies/"
+                  href="https://iniciativaliberal.pt/politica-de-privacidade-e-de-protecao-de-dados-pessoais/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-cyan-dark underline"

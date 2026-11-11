@@ -7,7 +7,18 @@ import { merchandising, packsNatal } from "@/lib/loja";
 
 export const metadata: Metadata = { title: "Loja — Iniciativa Liberal Trofa" };
 
-const produtos = [
+type Produto = {
+  id?: string;
+  nome: string;
+  texto: string;
+  preco: string;
+  imagem: { src: string; w: number; h: number };
+  tamanhos?: string[];
+  tamanhoLabel?: string;
+  cobrir?: boolean;
+};
+
+const produtosBase: Produto[] = [
   {
     nome: "Pin Trofa para cima",
     texto: "O símbolo liberal ao peito, discreto e com atitude.",
@@ -27,15 +38,32 @@ const produtos = [
     imagem: { src: "/images/loja/tshirt.png", w: 473, h: 243 },
     tamanhos: ["S", "M", "L", "XL", "XXL"],
   },
-  {
-    nome: "T-shirt Acelerar a Trofa",
-    texto: "Uma nova frase, a mesma atitude.",
-    breve: true,
-  },
 ];
 
+// O pack de Natal ocupa o lugar da t-shirt "Acelerar a Trofa".
 // Só aparecem os packs disponíveis; os outros ficam guardados em lib/loja.ts.
-const packsVisiveis = packsNatal.filter((p) => p.disponivel);
+const packs: Produto[] = packsNatal
+  .filter((p) => p.disponivel)
+  .map((p) => ({
+    id: "natal",
+    nome: p.nome,
+    texto: p.texto,
+    preco: p.preco,
+    imagem: { src: p.imagem, w: 1200, h: 675 },
+    tamanhos: p.tamanhos,
+    tamanhoLabel: "Tamanho da camisola",
+    cobrir: true,
+  }));
+
+const produtos = [...produtosBase, ...packs];
+
+// Artigos nacionais, por grupos (ids do portal; ver lib/loja.ts).
+const grupos: { titulo: string; ids: number[] }[] = [
+  { titulo: "Roupa", ids: [28, 41, 30, 33, 34, 39, 38, 52, 51] },
+  { titulo: "Para o dia a dia", ids: [48, 45, 54, 44, 50, 43, 9, 6] },
+  { titulo: "Papelaria", ids: [74, 73, 56, 8] },
+];
+const LOJA_NACIONAL = "https://portal.liberal.pt/shop";
 
 export default function Loja() {
   return (
@@ -49,40 +77,6 @@ export default function Loja() {
         estás.
       </PageHero>
 
-      <section id="natal" className="scroll-mt-24 bg-mist py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Natal</p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Packs de Natal</h2>
-          <p className="mt-4 max-w-2xl text-lg text-ink/80">
-            Camisola, cachecol e gorro de malha, para vestir o Natal com estilo: “O Natal é liberal”, por 50€ o
-            conjunto.
-          </p>
-          <ul className={`mt-10 grid gap-6 ${packsVisiveis.length === 1 ? "max-w-md" : "lg:grid-cols-3"}`}>
-            {packsVisiveis.map((p) => (
-              <li key={p.id} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
-                <Image
-                  src={p.imagem}
-                  alt={p.alt}
-                  width={1200}
-                  height={675}
-                  sizes="(min-width: 1024px) 400px, 100vw"
-                  className="aspect-video w-full object-cover"
-                />
-                <div className="flex flex-1 flex-col p-6 sm:p-8">
-                  <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
-                  <p className="mt-3 text-white/80">{p.texto}</p>
-                  <div className="mt-auto space-y-4 pt-6">
-                    <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
-                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel="Tamanho da camisola" />
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-ink/60">Imagens ilustrativas.</p>
-        </div>
-      </section>
-
       <section id="produtos" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
@@ -90,33 +84,21 @@ export default function Loja() {
         </h2>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {produtos.map((p) => (
-            <li key={p.nome} className="flex flex-col overflow-hidden rounded-2xl bg-navy text-white">
-              {p.imagem ? (
-                <Image
-                  src={p.imagem.src}
-                  alt={p.nome}
-                  width={p.imagem.w}
-                  height={p.imagem.h}
-                  sizes="(min-width: 1024px) 300px, 50vw"
-                  className="aspect-[3/2] w-full bg-white object-contain"
-                />
-              ) : (
-                <div className="font-display flex aspect-[3/2] items-center justify-center bg-navy-soft text-2xl font-bold text-sun">
-                  Acelerar a Trofa
-                </div>
-              )}
+            <li key={p.nome} id={p.id} className="flex scroll-mt-24 flex-col overflow-hidden rounded-2xl bg-navy text-white">
+              <Image
+                src={p.imagem.src}
+                alt={p.nome}
+                width={p.imagem.w}
+                height={p.imagem.h}
+                sizes="(min-width: 1024px) 300px, 50vw"
+                className={`aspect-[3/2] w-full ${p.cobrir ? "object-cover" : "bg-white object-contain"}`}
+              />
               <div className="flex flex-1 flex-col p-8">
                 <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
                 <p className="mt-3 text-white/80">{p.texto}</p>
                 <div className="mt-auto space-y-4 pt-6">
-                  {p.breve ? (
-                    <span className="text-sm font-bold text-white/60">Em breve</span>
-                  ) : (
-                    <>
-                      <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
-                      <OrderButton produto={p.nome} tamanhos={p.tamanhos} />
-                    </>
-                  )}
+                  <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
+                  <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel={p.tamanhoLabel} />
                 </div>
               </div>
             </li>
@@ -124,37 +106,61 @@ export default function Loja() {
         </ul>
         <p className="mt-6 text-sm text-ink/60">
           A encomenda é enviada ao núcleo, que entra em contacto contigo para combinar o pagamento e a entrega.
+          {packs.length > 0 && " Imagem do pack ilustrativa."}
         </p>
       </section>
 
-      <section className="bg-mist py-20">
+      <section id="nacionais" className="scroll-mt-24 bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            Artigos nacionais
-          </h2>
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {merchandising.map((p) => (
-              <li key={p.id} className="flex flex-row overflow-hidden rounded-2xl bg-navy text-white sm:flex-col">
-                <Image
-                  src={`/images/loja-nacional/${p.id}.webp`}
-                  alt={p.nome}
-                  width={512}
-                  height={512}
-                  sizes="(min-width: 1024px) 280px, 50vw"
-                  className="aspect-square w-28 shrink-0 self-start bg-white object-contain p-2 sm:w-full sm:p-3"
-                />
-                <div className="flex flex-1 flex-col p-4 sm:p-6">
-                  <h3 className="font-display text-lg font-bold leading-tight sm:text-xl">{p.nome}</h3>
-                  {p.nota && <p className="mt-2 text-sm text-white/80">{p.nota}</p>}
-                  <div className="mt-auto space-y-4 pt-5">
-                    <p className="font-display text-2xl font-bold text-sun">{p.preco}</p>
-                    <OrderButton produto={p.nome} tamanhos={p.tamanhos} />
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
+              <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Artigos nacionais</h2>
+              <p className="mt-3 max-w-2xl text-ink/80">
+                O merchandising da Iniciativa Liberal, aos mesmos preços da loja nacional. Encomenda por aqui e o núcleo
+                trata de tudo.
+              </p>
+            </div>
+            <a
+              href={LOJA_NACIONAL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border-2 border-navy px-6 py-2.5 text-sm font-bold text-navy transition hover:bg-navy hover:text-white"
+            >
+              Ver na loja nacional ↗
+            </a>
+          </div>
+
+          {grupos.map((g) => (
+            <div key={g.titulo} className="mt-12">
+              <h3 className="font-display text-2xl font-bold text-navy">{g.titulo}</h3>
+              <ul className="mt-5 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
+                {g.ids
+                  .map((id) => merchandising.find((p) => p.id === id))
+                  .filter((p): p is NonNullable<typeof p> => Boolean(p))
+                  .map((p) => (
+                    <li key={p.id} className="flex flex-col overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-navy/10">
+                      <Image
+                        src={`/images/loja-nacional/${p.id}.webp`}
+                        alt={p.nome}
+                        width={512}
+                        height={512}
+                        sizes="(min-width: 1024px) 220px, 45vw"
+                        className="aspect-square w-full bg-white object-contain p-3"
+                      />
+                      <div className="flex flex-1 flex-col border-t border-navy/10 p-4">
+                        <h4 className="text-sm font-bold leading-snug text-navy sm:text-base">{p.nome}</h4>
+                        {p.nota && <p className="mt-1 text-xs text-ink/70">{p.nota}</p>}
+                        <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-4">
+                          <p className="font-display text-lg font-bold text-navy">{p.preco}</p>
+                          <OrderButton produto={p.nome} tamanhos={p.tamanhos} compacto />
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 

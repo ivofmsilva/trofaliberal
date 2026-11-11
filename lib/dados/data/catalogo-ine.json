@@ -1,5 +1,11 @@
 {
-  "comparar": ["Trofa", "Santo Tirso", "Maia", "Vila do Conde", "Vila Nova de Famalicão"],
+  "comparar": [
+    "Trofa",
+    "Santo Tirso",
+    "Maia",
+    "Vila do Conde",
+    "Vila Nova de Famalicão"
+  ],
   "nota_comparar": "Os concelhos que fazem fronteira com a Trofa (Santo Tirso, Maia, Vila do Conde e Vila Nova de Famalicão).",
   "indicadores": [
     {
@@ -18,16 +24,7 @@
       "categoria": "ambiente",
       "unidade": "€/hab.",
       "fonte": "INE (Inquérito às despesas dos municípios em ambiente)",
-      "texto": "O que a Câmara gasta em proteção do ambiente (águas residuais, resíduos, biodiversidade, etc.), dividido pelos habitantes do concelho."
-    },
-    {
-      "slug": "receitas_ambiente_por_habitante",
-      "varcd": "0012081",
-      "titulo": "Receitas em ambiente da Câmara, por habitante",
-      "categoria": "ambiente",
-      "unidade": "€/hab.",
-      "fonte": "INE (Inquérito às receitas dos municípios em ambiente)",
-      "texto": "O que a Câmara cobra em serviços de ambiente (por exemplo, tarifas de água, saneamento e resíduos), dividido pelos habitantes do concelho."
+      "texto": "O que a Câmara gasta em proteção do ambiente (águas residuais, resíduos, biodiversidade, etc.), dividido pelos habitantes do concelho. Varia muito de ano para ano, porque depende dos investimentos de cada ano e do que cada município regista como despesa de ambiente (a água e o saneamento podem estar a cargo de empresas): compara com cautela."
     },
     {
       "slug": "despesas_cultura_desporto_no_total",
