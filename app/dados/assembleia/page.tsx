@@ -3,6 +3,7 @@ import Link from "next/link";
 import ComoVotam from "@/components/dados/ComoVotam";
 import ComposicaoAssembleia from "@/components/dados/ComposicaoAssembleia";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
+import IniciativasAM from "@/components/dados/IniciativasAM";
 import Votacoes from "@/components/dados/Votacoes";
 import { assembleia } from "@/lib/dados/autarquia";
 
@@ -60,6 +61,11 @@ export default function Assembleia() {
               </a>
             </li>
             <li>
+              <a href="#iniciativas" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
+                Iniciativas
+              </a>
+            </li>
+            <li>
               <a href="#votacoes" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
                 Votações
               </a>
@@ -90,6 +96,10 @@ export default function Assembleia() {
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Como votam</h2>
           <p className="mt-2 mb-6 max-w-2xl text-texto">Quantas decisões são tomadas por unanimidade e, nas que não são, como votou cada lista. Contagem feita a partir das deliberações publicadas.</p>
           <ComoVotam corpo="assembleia" />
+        </section>
+        <section id="iniciativas" className="scroll-mt-6 border-b border-linha py-12">
+          <h2 className="mb-2 text-2xl font-bold tracking-tight text-tinta">Moções, votos e recomendações</h2>
+          <IniciativasAM />
         </section>
         <section id="votacoes" className="scroll-mt-6 border-b border-linha py-12">
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Votações</h2>

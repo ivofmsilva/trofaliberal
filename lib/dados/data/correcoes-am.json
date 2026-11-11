@@ -1,0 +1,14 @@
+[
+  {
+    "data": "2016-09-30",
+    "assunto": "Voto de Protesto",
+    "motivo": "A deliberação publicada só regista a aceitação do voto para discussão (unanimidade). Na ata da sessão, a votação do voto foi: 11 a favor (10 PS e 1 PCP/PEV), 12 contra (PPD/PSD) e 3 abstenções (2 CDS-PP e 1 IPM), e o voto não foi aprovado.",
+    "set": {
+      "resultado": "rejeitado",
+      "tipo": "maioria",
+      "totais": { "favor": 11, "contra": 12, "abstencoes": 3, "brancos": 0 },
+      "grupos": { "favor": { "PS": 10, "PCP/PEV": 1 }, "contra": { "PSD": 12 }, "abstencoes": { "CDS-PP": 2, "IPM": 1 }, "brancos": {} },
+      "nota": "Corrigido com a ata: a deliberação publicada só regista a aceitação do voto para discussão."
+    }
+  }
+]
