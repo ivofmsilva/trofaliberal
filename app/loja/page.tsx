@@ -82,7 +82,7 @@ export default function Loja() {
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
           Artigos da Trofa
         </h2>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {produtos.map((p) => (
             <li key={p.nome} id={p.id} className="flex scroll-mt-24 flex-col overflow-hidden rounded-2xl bg-navy text-white">
               <Image
@@ -93,11 +93,11 @@ export default function Loja() {
                 sizes="(min-width: 1024px) 300px, 50vw"
                 className={`aspect-[3/2] w-full ${p.cobrir ? "object-cover" : "bg-white object-contain"}`}
               />
-              <div className="flex flex-1 flex-col p-8">
-                <h3 className="font-display text-2xl font-bold leading-tight">{p.nome}</h3>
-                <p className="mt-3 text-white/80">{p.texto}</p>
-                <div className="mt-auto space-y-4 pt-6">
-                  <p className="font-display text-3xl font-bold text-sun">{p.preco}</p>
+              <div className="flex flex-1 flex-col p-4 sm:p-8">
+                <h3 className="font-display text-base font-bold leading-tight sm:text-2xl">{p.nome}</h3>
+                <p className="mt-2 text-sm text-white/80 sm:mt-3 sm:text-base">{p.texto}</p>
+                <div className="mt-auto space-y-3 pt-4 sm:space-y-4 sm:pt-6">
+                  <p className="font-display text-2xl font-bold text-sun sm:text-3xl">{p.preco}</p>
                   <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel={p.tamanhoLabel} />
                 </div>
               </div>

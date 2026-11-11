@@ -1,4 +1,4 @@
-import { links } from "@/lib/site";
+import Link from "next/link";
 
 // Gráfico simples e decorativo: barras a subir com uma linha por cima.
 function Grafico() {
@@ -30,14 +30,12 @@ function Grafico() {
 }
 
 // Portal de dados abertos da Trofa, no mesmo estilo dos outros banners da página inicial.
-// O cartaz inteiro é uma ligação para o portal (noutro separador).
+// O cartaz inteiro é uma ligação para o portal de dados, dentro do site.
 export default function BannerDados() {
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6">
-      <a
-        href={links.dados}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href="/dados"
         aria-label="Dados da Trofa: a Trofa em números. Abrir o portal de dados"
         className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
       >
@@ -56,7 +54,7 @@ export default function BannerDados() {
           </p>
           <div className="mt-auto flex flex-wrap items-center gap-4 pt-2 md:pt-4">
             <span className="rounded-full bg-sun px-6 py-3 font-bold text-navy transition group-hover:bg-white">
-              Ver os dados ↗
+              Ver os dados →
             </span>
             <p className="font-display hidden text-lg font-black uppercase leading-tight sm:block">Dados da Trofa</p>
           </div>
@@ -74,7 +72,7 @@ export default function BannerDados() {
             ))}
           </div>
         </div>
-      </a>
+      </Link>
     </section>
   );
 }

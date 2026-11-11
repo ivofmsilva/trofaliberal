@@ -34,7 +34,7 @@ export default function OrderButton({
       <button
         type="button"
         onClick={() => janela.current?.showModal()}
-        className={`rounded-full bg-pink font-bold text-white transition hover:bg-navy ${compacto ? "px-4 py-1.5 text-sm" : "px-6 py-2.5"}`}
+        className={`rounded-full bg-pink font-bold text-white transition hover:bg-navy ${compacto ? "px-4 py-1.5 text-sm" : "px-4 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base"}`}
       >
         Encomendar
       </button>
