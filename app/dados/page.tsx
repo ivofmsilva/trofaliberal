@@ -27,7 +27,7 @@ export default function Inicio() {
 
   return (
     <>
-      <section className="border-b border-linha bg-suave">
+      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Dados abertos</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight text-tinta sm:text-5xl md:text-6xl">
@@ -68,7 +68,7 @@ export default function Inicio() {
         </ul>
       </section>
 
-      <section aria-label="Transparência" className="border-t border-linha bg-suave">
+      <section aria-label="Transparência" className="border-t border-linha bg-cinza">
         <div className="mx-auto grid max-w-6xl gap-5 px-4 py-12 sm:px-6 md:grid-cols-2">
           <Link href="/dados/contratos" className="group rounded-2xl border border-linha bg-fundo p-7 transition hover:border-tinta">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-apagado">Transparência</p>

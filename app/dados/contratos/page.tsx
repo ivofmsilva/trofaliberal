@@ -19,7 +19,7 @@ export default function Contratos() {
   return (
     <>
       <SubNav atual="contratos" />
-      <section className="border-b border-linha bg-suave">
+      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Transparência</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Contratos públicos</h1>

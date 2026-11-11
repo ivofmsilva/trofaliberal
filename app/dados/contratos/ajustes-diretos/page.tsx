@@ -20,7 +20,7 @@ export default function AjustesDiretos() {
   return (
     <>
       <SubNav atual="ajustes" />
-      <section className="border-b border-linha bg-suave">
+      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <Link href="/dados/contratos" className="text-sm text-apagado hover:text-tinta hover:underline">
             ← Contratos públicos
@@ -61,7 +61,7 @@ export default function AjustesDiretos() {
           <p className="mt-2 max-w-2xl text-texto">Quanto dos contratos e do dinheiro de cada ano foi por ajuste direto.</p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
             <table className="w-full text-sm">
-              <thead className="bg-suave text-left text-apagado">
+              <thead className="bg-cinza text-left text-apagado">
                 <tr>
                   <th className="px-4 py-3 font-medium">Ano</th>
                   <th className="px-4 py-3 text-right font-medium">Contratos</th>
@@ -98,7 +98,7 @@ export default function AjustesDiretos() {
           </p>
           <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
             <table className="w-full text-sm">
-              <thead className="bg-suave text-left text-apagado">
+              <thead className="bg-cinza text-left text-apagado">
                 <tr>
                   <th className="px-4 py-3 font-medium">Área</th>
                   <th className="px-4 py-3 text-right font-medium">Ajustes diretos</th>

@@ -23,7 +23,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
       <h3 className="mt-8 text-lg font-bold text-tinta">Ano a ano</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
         <table className="w-full text-sm">
-          <thead className="bg-suave text-left text-apagado">
+          <thead className="bg-cinza text-left text-apagado">
             <tr>
               <th className="px-4 py-3 font-medium">Ano</th>
               <th className="px-4 py-3 text-right font-medium">Pontos votados</th>
@@ -47,7 +47,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
           </tbody>
         </table>
       </div>
-      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Os PDF digitalizados (sem texto) ficam de fora, sobretudo 2017 e 2018.</p>}
+      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Só contam as reuniões de que a Câmara publicou as deliberações (a lista das que faltam está em Deliberações). Os documentos digitalizados foram lidos por reconhecimento de texto e os pontos em que o voto não se leu ficam de fora das contas.</p>}
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Nas votações por maioria</h3>
       <p className="mt-2 max-w-2xl text-texto">
@@ -67,7 +67,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
             ) : (
               <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
                 <table className="w-full text-sm">
-                  <thead className="bg-suave text-left text-apagado">
+                  <thead className="bg-cinza text-left text-apagado">
                     <tr>
                       <th className="px-4 py-2.5 font-medium">Lista</th>
                       <th className="px-4 py-2.5 text-right font-medium">A favor</th>

@@ -121,7 +121,7 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
       </p>
 
       <div className="mt-3 overflow-hidden rounded-xl border border-linha">
-        <div className={`hidden gap-4 bg-suave px-4 py-3 text-sm text-apagado md:grid ${cols}`}>
+        <div className={`hidden gap-4 bg-cinza px-4 py-3 text-sm text-apagado md:grid ${cols}`}>
           <Cab ativo={campo === "programa"} desc={desc} onClick={() => ordenar("programa")}>Programa</Cab>
           <Cab ativo={campo === "titulo"} desc={desc} onClick={() => ordenar("titulo")}>Projeto</Cab>
           {mostrarBeneficiario && <span className="font-medium">Beneficiário</span>}

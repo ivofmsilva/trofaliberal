@@ -16,8 +16,9 @@ type Ponto = {
   grupos: { favor: Sentidos; contra: Sentidos; abstencoes: Sentidos; brancos: Sentidos } | null;
   nota: string | null;
   texto: string;
+  ilegivel?: boolean;
 };
-type Sessao = { data: string | null; ano?: number; tipo: string; url: string; semTexto?: boolean; itens: Ponto[] };
+type Sessao = { data: string | null; ano?: number; tipo: string; url: string; semTexto?: boolean; ocr?: boolean; lacunas?: number[]; itens: Ponto[] };
 
 const semAcentos = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
@@ -109,13 +110,18 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
   const [erro, setErro] = useState(false);
   const [q, setQ] = useState("");
   const [soDivididas, setSoDivididas] = useState(false);
+  const [comInfo, setComInfo] = useState(false);
   const [ano, setAno] = useState("");
   const [aberta, setAberta] = useState<string | null>(null);
+  const [cobertura, setCobertura] = useState<Record<string, { publicadas: number; reunioes: number; faltam: number[] }> | null>(null);
 
   useEffect(() => {
     fetch(`/dados/data/${ficheiro}.json`)
       .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((j) => setSessoes(j.sessoes))
+      .then((j) => {
+        setSessoes(j.sessoes);
+        setCobertura(j.cobertura ?? null);
+      })
       .catch(() => setErro(true));
   }, [ficheiro]);
 
@@ -133,12 +139,13 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
         ...s,
         itens: s.itens.filter(
           (p) =>
+            (comInfo || p.tipo || p.ilegivel || p.resultado === "aprovado" || p.resultado === "rejeitado") &&
             (!soDivididas || p.tipo === "maioria" || (p.totais && (p.totais.contra > 0 || p.totais.abstencoes > 0))) &&
             (!t || semAcentos(p.assunto).includes(t)),
         ),
       }))
       .filter((s) => s.itens.length > 0 || (s.semTexto && !q.trim() && !soDivididas));
-  }, [sessoes, q, soDivididas, ano]);
+  }, [sessoes, q, soDivididas, comInfo, ano]);
 
   const totalPontos = visiveis.reduce((n, s) => n + s.itens.length, 0);
   const campo = "rounded-lg border border-linha bg-fundo px-3 py-2 text-base text-tinta outline-none focus:border-tinta md:text-sm";
@@ -160,15 +167,21 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
           </select>
         </label>
       </div>
-      <label className="mt-3 flex cursor-pointer items-center gap-2 text-sm text-texto">
-        <input type="checkbox" checked={soDivididas} onChange={(e) => setSoDivididas(e.target.checked)} className="h-4 w-4 accent-black" />
-        Só as votações em que houve votos contra ou abstenções
-      </label>
+      <div className="mt-3 flex flex-col gap-2 text-sm text-texto sm:flex-row sm:gap-6">
+        <label className="flex cursor-pointer items-start gap-2">
+          <input type="checkbox" checked={soDivididas} onChange={(e) => setSoDivididas(e.target.checked)} className="mt-0.5 h-4 w-4 shrink-0 accent-black" />
+          Só as votações em que houve votos contra ou abstenções
+        </label>
+        <label className="flex cursor-pointer items-start gap-2">
+          <input type="checkbox" checked={comInfo} onChange={(e) => setComInfo(e.target.checked)} className="mt-0.5 h-4 w-4 shrink-0 accent-black" />
+          Mostrar também as informações e comunicações (sem votação)
+        </label>
+      </div>
 
       <p className="mt-4 text-sm text-texto" aria-live="polite">
         {sessoes === null ? (erro ? "Não foi possível carregar as votações." : "A carregar…") : (
           <>
-            <strong className="text-tinta">{totalPontos}</strong> pontos em <strong className="text-tinta">{visiveis.length}</strong> {sessao === "reunião" ? "reuniões" : "sessões"}
+            <strong className="text-tinta">{totalPontos}</strong> {comInfo ? "pontos" : "pontos votados"} em <strong className="text-tinta">{visiveis.length}</strong> {sessao === "reunião" ? "reuniões" : "sessões"}
           </>
         )}
       </p>
@@ -203,6 +216,13 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
                       Este documento é uma digitalização, sem texto que se possa ler automaticamente. Abre o PDF para ver as deliberações.
                     </p>
                   )}
+                  {s.ocr && (
+                    <p className="mb-3 rounded-lg bg-suave px-3 py-2 text-sm text-texto">
+                      Este documento é uma digitalização: o texto foi lido por reconhecimento automático e pode ter falhas.
+                      {s.itens.some((p) => p.ilegivel) && " Os pontos marcados como “não legível” não puderam ser lidos."}
+                      {s.lacunas && s.lacunas.length > 0 && ` Não foi possível ler o ponto ${s.lacunas.join(", ")}.`} Confere sempre com o PDF.
+                    </p>
+                  )}
                   <ul className="space-y-3">
                     {s.itens.map((p, i) => (
                       <li key={i} className="rounded-xl border border-linha bg-fundo p-4">
@@ -212,7 +232,8 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
                             {p.seccao === "antes" ? "Antes da ordem do dia" : "Ordem do dia"}
                             {p.area ? ` · ${p.area}` : ""}
                           </span>
-                          {p.resultado !== "outro" && (
+                          {p.ilegivel && <span className="rounded-full border border-linha px-2 py-0.5 normal-case tracking-normal text-texto">Voto não legível na digitalização</span>}
+                          {!p.ilegivel && p.resultado !== "outro" && (
                             <span className="rounded-full border border-linha px-2 py-0.5 normal-case tracking-normal text-texto">
                               {p.resultado === "informação" ? "Informação" : p.resultado === "rejeitado" ? "Rejeitado" : "Aprovado"}
                               {p.tipo ? (p.tipo === "escrutínio secreto" ? " em escrutínio secreto" : ` por ${p.tipo}`) : ""}
@@ -241,6 +262,26 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
         })}
         {sessoes && visiveis.length === 0 && <p className="py-12 text-center text-apagado">Sem resultados.</p>}
       </div>
+
+      {cobertura && (
+        <details className="mt-6 rounded-xl border border-linha bg-suave p-4 text-sm">
+          <summary className="cursor-pointer font-semibold text-tinta">Reuniões sem deliberações publicadas</summary>
+          <p className="mt-3 max-w-2xl text-texto">
+            A Câmara não publica as deliberações de todas as reuniões. Pelo número da ata no nome dos ficheiros, estas são as reuniões de cada ano
+            de que não há deliberações no site do município (por isso não aparecem aqui). Nos anos de 2017 e 2018 os nomes não trazem número.
+          </p>
+          <ul className="mt-3 grid gap-x-8 gap-y-1 sm:grid-cols-2">
+            {Object.entries(cobertura)
+              .sort((a, b) => Number(b[0]) - Number(a[0]))
+              .map(([a, c]) => (
+                <li key={a} className="text-texto">
+                  <strong className="text-tinta">{a}:</strong> {c.publicadas} de {c.reunioes}
+                  {c.faltam.length > 0 ? ` (sem as das reuniões n.º ${c.faltam.join(", ")})` : ""}
+                </li>
+              ))}
+          </ul>
+        </details>
+      )}
     </div>
   );
 }

@@ -84,7 +84,7 @@ export default async function Pagina({ params }: Props) {
         <h2 className="mb-4 text-lg font-bold text-tinta">Valores por período</h2>
         <div className="overflow-x-auto rounded-xl border border-linha">
           <table className="w-full text-sm">
-            <thead className="bg-suave text-left text-apagado">
+            <thead className="bg-cinza text-left text-apagado">
               <tr>
                 <th scope="col" className="px-4 py-3 font-medium">
                   Período

@@ -37,9 +37,16 @@ const m = (v: number | null, casas = 2) => (v === null ? "—" : numero(v / 1_00
 
 function Quadros({ itens }: { itens: SerieContas[] }) {
   return (
-    <p className="mt-3 text-sm text-apagado">
-      Fonte: Relatórios de Gestão e Contas, {itens.map((s) => `${s.nome.toLowerCase()}: ${s.quadro}`).join("; ")}.
-    </p>
+    <details className="mt-3 text-sm text-apagado">
+      <summary className="cursor-pointer hover:text-tinta">Fonte: relatórios de gestão e contas de cada ano. Ver os quadros usados</summary>
+      <ul className="mt-2 space-y-1.5">
+        {itens.map((s) => (
+          <li key={s.id}>
+            <span className="text-texto">{s.nome}:</span> {s.quadro}
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
 
@@ -47,9 +54,9 @@ function Tabela({ series }: { series: SerieContas[] }) {
   return (
     <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full min-w-[56rem] text-sm">
-        <thead className="bg-suave text-left text-apagado">
+        <thead className="bg-cinza text-left text-apagado">
           <tr>
-            <th scope="col" className="sticky left-0 bg-suave px-4 py-3 font-medium">
+            <th scope="col" className="sticky left-0 bg-cinza px-4 py-3 font-medium">
               Em milhões de euros
             </th>
             {ANOS.map((a) => (
@@ -99,13 +106,13 @@ export default function Financas() {
   const pessoalOrc = orcamento[0];
   return (
     <>
-      <section className="border-b border-linha bg-suave">
+      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Finanças locais</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Finanças do município</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Quanto a Câmara gasta em pessoal, quanto recebe, quanto deve, o que prevê gastar em 2026 e que impostos locais fixa. Os valores vêm das
-            relatórios de gestão e contas que a Câmara publica, de 2010 a 2025 (nem todos os dados existem desde 2010), e do orçamento de 2026.
+            Quanto a Câmara gasta em pessoal, quanto recebe, quanto deve, o que prevê gastar em 2026 e que impostos locais fixa. Os valores vêm dos
+            relatórios de gestão e contas que a Câmara publica (de 2010 a 2025, mas nem todos os dados existem desde 2010) e do orçamento de 2026.
           </p>
           <dl className="mt-8 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">
@@ -245,7 +252,7 @@ export default function Financas() {
           </Titulo>
           <div className="overflow-x-auto rounded-xl border border-linha">
             <table className="w-full text-sm">
-              <thead className="bg-suave text-left text-apagado">
+              <thead className="bg-cinza text-left text-apagado">
                 <tr>
                   <th scope="col" className="px-4 py-3 font-medium">
                     Despesa prevista

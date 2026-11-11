@@ -140,7 +140,7 @@ export default function TabelaContratos() {
       </p>
 
       <div className="mt-3 overflow-hidden rounded-xl border border-linha">
-        <div className="hidden grid-cols-[96px_1fr_230px_140px] gap-4 bg-suave px-4 py-3 text-sm text-apagado md:grid">
+        <div className="hidden grid-cols-[96px_1fr_230px_140px] gap-4 bg-cinza px-4 py-3 text-sm text-apagado md:grid">
           <Cab ativo={campo === "data"} desc={desc} onClick={() => ordenar("data")}>Data</Cab>
           <Cab ativo={campo === "objeto"} desc={desc} onClick={() => ordenar("objeto")}>Objeto</Cab>
           <Cab ativo={campo === "adjudicatario"} desc={desc} onClick={() => ordenar("adjudicatario")}>Adjudicatário</Cab>

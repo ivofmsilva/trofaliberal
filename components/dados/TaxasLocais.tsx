@@ -156,7 +156,7 @@ function Tabela({ colunas, linhas }: { colunas: string[]; linhas: React.ReactNod
   return (
     <div className="mt-8 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full text-sm">
-        <thead className="bg-suave text-left text-apagado">
+        <thead className="bg-cinza text-left text-apagado">
           <tr>
             {colunas.map((c) => (
               <th key={c} scope="col" className="px-4 py-3 font-medium">

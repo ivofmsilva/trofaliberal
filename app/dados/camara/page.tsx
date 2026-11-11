@@ -15,7 +15,7 @@ export default function Camara() {
   const atas = camara.filter((d) => d.tipo === "camara-ata");
   return (
     <>
-      <section className="border-b border-linha bg-suave">
+      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Autarquia</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Câmara Municipal</h1>
@@ -64,8 +64,9 @@ export default function Camara() {
           <Votacoes ficheiro="camara-votos" sessao="reunião" />
           <p className="mt-6 max-w-2xl text-sm text-apagado">
             A Câmara indica quais as listas que votaram a favor, contra ou se abstiveram, mas não diz quantos votos deu
-            cada uma; por isso mostramos o total e as listas. Os PDF de 2017 e 2018 e alguns dos anos seguintes (36
-            em 221) são digitalizações, sem texto que se possa ler automaticamente: ficam só com a ligação ao original.
+            cada uma; por isso mostramos o total e as listas. 36 dos 221 documentos (2017 a 2019 e alguns dos anos
+            seguintes) são digitalizações: foram lidos por reconhecimento automático de texto, que falha em alguns pontos,
+            e esses ficam marcados como “não legível”. Confere sempre com o PDF original.
           </p>
         </section>
 
