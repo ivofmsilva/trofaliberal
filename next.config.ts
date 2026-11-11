@@ -9,17 +9,20 @@ const antigas: [string, string][] = [
   ["/denuncia", "/participa?t=denuncia"],
   ["/ideias/sugestao", "/participa?t=ideia"],
   ["/eventos", "/imprensa?t=eventos"],
-  ["/cookies", "/privacidade#cookies"],
-  ["/termos", "/privacidade"],
-  ["/politica-de-privacidade", "/privacidade"],
   ["/dados/taxas", "/dados/financas#taxas"],
   ["/dados/votos", "/dados/camara#como-votam"],
   ["/dados/orgaos", "/dados/camara#composicao"],
 ];
 
+// Privacidade e cookies: vale a política do partido.
+const POLITICA = "https://iniciativaliberal.pt/politica-privacidade-cookies/";
+
 const nextConfig: NextConfig = {
   async redirects() {
-    return antigas.map(([source, destination]) => ({ source, destination, permanent: true }));
+    return [
+      ...antigas.map(([source, destination]) => ({ source, destination, permanent: true })),
+      ...["/privacidade", "/cookies", "/termos", "/politica-de-privacidade"].map((source) => ({ source, destination: POLITICA, permanent: false })),
+    ];
   },
 };
 

@@ -142,11 +142,7 @@ export default function MailForm({
         {estado === "a-enviar" ? "A enviar…" : submitLabel}
       </button>
       <p className="text-xs text-ink/60">
-        A mensagem segue por email para o núcleo, através de um serviço de envio. O site não a guarda. Mais sobre os teus dados em{" "}
-        <a href="/privacidade" className="underline underline-offset-2 hover:text-ink">
-          Privacidade
-        </a>
-        .
+        A mensagem segue por email para o núcleo, através de um serviço de envio. O site não a guarda.
       </p>
 
       {estado === "enviado" && (

@@ -54,9 +54,9 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/50">
         © {new Date().getFullYear()} Iniciativa Liberal — Núcleo da Trofa ·{" "}
-        <Link href="/privacidade" className="underline underline-offset-2 hover:text-white">
+        <a href="https://iniciativaliberal.pt/politica-privacidade-cookies/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">
           Privacidade e cookies
-        </Link>
+        </a>
       </div>
     </footer>
   );
