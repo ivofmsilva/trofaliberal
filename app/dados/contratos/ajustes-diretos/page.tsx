@@ -27,8 +27,8 @@ export default function AjustesDiretos() {
           </Link>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Ajustes diretos</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            No ajuste direto a Câmara convida diretamente a entidade à sua escolha, sem concurso aberto. Aqui está quanto
-            pesa, em quê e a quem, sem comentários.
+            No ajuste direto a Câmara contrata diretamente uma entidade, sem concurso público. Esta página mostra o peso que
+            tem nos contratos do município, em que áreas e com que fundamentação legal.
           </p>
           <dl className="mt-8 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">

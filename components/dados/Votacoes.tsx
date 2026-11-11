@@ -113,6 +113,7 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
   const [comInfo, setComInfo] = useState(false);
   const [ano, setAno] = useState("");
   const [aberta, setAberta] = useState<string | null>(null);
+  const [limite, setLimite] = useState(10);
   const [cobertura, setCobertura] = useState<Record<string, { publicadas: number; reunioes: number; faltam: number[] }> | null>(null);
 
   useEffect(() => {
@@ -148,6 +149,10 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
   }, [sessoes, q, soDivididas, comInfo, ano]);
 
   const totalPontos = visiveis.reduce((n, s) => n + s.itens.length, 0);
+  // A lista é longa: mostram-se as mais recentes e o resto expande-se (com pesquisa, filtro ou ano escolhido mostra-se tudo).
+  const completa = Boolean(q.trim()) || soDivididas || Boolean(ano);
+  const mostradas = completa ? visiveis : visiveis.slice(0, limite);
+  const restantes = visiveis.length - mostradas.length;
   const campo = "rounded-lg border border-linha bg-fundo px-3 py-2 text-base text-tinta outline-none focus:border-tinta md:text-sm";
 
   return (
@@ -187,7 +192,7 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
       </p>
 
       <div className="mt-3 divide-y divide-linha border-y border-linha">
-        {visiveis.map((s) => {
+        {mostradas.map((s) => {
           const id = s.url;
           const open = aberta === id || Boolean(q.trim());
           return (
@@ -262,6 +267,16 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
         })}
         {sessoes && visiveis.length === 0 && <p className="py-12 text-center text-apagado">Sem resultados.</p>}
       </div>
+      {restantes > 0 && (
+        <div className="mt-4 flex flex-wrap gap-3">
+          <button type="button" onClick={() => setLimite((l) => l + 10)} className="rounded-full border border-linha bg-fundo px-5 py-2.5 text-sm font-semibold text-tinta transition hover:border-tinta">
+            Mostrar mais {Math.min(10, restantes)} {sessao === "reunião" ? "reuniões" : "sessões"}
+          </button>
+          <button type="button" onClick={() => setLimite(visiveis.length)} className="rounded-full px-3 py-2.5 text-sm text-apagado underline underline-offset-2 hover:text-tinta">
+            Mostrar todas ({restantes} em falta)
+          </button>
+        </div>
+      )}
 
       {cobertura && (
         <details className="mt-6 rounded-xl border border-linha bg-suave p-4 text-sm">

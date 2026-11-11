@@ -22,7 +22,7 @@ export default function Fundos() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Transparência</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fundos europeus</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Dinheiro europeu com destino à Trofa, de dois programas: o Portugal 2020 (fundos de coesão, 2014–2020) e o
+            Projetos financiados por fundos europeus na Trofa, de dois programas: o Portugal 2020 (fundos de coesão, 2014–2020) e o
             PRR (Plano de Recuperação e Resiliência, 2021–2026).
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function Fundos() {
         </section>
 
         <p className="mt-12 text-sm text-apagado">
-          Fonte: Portugal 2020 e PRR, através dos ficheiros oficiais de dados.gov.pt. O valor mostrado é o valor aprovado
+          Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado
           atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa).
         </p>
       </div>

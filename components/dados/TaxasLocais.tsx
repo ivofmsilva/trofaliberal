@@ -26,7 +26,7 @@ export default function TaxasLocais() {
         </h2>
         <p className="mt-2 max-w-2xl text-texto">
           Todos os anos, no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
-          Aqui está o que decidiu desde 2015 e como votou cada vez.
+          Mostra o que foi decidido desde 2015 e a votação de cada deliberação.
         </p>
         <dl className="mt-6 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">

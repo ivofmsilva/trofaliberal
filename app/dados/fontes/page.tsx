@@ -17,7 +17,7 @@ export default function Fontes() {
       <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Dados da Trofa</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fontes e método</h1>
       <p className="mt-5 text-lg text-texto">
-        Aqui há números oficiais. Cada indicador diz de onde vem e a que ano se refere.
+        Cada indicador indica a fonte e o ano a que se refere.
       </p>
 
       <h2 className="mt-12 text-xl font-bold text-tinta">De onde vêm os números</h2>

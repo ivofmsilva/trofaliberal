@@ -40,19 +40,37 @@ export default function Grafico({
   casas?: number;
 }) {
   const caixa = useRef<HTMLDivElement>(null);
-  const [largura, setLargura] = useState(720);
+  const [larguraCaixa, setLarguraCaixa] = useState(720);
+  const [rolavel, setRolavel] = useState(false);
   const [modo, setModo] = useState<"valores" | "comparar">("valores");
   const [ativo, setAtivo] = useState<number | null>(null);
+
+  // No telemóvel o gráfico não se aperta: fica com uma largura mínima e desliza-se para o lado (começa nos anos mais recentes).
+  const LARGURA_MINIMA = 600;
+  const largura = Math.max(larguraCaixa, LARGURA_MINIMA);
 
   useEffect(() => {
     const el = caixa.current;
     if (!el) return;
-    const medir = () => setLargura(Math.max(280, Math.round(el.clientWidth)));
+    const medir = () => {
+      setLarguraCaixa(Math.max(280, Math.round(el.clientWidth)));
+      setRolavel(el.clientWidth < LARGURA_MINIMA);
+    };
     medir();
     const ro = new ResizeObserver(medir);
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  // Quando o gráfico passa a deslizar, começa à direita (anos mais recentes).
+  const jaRolou = useRef(false);
+  useEffect(() => {
+    const el = caixa.current;
+    if (rolavel && el && !jaRolou.current && el.scrollWidth > el.clientWidth) {
+      el.scrollLeft = el.scrollWidth;
+      jaRolou.current = true;
+    }
+  }, [rolavel, largura]);
 
   const podeComparar = !semComparar && series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
   const modoEfetivo = podeComparar ? modo : "valores";
@@ -60,7 +78,9 @@ export default function Grafico({
   // No modo "comparar" cada série vira índice (100 = primeiro valor), para se ver quem cresce mais.
   const visiveis: Serie[] =
     modoEfetivo === "valores"
-      ? [series[0]]
+      ? semComparar
+        ? series
+        : [series[0]]
       : series.map((s) => {
           const base = s.valores.find((v) => v !== null);
           return { nome: s.nome, valores: s.valores.map((v) => (v === null || !base ? null : (v / base) * 100)) };
@@ -85,8 +105,8 @@ export default function Grafico({
   const xMin = numerico ? Math.min(...anos) : 0;
   const xMax = numerico ? Math.max(...anos) : periodos.length - 1;
 
-  const altura = largura < 520 ? 260 : 340;
-  const m = { e: largura < 520 ? 46 : 62, d: 18, t: 16, b: 30 };
+  const altura = larguraCaixa < 520 ? 230 : 340;
+  const m = { e: larguraCaixa < 520 ? 50 : 62, d: 18, t: 16, b: 30 };
   const w = largura - m.e - m.d;
   const h = altura - m.t - m.b;
   const X = (i: number) => m.e + (xMax === xMin ? w / 2 : (((numerico ? anos[i] : i) - xMin) / (xMax - xMin)) * w);
@@ -145,7 +165,8 @@ export default function Grafico({
         </div>
       )}
 
-      <div ref={caixa} className="relative w-full">
+      <div ref={caixa} className="w-full overflow-x-auto overflow-y-hidden pb-1 [scrollbar-width:thin]">
+       <div className="relative" style={{ width: largura }}>
         <svg
           width={largura}
           height={altura}
@@ -154,7 +175,7 @@ export default function Grafico({
           onPointerMove={aoMover}
           onPointerDown={aoMover}
           onPointerLeave={() => setAtivo(null)}
-          style={{ touchAction: "pan-y" }}
+          style={{ touchAction: "pan-x pan-y" }}
           className="block overflow-visible"
         >
           {ticks.map((t) => (
@@ -230,7 +251,9 @@ export default function Grafico({
             })}
           </div>
         )}
+       </div>
       </div>
+      {rolavel && <p className="mt-1 text-xs text-apagado">Desliza o gráfico para o lado para ver todos os anos.</p>}
 
       <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-texto">
         {visiveis.map((s) => {

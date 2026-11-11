@@ -34,7 +34,7 @@ export default function Inicio() {
             A Trofa em números
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-texto">
-            Números oficiais sobre o concelho, tal como são publicados pelo INE e pelo Pordata.
+            Indicadores sobre o concelho da Trofa, com os dados do INE e do Pordata.
           </p>
           <p className="mt-6 text-sm text-apagado">
             {total} indicadores · última atualização {atualizado ?? "—"} ·{" "}

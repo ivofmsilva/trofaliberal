@@ -88,7 +88,7 @@ export default function Assembleia() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <section id="como-votam" className="scroll-mt-6 border-b border-linha py-12">
           <h2 className="text-2xl font-bold tracking-tight text-tinta">Como votam</h2>
-          <p className="mt-2 mb-6 max-w-2xl text-texto">Quantas decisões são tomadas por unanimidade e, nas que não são, como votou cada lista. Contado a partir das deliberações publicadas, sem comentários.</p>
+          <p className="mt-2 mb-6 max-w-2xl text-texto">Quantas decisões são tomadas por unanimidade e, nas que não são, como votou cada lista. Contagem feita a partir das deliberações publicadas.</p>
           <ComoVotam corpo="assembleia" />
         </section>
         <section id="votacoes" className="scroll-mt-6 border-b border-linha py-12">

@@ -28,7 +28,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Finanças do município",
-  description: "Gastos com pessoal, receita, dívida e orçamento da Câmara Municipal da Trofa desde 2010 e para 2026, tirados das contas oficiais.",
+  description: "Gastos com pessoal, receita, dívida e orçamento da Câmara Municipal da Trofa desde 2010 e para 2026, com base nos relatórios de gestão e contas do município.",
 };
 
 const ultimo = (s: SerieContas) => s.valores[s.valores.length - 1];
@@ -111,7 +111,7 @@ export default function Financas() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Finanças locais</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Finanças do município</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Quanto a Câmara gasta em pessoal, quanto recebe, quanto deve, o que prevê gastar em 2026 e que impostos locais fixa. Os valores vêm dos
+            Gastos com pessoal, receitas, dívida, orçamento para 2026 e impostos locais do município da Trofa. Os valores vêm dos
             relatórios de gestão e contas que a Câmara publica (de 2010 a 2025, mas nem todos os dados existem desde 2010) e do orçamento de 2026.
           </p>
           <dl className="mt-8 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
