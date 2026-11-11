@@ -2,6 +2,8 @@ import Image from "next/image";
 
 export type HeroImage = { src: string; alt: string; w: number; h: number };
 
+// Faixa azul no topo de cada página: compacta, para o conteúdo aparecer logo.
+// A imagem só se mostra em ecrãs largos (no telemóvel ocuparia demasiado espaço).
 export default function PageHero({
   eyebrow,
   title,
@@ -17,16 +19,16 @@ export default function PageHero({
     <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-pink/25 blur-3xl" />
       <div
-        className={`relative mx-auto max-w-7xl gap-10 px-4 py-16 sm:px-6 md:py-20 ${
-          image ? "grid items-center md:grid-cols-[1fr_380px]" : ""
+        className={`relative mx-auto max-w-7xl gap-8 px-4 py-8 sm:px-6 md:py-10 ${
+          image ? "md:grid md:grid-cols-[1fr_300px] md:items-center" : ""
         }`}
       >
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-white/90">{eyebrow}</p>
-          <h1 className="font-display mt-4 max-w-4xl text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/90 sm:text-sm">{eyebrow}</p>
+          <h1 className="font-display mt-2 max-w-4xl text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl">
             {title}
           </h1>
-          {children && <div className="mt-6 max-w-2xl text-lg text-white/90">{children}</div>}
+          {children && <div className="mt-3 max-w-2xl text-base text-white/90 md:text-lg">{children}</div>}
         </div>
         {image && (
           <Image
@@ -35,8 +37,8 @@ export default function PageHero({
             width={image.w}
             height={image.h}
             priority
-            sizes="(min-width: 768px) 380px, 100vw"
-            className="mt-10 aspect-[4/3] w-full rounded-2xl object-cover object-[50%_30%] shadow-2xl shadow-black/30 ring-4 ring-white/30 md:mx-auto md:mt-0 md:aspect-auto md:max-h-[460px] md:w-auto md:max-w-full"
+            sizes="300px"
+            className="hidden aspect-[16/9] w-full rounded-2xl object-cover object-[50%_30%] shadow-xl shadow-black/30 ring-4 ring-white/30 md:block"
           />
         )}
       </div>
