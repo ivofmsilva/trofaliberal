@@ -80,9 +80,8 @@ export default function ComposicaoAssembleia() {
         <Legenda bancadas={assembleia} />
         <p className="mt-3 text-sm text-texto">
           A coligação Unidos pela Trofa (PSD e CDS-PP) tem 14 lugares: os 8 eleitos da lista e os 6 presidentes de junta. O
-          PAN e o Livre integram a coligação Trofa em Primeiro, mas não elegeram ninguém. O presidente e os secretários da mesa
-          são membros da Assembleia e votam como os restantes. Para a maioria dos 27 lugares são precisos 14. Os nomes
-          aparecem pelo primeiro e último.
+          PAN e o Livre integram a coligação Trofa em Primeiro, mas não elegeram ninguém. Para a maioria dos 27 lugares
+          são precisos 14. Os nomes aparecem pelo primeiro e último.
         </p>
         <p className="mt-2 text-sm text-apagado">
           Fontes:{" "}
