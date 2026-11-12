@@ -87,7 +87,7 @@ export default function Propostas() {
           <p className="mt-4 max-w-3xl text-ink/80">
             Estas medidas vêm do programa com que nos apresentámos pela primeira vez a eleições autárquicas, em 2025.
             Juntam o que se pode fazer num mandato com uma visão de futuro para a Trofa: os novos equipamentos são
-            objetivos de longo prazo para o concelho, e não promessas para um só mandato.
+            objetivos de longo prazo para o concelho.
           </p>
           <ol className="mt-10 space-y-3">
             {areas.map((a, i) => (
