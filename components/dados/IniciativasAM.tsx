@@ -148,7 +148,11 @@ export default function IniciativasAM() {
       <details className="mt-8 rounded-xl border border-linha bg-fundo p-4">
         <summary className="cursor-pointer font-semibold text-tinta">Ver as {todas.length} iniciativas, uma a uma</summary>
         <ul className="mt-4 space-y-5">
-          {todas.map((x) => (
+          {todas.map((x) => {
+            // "Voto de pesar" é masculino; "Moção" e "Recomendação" são femininos.
+            const o = x.tipo.startsWith("Voto") ? "o" : "a";
+            const votacao = x.votacao.replace(/\b1 abstenções/, "1 abstenção");
+            return (
             <li key={x.data + x.assunto} className="text-sm">
               <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 <span className="font-semibold text-tinta">{dataLonga(x.data)}</span>
@@ -156,10 +160,16 @@ export default function IniciativasAM() {
               </p>
               <p className="mt-1 text-tinta">{x.titulo}</p>
               <p className="mt-1 text-texto">
-                Apresentada por{" "}
-                <strong className="font-semibold text-tinta">{PROPONENTES.find((p) => p.id === x.proponente)?.rotulo ?? x.proponente}</strong>
+                {x.proponente === "Todos" ? (
+                  <strong className="font-semibold text-tinta">Subscrit{o} por todos os membros ou grupos</strong>
+                ) : (
+                  <>
+                    Apresentad{o} por{" "}
+                    <strong className="font-semibold text-tinta">{PROPONENTES.find((p) => p.id === x.proponente)?.rotulo ?? x.proponente}</strong>
+                  </>
+                )}
                 {" · "}
-                {x.resultado === "rejeitada" ? "Não aprovada: " + x.votacao.replace(/^não aprovado: /, "") : "Aprovada " + x.votacao}
+                {x.resultado === "rejeitada" ? `Não aprovad${o}: ` + votacao.replace(/^não aprovado: /, "") : `Aprovad${o} ` + votacao}
               </p>
               {x.nota && <p className="mt-1 text-apagado">{x.nota}</p>}
               <p className="mt-1 text-apagado">
@@ -175,13 +185,12 @@ export default function IniciativasAM() {
                 {x.fonte !== "ata da sessão" && ` · Proponente: ${x.fonte}`}
               </p>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </details>
       <p className="mt-4 max-w-2xl text-sm text-apagado">
-        {numero(todas.length)} iniciativas, lidas das deliberações e das atas das sessões. Numa deliberação (o voto de protesto de 30 de
-        setembro de 2016), o resultado publicado regista só a aceitação para discussão e não a votação final; usei o que a ata diz,
-        e está indicado na iniciativa.
+        {numero(todas.length)} iniciativas, lidas das deliberações e das atas das sessões.
       </p>
     </div>
   );

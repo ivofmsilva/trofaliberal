@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
 import SubNav from "@/components/dados/SubNav";
-import { compacto, numero } from "@/lib/dados/formatar";
+import { compacto, dataCurta, numero, tituloProjeto } from "@/lib/dados/formatar";
 import { fundosConcelho, fundosMunicipio, resumoFundos } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function Fundos() {
   const conc = resumoFundos(fundosConcelho);
   const mun = resumoFundos(fundosMunicipio);
+  const ultimaConclusao = fundosConcelho.map((p) => p.data_efetiva_conclusao).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
 
   return (
     <>
@@ -76,7 +77,7 @@ export default function Fundos() {
                   <p className="text-sm text-apagado">
                     {p.programa} · {p.estado}
                   </p>
-                  <p className="mt-0.5 text-tinta">{p.titulo.length > 180 ? p.titulo.slice(0, p.titulo.lastIndexOf(" ", 180)) + "…" : p.titulo}</p>
+                  <p className="mt-0.5 text-tinta">{p.titulo.length > 180 ? tituloProjeto(p.titulo.slice(0, p.titulo.lastIndexOf(" ", 180))) + "…" : tituloProjeto(p.titulo)}</p>
                 </div>
                 <p className="font-semibold tabular-nums text-tinta sm:text-right">{compacto(p.valor_aprovado_municipio, "€")}</p>
               </li>
@@ -86,7 +87,10 @@ export default function Fundos() {
 
         <p className="mt-12 text-sm text-apagado">
           Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado
-          atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa).
+          atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa). O estado
+          (“Em execução” ou “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou: há projetos que
+          continuam “Em execução” nos ficheiros com a conclusão registada há anos. Dados até: a conclusão mais recente registada
+          nos ficheiros é de {dataCurta(ultimaConclusao)}.
         </p>
       </div>
     </>

@@ -64,9 +64,10 @@ export default function Camara() {
           <Votacoes ficheiro="camara-votos" sessao="reunião" />
           <p className="mt-6 max-w-2xl text-sm text-apagado">
             A Câmara indica quais as listas que votaram a favor, contra ou se abstiveram, mas não diz quantos votos deu
-            cada uma; por isso mostramos o total e as listas. 36 dos 221 documentos (2017 a 2019 e alguns dos anos
+            cada uma; por isso mostramos o total e as listas. 34 dos 221 documentos (2017 a 2019 e alguns dos anos
             seguintes) são digitalizações: foram lidos por reconhecimento automático de texto, que falha em alguns pontos,
-            e esses ficam marcados como “não legível”. Confere sempre com o PDF original.
+            e esses ficam marcados como “não legível”. Confere sempre com o PDF original. No mandato atual as listas são Unidos
+            pela Trofa (PSD e CDS-PP), Trofa em Primeiro (PS, PAN e Livre) e TDT (A Trofa é de Todos).
           </p>
         </section>
 
@@ -78,7 +79,9 @@ export default function Camara() {
             <a href="https://mun-trofa.pt/menu/107/atas" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
               mun-trofa.pt, Atas de reuniões de Câmara ↗
             </a>
-            . Os nomes dos ficheiros nem sempre trazem a data da reunião; quando falta, mostramos o que o ficheiro diz.
+            . O número da ata e a data da reunião são os que vêm no nome de cada ficheiro. Os ficheiros de 2017 a 2020 não trazem
+            nem um nem outro: aparecem pela ordem em que estão no arquivo do município, que não é o número da ata. Nalguns anos o
+            município pôs na lista das atas o ficheiro das deliberações da reunião; fica assinalado.
           </p>
         </section>
       </div>

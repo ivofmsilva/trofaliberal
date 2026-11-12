@@ -5,7 +5,7 @@ import ComposicaoAssembleia from "@/components/dados/ComposicaoAssembleia";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import IniciativasAM from "@/components/dados/IniciativasAM";
 import Votacoes from "@/components/dados/Votacoes";
-import { assembleia } from "@/lib/dados/autarquia";
+import { assembleia, dataLonga } from "@/lib/dados/autarquia";
 
 export const metadata: Metadata = {
   title: "Assembleia Municipal",
@@ -40,6 +40,14 @@ const partes = [
 ] as const;
 
 export default function Assembleia() {
+  // Sessões de que há ata publicada mas não há deliberações publicadas (desde a primeira deliberação): não entram nas votações.
+  const comDeliberacoes = new Set(assembleia.filter((d) => d.tipo === "am-deliberacoes" && d.data).map((d) => d.data as string));
+  const primeira = [...comDeliberacoes].sort()[0] ?? "";
+  const semDeliberacoes = assembleia
+    .filter((d) => d.tipo === "am-ata" && d.data && d.data >= primeira && !comDeliberacoes.has(d.data))
+    .map((d) => d.data as string)
+    .sort()
+    .reverse();
   return (
     <>
       <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
@@ -111,8 +119,27 @@ export default function Assembleia() {
           <p className="mt-6 max-w-2xl text-sm text-apagado">
             Os números por grupo só se mostram quando somam certo com o total que o documento anuncia. Nos poucos casos em
             que o PDF está incompleto ou não bate certo, fica só o texto original. As votações por escrutínio secreto
-            (eleições e designações) mostram só os totais.
+            (eleições e designações) mostram só os totais. No mandato atual os grupos aparecem pelo nome da lista: Unidos pela
+            Trofa (PSD e CDS-PP), Trofa em Primeiro (PS, PAN e Livre), TDT (A Trofa é de Todos) e Chega; as deliberações de dezembro
+            de 2025 ainda contam por partido, e aqui somam-se na lista, com os partidos entre parênteses.
           </p>
+          {semDeliberacoes.length > 0 && (
+            <details className="mt-6 rounded-xl border border-linha bg-suave p-4 text-sm">
+              <summary className="cursor-pointer font-semibold text-tinta">Sessões sem deliberações publicadas</summary>
+              <p className="mt-3 max-w-2xl text-texto">
+                Só entram aqui as sessões de que o município publicou as deliberações. Destas {semDeliberacoes.length} sessões há ata
+                publicada (mais abaixo, em Atas), mas não há o documento das deliberações; por isso não aparecem nas votações nem nas
+                contas de “Como votam”:
+              </p>
+              <ul className="mt-3 grid gap-x-8 gap-y-1 sm:grid-cols-2">
+                {semDeliberacoes.map((d) => (
+                  <li key={d} className="text-texto">
+                    {dataLonga(d)}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </section>
         {partes.map((p) => {
           const docs = assembleia.filter((d) => d.tipo === p.tipo);
@@ -128,6 +155,9 @@ export default function Assembleia() {
                 <a href={p.fonte} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
                   mun-trofa.pt ↗
                 </a>
+                . A data {p.tipo === "am-ata" ? "e o número da ata são os que vêm" : "é a que vem"} no nome de cada ficheiro
+                {p.tipo === "am-deliberacoes" ? " ou, nos mais antigos, dentro do próprio documento" : ""}; quando o nome não diz o ano,
+                o documento fica no arquivo mais antigo.
               </p>
             </section>
           );

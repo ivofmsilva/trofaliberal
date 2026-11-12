@@ -39,9 +39,11 @@ export function porAno(sessoes: Sessao[]): LinhaAno[] {
 export const anosAssembleia = porAno(assembleia);
 export const anosCamara = porAno(camara);
 
+// O mandato conta-se desde a tomada de posse (24 de outubro de 2025), não desde o dia das eleições (12 de outubro): a reunião
+// de Câmara de 16 de outubro de 2025 ainda foi do executivo anterior.
 export const MANDATOS = [
-  { id: "atual", nome: "Mandato atual (desde outubro de 2025)", de: "2025-10-12", ate: "9999" },
-  { id: "anterior", nome: "Mandato 2021–2025", de: "2021-10-01", ate: "2025-10-12" },
+  { id: "atual", nome: "Mandato atual (desde outubro de 2025)", de: "2025-10-24", ate: "9999" },
+  { id: "anterior", nome: "Mandato 2021–2025", de: "2021-10-01", ate: "2025-10-24" },
 ];
 
 type Tabela = { lista: string; favor: number; contra: number; abstencoes: number }[];

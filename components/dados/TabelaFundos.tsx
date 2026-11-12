@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Cab from "./Cab";
-import { numero } from "@/lib/dados/formatar";
+import { numero, tituloProjeto } from "@/lib/dados/formatar";
 import type { Projeto } from "@/lib/dados/transparencia";
 
 type Campo = "valor" | "titulo" | "programa";
@@ -37,6 +37,7 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
       .catch(() => setErro(true));
   }, [ficheiro]);
 
+  const hoje = new Date().toISOString().slice(0, 10);
   const programas = useMemo(() => [...new Set((lista ?? []).map((p) => p.programa))].sort(), [lista]);
   const estados = useMemo(() => [...new Set((lista ?? []).map((p) => p.estado))].sort(), [lista]);
 
@@ -53,7 +54,7 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
     out.sort((a, b) => {
       if (campo === "valor") return (a.valor_aprovado_municipio - b.valor_aprovado_municipio) * dir;
       if (campo === "programa") return a.programa.localeCompare(b.programa, "pt") * dir;
-      return a.titulo.localeCompare(b.titulo, "pt") * dir;
+      return tituloProjeto(a.titulo).localeCompare(tituloProjeto(b.titulo), "pt") * dir;
     });
     return out;
   }, [lista, q, programa, estado, campo, desc]);
@@ -144,13 +145,13 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
                     {p.programa}
                     <span className="block text-xs">{p.estado}</span>
                   </span>
-                  <span className="text-sm font-medium text-tinta">{curto(p.titulo)}</span>
+                  <span className="text-sm font-medium text-tinta">{curto(tituloProjeto(p.titulo))}</span>
                   {mostrarBeneficiario && <span className="text-sm text-texto">{curto(p.beneficiario, 70)}</span>}
                   <span className="text-sm font-semibold tabular-nums text-tinta md:text-right">{eur(p.valor_aprovado_municipio)}</span>
                 </button>
                 {open && (
                   <div className="space-y-4 bg-suave px-4 py-4 text-sm">
-                    <p className="whitespace-pre-line text-texto">{p.titulo}</p>
+                    <p className="whitespace-pre-line text-texto">{tituloProjeto(p.titulo)}</p>
                     <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
                       <div className="sm:col-span-2">
                         <dt className="text-apagado">{p.n_beneficiarios > 1 ? `Beneficiários (${p.n_beneficiarios})` : "Beneficiário"}</dt>
@@ -173,6 +174,11 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
                         <dd className="text-tinta">{data(p.data_efetiva_conclusao)}</dd>
                       </div>
                     </dl>
+                    {p.estado === "Em execução" && p.data_efetiva_conclusao && p.data_efetiva_conclusao < hoje && (
+                      <p className="text-xs text-apagado">
+                        O estado é o que a fonte regista: o projeto continua “Em execução” nos ficheiros, apesar de a data de conclusão já ter passado.
+                      </p>
+                    )}
                   </div>
                 )}
               </li>

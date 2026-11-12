@@ -287,8 +287,55 @@
        "var": 2.5
       }
      ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 41315,
+       "var": 1.4
+      },
+      {
+       "v": 1856220,
+       "var": 1.1
+      },
+      {
+       "v": 776994,
+       "var": 1
+      },
+      {
+       "v": 11387222,
+       "var": 1.6
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 41512,
+       "var": 0.5
+      },
+      {
+       "v": 1861727,
+       "var": 0.3
+      },
+      {
+       "v": 781025,
+       "var": 0.5
+      },
+      {
+       "v": 11424031,
+       "var": 0.3
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0012918",
+    "desde": "2024"
+   },
+   "texto": "População residente a 31 de dezembro de cada ano (estimativas do INE). Os valores de 2021 em diante são os das estimativas que o INE reviu em 2026 (para 2024, por exemplo, passou de 40 294 para 41 315 habitantes); os de 2011 a 2020 vêm da série anterior. A passagem de 2020 para 2021 junta por isso duas séries e deve ler-se com cautela."
   },
   {
    "slug": "empresas",
@@ -575,15 +622,61 @@
        "var": 7.1
       }
      ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 4895,
+       "var": 3.5
+      },
+      {
+       "v": 251493,
+       "var": 4.9
+      },
+      {
+       "v": 89272,
+       "var": 3.7
+      },
+      {
+       "v": 1510274,
+       "var": 5.1
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 5119,
+       "var": 4.6
+      },
+      {
+       "v": 263032,
+       "var": 4.6
+      },
+      {
+       "v": 92537,
+       "var": 3.7
+      },
+      {
+       "v": 1576606,
+       "var": 4.4
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0014063",
+    "desde": "2023"
+   }
   },
   {
    "slug": "indice_autossuficiencia_emprego",
-   "titulo": "Índice de auto-suficiência de emprego",
+   "titulo": "Índice de autossuficiência de emprego",
    "categoria": "economia",
    "fonte": "Calculado: pessoal ao serviço (INE/SCIE) ÷ população empregada residente (INE/Censos)",
-   "unidade": "índice (100 = tantos empregos locais como residentes empregados)",
+   "unidade": "índice (100 = tantas pessoas nas empresas do concelho como residentes empregados)",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -633,7 +726,8 @@
       }
      ]
     }
-   ]
+   ],
+   "texto": "Pessoal ao serviço das empresas com sede no concelho (INE, Sistema de contas integradas das empresas) a dividir pelos residentes empregados (Censos), vezes 100. É uma aproximação: o numerador conta-se pela sede da empresa e não inclui o setor público, por isso não mede exatamente os postos de trabalho que existem no concelho. Só há valores nos anos dos Censos (2011 e 2021)."
   },
   {
    "slug": "poder_compra_per_capita",
@@ -1176,7 +1270,8 @@
       }
      ]
     }
-   ]
+   ],
+   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista."
   },
   {
    "slug": "partido_mais_votado_camara_municipal",
@@ -1233,7 +1328,8 @@
       }
      ]
     }
-   ]
+   ],
+   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista."
   },
   {
    "slug": "populacao_inscrita_eleitoral",
@@ -1786,7 +1882,7 @@
    "titulo": "Índice de dependência de idosos",
    "categoria": "demografia",
    "fonte": "INE - Estimativas anuais da população residente",
-   "unidade": "idosos por 100 pessoas em idade activa",
+   "unidade": "idosos por 100 pessoas em idade ativa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -2095,7 +2191,7 @@
    "titulo": "Índice de dependência de jovens",
    "categoria": "demografia",
    "fonte": "INE - Estimativas anuais da população residente",
-   "unidade": "jovens por 100 pessoas em idade activa",
+   "unidade": "jovens por 100 pessoas em idade ativa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -2404,7 +2500,7 @@
    "titulo": "Índice de dependência total",
    "categoria": "demografia",
    "fonte": "INE - Estimativas anuais da população residente",
-   "unidade": "dependentes por 100 pessoas em idade activa",
+   "unidade": "dependentes por 100 pessoas em idade ativa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -5134,10 +5230,10 @@
   },
   {
    "slug": "pessoal_ao_servico",
-   "titulo": "Postos de trabalho localizados no território",
+   "titulo": "Pessoal ao serviço das empresas com sede no concelho",
    "categoria": "economia",
    "fonte": "INE - Sistema de contas integradas das empresas",
-   "unidade": "postos de trabalho",
+   "unidade": "pessoas ao serviço",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -5417,8 +5513,55 @@
        "var": 5.9
       }
      ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 23464,
+       "var": 3
+      },
+      {
+       "v": 831523,
+       "var": 5.3
+      },
+      {
+       "v": 335273,
+       "var": 2.8
+      },
+      {
+       "v": 4738341,
+       "var": 5.6
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 24329,
+       "var": 3.7
+      },
+      {
+       "v": 862880,
+       "var": 3.8
+      },
+      {
+       "v": 349491,
+       "var": 4.2
+      },
+      {
+       "v": 4944491,
+       "var": 4.4
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0013861",
+    "desde": "2023"
+   },
+   "texto": "Pessoas que trabalham nas empresas com sede no concelho (INE, Sistema de contas integradas das empresas). Conta-se pela sede da empresa e não pelo local de trabalho: inclui quem trabalha em estabelecimentos dessas empresas fora do concelho e não inclui quem trabalha cá para empresas com sede noutro lado. O setor público não entra."
   },
   {
    "slug": "populacao_empregada_residente",
@@ -6392,8 +6535,54 @@
        "var": 18.9
       }
      ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 807826594,
+       "var": 13.8
+      },
+      {
+       "v": 24783204128,
+       "var": 11.5
+      },
+      {
+       "v": 9622672571,
+       "var": 8.2
+      },
+      {
+       "v": 147020142086,
+       "var": 13.5
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 831702462,
+       "var": 3
+      },
+      {
+       "v": 26821367320,
+       "var": 8.2
+      },
+      {
+       "v": 10447784677,
+       "var": 8.6
+      },
+      {
+       "v": 157731102177,
+       "var": 7.3
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0013863",
+    "desde": "2023"
+   }
   },
   {
    "slug": "valor_mediano_habitacao",
@@ -6491,8 +6680,75 @@
        "var": 14.4
       }
      ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 1279,
+       "var": 4.8
+      },
+      {
+       "v": 1800,
+       "var": 12
+      },
+      {
+       "v": 1098,
+       "var": 6.1
+      },
+      {
+       "v": 1611,
+       "var": 8.6
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 1479,
+       "var": 15.6
+      },
+      {
+       "v": 1986,
+       "var": 10.3
+      },
+      {
+       "v": 1220,
+       "var": 11.1
+      },
+      {
+       "v": 1777,
+       "var": 10.3
+      }
+     ]
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1792,
+       "var": 21.2
+      },
+      {
+       "v": 2305,
+       "var": 16.1
+      },
+      {
+       "v": 1511,
+       "var": 23.9
+      },
+      {
+       "v": 2076,
+       "var": 16.8
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0012255",
+    "desde": "2023"
+   }
   },
   {
    "slug": "volume_negocios",
@@ -6779,8 +7035,55 @@
        "var": 23.8
       }
      ]
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 2983269833,
+       "var": 0.6
+      },
+      {
+       "v": 92387173983,
+       "var": 5.6
+      },
+      {
+       "v": 36196100857,
+       "var": -0.1
+      },
+      {
+       "v": 550295127351,
+       "var": 3.2
+      }
+     ]
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 2956673567,
+       "var": -0.9
+      },
+      {
+       "v": 97149233043,
+       "var": 5.2
+      },
+      {
+       "v": 38630494578,
+       "var": 6.7
+      },
+      {
+       "v": 571297930239,
+       "var": 3.8
+      }
+     ]
     }
-   ]
+   ],
+   "prolongado": {
+    "varcd": "0013862",
+    "desde": "2023"
+   }
   }
- ]
+ ],
+ "prolongado": "2026-11-12T14:50:07.299Z"
 }

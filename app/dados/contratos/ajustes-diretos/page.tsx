@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
 import SubNav from "@/components/dados/SubNav";
-import { compacto, numero } from "@/lib/dados/formatar";
+import { compacto, dataCurta, numero } from "@/lib/dados/formatar";
 import { contratos, resumoAjustes } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
@@ -12,10 +12,20 @@ export const metadata: Metadata = {
 
 const pct = (a: number, b: number) => (b === 0 ? "—" : `${numero((a / b) * 100, 0)}%`);
 
+// Mostram-se os primeiros de cada lista e junta-se o resto numa linha "Outros", para as parcelas somarem o total.
+type Linha = { nome: string; n: number; valor: number };
+function comOutros(l: Linha[], max: number): Linha[] {
+  if (l.length <= max) return l;
+  const resto = l.slice(max);
+  return [...l.slice(0, max), { nome: `Outros (${resto.length})`, n: resto.reduce((s, x) => s + x.n, 0), valor: resto.reduce((s, x) => s + x.valor, 0) }];
+}
+
 export default function AjustesDiretos() {
   const r = resumoAjustes();
   const valores = contratos.filter((c) => c.tipoprocedimento === "Ajuste Direto Regime Geral").map((c) => c.valor_contratual).sort((a, b) => a - b);
   const mediana = valores[Math.floor(valores.length / 2)] ?? 0;
+  const datas = contratos.map((c) => c.data_celebracao).filter(Boolean).sort();
+  const semCpv = contratos.filter((c) => !c.cpv).length;
 
   return (
     <>
@@ -138,7 +148,7 @@ export default function AjustesDiretos() {
             <p className="mt-2 mb-5 text-texto">Tipo de contrato dos ajustes diretos.</p>
             <Barras
               titulo="Ajustes diretos por tipo de contrato"
-              itens={r.porTipo.slice(0, 6).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
+              itens={comOutros(r.porTipo, 6).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
             />
           </section>
         </div>
@@ -151,7 +161,7 @@ export default function AjustesDiretos() {
             </p>
             <Barras
               titulo="Ajustes diretos por fundamentação legal"
-              itens={r.fund.slice(0, 8).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
+              itens={comOutros(r.fund, 8).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
             />
             <p className="mt-4 text-sm text-apagado">
               Em {numero(r.materiais)} ajustes a Câmara assinalou que se aplicam critérios materiais (a natureza do
@@ -163,16 +173,17 @@ export default function AjustesDiretos() {
             <p className="mt-2 mb-5 text-texto">O campo “fundamento do ajuste direto”, tal como está no Portal BASE.</p>
             <Barras
               titulo="Ajustes diretos por motivo indicado"
-              itens={r.motivo.slice(0, 6).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
+              itens={comOutros(r.motivo, 6).map((t) => ({ rotulo: t.nome, valor: t.n, texto: numero(t.n), extra: compacto(t.valor, "€") }))}
             />
           </section>
         </div>
 
 
         <p className="max-w-3xl text-sm text-apagado">
-          Fonte: Portal BASE (IMPIC), através de dados.gov.pt: contratos do Município da Trofa de 2021 a 2026. “Ajuste
+          Fonte: Portal BASE (IMPIC), através de dados.gov.pt: contratos do Município da Trofa celebrados de{" "}
+          {dataCurta(datas[0])} a {dataCurta(datas[datas.length - 1])} (o mais recente nos dados). “Ajuste
           direto” é o procedimento “Ajuste Direto Regime Geral”. Os escalões de valor são só para agrupar, não são os
-          limites da lei. Dois contratos não têm CPV e ficam em “Outras / sem classificação”. Quando o adjudicatário é uma pessoa singular, o nome não se publica aqui; cada pessoa conta uma vez nas entidades diferentes.{" "}
+          limites da lei.{semCpv > 0 ? ` ${semCpv === 1 ? "Um contrato não tem CPV e fica" : `${numero(semCpv)} contratos não têm CPV e ficam`} em “Outras / sem classificação”.` : ""} Quando o adjudicatário é uma pessoa singular, o nome não se publica aqui; cada pessoa conta uma vez nas entidades diferentes.{" "}
           <Link href="/dados/contratos" className="underline underline-offset-2 hover:text-tinta">
             Ver todos os contratos
           </Link>

@@ -39,7 +39,7 @@ export default function ComposicaoCamara() {
           <li>Executa o que a Assembleia aprova.</li>
           <li>Decide obras, urbanismo e licenciamentos, ação social, educação, cultura e desporto.</li>
           <li>
-            Faz as compras e contratos públicos do município (veja os{" "}
+            Faz as compras e contratos públicos do município (vê os{" "}
             <Link href="/dados/contratos" className="underline underline-offset-2 hover:text-tinta">
               contratos
             </Link>

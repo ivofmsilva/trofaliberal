@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { numero } from "@/lib/dados/formatar";
 
 type Totais = { favor: number; contra: number; abstencoes: number; brancos: number };
 type Sentidos = Record<string, number>;
@@ -42,6 +43,26 @@ const NOMES: Record<string, string> = {
   BE: "BE",
 };
 
+// No mandato atual os grupos aparecem pelo nome da lista, como no resumo (lib/votos.ts). As deliberações de dezembro
+// de 2025 ainda contam por partido: somam-se na lista e os partidos ficam entre parênteses.
+const INICIO_MANDATO_ATUAL = "2025-10-12";
+const LISTA_ATUAL: Record<string, string> = { PSD: "PSD/CDS-PP", "CDS-PP": "PSD/CDS-PP", PS: "PS-PAN-L", PAN: "PS-PAN-L" };
+
+function porGrupo(g: Sentidos, atual: boolean): string {
+  if (!atual) return Object.entries(g).map(([nome, n]) => `${NOMES[nome] ?? nome} ${n}`).join(" · ");
+  const listas = new Map<string, { n: number; partidos: [string, number][] }>();
+  for (const [nome, n] of Object.entries(g)) {
+    const lista = LISTA_ATUAL[nome] ?? nome;
+    const x = listas.get(lista) ?? { n: 0, partidos: [] };
+    x.n += n;
+    if (lista !== nome) x.partidos.push([nome, n]);
+    listas.set(lista, x);
+  }
+  return [...listas.entries()]
+    .map(([lista, x]) => `${NOMES[lista] ?? lista} ${x.n}${x.partidos.length > 1 ? ` (${x.partidos.map(([p, n]) => `${p} ${n}`).join(", ")})` : ""}`)
+    .join(" · ");
+}
+
 const SENTIDOS = [
   { id: "favor", rotulo: "A favor", cor: "#151515" },
   { id: "contra", rotulo: "Contra", cor: "#8c8c87" },
@@ -49,7 +70,7 @@ const SENTIDOS = [
   { id: "brancos", rotulo: "Brancos", cor: "#e4e4e0" },
 ] as const;
 
-function Voto({ p }: { p: Ponto }) {
+function Voto({ p, atual }: { p: Ponto; atual: boolean }) {
   if (!p.totais) return null;
   const t = p.totais;
   const soma = t.favor + t.contra + t.abstencoes + t.brancos;
@@ -79,7 +100,7 @@ function Voto({ p }: { p: Ponto }) {
             return (
               <div key={s.id}>
                 <dt className="text-apagado">{s.rotulo}</dt>
-                <dd className="text-tinta">{entradas.map(([nome, n]) => `${NOMES[nome] ?? nome} ${n}`).join(" · ")}</dd>
+                <dd className="text-tinta">{porGrupo(g, atual)}</dd>
               </div>
             );
           })}
@@ -92,7 +113,7 @@ function Voto({ p }: { p: Ponto }) {
             return (
               <div key={k}>
                 <dt className="text-apagado">{SENTIDOS.find((x) => x.id === k)!.rotulo}</dt>
-                <dd className="text-tinta">{l.join(" · ")}</dd>
+                <dd className="text-tinta">{l.map((nome) => NOMES[nome] ?? nome).join(" · ")}</dd>
               </div>
             );
           })}
@@ -115,6 +136,7 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
   const [aberta, setAberta] = useState<string | null>(null);
   const [limite, setLimite] = useState(10);
   const [cobertura, setCobertura] = useState<Record<string, { publicadas: number; reunioes: number; faltam: number[] }> | null>(null);
+  const [gerado, setGerado] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`/dados/data/${ficheiro}.json`)
@@ -122,6 +144,7 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
       .then((j) => {
         setSessoes(j.sessoes);
         setCobertura(j.cobertura ?? null);
+        setGerado(typeof j.gerado === "string" ? j.gerado : null);
       })
       .catch(() => setErro(true));
   }, [ficheiro]);
@@ -149,6 +172,12 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
   }, [sessoes, q, soDivididas, comInfo, ano]);
 
   const totalPontos = visiveis.reduce((n, s) => n + s.itens.length, 0);
+  // Os pontos votados são os mesmos do resumo ("Como votam"); à parte ficam os que estão na lista mas cujo voto não se
+  // conseguiu ler na digitalização.
+  const votados = visiveis.reduce((n, s) => n + s.itens.filter((p) => p.tipo).length, 0);
+  const naoLidos = visiveis.reduce((n, s) => n + s.itens.filter((p) => !p.tipo && (p.ilegivel || p.resultado === "aprovado" || p.resultado === "rejeitado")).length, 0);
+  const ultimaData = (sessoes ?? []).map((s) => s.data).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
+  const nomeSessoes = sessao === "reunião" ? "reuniões" : "sessões";
   // A lista é longa: mostram-se as mais recentes e o resto expande-se (com pesquisa, filtro ou ano escolhido mostra-se tudo).
   const completa = Boolean(q.trim()) || soDivididas || Boolean(ano);
   const mostradas = completa ? visiveis : visiveis.slice(0, limite);
@@ -186,7 +215,23 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
       <p className="mt-4 text-sm text-texto" aria-live="polite">
         {sessoes === null ? (erro ? "Não foi possível carregar as votações." : "A carregar…") : (
           <>
-            <strong className="text-tinta">{totalPontos}</strong> {comInfo ? "pontos" : "pontos votados"} em <strong className="text-tinta">{visiveis.length}</strong> {sessao === "reunião" ? "reuniões" : "sessões"}
+            {comInfo ? (
+              <>
+                <strong className="text-tinta">{numero(totalPontos)}</strong> pontos
+              </>
+            ) : (
+              <>
+                <strong className="text-tinta">{numero(votados)}</strong> pontos votados
+                {naoLidos > 0 && ` (e mais ${numero(naoLidos)} em que o voto não se conseguiu ler)`}
+              </>
+            )}{" "}
+            em <strong className="text-tinta">{numero(visiveis.length)}</strong> {nomeSessoes}
+            {ultimaData && (
+              <span className="block text-apagado">
+                Dados até à {sessao} de {dataLonga(ultimaData)}
+                {gerado ? `, recolhidos a ${dataLonga(gerado.slice(0, 10))}` : ""}.
+              </span>
+            )}
           </>
         )}
       </p>
@@ -246,7 +291,7 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
                           )}
                         </p>
                         <p className="mt-2 text-tinta">{p.assunto}</p>
-                        <Voto p={p} />
+                        <Voto p={p} atual={Boolean(s.data && s.data >= INICIO_MANDATO_ATUAL)} />
                         {p.nota && <p className="mt-2 text-xs text-apagado">{p.nota}</p>}
                         {p.texto && (p.totais || p.tipo === "maioria" || p.tipo === "escrutínio secreto" || p.resultado === "outro") && (
                           <details className="mt-3 text-sm">
@@ -270,10 +315,10 @@ export default function Votacoes({ ficheiro = "assembleia-votos", sessao = "sess
       {restantes > 0 && (
         <div className="mt-4 flex flex-wrap gap-3">
           <button type="button" onClick={() => setLimite((l) => l + 10)} className="rounded-full border border-linha bg-fundo px-5 py-2.5 text-sm font-semibold text-tinta transition hover:border-tinta">
-            Mostrar mais {Math.min(10, restantes)} {sessao === "reunião" ? "reuniões" : "sessões"}
+            Mostrar mais {Math.min(10, restantes)} {nomeSessoes}
           </button>
           <button type="button" onClick={() => setLimite(visiveis.length)} className="rounded-full px-3 py-2.5 text-sm text-apagado underline underline-offset-2 hover:text-tinta">
-            Mostrar todas ({restantes} em falta)
+            Mostrar todas (mais {numero(restantes)})
           </button>
         </div>
       )}

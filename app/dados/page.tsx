@@ -1,16 +1,16 @@
 import Link from "next/link";
 import ListaTemas, { type Cartao } from "@/components/dados/ListaTemas";
-import { atualizado, indicadoresDestaque, porTema, serieTrofa, ultimo, type Indicador } from "@/lib/dados/dados";
-import { compacto, legenda, variacao } from "@/lib/dados/formatar";
+import { atualizado, emMilhoes, indicadoresDestaque, porTema, serieTrofa, ultimo, variacaoDe, type Indicador } from "@/lib/dados/dados";
+import { compacto, legenda } from "@/lib/dados/formatar";
 
 function resumo(i: Indicador): Cartao {
   const u = ultimo(i);
-  const v = variacao(u?.var ?? null);
+  const v = u ? variacaoDe(i, u.linha) : null;
   return {
     slug: i.slug,
     titulo: i.titulo,
     valor: compacto(u?.v ?? null, i.unidade),
-    legenda: legenda(i.unidade),
+    legenda: emMilhoes(i) ? "milhões de euros" : legenda(i.unidade),
     periodo: u?.periodo ?? "",
     variacao: v?.texto ?? null,
     sinal: v?.sinal ?? null,
@@ -37,7 +37,7 @@ export default function Inicio() {
             A transparência que exigimos à Câmara: os dados que permitem a qualquer cidadão ter acesso a informação relevante sobre o município.
           </p>
           <p className="mt-3 max-w-2xl text-lg text-texto">
-            Indicadores sobre o concelho da Trofa, com os dados do INE e do Pordata. Dados da Assembleia e da Câmara retirados dos documentos do site do município.
+            Indicadores sobre o concelho da Trofa, com os dados do INE. Dados da Assembleia e da Câmara retirados dos documentos do site do município.
           </p>
           <p className="mt-6 text-sm text-apagado">
             {total} indicadores · última atualização {atualizado ?? "—"} ·{" "}

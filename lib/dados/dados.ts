@@ -1,5 +1,6 @@
 import bruto from "@/lib/dados/data/indicadores.json";
 import ineBruto from "@/lib/dados/data/indicadores-ine.json";
+import { variacao, variacaoPP } from "./formatar";
 import { destaques, temas, temaDe } from "./temas";
 
 export type Ponto = { v: number | null; var: number | null };
@@ -30,9 +31,32 @@ export function porSlug(slug: string) {
 export function ultimo(i: Indicador) {
   for (let k = i.linhas.length - 1; k >= 0; k--) {
     const p = i.linhas[k].valores[0];
-    if (p && p.v !== null) return { periodo: i.linhas[k].periodo, ...p };
+    if (p && p.v !== null) return { periodo: i.linhas[k].periodo, linha: k, ...p };
   }
   return null;
+}
+
+// Variação de um valor face ao anterior da mesma coluna: em percentagem ou, quando o indicador já é uma percentagem,
+// em pontos percentuais. Sem valor anterior não há variação.
+export function variacaoDe(i: Indicador, linha: number, coluna = 0) {
+  const p = i.linhas[linha]?.valores[coluna];
+  if (!p || p.v === null || p.var === null) return null;
+  if (!i.unidade.startsWith("%")) return variacao(p.var);
+  for (let k = linha - 1; k >= 0; k--) {
+    const anterior = i.linhas[k].valores[coluna]?.v ?? null;
+    if (anterior !== null) return variacaoPP(p.v, anterior);
+  }
+  return null;
+}
+
+// Colunas que têm pelo menos um valor (a da Trofa fica sempre). Uma coluna de comparação toda vazia não se mostra.
+export function colunasComDados(i: Indicador): number[] {
+  return i.colunas.map((_, c) => c).filter((c) => c === 0 || i.linhas.some((l) => (l.valores[c]?.v ?? null) !== null));
+}
+
+// Indicadores em euros com valores de milhões: mostram-se em M€ no número grande, no gráfico e na tabela.
+export function emMilhoes(i: Indicador): boolean {
+  return i.unidade === "€" && i.linhas.some((l) => Math.abs(l.valores[0]?.v ?? 0) >= 1_000_000);
 }
 
 export function serieTrofa(i: Indicador): { periodo: string; v: number }[] {

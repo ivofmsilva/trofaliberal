@@ -8,6 +8,8 @@ export const PAGINA_RELATORIOS = "https://mun-trofa.pt/menu/88/relatorio-de-ativ
 const BASE = "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/";
 const R = BASE + "codigos-planos/relatorio-atividades-contas/";
 export const FONTE_CONTAS = BASE + "planos_relatorios/Prestacao-contas-2025.pdf";
+// Relatório do Orçamento de 2026 (está em mun-trofa.pt/menu/506, não na página dos relatórios de contas).
+export const FONTE_ORCAMENTO = BASE + "planos_relatorios/Orcamento-2026-com-marcadores-site.pdf";
 
 // Onde está o relatório de cada ano (o de 2021 a 2023 são os relatórios de gestão e contas do município).
 export const RELATORIOS: { ano: string; url: string }[] = [
@@ -54,18 +56,18 @@ export const rendimentosOperacionais = S("rendimentosOperacionais", "Total de re
 export const despesaPessoalPaga = S(
   "despesaPessoalPaga",
   "Despesas com pessoal pagas",
-  "Relatório de Gestão de cada ano (2021 a 2025: relatório de 2025, Quadro 15, pág. 123; 2017 a 2019: relatório de 2019, Quadro 13; 2020: relatório de 2020, Quadro 11)",
+  "Relatório de Gestão de cada ano (2021 a 2025: relatório de 2025, Quadro 15, pág. 123; 2017 a 2019: relatório de 2019, Quadro 13; 2020: relatório de 2020, Quadro 13, pág. 49)",
   {
     2010: 6940356.93, 2011: 6674986.21, 2012: 5652602.37, 2013: 6258620.47, 2014: 5946648.26, 2015: 5887977.09,
     2016: 5777871.5, 2017: 5666233.92, 2018: 6147556.08, 2019: 7107263.42, 2020: 7177570.45,
     2021: 7345973.76, 2022: 7789984.38, 2023: 9534823.93, 2024: 10320250.96, 2025: 12264030.15,
   },
 );
-export const despesaCorrente = S("despesaCorrente", "Despesa corrente paga", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 11) e 2025 (Quadro 15)", {
+export const despesaCorrente = S("despesaCorrente", "Despesa corrente paga", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
   2016: 13368980.91, 2017: 14592672.81, 2018: 14513456.84, 2019: 15436282.27, 2020: 14399754.75,
   2021: 16139786.01, 2022: 18250642.71, 2023: 22957602.92, 2024: 25380723.8, 2025: 28280281.17,
 });
-export const despesaBensServicos = S("despesaBensServicos", "Aquisição de bens e serviços pagos", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 11) e 2025 (Quadro 15)", {
+export const despesaBensServicos = S("despesaBensServicos", "Aquisição de bens e serviços pagos", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
   2016: 4530703.5, 2017: 5249168.74, 2018: 5270400.05, 2019: 5724235.99, 2020: 4921399.24,
   2021: 5277953.36, 2022: 6838317.49, 2023: 9220854.75, 2024: 9920543.94, 2025: 11107509.87,
 });
@@ -101,7 +103,8 @@ export const dividaEfetiva = S("dividaEfetiva", "Dívida efetiva do município",
   2021: 20016086.77, 2022: 21671009.13, 2023: 16978854.35, 2024: 17383214.51, 2025: 14444427.47,
 });
 
-// Orçamento de 2026 (Quadro 16, pág. 94 do relatório do orçamento): dotação inicial de 2025 e de 2026.
+// Orçamento de 2026 (Quadro 16, pág. 94 do relatório do orçamento): dotação inicial de 2025 e de 2026. Todas as linhas do
+// quadro, para as somas baterem: correntes + capital + ativos financeiros + passivos financeiros = total.
 export const orcamento = [
   { rubrica: "Despesas com pessoal", ano2025: 12955693.4, ano2026: 15371332.89, variacao: 18.65 },
   { rubrica: "Aquisição de bens e serviços", ano2025: 21851303.3, ano2026: 21732276.45, variacao: -0.54 },
@@ -111,7 +114,9 @@ export const orcamento = [
   { rubrica: "Total das despesas correntes", ano2025: 41745068.68, ano2026: 44385923.87, variacao: 6.33 },
   { rubrica: "Aquisição de bens de capital (investimento)", ano2025: 49215387.22, ano2026: 43102041.28, variacao: -12.42 },
   { rubrica: "Transferências e subsídios de capital", ano2025: 3363330.71, ano2026: 2790405.99, variacao: -17.03 },
+  { rubrica: "Outras despesas de capital", ano2025: 2000, ano2026: 2000, variacao: 0 },
   { rubrica: "Total das despesas de capital", ano2025: 52580717.93, ano2026: 45894447.27, variacao: -12.72 },
+  { rubrica: "Ativos financeiros", ano2025: 2000, ano2026: 2000, variacao: 0 },
   { rubrica: "Passivos financeiros (amortização de empréstimos)", ano2025: 2610000, ano2026: 2980092.89, variacao: 14.18 },
   { rubrica: "Total do orçamento da despesa", ano2025: 96937786.61, ano2026: 93262464.03, variacao: -3.79 },
 ];

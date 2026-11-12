@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Grafico from "@/components/dados/Grafico";
 import TaxasLocais from "@/components/dados/TaxasLocais";
-import { compacto, numero } from "@/lib/dados/formatar";
+import { compacto, milhoes, numero } from "@/lib/dados/formatar";
 import {
   ANOS,
   COLUNAS_COMPARACAO,
-  PAGINA_RELATORIOS,
+  FONTE_ORCAMENTO,
   RELATORIOS,
   comparacaoReceitas,
   porHabitante,
@@ -53,38 +53,47 @@ function Quadros({ itens }: { itens: SerieContas[] }) {
   );
 }
 
+// Só aparecem os anos em que alguma das séries tem valor, e a coluna "Desde o 1.º ano" só quando há o que mostrar.
 function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: boolean }) {
+  const anos = ANOS.map((a, k) => ({ a, k })).filter(({ k }) => series.some((s) => s.valores[k] !== null));
+  const crescimentos = series.map((s) => crescimento(s.valores));
+  const comCrescimento = crescimentos.some((c) => c !== null);
   return (
     <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
-      <table className="w-full min-w-[56rem] text-sm">
+      <table className="w-full text-sm" style={{ minWidth: `${14 + anos.length * 4}rem` }}>
         <thead className="bg-cinza text-left text-apagado">
           <tr>
             <th scope="col" className="sticky left-0 bg-cinza px-4 py-3 font-medium">
-              {euros ? "Em euros por habitante" : "Em milhões de euros"}
+              {euros ? "Em euros por habitante (contas da Câmara)" : "Em milhões de euros"}
             </th>
-            {ANOS.map((a) => (
+            {anos.map(({ a }) => (
               <th key={a} scope="col" className="px-3 py-3 text-right font-medium">
                 {a}
               </th>
             ))}
-            <th scope="col" className="px-4 py-3 text-right font-medium">
-              Desde o 1.º ano
-            </th>
+            {comCrescimento && (
+              <th scope="col" className="px-4 py-3 text-right font-medium">
+                Desde o 1.º ano
+              </th>
+            )}
           </tr>
         </thead>
         <tbody>
-          {series.map((s) => (
+          {series.map((s, n) => (
             <tr key={s.id} className="border-t border-linha tabular-nums">
               <th scope="row" className="sticky left-0 bg-fundo px-4 py-2.5 text-left font-medium text-tinta">
                 {s.nome}
                 <span className="block text-xs font-normal text-apagado">desde {primeiroAno(s)}</span>
               </th>
-              {s.valores.map((v, i) => (
-                <td key={i} className="whitespace-nowrap px-3 py-2.5 text-right text-texto">
-                  {euros ? (v === null ? "—" : numero(v)) : m(v)}
-                </td>
-              ))}
-              <td className="whitespace-nowrap px-4 py-2.5 text-right font-medium text-tinta">{pc(crescimento(s.valores))}</td>
+              {anos.map(({ a, k }) => {
+                const v = s.valores[k];
+                return (
+                  <td key={a} className="whitespace-nowrap px-3 py-2.5 text-right text-texto">
+                    {euros ? (v === null ? "—" : numero(v)) : m(v)}
+                  </td>
+                );
+              })}
+              {comCrescimento && <td className="whitespace-nowrap px-4 py-2.5 text-right font-medium text-tinta">{pc(crescimentos[n])}</td>}
             </tr>
           ))}
         </tbody>
@@ -107,6 +116,13 @@ function Titulo({ id, children, texto }: { id: string; children: React.ReactNode
 export default function Financas() {
   const pessoalAtual = ultimo(gastosPessoal);
   const pessoalOrc = orcamento[0];
+  // Por habitante: só há valores nos anos em que há população média (INE) nos dados recolhidos.
+  const habitantes = porHabitante(despesaPessoalPaga).valores;
+  const anosHabitante = ANOS.filter((_, k) => habitantes[k] !== null);
+  const semHabitante = ANOS.filter((_, k) => habitantes[k] === null && despesaPessoalPaga.valores[k] !== null);
+  // A mesma receita total por habitante, pelas contas da Câmara e pelo INE (no ano da tabela de comparação).
+  const receitaIne = comparacaoReceitas().find((l) => l.rotulo.startsWith("Receita total"));
+  const receitaContas = receitaIne ? porHabitante(receitaTotal).valores[ANOS.indexOf(receitaIne.ano)] : null;
   return (
     <>
       <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
@@ -116,6 +132,9 @@ export default function Financas() {
           <p className="mt-4 max-w-2xl text-lg text-texto">
             Gastos com pessoal, receitas, dívida, orçamento para 2026 e impostos locais do município da Trofa. Os valores vêm dos
             relatórios de gestão e contas que a Câmara publica (de 2010 a 2025, mas nem todos os dados existem desde 2010) e do orçamento de 2026.
+          </p>
+          <p className="mt-3 text-sm text-apagado">
+            Dados até: relatório de gestão e contas de {ANOS[ANOS.length - 1]} (o último publicado) e orçamento de 2026.
           </p>
           <dl className="mt-8 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">
@@ -186,8 +205,9 @@ export default function Financas() {
             As despesas com pessoal pagas passaram de {m(valorEm(despesaPessoalPaga, "2010"))} M€ em 2010 para {m(valorEm(despesaPessoalPaga, "2025"))} M€ em 2025. O valor mais baixo da série foi {m(valorEm(despesaPessoalPaga, "2012"))} M€, em 2012. Pesavam {numero(pesoPessoal[ANOS.indexOf("2016")] ?? 0, 1)}% da despesa corrente paga em 2016, {numero(pesoPessoal[ANOS.indexOf("2020")] ?? 0, 1)}% em 2020 e {numero(pesoPessoal[ANOS.indexOf("2025")] ?? 0, 1)}% em 2025 (cálculo feito com os valores dos relatórios).
           </p>
           <p className="mt-2 max-w-3xl text-sm text-texto">
-            Em 2025, o Quadro 86 desagrega os 12,00 M€ em 9,40 M€ de remunerações do pessoal, 2,17 M€ da rubrica de acidentes de trabalho e doenças
-            profissionais, 0,25 M€ de remunerações dos titulares de órgãos autárquicos e o restante em outros encargos. O relatório indica como
+            Em 2025, o Quadro 86 desagrega os 12,00 M€ em 9,40 M€ de remunerações do pessoal, 2,17 M€ de encargos sobre remunerações,
+            0,25 M€ de remunerações dos titulares de órgãos autárquicos, 0,13 M€ de acidentes no trabalho e doenças profissionais e o
+            restante (0,05 M€) em indemnizações, outros gastos com o pessoal e outros encargos sociais. O relatório indica como
             razões do aumento a atualização remuneratória, o reforço de recursos humanos e a descentralização de competências.
           </p>
           <Quadros itens={[gastosPessoal, despesaPessoalPaga, gastosFse, despesaBensServicos]} />
@@ -215,7 +235,7 @@ export default function Financas() {
             Há dois totais: a <strong className="font-semibold text-tinta">receita total</strong> inclui as receitas de capital (como os fundos europeus) e os empréstimos contraídos; as <strong className="font-semibold text-tinta">receitas correntes</strong> são só impostos, taxas, transferências correntes e vendas. O valor da receita total dos municípios que o INE publica (e que aparece nos indicadores da página inicial) é o primeiro: 41,2 M€ em 2021, 35,7 M€ em 2022 e 40,0 M€ em 2023, muito próximo do das contas da Câmara. Em 2018 a receita total inclui 24,1 M€ de empréstimos contraídos para pagar dívida antiga.
           </p>
           <p className="mt-3 max-w-3xl text-sm text-texto">
-            Os impostos diretos são sobretudo o IMI, o IMT e o IUC, mais a participação variável no IRS. Veja as taxas que a
+            Os impostos diretos são sobretudo o IMI, o IMT e o IUC, mais a participação variável no IRS. Vê as taxas que a
             Assembleia fixou, mais abaixo, em{" "}
             <a href="#taxas" className="underline underline-offset-2 hover:text-tinta">
               Taxas e impostos locais
@@ -280,8 +300,8 @@ export default function Financas() {
                       <th scope="row" className={`px-4 py-2.5 text-left ${total ? "text-tinta" : "font-medium text-tinta"}`}>
                         {o.rubrica}
                       </th>
-                      <td className="px-4 py-2.5 text-right text-texto">{compacto(o.ano2025, "€")}</td>
-                      <td className="px-4 py-2.5 text-right text-texto">{compacto(o.ano2026, "€")}</td>
+                      <td className="px-4 py-2.5 text-right text-texto">{milhoes(o.ano2025)}</td>
+                      <td className="px-4 py-2.5 text-right text-texto">{milhoes(o.ano2026)}</td>
                       <td className="px-4 py-2.5 text-right text-tinta">{pc(o.variacao, 1)}</td>
                     </tr>
                   );
@@ -296,11 +316,11 @@ export default function Financas() {
             salário mínimo e novos recrutamentos.
           </p>
           <p className="mt-2 max-w-3xl text-sm text-apagado">
-            Fonte: Relatório do Orçamento de 2026, Quadros 15 e 16 e capítulo de Recursos Humanos, na{" "}
-            <a href={PAGINA_RELATORIOS} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
-              página de relatórios e contas do município ↗
+            Fonte:{" "}
+            <a href={FONTE_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+              Relatório do Orçamento de 2026 (PDF do município) ↗
             </a>
-            . Os valores foram copiados dos quadros e conferidos com o texto de cada relatório.
+            , Quadros 15 e 16 e capítulo de Recursos Humanos. Os valores foram copiados dos quadros e conferidos com o texto de cada relatório.
           </p>
         </section>
 
@@ -321,20 +341,35 @@ export default function Financas() {
           </div>
           <Tabela euros series={[porHabitante(despesaPessoalPaga), porHabitante(receitaCorrente), porHabitante(receitaTotal), porHabitante(dividaEfetiva), porHabitante(dividaTotal)]} />
           <p className="mt-3 max-w-3xl text-sm text-apagado">
-            Dividido pela população média anual residente da Trofa (INE), que só existe desde 2011. Os valores arredondam-se ao euro.
+            Dividido pela população média anual residente da Trofa (INE), que nos dados recolhidos vai de {anosHabitante[0]} a{" "}
+            {anosHabitante[anosHabitante.length - 1]}
+            {semHabitante.length > 0 ? `; por isso não há valores por habitante para ${semHabitante.join(" nem para ")}` : ""}. Os valores
+            arredondam-se ao euro.
           </p>
 
           <h3 className="mt-10 text-lg font-bold text-tinta">Receitas por habitante: a Trofa e a sua região</h3>
           <p className="mt-2 max-w-2xl text-texto">
             O que a Câmara cobra por habitante, comparado com a Área Metropolitana do Porto e com o grupo “Ave e concelhos vizinhos”
-            (um agregado do portal de origem dos dados, que não indica que concelhos inclui).
+            (um agregado que já vem feito do portal de onde se recolheram os indicadores, que não diz que concelhos inclui; ver{" "}
+            <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
+              Fontes
+            </Link>
+            ).
+            {receitaIne && receitaContas != null && receitaContas !== receitaIne.trofa && (
+              <>
+                {" "}
+                Aqui os valores são os que o INE publica para todos os municípios, e não os das contas da Câmara: por isso a receita
+                total por habitante da Trofa em {receitaIne.ano} aparece com {numero(receitaIne.trofa)} € nesta tabela e com{" "}
+                {numero(receitaContas)} € na de cima.
+              </>
+            )}
           </p>
           <div className="mt-4 overflow-x-auto rounded-xl border border-linha">
             <table className="w-full min-w-[34rem] text-sm">
               <thead className="bg-cinza text-left text-apagado">
                 <tr>
                   <th scope="col" className="px-4 py-3 font-medium">
-                    Euros por habitante
+                    Euros por habitante (valores do INE)
                   </th>
                   {COLUNAS_COMPARACAO.map((c) => (
                     <th key={c} scope="col" className="px-3 py-3 text-right font-medium">
@@ -358,8 +393,8 @@ export default function Financas() {
             </table>
           </div>
           <p className="mt-3 max-w-3xl text-sm text-apagado">
-            Fonte: INE (receitas dos municípios, a partir da Direção-Geral das Autarquias Locais), através do portal de origem, e
-            população média anual residente. Os agregados juntam concelhos de dimensões muito diferentes; para comparar com concelhos concretos, veja os indicadores de{" "}
+            Fonte: INE (receitas dos municípios, a partir da Direção-Geral das Autarquias Locais), através do portal de onde se
+            recolheram os indicadores, e população média anual residente. Os agregados juntam concelhos de dimensões muito diferentes; para comparar com concelhos concretos, vê os indicadores de{" "}
             <Link href="/dados#ambiente" className="underline underline-offset-2 hover:text-tinta">
               água, saneamento e ambiente
             </Link>

@@ -9,9 +9,10 @@ export default function TaxasLocais() {
   const irsAtual = ultimo(irs, (x) => x.percentagem !== null && !x.retificacao)!;
   const derramaAtual = ultimo(derrama, (x) => x.normal !== null)!;
 
-  // IMI: um valor por ano de aplicação.
+  // Os três gráficos têm no eixo o ano em que a Assembleia decidiu (o IMI vale para o ano seguinte: coluna "Para o ano").
   const imiComTaxa = imi.filter((x) => x.urbanos !== null);
-  const imiAnos = imiComTaxa.map((x) => String(x.paraAno));
+  const imiAnos = imiComTaxa.map((x) => x.sessao.slice(0, 4));
+  const ultimaSessao = [...imi, ...irs, ...derrama].map((x) => x.sessao).sort().pop()!;
   // IRS: a deliberação de 2020 diz 0,48% (uma gralha, retificada em janeiro de 2021): fica fora do gráfico.
   const irsAnoOk = irs.filter((x) => x.percentagem !== null && !x.retificacao && x.percentagem >= 1);
   const irsAnos = [...new Set(irs.filter((x) => !x.retificacao && x.percentagem !== null).map((x) => x.sessao.slice(0, 4)))];
@@ -26,7 +27,7 @@ export default function TaxasLocais() {
         </h2>
         <p className="mt-2 max-w-2xl text-texto">
           Todos os anos, no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
-          Mostra o que foi decidido desde 2015 e a votação de cada deliberação.
+          Aqui está o que foi decidido desde 2015 e como foi votada cada deliberação.
         </p>
         <dl className="mt-6 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">
@@ -56,11 +57,12 @@ export default function TaxasLocais() {
         <section aria-label="IMI">
           <h3 className="text-xl font-bold tracking-tight text-tinta">IMI: Imposto Municipal sobre Imóveis</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
-            A taxa para os prédios urbanos, ano de aplicação a ano de aplicação. A dos prédios rústicos é 0,8% em todos os
-            anos em que o valor consta.
+            A taxa dos prédios urbanos que a Assembleia fixou em cada ano, para valer no ano seguinte. A dos prédios rústicos
+            é 0,8% em todos os anos em que o valor consta.
           </p>
           <div className="max-w-3xl">
             <Grafico periodos={imiAnos} series={[{ nome: "Prédios urbanos", valores: imiComTaxa.map((x) => x.urbanos) }]} unidade="%" semComparar casas={2} />
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação (a taxa decidida em {imiAnos[imiAnos.length - 1]} é a de {imiAtual.paraAno}).</p>
           </div>
           <Tabela
             colunas={["Deliberação", "Para o ano", "Urbanos", "Rústicos", "Votação"]}
@@ -71,7 +73,7 @@ export default function TaxasLocais() {
               String(x.paraAno),
               pc(x.urbanos),
               pc(x.rusticos, 1),
-              textoVoto(x),
+              textoVoto(x, x.sessao),
             ])}
           />
           <p className="mt-2 text-sm text-apagado">Até 2018 o texto da deliberação não diz a taxa (está num anexo): só se mostra a votação.</p>
@@ -90,6 +92,7 @@ export default function TaxasLocais() {
               semComparar
               casas={1}
             />
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação.</p>
           </div>
           <Tabela
             colunas={["Deliberação", "Percentagem", "Votação"]}
@@ -98,7 +101,7 @@ export default function TaxasLocais() {
                 {dataCurta(x.sessao)} ↗{x.retificacao ? " (retificação)" : ""}
               </a>,
               x.retificacao ? "—" : x.percentagem !== null && x.percentagem < 1 ? `${pc(x.percentagem)} *` : pc(x.percentagem, 1),
-              textoVoto(x),
+              textoVoto(x, x.sessao),
             ])}
           />
           <p className="mt-2 max-w-3xl text-sm text-apagado">
@@ -124,6 +127,7 @@ export default function TaxasLocais() {
               semComparar
               casas={2}
             />
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação.</p>
           </div>
           <Tabela
             colunas={["Deliberação", "Normal", "Reduzida", "Votação"]}
@@ -133,15 +137,17 @@ export default function TaxasLocais() {
               </a>,
               pc(x.normal, 1),
               pc(x.reduzida),
-              textoVoto(x.votoNormal),
+              textoVoto(x.votoNormal, x.sessao),
             ])}
           />
         </section>
 
         <p className="max-w-3xl text-sm text-apagado">
           Fonte: deliberações da Assembleia Municipal da Trofa (mun-trofa.pt), lidas ponto a ponto, com a votação tal como
-          está no documento. Cada ligação abre o PDF original. A taxa da derrama reduzida aplica-se, segundo o texto, a quem
-          tem um volume de negócios abaixo de um limite fixado em cada deliberação.{" "}
+          está no documento. Dados até à deliberação de {dataCurta(ultimaSessao)}. Cada ligação abre o PDF original. A taxa da derrama reduzida aplica-se, segundo o texto, a quem
+          tem um volume de negócios abaixo de um limite fixado em cada deliberação. Nas votações do mandato atual (desde
+          outubro de 2025) os grupos aparecem pelo nome da lista: Unidos pela Trofa (PSD e CDS-PP) e Trofa em Primeiro (PS, PAN
+          e Livre).{" "}
           <Link href="/dados/assembleia" className="underline underline-offset-2 hover:text-tinta">
             Ver todas as votações da Assembleia
           </Link>

@@ -16,6 +16,10 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
   const linhas = corpo === "camara" ? anosCamara : anosAssembleia;
   const mandatos = corpo === "camara" ? mandatosCamara : mandatosAssembleia;
   const t = total(linhas);
+  // Unanimidade + maioria + escrutínio secreto = pontos votados. A coluna do escrutínio secreto só aparece se houver algum.
+  const comSecreto = linhas.some((l) => l.secreto > 0);
+  const ultimoAno = linhas[linhas.length - 1]?.ano;
+  const anoEmCurso = ultimoAno === new Date().getFullYear() ? ` ${ultimoAno} ainda não acabou.` : "";
   return (
     <div>
       <p className="max-w-2xl text-texto">
@@ -33,6 +37,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
               <th className="px-4 py-3 text-right font-medium">Pontos votados</th>
               <th className="px-4 py-3 text-right font-medium">Por unanimidade</th>
               <th className="px-4 py-3 text-right font-medium">Por maioria</th>
+              {comSecreto && <th className="px-4 py-3 text-right font-medium">Por escrutínio secreto</th>}
             </tr>
           </thead>
           <tbody>
@@ -46,12 +51,14 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
                   {numero(l.unanimes)} <span className="text-apagado">({pct(l.unanimes, l.votados)})</span>
                 </td>
                 <td className="px-4 py-2.5 text-right">{numero(l.maioria)}</td>
+                {comSecreto && <td className="px-4 py-2.5 text-right">{numero(l.secreto)}</td>}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Só contam as reuniões de que a Câmara publicou as deliberações (a lista das que faltam está em Deliberações). Os documentos digitalizados foram lidos por reconhecimento de texto e os pontos em que o voto não se leu ficam de fora das contas.</p>}
+      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Só contam as reuniões de que a Câmara publicou as deliberações (a lista das que faltam está em Deliberações). Os documentos digitalizados foram lidos por reconhecimento de texto e os pontos em que o voto não se leu ficam de fora das contas (na lista das deliberações aparecem à parte, como “não legível”).{comSecreto ? " As votações por escrutínio secreto são eleições e designações." : ""}{anoEmCurso}</p>}
+      {corpo === "assembleia" && <p className="mt-3 text-sm text-apagado">Só contam as sessões de que o município publicou as deliberações (as que têm ata mas não têm deliberações estão indicadas em Votações).{anoEmCurso}</p>}
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Nas votações por maioria</h3>
       <p className="mt-2 max-w-2xl text-texto">

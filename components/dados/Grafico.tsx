@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { numero, sufixo, valor as fmtValor } from "@/lib/dados/formatar";
+import { milhoes, numero, sufixo, valor as fmtValor } from "@/lib/dados/formatar";
 
 export type Serie = { nome: string; valores: (number | null)[] };
 
@@ -26,18 +26,28 @@ function bonitos(min: number, max: number, n = 4) {
   return out;
 }
 
+// Casas decimais de que um eixo precisa para que duas marcas seguidas não fiquem com o mesmo texto
+// (marcas de 0,05 em 0,05 pedem duas casas; de 2 em 2, nenhuma).
+function casasDoPasso(passo: number) {
+  if (!(passo > 0)) return 0;
+  return Math.min(6, Math.max(0, -Math.floor(Math.log10(passo) + 1e-9)));
+}
+
 export default function Grafico({
   periodos,
   series,
   unidade,
   semComparar = false,
   casas,
+  emMilhoes = false,
 }: {
   periodos: string[];
   series: Serie[];
   unidade: string;
   semComparar?: boolean;
   casas?: number;
+  // Valores em euros que se leem em milhões (M€) na caixa que aparece ao passar o rato.
+  emMilhoes?: boolean;
 }) {
   const caixa = useRef<HTMLDivElement>(null);
   const [larguraCaixa, setLarguraCaixa] = useState(720);
@@ -46,7 +56,8 @@ export default function Grafico({
   const [ativo, setAtivo] = useState<number | null>(null);
 
   // No telemóvel o gráfico não se aperta: fica com uma largura mínima e desliza-se para o lado (começa nos anos mais recentes).
-  const LARGURA_MINIMA = 600;
+  // Com poucos períodos cabe sempre, e não precisa de deslizar.
+  const LARGURA_MINIMA = periodos.length > 8 ? 600 : 0;
   const largura = Math.max(larguraCaixa, LARGURA_MINIMA);
 
   useEffect(() => {
@@ -60,7 +71,7 @@ export default function Grafico({
     const ro = new ResizeObserver(medir);
     ro.observe(el);
     return () => ro.disconnect();
-  }, []);
+  }, [LARGURA_MINIMA]);
 
   // Quando o gráfico passa a deslizar, começa à direita (anos mais recentes).
   const jaRolou = useRef(false);
@@ -96,7 +107,10 @@ export default function Grafico({
     max += Math.abs(max) * 0.05 || 1;
   }
   const pad = (max - min) * 0.08;
-  const ticks = bonitos(min - pad, max + pad, 4);
+  // A folga não leva o eixo para onde os valores não podem estar: abaixo de zero, ou acima de 100 numa percentagem.
+  const baixo = min >= 0 ? Math.max(0, min - pad) : min - pad;
+  const cima = modoEfetivo === "valores" && unidade.startsWith("%") && max <= 100 ? Math.min(100, max + pad) : max + pad;
+  const ticks = bonitos(baixo, cima, 4);
   const yMin = Math.min(ticks[0], min);
   const yMax = Math.max(ticks[ticks.length - 1], max);
 
@@ -112,14 +126,15 @@ export default function Grafico({
   const X = (i: number) => m.e + (xMax === xMin ? w / 2 : (((numerico ? anos[i] : i) - xMin) / (xMax - xMin)) * w);
   const Y = (v: number) => m.t + h - ((v - yMin) / (yMax - yMin)) * h;
 
+  // As marcas do eixo escrevem-se todas com as mesmas casas decimais, as que o intervalo entre elas pede.
+  const passoEixo = ticks.length > 1 ? ticks[1] - ticks[0] : 0;
+  const eixoEmMilhoes = modoEfetivo === "valores" && unidade === "€" && ticks.some((t) => Math.abs(t) >= 1_000_000);
   const fmtEixo = (v: number) =>
-    casas !== undefined && modoEfetivo === "valores"
-      ? numero(v, casas) + sufixo(unidade)
-      : modoEfetivo === "comparar"
-      ? numero(v, 0)
-      : unidade === "€" && Math.abs(v) >= 1_000_000
-        ? numero(v / 1_000_000, 0) + " M€"
-        : numero(v, Number.isInteger(v) ? 0 : 1);
+    eixoEmMilhoes
+      ? numero(v / 1_000_000, casasDoPasso(passoEixo / 1_000_000)) + " M€"
+      : casas !== undefined && modoEfetivo === "valores"
+        ? numero(v, Math.max(casas, casasDoPasso(passoEixo))) + sufixo(unidade)
+        : numero(v, casasDoPasso(passoEixo));
 
   const comDados = periodos.map((_, i) => i).filter((i) => visiveis.some((s) => s.valores[i] !== null));
   const passoRotulo = Math.max(1, Math.ceil(comDados.length / Math.max(2, Math.floor(w / 56))));
@@ -244,7 +259,7 @@ export default function Grafico({
                     {s.nome}
                   </span>
                   <span className="font-medium tabular-nums text-tinta">
-                    {v === null ? "—" : modoEfetivo === "comparar" ? numero(v, 1) : fmtValor(original, unidade)}
+                    {v === null ? "—" : modoEfetivo === "comparar" ? numero(v, 1) : emMilhoes ? milhoes(original) : fmtValor(original, unidade)}
                   </span>
                 </p>
               );

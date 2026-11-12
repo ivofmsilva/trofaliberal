@@ -35,5 +35,123 @@
       "fonte": "INE (Estatísticas da cultura e do desporto das câmaras municipais)",
       "texto": "A parte das despesas da Câmara que vai para cultura e desporto."
     }
-  ]
+  ],
+  "prolongar_nota": "Séries de data/indicadores.json (vindas do portal de origem) que o INE já tem com anos mais recentes. scripts/prolongar-ine.mjs acrescenta os anos novos, com as mesmas quatro colunas. \"total\" diz que linha do INE é o total (pelas dimensões que o indicador tiver); \"agregado\" diz como se calcula a coluna Ave e concelhos vizinhos (soma ou media).",
+  "geografias": {
+    "Trofa": {
+      "geocod": "11A1318"
+    },
+    "Área Metropolitana do Porto": {
+      "geocod": "11A"
+    },
+    "Portugal": {
+      "geocod": "PT"
+    },
+    "Ave e concelhos vizinhos": {
+      "nota": "Agregado do portal de origem, que não diz que concelhos inclui. Pela população de 2022 e 2023 e pelo número de empresas de 2021 e 2022 (as somas batem ao habitante e à empresa) é a soma dos 8 concelhos da NUTS III Ave com a Trofa, Santo Tirso, Vila do Conde e a Maia. No preço mediano da habitação o portal usava a média simples dos 12 concelhos, arredondada (confere em 2019, 2020, 2021 e 2022).",
+      "soma": {
+        "1190304": "Cabeceiras de Basto",
+        "1190307": "Fafe",
+        "1190308": "Guimarães",
+        "1190309": "Póvoa de Lanhoso",
+        "1190311": "Vieira do Minho",
+        "1190312": "Vila Nova de Famalicão",
+        "1190314": "Vizela",
+        "1191705": "Mondim de Basto",
+        "11A1318": "Trofa",
+        "11A1314": "Santo Tirso",
+        "11A1316": "Vila do Conde",
+        "11A1306": "Maia"
+      }
+    }
+  },
+  "prolongar": [
+    {
+      "slug": "populacao_residente",
+      "varcd": "0012918",
+      "filtro": "Dim3=T&Dim4=T",
+      "total": {
+        "dim_3": "T",
+        "dim_4": "T"
+      },
+      "agregado": "soma"
+    },
+    {
+      "slug": "empresas",
+      "varcd": "0014063",
+      "filtro": "Dim3=TOT&Dim4=T",
+      "total": {
+        "dim_3": "TOT",
+        "dim_4": "T"
+      },
+      "agregado": "soma"
+    },
+    {
+      "slug": "pessoal_ao_servico",
+      "varcd": "0013861",
+      "filtro": "Dim3=TOT",
+      "total": {
+        "dim_3": "TOT"
+      },
+      "agregado": "soma"
+    },
+    {
+      "slug": "vab",
+      "varcd": "0013863",
+      "filtro": "Dim3=TOT",
+      "total": {
+        "dim_3": "TOT"
+      },
+      "agregado": "soma"
+    },
+    {
+      "slug": "volume_negocios",
+      "varcd": "0013862",
+      "filtro": "Dim3=TOT",
+      "total": {
+        "dim_3": "TOT"
+      },
+      "agregado": "soma"
+    },
+    {
+      "slug": "valor_mediano_habitacao",
+      "varcd": "0012255",
+      "filtro": "",
+      "total": {
+        "dim_3_t": "Total"
+      },
+      "agregado": "media"
+    }
+  ],
+  "corrigir_nota": "Títulos, unidades e textos que substituem os que vêm do portal de origem (aplicados por scripts/prolongar-ine.mjs).",
+  "corrigir": {
+    "populacao_residente": {
+      "texto": "População residente a 31 de dezembro de cada ano (estimativas do INE). Os valores de 2021 em diante são os das estimativas que o INE reviu em 2026 (para 2024, por exemplo, passou de 40 294 para 41 315 habitantes); os de 2011 a 2020 vêm da série anterior. A passagem de 2020 para 2021 junta por isso duas séries e deve ler-se com cautela."
+    },
+    "pessoal_ao_servico": {
+      "titulo": "Pessoal ao serviço das empresas com sede no concelho",
+      "unidade": "pessoas ao serviço",
+      "texto": "Pessoas que trabalham nas empresas com sede no concelho (INE, Sistema de contas integradas das empresas). Conta-se pela sede da empresa e não pelo local de trabalho: inclui quem trabalha em estabelecimentos dessas empresas fora do concelho e não inclui quem trabalha cá para empresas com sede noutro lado. O setor público não entra."
+    },
+    "indice_autossuficiencia_emprego": {
+      "titulo": "Índice de autossuficiência de emprego",
+      "unidade": "índice (100 = tantas pessoas nas empresas do concelho como residentes empregados)",
+      "texto": "Pessoal ao serviço das empresas com sede no concelho (INE, Sistema de contas integradas das empresas) a dividir pelos residentes empregados (Censos), vezes 100. É uma aproximação: o numerador conta-se pela sede da empresa e não inclui o setor público, por isso não mede exatamente os postos de trabalho que existem no concelho. Só há valores nos anos dos Censos (2011 e 2021)."
+    },
+    "partido_mais_votado_assembleia_municipal": {
+      "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista."
+    },
+    "partido_mais_votado_camara_municipal": {
+      "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista."
+    },
+    "indice_dependencia_idosos": {
+      "unidade": "idosos por 100 pessoas em idade ativa"
+    },
+    "indice_dependencia_jovens": {
+      "unidade": "jovens por 100 pessoas em idade ativa"
+    },
+    "indice_dependencia_total": {
+      "unidade": "dependentes por 100 pessoas em idade ativa"
+    }
+  }
 }

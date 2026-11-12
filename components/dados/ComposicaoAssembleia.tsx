@@ -59,7 +59,7 @@ export default function ComposicaoAssembleia() {
         <ul className="mt-3 max-w-xl list-disc space-y-1.5 pl-5 text-texto marker:text-apagado">
           <li>Aprova o orçamento e as grandes opções do plano do município.</li>
           <li>
-            Fixa os impostos locais, como o IMI, a participação no IRS e a derrama (veja as{" "}
+            Fixa os impostos locais, como o IMI, a participação no IRS e a derrama (vê as{" "}
             <Link href="/dados/financas#taxas" className="underline underline-offset-2 hover:text-tinta">
               taxas
             </Link>

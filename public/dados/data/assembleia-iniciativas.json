@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-11T15:28:31.402Z",
+ "gerado": "2026-11-12T14:50:54.624Z",
  "iniciativas": [
   {
    "data": "2025-09-05",
    "tipo": "Voto de pesar",
-   "titulo": "trágico acidente ocorrido no passado dia 03 de setembro de 2025, em Lisboa, no Elevador da Glória– O Voto de Pesar foi APROVADO POR UNANIMIDADE. Cumpriu-se um minuto de silêncio, pela memória de todas as vítimas do acidente no Elevador da Glória.",
-   "assunto": "Voto de Pesar pelo trágico acidente ocorrido no passado dia 03 de setembro de 2025, em Lisboa, no Elevador da Glória– O \"Voto de Pesar\" foi APROVADO POR UNANIMIDADE. Cumpriu-se um minuto de silêncio, pela memória de todas as vítimas do acidente no Elevador da Glória.",
+   "titulo": "Pelo trágico acidente ocorrido no passado dia 03 de setembro de 2025, em Lisboa, no Elevador da Glória",
+   "assunto": "Voto de Pesar pelo trágico acidente ocorrido no passado dia 03 de setembro de 2025, em Lisboa, no Elevador da Glória",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
    "proponente": "Todos",
@@ -15,9 +15,22 @@
    "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2025/DELIBERACOES-AM-05.09.2025.pdf"
   },
   {
+   "data": "2025-06-16",
+   "tipo": "Voto de louvor",
+   "titulo": "AO SERVIÇO DE APOIO À ASSEMBLEIA MUNICIPAL E JUNTAS DE FREGUESIA",
+   "assunto": "Voto de Louvor \"AO SERVIÇO DE APOIO À ASSEMBLEIA MUNICIPAL E JUNTAS DE FREGUESIA\"",
+   "resultado": "aprovada",
+   "votacao": "por unanimidade",
+   "proponente": "Todos",
+   "nota": "Apresentado à Mesa por todos os membros da Assembleia e aprovado com aclamação.",
+   "fonte": "ata da sessão",
+   "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata-26-16-06-2025.pdf",
+   "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2025/DELIBERACOES-AM-16-06-2025.pdf"
+  },
+  {
    "data": "2025-04-30",
    "tipo": "Voto de pesar",
-   "titulo": "FALECIMENTO DE SUA SANTIDADE, O PAPA FRANCISCO",
+   "titulo": "PELO FALECIMENTO DE SUA SANTIDADE, O PAPA FRANCISCO",
    "assunto": "Voto de Pesar PELO FALECIMENTO DE SUA SANTIDADE, O PAPA FRANCISCO",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -69,7 +82,7 @@
   {
    "data": "2024-06-27",
    "tipo": "Voto de congratulação",
-   "titulo": "Eleição do Dr. Sérgio Humberto como Eurodeputado",
+   "titulo": "Pela Eleição do Dr. Sérgio Humberto como Eurodeputado",
    "assunto": "Voto de Congratulação pela Eleição do Dr. Sérgio Humberto como Eurodeputado",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -108,7 +121,7 @@
   {
    "data": "2023-04-12",
    "tipo": "Recomendação",
-   "titulo": "ADESÃO DA TROFA À REDE DE CIDADES ARCO ÍRIS,",
+   "titulo": "ADESÃO DA TROFA À REDE DE CIDADES ARCO ÍRIS",
    "assunto": "Recomendação para \"ADESÃO DA TROFA À REDE DE CIDADES ARCO ÍRIS\",",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -147,7 +160,7 @@
   {
    "data": "2023-02-27",
    "tipo": "Recomendação",
-   "titulo": "PELA SUBSTITUIÇÃO DA GARRAIADA NA FEIRA ANUAL DA TROFA POR UM EVENTO DEDICADO ÀS CRIANÇAS E JOVENS TROFENSES,",
+   "titulo": "PELA SUBSTITUIÇÃO DA GARRAIADA NA FEIRA ANUAL DA TROFA POR UM EVENTO DEDICADO ÀS CRIANÇAS E JOVENS TROFENSES",
    "assunto": "Recomendação \"PELA SUBSTITUIÇÃO DA GARRAIADA NA FEIRA ANUAL DA TROFA POR UM EVENTO DEDICADO ÀS CRIANÇAS E JOVENS TROFENSES\",",
    "resultado": "aprovada",
    "votacao": "por maioria: 10 a favor, 0 contra e 16 abstenções",
@@ -197,9 +210,22 @@
    "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/DELIBERA%C3%87%C3%95ES%20AM%2030.09.2022.pdf"
   },
   {
+   "data": "2022-06-27",
+   "tipo": "Voto de pesar",
+   "titulo": "Pelas vítimas de violência doméstica",
+   "assunto": "\"Voto de Pesar pelas vítimas de violência doméstica\"",
+   "resultado": "aprovada",
+   "votacao": "por unanimidade",
+   "proponente": "Todos",
+   "nota": "Apresentado à Mesa por todos os membros da Assembleia.",
+   "fonte": "ata da sessão",
+   "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2022/ATA%20N.%C2%BA%206%2C%20de%2027.06.2022.pdf",
+   "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/DELIBERA%C3%87%C3%95ES%20AM%20-%2027.06.2022.pdf"
+  },
+  {
    "data": "2021-12-06",
    "tipo": "Voto de congratulação",
-   "titulo": "ASSINATURA DO CONTRATO DE EXECUÇÃO DA EMPREITADA EN 14 – MAIA (NÓ DO JUMBO) / INTERFACE RODOFERROVIÁRIA DA TROFA – SEGUNDA FASE, NO ÂMBITO DO PRR, POR PARTE DO GOVERNO COM A INFRAESTRUTURAS DE PORTUGAL, COMPLEMENTADA PELA AUTORIZAÇÃO ANTERIOR DE 8 MILHÕES DE EUROS PARA A VARIANTE EN 14 E NOVA PONTE SOBRE O RIO AVE NA TROFA",
+   "titulo": "Pela ASSINATURA DO CONTRATO DE EXECUÇÃO DA EMPREITADA EN 14 – MAIA (NÓ DO JUMBO) / INTERFACE RODOFERROVIÁRIA DA TROFA – SEGUNDA FASE, NO ÂMBITO DO PRR, POR PARTE DO GOVERNO COM A INFRAESTRUTURAS DE PORTUGAL, COMPLEMENTADA PELA AUTORIZAÇÃO ANTERIOR DE 8 MILHÕES DE EUROS PARA A VARIANTE EN 14 E NOVA PONTE SOBRE O RIO AVE NA TROFA",
    "assunto": "Voto de Congratulação pela \"ASSINATURA DO CONTRATO DE EXECUÇÃO DA EMPREITADA EN 14 – MAIA (NÓ DO JUMBO) / INTERFACE RODOFERROVIÁRIA DA TROFA – SEGUNDA FASE, NO ÂMBITO DO PRR, POR PARTE DO GOVERNO COM A INFRAESTRUTURAS DE PORTUGAL, COMPLEMENTADA PELA AUTORIZAÇÃO ANTERIOR DE 8 MILHÕES DE EUROS PARA A VARIANTE EN 14 E NOVA PONTE SOBRE O RIO AVE NA TROFA\"",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -212,10 +238,10 @@
   {
    "data": "2021-12-06",
    "tipo": "Recomendação",
-   "titulo": "Comissão Municipal de Toponímia ATRIBUIÇÃO DA DATA DE 25 DE NOVEMBRO A UMA RUA, AVENIDA, PRAÇA OU LARGO, DO CONCELHO DA TROFA",
+   "titulo": "À Comissão Municipal de Toponímia ATRIBUIÇÃO DA DATA DE 25 DE NOVEMBRO A UMA RUA, AVENIDA, PRAÇA OU LARGO, DO CONCELHO DA TROFA",
    "assunto": "Recomendação à Comissão Municipal de Toponímia \"ATRIBUIÇÃO DA DATA DE 25 DE NOVEMBRO A UMA RUA, AVENIDA, PRAÇA OU LARGO, DO CONCELHO DA TROFA\"",
    "resultado": "aprovada",
-   "votacao": "por maioria: 24 a favor, 0 contra e 1 abstenções",
+   "votacao": "por maioria: 24 a favor, 0 contra e 1 abstenção",
    "proponente": "PSD e CDS-PP",
    "nota": null,
    "fonte": "ata da sessão",
@@ -366,6 +392,45 @@
    "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/26Deliberacoes-26.PDF"
   },
   {
+   "data": "2017-04-24",
+   "tipo": "Voto de pesar",
+   "titulo": "Pelo falecimento de Alberto Carneiro",
+   "assunto": "3 \"Votos de Pesar – Pelo falecimento de Alberto Carneiro\" (Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP) [3 de 3]",
+   "resultado": "aprovada",
+   "votacao": "por unanimidade",
+   "proponente": "PSD e CDS-PP",
+   "nota": "Três votos de pesar pelo mesmo motivo, um de cada proponente, aprovados todos por unanimidade.",
+   "fonte": "texto da própria deliberação (“Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP”)",
+   "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__25_DE_24.04.2017.PDF",
+   "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/14Deliberacoes-14.PDF"
+  },
+  {
+   "data": "2017-04-24",
+   "tipo": "Voto de pesar",
+   "titulo": "Pelo falecimento de Alberto Carneiro",
+   "assunto": "3 \"Votos de Pesar – Pelo falecimento de Alberto Carneiro\" (Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP) [2 de 3]",
+   "resultado": "aprovada",
+   "votacao": "por unanimidade",
+   "proponente": "PCP-PEV",
+   "nota": "Três votos de pesar pelo mesmo motivo, um de cada proponente, aprovados todos por unanimidade.",
+   "fonte": "texto da própria deliberação (“Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP”)",
+   "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__25_DE_24.04.2017.PDF",
+   "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/14Deliberacoes-14.PDF"
+  },
+  {
+   "data": "2017-04-24",
+   "tipo": "Voto de pesar",
+   "titulo": "Pelo falecimento de Alberto Carneiro",
+   "assunto": "3 \"Votos de Pesar – Pelo falecimento de Alberto Carneiro\" (Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP) [1 de 3]",
+   "resultado": "aprovada",
+   "votacao": "por unanimidade",
+   "proponente": "PS",
+   "nota": "Três votos de pesar pelo mesmo motivo, um de cada proponente, aprovados todos por unanimidade.",
+   "fonte": "texto da própria deliberação (“Apresentados pelo Grupo Municipal do PS, pelo PCP/PEV e pelos Grupos Municipais do PPD/PSD.CDS-PP”)",
+   "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__25_DE_24.04.2017.PDF",
+   "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/14Deliberacoes-14.PDF"
+  },
+  {
    "data": "2017-02-10",
    "tipo": "Recomendação",
    "titulo": "Distribuição Alimentar aos mais carenciados",
@@ -384,7 +449,7 @@
    "titulo": "A Assembleia Municipal da Trofa emite Voto de Protesto pelo abandonar da linha do Metro até à Trofa",
    "assunto": "Voto de Protesto – A Assembleia Municipal da Trofa emite Voto de Protesto pelo abandonar da linha do Metro até à Trofa",
    "resultado": "aprovada",
-   "votacao": "por maioria: 25 a favor, 0 contra e 1 abstenções",
+   "votacao": "por maioria: 25 a favor, 0 contra e 1 abstenção",
    "proponente": "PS",
    "nota": null,
    "fonte": "ata da sessão",
@@ -410,7 +475,7 @@
    "titulo": "Pelo falecimento do ex-presidente da república Mário Soares",
    "assunto": "Voto de Pesar – Pelo falecimento do ex-presidente da república Mário Soares",
    "resultado": "aprovada",
-   "votacao": "por maioria: 24 a favor, 0 contra e 1 abstenções",
+   "votacao": "por maioria: 24 a favor, 0 contra e 1 abstenção",
    "proponente": "PS",
    "nota": null,
    "fonte": "ata da sessão",
@@ -433,12 +498,12 @@
   {
    "data": "2016-09-30",
    "tipo": "Voto de protesto",
-   "titulo": "A Assembleia Municipal da Trofa emite Voto de Protesto pelo processo de demolição da Ponte da Peça Má - 11 (ONZE) VOTOS A FAVOR; SENDO 10 (DEZ) DO GRUPO MUNICIPAL DO PS E 1 (UM) DO PCP/PEV, 12 (DOZE) VOTOS CONTRA DO GRUPO MUNICIPAL DO PPD/PDS E 3 (TRÊS) ABSTENÇÕES; SENDO DUAS GRUPO MUNICIPAL DO CDS-PP E UMA DO IPM RESULTANDO, ASSIM, A NÃO APROVAÇÃO DO VOTO DE PROTESTO. GAOA (MPC) Participação Variável no Imposto sobre o Rendimento das Pessoas Singulares (IRS), nos termos do disposto no artigo 26.º da Lei n.º 73/2013, de 3 de setembro, que aprovou o Regime Financeiro das Autarquias Locais e das Entidades Intermunicipais",
-   "assunto": "Voto de Protesto – A Assembleia Municipal da Trofa emite Voto de Protesto pelo processo de demolição da Ponte da Peça Má - 11 (ONZE) VOTOS A FAVOR; SENDO 10 (DEZ) DO GRUPO MUNICIPAL DO PS E 1 (UM) DO PCP/PEV, 12 (DOZE) VOTOS CONTRA DO GRUPO MUNICIPAL DO PPD/PDS E 3 (TRÊS) ABSTENÇÕES; SENDO DUAS GRUPO MUNICIPAL DO CDS-PP E UMA DO IPM RESULTANDO, ASSIM, A NÃO APROVAÇÃO DO VOTO DE PROTESTO. GAOA (MPC) Participação Variável no Imposto sobre o Rendimento das Pessoas Singulares (IRS), nos termos do disposto no artigo 26.º da Lei n.º 73/2013, de 3 de setembro, que aprovou o Regime Financeiro das Autarquias Locais e das Entidades Intermunicipais",
+   "titulo": "A Assembleia Municipal da Trofa emite Voto de Protesto pelo processo de demolição da Ponte da Peça Má",
+   "assunto": "Voto de Protesto – A Assembleia Municipal da Trofa emite Voto de Protesto pelo processo de demolição da Ponte da Peça Má",
    "resultado": "rejeitada",
-   "votacao": "não aprovado: 11 a favor (PS e PCP/PEV), 12 contra (PPD/PSD) e 3 abstenções (CDS-PP e IPM)",
+   "votacao": "não aprovado: 11 a favor, 12 contra e 3 abstenções",
    "proponente": "PS",
-   "nota": "A deliberação publicada só regista a aceitação do voto para discussão (por unanimidade); a ata mostra que a votação do voto foi rejeitada.",
+   "nota": null,
    "fonte": "ata da sessão",
    "ata": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__22__DE_30.09.2016.PDF",
    "deliberacoes": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/11Deliberacoes-11.PDF"
@@ -472,7 +537,7 @@
   {
    "data": "2016-06-17",
    "tipo": "Voto de louvor",
-   "titulo": "Trofense Tiago César Moreira Pereira",
+   "titulo": "Ao Trofense Tiago César Moreira Pereira",
    "assunto": "Voto de Louvor ao Trofense Tiago César Moreira Pereira",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -485,7 +550,7 @@
   {
    "data": "2016-06-17",
    "tipo": "Voto de congratulação",
-   "titulo": "e Reconhecimento – Cruz Vermelha Portuguesa – Delegação da Trofa",
+   "titulo": "Cruz Vermelha Portuguesa – Delegação da Trofa",
    "assunto": "Voto de Congratulação e Reconhecimento – Cruz Vermelha Portuguesa – Delegação da Trofa",
    "resultado": "aprovada",
    "votacao": "por unanimidade",
@@ -498,7 +563,7 @@
   {
    "data": "2015-02-27",
    "tipo": "Recomendação",
-   "titulo": "01/2013-2017 – Recomenda à Câmara Municipal da Trofa a instituição de medidas promotoras de uma maior transparência municipal - Apresentado pelo PS",
+   "titulo": "01/2013-2017 – Recomenda à Câmara Municipal da Trofa a instituição de medidas promotoras de uma maior transparência municipal",
    "assunto": "Projecto de recomendação 01/2013-2017 – Recomenda à Câmara Municipal da Trofa a instituição de medidas promotoras de uma maior \"transparência municipal\" - Apresentado pelo PS",
    "resultado": "rejeitada",
    "votacao": "não aprovado: 11 a favor, 12 contra e 3 abstenções",

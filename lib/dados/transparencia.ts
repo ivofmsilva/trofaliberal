@@ -46,10 +46,32 @@ export const fundosConcelho = fundosConcelhoBruto as unknown as Projeto[];
 
 const soma = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
 
+// Quem recebeu o contrato conta-se pelo NIF e não pelo texto: o Portal BASE escreve a mesma empresa de várias maneiras
+// ("EDP Comercial, SA" / "EDP Comercial – Comercialização de Energia, S.A."), e pelo texto a mesma empresa aparecia partida em várias. Um agrupamento de empresas
+// (vários NIF no mesmo contrato) é uma entidade à parte. Só quando não há NIF se usa o nome, sem acentos nem pontuação.
+export function chaveEntidade(texto: string): string {
+  const nifs = [...texto.matchAll(/(?:^|;)\s*(\d{8,9})\s*-/g)].map((m) => m[1]);
+  if (nifs.length) return [...new Set(nifs)].sort().join("+");
+  const nome = texto.replace(/^[-\s]+/, "");
+  return "nome:" + nome.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+type Entidade = { n: number; valor: number; nomes: Map<string, number> };
+function somarEntidade(m: Map<string, Entidade>, texto: string, valor: number) {
+  const chave = chaveEntidade(texto);
+  const x = m.get(chave) ?? { n: 0, valor: 0, nomes: new Map<string, number>() };
+  x.n++;
+  x.valor += valor;
+  x.nomes.set(texto, (x.nomes.get(texto) ?? 0) + 1);
+  m.set(chave, x);
+}
+// O nome que se mostra: a grafia mais usada nos contratos dessa entidade (em caso de empate, a mais comprida).
+const nomeMaisUsado = (e: Entidade) => [...e.nomes.entries()].sort((a, b) => b[1] - a[1] || b[0].length - a[0].length || a[0].localeCompare(b[0]))[0][0];
+
 export function resumoContratos() {
   const porAno = new Map<number, { n: number; valor: number }>();
   const porProc = new Map<string, { n: number; valor: number }>();
-  const porEmpresa = new Map<string, { n: number; valor: number }>();
+  const porEmpresa = new Map<string, Entidade>();
   for (const c of contratos) {
     const a = porAno.get(c.ano) ?? { n: 0, valor: 0 };
     a.n++;
@@ -59,37 +81,38 @@ export function resumoContratos() {
     p.n++;
     p.valor += c.valor_contratual;
     porProc.set(c.tipoprocedimento, p);
-    if (!c.ps) {
-      const e = porEmpresa.get(c.adjudicatario) ?? { n: 0, valor: 0 };
-      e.n++;
-      e.valor += c.valor_contratual;
-      porEmpresa.set(c.adjudicatario, e);
-    }
+    if (!c.ps) somarEntidade(porEmpresa, c.adjudicatario, c.valor_contratual);
   }
   return {
     n: contratos.length,
     total: soma(contratos.map((c) => c.valor_contratual)),
     anos: [...porAno.entries()].sort((a, b) => a[0] - b[0]).map(([ano, v]) => ({ ano, ...v })),
     procedimentos: [...porProc.entries()].sort((a, b) => b[1].valor - a[1].valor).map(([nome, v]) => ({ nome, ...v })),
-    empresas: [...porEmpresa.entries()].sort((a, b) => b[1].valor - a[1].valor).slice(0, 10).map(([nome, v]) => ({ nome, ...v })),
+    // nome no formato "NIF - nome", como no ficheiro (a página separa-o com separarEmpresa).
+    empresas: [...porEmpresa.values()].sort((a, b) => b.valor - a.valor).slice(0, 10).map((e) => ({ nome: nomeMaisUsado(e), n: e.n, valor: e.valor })),
   };
 }
 
 export function resumoFundos(lista: Projeto[]) {
+  // Conta projetos (códigos diferentes), não linhas: se o ficheiro trouxer o mesmo projeto em mais de uma linha (uma por
+  // localização), o projeto conta uma vez e os valores somam-se. (scripts/juntar-fundos.mjs já junta essas linhas.)
   const porPrograma = new Map<string, { n: number; valor: number }>();
   const porEstado = new Map<string, { n: number; valor: number }>();
+  const vistos = new Set<string>();
   for (const p of lista) {
+    const novo = !vistos.has(p.codigo_projeto);
+    vistos.add(p.codigo_projeto);
     const a = porPrograma.get(p.programa) ?? { n: 0, valor: 0 };
-    a.n++;
+    if (novo) a.n++;
     a.valor += p.valor_aprovado_municipio;
     porPrograma.set(p.programa, a);
     const e = porEstado.get(p.estado) ?? { n: 0, valor: 0 };
-    e.n++;
+    if (novo) e.n++;
     e.valor += p.valor_aprovado_municipio;
     porEstado.set(p.estado, e);
   }
   return {
-    n: lista.length,
+    n: vistos.size,
     total: soma(lista.map((p) => p.valor_aprovado_municipio)),
     programas: [...porPrograma.entries()].sort((a, b) => b[1].valor - a[1].valor).map(([nome, v]) => ({ nome, ...v })),
     estados: [...porEstado.entries()].sort((a, b) => b[1].valor - a[1].valor).map(([nome, v]) => ({ nome, ...v })),
@@ -160,7 +183,7 @@ export function resumoAjustes() {
   const porTipo = new Map<string, Soma>();
   const fund = new Map<string, Soma>();
   const motivo = new Map<string, Soma>();
-  const empresas = new Map<string, Soma>();
+  const empresas = new Map<string, Entidade>();
   const entidadesDiferentes = new Set<string>();
   const pessoas = { n: 0, valor: 0 };
   const escaloes = ESCALOES.map(([nome, de, ate]) => ({ nome, n: 0, valor: 0, de, ate }));
@@ -169,11 +192,11 @@ export function resumoAjustes() {
     somar(porTipo, c.tipo_contrato, c.valor_contratual);
     somar(fund, (c.fund ?? "Sem fundamentação indicada").replace(/ do Código dos Contratos Públicos/, ""), c.valor_contratual);
     somar(motivo, c.fundAD && c.fundAD.trim() ? c.fundAD.trim() : "Sem motivo indicado", c.valor_contratual);
-    entidadesDiferentes.add(c.ps ? `pessoa:${c.pid}` : separarEmpresa(c.adjudicatario).nome);
+    entidadesDiferentes.add(c.ps ? `pessoa:${c.pid}` : chaveEntidade(c.adjudicatario));
     if (c.ps) {
       pessoas.n++;
       pessoas.valor += c.valor_contratual;
-    } else somar(empresas, separarEmpresa(c.adjudicatario).nome, c.valor_contratual);
+    } else somarEntidade(empresas, c.adjudicatario, c.valor_contratual);
     const e = escaloes.find((x) => c.valor_contratual >= x.de && c.valor_contratual < x.ate);
     if (e) {
       e.n++;
@@ -192,7 +215,10 @@ export function resumoAjustes() {
     porTipo: ordenado(porTipo, "n"),
     fund: ordenado(fund, "n"),
     motivo: ordenado(motivo, "n"),
-    empresas: ordenado(empresas, "n").slice(0, 10),
+    empresas: [...empresas.values()]
+      .sort((a, b) => b.n - a.n || b.valor - a.valor)
+      .slice(0, 10)
+      .map((e) => ({ nome: separarEmpresa(nomeMaisUsado(e)).nome, n: e.n, valor: e.valor })),
     escaloes,
     materiais,
     entidades: entidadesDiferentes.size,

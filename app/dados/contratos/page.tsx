@@ -3,8 +3,8 @@ import Link from "next/link";
 import Barras from "@/components/dados/Barras";
 import SubNav from "@/components/dados/SubNav";
 import TabelaContratos from "@/components/dados/TabelaContratos";
-import { compacto, numero } from "@/lib/dados/formatar";
-import { resumoAreas, resumoContratos, separarEmpresa } from "@/lib/dados/transparencia";
+import { compacto, dataCurta, numero } from "@/lib/dados/formatar";
+import { contratos, resumoAreas, resumoContratos, separarEmpresa } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
   title: "Contratos públicos",
@@ -15,6 +15,7 @@ export default function Contratos() {
   const r = resumoContratos();
   const areas = resumoAreas();
   const maxAno = Math.max(...r.anos.map((a) => a.valor));
+  const datas = contratos.map((c) => c.data_celebracao).filter(Boolean).sort();
 
   return (
     <>
@@ -36,6 +37,9 @@ export default function Contratos() {
               <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(r.total, "€")}</dd>
             </div>
           </dl>
+          <p className="mt-6 text-sm text-apagado">
+            Contratos celebrados desde {dataCurta(datas[0])}. Dados até: o contrato mais recente é de {dataCurta(datas[datas.length - 1])}.
+          </p>
         </div>
       </section>
 
@@ -77,7 +81,7 @@ export default function Contratos() {
           </section>
 
           <section aria-label="Maiores adjudicatários">
-            <h2 className="text-lg font-bold text-tinta">Maiores valores por empresa</h2>
+            <h2 className="text-lg font-bold text-tinta">As {r.empresas.length} empresas com maior valor</h2>
             <div className="mt-4">
               <Barras
                 titulo="Valor por empresa"

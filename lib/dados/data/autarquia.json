@@ -196,7 +196,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-29",
    "numero": 32,
    "ficheiro": "Ata_32_2025_29_dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/Atas/2025/Ata_32_2025_29_dezembro.pdf"
@@ -204,7 +204,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-18",
    "numero": 31,
    "ficheiro": "Ata_31_2025_18_dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/Atas/2025/Ata_31_2025_18_dezembro.pdf"
@@ -212,7 +212,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-04",
    "numero": 30,
    "ficheiro": "Ata_30_2025_04_dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/Atas/2025/Ata_30_2025_04_dezembro.pdf"
@@ -284,7 +284,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2025,
-   "data": null,
+   "data": "2025-09-04",
    "numero": 21,
    "ficheiro": "Ata-21-2025-04-set",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/Atas/2025/Ata-21-2025-04-set.pdf"
@@ -479,7 +479,8 @@
    "data": "2024-06-27",
    "numero": 16,
    "ficheiro": "Deliberações Ata 16_2024, 27 de junho",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2024/Delibera%C3%A7%C3%B5es%20Ata%2016_2024%2C%2027%20de%20junho.pdf"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2024/Delibera%C3%A7%C3%B5es%20Ata%2016_2024%2C%2027%20de%20junho.pdf",
+   "obs": "deliberações"
   },
   {
    "tipo": "camara-ata",
@@ -487,7 +488,8 @@
    "data": "2024-05-16",
    "numero": 13,
    "ficheiro": "Deliberações Ata 13_2024, 16 de maio",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/atas_24/Delibera%C3%A7%C3%B5es%20Ata%2013_2024%2C%2016%20de%20maio.pdf"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/atas_24/Delibera%C3%A7%C3%B5es%20Ata%2013_2024%2C%2016%20de%20maio.pdf",
+   "obs": "deliberações"
   },
   {
    "tipo": "camara-ata",
@@ -524,7 +526,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2024,
-   "data": null,
+   "data": "2024-03-07",
    "numero": 6,
    "ficheiro": "Ata n.º 06 2024 de 07 de março",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/atas_24/Ata%20n.%C2%BA%2006%202024%20de%2007%20de%20mar%C3%A7o.pdf"
@@ -623,7 +625,8 @@
    "data": "2023-10-19",
    "numero": 24,
    "ficheiro": "Deliberações Ata 24 2023,19 de outubro",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/atas_2023/Delibera%C3%A7%C3%B5es%20Ata%2024%202023%2C19%20de%20outubro.pdf"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/atas_2023/Delibera%C3%A7%C3%B5es%20Ata%2024%202023%2C19%20de%20outubro.pdf",
+   "obs": "deliberações"
   },
   {
    "tipo": "camara-ata",
@@ -647,7 +650,8 @@
    "data": "2023-08-24",
    "numero": 19,
    "ficheiro": "Deliberações Ata 19 2023, 24 de agosto",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2023/Delibera%C3%A7%C3%B5es%20Ata%2019%202023%2C%2024%20de%20agosto.pdf"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2023/Delibera%C3%A7%C3%B5es%20Ata%2019%202023%2C%2024%20de%20agosto.pdf",
+   "obs": "deliberações"
   },
   {
    "tipo": "camara-ata",
@@ -772,7 +776,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2022,
-   "data": null,
+   "data": "2022-12-02",
    "numero": 30,
    "ficheiro": "Ata n.º 30 2022, de 02 dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Atas_2022/Ata%20n.%C2%BA%2030%202022%2C%20de%2002%20dezembro.pdf"
@@ -860,7 +864,7 @@
   {
    "tipo": "camara-ata",
    "ano": 2022,
-   "data": null,
+   "data": "2022-08-11",
    "numero": 19,
    "ficheiro": "Ata n.º 19 de 11 de agosto de 2022",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Atas_2022/Ata%20n.%C2%BA%2019%20de%2011%20de%20agosto%20de%202022.pdf"
@@ -1071,7 +1075,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4Atas2020-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/4Atas2020-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/4Atas2020-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "camara-ata",
@@ -1079,7 +1084,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3Atas2020-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/3Atas2020-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/3Atas2020-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "camara-ata",
@@ -1087,7 +1093,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2Atas2020-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/2Atas2020-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/2Atas2020-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "camara-ata",
@@ -1095,7 +1102,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1Atas2020-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/1Atas2020-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/1Atas2020-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "camara-ata",
@@ -1103,7 +1111,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0Atas2020-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/0Atas2020-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2020/0Atas2020-0.PDF",
+   "indice": 0
   },
   {
    "tipo": "camara-ata",
@@ -1111,7 +1120,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "20Atas2019-20",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/20Atas2019-20.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/20Atas2019-20.PDF",
+   "indice": 20
   },
   {
    "tipo": "camara-ata",
@@ -1119,7 +1129,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "19Atas2019-19",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/19Atas2019-19.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/19Atas2019-19.PDF",
+   "indice": 19
   },
   {
    "tipo": "camara-ata",
@@ -1127,7 +1138,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "18Atas2019-18",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/18Atas2019-18.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/18Atas2019-18.PDF",
+   "indice": 18
   },
   {
    "tipo": "camara-ata",
@@ -1135,7 +1147,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "17Atas2019-17",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/17Atas2019-17.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/17Atas2019-17.PDF",
+   "indice": 17
   },
   {
    "tipo": "camara-ata",
@@ -1143,7 +1156,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "16Atas2019-16",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/16Atas2019-16.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/16Atas2019-16.PDF",
+   "indice": 16
   },
   {
    "tipo": "camara-ata",
@@ -1151,7 +1165,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "15Atas2019-15",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/15Atas2019-15.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/15Atas2019-15.PDF",
+   "indice": 15
   },
   {
    "tipo": "camara-ata",
@@ -1159,7 +1174,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "14Atas2019-14",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/14Atas2019-14.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/14Atas2019-14.PDF",
+   "indice": 14
   },
   {
    "tipo": "camara-ata",
@@ -1167,7 +1183,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "13Atas2019-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/13Atas2019-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/13Atas2019-13.PDF",
+   "indice": 13
   },
   {
    "tipo": "camara-ata",
@@ -1175,7 +1192,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "12Atas2019-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/12Atas2019-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/12Atas2019-12.PDF",
+   "indice": 12
   },
   {
    "tipo": "camara-ata",
@@ -1183,7 +1201,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "11Atas2019-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/11Atas2019-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/11Atas2019-11.PDF",
+   "indice": 11
   },
   {
    "tipo": "camara-ata",
@@ -1191,7 +1210,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "10Atas2019-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/10Atas2019-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/10Atas2019-10.PDF",
+   "indice": 10
   },
   {
    "tipo": "camara-ata",
@@ -1199,7 +1219,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "9Atas2019-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/9Atas2019-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/9Atas2019-9.PDF",
+   "indice": 9
   },
   {
    "tipo": "camara-ata",
@@ -1207,7 +1228,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "8Atas2019-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/8Atas2019-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/8Atas2019-8.PDF",
+   "indice": 8
   },
   {
    "tipo": "camara-ata",
@@ -1215,7 +1237,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "7Atas2019-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/7Atas2019-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/7Atas2019-7.PDF",
+   "indice": 7
   },
   {
    "tipo": "camara-ata",
@@ -1223,7 +1246,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "6Atas2019-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/6Atas2019-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/6Atas2019-6.PDF",
+   "indice": 6
   },
   {
    "tipo": "camara-ata",
@@ -1231,7 +1255,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "5Atas2019-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/5Atas2019-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/5Atas2019-5.PDF",
+   "indice": 5
   },
   {
    "tipo": "camara-ata",
@@ -1239,7 +1264,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4Atas2019-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/4Atas2019-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/4Atas2019-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "camara-ata",
@@ -1247,7 +1273,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3Atas2019-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/3Atas2019-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/3Atas2019-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "camara-ata",
@@ -1255,7 +1282,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2Atas2019-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/2Atas2019-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/2Atas2019-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "camara-ata",
@@ -1263,7 +1291,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1Atas2019-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/1Atas2019-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/1Atas2019-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "camara-ata",
@@ -1271,7 +1300,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0Atas2019-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/0Atas2019-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2019/0Atas2019-0.PDF",
+   "indice": 0
   },
   {
    "tipo": "camara-ata",
@@ -1279,7 +1309,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "23Atas2018-23",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/23Atas2018-23.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/23Atas2018-23.PDF",
+   "indice": 23
   },
   {
    "tipo": "camara-ata",
@@ -1287,7 +1318,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "22Atas2018-22",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/22Atas2018-22.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/22Atas2018-22.PDF",
+   "indice": 22
   },
   {
    "tipo": "camara-ata",
@@ -1295,7 +1327,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "21Atas2018-21",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/21Atas2018-21.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/21Atas2018-21.PDF",
+   "indice": 21
   },
   {
    "tipo": "camara-ata",
@@ -1303,7 +1336,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "20Atas2018-20",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/20Atas2018-20.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/20Atas2018-20.PDF",
+   "indice": 20
   },
   {
    "tipo": "camara-ata",
@@ -1311,7 +1345,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "19Atas2018-19",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/19Atas2018-19.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/19Atas2018-19.PDF",
+   "indice": 19
   },
   {
    "tipo": "camara-ata",
@@ -1319,7 +1354,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "18Atas2018-18",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/18Atas2018-18.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/18Atas2018-18.PDF",
+   "indice": 18
   },
   {
    "tipo": "camara-ata",
@@ -1327,7 +1363,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "17Atas2018-17",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/17Atas2018-17.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/17Atas2018-17.PDF",
+   "indice": 17
   },
   {
    "tipo": "camara-ata",
@@ -1335,7 +1372,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "16Atas2018-16",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/16Atas2018-16.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/16Atas2018-16.PDF",
+   "indice": 16
   },
   {
    "tipo": "camara-ata",
@@ -1343,7 +1381,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "15Atas2018-15",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/15Atas2018-15.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/15Atas2018-15.PDF",
+   "indice": 15
   },
   {
    "tipo": "camara-ata",
@@ -1351,7 +1390,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "14Atas2018-14",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/14Atas2018-14.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/14Atas2018-14.PDF",
+   "indice": 14
   },
   {
    "tipo": "camara-ata",
@@ -1359,7 +1399,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "13Atas2018-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/13Atas2018-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/13Atas2018-13.PDF",
+   "indice": 13
   },
   {
    "tipo": "camara-ata",
@@ -1367,7 +1408,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "12Atas2018-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/12Atas2018-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/12Atas2018-12.PDF",
+   "indice": 12
   },
   {
    "tipo": "camara-ata",
@@ -1375,7 +1417,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "11Atas2018-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/11Atas2018-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/11Atas2018-11.PDF",
+   "indice": 11
   },
   {
    "tipo": "camara-ata",
@@ -1383,7 +1426,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "10Atas2018-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/10Atas2018-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/10Atas2018-10.PDF",
+   "indice": 10
   },
   {
    "tipo": "camara-ata",
@@ -1391,7 +1435,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "9Atas2018-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/9Atas2018-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/9Atas2018-9.PDF",
+   "indice": 9
   },
   {
    "tipo": "camara-ata",
@@ -1399,7 +1444,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "8Atas2018-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/8Atas2018-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/8Atas2018-8.PDF",
+   "indice": 8
   },
   {
    "tipo": "camara-ata",
@@ -1407,7 +1453,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "7Atas2018-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/7Atas2018-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/7Atas2018-7.PDF",
+   "indice": 7
   },
   {
    "tipo": "camara-ata",
@@ -1415,7 +1462,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "6Atas2018-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/6Atas2018-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/6Atas2018-6.PDF",
+   "indice": 6
   },
   {
    "tipo": "camara-ata",
@@ -1423,7 +1471,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "5Atas2018-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/5Atas2018-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/5Atas2018-5.PDF",
+   "indice": 5
   },
   {
    "tipo": "camara-ata",
@@ -1431,7 +1480,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4Atas2018-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/4Atas2018-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/4Atas2018-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "camara-ata",
@@ -1439,7 +1489,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3Atas2018-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/3Atas2018-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/3Atas2018-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "camara-ata",
@@ -1447,7 +1498,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2Atas2018-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/2Atas2018-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/2Atas2018-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "camara-ata",
@@ -1455,7 +1507,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1Atas2018-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/1Atas2018-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/1Atas2018-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "camara-ata",
@@ -1463,7 +1516,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0Atas2018-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/0Atas2018-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2018/0Atas2018-0.PDF",
+   "indice": 0
   },
   {
    "tipo": "camara-ata",
@@ -1471,7 +1525,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "13Atas2017-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/13Atas2017-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/13Atas2017-13.PDF",
+   "indice": 13
   },
   {
    "tipo": "camara-ata",
@@ -1479,7 +1534,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "12Atas2017-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/12Atas2017-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/12Atas2017-12.PDF",
+   "indice": 12
   },
   {
    "tipo": "camara-ata",
@@ -1487,7 +1543,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "11Atas2017-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/11Atas2017-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/11Atas2017-11.PDF",
+   "indice": 11
   },
   {
    "tipo": "camara-ata",
@@ -1495,7 +1552,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "10Atas2017-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/10Atas2017-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/10Atas2017-10.PDF",
+   "indice": 10
   },
   {
    "tipo": "camara-ata",
@@ -1503,7 +1561,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "9Atas2017-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/9Atas2017-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/9Atas2017-9.PDF",
+   "indice": 9
   },
   {
    "tipo": "camara-ata",
@@ -1511,7 +1570,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "8Atas2017-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/8Atas2017-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/8Atas2017-8.PDF",
+   "indice": 8
   },
   {
    "tipo": "camara-ata",
@@ -1519,7 +1579,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "7Atas2017-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/7Atas2017-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/7Atas2017-7.PDF",
+   "indice": 7
   },
   {
    "tipo": "camara-ata",
@@ -1527,7 +1588,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "6Atas2017-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/6Atas2017-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/6Atas2017-6.PDF",
+   "indice": 6
   },
   {
    "tipo": "camara-ata",
@@ -1535,7 +1597,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "5Atas2017-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/5Atas2017-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/5Atas2017-5.PDF",
+   "indice": 5
   },
   {
    "tipo": "camara-ata",
@@ -1543,7 +1606,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4Atas2017-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/4Atas2017-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/4Atas2017-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "camara-ata",
@@ -1551,7 +1615,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3Atas2017-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/3Atas2017-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/3Atas2017-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "camara-ata",
@@ -1559,7 +1624,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2Atas2017-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/2Atas2017-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/2Atas2017-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "camara-ata",
@@ -1567,7 +1633,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1Atas2017-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/1Atas2017-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/1Atas2017-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "camara-ata",
@@ -1575,7 +1642,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0Atas2017-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/0Atas2017-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Atas/2017/0Atas2017-0.PDF",
+   "indice": 0
   },
   {
    "tipo": "camara-deliberacoes",
@@ -1772,7 +1840,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-29",
    "numero": null,
    "ficheiro": "Deliberacoes_29_Dezembro_2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Deliberacoes_29_Dezembro_2025.pdf"
@@ -1780,7 +1848,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-18",
    "numero": null,
    "ficheiro": "Deliberacoes Reuniao do Orgao Executivo, 18dez2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Deliberacoes%20Reuniao%20do%20Orgao%20Executivo%2C%2018dez2025.pdf"
@@ -1788,7 +1856,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-04",
    "numero": null,
    "ficheiro": "Deliberações Reunião do Órgão Executivo, 4dez2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Delibera%C3%A7%C3%B5es%20Reuni%C3%A3o%20do%20%C3%93rg%C3%A3o%20Executivo%2C%204dez2025.pdf"
@@ -1996,7 +2064,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2025,
-   "data": null,
+   "data": "2025-01-16",
    "numero": null,
    "ficheiro": "Deliberacoes_Ata_02_2025_16_01",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Deliberacoes_Ata_02_2025_16_01.pdf"
@@ -2004,7 +2072,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2025,
-   "data": null,
+   "data": "2025-01-09",
    "numero": null,
    "ficheiro": "Deliberacoes_Ata_01_2025_09_01",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2025/Deliberacoes_Ata_01_2025_09_01.pdf"
@@ -2012,7 +2080,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2024,
-   "data": null,
+   "data": "2024-12-12",
    "numero": null,
    "ficheiro": "Deliberações Ata 32 2024, 12 dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2024/Delibera%C3%A7%C3%B5es%20Ata%2032%202024%2C%2012%20dezembro.pdf"
@@ -2020,7 +2088,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2024,
-   "data": null,
+   "data": "2024-12-05",
    "numero": null,
    "ficheiro": "Deliberações Ata 31 2024, 05 dezembro",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/2024/Delibera%C3%A7%C3%B5es%20Ata%2031%202024%2C%2005%20dezembro.pdf"
@@ -3148,7 +3216,7 @@
   {
    "tipo": "camara-deliberacoes",
    "ano": 2018,
-   "data": null,
+   "data": "2018-02-15",
    "numero": null,
    "ficheiro": "ED 30 2018_15feve",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/C%C3%A2mara%20Municipal/Reuni%C3%B5es%20de%20C%C3%A2mara/deliberacoes/ED%2030%202018_15feve.pdf"
@@ -3239,7 +3307,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "13Deliberacoes2017-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/13Deliberacoes2017-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/13Deliberacoes2017-13.PDF",
+   "indice": 13
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3247,7 +3316,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "12Deliberacoes2017-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/12Deliberacoes2017-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/12Deliberacoes2017-12.PDF",
+   "indice": 12
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3255,7 +3325,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "11Deliberacoes2017-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/11Deliberacoes2017-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/11Deliberacoes2017-11.PDF",
+   "indice": 11
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3263,7 +3334,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "10Deliberacoes2017-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/10Deliberacoes2017-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/10Deliberacoes2017-10.PDF",
+   "indice": 10
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3271,7 +3343,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "9Deliberacoes2017-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/9Deliberacoes2017-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/9Deliberacoes2017-9.PDF",
+   "indice": 9
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3279,7 +3352,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "8Deliberacoes2017-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/8Deliberacoes2017-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/8Deliberacoes2017-8.PDF",
+   "indice": 8
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3287,7 +3361,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "7Deliberacoes2017-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/7Deliberacoes2017-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/7Deliberacoes2017-7.PDF",
+   "indice": 7
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3295,7 +3370,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "6Deliberacoes2017-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/6Deliberacoes2017-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/6Deliberacoes2017-6.PDF",
+   "indice": 6
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3303,7 +3379,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "5Deliberacoes2017-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/5Deliberacoes2017-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/5Deliberacoes2017-5.PDF",
+   "indice": 5
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3311,7 +3388,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4Deliberacoes2017-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/4Deliberacoes2017-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/4Deliberacoes2017-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3319,7 +3397,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3Deliberacoes2017-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/3Deliberacoes2017-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/3Deliberacoes2017-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3327,7 +3406,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2Deliberacoes2017-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/2Deliberacoes2017-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/2Deliberacoes2017-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3335,7 +3415,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1Deliberacoes2017-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/1Deliberacoes2017-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/1Deliberacoes2017-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "camara-deliberacoes",
@@ -3343,7 +3424,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0Deliberacoes2017-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/0Deliberacoes2017-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Deliberacoes/2017/0Deliberacoes2017-0.PDF",
+   "indice": 0
   }
  ],
  "assembleia": [
@@ -3367,7 +3449,7 @@
    "tipo": "am-ata",
    "ano": 2026,
    "data": "2026-04-28",
-   "numero": null,
+   "numero": 6,
    "ficheiro": "ATA-6-28-abril",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2026/ATA-6-28-abril.pdf"
   },
@@ -3399,7 +3481,7 @@
    "tipo": "am-ata",
    "ano": 2025,
    "data": "2025-04-30",
-   "numero": 4,
+   "numero": 25,
    "ficheiro": "ATA-25-de-30-04-2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/ATA-25-de-30-04-2025.pdf"
   },
@@ -3407,7 +3489,7 @@
    "tipo": "am-ata",
    "ano": 2025,
    "data": "2025-06-16",
-   "numero": 6,
+   "numero": 26,
    "ficheiro": "Ata-26-16-06-2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata-26-16-06-2025.pdf"
   },
@@ -3415,31 +3497,31 @@
    "tipo": "am-ata",
    "ano": 2025,
    "data": "2025-07-31",
-   "numero": 7,
+   "numero": 27,
    "ficheiro": "Ata-27-31-07-2025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata-27-31-07-2025.pdf"
   },
   {
    "tipo": "am-ata",
    "ano": 2025,
-   "data": null,
-   "numero": 509,
+   "data": "2025-09-05",
+   "numero": 28,
    "ficheiro": "Ata_28_05092025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata_28_05092025.pdf"
   },
   {
    "tipo": "am-ata",
    "ano": 2025,
-   "data": null,
-   "numero": 309,
+   "data": "2025-09-23",
+   "numero": 29,
    "ficheiro": "Ata_29_23092025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata_29_23092025.pdf"
   },
   {
    "tipo": "am-ata",
    "ano": 2025,
-   "data": null,
-   "numero": 912,
+   "data": "2025-12-09",
+   "numero": 2,
    "ficheiro": "Ata_2_09122025",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2025/Ata_2_09122025.pdf"
   },
@@ -3647,7 +3729,7 @@
    "tipo": "am-ata",
    "ano": 2021,
    "data": null,
-   "numero": null,
+   "numero": 28,
    "ficheiro": "ATA Nº. 28",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/2021/ATA%20N%C2%BA.%2028.pdf"
   },
@@ -3671,7 +3753,7 @@
    "tipo": "am-ata",
    "ano": 2020,
    "data": "2020-02-28",
-   "numero": null,
+   "numero": 20,
    "ficheiro": "ATA_N.__20__28.02.2020",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__20__28.02.2020.PDF"
   },
@@ -3679,12 +3761,12 @@
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 21,
    "ficheiro": "ATA_N.__21",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__21.PDF"
   },
   {
-   "tipo": "am-ata",
+   "tipo": "am-outro",
    "ano": null,
    "data": null,
    "numero": null,
@@ -3727,7 +3809,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-01-28",
-   "numero": null,
+   "numero": 12,
    "ficheiro": "ATA_N.__12_DE_28.01.2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__12_DE_28.01.2019.PDF"
   },
@@ -3735,7 +3817,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-02-28",
-   "numero": null,
+   "numero": 13,
    "ficheiro": "ATA_N.__13_DE_28.02.2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__13_DE_28.02.2019.PDF"
   },
@@ -3743,7 +3825,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-04-29",
-   "numero": null,
+   "numero": 14,
    "ficheiro": "ATA_N__14_-_29_ABRIL_2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__14_-_29_ABRIL_2019.PDF"
   },
@@ -3751,7 +3833,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-06-27",
-   "numero": 6,
+   "numero": 15,
    "ficheiro": "ATA_N__15_27-06-2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__15_27-06-2019.PDF"
   },
@@ -3759,7 +3841,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-09-16",
-   "numero": null,
+   "numero": 16,
    "ficheiro": "ATA_N.__16_-_16.09.2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__16_-_16.09.2019.PDF"
   },
@@ -3767,7 +3849,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-11-28",
-   "numero": null,
+   "numero": 17,
    "ficheiro": "ATA_N.__17_-_28.11.2019(1)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__17_-_28.11.2019(1).PDF"
   },
@@ -3775,7 +3857,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-12-02",
-   "numero": null,
+   "numero": 18,
    "ficheiro": "ATA_N.__18_-_02.12.2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__18_-_02.12.2019.PDF"
   },
@@ -3783,7 +3865,7 @@
    "tipo": "am-ata",
    "ano": 2019,
    "data": "2019-12-23",
-   "numero": null,
+   "numero": 19,
    "ficheiro": "ATA_N.__19_-_23.12.2019",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__19_-_23.12.2019.PDF"
   },
@@ -3799,7 +3881,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-02-26",
-   "numero": null,
+   "numero": 6,
    "ficheiro": "ATA_N.__6_DE_26.02.2018(1)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__6_DE_26.02.2018(1).PDF"
   },
@@ -3807,7 +3889,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-04-13",
-   "numero": null,
+   "numero": 7,
    "ficheiro": "ATA_N.__7_DE_13.04.2018",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__7_DE_13.04.2018.PDF"
   },
@@ -3815,7 +3897,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-06-29",
-   "numero": null,
+   "numero": 8,
    "ficheiro": "ATA_N.__8_DE_29.06.2018",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__8_DE_29.06.2018.PDF"
   },
@@ -3823,7 +3905,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-09-13",
-   "numero": null,
+   "numero": 9,
    "ficheiro": "ATA_N.__9_DE_13.09.2018",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__9_DE_13.09.2018.PDF"
   },
@@ -3831,7 +3913,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-10-18",
-   "numero": null,
+   "numero": 10,
    "ficheiro": "ATA_N.__10_DE_18.10.2018",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__10_DE_18.10.2018.PDF"
   },
@@ -3839,7 +3921,7 @@
    "tipo": "am-ata",
    "ano": 2018,
    "data": "2018-11-30",
-   "numero": null,
+   "numero": 11,
    "ficheiro": "ATA_N.__11_DE_30.11.2018",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__11_DE_30.11.2018.PDF"
   },
@@ -3847,7 +3929,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-02-10",
-   "numero": null,
+   "numero": 24,
    "ficheiro": "ATA_N.__24_DE_10.02.2017",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__24_DE_10.02.2017.PDF"
   },
@@ -3855,7 +3937,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-04-24",
-   "numero": null,
+   "numero": 25,
    "ficheiro": "ATA_N.__25_DE_24.04.2017",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__25_DE_24.04.2017.PDF"
   },
@@ -3863,7 +3945,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-06-30",
-   "numero": null,
+   "numero": 26,
    "ficheiro": "ATA_N.__26_DE_30.06.2017",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__26_DE_30.06.2017.PDF"
   },
@@ -3871,7 +3953,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-11-23",
-   "numero": null,
+   "numero": 2,
    "ficheiro": "ATA_N.__2_DE_23.11.2017",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__2_DE_23.11.2017.PDF"
   },
@@ -3879,7 +3961,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-12-13",
-   "numero": null,
+   "numero": 3,
    "ficheiro": "ATA_N.__3_DE_13.12.2017_(1)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__3_DE_13.12.2017_(1).PDF"
   },
@@ -3887,7 +3969,7 @@
    "tipo": "am-ata",
    "ano": 2017,
    "data": "2017-12-28",
-   "numero": null,
+   "numero": 4,
    "ficheiro": "ATA_N.__4_DE_28.12.2017(1)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__4_DE_28.12.2017(1).PDF"
   },
@@ -3895,7 +3977,7 @@
    "tipo": "am-ata",
    "ano": 2016,
    "data": "2016-02-26",
-   "numero": null,
+   "numero": 19,
    "ficheiro": "ATA_N.__19_DE_26.02.2016",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__19_DE_26.02.2016.PDF"
   },
@@ -3903,7 +3985,7 @@
    "tipo": "am-ata",
    "ano": 2016,
    "data": "2016-04-26",
-   "numero": null,
+   "numero": 20,
    "ficheiro": "ATA_N.__20_DE_26.04.2016",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__20_DE_26.04.2016.PDF"
   },
@@ -3911,7 +3993,7 @@
    "tipo": "am-ata",
    "ano": 2016,
    "data": "2016-06-17",
-   "numero": null,
+   "numero": 21,
    "ficheiro": "ATA_N.__21_DE_17.06.2016",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__21_DE_17.06.2016.PDF"
   },
@@ -3919,7 +4001,7 @@
    "tipo": "am-ata",
    "ano": 2016,
    "data": "2016-09-30",
-   "numero": null,
+   "numero": 22,
    "ficheiro": "ATA_N.__22__DE_30.09.2016",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__22__DE_30.09.2016.PDF"
   },
@@ -3927,7 +4009,7 @@
    "tipo": "am-ata",
    "ano": 2016,
    "data": "2016-11-30",
-   "numero": null,
+   "numero": 23,
    "ficheiro": "ATA_N.__23__DE_30.11.2016",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__23__DE_30.11.2016.PDF"
   },
@@ -3935,7 +4017,7 @@
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 10,
    "ficheiro": "ATA_N.__10",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__10.PDF"
   },
@@ -3943,7 +4025,7 @@
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 11,
    "ficheiro": "ATA_N.__11",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__11.PDF"
   },
@@ -3951,7 +4033,7 @@
    "tipo": "am-ata",
    "ano": 2015,
    "data": "2015-04-30",
-   "numero": null,
+   "numero": 12,
    "ficheiro": "ATA_N.__12_DE_30.04.2015",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__12_DE_30.04.2015.PDF"
   },
@@ -3959,31 +4041,31 @@
    "tipo": "am-ata",
    "ano": 2015,
    "data": "2015-06-26",
-   "numero": null,
+   "numero": 13,
    "ficheiro": "ATA_N.__13_DE_26.06.2015",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__13_DE_26.06.2015.PDF"
   },
   {
    "tipo": "am-ata",
    "ano": 2015,
-   "data": null,
-   "numero": null,
+   "data": "2015-07-24",
+   "numero": 14,
    "ficheiro": "ATA_N.__14_DE_24_DE_JULHO_DE_2015_(SESSAO_EXTRAORDINARIA)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__14_DE_24_DE_JULHO_DE_2015_(SESSAO_EXTRAORDINARIA).PDF"
   },
   {
    "tipo": "am-ata",
    "ano": 2015,
-   "data": null,
-   "numero": null,
+   "data": "2015-09-24",
+   "numero": 15,
    "ficheiro": "ATA_N.__15_DE_24_DE_SETEMBRO_DE_2015_(SESSAO_ORDINARIA)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__15_DE_24_DE_SETEMBRO_DE_2015_(SESSAO_ORDINARIA).PDF"
   },
   {
    "tipo": "am-ata",
    "ano": 2015,
-   "data": null,
-   "numero": null,
+   "data": "2015-10-21",
+   "numero": 16,
    "ficheiro": "ATA_N.__16_DE_21_DE_OUTUBRO_DE_2015_(SESSAO_EXTRAORDINARIA)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__16_DE_21_DE_OUTUBRO_DE_2015_(SESSAO_EXTRAORDINARIA).PDF"
   },
@@ -3991,7 +4073,7 @@
    "tipo": "am-ata",
    "ano": 2015,
    "data": "2015-11-30",
-   "numero": null,
+   "numero": 17,
    "ficheiro": "ATA_N.__17_DE_30.11.2015",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__17_DE_30.11.2015.PDF"
   },
@@ -3999,7 +4081,7 @@
    "tipo": "am-ata",
    "ano": 2015,
    "data": "2015-12-28",
-   "numero": null,
+   "numero": 18,
    "ficheiro": "ATA_N.__18_DE_28.12.2015",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__18_DE_28.12.2015.PDF"
   },
@@ -4007,7 +4089,7 @@
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 4,
    "ficheiro": "ATA_N_4",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N_4.PDF"
   },
@@ -4015,23 +4097,23 @@
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 5,
    "ficheiro": "ATA_N_5",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N_5.PDF"
   },
   {
    "tipo": "am-ata",
    "ano": 2014,
-   "data": null,
-   "numero": null,
+   "data": "2014-06-27",
+   "numero": 6,
    "ficheiro": "ATA_N.__6_-_SESSAO_ORDINARIA_DE_27_DE_JUNHO_DE_2014",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__6_-_SESSAO_ORDINARIA_DE_27_DE_JUNHO_DE_2014.PDF"
   },
   {
    "tipo": "am-ata",
    "ano": 2014,
-   "data": null,
-   "numero": null,
+   "data": "2014-08-22",
+   "numero": 7,
    "ficheiro": "ATA_N.__7_-_SESSAO_EXTRAORDINARIA_DE_22_DE_AGOSTO_DE_2014",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__7_-_SESSAO_EXTRAORDINARIA_DE_22_DE_AGOSTO_DE_2014.PDF"
   },
@@ -4046,8 +4128,8 @@
   {
    "tipo": "am-ata",
    "ano": 2014,
-   "data": null,
-   "numero": null,
+   "data": "2014-11-28",
+   "numero": 9,
    "ficheiro": "ATA_N.__9_DE_28_DE_NOVEMBRO_DE_2014_(SESSAO_ORDINARIA)",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N.__9_DE_28_DE_NOVEMBRO_DE_2014_(SESSAO_ORDINARIA).PDF"
   },
@@ -4057,7 +4139,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "90",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/90.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/90.PDF",
+   "indice": 90
   },
   {
    "tipo": "am-ata",
@@ -4065,7 +4148,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "91",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/91.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/91.PDF",
+   "indice": 91
   },
   {
    "tipo": "am-ata",
@@ -4073,7 +4157,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "92",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/92.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/92.PDF",
+   "indice": 92
   },
   {
    "tipo": "am-ata",
@@ -4081,7 +4166,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "93",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/93.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/93.PDF",
+   "indice": 93
   },
   {
    "tipo": "am-ata",
@@ -4089,7 +4175,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "94",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/94.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/94.PDF",
+   "indice": 94
   },
   {
    "tipo": "am-ata",
@@ -4097,7 +4184,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "95",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/95.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/95.PDF",
+   "indice": 95
   },
   {
    "tipo": "am-ata",
@@ -4105,15 +4193,17 @@
    "data": null,
    "numero": null,
    "ficheiro": "96",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/96.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/96.PDF",
+   "indice": 96
   },
   {
    "tipo": "am-ata",
    "ano": null,
    "data": null,
-   "numero": null,
+   "numero": 3,
    "ficheiro": "ATA_N__3_-_30_DE_DEZEMBRO",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__3_-_30_DE_DEZEMBRO.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__3_-_30_DE_DEZEMBRO.PDF",
+   "diaMes": "12-30"
   },
   {
    "tipo": "am-ata",
@@ -4121,7 +4211,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "73",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/73.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/73.PDF",
+   "indice": 73
   },
   {
    "tipo": "am-ata",
@@ -4129,7 +4220,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "74",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/74.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/74.PDF",
+   "indice": 74
   },
   {
    "tipo": "am-ata",
@@ -4137,7 +4229,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "75",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/75.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/75.PDF",
+   "indice": 75
   },
   {
    "tipo": "am-ata",
@@ -4145,7 +4238,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "76",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/76.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/76.PDF",
+   "indice": 76
   },
   {
    "tipo": "am-ata",
@@ -4153,7 +4247,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "77",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/77.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/77.PDF",
+   "indice": 77
   },
   {
    "tipo": "am-ata",
@@ -4161,7 +4256,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "78",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/78.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/78.PDF",
+   "indice": 78
   },
   {
    "tipo": "am-ata",
@@ -4169,7 +4265,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "79",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/79.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/79.PDF",
+   "indice": 79
   },
   {
    "tipo": "am-ata",
@@ -4177,7 +4274,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "80",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/80.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/80.PDF",
+   "indice": 80
   },
   {
    "tipo": "am-ata",
@@ -4185,7 +4283,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "81",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/81.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/81.PDF",
+   "indice": 81
   },
   {
    "tipo": "am-ata",
@@ -4193,7 +4292,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "60",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/60.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/60.PDF",
+   "indice": 60
   },
   {
    "tipo": "am-ata",
@@ -4201,7 +4301,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "61",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/61.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/61.PDF",
+   "indice": 61
   },
   {
    "tipo": "am-ata",
@@ -4209,7 +4310,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "62",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/62.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/62.PDF",
+   "indice": 62
   },
   {
    "tipo": "am-ata",
@@ -4217,7 +4319,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "63",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/63.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/63.PDF",
+   "indice": 63
   },
   {
    "tipo": "am-ata",
@@ -4225,7 +4328,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "64",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/64.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/64.PDF",
+   "indice": 64
   },
   {
    "tipo": "am-deliberacoes",
@@ -4238,7 +4342,7 @@
   {
    "tipo": "am-deliberacoes",
    "ano": 2026,
-   "data": null,
+   "data": "2026-06-26",
    "numero": null,
    "ficheiro": "DELIBERACOES-26-06",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2026/DELIBERACOES-26-06.pdf"
@@ -4389,8 +4493,8 @@
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2023,
+   "data": "2023-09-15",
    "numero": null,
    "ficheiro": "deliberações am 15_09_23",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/delibera%C3%A7%C3%B5es%20am%2015_09_23.pdf"
@@ -4501,11 +4605,12 @@
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2021,
+   "data": "2021-06-22",
    "numero": null,
    "ficheiro": "Deliberações da Assembleia Municipal",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/Delibera%C3%A7%C3%B5es%20da%20Assembleia%20Municipal.pdf"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/Delibera%C3%A7%C3%B5es%20da%20Assembleia%20Municipal.pdf",
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
@@ -4541,296 +4646,368 @@
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2020,
+   "data": "2020-06-26",
    "numero": null,
    "ficheiro": "35Deliberacoes-35",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/35Deliberacoes-35.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/35Deliberacoes-35.PDF",
+   "indice": 35,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2020,
+   "data": "2020-04-29",
    "numero": null,
    "ficheiro": "34Deliberacoes-34",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/34Deliberacoes-34.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/34Deliberacoes-34.PDF",
+   "indice": 34,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2020,
+   "data": "2020-02-28",
    "numero": null,
    "ficheiro": "33Deliberacoes-33",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/33Deliberacoes-33.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/33Deliberacoes-33.PDF",
+   "indice": 33,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-12-23",
    "numero": null,
    "ficheiro": "32Deliberacoes-32",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/32Deliberacoes-32.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/32Deliberacoes-32.PDF",
+   "indice": 32,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-12-02",
    "numero": null,
    "ficheiro": "31Deliberacoes-31",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/31Deliberacoes-31.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/31Deliberacoes-31.PDF",
+   "indice": 31,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-11-28",
    "numero": null,
    "ficheiro": "30Deliberacoes-30",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/30Deliberacoes-30.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/30Deliberacoes-30.PDF",
+   "indice": 30,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-09-16",
    "numero": null,
    "ficheiro": "29Deliberacoes-29",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/29Deliberacoes-29.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/29Deliberacoes-29.PDF",
+   "indice": 29,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-06-27",
    "numero": null,
    "ficheiro": "28Deliberacoes-28",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/28Deliberacoes-28.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/28Deliberacoes-28.PDF",
+   "indice": 28,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-04-29",
    "numero": null,
    "ficheiro": "27Deliberacoes-27",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/27Deliberacoes-27.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/27Deliberacoes-27.PDF",
+   "indice": 27,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-02-28",
    "numero": null,
    "ficheiro": "26Deliberacoes-26",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/26Deliberacoes-26.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/26Deliberacoes-26.PDF",
+   "indice": 26,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2019,
+   "data": "2019-01-28",
    "numero": null,
    "ficheiro": "25Deliberacoes-25",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/25Deliberacoes-25.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/25Deliberacoes-25.PDF",
+   "indice": 25,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-11-30",
    "numero": null,
    "ficheiro": "24Deliberacoes-24",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/24Deliberacoes-24.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/24Deliberacoes-24.PDF",
+   "indice": 24,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-09-13",
    "numero": null,
    "ficheiro": "23Deliberacoes-23",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/23Deliberacoes-23.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/23Deliberacoes-23.PDF",
+   "indice": 23,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-06-29",
    "numero": null,
    "ficheiro": "22Deliberacoes-22",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/22Deliberacoes-22.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/22Deliberacoes-22.PDF",
+   "indice": 22,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-04-13",
    "numero": null,
    "ficheiro": "21Deliberacoes-21",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/21Deliberacoes-21.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/21Deliberacoes-21.PDF",
+   "indice": 21,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-02-26",
    "numero": null,
    "ficheiro": "20Deliberacoes-20",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/20Deliberacoes-20.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/20Deliberacoes-20.PDF",
+   "indice": 20,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2018,
+   "data": "2018-02-08",
    "numero": null,
    "ficheiro": "19Deliberacoes-19",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/19Deliberacoes-19.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/19Deliberacoes-19.PDF",
+   "indice": 19,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-12-13",
    "numero": null,
    "ficheiro": "18Deliberacoes-18",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/18Deliberacoes-18.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/18Deliberacoes-18.PDF",
+   "indice": 18,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-11-23",
    "numero": null,
    "ficheiro": "17Deliberacoes-17",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/17Deliberacoes-17.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/17Deliberacoes-17.PDF",
+   "indice": 17,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-09-08",
    "numero": null,
    "ficheiro": "16Deliberacoes-16",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/16Deliberacoes-16.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/16Deliberacoes-16.PDF",
+   "indice": 16,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-06-30",
    "numero": null,
    "ficheiro": "15Deliberacoes-15",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/15Deliberacoes-15.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/15Deliberacoes-15.PDF",
+   "indice": 15,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-04-24",
    "numero": null,
    "ficheiro": "14Deliberacoes-14",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/14Deliberacoes-14.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/14Deliberacoes-14.PDF",
+   "indice": 14,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2017,
+   "data": "2017-02-10",
    "numero": null,
    "ficheiro": "13Deliberacoes-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/13Deliberacoes-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/13Deliberacoes-13.PDF",
+   "indice": 13,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2016,
+   "data": "2016-11-30",
    "numero": null,
    "ficheiro": "12Deliberacoes-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/12Deliberacoes-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/12Deliberacoes-12.PDF",
+   "indice": 12,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2016,
+   "data": "2016-09-30",
    "numero": null,
    "ficheiro": "11Deliberacoes-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/11Deliberacoes-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/11Deliberacoes-11.PDF",
+   "indice": 11,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2016,
+   "data": "2016-06-17",
    "numero": null,
    "ficheiro": "10Deliberacoes-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/10Deliberacoes-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/10Deliberacoes-10.PDF",
+   "indice": 10,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2016,
+   "data": "2016-04-26",
    "numero": null,
    "ficheiro": "9Deliberacoes-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/9Deliberacoes-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/9Deliberacoes-9.PDF",
+   "indice": 9,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2016,
+   "data": "2016-02-26",
    "numero": null,
    "ficheiro": "8Deliberacoes-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/8Deliberacoes-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/8Deliberacoes-8.PDF",
+   "indice": 8,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-12-28",
    "numero": null,
    "ficheiro": "7Deliberacoes-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/7Deliberacoes-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/7Deliberacoes-7.PDF",
+   "indice": 7,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-11-30",
    "numero": null,
    "ficheiro": "6Deliberacoes-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/6Deliberacoes-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/6Deliberacoes-6.PDF",
+   "indice": 6,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-09-24",
    "numero": null,
    "ficheiro": "5Deliberacoes-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/5Deliberacoes-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/5Deliberacoes-5.PDF",
+   "indice": 5,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-07-24",
    "numero": null,
    "ficheiro": "4Deliberacoes-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/4Deliberacoes-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/4Deliberacoes-4.PDF",
+   "indice": 4,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-06-26",
    "numero": null,
    "ficheiro": "3Deliberacoes-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/3Deliberacoes-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/3Deliberacoes-3.PDF",
+   "indice": 3,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-04-30",
    "numero": null,
    "ficheiro": "2Deliberacoes-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/2Deliberacoes-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/2Deliberacoes-2.PDF",
+   "indice": 2,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-03-30",
    "numero": null,
    "ficheiro": "1Deliberacoes-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/1Deliberacoes-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/1Deliberacoes-1.PDF",
+   "indice": 1,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-deliberacoes",
-   "ano": null,
-   "data": null,
+   "ano": 2015,
+   "data": "2015-02-27",
    "numero": null,
    "ficheiro": "0Deliberacoes-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/0Deliberacoes-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/0Deliberacoes-0.PDF",
+   "indice": 0,
+   "dataDoPdf": true
   },
   {
    "tipo": "am-ordem",
    "ano": 2026,
-   "data": null,
+   "data": "2026-09-25",
    "numero": null,
    "ficheiro": "ORDEM DO DIA 25 09",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2026/ORDEM%20DO%20DIA%2025%2009.pdf"
@@ -4838,7 +5015,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2026,
-   "data": null,
+   "data": "2026-06-26",
    "numero": null,
    "ficheiro": "ordem_dia_26_06",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2026/ordem_dia_26_06.pdf"
@@ -4846,7 +5023,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2026,
-   "data": null,
+   "data": "2026-04-28",
    "numero": null,
    "ficheiro": "ordem_dia_28_04",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2026/ordem_dia_28_04.pdf"
@@ -4854,7 +5031,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2026,
-   "data": null,
+   "data": "2026-02-20",
    "numero": null,
    "ficheiro": "ordem_dia_20_02",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2026/ordem_dia_20_02.pdf"
@@ -4862,7 +5039,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2025,
-   "data": null,
+   "data": "2025-12-29",
    "numero": null,
    "ficheiro": "ordem-do-dia_29_12",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2025/ordem-do-dia_29_12.pdf"
@@ -4910,7 +5087,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2025,
-   "data": null,
+   "data": "2025-02-13",
    "numero": null,
    "ficheiro": "ORDEM DO DIA- 2025-02-13",
    "url": "https://mun-trofa.pt/upload_files/1/1/ORDEM%20DO%20DIA-%202025-02-13.pdf"
@@ -4918,7 +5095,7 @@
   {
    "tipo": "am-ordem",
    "ano": 2024,
-   "data": null,
+   "data": "2024-12-19",
    "numero": null,
    "ficheiro": "ordem_dia_19_12",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/2024/ordem_dia_19_12.pdf"
@@ -5005,8 +5182,8 @@
   },
   {
    "tipo": "am-ordem",
-   "ano": null,
-   "data": null,
+   "ano": 2023,
+   "data": "2023-04-12",
    "numero": null,
    "ficheiro": "ordem_dia_12_abr",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/ordem_dia_12_abr.pdf"
@@ -5021,8 +5198,8 @@
   },
   {
    "tipo": "am-ordem",
-   "ano": null,
-   "data": null,
+   "ano": 2022,
+   "data": "2022-12-07",
    "numero": null,
    "ficheiro": "ordem_dia_07_dez",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/ordem_dia_07_dez.pdf"
@@ -5086,15 +5263,15 @@
   {
    "tipo": "am-ordem",
    "ano": 2021,
-   "data": null,
+   "data": "2021-08-25",
    "numero": null,
    "ficheiro": "ORDEM DE TRABALHOS25_089_2021",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/ORDEM%20DE%20TRABALHOS25_089_2021.pdf"
   },
   {
    "tipo": "am-ordem",
-   "ano": null,
-   "data": null,
+   "ano": 2021,
+   "data": "2021-06-22",
    "numero": null,
    "ficheiro": "ORDEM DE TRABALHOS22_06",
    "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/ot/ORDEM%20DE%20TRABALHOS22_06.pdf"
@@ -5145,7 +5322,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "39OrdemTrabalhos-39",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/39OrdemTrabalhos-39.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/39OrdemTrabalhos-39.PDF",
+   "indice": 39
   },
   {
    "tipo": "am-ordem",
@@ -5153,7 +5331,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "38OrdemTrabalhos-38",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/38OrdemTrabalhos-38.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/38OrdemTrabalhos-38.PDF",
+   "indice": 38
   },
   {
    "tipo": "am-ordem",
@@ -5161,7 +5340,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "37OrdemTrabalhos-37",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/37OrdemTrabalhos-37.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/37OrdemTrabalhos-37.PDF",
+   "indice": 37
   },
   {
    "tipo": "am-ordem",
@@ -5169,7 +5349,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "36OrdemTrabalhos-36",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/36OrdemTrabalhos-36.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/36OrdemTrabalhos-36.PDF",
+   "indice": 36
   },
   {
    "tipo": "am-ordem",
@@ -5177,7 +5358,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "35OrdemTrabalhos-35",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/35OrdemTrabalhos-35.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/35OrdemTrabalhos-35.PDF",
+   "indice": 35
   },
   {
    "tipo": "am-ordem",
@@ -5185,7 +5367,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "34OrdemTrabalhos-34",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/34OrdemTrabalhos-34.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/34OrdemTrabalhos-34.PDF",
+   "indice": 34
   },
   {
    "tipo": "am-ordem",
@@ -5193,7 +5376,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "33OrdemTrabalhos-33",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/33OrdemTrabalhos-33.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/33OrdemTrabalhos-33.PDF",
+   "indice": 33
   },
   {
    "tipo": "am-ordem",
@@ -5201,7 +5385,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "32OrdemTrabalhos-32",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/32OrdemTrabalhos-32.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/32OrdemTrabalhos-32.PDF",
+   "indice": 32
   },
   {
    "tipo": "am-ordem",
@@ -5209,7 +5394,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "31OrdemTrabalhos-31",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/31OrdemTrabalhos-31.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/31OrdemTrabalhos-31.PDF",
+   "indice": 31
   },
   {
    "tipo": "am-ordem",
@@ -5217,7 +5403,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "30OrdemTrabalhos-30",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/30OrdemTrabalhos-30.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/30OrdemTrabalhos-30.PDF",
+   "indice": 30
   },
   {
    "tipo": "am-ordem",
@@ -5225,7 +5412,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "29OrdemTrabalhos-29",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/29OrdemTrabalhos-29.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/29OrdemTrabalhos-29.PDF",
+   "indice": 29
   },
   {
    "tipo": "am-ordem",
@@ -5233,7 +5421,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "28OrdemTrabalhos-28",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/28OrdemTrabalhos-28.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/28OrdemTrabalhos-28.PDF",
+   "indice": 28
   },
   {
    "tipo": "am-ordem",
@@ -5241,7 +5430,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "27OrdemTrabalhos-27",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/27OrdemTrabalhos-27.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/27OrdemTrabalhos-27.PDF",
+   "indice": 27
   },
   {
    "tipo": "am-ordem",
@@ -5249,7 +5439,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "26OrdemTrabalhos-26",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/26OrdemTrabalhos-26.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/26OrdemTrabalhos-26.PDF",
+   "indice": 26
   },
   {
    "tipo": "am-ordem",
@@ -5257,7 +5448,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "25OrdemTrabalhos-25",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/25OrdemTrabalhos-25.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/25OrdemTrabalhos-25.PDF",
+   "indice": 25
   },
   {
    "tipo": "am-ordem",
@@ -5265,7 +5457,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "24OrdemTrabalhos-24",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/24OrdemTrabalhos-24.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/24OrdemTrabalhos-24.PDF",
+   "indice": 24
   },
   {
    "tipo": "am-ordem",
@@ -5273,7 +5466,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "23OrdemTrabalhos-23",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/23OrdemTrabalhos-23.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/23OrdemTrabalhos-23.PDF",
+   "indice": 23
   },
   {
    "tipo": "am-ordem",
@@ -5281,7 +5475,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "22OrdemTrabalhos-22",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/22OrdemTrabalhos-22.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/22OrdemTrabalhos-22.PDF",
+   "indice": 22
   },
   {
    "tipo": "am-ordem",
@@ -5289,7 +5484,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "21OrdemTrabalhos-21",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/21OrdemTrabalhos-21.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/21OrdemTrabalhos-21.PDF",
+   "indice": 21
   },
   {
    "tipo": "am-ordem",
@@ -5297,7 +5493,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "20OrdemTrabalhos-20",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/20OrdemTrabalhos-20.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/20OrdemTrabalhos-20.PDF",
+   "indice": 20
   },
   {
    "tipo": "am-ordem",
@@ -5305,7 +5502,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "19OrdemTrabalhos-19",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/19OrdemTrabalhos-19.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/19OrdemTrabalhos-19.PDF",
+   "indice": 19
   },
   {
    "tipo": "am-ordem",
@@ -5313,7 +5511,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "18OrdemTrabalhos-18",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/18OrdemTrabalhos-18.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/18OrdemTrabalhos-18.PDF",
+   "indice": 18
   },
   {
    "tipo": "am-ordem",
@@ -5321,7 +5520,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "17OrdemTrabalhos-17",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/17OrdemTrabalhos-17.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/17OrdemTrabalhos-17.PDF",
+   "indice": 17
   },
   {
    "tipo": "am-ordem",
@@ -5329,7 +5529,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "16OrdemTrabalhos-16",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/16OrdemTrabalhos-16.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/16OrdemTrabalhos-16.PDF",
+   "indice": 16
   },
   {
    "tipo": "am-ordem",
@@ -5337,7 +5538,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "15OrdemTrabalhos-15",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/15OrdemTrabalhos-15.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/15OrdemTrabalhos-15.PDF",
+   "indice": 15
   },
   {
    "tipo": "am-ordem",
@@ -5345,7 +5547,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "14OrdemTrabalhos-14",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/14OrdemTrabalhos-14.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/14OrdemTrabalhos-14.PDF",
+   "indice": 14
   },
   {
    "tipo": "am-ordem",
@@ -5353,7 +5556,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "13OrdemTrabalhos-13",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/13OrdemTrabalhos-13.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/13OrdemTrabalhos-13.PDF",
+   "indice": 13
   },
   {
    "tipo": "am-ordem",
@@ -5361,7 +5565,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "12OrdemTrabalhos-12",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/12OrdemTrabalhos-12.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/12OrdemTrabalhos-12.PDF",
+   "indice": 12
   },
   {
    "tipo": "am-ordem",
@@ -5369,7 +5574,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "11OrdemTrabalhos-11",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/11OrdemTrabalhos-11.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/11OrdemTrabalhos-11.PDF",
+   "indice": 11
   },
   {
    "tipo": "am-ordem",
@@ -5377,7 +5583,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "10OrdemTrabalhos-10",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/10OrdemTrabalhos-10.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/10OrdemTrabalhos-10.PDF",
+   "indice": 10
   },
   {
    "tipo": "am-ordem",
@@ -5385,7 +5592,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "9OrdemTrabalhos-9",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/9OrdemTrabalhos-9.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/9OrdemTrabalhos-9.PDF",
+   "indice": 9
   },
   {
    "tipo": "am-ordem",
@@ -5393,7 +5601,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "8OrdemTrabalhos-8",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/8OrdemTrabalhos-8.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/8OrdemTrabalhos-8.PDF",
+   "indice": 8
   },
   {
    "tipo": "am-ordem",
@@ -5401,7 +5610,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "7OrdemTrabalhos-7",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/7OrdemTrabalhos-7.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/7OrdemTrabalhos-7.PDF",
+   "indice": 7
   },
   {
    "tipo": "am-ordem",
@@ -5409,7 +5619,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "6OrdemTrabalhos-6",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/6OrdemTrabalhos-6.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/6OrdemTrabalhos-6.PDF",
+   "indice": 6
   },
   {
    "tipo": "am-ordem",
@@ -5417,7 +5628,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "5OrdemTrabalhos-5",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/5OrdemTrabalhos-5.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/5OrdemTrabalhos-5.PDF",
+   "indice": 5
   },
   {
    "tipo": "am-ordem",
@@ -5425,7 +5637,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "4OrdemTrabalhos-4",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/4OrdemTrabalhos-4.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/4OrdemTrabalhos-4.PDF",
+   "indice": 4
   },
   {
    "tipo": "am-ordem",
@@ -5433,7 +5646,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "3OrdemTrabalhos-3",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/3OrdemTrabalhos-3.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/3OrdemTrabalhos-3.PDF",
+   "indice": 3
   },
   {
    "tipo": "am-ordem",
@@ -5441,7 +5655,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "2OrdemTrabalhos-2",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/2OrdemTrabalhos-2.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/2OrdemTrabalhos-2.PDF",
+   "indice": 2
   },
   {
    "tipo": "am-ordem",
@@ -5449,7 +5664,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "1OrdemTrabalhos-1",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/1OrdemTrabalhos-1.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/1OrdemTrabalhos-1.PDF",
+   "indice": 1
   },
   {
    "tipo": "am-ordem",
@@ -5457,7 +5673,8 @@
    "data": null,
    "numero": null,
    "ficheiro": "0OrdemTrabalhos-0",
-   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/0OrdemTrabalhos-0.PDF"
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/OrdemTrabalhos/0OrdemTrabalhos-0.PDF",
+   "indice": 0
   }
  ]
 }

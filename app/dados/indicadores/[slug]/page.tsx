@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Grafico from "@/components/dados/Grafico";
-import { indicadores, porSlug, temaDe, ultimo } from "@/lib/dados/dados";
-import { compacto, legenda, sufixo, valor, variacao } from "@/lib/dados/formatar";
+import { colunasComDados, emMilhoes, indicadores, porSlug, temaDe, ultimo, variacaoDe } from "@/lib/dados/dados";
+import { compacto, legenda, milhoes, sufixo, valor } from "@/lib/dados/formatar";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,11 +26,17 @@ export default async function Pagina({ params }: Props) {
 
   const tema = temaDe(slug);
   const u = ultimo(i);
-  const v = variacao(u?.var ?? null);
+  const v = u ? variacaoDe(i, u.linha) : null;
   const cres = i.linhas; // do mais antigo para o mais recente
   const periodos = cres.map((l) => l.periodo);
-  const series = i.colunas.map((nome, c) => ({ nome, valores: cres.map((l) => l.valores[c]?.v ?? null) }));
-  const recentes = [...cres].reverse();
+  // Uma coluna de comparação sem nenhum valor não entra no gráfico nem na tabela.
+  const colunas = colunasComDados(i);
+  const semDados = i.colunas.filter((_, c) => !colunas.includes(c));
+  const series = colunas.map((c) => ({ nome: i.colunas[c], valores: cres.map((l) => l.valores[c]?.v ?? null) }));
+  const recentes = cres.map((l, linha) => ({ ...l, linha })).reverse();
+  const milhoesDeEuros = emMilhoes(i);
+  const emPercentagem = i.unidade.startsWith("%");
+  const unidadeLonga = milhoesDeEuros ? "milhões de euros" : legenda(i.unidade);
 
   const pos = tema ? tema.slugs.indexOf(slug) : -1;
   const anterior = tema && pos > 0 ? porSlug(tema.slugs[pos - 1]) : undefined;
@@ -61,7 +67,7 @@ export default async function Pagina({ params }: Props) {
           <div>
             <p className="text-5xl font-bold tabular-nums tracking-tight text-tinta md:text-6xl">{compacto(u.v, i.unidade)}</p>
             <p className="mt-2 text-sm text-apagado">
-              {legenda(i.unidade) ? `${legenda(i.unidade)} · ` : ""}
+              {unidadeLonga ? `${unidadeLonga} · ` : ""}
               {u.periodo}
             </p>
           </div>
@@ -77,7 +83,7 @@ export default async function Pagina({ params }: Props) {
       {periodos.length >= 2 && (
         <section aria-label="Evolução" className="mt-10">
           <h2 className="mb-4 text-lg font-bold text-tinta">Evolução</h2>
-          <Grafico periodos={periodos} series={series} unidade={i.unidade} semComparar={Boolean(i.ine)} />
+          <Grafico periodos={periodos} series={series} unidade={i.unidade} semComparar={Boolean(i.ine)} emMilhoes={milhoesDeEuros} />
         </section>
       )}
 
@@ -90,9 +96,9 @@ export default async function Pagina({ params }: Props) {
                 <th scope="col" className="px-4 py-3 font-medium">
                   Período
                 </th>
-                {i.colunas.map((c, k) => (
-                  <th key={c} scope="col" className={`px-4 py-3 text-right font-medium ${k === 0 ? "text-tinta" : ""}`}>
-                    {c}
+                {colunas.map((c) => (
+                  <th key={c} scope="col" className={`px-4 py-3 text-right font-medium ${c === 0 ? "text-tinta" : ""}`}>
+                    {i.colunas[c]}
                   </th>
                 ))}
               </tr>
@@ -103,11 +109,12 @@ export default async function Pagina({ params }: Props) {
                   <th scope="row" className="px-4 py-2.5 text-left font-medium text-texto">
                     {l.periodo}
                   </th>
-                  {l.valores.map((p, k) => {
-                    const vv = variacao(p.var);
+                  {colunas.map((c) => {
+                    const p = l.valores[c] ?? { v: null, var: null };
+                    const vv = variacaoDe(i, l.linha, c);
                     return (
-                      <td key={k} className={`px-4 py-2.5 text-right tabular-nums ${k === 0 ? "bg-suave/60 font-semibold text-tinta" : "text-texto"}`}>
-                        <span className="block">{valor(p.v, i.unidade)}</span>
+                      <td key={c} className={`px-4 py-2.5 text-right tabular-nums ${c === 0 ? "bg-suave/60 font-semibold text-tinta" : "text-texto"}`}>
+                        <span className="block">{milhoesDeEuros ? milhoes(p.v) : valor(p.v, i.unidade)}</span>
                         {vv && (
                           <span className="block text-xs font-normal text-apagado">
                             {seta[vv.sinal]} {vv.texto}
@@ -121,13 +128,31 @@ export default async function Pagina({ params }: Props) {
             </tbody>
           </table>
         </div>
-        {u && sufixo(i.unidade) === "" && legenda(i.unidade) && (
-          <p className="mt-3 text-sm text-apagado">Unidade: {legenda(i.unidade)}.</p>
+        {u && (milhoesDeEuros || sufixo(i.unidade) === "") && unidadeLonga && (
+          <p className="mt-3 text-sm text-apagado">
+            Unidade: {unidadeLonga.replace(/.$/, "")}
+            {milhoesDeEuros ? " (M€)" : ""}.
+          </p>
         )}
         <p className="mt-2 text-sm text-apagado">
-          A seta mostra a variação em relação ao período anterior da série. Uma linha sem seta é o primeiro valor da série ou
-          não tem valor anterior.
+          A seta mostra a variação em relação ao período anterior da série
+          {emPercentagem ? ", em pontos percentuais (p.p.), porque o indicador já é uma percentagem" : ", em percentagem"}. Uma linha
+          sem seta é o primeiro valor da série ou não tem valor anterior.
         </p>
+        {i.colunas.includes("Ave e concelhos vizinhos") && (
+          <p className="mt-2 text-sm text-apagado">
+            “Ave e concelhos vizinhos” é um agregado que já vem feito do portal de onde se recolheram estes dados (ver{" "}
+            <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
+              Fontes
+            </Link>
+            ); esse portal não diz que concelhos inclui.
+          </p>
+        )}
+        {semDados.length > 0 && (
+          <p className="mt-2 text-sm text-apagado">
+            Sem valores de {semDados.join(" e ")} para este indicador: {semDados.length === 1 ? "a coluna não se mostra" : "as colunas não se mostram"}.
+          </p>
+        )}
       </section>
 
       {(anterior || seguinte) && (
