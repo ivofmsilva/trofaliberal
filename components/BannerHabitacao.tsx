@@ -45,7 +45,7 @@ export default function BannerHabitacao() {
             className="object-cover"
           />
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-[#0a4fa0] via-[#0a4fa0]/80 to-transparent px-6 pb-6 pt-16">
-            {[`${pontos.length} pontos para a Trofa`, "Licenciar em 40 dias úteis"].map((t) => (
+            {[`${pontos.length} pontos para a Trofa`, "Licenciamento em 40 dias úteis, em média"].map((t) => (
               <span key={t} className="bg-pink px-3 py-1.5 text-base font-black uppercase text-sun sm:text-lg">
                 {t}
               </span>

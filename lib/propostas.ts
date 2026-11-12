@@ -31,7 +31,7 @@ export const areas: Area[] = [
     nome: "Habitação",
     lema: "Mais liberdade para viver, construir e investir",
     medidas: [
-      "Reduzir prazos de licenciamento para 40 dias úteis",
+      "Reduzir o prazo médio de licenciamento para 40 dias úteis, quando não são necessários pareceres externos",
       "Eliminar taxas urbanísticas para primeira habitação",
       "Digitalizar processos de licenciamento",
       "Criar Gabinete do Construtor 2.0",
@@ -141,7 +141,7 @@ export const areas: Area[] = [
     medidas: [
       "Regulamento transparente de apoio ao associativismo",
       "Contratos de compromisso com beneficiários",
-      "Cartão Diamante para apoio variável aos munícipes",
+      "Apoio variável às associações atribuído diretamente pelos munícipes, através do Cartão Diamante",
       "Programa de visitas domiciliárias a idosos",
       "Plano municipal de integração de imigrantes",
       "Estimular voluntariado e redes de vizinhança",

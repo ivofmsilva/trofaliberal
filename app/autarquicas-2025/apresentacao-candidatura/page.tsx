@@ -12,7 +12,7 @@ export const metadata: Metadata = { title: "Apresentação da candidatura — Au
 const frases = [
   {
     texto: "Esta candidatura não é só da Iniciativa Liberal. É da Trofa e dos trofenses.",
-    quem: "Ivo Silva, coordenador do núcleo",
+    quem: "Ivo Silva, então coordenador do núcleo",
   },
   {
     texto: "A candidatura liberal da Trofa é feita de gente séria, livre e competente.",

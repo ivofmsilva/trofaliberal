@@ -138,11 +138,13 @@ const separadores: Separador[] = [
                   Política de Privacidade
                 </a>
                 , e autorizo o tratamento dos meus dados para efeitos de contacto e envio do
-                formulário de adesão, bem como o envio de comunicações da Iniciativa Liberal através
-                dos seus canais de comunicação, podendo gerir as minhas preferências a qualquer
-                momento.
+                formulário de adesão.
               </>
             }
+            consentOpcional={{
+              etiqueta: "Comunicações da Iniciativa Liberal",
+              texto: "Quero também receber comunicações da Iniciativa Liberal através dos seus canais. Posso mudar de ideias a qualquer momento.",
+            }}
             fields={[
               { name: "nome", label: "Nome completo *", required: true },
               { name: "telefone", label: "Contacto telefónico *", type: "tel", required: true },
@@ -206,7 +208,7 @@ const separadores: Separador[] = [
             ))}
           </ol>
           <p className="mt-6 text-ink/75">
-            Todas as denúncias serão levadas a sério e encaminhadas para as entidades competentes.
+            Lemos todas as denúncias e encaminhamos para as entidades competentes as que o justifiquem.
           </p>
         </div>
         <div className={caixa}>
@@ -219,7 +221,7 @@ const separadores: Separador[] = [
           </p>
           <MailForm
             to={links.email}
-            subject="Denúncia — Canal de Denúncias"
+            subject="Denúncia através do site"
             submitLabel="Submeter denúncia"
             anexos
             fields={[

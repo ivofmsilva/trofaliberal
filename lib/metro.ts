@@ -8,7 +8,7 @@ export const participacao = {
   assinatura: "Bruno Magalhães, coordenador do núcleo",
   data: "12 de outubro de 2026",
   posicao:
-    "Defendemos metro ligeiro em toda a linha, até ao Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que essa escolha tenha sido comparada com o metro.",
+    "Defendemos metro ligeiro em toda a linha, até ao Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que os documentos em consulta comparem essa escolha com o metro.",
   pedidos: [
     "Avaliar o metro ligeiro até ao Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
     "Publicar os estudos que fundamentam o metrobus, com dados atualizados, e reabrir a participação pública.",
@@ -108,7 +108,7 @@ export const cronologia: Facto[] = [
     quando: "2011 a 2016",
     titulo: "A população protesta: petição e boicotes no Muro",
     texto:
-      "Em 2011, 8206 subscritores fazem chegar à Presidência da República uma petição a pedir a construção da linha “com a máxima urgência”. Nesse ano e nos seguintes, o Muro responde nas urnas: as mesas de voto não abrem nas presidenciais de 2011, nas europeias de 2014 e nas presidenciais de 2016, em protesto pelo atraso do metro.",
+      "Uma petição com mais de oito mil assinaturas pede à Assembleia da República a construção da linha “com a máxima urgência”. O Muro responde nas urnas: as mesas de voto não abrem nas presidenciais de 2011, nas europeias de 2014 e nas presidenciais de 2016, em protesto pelo atraso do metro.",
     fonte: {
       nome: "TVI (2016)",
       href: "https://tvi.iol.pt/noticias/politica/eleicoes/mesas-de-voto-encerradas-em-freguesia-da-trofa",
@@ -118,7 +118,7 @@ export const cronologia: Facto[] = [
     quando: "14 de julho de 2017",
     titulo: "A Câmara leva o Estado e a Metro do Porto a tribunal",
     texto:
-      "Poucas semanas depois, o município processa o Estado e a Metro do Porto no tribunal de Penafiel por não ter sido feita a extensão do metro à Trofa.",
+      "O município processa o Estado e a Metro do Porto no tribunal de Penafiel por não ter sido feita a extensão do metro à Trofa.",
     fonte: {
       nome: "Observador (2020)",
       href: "https://observador.pt/2020/01/23/metro-do-porto-estuda-solucao-para-antigo-corredor-ferroviario-da-trofa/",
@@ -158,7 +158,7 @@ export const cronologia: Facto[] = [
     quando: "31 de janeiro de 2026",
     titulo: "Metro até ao Muro, metrobus até Paradela",
     texto:
-      "Confirma-se o desenho do projeto, com arranque previsto em 2026. O projeto é contestado por movimentos da região.",
+      "Confirma-se o desenho do projeto, com arranque então previsto para 2026. O projeto é contestado por movimentos da região.",
     fonte: {
       nome: "Rádio Metropolitana Porto (2026)",
       href: "https://www.radiometropolitanaporto.pt/trofa-tera-metro-ate-ao-muro-e-ligacao-em-metrobus-ate-paradela-a-partir-de-2026/",
@@ -190,9 +190,9 @@ export const gestao = {
         "A Trofa estava no projeto inicial da Metro do Porto. Em 2002 tiram o comboio. Em 2008 o novo projeto promete a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Os governos seguintes continuam a adiar. Foram vários os avanços e recuos.",
     },
     {
-      titulo: "A Câmara fez obras no centro sem acautelar o metro",
+      titulo: "As obras no centro não acautelaram a passagem do metro",
       texto:
-        "O Parque N. Senhora das Dores foi requalificado em 2015, a Alameda da Estação inaugurada em 2017 e os novos Paços do Concelho em 2022, projetados e executados por vários executivos da Câmara. Em 2021, Sérgio Humberto admitiu que “o túnel não foi acautelado”.",
+        "O Parque N. Senhora das Dores foi requalificado em 2015, a Alameda da Estação inaugurada em 2017 e os novos Paços do Concelho em 2022, projetados e executados por vários executivos da Câmara. Em 2021, o então presidente da Câmara, Sérgio Humberto, disse ao Jornal de Notícias que “não faz sentido passar no centro da Alameda, desfazendo o parque Nossa Senhora das Dores, quando o túnel não foi acautelado”, e defendeu outro percurso para o metro.",
     },
     {
       titulo: "No fim, quem paga são os trofenses",
@@ -237,7 +237,7 @@ export const argumentos = [
   {
     titulo: "Infraestrutura para décadas",
     texto:
-      "A via e os veículos de metro duram décadas e os autocarros são substituídos muito antes. O metrobus custa menos a construir, mas, ao longo de toda a vida útil e por lugar oferecido, os custos aproximam-se. O custo a 30 anos das duas soluções nunca foi apresentado.",
+      "A via e os veículos de metro duram décadas e os autocarros são substituídos muito antes. O metrobus custa menos a construir, mas, ao longo de toda a vida útil e por lugar oferecido, os custos aproximam-se. O custo a 30 anos das duas soluções não consta dos documentos em consulta.",
   },
   {
     titulo: "Efeito estruturante",

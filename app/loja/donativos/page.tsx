@@ -14,10 +14,10 @@ export default function Donativos() {
         <div className="space-y-4 text-lg text-ink/85">
           <p>
             O sucesso das nossas iniciativas também depende do teu apoio financeiro. Cada donativo
-            permite-nos continuar a lutar por uma Trofa mais livre e próspera. Garantimos total
-            transparência: as nossas contas são públicas e auditadas pelo Departamento Financeiro da
-            Iniciativa Liberal, fiscalizado pelo Tribunal Constitucional, nos termos do Artigo 27.º
-            da Lei Orgânica n.º 2/2005, de 10 de janeiro.
+            permite-nos continuar a lutar por uma Trofa mais livre e próspera. Os donativos são recebidos
+            pela Iniciativa Liberal e registados nas contas do partido, que são fiscalizadas pela
+            Entidade das Contas e Financiamentos Políticos, junto do Tribunal Constitucional, nos
+            termos da lei do financiamento dos partidos (Lei n.º 19/2003) e da Lei Orgânica n.º 2/2005.
           </p>
           <p className="rounded-2xl border-l-4 border-pink bg-mist p-5 text-base">
             Lembra-te que todas as transferências devem obrigatoriamente ser feitas por pessoas

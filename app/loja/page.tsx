@@ -104,7 +104,11 @@ export default function Loja() {
         </ul>
         <p className="mt-6 text-sm text-ink/60">
           A encomenda é enviada ao núcleo, que entra em contacto contigo para combinar o pagamento e a entrega.
-          {packs.length > 0 && " Imagem do pack ilustrativa."}
+          {packs.length > 0 && " Imagem do pack ilustrativa."} O vendedor é a Iniciativa Liberal; vê as{" "}
+          <Link href="/privacidade#loja" className="underline underline-offset-2 hover:text-ink">
+            condições da loja
+          </Link>
+          .
         </p>
       </section>
 

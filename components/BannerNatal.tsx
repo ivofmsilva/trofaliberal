@@ -8,7 +8,7 @@ export default function BannerNatal() {
     <section className="mx-auto max-w-7xl px-4 sm:px-6">
       <Link
         href="/loja#natal"
-        aria-label="Packs de Natal: camisola, cachecol e gorro de malha, em três versões. Ver na loja"
+        aria-label="Packs de Natal: camisola, cachecol e gorro de malha. Ver na loja"
         className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[0.85fr_1.35fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-10 md:py-12">

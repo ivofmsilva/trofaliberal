@@ -118,7 +118,7 @@ export const pontos: Ponto[] = [
           "Apoiar a revisão do PDM, com regras paramétricas e liberdade de uso do solo",
           "Zonas especiais de urbanização junto às estações da futura linha de metro",
           "Mapa interativo do território, com filtros para IMI, zonas de construção, equipamentos públicos e mais",
-          "Defender a propriedade privada, rejeitar a política de expropriações e tolerância zero para ocupações indevidas",
+          "Defender a propriedade privada, rejeitar a banalização das expropriações (só em casos excecionais) e tolerância zero para ocupações indevidas",
         ],
       },
     ],

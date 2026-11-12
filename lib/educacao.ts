@@ -100,7 +100,7 @@ export const propostas: Proposta[] = [
     titulo: "Ensino superior na Trofa",
     resumo: "Estudar e envolver os agentes na criação de um polo de ensino superior no concelho.",
     porque:
-      "A Trofa está em 114.º lugar no ranking de competitividade municipal (+Liberdade), penalizada precisamente pela ausência de ensino superior. Tem empresas de metalomecânica com um nível de inovação muito elevado, que precisam de mão de obra especializada, e um centro de formação de referência nacional. Um polo de ensino superior nas áreas estratégicas da economia local fixaria talento, elevaria as qualificações da população adulta, hoje abaixo da média nacional, e faria da Trofa, por exemplo, a capital portuguesa da metalomecânica. Pode ser complementado com uma residência para estudantes.",
+      "A Trofa está em 114.º lugar em Educação, entre 186 municípios, no ranking de competitividade municipal do +Liberdade (2025), penalizada precisamente pela ausência de ensino superior. Tem empresas de metalomecânica com um nível de inovação muito elevado, que precisam de mão de obra especializada, e um centro de formação de referência nacional. Um polo de ensino superior nas áreas estratégicas da economia local fixaria talento, elevaria as qualificações da população adulta, hoje abaixo da média nacional, e faria da Trofa, por exemplo, a capital portuguesa da metalomecânica. Pode ser complementado com uma residência para estudantes.",
   },
   {
     id: "1.6",
@@ -224,7 +224,7 @@ export const propostas: Proposta[] = [
     resumo:
       "Completar a passagem das creches (0 a 3 anos) para o sistema educativo, como já acontece no pré-escolar.",
     porque:
-      "A tutela pedagógica das creches já passou para o Ministério da Educação, mas o financiamento continua separado, na Segurança Social, enquanto o pré-escolar (3 a 5 anos) está todo na Educação. Esta divisão administrativa não tem fundamento científico. A investigação em neurodesenvolvimento infantil é clara: os primeiros três anos de vida são o período de maior plasticidade cerebral e de maior impacto das experiências formativas. Tratar as creches como assistência social, e não como a primeira etapa do percurso educativo, é um erro de paradigma.",
+      "As creches já têm orientações pedagógicas definidas em conjunto com o Ministério da Educação (2024), mas continuam na tutela e no financiamento da Segurança Social, enquanto o pré-escolar (3 a 5 anos) está todo na Educação. Esta divisão administrativa não tem fundamento científico. A investigação em neurodesenvolvimento infantil é clara: os primeiros três anos de vida são o período de maior plasticidade cerebral e de maior impacto das experiências formativas. Tratar as creches como assistência social, e não como a primeira etapa do percurso educativo, é um erro de paradigma.",
   },
 ];
 

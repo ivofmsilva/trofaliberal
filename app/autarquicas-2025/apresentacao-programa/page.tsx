@@ -13,13 +13,12 @@ const destaques = [
     texto: "Escolhemos uma escola para reforçar a importância que os liberais dão à educação e às ideias.",
   },
   {
-    titulo: "O primeiro programa a ser divulgado",
-    texto:
-      "Fomos o primeiro partido a disponibilizar o programa eleitoral e o único a fazê-lo antes do debate dos candidatos.",
+    titulo: "O programa antes do debate",
+    texto: "Divulgámos o programa eleitoral antes do debate dos candidatos, para que as ideias pudessem ser discutidas.",
   },
   {
-    titulo: "O único evento só para o programa",
-    texto: "Fomos o único partido a organizar um evento dedicado à apresentação do programa eleitoral.",
+    titulo: "Um evento só para o programa",
+    texto: "Dedicámos um evento inteiro à apresentação do programa, e não só à dos candidatos.",
   },
 ];
 
@@ -43,10 +42,9 @@ export default function ApresentacaoPrograma() {
               liberais dão à educação e às ideias.
             </p>
             <p>
-              Fomos o primeiro partido a disponibilizar o programa eleitoral e o único a fazê-lo antes
-              do debate dos candidatos. E fomos o único partido a organizar um evento dedicado à
-              apresentação do programa. Os outros partidos multiplicaram-se em eventos de apresentação
-              de candidatos, e isso mostra que dão muito mais importância aos nomes do que às ideias.
+              Divulgámos o programa eleitoral antes do debate dos candidatos e dedicámos-lhe um evento
+              próprio. Para nós, uma candidatura começa nas ideias: os nomes contam, mas é o programa
+              que diz aos trofenses o que queremos fazer.
             </p>
           </div>
           <ul className="mt-10 grid gap-5 md:grid-cols-3">

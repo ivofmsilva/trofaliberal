@@ -27,12 +27,6 @@ export default function HeroEducacao({ locais, nacionais }: { locais: number; na
   return (
     <section className="px-4 pt-6 sm:px-6">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white shadow-xl">
-        <span
-          aria-hidden
-          className="font-display pointer-events-none absolute -right-4 -top-6 select-none text-[11rem] font-bold leading-none text-white/[0.07] sm:text-[15rem] md:text-[20rem]"
-        >
-          114.º
-        </span>
         <div className="relative grid items-end gap-8 px-8 pb-14 pt-14 md:grid-cols-[1.2fr_1fr] md:px-16">
           <div className="self-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/85 sm:text-sm">

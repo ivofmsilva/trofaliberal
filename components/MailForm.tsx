@@ -29,6 +29,7 @@ export default function MailForm({
   subject,
   fields,
   consent,
+  consentOpcional,
   submitLabel,
   anexos,
   intro,
@@ -37,6 +38,8 @@ export default function MailForm({
   subject: string;
   fields: Field[];
   consent?: React.ReactNode;
+  // Consentimento à parte e facultativo (por exemplo, receber comunicações): vai na mensagem como Sim/Não.
+  consentOpcional?: { etiqueta: string; texto: React.ReactNode };
   submitLabel: string;
   anexos?: boolean;
   // Linha(s) que vão no início da mensagem (por exemplo, o produto de uma encomenda).
@@ -54,6 +57,7 @@ export default function MailForm({
     let body = (intro ? `${intro}\n` : "") + fields
       .map((f) => `${f.label.replace(" *", "")}: ${String(data.get(f.name) ?? "").trim()}`)
       .join("\n");
+    if (consentOpcional) body += `\n${consentOpcional.etiqueta}: ${data.get("consentimento_opcional") ? "Sim" : "Não"}`;
     // O aviso sobre anexos só serve quando a mensagem é preparada no programa de email de quem escreve.
     const textoEnviado = body;
     if (anexos) body += "\n\n(Se tiveres fotos ou documentos, anexa-os a este email.)";
@@ -134,6 +138,12 @@ export default function MailForm({
         <label className="flex items-start gap-3 text-sm text-ink/75">
           <input type="checkbox" required className="mt-1 h-4 w-4 accent-cyan" />
           <span>{consent}</span>
+        </label>
+      )}
+      {consentOpcional && (
+        <label className="flex items-start gap-3 text-sm text-ink/75">
+          <input type="checkbox" name="consentimento_opcional" className="mt-1 h-4 w-4 accent-cyan" />
+          <span>{consentOpcional.texto} (opcional)</span>
         </label>
       )}
       <button

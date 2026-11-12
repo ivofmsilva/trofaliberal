@@ -40,7 +40,7 @@ export const perfis: Perfil[] = [
       "Lutar pela redução do IMI nos imóveis reabilitados para arrendamento acessível",
       "Fundo de Reabilitação Urbana municipal, com possível cofinanciamento privado",
       "Protocolo para reabilitar imóveis devolutos de quem não tem meios, colocando-os no mercado por pelo menos 10 anos",
-      "Rejeitar a política de expropriações e tolerância zero para ocupações indevidas",
+      "Rejeitar a banalização das expropriações (só em casos excecionais) e tolerância zero para ocupações indevidas",
     ],
   },
   {
@@ -78,7 +78,7 @@ export const perfis: Perfil[] = [
 export const problemaResposta = [
   {
     problema: "Os licenciamentos são um dos maiores bloqueios ao aumento da oferta",
-    resposta: "Um portal digital com pedido único, acompanhamento do processo e alertas de atraso, e prazos obrigatórios.",
+    resposta: "Um portal digital com pedido único, acompanhamento do processo e alertas de atraso, e um prazo médio de 40 dias úteis quando não são precisos pareceres externos.",
   },
   {
     problema: "A construção nova esteve parada, por falta de incentivos, excesso de taxas e insegurança nos processos",

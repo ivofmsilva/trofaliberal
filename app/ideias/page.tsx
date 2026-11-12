@@ -84,6 +84,11 @@ export default function Propostas() {
           <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
             10 áreas estratégicas de intervenção
           </h2>
+          <p className="mt-4 max-w-3xl text-ink/80">
+            Estas medidas vêm do programa com que nos apresentámos pela primeira vez a eleições autárquicas, em 2025.
+            Juntam o que se pode fazer num mandato com uma visão de futuro para a Trofa: os novos equipamentos são
+            objetivos de longo prazo para o concelho, e não promessas para um só mandato.
+          </p>
           <ol className="mt-10 space-y-3">
             {areas.map((a, i) => (
               <li key={a.nome}>

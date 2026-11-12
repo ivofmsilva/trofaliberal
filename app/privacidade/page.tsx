@@ -17,9 +17,9 @@ const formularios: { nome: string; dados: string; para: string }[] = [
   {
     nome: "Faz-te membro (“Prefiro falar com alguém primeiro”)",
     dados: "Nome, telefone, email e freguesia (opcional).",
-    para: "Contactar-te para explicar como aderir. A adesão em si faz-se no site da Iniciativa Liberal.",
+    para: "Contactar-te para explicar como aderir. A adesão em si faz-se no site da Iniciativa Liberal. Só se assinalares essa opção, à parte, passas também a receber comunicações da Iniciativa Liberal.",
   },
-  { nome: "Tens uma ideia?", dados: "Nome, email (opcional) e o texto da ideia.", para: "Ler a ideia e, se pedires, responder-te." },
+  { nome: "Tens uma ideia?", dados: "Nome, email, tema (opcional) e o texto da ideia.", para: "Ler a ideia e responder-te." },
   {
     nome: "Denúncia (problemas na rua, na freguesia…)",
     dados: "Freguesia, morada ou referência, descrição e, se quiseres, nome e contacto.",
@@ -48,6 +48,7 @@ const indice: [string, string][] = [
   ["direitos", "Direitos dos titulares dos dados"],
   ["epd", "Encarregado de Proteção de Dados"],
   ["autoridade", "Autoridade de controlo"],
+  ["loja", "Loja e encomendas"],
   ["dados-trofa", "Portal Dados da Trofa"],
   ["responsabilidade", "Exoneração de responsabilidade"],
   ["reserva", "Direito de reserva"],
@@ -150,7 +151,8 @@ export default function Privacidade() {
               ))}
             </ul>
             <p>
-              Não pedimos dados especialmente sensíveis. Se os escreveres no texto (por exemplo, numa denúncia), usamo-los só para
+              Não pedimos dados especialmente sensíveis. Ainda assim, um pedido para aderir a um partido revela uma opção
+              política: tratamos esses contactos com reserva e só para o fim indicado. Se escreveres dados sensíveis no texto (por exemplo, numa denúncia), usamo-los só para
               tratar o assunto que nos expões; evita incluir dados de terceiros que não sejam necessários. A denúncia por este
               formulário <strong>não é anónima</strong>: quem a recebe vê o que escreveste, mas podes deixar o nome e o contacto
               em branco.
@@ -162,6 +164,7 @@ export default function Privacidade() {
             <ul className="list-disc space-y-1 pl-6">
               <li>tratar e responder a pedidos de contacto e de informação;</li>
               <li>contactar quem quer aderir à IL ou ser convidado para o grupo de WhatsApp do núcleo;</li>
+              <li>enviar comunicações da IL a quem o tiver aceitado expressamente, à parte do pedido de contacto;</li>
               <li>ler as ideias que nos enviam e responder, quando pedido;</li>
               <li>receber, analisar e encaminhar denúncias para a entidade competente (por exemplo, a Câmara ou a Junta de Freguesia);</li>
               <li>combinar o pagamento e a entrega das encomendas da loja;</li>
@@ -319,6 +322,23 @@ export default function Privacidade() {
                 www.cnpd.pt ↗
               </a>
               ). Em caso de violação de dados pessoais, a IL notifica a CNPD e, se houver risco elevado, os titulares afetados.
+            </p>
+          </Secao>
+
+          <Secao id="loja" titulo="Loja e encomendas">
+            <p>
+              O vendedor dos artigos da loja é a Iniciativa Liberal, partido político com sede na Avenida do Bessa, 158 E,
+              4100-012 Porto. As encomendas feitas neste site são tratadas pelo Núcleo da Trofa: depois de receber o pedido,
+              o núcleo contacta-te para combinar o pagamento e a entrega. O pagamento não se faz no site e as receitas
+              entram nas contas do partido, que emite o respetivo comprovativo.
+            </p>
+            <p>
+              Se o artigo tiver defeito ou não for o que pediste, escreve para{" "}
+              <a href={`mailto:${links.email}`} className={ligacao}>
+                {links.email}
+              </a>{" "}
+              e trocamo-lo ou devolvemos o valor. Nas compras feitas à distância tens ainda o direito de devolução no prazo
+              de 14 dias depois da entrega, previsto na lei.
             </p>
           </Secao>
 

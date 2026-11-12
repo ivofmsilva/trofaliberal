@@ -45,7 +45,7 @@ const mandatos = [
     coordenador: "José Pedro Reis",
     mesa: "Ivo Silva",
     texto:
-      "O Plenário fundador ocorreu a 25 de junho de 2022, no auditório da Junta de Freguesia do Coronado (Polo de São Romão), com a presença do antigo presidente da IL, Rui Rocha. Foi eleito o primeiro grupo de coordenação do núcleo.",
+      "O Plenário fundador ocorreu a 25 de junho de 2022, no auditório da Junta de Freguesia do Coronado (Polo de São Romão), com a presença de Rui Rocha, então deputado e mais tarde presidente da IL. Foi eleito o primeiro grupo de coordenação do núcleo.",
   },
 ];
 
@@ -168,7 +168,7 @@ export default function Sobre() {
         />
         <Image
           src="/images/geral/crianca-bandeira.jpeg"
-          alt="Criança com a bandeira da Trofa"
+          alt="Apoiante com a bandeira da Trofa aos ombros"
           width={410}
           height={410}
           sizes="(min-width: 768px) 560px, 100vw"
