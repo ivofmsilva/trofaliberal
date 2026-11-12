@@ -107,9 +107,9 @@ const marcos: Marco[] = [
     },
   },
   {
-    ano: "2025",
-    titulo: "Representação no Conselho Municipal de Juventude",
-    texto: "Duarte Pinheiro é o primeiro representante liberal no concelho.",
+    ano: "2026",
+    titulo: "Representação no Conselho Municipal da Juventude",
+    texto: "A IL passa a estar representada no Conselho pela primeira vez, com Duarte Pinheiro como membro efetivo e Afonso Couto como suplente.",
     foto: {
       src: "/images/geral/juventude-cmj.jpg",
       alt: "Representantes da Iniciativa Liberal no Conselho Municipal da Juventude",
@@ -252,7 +252,7 @@ export default function Sobre() {
             <p>
               O Conselho Municipal da Juventude (CMJ) da Trofa iniciou um novo mandato a 7 de fevereiro
               de 2026, contando pela primeira vez com representação da Iniciativa Liberal, através de
-              Duarte Pinheiro e Afonso Couto. Alinhado com a proposta do programa autárquico liberal, o
+              Duarte Pinheiro (membro efetivo) e Afonso Couto (suplente). Alinhado com a proposta do programa autárquico liberal, o
               executivo expandiu o Conselho, reforçando a voz dos jovens trofenses.
             </p>
             <p>
