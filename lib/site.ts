@@ -55,11 +55,11 @@ export const nav: NavItem[] = [
     label: "Ideias",
     href: "/ideias",
     children: [
-      { label: "Propostas ’25", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Construir para o Futuro", href: "/ideias/habitacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
+      { label: "Programa autárquico ’25", href: "/autarquicas-2025/programa" },
     ],
   },
   {

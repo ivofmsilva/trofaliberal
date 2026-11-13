@@ -73,7 +73,7 @@ export default function Home() {
               href="/ideias"
               className="rounded-full border-2 border-white/40 px-8 py-3 font-bold transition hover:border-cyan hover:text-sun"
             >
-              Ver propostas
+              Ver as nossas ideias
             </Link>
           </div>
           </div>
