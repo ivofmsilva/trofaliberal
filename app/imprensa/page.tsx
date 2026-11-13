@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import CartaoEvento from "@/components/CartaoEvento";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
@@ -70,16 +71,7 @@ export default function Imprensa() {
         {proximos.length ? (
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {proximos.map((e) => (
-              <li key={e.titulo} className="rounded-2xl bg-navy p-8 text-white">
-                <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
-                <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
-                {e.local && <p className="mt-2 text-white/75">{e.local}</p>}
-                {e.href && (
-                  <a href={e.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-bold text-sun hover:underline">
-                    Mais informação ↗
-                  </a>
-                )}
-              </li>
+              <CartaoEvento key={e.titulo} evento={e} />
             ))}
           </ul>
         ) : (

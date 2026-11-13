@@ -3,6 +3,9 @@ export type Evento = {
   data: string; // texto livre, ex.: "17 de dezembro, 16h"
   local?: string;
   href?: string;
+  // Opcionais: uma frase a explicar o evento e o cartaz (ficheiro em public/images/eventos/).
+  texto?: string;
+  imagem?: string;
 };
 
 // COMO ADICIONAR UM EVENTO: acrescenta um bloco igual ao exemplo abaixo (entre as
@@ -18,7 +21,15 @@ export type Evento = {
 //
 // Enquanto estiver vazio, o calendário mostra "sem eventos agendados" e a Home
 // não mostra a secção.
-export const proximos: Evento[] = [];
+export const proximos: Evento[] = [
+  {
+    titulo: "Jantar de Natal dos núcleos do distrito do Porto",
+    data: "5 de dezembro, sábado",
+    local: "Maia (local a confirmar)",
+    texto: "O Núcleo da Trofa junta-se a mais nove núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
+    imagem: "/images/eventos/jantar-natal-2026.webp",
+  },
+];
 
 export const outros = [
   {

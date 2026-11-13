@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CartaoEvento from "@/components/CartaoEvento";
 import { outros, proximos } from "@/lib/eventos";
 
 // Agenda na página inicial. Mostra os próximos eventos quando os há (lib/eventos.ts) e, mesmo
@@ -13,21 +14,7 @@ export default function AgendaInicio() {
       {proximos.length > 0 ? (
         <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {proximos.map((e) => (
-            <li key={`${e.titulo}-${e.data}`} className="rounded-2xl bg-navy p-8 text-white">
-              <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
-              <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
-              {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
-              {e.href && (
-                <a
-                  href={e.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block font-bold text-sun hover:underline"
-                >
-                  Mais informação ↗
-                </a>
-              )}
-            </li>
+            <CartaoEvento key={`${e.titulo}-${e.data}`} evento={e} />
           ))}
         </ul>
       ) : null}
