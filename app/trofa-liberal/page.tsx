@@ -121,6 +121,10 @@ const marcos: Marco[] = [
     texto: plenario2026.realizado
       ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}, a ${plenario2026.data}.`
       : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
+    foto: {
+      src: "/images/geral/plenario-muro-2026.webp",
+      alt: "Junta de Freguesia do Muro, com um expositor da Iniciativa Liberal à entrada",
+    },
   },
 ];
 
