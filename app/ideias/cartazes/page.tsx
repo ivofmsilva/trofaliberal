@@ -11,10 +11,10 @@ const n = (from: number, to: number) =>
   Array.from({ length: to - from + 1 }, (_, i) => from + i);
 
 const grupos: { titulo: string; cartazes: number[] }[] = [
-  { titulo: "Habitação e Educação", cartazes: n(41, 45) },
+  { titulo: "Habitação e Educação", cartazes: [...n(41, 45), 63] },
   { titulo: "Modernização da Câmara", cartazes: n(46, 50) },
   { titulo: "Economia, Emprego e Mobilidade", cartazes: n(51, 58) },
-  { titulo: "Fiscalidade, Cultura e Ação/Coesão Social", cartazes: n(59, 63) },
+  { titulo: "Fiscalidade, Cultura e Ação/Coesão Social", cartazes: n(59, 62) },
   { titulo: "Ambiente e Planeamento, Saúde e Desporto", cartazes: n(64, 67) },
 ];
 
@@ -27,6 +27,12 @@ const ficheiros: Record<number, string> = {
 
 // Cartazes na horizontal (faixas): ocupam duas colunas, com a mesma altura dos outros.
 const largos = new Set([41]);
+
+// Colunas em ecrãs largos: uma por cartaz (os largos contam por duas), para caberem numa só linha até sete.
+const colunas = (cartazes: number[]) => {
+  const total = cartazes.length + cartazes.filter((c) => largos.has(c)).length;
+  return total === 5 ? "lg:grid-cols-5" : total === 6 ? "lg:grid-cols-6" : total === 7 ? "lg:grid-cols-7" : "lg:grid-cols-4";
+};
 
 const src = (i: number) => `/images/cartazes/cartaz-${i}.${ficheiros[i]}`;
 
@@ -47,7 +53,7 @@ export default function Cartazes() {
             </h2>
             <ul
               className={`mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 ${
-                g.cartazes.some((c) => largos.has(c)) ? "lg:grid-cols-6" : g.cartazes.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"
+                colunas(g.cartazes)
               }`}
             >
               {g.cartazes.map((c) => (
