@@ -117,7 +117,7 @@ export default function Loja() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Produtos</p>
-              <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Artigos nacionais</h2>
+              <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Artigos Nacionais</h2>
             </div>
             <a
               href={LOJA_NACIONAL}
@@ -164,7 +164,7 @@ export default function Loja() {
 
       <section className="bg-sun py-16 text-center text-navy">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-4xl font-bold">Apoia a causa liberal na Trofa</h2>
+          <h2 className="font-display text-4xl font-bold">Apoia a Causa Liberal na Trofa</h2>
           <p className="mt-3 text-lg font-medium">
             Cada donativo ajuda-nos a levar as ideias da liberdade a mais trofenses.
           </p>

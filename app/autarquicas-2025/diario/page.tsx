@@ -3,12 +3,12 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { diario } from "@/lib/autarquicas";
 
-export const metadata: Metadata = { title: "Diário de campanha — Autárquicas 2025" };
+export const metadata: Metadata = { title: "Diário de Campanha — Autárquicas 2025" };
 
 export default function Diario() {
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Diário de campanha">
+      <PageHero eyebrow="Autárquicas 2025" title="Diário de Campanha">
         Os 10 dias oficiais de campanha, com um tema do programa em cada dia.
       </PageHero>
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">

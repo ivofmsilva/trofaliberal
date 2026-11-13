@@ -4,7 +4,7 @@ import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import { gcl, mesa, plenario2026, type Membro } from "@/lib/equipa";
 
-export const metadata: Metadata = { title: "Quem somos — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = { title: "Quem Somos — Iniciativa Liberal Trofa" };
 
 function iniciais(nome: string) {
   const p = nome.split(" ").filter((x) => x.length > 2);
@@ -53,7 +53,7 @@ const mandatos = [
 const marcos: Marco[] = [
   {
     ano: "2021",
-    titulo: "Primeiro encontro liberal na Trofa",
+    titulo: "Primeiro Encontro Liberal na Trofa",
     texto: "Primeiro contacto entre simpatizantes e membros da IL no concelho.",
     foto: {
       src: "/images/geral/primeiro-encontro-liberais.jpg",
@@ -62,7 +62,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2022",
-    titulo: "Deputados liberais eleitos pelo círculo do Porto",
+    titulo: "Deputados Liberais Eleitos pelo Círculo do Porto",
     texto: "Primeira campanha liberal a passar na Trofa.",
     foto: {
       src: "/images/geral/sobre-acao-tenda.jpg",
@@ -71,7 +71,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2022",
-    titulo: "Plenário fundador do núcleo",
+    titulo: "Plenário Fundador do Núcleo",
     texto: "Primeiro grupo de coordenação eleito em São Romão do Coronado.",
     foto: {
       src: "/images/geral/plenario-2022-mesa.jpg",
@@ -89,7 +89,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2024",
-    titulo: "Plenário eletivo",
+    titulo: "Plenário Eletivo",
     texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
     foto: {
       src: "/images/geral/plenario-2024-bougado.jpg",
@@ -117,7 +117,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2026",
-    titulo: "Plenário eletivo",
+    titulo: "Plenário Eletivo",
     texto: plenario2026.realizado
       ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}, a ${plenario2026.data}.`
       : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
@@ -130,7 +130,7 @@ export default function Sobre() {
     <>
       <PageHero
         eyebrow="Sobre a IL Trofa"
-        title="Um caminho liberal para a Trofa"
+        title="Um Caminho Liberal para a Trofa"
         image={{ src: "/images/geral/grupo-mar-corte.jpeg", alt: "Membros da IL Trofa junto ao mar", w: 575, h: 304 }}
       >
         A IL Trofa existe para defender um concelho onde cada trofense possa viver com mais
@@ -140,7 +140,7 @@ export default function Sobre() {
       <section id="sobre" className="mx-auto grid max-w-7xl scroll-mt-24 gap-12 px-4 py-20 sm:px-6 md:grid-cols-2">
         <div>
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">
-            Somos um grupo de cidadãos com iniciativa!
+            Somos um Grupo de Cidadãos com Iniciativa!
           </h2>
         </div>
         <div className="space-y-5 text-lg text-ink/85">
@@ -202,7 +202,7 @@ export default function Sobre() {
             ))}
           </ul>
 
-          <h3 className="font-display mt-16 text-2xl font-bold text-navy md:text-3xl">Mandatos anteriores</h3>
+          <h3 className="font-display mt-16 text-2xl font-bold text-navy md:text-3xl">Mandatos Anteriores</h3>
           <ol className="mt-6 space-y-4">
             {mandatos.map((m) => (
               <li key={m.periodo}>
@@ -247,7 +247,7 @@ export default function Sobre() {
       <section id="juventude" className="mx-auto grid max-w-7xl scroll-mt-24 items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Conselho Municipal da Juventude</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">A tua voz na juventude trofense</h2>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">A Tua Voz na Juventude Trofense</h2>
           <div className="mt-5 space-y-4 text-lg text-ink/85">
             <p>
               O Conselho Municipal da Juventude (CMJ) da Trofa iniciou um novo mandato a 7 de fevereiro
@@ -278,7 +278,7 @@ export default function Sobre() {
       <section id="historia" className="scroll-mt-24 bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
-          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
+          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do Núcleo</h2>
           <Marcos marcos={marcos} />
         </div>
       </section>

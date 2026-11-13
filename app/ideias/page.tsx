@@ -17,7 +17,7 @@ const causas = [
     cta: "Ver a nossa visão →",
   },
   {
-    titulo: "Trofa no topo da Educação",
+    titulo: "Trofa no Topo da Educação",
     texto: "O nosso manifesto pela Educação: propostas para a Trofa e para o país.",
     href: "/ideias/educacao",
     cta: "Ver o manifesto →",
@@ -41,7 +41,7 @@ export default function Ideias() {
     <>
       <PageHero
         eyebrow="Ideias"
-        title="As causas que defendemos para a Trofa"
+        title="As Causas que Defendemos para a Trofa"
         image={{ src: "/images/geral/propostas-cartaz-recorte.jpeg", alt: "Cartaz de campanha: A frescura que procuras está aqui", w: 650, h: 625, vertical: true }}
       >
         Do metro à educação e à habitação: o que defendemos, porquê e com que medidas. Uma Trofa mais
@@ -70,7 +70,7 @@ export default function Ideias() {
         <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2">
           <div className="rounded-2xl bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Arquivo</p>
-            <h2 className="font-display mt-3 text-2xl font-bold text-navy">Programa autárquico de 2025</h2>
+            <h2 className="font-display mt-3 text-2xl font-bold text-navy">Programa Autárquico de 2025</h2>
             <p className="mt-3 text-ink/80">
               As 10 áreas e as medidas com que nos apresentámos pela primeira vez a eleições autárquicas, com os
               programas para o concelho e para as freguesias.
@@ -81,7 +81,7 @@ export default function Ideias() {
           </div>
           <div className="rounded-2xl bg-white p-8 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Participa</p>
-            <h2 className="font-display mt-3 text-2xl font-bold text-navy">Tens uma ideia para a Trofa?</h2>
+            <h2 className="font-display mt-3 text-2xl font-bold text-navy">Tens uma Ideia para a Trofa?</h2>
             <p className="mt-3 text-ink/80">
               As melhores propostas nascem de quem vive a Trofa todos os dias. Conta-nos a tua.
             </p>

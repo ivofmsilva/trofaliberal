@@ -5,12 +5,12 @@ import PageHero from "@/components/PageHero";
 import PropostasTemas from "@/components/PropostasTemas";
 import { campanha, programas } from "@/lib/autarquicas";
 
-export const metadata: Metadata = { title: "Programa eleitoral — Autárquicas 2025" };
+export const metadata: Metadata = { title: "Programa Eleitoral — Autárquicas 2025" };
 
 export default function Programa() {
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Programa eleitoral">
+      <PageHero eyebrow="Autárquicas 2025" title="Programa Eleitoral">
         O programa autárquico completo para o concelho e os planos das freguesias de Alvarelhos e
         Bougado.
       </PageHero>
@@ -36,7 +36,7 @@ export default function Programa() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Programa eleitoral móvel</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Programa Eleitoral Móvel</h2>
           <p className="mt-3 max-w-3xl text-lg text-ink/85">
             Criámos um programa eleitoral móvel que nos acompanhou na campanha por todas as
             freguesias, para que as nossas ideias chegassem a todos. Uma campanha diferente, uma

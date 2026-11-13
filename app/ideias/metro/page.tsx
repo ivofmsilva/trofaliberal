@@ -267,7 +267,7 @@ export default function Metro() {
       <section id="participacao" className="mx-auto max-w-4xl scroll-mt-24 px-4 py-20 sm:px-6">
         <p className={`${etiqueta} text-cyan-dark`}>Participa.pt</p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          A nossa participação na consulta pública
+          A Nossa Participação na Consulta Pública
         </h2>
         <p className="mt-6 text-lg text-ink/85">
           O {consulta.nome} esteve em consulta pública no portal Participa.pt, de {consulta.inicio}{" "}
@@ -287,10 +287,10 @@ export default function Metro() {
           </figcaption>
         </figure>
 
-        <h3 className="font-display mt-10 text-2xl font-bold text-navy">A nossa posição</h3>
+        <h3 className="font-display mt-10 text-2xl font-bold text-navy">A Nossa Posição</h3>
         <p className="mt-3 text-lg text-ink/85">{participacao.posicao}</p>
 
-        <h3 className="font-display mt-10 text-2xl font-bold text-navy">O que pedimos</h3>
+        <h3 className="font-display mt-10 text-2xl font-bold text-navy">O que Pedimos</h3>
         <ol className="mt-5 space-y-3">
           {participacao.pedidos.map((p, i) => (
             <li key={p} className="flex gap-4 rounded-2xl bg-mist p-5 text-ink/85">
@@ -329,7 +329,7 @@ export default function Metro() {
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres metro na Trofa?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres Metro na Trofa?</h2>
           <p className="mt-3 text-lg font-medium">
             A Trofa só muda com mais liberais a dar a cara. Junta-te à causa e ajuda-nos a espalhar
             a mensagem.

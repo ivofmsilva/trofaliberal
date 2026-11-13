@@ -57,7 +57,7 @@ export default function Autarquicas() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Explora a campanha</h2>
+          <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Explora a Campanha</h2>
           <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {autarquicasNav.slice(1).map((i, n) => (
               <li key={i.href}>

@@ -220,7 +220,7 @@ export default function Habitacao() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className={`${etiqueta} text-cyan-dark`}>A nossa mensagem na rua</p>
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            Medidas liberais para a habitação
+            Medidas Liberais para a Habitação
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-ink/80">
             Levámos as nossas mensagens para a rua com propostas e humor.
@@ -235,8 +235,8 @@ export default function Habitacao() {
           />
           <ul className="mt-10 grid gap-8 sm:grid-cols-2">
             {[
-              { src: "/images/cartazes/cartaz-42.jpeg", w: 298, h: 372, titulo: "Turbo nos licenciamentos", alt: "Cartaz: turbo nos licenciamentos, redução drástica de tempos" },
-              { src: "/images/cartazes/cartaz-43-recorte.jpeg", w: 188, h: 275, titulo: "Está na hora das gruas voltarem!", alt: "Cartaz: está na hora das gruas voltarem, construir como nunca, com redução de taxas e impostos, mais rapidez nos processos e construção em altura" },
+              { src: "/images/cartazes/cartaz-42.jpeg", w: 298, h: 372, titulo: "Turbo nos Licenciamentos", alt: "Cartaz: turbo nos licenciamentos, redução drástica de tempos" },
+              { src: "/images/cartazes/cartaz-43-recorte.jpeg", w: 188, h: 275, titulo: "Está na Hora das Gruas Voltarem!", alt: "Cartaz: está na hora das gruas voltarem, construir como nunca, com redução de taxas e impostos, mais rapidez nos processos e construção em altura" },
             ].map((c) => (
               <li key={c.src} className="flex flex-col items-center text-center">
                 <Image src={c.src} alt={c.alt} width={c.w} height={c.h} sizes="300px" className="w-full max-w-[300px] rounded-xl shadow-lg ring-1 ring-navy/10" />
@@ -250,7 +250,7 @@ export default function Habitacao() {
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres construir o futuro da Trofa?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres Construir o Futuro da Trofa?</h2>
           <p className="mt-3 text-lg font-medium">
             Estas medidas são um ponto de partida. Diz-nos o que falta e ajuda-nos a pô-las em prática.
           </p>

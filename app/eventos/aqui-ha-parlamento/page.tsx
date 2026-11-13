@@ -51,13 +51,13 @@ export default function AquiHaParlamento() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de Fotos</h2>
           <Galeria fotos={fotos("aqui-ha-parlamento")} alt="Aqui há Parlamento" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Intervenções dos deputados</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Intervenções dos Deputados</h2>
         <ul className="mt-8 grid gap-8 md:grid-cols-2">
           {intervencoes.map((v) => (
             <li key={v.id}>
@@ -78,7 +78,7 @@ export default function AquiHaParlamento() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Na imprensa</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Na Imprensa</h2>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {imprensa.map((n) => (
             <li key={n.href}>
@@ -90,7 +90,7 @@ export default function AquiHaParlamento() {
 
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold">Edições futuras</h2>
+          <h2 className="font-display text-3xl font-bold">Edições Futuras</h2>
           <p className="mt-2 text-sun">Brevemente.</p>
         </div>
       </section>

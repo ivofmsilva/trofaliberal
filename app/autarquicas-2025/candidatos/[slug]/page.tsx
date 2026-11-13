@@ -70,7 +70,7 @@ export default async function Candidato({ params }: { params: Promise<{ slug: st
 
         <aside className="space-y-8">
           <div className="rounded-2xl bg-mist p-6">
-            <h2 className="font-display text-xl font-bold text-navy">Funções atuais</h2>
+            <h2 className="font-display text-xl font-bold text-navy">Funções Atuais</h2>
             <ul className="mt-4 space-y-2 text-sm text-ink/85">
               {c.funcoes.map((f) => (
                 <li key={f} className="list-disc ml-4 marker:text-sun">
@@ -96,7 +96,7 @@ export default async function Candidato({ params }: { params: Promise<{ slug: st
 
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-xl px-4 text-center">
-          <h2 className="font-display text-3xl font-bold">Vídeo de apresentação</h2>
+          <h2 className="font-display text-3xl font-bold">Vídeo de Apresentação</h2>
           <iframe
             src={`https://www.instagram.com/p/${c.video}/embed`}
             title={`Vídeo de ${c.nome} no Instagram`}

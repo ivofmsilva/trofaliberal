@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 
 const passosAdesao = [
   {
-    titulo: "Preenche a adesão",
+    titulo: "Preenche a Adesão",
     texto: "No site da Iniciativa Liberal, escolhendo o núcleo da Trofa.",
   },
   {
-    titulo: "O coordenador liga-te",
+    titulo: "O Coordenador Liga-te",
     texto: "O teu pedido chega ao núcleo, e o nosso coordenador telefona-te para te dar as boas-vindas.",
   },
   {
-    titulo: "Já és membro",
+    titulo: "Já És Membro",
     texto: "Depois de aprovado, já podes participar na vida interna do partido, nos fóruns de discussão e eventos.",
   },
 ];
@@ -35,8 +35,8 @@ const razoes = [
 ];
 
 const passosDenuncia = [
-  { titulo: "Escolhe a freguesia", texto: "Diz-nos onde ocorre o problema." },
-  { titulo: "Descreve o problema", texto: "Uma breve descrição e, se possível, a morada." },
+  { titulo: "Escolhe a Freguesia", texto: "Diz-nos onde ocorre o problema." },
+  { titulo: "Descreve o Problema", texto: "Uma breve descrição e, se possível, a morada." },
   {
     titulo: "Junta fotos ou documentos (opcional)",
     texto: `Neste formulário não é possível anexar ficheiros. Envia-as para ${links.email}, a indicar a freguesia e a morada.`,
@@ -53,12 +53,12 @@ const caixa = "rounded-2xl border-2 border-mist p-8";
 const separadores: Separador[] = [
   {
     id: "membro",
-    label: "Faz-te membro",
+    label: "Faz-te Membro",
     resumo: "Junta-te à Iniciativa Liberal da Trofa e ajuda a construir o concelho.",
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Junta-te a nós</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Junta-te a Nós</h2>
           <p className="mt-3 text-ink/75">
             Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo para a
             Trofa e Portugal.
@@ -92,7 +92,7 @@ const separadores: Separador[] = [
             </li>
           </ul>
 
-          <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como funciona</h3>
+          <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como Funciona</h3>
           <ol className="mt-4 space-y-3">
             {passosAdesao.map((p, i) => (
               <li key={p.titulo} className="flex gap-4">
@@ -160,11 +160,11 @@ const separadores: Separador[] = [
   },
   {
     id: "ideia",
-    label: "Tens uma ideia?",
+    label: "Tens uma Ideia?",
     resumo: "Diz-nos o que mudavas na Trofa.",
     conteudo: (
       <div className="mx-auto max-w-2xl">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Partilha a tua ideia</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Partilha a Tua Ideia</h2>
         <p className="mt-3 text-ink/75">
           As melhores propostas nascem de quem vive a Trofa todos os dias. Conta-nos a tua.
         </p>
@@ -191,7 +191,7 @@ const separadores: Separador[] = [
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Dá voz às tuas denúncias</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Dá Voz às Tuas Denúncias</h2>
           <p className="mt-3 text-ink/75">
             Estradas em mau estado, espaços públicos abandonados, serviços que não funcionam?
             Reporta tudo de forma simples e rápida.
@@ -267,7 +267,7 @@ const separadores: Separador[] = [
             </div>
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
-            <h2 className="font-display text-2xl font-bold">Redes sociais</h2>
+            <h2 className="font-display text-2xl font-bold">Redes Sociais</h2>
             <ul className="mt-4 flex flex-wrap gap-3">
               {redes.map((r) => (
                 <li key={r.label}>

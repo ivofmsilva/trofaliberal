@@ -53,7 +53,7 @@ export default function Lit() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Resumo da semana</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Resumo da Semana</h2>
         <ol className="mt-8 grid gap-5 md:grid-cols-3">
           {resumoSemana.map((r) => (
             <li key={r.quando} className="rounded-2xl bg-navy p-6 text-white">
@@ -67,13 +67,13 @@ export default function Lit() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de Fotos</h2>
           <Galeria fotos={fotos("lit")} alt="Jornadas Liberais da Trofa" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Notícias na imprensa</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Notícias na Imprensa</h2>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {imprensa.map((n) => (
             <li key={n.href}>
@@ -86,7 +86,7 @@ export default function Lit() {
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3">
           <div>
-            <h2 className="font-display text-3xl font-bold">Material das apresentações</h2>
+            <h2 className="font-display text-3xl font-bold">Material das Apresentações</h2>
             {apresentacoes.length ? (
               <ul className="mt-4 space-y-2">
                 {apresentacoes.map((a) => (
@@ -102,7 +102,7 @@ export default function Lit() {
             )}
           </div>
           <div>
-            <h2 className="font-display text-3xl font-bold">Relatório das jornadas</h2>
+            <h2 className="font-display text-3xl font-bold">Relatório das Jornadas</h2>
             {relatorio ? (
               <a href={relatorio} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-full bg-pink px-7 py-3 font-bold text-white transition hover:bg-white hover:text-navy">
                 Descarregar relatório (PDF) ↓
@@ -112,7 +112,7 @@ export default function Lit() {
             )}
           </div>
           <div>
-            <h2 className="font-display text-3xl font-bold">Edições futuras</h2>
+            <h2 className="font-display text-3xl font-bold">Edições Futuras</h2>
             <p className="mt-2 text-sun">Brevemente.</p>
           </div>
         </div>

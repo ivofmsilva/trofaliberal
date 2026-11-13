@@ -18,11 +18,11 @@ export const links = {
 
 export const autarquicasNav = [
   { label: "Trofa Para Cima", href: "/autarquicas-2025" },
-  { label: "Programa eleitoral", href: "/autarquicas-2025/programa" },
+  { label: "Programa Eleitoral", href: "/autarquicas-2025/programa" },
   { label: "Candidatos", href: "/autarquicas-2025/candidatos" },
-  { label: "Apresentação da candidatura", href: "/autarquicas-2025/apresentacao-candidatura" },
-  { label: "Apresentação do programa", href: "/autarquicas-2025/apresentacao-programa" },
-  { label: "Diário de campanha", href: "/autarquicas-2025/diario" },
+  { label: "Apresentação da Candidatura", href: "/autarquicas-2025/apresentacao-candidatura" },
+  { label: "Apresentação do Programa", href: "/autarquicas-2025/apresentacao-programa" },
+  { label: "Diário de Campanha", href: "/autarquicas-2025/diario" },
   { label: "Outros", href: "/autarquicas-2025/brochuras" },
 ];
 
@@ -41,14 +41,14 @@ export type NavItem = {
 // Menu principal. Cada bloco abre na sua primeira página, que tem as ligações para o resto.
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
-  { label: "Quem somos", href: "/trofa-liberal" },
+  { label: "Quem Somos", href: "/trofa-liberal" },
   {
     label: "Dados da Trofa",
     href: links.dados,
     external: true,
     children: [
-      { label: "Portal original", href: links.dados, external: true },
-      { label: "Nova versão IL Trofa", href: "/dados" },
+      { label: "Portal Original", href: links.dados, external: true },
+      { label: "Nova Versão IL Trofa", href: "/dados" },
     ],
   },
   {
@@ -56,10 +56,10 @@ export const nav: NavItem[] = [
     href: "/ideias",
     children: [
       { label: "Metro para a Trofa", href: "/ideias/metro" },
-      { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
+      { label: "Trofa no Topo da Educação", href: "/ideias/educacao" },
       { label: "Construir para o Futuro", href: "/ideias/habitacao" },
       { label: "Cartazes", href: "/ideias/cartazes" },
-      { label: "Programa autárquico ’25", href: "/autarquicas-2025/programa" },
+      { label: "Programa Autárquico ’25", href: "/autarquicas-2025/programa" },
     ],
   },
   {
@@ -67,8 +67,8 @@ export const nav: NavItem[] = [
     href: "/imprensa",
     children: [
       { label: "Eventos", href: "/imprensa?t=eventos" },
-      { label: "Notícias e comunicados", href: "/imprensa?t=noticias" },
-      { label: "Artigos de opinião", href: "/imprensa?t=artigos" },
+      { label: "Notícias e Comunicados", href: "/imprensa?t=noticias" },
+      { label: "Artigos de Opinião", href: "/imprensa?t=artigos" },
       { label: "Arquivo: Autárquicas ’25", href: "/autarquicas-2025" },
     ],
   },
@@ -81,8 +81,8 @@ export const nav: NavItem[] = [
     label: "Participa",
     href: "/participa",
     children: [
-      { label: "Faz-te membro", href: "/participa?t=membro" },
-      { label: "Tens uma ideia?", href: "/participa?t=ideia" },
+      { label: "Faz-te Membro", href: "/participa?t=membro" },
+      { label: "Tens uma Ideia?", href: "/participa?t=ideia" },
       { label: "Denúncia", href: "/participa?t=denuncia" },
       { label: "Contactos", href: "/participa?t=contactos" },
     ],

@@ -67,7 +67,7 @@ export default function Imprensa() {
       : "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
     conteudo: (
       <>
-        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos eventos</h2>
+        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos Eventos</h2>
         {proximos.length ? (
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {proximos.map((e) => (
@@ -105,7 +105,7 @@ export default function Imprensa() {
           ))}
         </ul>
 
-        <h3 className="font-display mt-16 text-3xl font-bold text-navy">Outros eventos</h3>
+        <h3 className="font-display mt-16 text-3xl font-bold text-navy">Outros Eventos</h3>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {outros.map((o) => (
             <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">
@@ -141,7 +141,7 @@ export default function Imprensa() {
       ? [
           {
             id: "noticias",
-            label: "Notícias e comunicados",
+            label: "Notícias e Comunicados",
             aliases: ["comunicados"],
             resumo: (juntos.includes("noticias") ? contagem("noticias", "notícia", "notícias") + ". " : "") + "O que a imprensa escreve e o que dizemos nós.",
             conteudo: (

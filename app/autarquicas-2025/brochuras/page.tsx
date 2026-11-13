@@ -45,7 +45,7 @@ export default function Outros() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Cartazes dos candidatos</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Cartazes dos Candidatos</h2>
           <ul className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {cartazes.map((c) => (
               <li key={c.src}>
@@ -60,7 +60,7 @@ export default function Outros() {
 
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">T-shirt de campanha</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">T-shirt de Campanha</h2>
           <p className="mt-3 max-w-2xl text-lg text-ink/80">
             Azul, com o logótipo Trofa Para Cima à frente e a marca da Iniciativa Liberal Trofa nas costas.
           </p>
@@ -77,7 +77,7 @@ export default function Outros() {
 
       <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold md:text-4xl">Hino de campanha</h2>
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Hino de Campanha</h2>
           <div className="mt-8 overflow-hidden rounded-2xl bg-black">
             <iframe
               src={`https://www.youtube.com/embed/${hinoId}`}
@@ -92,7 +92,7 @@ export default function Outros() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Sede de campanha</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Sede de Campanha</h2>
         <p className="mt-3 max-w-2xl text-lg text-ink/80">
           A montra da sede com os candidatos à Câmara, à Assembleia Municipal e à Junta de Bougado.
         </p>

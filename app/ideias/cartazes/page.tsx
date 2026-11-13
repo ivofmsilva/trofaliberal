@@ -30,7 +30,7 @@ const src = (i: number) => `/images/cartazes/cartaz-${i}.${ficheiros[i]}`;
 export default function Cartazes() {
   return (
     <>
-      <PageHero eyebrow="Ideias · Cartazes" title="Cartazes e mensagens">
+      <PageHero eyebrow="Ideias · Cartazes" title="Cartazes e Mensagens">
         Aqui podes consultar todos os cartazes e mensagens que já espalhámos pela Trofa e, no fim, os cartazes que
         marcaram a Iniciativa Liberal em todo o país.
       </PageHero>

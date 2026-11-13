@@ -39,7 +39,7 @@ export const outros = [
     imagem: "/images/eventos/fino-liberal-93.jpeg",
   },
   {
-    titulo: "Aniversário do núcleo",
+    titulo: "Aniversário do Núcleo",
     texto: "Desde 2022 a lutar por um bolo maior para todos.",
     quando: "Junho",
     imagem: "/images/eventos/aniversario-99.png",

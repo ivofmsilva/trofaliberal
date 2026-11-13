@@ -28,8 +28,8 @@ export const categorias: Record<
     vazio: "Conteúdo em breve.",
   },
   artigos: {
-    titulo: "Artigos de opinião",
-    descricao: "Textos de membros do núcleo sobre os temas que importam à Trofa.",
+    titulo: "Artigos de Opinião",
+    descricao: "Textos de membros do núcleo sobre os temas que importam.",
     verTodos: "Ver todos",
     vazio: "Conteúdo em breve.",
   },

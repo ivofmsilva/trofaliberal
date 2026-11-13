@@ -7,7 +7,7 @@ import PageHero from "@/components/PageHero";
 import { campanha, candidatos } from "@/lib/autarquicas";
 import { fotos } from "@/lib/galeria";
 
-export const metadata: Metadata = { title: "Apresentação da candidatura — Autárquicas 2025" };
+export const metadata: Metadata = { title: "Apresentação da Candidatura — Autárquicas 2025" };
 
 const frases = [
   {
@@ -47,7 +47,7 @@ export default function ApresentacaoCandidatura() {
   const c = campanha.candidatura;
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Apresentação da candidatura">
+      <PageHero eyebrow="Autárquicas 2025" title="Apresentação da Candidatura">
         No dia 2 de agosto, a Iniciativa Liberal apresentou os seus candidatos às eleições
         autárquicas na Trofa. Esta é a candidatura Trofa Para Cima.
       </PageHero>
@@ -57,7 +57,7 @@ export default function ApresentacaoCandidatura() {
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">2 de agosto</p>
             <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-              Um dia marcante para a liberdade na Trofa
+              Um Dia Marcante para a Liberdade na Trofa
             </h2>
             <div className="mt-6 space-y-4 text-lg text-ink/85">
               <p>
@@ -106,7 +106,7 @@ export default function ApresentacaoCandidatura() {
         <section>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Os candidatos</p>
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-            Quem apresentámos
+            Quem Apresentámos
           </h2>
           <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {candidatos.map((cd) => (

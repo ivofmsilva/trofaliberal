@@ -15,30 +15,30 @@ import { ultimasPublicacoes } from "@/lib/publicacoes";
 
 const principios = [
   {
-    titulo: "Liberdade social, política e económica",
+    titulo: "Liberdade Social, Política e Económica",
     texto: "Defendemos a liberdade de cada pessoa fazer as suas próprias escolhas.",
   },
   {
-    titulo: "Igualdade de oportunidades",
+    titulo: "Igualdade de Oportunidades",
     texto: "Um concelho onde as oportunidades são maximizadas para todos.",
   },
   {
-    titulo: "Mais crescimento económico e sociedade civil forte",
+    titulo: "Mais Crescimento Económico e Sociedade Civil Forte",
     texto:
       "Acreditamos que a livre iniciativa e a concorrência geram prosperidade e inovação para todos. Onde a iniciativa é valorizada e incentivada.",
   },
   {
-    titulo: "Combate ao excesso do Estado e à burocracia",
+    titulo: "Combate ao Excesso do Estado e à Burocracia",
     texto:
       "O Estado deve focar-se nas suas funções essenciais, deixando espaço para a sociedade civil florescer.",
   },
   {
-    titulo: "Sustentabilidade e futuro",
+    titulo: "Sustentabilidade e Futuro",
     texto:
       "Melhorar o presente sem condicionar o futuro. Responsabilidade na gestão e na utilização de recursos.",
   },
   {
-    titulo: "Menos impostos",
+    titulo: "Menos Impostos",
     texto: "Devolver rendimento às famílias e às empresas que fazem a Trofa crescer.",
   },
 ];
@@ -117,7 +117,7 @@ export default function Home() {
               No Instagram
             </p>
             <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-              Últimas publicações
+              Últimas Publicações
             </h2>
           </div>
           <a
@@ -149,7 +149,7 @@ export default function Home() {
           Os nossos valores
         </p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          O que defendemos?
+          O que Defendemos?
         </h2>
         <ol className="-mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {principios.map((p, i) => (

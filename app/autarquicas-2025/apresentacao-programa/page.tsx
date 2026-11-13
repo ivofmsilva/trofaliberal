@@ -5,19 +5,19 @@ import PageHero from "@/components/PageHero";
 import { campanha } from "@/lib/autarquicas";
 import { fotos } from "@/lib/galeria";
 
-export const metadata: Metadata = { title: "Apresentação do programa — Autárquicas 2025" };
+export const metadata: Metadata = { title: "Apresentação do Programa — Autárquicas 2025" };
 
 const destaques = [
   {
-    titulo: "No auditório da Escola Secundária da Trofa",
+    titulo: "No Auditório da Escola Secundária da Trofa",
     texto: "Escolhemos uma escola para reforçar a importância que os liberais dão à educação e às ideias.",
   },
   {
-    titulo: "O programa antes do debate",
+    titulo: "O Programa Antes do Debate",
     texto: "Divulgámos o programa eleitoral antes do debate dos candidatos, para que as ideias pudessem ser discutidas.",
   },
   {
-    titulo: "Um evento só para o programa",
+    titulo: "Um Evento só para o Programa",
     texto: "Dedicámos um evento inteiro à apresentação do programa, e não só à dos candidatos.",
   },
 ];
@@ -26,7 +26,7 @@ export default function ApresentacaoPrograma() {
   const p = campanha.programa;
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Apresentação do programa eleitoral">
+      <PageHero eyebrow="Autárquicas 2025" title="Apresentação do Programa Eleitoral">
         Fotos e vídeo da sessão de apresentação do programa eleitoral, no auditório da Escola
         Secundária da Trofa.
       </PageHero>
@@ -73,7 +73,7 @@ export default function ApresentacaoPrograma() {
           </ul>
         </section>
         <section>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Mais publicações</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Mais Publicações</h2>
           <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {campanha.programaPublicacoes.map((l) => (
               <li key={l.href}>

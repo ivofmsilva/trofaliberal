@@ -8,7 +8,7 @@ export default function PropostasTemas() {
   return (
     <>
       <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Propostas por temas</p>
-      <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">10 áreas estratégicas de intervenção</h2>
+      <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">10 Áreas Estratégicas de Intervenção</h2>
       <p className="mt-4 max-w-3xl text-ink/80">
         Estas medidas vêm do programa com que nos apresentámos pela primeira vez a eleições autárquicas, em 2025.
         Juntam o que se pode fazer num mandato com uma visão de futuro para a Trofa: os novos equipamentos são
