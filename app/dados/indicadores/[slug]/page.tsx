@@ -145,7 +145,7 @@ export default async function Pagina({ params }: Props) {
             <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
               Fontes
             </Link>
-            ); esse portal não diz que concelhos inclui.
+            ).
           </p>
         )}
         {semDados.length > 0 && (

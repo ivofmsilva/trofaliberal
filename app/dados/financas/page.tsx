@@ -350,7 +350,7 @@ export default function Financas() {
           <h3 className="mt-10 text-lg font-bold text-tinta">Receitas por habitante: a Trofa e a sua região</h3>
           <p className="mt-2 max-w-2xl text-texto">
             O que a Câmara cobra por habitante, comparado com a Área Metropolitana do Porto e com o grupo “Ave e concelhos vizinhos”
-            (um agregado que já vem feito do portal de onde se recolheram os indicadores, que não diz que concelhos inclui; ver{" "}
+            (um agregado que já vem feito do portal de onde se recolheram os indicadores; ver{" "}
             <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
               Fontes
             </Link>
