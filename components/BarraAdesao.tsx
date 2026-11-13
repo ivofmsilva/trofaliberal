@@ -32,7 +32,7 @@ export default function BarraAdesao() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 py-3 sm:gap-5 sm:px-6">
         <p className="text-sm font-bold sm:text-base">
-          Se te revês,
+          Se te revês nestas ideias,
         </p>
         <Link
           href="/participa?t=membro"
