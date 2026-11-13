@@ -20,6 +20,7 @@ const paginas = [
   "/dados/fontes",
   "/imprensa",
   "/imprensa/noticias",
+  "/imprensa/artigos",
   "/imprensa/comunicados",
   "/imprensa/comunicados/metro-ligeiro-ate-a-trofa",
   "/eventos/lit",

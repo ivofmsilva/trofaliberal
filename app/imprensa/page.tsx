@@ -143,7 +143,7 @@ export default function Imprensa() {
             id: "noticias",
             label: "Notícias e comunicados",
             aliases: ["comunicados"],
-            resumo: juntos.map((cat) => (cat === "noticias" ? contagem(cat, "notícia", "notícias") : contagem(cat, "comunicado", "comunicados"))).join(" e ") + ". O que a imprensa escreve e o que dizemos nós.",
+            resumo: (juntos.includes("noticias") ? contagem("noticias", "notícia", "notícias") + ". " : "") + "O que a imprensa escreve e o que dizemos nós.",
             conteudo: (
               <>
                 {juntos.map((cat, i) => (

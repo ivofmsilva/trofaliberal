@@ -68,6 +68,7 @@ export const nav: NavItem[] = [
     children: [
       { label: "Eventos", href: "/imprensa?t=eventos" },
       { label: "Notícias e comunicados", href: "/imprensa?t=noticias" },
+      { label: "Artigos de opinião", href: "/imprensa?t=artigos" },
       { label: "Arquivo: Autárquicas ’25", href: "/autarquicas-2025" },
     ],
   },
