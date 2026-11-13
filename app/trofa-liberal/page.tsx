@@ -80,7 +80,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2024",
-    titulo: "Primeiros liberais trofenses nas listas à Assembleia da República",
+    titulo: "Primeiros Liberais Trofenses nas Listas à Assembleia da República",
     texto: "José Pedro Reis e Diamantino Costa integram as listas à Assembleia da República.",
     foto: {
       src: "/images/geral/marco-listas-ar-2024.jpg",

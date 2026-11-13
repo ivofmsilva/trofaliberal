@@ -25,6 +25,9 @@ const ficheiros: Record<number, string> = {
   65: "jpeg", 66: "jpeg", 67: "png",
 };
 
+// Cartazes na horizontal (faixas): ocupam duas colunas, com a mesma altura dos outros.
+const largos = new Set([41]);
+
 const src = (i: number) => `/images/cartazes/cartaz-${i}.${ficheiros[i]}`;
 
 export default function Cartazes() {
@@ -44,24 +47,24 @@ export default function Cartazes() {
             </h2>
             <ul
               className={`mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 ${
-                g.cartazes.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"
+                g.cartazes.some((c) => largos.has(c)) ? "lg:grid-cols-6" : g.cartazes.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"
               }`}
             >
               {g.cartazes.map((c) => (
-                <li key={c}>
+                <li key={c} className={largos.has(c) ? "relative col-span-2" : undefined}>
                   <a
                     href={src(c)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block overflow-hidden rounded-2xl bg-mist ring-2 ring-transparent transition hover:ring-pink"
+                    className={`block overflow-hidden rounded-2xl bg-mist ring-2 ring-transparent transition hover:ring-pink ${largos.has(c) ? "md:absolute md:inset-0" : ""}`}
                   >
                     <Image
                       src={src(c)}
                       alt={`Cartaz de campanha: ${g.titulo}`}
-                      width={600}
-                      height={800}
-                      sizes="(min-width: 1024px) 300px, 50vw"
-                      className="aspect-[3/4] w-full object-cover"
+                      width={largos.has(c) ? 900 : 600}
+                      height={largos.has(c) ? 600 : 800}
+                      sizes={largos.has(c) ? "(min-width: 1024px) 480px, 100vw" : "(min-width: 1024px) 300px, 50vw"}
+                      className={largos.has(c) ? "aspect-[3/2] w-full object-cover md:aspect-auto md:h-full" : "aspect-[3/4] w-full object-cover"}
                     />
                   </a>
                 </li>

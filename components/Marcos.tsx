@@ -39,7 +39,7 @@ export default function Marcos({ marcos }: { marcos: Marco[] }) {
                   type="button"
                   onClick={() => setAberto(m)}
                   aria-label={`Ver a foto: ${m.titulo} (${m.ano})`}
-                  className="block h-full w-full cursor-pointer transition hover:bg-white/10"
+                  className="flex h-full w-full cursor-pointer items-start transition hover:bg-white/10"
                 >
                   {conteudo}
                 </button>
