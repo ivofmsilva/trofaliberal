@@ -218,7 +218,14 @@ export default function Metro() {
           </h2>
           <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {argumentos.map((a, i) => (
-              <li key={a.titulo} className="rounded-2xl bg-navy-soft p-8">
+              <li
+                key={a.titulo}
+                className={`rounded-2xl bg-navy-soft p-8 ${
+                  i === argumentos.length - 1
+                    ? `${argumentos.length % 2 === 1 ? "md:col-span-2" : ""} ${argumentos.length % 3 === 1 ? "lg:col-span-3" : argumentos.length % 3 === 2 ? "lg:col-span-2" : "lg:col-span-1"}`
+                    : ""
+                }`}
+              >
                 <span className="font-display text-sm font-bold text-sun">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="font-display mt-2 text-2xl font-bold leading-tight">{a.titulo}</h3>
                 <p className="mt-3 text-white/85">{a.texto}</p>

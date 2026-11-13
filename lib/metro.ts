@@ -220,6 +220,11 @@ export const argumentos = [
       "No Interface da Trofa param os comboios das linhas de Braga e de Guimarães e os autocarros, e convergem os principais acessos ao concelho. Com metro até lá, cada pessoa muda uma vez, no sítio certo. Com o projeto atual, quem chega de comboio e segue para a Maia muda duas vezes.",
   },
   {
+    titulo: "Alivia os comboios de Braga e de Guimarães",
+    texto:
+      "Os comboios de Braga e de Guimarães, de e para Campanhã, andam muitas vezes cheios, e a ferrovia tem pouca margem para dar resposta. Com um metro rápido a partir do Interface, quem vai para a Maia, Matosinhos ou Vila do Conde troca o comboio pelo metro na Trofa e liberta lugares para quem só tem o comboio.",
+  },
+  {
     titulo: "Viagem direta",
     texto:
       "Do Interface à Trindade sem mudar de veículo, na Linha C. Cada transbordo custa tempo e afasta passageiros, e esse efeito devia ter sido quantificado.",
