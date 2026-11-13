@@ -247,7 +247,7 @@ export const argumentos = [
   {
     titulo: "Alivia os comboios de Braga e de Guimarães",
     texto:
-      "Os comboios de Braga e de Guimarães, de e para Campanhã, andam muitas vezes cheios, e a ferrovia tem pouca margem para dar resposta. Com um metro rápido a partir do Interface, quem vai para a Maia, Matosinhos ou Vila do Conde troca o comboio pelo metro na Trofa e liberta lugares para quem só tem o comboio.",
+      "Nas linhas de Braga e de Guimarães, é no troço final, o mais próximo do Porto, que os comboios urbanos têm as taxas de ocupação mais altas, e a ferrovia tem pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface capta os passageiros com destino à Maia, a Matosinhos ou a Vila do Conde, que hoje têm de seguir de comboio até ao Porto para apanhar o metro. Essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
   },
 ];
 
