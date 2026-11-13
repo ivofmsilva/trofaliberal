@@ -247,7 +247,7 @@ export const argumentos = [
   {
     titulo: "Alivia as linhas de Braga e de Guimarães",
     texto:
-      "As linhas de Braga e de Guimarães, no troço próximo do Porto, têm elevadas taxas de ocupação, e pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface da Trofa capta os passageiros com destino à Maia, a Matosinhos ou localidades próximas que hoje seguem de comboio até ao Porto para apanhar o metro. Essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
+      "As linhas de Braga e de Guimarães, no troço próximo do Porto, têm elevadas taxas de ocupação, e pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface da Trofa capta os passageiros com destino à Maia, a Matosinhos ou localidades próximas que hoje seguem de comboio até ao Porto para apanhar o metro. É a mesma mudança, feita mais cedo: essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
   },
 ];
 
