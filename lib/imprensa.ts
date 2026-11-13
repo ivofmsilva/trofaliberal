@@ -31,7 +31,7 @@ export const categorias: Record<
     titulo: "Artigos de Opinião",
     descricao: "Textos de membros do núcleo sobre os temas que importam.",
     // Aparece no fim da lista dos artigos.
-    nota: "Os artigos de opinião exprimem apenas a opinião de quem os assina e não vinculam o Núcleo da Trofa nem a Iniciativa Liberal.",
+    nota: "Os artigos de opinião exprimem a opinião de quem os assina, ficando apenas a eles vinculados.",
     verTodos: "Ver todos",
     vazio: "Conteúdo em breve.",
   },
