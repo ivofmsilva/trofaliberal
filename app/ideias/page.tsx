@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { areas, documentos } from "@/lib/propostas";
+import PropostasTemas from "@/components/PropostasTemas";
+import { documentos } from "@/lib/propostas";
 import { links } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Propostas — Iniciativa Liberal Trofa" };
@@ -78,45 +79,7 @@ export default function Propostas() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">
-            Propostas por temas
-          </p>
-          <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-            10 áreas estratégicas de intervenção
-          </h2>
-          <p className="mt-4 max-w-3xl text-ink/80">
-            Estas medidas vêm do programa com que nos apresentámos pela primeira vez a eleições autárquicas, em 2025.
-            Juntam o que se pode fazer num mandato com uma visão de futuro para a Trofa: os novos equipamentos são
-            objetivos de longo prazo para o concelho.
-          </p>
-          <ol className="mt-10 space-y-3">
-            {areas.map((a, i) => (
-              <li key={a.nome}>
-                <details className="group rounded-2xl bg-white shadow-sm open:shadow-lg">
-                  <summary className="flex cursor-pointer list-none items-center gap-5 p-6 [&::-webkit-details-marker]:hidden">
-                    <span className="font-display text-3xl font-bold text-sun">{pad(i + 1)}</span>
-                    <span className="flex-1">
-                      <span className="font-display block text-xl font-bold text-navy">{a.nome}</span>
-                      <span className="block text-sm text-ink/70">{a.lema}</span>
-                    </span>
-                    <span
-                      aria-hidden
-                      className="text-2xl font-bold text-navy transition group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <ul className="space-y-2 border-t-2 border-mist px-6 py-5 pl-20">
-                    {a.medidas.map((m) => (
-                      <li key={m} className="list-disc text-ink/85 marker:text-sun">
-                        {m}
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              </li>
-            ))}
-          </ol>
+          <PropostasTemas />
           <p className="mt-10 text-ink/75">
             Todas estas medidas estão presentes no{" "}
             <Link href="/autarquicas-2025/programa" className="font-bold text-cyan-dark hover:underline">

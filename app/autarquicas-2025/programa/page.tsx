@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Galeria from "@/components/Galeria";
 import InstagramEmbed, { igId } from "@/components/InstagramEmbed";
 import PageHero from "@/components/PageHero";
+import PropostasTemas from "@/components/PropostasTemas";
 import { campanha, programas } from "@/lib/autarquicas";
 
 export const metadata: Metadata = { title: "Programa eleitoral — Autárquicas 2025" };
@@ -27,6 +28,10 @@ export default function Programa() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6">
+        <PropostasTemas />
       </section>
 
       <section className="bg-mist py-20">

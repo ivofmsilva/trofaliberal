@@ -55,7 +55,7 @@ export const nav: NavItem[] = [
     label: "Ideias",
     href: "/ideias",
     children: [
-      { label: "Propostas", href: "/ideias" },
+      { label: "Propostas ’25", href: "/ideias" },
       { label: "Metro para a Trofa", href: "/ideias/metro" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Construir para o Futuro", href: "/ideias/habitacao" },
@@ -68,7 +68,7 @@ export const nav: NavItem[] = [
     children: [
       { label: "Eventos", href: "/imprensa?t=eventos" },
       { label: "Notícias e comunicados", href: "/imprensa?t=noticias" },
-      { label: "Autárquicas 2025", href: "/autarquicas-2025" },
+      { label: "Arquivo: Autárquicas ’25", href: "/autarquicas-2025" },
     ],
   },
   {

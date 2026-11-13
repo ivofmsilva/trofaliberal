@@ -32,13 +32,13 @@ export default function BarraAdesao() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-4 py-3 sm:gap-5 sm:px-6">
         <p className="text-sm font-bold sm:text-base">
-          Gostas disto?
+          Se te revês,
         </p>
         <Link
           href="/participa?t=membro"
           className="shrink-0 rounded-full bg-sun px-5 py-2 text-sm font-bold text-navy transition hover:bg-white"
         >
-          Faz parte →
+          entra na onda liberal →
         </Link>
         <button
           type="button"
