@@ -245,9 +245,9 @@ export const argumentos = [
       "Uma linha de metro fixa habitação, emprego e investimento, e mais gente troca o carro pelo metro, com mais conforto e melhor ambiente. Um corredor de autocarros não dá a mesma garantia.",
   },
   {
-    titulo: "Alivia os comboios de Braga e de Guimarães",
+    titulo: "Alivia as linhas de Braga e de Guimarães",
     texto:
-      "Nas linhas de Braga e de Guimarães, é no troço final, o mais próximo do Porto, que os comboios urbanos têm as taxas de ocupação mais altas, e a ferrovia tem pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface capta os passageiros com destino à Maia, a Matosinhos ou a Vila do Conde, que hoje têm de seguir de comboio até ao Porto para apanhar o metro. Essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
+      "As linhas de Braga e de Guimarães, no troço próximo do Porto, têm elevadas taxas de ocupação, e pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface da Trofa capta os passageiros com destino à Maia, a Matosinhos ou localidades próximas que hoje seguem de comboio até ao Porto para apanhar o metro. Essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
   },
 ];
 
