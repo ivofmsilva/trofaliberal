@@ -51,6 +51,7 @@ function PainelImprensa({ cat, primeiro = true }: { cat: Categoria; primeiro?: b
       >
         {c.verTodos} ({todos.length})
       </Link>
+      {c.nota && <p className="mt-6 max-w-3xl text-sm text-ink/60">{c.nota}</p>}
     </div>
   );
 }

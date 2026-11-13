@@ -19,7 +19,7 @@ export type Item = {
 
 export const categorias: Record<
   Categoria,
-  { titulo: string; descricao: string; verTodos: string; vazio: string }
+  { titulo: string; descricao: string; verTodos: string; vazio: string; nota?: string }
 > = {
   noticias: {
     titulo: "Notícias",
@@ -30,6 +30,8 @@ export const categorias: Record<
   artigos: {
     titulo: "Artigos de Opinião",
     descricao: "Textos de membros do núcleo sobre os temas que importam.",
+    // Aparece no fim da lista dos artigos.
+    nota: "Os artigos de opinião exprimem apenas a opinião de quem os assina e não vinculam o Núcleo da Trofa nem a Iniciativa Liberal.",
     verTodos: "Ver todos",
     vazio: "Conteúdo em breve.",
   },
