@@ -17,7 +17,7 @@ const fontes: Fonte[] = [
   {
     nome: "Portal de dados abertos da Iniciativa Liberal de Lousada",
     texto:
-      "A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada, adaptado ao município da Trofa. As colunas de comparação (Área Metropolitana do Porto, “Ave e concelhos vizinhos” e Portugal) vêm já calculadas desse portal, que não diz que concelhos entram em “Ave e concelhos vizinhos”.",
+      "A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada, adaptado ao município da Trofa. As colunas de comparação (Área Metropolitana do Porto, “Ave e concelhos vizinhos” e Portugal) vêm já calculadas desse portal.",
     ligacoes: [],
   },
   {

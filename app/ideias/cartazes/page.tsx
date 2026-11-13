@@ -11,7 +11,7 @@ const n = (from: number, to: number) =>
   Array.from({ length: to - from + 1 }, (_, i) => from + i);
 
 const grupos: { titulo: string; cartazes: number[] }[] = [
-  { titulo: "Habitação e Educação", cartazes: [...n(41, 45), 63] },
+  { titulo: "Habitação e Educação", cartazes: n(41, 45) },
   { titulo: "Modernização da Câmara", cartazes: n(46, 50) },
   { titulo: "Economia, Emprego e Mobilidade", cartazes: n(51, 58) },
   { titulo: "Fiscalidade, Cultura e Ação/Coesão Social", cartazes: n(59, 62) },
