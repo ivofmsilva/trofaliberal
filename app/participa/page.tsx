@@ -58,10 +58,10 @@ const separadores: Separador[] = [
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Junta-te a Nós</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">És Liberal e Não Sabias?</h2>
           <p className="mt-3 text-ink/75">
-            Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo para a
-            Trofa e Portugal.
+            Junta-te a nós. Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo
+            para a Trofa e Portugal.
           </p>
           <ul className="mt-6 space-y-3">
             {razoes.map((r, i) => (
