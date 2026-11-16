@@ -24,9 +24,9 @@ export type Evento = {
 export const proximos: Evento[] = [
   {
     titulo: "Jantar de Natal dos núcleos do distrito do Porto",
-    data: "5 de dezembro, sábado",
-    local: "Maia (local a confirmar)",
-    texto: "O Núcleo da Trofa junta-se a mais nove núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
+    data: "5 de dezembro, sábado, 20h",
+    local: "Casa da Agra, Maia",
+    texto: "O Núcleo da Trofa junta-se a mais dez núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
     imagem: "/images/eventos/jantar-natal-2026.webp",
   },
 ];
