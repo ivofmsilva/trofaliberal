@@ -60,7 +60,7 @@ export const outros = [
     titulo: "Porto Liberal",
     texto: "Uma tradição do núcleo da Trofa. Um encontro rápido com pão-de-ló e Porto. Uma tradição sem falha desde 2021.",
     quando: "Dezembro",
-    imagem: "/images/eventos/porto-liberal-95.png",
+    imagem: "/images/eventos/porto-liberal.webp",
   },
 ];
 
