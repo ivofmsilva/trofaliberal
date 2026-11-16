@@ -96,14 +96,14 @@ export default function Home() {
       </section>
 
       <div className="pt-20">
-        <CarrosselBanners titulos={["Metro para a Trofa", "Packs de Natal", "Trofa no topo da Educação", "Construir para o Futuro", "Novo coordenador", "Dados da Trofa"]}>
+        <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro", "Novo coordenador", "Dados da Trofa", "Packs de Natal"]}>
           {[
             <BannerMetro key="metro" />,
-            <BannerNatal key="natal" />,
             <BannerEducacao key="educacao" />,
             <BannerHabitacao key="habitacao" />,
             <BannerCoordenador key="coordenador" />,
             <BannerDados key="dados" />,
+            <BannerNatal key="natal" />,
           ]}
         </CarrosselBanners>
       </div>

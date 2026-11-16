@@ -12,7 +12,7 @@ export const links = {
   convite: "/participa?t=contactos",
   email: "trofa@liberal.pt",
   nacionais: "https://iniciativaliberal.pt/ideias/",
-  // Portal de dados abertos da Trofa (alojado na Cloudflare Pages).
+  // Portal original de dados da Trofa (escondido: o menu e o banner abrem a versão do site, em /dados).
   dados: "https://ae5aedd6.white-mode-f771.pages.dev/",
 };
 
@@ -42,15 +42,7 @@ export type NavItem = {
 export const nav: NavItem[] = [
   { label: "Início", href: "/" },
   { label: "Quem Somos", href: "/trofa-liberal" },
-  {
-    label: "Dados da Trofa",
-    href: links.dados,
-    external: true,
-    children: [
-      { label: "Portal Original", href: links.dados, external: true },
-      { label: "Nova Versão IL Trofa", href: "/dados" },
-    ],
-  },
+  { label: "Dados da Trofa", href: "/dados" },
   {
     label: "Ideias",
     href: "/ideias",
