@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
+import RostosLiberais from "@/components/RostosLiberais";
 import { gcl, mesa, plenario2026, type Membro } from "@/lib/equipa";
+import { rostos } from "@/lib/rostos";
 
 export const metadata: Metadata = { title: "Quem Somos — Iniciativa Liberal Trofa" };
 
@@ -284,6 +286,14 @@ export default function Sobre() {
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
           <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do Núcleo</h2>
           <Marcos marcos={marcos} />
+        </div>
+      </section>
+
+      <section id="rostos" className="mx-auto max-w-6xl scroll-mt-24 px-4 pt-20 sm:px-6">
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Os nossos membros</p>
+        <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Rostos Liberais Trofenses</h2>
+        <div className="mt-10">
+          <RostosLiberais rostos={rostos} />
         </div>
       </section>
 
