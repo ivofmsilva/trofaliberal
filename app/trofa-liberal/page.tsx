@@ -166,31 +166,27 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Colagem do 4.º aniversário (Instagram, junho de 2026: as duas imagens da publicação juntas). */}
-      <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-20 sm:px-6 md:grid-cols-[1.6fr_1fr]">
-        <a
-          href="https://www.instagram.com/p/DaBM8mWiAwO/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink"
-        >
-          <Image
-            src="/images/geral/aniversario-4-anos.webp"
-            alt="Colagem do 4.º aniversário da Iniciativa Liberal Trofa, 2022–2026: fotos de ações de rua, plenários, convenções e encontros do núcleo"
-            width={1600}
-            height={1000}
-            sizes="(min-width: 768px) 750px, 100vw"
-            className="w-full"
-          />
-        </a>
-        <Image
-          src="/images/geral/crianca-bandeira.jpeg"
-          alt="Apoiante com a bandeira da Trofa aos ombros"
-          width={410}
-          height={410}
-          sizes="(min-width: 768px) 460px, 100vw"
-          className="aspect-[4/3] h-full w-full rounded-2xl object-cover"
-        />
+      {/* Colagem do 4.º aniversário (Instagram, junho de 2026): as 5 imagens da publicação juntas numa faixa.
+          No computador vê-se inteira; no telemóvel desliza-se para o lado. */}
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+        <div className="-mx-4 overflow-x-auto px-4 [scrollbar-width:thin] sm:mx-0 sm:px-0">
+          <a
+            href="https://www.instagram.com/p/DaBM8mWiAwO/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-max overflow-hidden rounded-2xl ring-2 ring-transparent transition hover:ring-pink md:w-full"
+          >
+            <Image
+              src="/images/geral/aniversario-4-anos-faixa.webp"
+              alt="Colagem do 4.º aniversário da Iniciativa Liberal Trofa, 2022–2026: ações de rua, plenários, convenções, entrevistas e encontros do núcleo. Por uma Trofa mais liberal. Obrigado!"
+              width={3200}
+              height={800}
+              sizes="(min-width: 768px) 1216px, 1000px"
+              className="h-64 w-auto max-w-none md:h-auto md:w-full"
+            />
+          </a>
+        </div>
+        <p className="mt-2 text-sm text-ink/60 md:hidden">Desliza para o lado para ver tudo →</p>
       </section>
 
       <section id="equipa" className="scroll-mt-24 bg-mist py-20">
