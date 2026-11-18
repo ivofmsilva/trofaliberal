@@ -27,7 +27,7 @@ export function generateMetadata(): Metadata {
 const arquivo = [
   { src: "/images/concelho/assembleia-1998.webp", legenda: "Trofenses em frente à Assembleia da República" },
   { src: "/images/concelho/lisboa-faixa-1998.webp", legenda: "A caminho de São Bento, pelas ruas de Lisboa" },
-  { src: "/images/concelho/escadaria-1998.webp", legenda: "Bandeiras verdes na escadaria do Parlamento" },
+  { src: "/images/concelho/escadaria-1998.webp", legenda: "Bandeiras da Trofa na escadaria do Parlamento" },
 ];
 
 const terra = [
@@ -86,7 +86,7 @@ export default function DiaDoConcelho() {
         title={`${anos} anos de Concelho da Trofa`}
         image={{
           src: "/images/concelho/assembleia-1998.webp",
-          alt: "Trofenses com bandeiras verdes em frente à Assembleia da República, em novembro de 1998",
+          alt: "Trofenses com bandeiras em frente à Assembleia da República, em novembro de 1998",
           w: 1080,
           h: 792,
         }}
@@ -100,13 +100,13 @@ export default function DiaDoConcelho() {
         </p>
         <div className="mt-6 space-y-5">
           <p>
-            Não foi uma oferta. Foi uma conquista de muitos trofenses que, durante anos, se juntaram,
-            se organizaram e não desistiram. Nesse dia encheram-se autocarros, levantaram-se faixas e as
-            bandeiras verdes subiram a escadaria de São Bento. A Trofa passou a decidir o seu próprio caminho.
+            Foi uma conquista de muitos trofenses que, durante anos, se juntaram, se organizaram e não
+            desistiram. Nesse dia encheram-se autocarros, levantaram-se faixas e as bandeiras da Trofa
+            subiram a escadaria de São Bento. A partir daí, a Trofa passou a decidir o seu próprio caminho.
           </p>
           <p>
             A todos os que lutaram por este dia, os que ainda cá estão e os que já partiram, o nosso
-            obrigado. O concelho que temos é deles.
+            obrigado.
           </p>
           <p>
             Em {anos} anos a Trofa cresceu: mais famílias, mais empresas e mais vida nas freguesias. Mas a

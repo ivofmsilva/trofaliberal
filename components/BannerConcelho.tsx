@@ -38,7 +38,7 @@ export default function BannerConcelho() {
         <div className="relative order-first h-52 bg-[#cfe0f3] sm:h-64 md:order-none md:h-auto md:min-h-80">
           <Image
             src="/images/concelho/assembleia-1998.webp"
-            alt="Trofenses com bandeiras verdes em frente à Assembleia da República, em novembro de 1998"
+            alt="Trofenses com bandeiras em frente à Assembleia da República, em novembro de 1998"
             fill
             sizes="(min-width: 768px) 700px, 100vw"
             className="object-cover object-[50%_60%]"
