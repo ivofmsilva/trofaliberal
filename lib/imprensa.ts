@@ -579,7 +579,7 @@ export const itens: Record<Categoria, Item[]> = {
     },
     {
       titulo: "Trofa com grande audiência na Ribeira Grande",
-      temas: ["democracia"],
+      temas: ["camara"],
       fonte: "Diamantino Costa · O Notícias da Trofa",
       data: "2023-02-28",
       href: "https://www.onoticiasdatrofa.pt/folha-liberal-trofa-com-grande-audiencia-na-ribeira-grande/",
