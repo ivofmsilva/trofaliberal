@@ -43,13 +43,13 @@ export default function VinteCincoNovembro() {
         <div className="mt-6 space-y-5">
           <p>
             O 25 de Abril abriu a porta à liberdade. Mas, nos meses seguintes, o país viveu tempos de grande
-            tensão: ocupações, saneamentos, nacionalizações e o risco de trocar uma ditadura por outra, e de
+            tensão: ocupações, nacionalizações e o risco de trocar uma ditadura por outra, e de
             Portugal se tornar a “Cuba da Europa”. Muitos portugueses temeram perder a liberdade que tinham
             acabado de conquistar.
           </p>
           <p>
-            No 25 de Novembro, militares moderados travaram essa deriva. Garantiram que se respeitava a vontade que
-            os portugueses tinham mostrado nas urnas e abriram caminho à Constituição de 1976 e às primeiras
+            No 25 de Novembro, essa deriva foi travada. Ficou garantido que se respeitava a vontade que os
+            portugueses tinham mostrado nas urnas, e abriu-se caminho à Constituição de 1976 e às primeiras
             eleições legislativas. Desde então, quem governa Portugal é escolhido pelo voto.
           </p>
           <p>
@@ -83,10 +83,6 @@ export default function VinteCincoNovembro() {
             teria trazido pobreza e repressão; a liberdade trouxe-nos a Europa, o crescimento e as oportunidades.
             Cabe-nos agora trabalhar por uma democracia mais robusta e por um país onde o mérito é reconhecido e
             há oportunidades para todos.
-          </p>
-          <p>
-            Foi também num fim de novembro, a 26 de novembro de 2017, que a Iniciativa Liberal fez a sua
-            convenção fundadora.
           </p>
           <p className="font-display text-2xl font-bold text-pink">Viva o 25 de Novembro. Viva a liberdade!</p>
         </div>
