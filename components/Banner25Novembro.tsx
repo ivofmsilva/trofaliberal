@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { anosDe, vinteCincoNovembro } from "@/lib/datasAnuais";
 
 // Banner do 25 de Novembro: só entra no carrossel na semana de 25 de novembro (app/page.tsx).
-// Sem fotos (não há fotos de 1975 com licença livre): tipografia e as cores da bandeira.
+// Foto: cartaz nacional da IL "As conquistas do 25 de Novembro".
 export default function Banner25Novembro() {
   const anos = anosDe(vinteCincoNovembro);
   return (
@@ -10,7 +11,7 @@ export default function Banner25Novembro() {
       <Link
         href={vinteCincoNovembro.slug}
         aria-label={`25 de Novembro de 1975: ${anos} anos. Ler mais`}
-        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.1fr_1fr]"
+        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[0.85fr_1.35fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-7 sm:px-8 md:gap-5 md:px-12 md:py-12">
           <span className="-skew-x-12 bg-pink px-6 py-1.5">
@@ -29,12 +30,14 @@ export default function Banner25Novembro() {
           </span>
         </div>
 
-        <div aria-hidden className="relative order-first grid h-44 grid-cols-[2fr_3fr] sm:h-56 md:order-none md:h-auto md:min-h-80">
-          <div className="bg-[#046a38]" />
-          <div className="bg-[#da291c]" />
-          <p className="font-display absolute inset-0 grid place-items-center text-[7rem] font-black leading-none text-white/95 drop-shadow-lg sm:text-[9rem] md:text-[12rem]">
-            25
-          </p>
+        <div className="relative order-first aspect-[5/3] bg-[#cfe0f3] md:order-none md:aspect-auto md:min-h-80">
+          <Image
+            src="/images/eventos/25-novembro-cravos.webp"
+            alt="Cartaz da Iniciativa Liberal: As conquistas do 25 de Novembro. Democracia, liberdade, prosperidade. Novembro cumpriu Abril."
+            fill
+            sizes="(min-width: 768px) 700px, 100vw"
+            className="object-cover"
+          />
         </div>
       </Link>
     </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
@@ -17,6 +18,7 @@ export function generateMetadata(): Metadata {
     openGraph: {
       title: `${anos} anos do 25 de Novembro`,
       description: "O dia em que a liberdade de Abril veio para ficar.",
+      images: ["/images/eventos/25-novembro-cravos.webp"],
     },
   };
 }
@@ -51,6 +53,17 @@ export default function VinteCincoNovembro() {
             os portugueses tinham mostrado nas urnas e abriram caminho à Constituição de 1976 e às primeiras
             eleições legislativas. Desde então, quem governa Portugal é escolhido pelo voto.
           </p>
+          <figure className="py-2">
+            <Image
+              src="/images/eventos/25-novembro-sempre.webp"
+              alt="Cartaz da Iniciativa Liberal em Lisboa: 25 de Novembro sempre. Comunismo nunca mais. Só em Novembro se cumpriu Abril."
+              width={784}
+              height={540}
+              sizes="(min-width: 768px) 720px, 100vw"
+              className="w-full rounded-2xl shadow-lg"
+            />
+            <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal em Lisboa.</figcaption>
+          </figure>
           <p className="font-display text-xl font-bold text-navy md:text-2xl">
             O 25 de Abril e o 25 de Novembro não competem, completam-se. Abril deu-nos a liberdade; Novembro
             garantiu que ela ficava.
