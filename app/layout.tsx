@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Iniciativa Liberal Trofa — Trofa Para Cima",
     description: "Uma Trofa com mais liberdade começa aqui!",
-    images: ["/images/geral/comunidade-destrave.jpeg"],
+    images: ["/images/geral/comunidade-destrave-trofa.jpeg"],
     locale: "pt_PT",
     type: "website",
   },

@@ -57,7 +57,7 @@ export const outros = [
     titulo: "Destrave Liberal",
     texto: "Uma caminhada com muita animação e um painel sobre temas da atualidade.",
     quando: "Setembro",
-    imagem: "/images/geral/comunidade-destrave.jpeg",
+    imagem: "/images/geral/comunidade-destrave-trofa.jpeg",
   },
   {
     titulo: "Magusto Liberal",

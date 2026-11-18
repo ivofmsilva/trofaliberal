@@ -168,7 +168,7 @@ export default function Sobre() {
 
       <section className="mx-auto grid max-w-7xl gap-5 px-4 pb-20 sm:px-6 md:grid-cols-2">
         <Image
-          src="/images/geral/comunidade-destrave.jpeg"
+          src="/images/geral/comunidade-destrave-trofa.jpeg"
           alt="Liberais trofenses reunidos na caminhada Destrave Liberal"
           width={961}
           height={630}
