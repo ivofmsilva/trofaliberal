@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import FiltroTemas from "@/components/FiltroTemas";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
@@ -26,6 +28,15 @@ export default async function Lista({ params }: { params: Promise<{ categoria: s
   const c = categorias[categoria as Categoria];
   if (!c) notFound();
   const lista = ordenados(categoria as Categoria);
+  const grelha = (
+    <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {lista.map((item) => (
+        <li key={item.href}>
+          <ItemCard item={item} />
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <>
@@ -33,14 +44,12 @@ export default async function Lista({ params }: { params: Promise<{ categoria: s
         {c.descricao}
       </PageHero>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-        {lista.length ? (
-          <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {lista.map((item) => (
-              <li key={item.href}>
-                <ItemCard item={item} />
-              </li>
-            ))}
-          </ul>
+        {lista.length && categoria === "artigos" ? (
+          <Suspense fallback={grelha}>
+            <FiltroTemas lista={lista} />
+          </Suspense>
+        ) : lista.length ? (
+          grelha
         ) : (
           <p className="rounded-2xl bg-mist p-6 font-bold text-ink/60">{c.vazio}</p>
         )}

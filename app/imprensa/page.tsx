@@ -6,6 +6,7 @@ import CartaoEvento from "@/components/CartaoEvento";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
+import { datasCelebradas, diaPorExtenso } from "@/lib/datasAnuais";
 import { outros, proximos } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
@@ -119,6 +120,20 @@ export default function Imprensa() {
             </li>
           ))}
         </ul>
+
+        {/* Arquivo discreto das páginas de datas (o banner só aparece na semana de cada uma). */}
+        <p className="mt-12 text-sm text-ink/70">
+          <span className="font-bold text-navy">Datas que celebramos:</span>{" "}
+          {datasCelebradas.map((d, i) => (
+            <span key={d.slug}>
+              {i > 0 && " · "}
+              <Link href={d.slug} className="font-bold text-cyan-dark hover:underline">
+                {d.titulo}
+              </Link>{" "}
+              ({diaPorExtenso(d)})
+            </span>
+          ))}
+        </p>
       </>
     ),
   };

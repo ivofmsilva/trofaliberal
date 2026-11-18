@@ -24,6 +24,8 @@ const paginas = [
   "/imprensa/comunicados",
   "/imprensa/comunicados/metro-ligeiro-ate-a-trofa",
   "/eventos/lit",
+  "/dia-do-concelho",
+  "/25-de-novembro",
   "/eventos/aqui-ha-parlamento",
   "/participa",
   "/loja",

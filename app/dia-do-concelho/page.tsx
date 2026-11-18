@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import Galeria from "@/components/Galeria";
 import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
 import { anosDoConcelho, diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
 
-// Página do Dia do Concelho (19 de novembro). Só está online de 18 a 24 de novembro (véspera + 5 dias)
-// (lib/datasAnuais.ts) e volta sozinha todos os anos, com os anos já contados.
+// Página do Dia do Concelho (19 de novembro). Fica sempre online; o banner só aparece de 18 a 24 de novembro
+// e o "Bom feriado" só nessa semana.
+// Os anos contam-se sozinhos (lib/datasAnuais.ts).
 export const revalidate = 3600;
 
 export function generateMetadata(): Metadata {
@@ -32,7 +32,7 @@ const arquivo = [
 const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";
 
 export default function DiaDoConcelho() {
-  if (!estaNaSemana(diaDoConcelho)) notFound();
+  const naSemana = estaNaSemana(diaDoConcelho);
   const anos = anosDoConcelho();
 
   return (
@@ -73,7 +73,7 @@ export default function DiaDoConcelho() {
             Acreditamos numa Trofa com mais liberdade e mais oportunidades, que confia nos trofenses e
             não os deixa à espera. É com esse espírito de 1998 que queremos continuar.
           </p>
-          <p className="font-display text-2xl font-bold text-pink">Bom feriado, Trofa!</p>
+          {naSemana && <p className="font-display text-2xl font-bold text-pink">Bom feriado, Trofa!</p>}
         </div>
         <div className="mt-8">
           <PartilharBotao

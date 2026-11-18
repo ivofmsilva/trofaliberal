@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
-import { anosDe, estaNaSemana, vinteCincoNovembro } from "@/lib/datasAnuais";
+import { anosDe, vinteCincoNovembro } from "@/lib/datasAnuais";
 
-// Página do 25 de Novembro. Só está online de 24 de novembro a 30 de novembro (lib/datasAnuais.ts)
-// e volta sozinha todos os anos, com os anos já contados.
+// Página do 25 de Novembro. Fica sempre online; o banner só aparece de 24 a 30 de novembro (lib/datasAnuais.ts)
+// Os anos contam-se sozinhos.
 export const revalidate = 3600;
 
 export function generateMetadata(): Metadata {
@@ -24,7 +23,6 @@ export function generateMetadata(): Metadata {
 }
 
 export default function VinteCincoNovembro() {
-  if (!estaNaSemana(vinteCincoNovembro)) notFound();
   const anos = anosDe(vinteCincoNovembro);
 
   return (
