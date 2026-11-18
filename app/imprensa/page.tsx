@@ -138,6 +138,7 @@ export default function Imprensa() {
               ({diaPorExtenso(d)})
             </span>
           ))}
+          . <span className="text-ink/60">Ao longo do ano vamos juntando outras: o 25 de Abril, o Natal, as festas das freguesias…</span>
         </p>
       </>
     ),
