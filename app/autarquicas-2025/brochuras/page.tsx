@@ -6,7 +6,10 @@ import { hino } from "@/lib/autarquicas";
 import { fotos } from "@/lib/galeria";
 import { formatarData, ordenados } from "@/lib/imprensa";
 
-export const metadata: Metadata = { title: "Outros — Autárquicas 2025" };
+export const metadata: Metadata = {
+  title: "Outros — Autárquicas 2025",
+  description: "Brochuras, hino e outros materiais da campanha autárquica de 2025 da Iniciativa Liberal na Trofa.",
+};
 
 const hinoId = new URL(hino).searchParams.get("v") ?? "";
 const brochuras = [

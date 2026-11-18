@@ -33,6 +33,13 @@ const nextConfig: NextConfig = {
         destination: `${SITE}${destino}${mantemCaminho ? "/:caminho*" : ""}`,
         permanent: false,
       })),
+      // O endereço da Vercel leva ao domínio, para o Google só ver uma cópia do site.
+      {
+        source: "/:caminho*",
+        has: [{ type: "host" as const, value: "trofaliberal-snowy.vercel.app" }],
+        destination: `${SITE}/:caminho*`,
+        permanent: true,
+      },
       ...antigas.map(([source, destination]) => ({ source, destination, permanent: true })),
     ];
   },

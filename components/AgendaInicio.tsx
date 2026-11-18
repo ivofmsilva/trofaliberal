@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CartaoEvento from "@/components/CartaoEvento";
+import { DadosEventos } from "@/components/DadosEstruturados";
 import { outros, proximos } from "@/lib/eventos";
 
 // Agenda na página inicial. Mostra os próximos eventos quando os há (lib/eventos.ts) e, mesmo
@@ -8,6 +9,7 @@ import { outros, proximos } from "@/lib/eventos";
 export default function AgendaInicio() {
   return (
     <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
+      <DadosEventos />
       <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Agenda</p>
       <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Encontra-nos ao Vivo</h2>
 

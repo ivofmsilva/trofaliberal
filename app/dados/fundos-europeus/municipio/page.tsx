@@ -6,7 +6,10 @@ import { fundosMunicipio, type Projeto } from "@/lib/dados/transparencia";
 
 const ultimaConclusao = (l: Projeto[]) => l.map((p) => p.data_efetiva_conclusao).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
 
-export const metadata: Metadata = { title: "Fundos europeus: projetos do Município" };
+export const metadata: Metadata = {
+  title: "Fundos europeus: projetos do Município",
+  description: "Os projetos da Câmara Municipal da Trofa com fundos europeus: valores, estado e fonte de cada projeto.",
+};
 
 export default function Municipio() {
   return (

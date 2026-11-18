@@ -7,7 +7,10 @@ import PageHero from "@/components/PageHero";
 import { campanha, candidatos } from "@/lib/autarquicas";
 import { fotos } from "@/lib/galeria";
 
-export const metadata: Metadata = { title: "Apresentação da Candidatura — Autárquicas 2025" };
+export const metadata: Metadata = {
+  title: "Apresentação da Candidatura — Autárquicas 2025",
+  description: "A apresentação da candidatura da Iniciativa Liberal à Câmara Municipal da Trofa nas autárquicas de 2025: fotos, vídeos e discursos.",
+};
 
 const frases = [
   {

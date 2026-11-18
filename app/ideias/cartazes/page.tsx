@@ -3,7 +3,10 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { cartazesNacionais } from "@/lib/cartazes-nacionais";
 
-export const metadata: Metadata = { title: "Cartazes — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Cartazes — Iniciativa Liberal Trofa",
+  description: "Os cartazes e mensagens da Iniciativa Liberal Trofa: metro, educação, impostos e as campanhas nacionais da IL.",
+};
 
 // Para acrescentar um cartaz, coloca a imagem em public/images/cartazes/ e
 // junta o número/nome do ficheiro à lista do grupo respetivo.

@@ -3,7 +3,10 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { links } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Ideias — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Ideias — Iniciativa Liberal Trofa",
+  description: "As causas da Iniciativa Liberal para a Trofa: metro ligeiro até à Trofa, educação no topo, habitação para o futuro e mais.",
+};
 
 const pad = (n: number) => String(n).padStart(2, "0");
 

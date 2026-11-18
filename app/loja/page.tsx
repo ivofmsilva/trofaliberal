@@ -5,7 +5,10 @@ import OrderButton from "@/components/OrderButton";
 import PageHero from "@/components/PageHero";
 import { merchandising, packsNatal } from "@/lib/loja";
 
-export const metadata: Metadata = { title: "Loja — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Loja — Iniciativa Liberal Trofa",
+  description: "A loja da Iniciativa Liberal Trofa: roupa, packs de Natal e artigos liberais. Compra e apoia o núcleo.",
+};
 
 type Produto = {
   id?: string;

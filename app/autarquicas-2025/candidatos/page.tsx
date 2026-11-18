@@ -4,7 +4,10 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { candidatos } from "@/lib/autarquicas";
 
-export const metadata: Metadata = { title: "Candidatos — Autárquicas 2025" };
+export const metadata: Metadata = {
+  title: "Candidatos — Autárquicas 2025",
+  description: "Os candidatos da Iniciativa Liberal à Câmara, à Assembleia Municipal e às freguesias da Trofa nas autárquicas de 2025.",
+};
 
 export default function Candidatos() {
   return (

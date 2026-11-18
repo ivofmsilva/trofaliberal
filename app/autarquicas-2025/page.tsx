@@ -4,7 +4,10 @@ import PageHero from "@/components/PageHero";
 import { hino } from "@/lib/autarquicas";
 import { autarquicasNav } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Autárquicas 2025 — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Autárquicas 2025 — Iniciativa Liberal Trofa",
+  description: "Arquivo da campanha Trofa Para Cima: programa eleitoral, candidatos, apresentações e diário da Iniciativa Liberal nas autárquicas de 2025.",
+};
 
 const descricoes: Record<string, string> = {
   "/autarquicas-2025/programa": "O programa para o concelho e os das freguesias de Alvarelhos e Bougado.",

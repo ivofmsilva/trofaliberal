@@ -5,7 +5,10 @@ import PageHero from "@/components/PageHero";
 import { campanha } from "@/lib/autarquicas";
 import { fotos } from "@/lib/galeria";
 
-export const metadata: Metadata = { title: "Apresentação do Programa — Autárquicas 2025" };
+export const metadata: Metadata = {
+  title: "Apresentação do Programa — Autárquicas 2025",
+  description: "A apresentação do programa eleitoral da Iniciativa Liberal para a Trofa nas autárquicas de 2025.",
+};
 
 const destaques = [
   {

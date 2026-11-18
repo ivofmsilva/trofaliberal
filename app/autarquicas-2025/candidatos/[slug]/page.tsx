@@ -13,7 +13,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const c = candidatos.find((x) => x.slug === slug);
-  return { title: c ? `${c.nome} — Autárquicas 2025` : "Autárquicas 2025" };
+  return {
+    title: c ? `${c.nome} — Autárquicas 2025` : "Autárquicas 2025",
+    description: c ? `${c.nome}, ${c.cargo.charAt(0).toLowerCase()}${c.cargo.slice(1)} pela Iniciativa Liberal nas autárquicas de 2025 na Trofa.` : undefined,
+  };
 }
 
 export default async function Candidato({ params }: { params: Promise<{ slug: string }> }) {

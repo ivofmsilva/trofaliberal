@@ -6,7 +6,10 @@ import { links } from "@/lib/eventos";
 import { fotos } from "@/lib/galeria";
 import { itens } from "@/lib/imprensa";
 
-export const metadata: Metadata = { title: "Aqui há Parlamento — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Aqui há Parlamento — Iniciativa Liberal Trofa",
+  description: "Aqui há Parlamento: os deputados eleitos pelo Porto vêm à Trofa falar com a população sobre o trabalho parlamentar.",
+};
 
 const imprensa = itens.noticias.filter((n) => n.data?.startsWith("2022"));
 

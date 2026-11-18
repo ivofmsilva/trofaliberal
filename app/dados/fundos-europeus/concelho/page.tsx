@@ -6,7 +6,10 @@ import { fundosConcelho, type Projeto } from "@/lib/dados/transparencia";
 
 const ultimaConclusao = (l: Projeto[]) => l.map((p) => p.data_efetiva_conclusao).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
 
-export const metadata: Metadata = { title: "Fundos europeus: projetos no concelho" };
+export const metadata: Metadata = {
+  title: "Fundos europeus: projetos no concelho",
+  description: "Os projetos com fundos europeus no concelho da Trofa: quem recebeu, quanto e para quê, a partir dos dados oficiais.",
+};
 
 export default function Concelho() {
   return (

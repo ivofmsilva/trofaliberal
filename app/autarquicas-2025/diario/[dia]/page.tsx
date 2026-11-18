@@ -14,7 +14,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ dia: string }> }): Promise<Metadata> {
   const { dia } = await params;
   const d = diario.find((x) => String(x.dia) === dia);
-  return { title: d ? `Dia ${d.dia} — ${d.tema} — Diário de campanha` : "Diário de campanha" };
+  return {
+    title: d ? `Dia ${d.dia} — ${d.tema} — Diário de campanha` : "Diário de campanha",
+    description: d ? `Dia ${d.dia} da campanha autárquica de 2025 da Iniciativa Liberal na Trofa: ${d.tema}.` : undefined,
+  };
 }
 
 export default async function Dia({ params }: { params: Promise<{ dia: string }> }) {

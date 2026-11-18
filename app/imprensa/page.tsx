@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import CartaoEvento from "@/components/CartaoEvento";
+import { DadosEventos } from "@/components/DadosEstruturados";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
@@ -11,7 +12,10 @@ import { outros, proximos } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Imprensa e Eventos — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Imprensa e Eventos — Iniciativa Liberal Trofa",
+  description: "Eventos, notícias, comunicados e artigos de opinião da Iniciativa Liberal Trofa, e o que a imprensa escreve sobre o núcleo.",
+};
 
 const series = [
   {
@@ -69,6 +73,7 @@ export default function Imprensa() {
       : "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
     conteudo: (
       <>
+        <DadosEventos />
         <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos Eventos</h2>
         {proximos.length ? (
           <ul className="mt-8 grid gap-5 md:grid-cols-2">

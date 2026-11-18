@@ -20,7 +20,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { categoria } = await params;
   const c = categorias[categoria as Categoria];
-  return { title: c ? `${c.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos" };
+  return {
+    title: c ? `${c.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos",
+    description: c ? `${c.titulo} da Iniciativa Liberal Trofa. ${c.descricao}` : undefined,
+  };
 }
 
 export default async function Lista({ params }: { params: Promise<{ categoria: string }> }) {

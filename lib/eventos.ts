@@ -1,6 +1,9 @@
 export type Evento = {
   titulo: string;
   data: string; // texto livre, ex.: "17 de dezembro, 16h"
+  // Opcional: início em formato ISO (ex.: "2026-12-05T20:00:00+00:00"). Com ele, o evento vai
+  // também numa ficha para o Google (pode aparecer nas pesquisas de eventos).
+  inicio?: string;
   local?: string;
   href?: string;
   // Opcionais: uma frase a explicar o evento e o cartaz (ficheiro em public/images/eventos/).
@@ -25,6 +28,7 @@ export const proximos: Evento[] = [
   {
     titulo: "Jantar de Natal dos núcleos do distrito do Porto",
     data: "5 de dezembro, sábado, 20h",
+    inicio: "2026-12-05T20:00:00+00:00",
     local: "Casa da Agra, Maia",
     texto: "O Núcleo da Trofa junta-se a mais dez núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
     imagem: "/images/eventos/jantar-natal-2026.webp",

@@ -23,7 +23,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { categoria, slug } = await params;
   const item = encontrar(categoria, slug);
-  return { title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos" };
+  const inicio = item?.corpo?.[0]?.paragrafos[0];
+  return {
+    title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos",
+    description: inicio ? (inicio.length > 155 ? `${inicio.slice(0, 152).replace(/\s+\S*$/, "")}…` : inicio) : undefined,
+  };
 }
 
 export default async function Artigo({

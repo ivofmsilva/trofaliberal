@@ -3,7 +3,10 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { diario } from "@/lib/autarquicas";
 
-export const metadata: Metadata = { title: "Diário de Campanha — Autárquicas 2025" };
+export const metadata: Metadata = {
+  title: "Diário de Campanha — Autárquicas 2025",
+  description: "O diário da campanha autárquica de 2025 da Iniciativa Liberal na Trofa: um capítulo do programa em cada dia.",
+};
 
 export default function Diario() {
   return (

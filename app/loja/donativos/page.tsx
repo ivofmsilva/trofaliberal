@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = { title: "Donativos — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Donativos — Iniciativa Liberal Trofa",
+  description: "Apoia a Iniciativa Liberal na Trofa com um donativo e ajuda o núcleo a levar mais ideias liberais ao concelho.",
+};
 
 export default function Donativos() {
   return (

@@ -7,7 +7,10 @@ import { fotos } from "@/lib/galeria";
 import { itens } from "@/lib/imprensa";
 import { apresentacoes, relatorio, resumoSemana } from "@/lib/lit";
 
-export const metadata: Metadata = { title: "LIT — Jornadas Liberais da Trofa" };
+export const metadata: Metadata = {
+  title: "LIT — Jornadas Liberais da Trofa",
+  description: "LIT — Jornadas Liberais da Trofa: o ciclo de debates temáticos da Iniciativa Liberal, aberto a toda a comunidade.",
+};
 
 const imprensa = itens.noticias.filter((n) => n.data?.startsWith("2026-03"));
 

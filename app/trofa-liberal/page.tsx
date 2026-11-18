@@ -6,7 +6,10 @@ import RostosLiberais from "@/components/RostosLiberais";
 import { gcl, mesa, plenario2026, type Membro } from "@/lib/equipa";
 import { rostos } from "@/lib/rostos";
 
-export const metadata: Metadata = { title: "Quem Somos — Iniciativa Liberal Trofa" };
+export const metadata: Metadata = {
+  title: "Quem Somos — Iniciativa Liberal Trofa",
+  description: "Quem somos: o núcleo da Iniciativa Liberal na Trofa, a equipa, a história desde 2022 e os Rostos Liberais Trofenses.",
+};
 
 function iniciais(nome: string) {
   const p = nome.split(" ").filter((x) => x.length > 2);

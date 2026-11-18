@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { DadosNucleo } from "@/components/DadosEstruturados";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteUrl } from "@/lib/url";
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   description:
-    "Página oficial do núcleo territorial da Iniciativa Liberal da Trofa. Uma Trofa com mais liberdade começa aqui!",
+    "Página oficial da Iniciativa Liberal na Trofa: ideias para o concelho, dados da Câmara, eventos e como participar. Uma Trofa com mais liberdade começa aqui!",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
+        <DadosNucleo />
       </body>
     </html>
   );
