@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Galeria from "@/components/Galeria";
 import PageHero from "@/components/PageHero";
@@ -90,6 +91,18 @@ export default function DiaDoConcelho() {
           <p className="mt-2 text-sm text-ink/60">
             Fotos: Arquivo da Câmara Municipal da Trofa e Centro Digital de Informação Local.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-navy py-12 text-center text-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <p className="font-display text-2xl font-bold md:text-3xl">Queres ajudar a Trofa a ir mais longe?</p>
+          <Link
+            href="/participa?t=membro"
+            className="mt-6 inline-block rounded-full bg-sun px-7 py-3 font-bold text-navy transition hover:bg-white"
+          >
+            Junta-te a nós →
+          </Link>
         </div>
       </section>
     </>
