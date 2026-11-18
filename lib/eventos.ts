@@ -29,6 +29,11 @@ export const proximos: Evento[] = [
     texto: "O Núcleo da Trofa junta-se a mais dez núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
     imagem: "/images/eventos/jantar-natal-2026.webp",
   },
+  {
+    titulo: "Porto Liberal",
+    data: "Dezembro · data a anunciar",
+    texto: "Pão-de-ló e vinho do Porto para celebrar o Natal com o núcleo. Uma tradição sem falha desde 2021.",
+  },
 ];
 
 export const outros = [
