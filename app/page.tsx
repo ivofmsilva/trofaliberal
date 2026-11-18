@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BannerConcelho from "@/components/BannerConcelho";
 import BannerCoordenador from "@/components/BannerCoordenador";
 import BannerDados from "@/components/BannerDados";
 import BannerEducacao from "@/components/BannerEducacao";
@@ -10,6 +11,7 @@ import BannerMetro from "@/components/BannerMetro";
 import BannerNatal from "@/components/BannerNatal";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
+import { diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
@@ -43,7 +45,11 @@ const principios = [
   },
 ];
 
+// Os banners de datas (Dia do Concelho...) entram e saem sozinhos: a página volta a ser gerada de hora a hora.
+export const revalidate = 3600;
+
 export default function Home() {
+  const semanaConcelho = estaNaSemana(diaDoConcelho);
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
@@ -96,8 +102,19 @@ export default function Home() {
       </section>
 
       <div className="pt-20">
-        <CarrosselBanners titulos={["Metro para a Trofa", "Trofa no topo da Educação", "Construir para o Futuro", "Novo coordenador", "Dados da Trofa", "Packs de Natal"]}>
+        <CarrosselBanners
+          titulos={[
+            ...(semanaConcelho ? ["Dia do Concelho"] : []),
+            "Metro para a Trofa",
+            "Trofa no topo da Educação",
+            "Construir para o Futuro",
+            "Novo coordenador",
+            "Dados da Trofa",
+            "Packs de Natal",
+          ]}
+        >
           {[
+            ...(semanaConcelho ? [<BannerConcelho key="concelho" />] : []),
             <BannerMetro key="metro" />,
             <BannerEducacao key="educacao" />,
             <BannerHabitacao key="habitacao" />,
