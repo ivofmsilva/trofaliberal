@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
 import { anosDe, vinteCincoNovembro } from "@/lib/datasAnuais";
 
-// Página do 25 de Novembro. Fica sempre online; o banner só aparece de 24 a 30 de novembro (lib/datasAnuais.ts)
+// Página do 25 de Novembro. Fica sempre online; o banner só aparece de 24 a 26 de novembro (lib/datasAnuais.ts)
 // Os anos contam-se sozinhos.
 export const revalidate = 3600;
 

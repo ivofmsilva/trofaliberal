@@ -50,7 +50,7 @@ const principios = [
 export const revalidate = 3600;
 
 export default function Home() {
-  // Banners de datas (lib/datasAnuais.ts): só na sua semana, o mais próximo primeiro.
+  // Banners de datas (lib/datasAnuais.ts): véspera, dia e dia seguinte, o mais próximo primeiro.
   const datas = ativasPorOrdem([
     { data: diaDoConcelho, titulo: "Dia do Concelho", banner: <BannerConcelho key="concelho" /> },
     { data: vinteCincoNovembro, titulo: "25 de Novembro", banner: <Banner25Novembro key="25-novembro" /> },

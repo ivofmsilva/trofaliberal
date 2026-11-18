@@ -5,8 +5,8 @@ import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
 import { anosDoConcelho, diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
 
-// Página do Dia do Concelho (19 de novembro). Fica sempre online; o banner só aparece de 18 a 24 de novembro
-// e o "Bom feriado" só nessa semana.
+// Página do Dia do Concelho (19 de novembro). Fica sempre online; o banner só aparece de 18 a 20 de novembro
+// e o "Bom feriado" só nesses dias.
 // Os anos contam-se sozinhos (lib/datasAnuais.ts).
 export const revalidate = 3600;
 

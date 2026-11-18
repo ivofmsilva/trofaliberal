@@ -1,5 +1,5 @@
-// Páginas que só estão online uma semana por ano (Dia do Concelho, 25 de Novembro...).
-// O banner aparece na véspera e fica sete dias (da véspera até cinco dias depois). As páginas ficam
+// Datas que celebramos (Dia do Concelho, 25 de Novembro...): banner na página inicial só à volta do dia.
+// O banner aparece três dias: na véspera, no próprio dia e no dia seguinte. As páginas ficam
 // sempre online (arquivo discreto em Imprensa e Eventos, e no sitemap) para quem as procurar.
 // Repete-se todos os anos sozinha: a página e o banner aparecem e desaparecem com a data
 // de Lisboa (as páginas voltam a ser geradas de hora a hora). Calendário completo em
@@ -45,7 +45,7 @@ export function diasPara(d: DataAnual, agora = agoraReal()) {
 
 export function estaNaSemana(d: DataAnual, agora = agoraReal()) {
   const n = diasPara(d, agora);
-  return n <= 1 && n >= -5;
+  return n <= 1 && n >= -1;
 }
 
 export function anosDe(d: DataAnual, agora = agoraReal()) {
@@ -56,7 +56,7 @@ export function anosDoConcelho(agora = agoraReal()) {
   return anosDe(diaDoConcelho, agora);
 }
 
-// Das datas que estão na semana, primeiro as que ainda vão acontecer (a mais próxima à frente).
+// Das datas que estão na janela do banner, primeiro as que ainda vão acontecer (a mais próxima à frente).
 export function ativasPorOrdem<T extends { data: DataAnual }>(lista: T[], agora = agoraReal()) {
   return lista
     .filter((x) => estaNaSemana(x.data, agora))
