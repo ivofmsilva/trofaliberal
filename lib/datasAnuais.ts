@@ -1,20 +1,24 @@
 // Páginas que só estão online uma semana por ano (Dia do Concelho, 25 de Novembro...).
-// A janela repete-se todos os anos sozinha: a página e o banner aparecem e desaparecem
-// com a data de Lisboa (as páginas voltam a ser geradas de hora a hora).
+// Cada uma aparece na véspera e fica sete dias (da véspera até cinco dias depois).
+// Repete-se todos os anos sozinha: a página e o banner aparecem e desaparecem com a data
+// de Lisboa (as páginas voltam a ser geradas de hora a hora). Calendário completo em
+// docs/calendario-comemoracoes.md.
 
 export type DataAnual = {
   slug: string;
-  // [mês, dia], ambos incluídos
-  de: [number, number];
-  ate: [number, number];
+  dia: [number, number]; // [mês, dia]
+  desde: number; // ano do acontecimento, para contar os anos
 };
 
-export const diaDoConcelho: DataAnual = { slug: "/dia-do-concelho", de: [11, 18], ate: [11, 24] };
+export const diaDoConcelho: DataAnual = { slug: "/dia-do-concelho", dia: [11, 19], desde: 1998 };
+export const vinteCincoNovembro: DataAnual = { slug: "/25-de-novembro", dia: [11, 25], desde: 1975 };
 
-// O concelho da Trofa foi aprovado na Assembleia da República a 19 de novembro de 1998.
-export const ANO_CONCELHO = 1998;
+const DIA_MS = 86_400_000;
 
-export function hojeEmLisboa(agora = new Date()) {
+// Só para testes locais: DATA_SIMULADA=2026-11-24 npx next build mostra o site como nesse dia.
+const agoraReal = () => (process.env.DATA_SIMULADA ? new Date(`${process.env.DATA_SIMULADA}T12:00:00Z`) : new Date());
+
+export function hojeEmLisboa(agora = agoraReal()) {
   const p = Object.fromEntries(
     new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Lisbon", year: "numeric", month: "numeric", day: "numeric" })
       .formatToParts(agora)
@@ -23,12 +27,32 @@ export function hojeEmLisboa(agora = new Date()) {
   return { ano: p.year as number, mes: p.month as number, dia: p.day as number };
 }
 
-export function estaNaSemana(d: DataAnual, agora = new Date()) {
-  const { mes, dia } = hojeEmLisboa(agora);
-  const hoje = mes * 100 + dia;
-  return hoje >= d.de[0] * 100 + d.de[1] && hoje <= d.ate[0] * 100 + d.ate[1];
+// Dias que faltam para a data deste ano (negativo se já passou).
+export function diasPara(d: DataAnual, agora = agoraReal()) {
+  const h = hojeEmLisboa(agora);
+  return (Date.UTC(h.ano, d.dia[0] - 1, d.dia[1]) - Date.UTC(h.ano, h.mes - 1, h.dia)) / DIA_MS;
 }
 
-export function anosDoConcelho(agora = new Date()) {
-  return hojeEmLisboa(agora).ano - ANO_CONCELHO;
+export function estaNaSemana(d: DataAnual, agora = agoraReal()) {
+  const n = diasPara(d, agora);
+  return n <= 1 && n >= -5;
+}
+
+export function anosDe(d: DataAnual, agora = agoraReal()) {
+  return hojeEmLisboa(agora).ano - d.desde;
+}
+
+export function anosDoConcelho(agora = agoraReal()) {
+  return anosDe(diaDoConcelho, agora);
+}
+
+// Das datas que estão na semana, primeiro as que ainda vão acontecer (a mais próxima à frente).
+export function ativasPorOrdem<T extends { data: DataAnual }>(lista: T[], agora = agoraReal()) {
+  return lista
+    .filter((x) => estaNaSemana(x.data, agora))
+    .sort((a, b) => {
+      const da = diasPara(a.data, agora), db = diasPara(b.data, agora);
+      if (da >= 0 !== db >= 0) return da >= 0 ? -1 : 1;
+      return da >= 0 ? da - db : db - da;
+    });
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Banner25Novembro from "@/components/Banner25Novembro";
 import BannerConcelho from "@/components/BannerConcelho";
 import BannerCoordenador from "@/components/BannerCoordenador";
 import BannerDados from "@/components/BannerDados";
@@ -11,7 +12,7 @@ import BannerMetro from "@/components/BannerMetro";
 import BannerNatal from "@/components/BannerNatal";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
-import { diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
+import { ativasPorOrdem, diaDoConcelho, vinteCincoNovembro } from "@/lib/datasAnuais";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
@@ -49,7 +50,11 @@ const principios = [
 export const revalidate = 3600;
 
 export default function Home() {
-  const semanaConcelho = estaNaSemana(diaDoConcelho);
+  // Banners de datas (lib/datasAnuais.ts): só na sua semana, o mais próximo primeiro.
+  const datas = ativasPorOrdem([
+    { data: diaDoConcelho, titulo: "Dia do Concelho", banner: <BannerConcelho key="concelho" /> },
+    { data: vinteCincoNovembro, titulo: "25 de Novembro", banner: <Banner25Novembro key="25-novembro" /> },
+  ]);
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
@@ -104,7 +109,7 @@ export default function Home() {
       <div className="pt-20">
         <CarrosselBanners
           titulos={[
-            ...(semanaConcelho ? ["Dia do Concelho"] : []),
+            ...datas.map((d) => d.titulo),
             "Metro para a Trofa",
             "Trofa no topo da Educação",
             "Construir para o Futuro",
@@ -114,7 +119,7 @@ export default function Home() {
           ]}
         >
           {[
-            ...(semanaConcelho ? [<BannerConcelho key="concelho" />] : []),
+            ...datas.map((d) => d.banner),
             <BannerMetro key="metro" />,
             <BannerEducacao key="educacao" />,
             <BannerHabitacao key="habitacao" />,

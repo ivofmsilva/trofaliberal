@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
 import { anosDoConcelho, diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
 
-// Página do Dia do Concelho (19 de novembro). Só está online de 18 a 24 de novembro
+// Página do Dia do Concelho (19 de novembro). Só está online de 18 a 24 de novembro (véspera + 5 dias)
 // (lib/datasAnuais.ts) e volta sozinha todos os anos, com os anos já contados.
 export const revalidate = 3600;
 
