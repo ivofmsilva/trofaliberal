@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+import { candidatos, diario } from "@/lib/autarquicas";
+import { indicadores } from "@/lib/dados/dados";
 import { autarquicasNav } from "@/lib/site";
 import { siteUrl } from "@/lib/url";
 
@@ -11,8 +13,11 @@ const paginas = [
   "/ideias/habitacao",
   "/ideias/cartazes",
   "/dados",
+  "/dados/indicadores",
   "/dados/contratos",
   "/dados/fundos-europeus",
+  "/dados/fundos-europeus/concelho",
+  "/dados/fundos-europeus/municipio",
   "/dados/camara",
   "/dados/assembleia",
   "/dados/contratos/ajustes-diretos",
@@ -30,7 +35,12 @@ const paginas = [
   "/participa",
   "/loja",
   "/loja/donativos",
+  "/privacidade",
   ...autarquicasNav.map((i) => i.href),
+  // páginas geradas a partir dos dados: os candidatos, os dias do diário da campanha e cada indicador
+  ...candidatos.map((c) => `/autarquicas-2025/candidatos/${c.slug}`),
+  ...diario.map((d) => `/autarquicas-2025/diario/${d.dia}`),
+  ...indicadores.map((i) => `/dados/indicadores/${i.slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

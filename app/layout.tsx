@@ -21,12 +21,12 @@ const grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Iniciativa Liberal Trofa — Trofa Para Cima",
+  // Partilha (WhatsApp, Facebook): o título e a descrição são os de cada página; aqui fica só o que é comum.
   openGraph: {
-    title: "Iniciativa Liberal Trofa — Trofa Para Cima",
-    description: "Uma Trofa com mais liberdade começa aqui!",
     images: ["/images/geral/comunidade-destrave-trofa.jpeg"],
     locale: "pt_PT",
     type: "website",
+    siteName: "Iniciativa Liberal Trofa",
   },
   description:
     "Iniciativa Liberal Trofa: uma Trofa com mais liberdade começa aqui! Somos a energia que a Trofa precisa.",
@@ -36,8 +36,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-PT" className={`${jakarta.variable} ${grotesk.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
+        <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:font-bold focus:text-navy focus:shadow-lg">
+          Saltar para o conteúdo
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="conteudo" className="flex-1">{children}</main>
         <Footer />
         <Analytics />
         <DadosNucleo />

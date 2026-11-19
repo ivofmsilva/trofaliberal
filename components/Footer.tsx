@@ -54,7 +54,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-3 text-center text-xs text-white/50">
+      <div className="border-t border-white/10 py-3 text-center text-xs text-white/80">
         © {new Date().getFullYear()} Iniciativa Liberal — Núcleo da Trofa ·{" "}
         <Link href="/privacidade" className="underline underline-offset-2 hover:text-white">
           Privacidade e cookies

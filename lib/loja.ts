@@ -21,7 +21,7 @@ export const merchandising: ProdutoNacional[] = [
   { id: 39, nome: "Casaco Institucional", preco: "45,00 €", tamanhos: roupa },
   { id: 38, nome: "Boné Liberal", preco: "10,00 €" },
   { id: 52, nome: "Meias brancas “i”", preco: "8,00 €", tamanhos: ["36-40", "41-46"] },
-  { id: 51, nome: "Meias azul “i”", preco: "8,00 €", tamanhos: ["36-40", "41-46"] },
+  { id: 51, nome: "Meias azuis “i”", preco: "8,00 €", tamanhos: ["36-40", "41-46"] },
   { id: 74, nome: "Bloco de Notas Iniciativa Liberal 14x21", preco: "8,00 €" },
   { id: 73, nome: "Bloco de Notas “Portugal a Crescer” 14x21", preco: "8,00 €" },
   { id: 56, nome: "Caderno IL (Sebentas)", preco: "3,00 €" },

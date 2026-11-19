@@ -10,11 +10,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: { default: "Dados da Trofa — Iniciativa Liberal Trofa", template: "%s · Dados da Trofa" },
   description: "Indicadores, contas, contratos e decisões do concelho da Trofa, a partir de fontes públicas.",
-  // Nas partilhas, o portal de dados aparece com o seu próprio nome, e não com o lema do site.
-  openGraph: {
-    title: "Dados da Trofa",
-    description: "Indicadores, contas, contratos e decisões do concelho da Trofa, a partir de fontes públicas.",
-  },
+  // Nas partilhas, cada página aparece com o seu título ("Renda mediana… · Dados da Trofa"); a imagem vem do modelo geral.
 };
 
 export default function DadosLayout({ children }: { children: React.ReactNode }) {

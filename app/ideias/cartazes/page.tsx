@@ -88,7 +88,7 @@ export default function Cartazes() {
             Cartazes nacionais
           </h2>
           <p className="mt-3 max-w-2xl text-lg text-ink/75">
-            Os outdoors que fizeram a Iniciativa Liberal falar-se em todo o país: humor, ideias claras e uma estética
+            Os outdoors que puseram o país a falar da Iniciativa Liberal: humor, ideias claras e uma estética
             que ninguém confunde.
           </p>
           <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

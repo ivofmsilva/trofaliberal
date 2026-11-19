@@ -104,7 +104,7 @@ export default function Educacao() {
           {propostas.length} propostas em 4 eixos
         </h2>
         <p className="mt-4 max-w-3xl text-lg text-ink/80">
-          Três eixos são do que a Câmara Municipal pode fazer já. O quarto é o que exigimos ao Governo e
+          Três eixos tratam do que a Câmara Municipal pode fazer já. O quarto é o que exigimos ao Governo e
           à Assembleia da República. Carrega numa proposta para ver o porquê.
         </p>
         <div className="mt-10">

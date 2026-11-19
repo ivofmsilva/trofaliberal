@@ -71,7 +71,7 @@ export default function Loja() {
     <>
       <PageHero
         eyebrow="Loja"
-        title="Bem-vind@ à nossa loja!"
+        title="Bem-vindo à nossa loja!"
         image={{ src: "/images/loja/hero.jpeg", alt: "Apoiantes da IL Trofa com bandeiras", w: 730, h: 912 }}
       >
         Pins, canecas, t-shirts e malhas de Natal: tudo para mostrares, com orgulho, de que lado da liberdade

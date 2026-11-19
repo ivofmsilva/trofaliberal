@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Banner25Novembro from "@/components/Banner25Novembro";
@@ -15,6 +16,18 @@ import PedirConvite from "@/components/PedirConvite";
 import { ativasPorOrdem, diaDoConcelho, vinteCincoNovembro } from "@/lib/datasAnuais";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
+
+// Partilha da página inicial: a mesma de sempre (as outras páginas partilham-se com o seu título e descrição).
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Iniciativa Liberal Trofa — Trofa Para Cima",
+    description: "Uma Trofa com mais liberdade começa aqui!",
+    images: ["/images/geral/comunidade-destrave-trofa.jpeg"],
+    locale: "pt_PT",
+    type: "website",
+    siteName: "Iniciativa Liberal Trofa",
+  },
+};
 
 const principios = [
   {

@@ -2,19 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { milhoes, numero, sufixo, valor as fmtValor } from "@/lib/dados/formatar";
+import { ROTULO_GRUPO, ROTULO_GRUPO_LONGO } from "@/lib/dados/rotulos";
 
 export type Serie = { nome: string; valores: (number | null)[] };
 
 // Cada série tem o seu traço. A Trofa é sempre a linha violeta e grossa; as comparações são cinzentas e distinguem-se
 // também pelo traço (e pelo nome escrito no fim da linha), para não depender só da cor.
-// Ordem das colunas: Trofa, Área Metropolitana do Porto, Ave e concelhos vizinhos (grupo dos 8), Portugal.
+// Ordem das colunas: Trofa, Área Metropolitana do Porto, Ave e concelhos vizinhos (Trofa e vizinhos, 8 concelhos), Portugal.
 const ESTILOS = [
   { cor: "#6b3fd4", largura: 3, tracejado: "" },
-  { cor: "#9aa5b3", largura: 2, tracejado: "6 4" },
+  { cor: "#7d8794", largura: 2, tracejado: "6 4" },
   { cor: "#5f6b7a", largura: 2, tracejado: "" },
-  { cor: "#9aa5b3", largura: 2, tracejado: "2 4" },
+  { cor: "#7d8794", largura: 2, tracejado: "2 4" },
 ];
-const ROTULOS: Record<string, string> = { "Ave e concelhos vizinhos": "Grupo dos 8", "Área Metropolitana do Porto": "AMP" };
+const ROTULOS: Record<string, string> = { "Ave e concelhos vizinhos": ROTULO_GRUPO, "Área Metropolitana do Porto": "AMP" };
 
 function bonitos(min: number, max: number, n = 4) {
   if (min === max) return [min];
@@ -62,9 +63,9 @@ export default function Grafico({
   const [modo, setModo] = useState<"valores" | "comparar">("comparar");
   const [ativo, setAtivo] = useState<number | null>(null);
 
-  // No telemóvel o gráfico não se aperta: fica com uma largura mínima e desliza-se para o lado (começa nos anos mais recentes).
-  // Com poucos períodos cabe sempre, e não precisa de deslizar.
-  const LARGURA_MINIMA = periodos.length > 8 ? 600 : 0;
+  // O gráfico desenha-se à largura da caixa, também no telemóvel: com muitos anos, escrevem-se menos anos no eixo.
+  // (Antes tinha 600 px no mínimo e deslizava, e abria sem os números do eixo à vista.)
+  const LARGURA_MINIMA = 0;
   const largura = Math.max(larguraCaixa, LARGURA_MINIMA);
 
   useEffect(() => {
@@ -90,7 +91,13 @@ export default function Grafico({
     }
   }, [rolavel, largura]);
 
-  const podeComparar = !semComparar && series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
+  // Comparar a evolução (índice) não tem leitura quando a Trofa tem zeros ou valores negativos (um saldo, uma despesa
+  // que nalguns anos é zero): aí fica só a Trofa, e a comparação faz-se nas barras dos 8 concelhos.
+  // No índice, todas as linhas partem do mesmo ano: o primeiro em que todas as que têm dados têm valor.
+  const comAlgum = series.filter((s) => s.valores.some((v) => v !== null));
+  const iBase = periodos.findIndex((_, i) => comAlgum.every((s) => s.valores[i] !== null && (s.valores[i] as number) > 0));
+  const semIndice = !nivel && (series[0].valores.some((v) => v !== null && v <= 0) || iBase < 0 || iBase >= periodos.length - 1);
+  const podeComparar = !semComparar && !semIndice && series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
   const modoEfetivo = podeComparar ? modo : "valores";
 
   // No modo "comparar": os valores tal como são, quando se comparam diretamente; senão, cada série vira índice
@@ -103,9 +110,9 @@ export default function Grafico({
         : [series[0]]
       : nivel
         ? series
-        : series.map((s) => {
-            const base = s.valores.find((v) => v !== null);
-            return { nome: s.nome, valores: s.valores.map((v) => (v === null || !base ? null : (v / base) * 100)) };
+        : comAlgum.map((s) => {
+            const base = iBase >= 0 ? (s.valores[iBase] as number) : null;
+            return { nome: s.nome, valores: s.valores.map((v, i) => (v === null || !base || i < iBase ? null : (v / base) * 100)) };
           });
   const estiloDe = (nome: string) => ESTILOS[Math.max(0, series.findIndex((s) => s.nome === nome))] ?? ESTILOS[1];
 
@@ -130,15 +137,6 @@ export default function Grafico({
   const xMin = numerico ? Math.min(...anos) : 0;
   const xMax = numerico ? Math.max(...anos) : periodos.length - 1;
 
-  const altura = larguraCaixa < 520 ? 230 : 340;
-  // Com várias linhas, guarda-se espaço à direita para escrever o nome de cada uma no fim.
-  const comRotulos = visiveis.length > 1;
-  const m = { e: larguraCaixa < 520 ? 50 : 62, d: comRotulos ? (larguraCaixa < 520 ? 74 : 96) : 18, t: 16, b: 30 };
-  const w = largura - m.e - m.d;
-  const h = altura - m.t - m.b;
-  const X = (i: number) => m.e + (xMax === xMin ? w / 2 : (((numerico ? anos[i] : i) - xMin) / (xMax - xMin)) * w);
-  const Y = (v: number) => m.t + h - ((v - yMin) / (yMax - yMin)) * h;
-
   // As marcas do eixo escrevem-se todas com as mesmas casas decimais, as que o intervalo entre elas pede.
   const passoEixo = ticks.length > 1 ? ticks[1] - ticks[0] : 0;
   const eixoEmMilhoes = !emIndice && unidade === "€" && ticks.some((t) => Math.abs(t) >= 1_000_000);
@@ -148,6 +146,21 @@ export default function Grafico({
       : casas !== undefined && !emIndice
         ? numero(v, Math.max(casas, casasDoPasso(passoEixo))) + sufixo(unidade)
         : numero(v, casasDoPasso(passoEixo));
+
+  const altura = larguraCaixa < 520 ? 230 : 340;
+  // Com várias linhas, guarda-se espaço à direita para escrever o nome de cada uma no fim: tanto quanto o nome mais
+  // comprido (cerca de 6,7 px por letra a 11,5 px), para nenhum ficar cortado.
+  // Nomes compridos (os das Finanças, por exemplo) não cabem ao lado: aí fica só a legenda por baixo.
+  const maiorRotulo = Math.max(0, ...visiveis.map((s) => (ROTULOS[s.nome] ?? s.nome).length));
+  const comRotulos = visiveis.length > 1 && maiorRotulo <= 20 && larguraCaixa >= 520;
+  // À esquerda, espaço para o número mais comprido do eixo (cerca de 6,3 px por algarismo a 11 px).
+  const maiorMarca = Math.max(0, ...ticks.map((t) => fmtEixo(t).length));
+  const m = { e: Math.max(larguraCaixa < 520 ? 44 : 56, Math.ceil(12 + maiorMarca * 6.3)), d: comRotulos ? Math.ceil(14 + maiorRotulo * 6.7) : 18, t: 16, b: 30 };
+  const w = largura - m.e - m.d;
+  const h = altura - m.t - m.b;
+  const X = (i: number) => m.e + (xMax === xMin ? w / 2 : (((numerico ? anos[i] : i) - xMin) / (xMax - xMin)) * w);
+  const Y = (v: number) => m.t + h - ((v - yMin) / (yMax - yMin)) * h;
+
 
   const comDados = periodos.map((_, i) => i).filter((i) => visiveis.some((s) => s.valores[i] !== null));
   const passoRotulo = Math.max(1, Math.ceil(comDados.length / Math.max(2, Math.floor(w / 56))));
@@ -173,7 +186,7 @@ export default function Grafico({
   return (
     <div>
       {podeComparar && (
-        <div role="tablist" aria-label="Tipo de gráfico" className="mb-4 inline-flex rounded-full border border-linha bg-suave p-1 text-sm font-medium">
+        <div role="group" aria-label="Tipo de gráfico" className="mb-4 inline-flex rounded-full border border-linha bg-suave p-1 text-sm font-medium">
           {(
             [
               ["comparar", nivel ? "Comparar" : "Comparar a evolução"],
@@ -182,8 +195,8 @@ export default function Grafico({
           ).map(([id, rotulo]) => (
             <button
               key={id}
-              role="tab"
-              aria-selected={modo === id}
+              type="button"
+              aria-pressed={modo === id}
               onClick={() => setModo(id)}
               className={`rounded-full px-4 py-1.5 transition ${modo === id ? "bg-tinta text-white" : "text-texto hover:text-tinta"}`}
             >
@@ -199,7 +212,7 @@ export default function Grafico({
           width={largura}
           height={altura}
           role="img"
-          aria-label={`Gráfico de evolução: ${visiveis.map((s) => s.nome).join(", ")}`}
+          aria-label={`Gráfico de evolução: ${visiveis.map((s) => (s.nome === "Ave e concelhos vizinhos" ? ROTULO_GRUPO_LONGO : s.nome)).join(", ")}. Os valores estão na tabela abaixo.`}
           onPointerMove={aoMover}
           onPointerDown={aoMover}
           onPointerLeave={() => setAtivo(null)}
@@ -209,7 +222,7 @@ export default function Grafico({
           {ticks.map((t) => (
             <g key={t}>
               <line x1={m.e} x2={largura - m.d} y1={Y(t)} y2={Y(t)} stroke="#e4e4e0" strokeWidth="1" />
-              <text x={m.e - 8} y={Y(t) + 4} textAnchor="end" fontSize="11" fill="#777">
+              <text x={m.e - 8} y={Y(t) + 4} textAnchor="end" fontSize="12" fill="#666">
                 {fmtEixo(t)}
               </text>
             </g>
@@ -218,9 +231,9 @@ export default function Grafico({
             <line x1={m.e} x2={largura - m.d} y1={Y(100)} y2={Y(100)} stroke="#9a9a96" strokeWidth="1" strokeDasharray="2 3" />
           )}
           {comDados
-            .filter((_, k) => k % passoRotulo === 0 || k === comDados.length - 1)
+            .filter((_, k) => k === comDados.length - 1 || (k % passoRotulo === 0 && X(comDados[comDados.length - 1]) - X(comDados[k]) >= 48))
             .map((i) => (
-              <text key={i} x={X(i)} y={altura - 8} textAnchor="middle" fontSize="11" fill="#777">
+              <text key={i} x={X(i)} y={altura - 8} textAnchor="middle" fontSize="12" fill="#666">
                 {periodos[i]}
               </text>
             ))}
@@ -266,6 +279,12 @@ export default function Grafico({
                 .filter((f): f is { nome: string; x: number; y: number; trofa: boolean } => f !== null)
                 .sort((a, b) => a.y - b.y);
               for (let k = 1; k < fins.length; k++) if (fins[k].y - fins[k - 1].y < 13) fins[k].y = fins[k - 1].y + 13;
+              // Sem passar para baixo do eixo (onde estão os anos): se o último sair, sobem todos o que for preciso.
+              const limite = m.t + h - 4;
+              if (fins.length && fins[fins.length - 1].y > limite) {
+                fins[fins.length - 1].y = limite;
+                for (let k = fins.length - 2; k >= 0; k--) if (fins[k + 1].y - fins[k].y < 13) fins[k].y = fins[k + 1].y - 13;
+              }
               return fins.map((f) => (
                 <text key={f.nome} x={f.x + 8} y={f.y + 4} fontSize="11.5" fontWeight={f.trofa ? 700 : 500} fill={f.trofa ? "#1d2136" : "#4a5066"}>
                   {ROTULOS[f.nome] ?? f.nome}
@@ -290,7 +309,7 @@ export default function Grafico({
                     {ROTULOS[s.nome] ?? s.nome}
                   </span>
                   <span className="font-medium tabular-nums text-tinta">
-                    {v === null ? "—" : emIndice ? numero(v, 1) : emMilhoes ? milhoes(original) : fmtValor(original, unidade)}
+                    {v === null ? "—" : emIndice ? `${emMilhoes ? milhoes(original) : fmtValor(original, unidade)} (${numero(v, 1)})` : emMilhoes ? milhoes(original) : fmtValor(original, unidade)}
                   </span>
                 </p>
               );
@@ -300,6 +319,15 @@ export default function Grafico({
        </div>
       </div>
       {rolavel && <p className="mt-1 text-xs text-apagado">Desliza o gráfico para o lado para ver todos os anos.</p>}
+      {emIndice && iBase >= 0 && (
+        <p className="mt-2 text-sm text-apagado">
+          Evolução de cada linha desde {periodos[iBase]} ({periodos[iBase]} = 100). Mostra quem cresceu mais, não quem tem mais; os
+          valores estão na tabela.
+        </p>
+      )}
+      {semIndice && !semComparar && series.length > 1 && (
+        <p className="mt-2 text-sm text-apagado">A comparação com os outros concelhos está nas barras dos 8 concelhos, mais abaixo.</p>
+      )}
 
       <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-texto">
         {visiveis.map((s) => {
@@ -309,7 +337,7 @@ export default function Grafico({
               <svg width="22" height="8" aria-hidden>
                 <line x1="0" y1="4" x2="22" y2="4" stroke={est.cor} strokeWidth={est.largura} strokeDasharray={est.tracejado} />
               </svg>
-              {s.nome === "Ave e concelhos vizinhos" ? "Grupo dos 8 (Ave e concelhos vizinhos)" : s.nome}
+              {s.nome === "Ave e concelhos vizinhos" ? ROTULO_GRUPO_LONGO : s.nome}
             </li>
           );
         })}

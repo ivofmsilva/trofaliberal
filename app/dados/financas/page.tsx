@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ROTULO_GRUPO } from "@/lib/dados/rotulos";
 import Grafico from "@/components/dados/Grafico";
 import TaxasLocais from "@/components/dados/TaxasLocais";
 import { compacto, milhoes, numero } from "@/lib/dados/formatar";
@@ -35,7 +36,8 @@ export const metadata: Metadata = {
 };
 
 const ultimo = (s: SerieContas) => s.valores[s.valores.length - 1];
-const pc = (v: number | null, casas = 0) => (v === null ? "—" : `${v > 0 ? "+" : ""}${numero(v, casas)}%`);
+// variação com sinal: "+66%" e "−65%" (sinal de menos verdadeiro, não o hífen)
+const pc = (v: number | null, casas = 0) => (v === null ? "—" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${numero(Math.abs(v), casas)}%`);
 const m = (v: number | null, casas = 2) => (v === null ? "—" : numero(v / 1_000_000, casas));
 
 function Quadros({ itens }: { itens: SerieContas[] }) {
@@ -55,10 +57,14 @@ function Quadros({ itens }: { itens: SerieContas[] }) {
 
 // Só aparecem os anos em que alguma das séries tem valor, e a coluna "Desde o 1.º ano" só quando há o que mostrar.
 function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: boolean }) {
-  const anos = ANOS.map((a, k) => ({ a, k })).filter(({ k }) => series.some((s) => s.valores[k] !== null));
+  // do ano mais recente para o mais antigo (como nas tabelas dos indicadores), para o último ano estar sempre à vista
+  const anos = ANOS.map((a, k) => ({ a, k }))
+    .filter(({ k }) => series.some((s) => s.valores[k] !== null))
+    .reverse();
   const crescimentos = series.map((s) => crescimento(s.valores));
   const comCrescimento = crescimentos.some((c) => c !== null);
   return (
+    <>
     <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full text-sm" style={{ minWidth: `${14 + anos.length * 4}rem` }}>
         <thead className="bg-cinza text-left text-apagado">
@@ -66,16 +72,16 @@ function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: bool
             <th scope="col" className="sticky left-0 bg-cinza px-4 py-3 font-medium">
               {euros ? "Em euros por habitante (contas da Câmara)" : "Em milhões de euros"}
             </th>
-            {anos.map(({ a }) => (
-              <th key={a} scope="col" className="px-3 py-3 text-right font-medium">
-                {a}
-              </th>
-            ))}
             {comCrescimento && (
               <th scope="col" className="px-4 py-3 text-right font-medium">
                 Desde o 1.º ano
               </th>
             )}
+            {anos.map(({ a }) => (
+              <th key={a} scope="col" className="px-3 py-3 text-right font-medium">
+                {a}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -85,6 +91,7 @@ function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: bool
                 {s.nome}
                 <span className="block text-xs font-normal text-apagado">desde {primeiroAno(s)}</span>
               </th>
+              {comCrescimento && <td className="whitespace-nowrap px-4 py-2.5 text-right font-medium text-tinta">{pc(crescimentos[n])}</td>}
               {anos.map(({ a, k }) => {
                 const v = s.valores[k];
                 return (
@@ -93,13 +100,19 @@ function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: bool
                   </td>
                 );
               })}
-              {comCrescimento && <td className="whitespace-nowrap px-4 py-2.5 text-right font-medium text-tinta">{pc(crescimentos[n])}</td>}
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+    <AvisoDeslizar />
+    </>
   );
+}
+
+// Aviso por baixo das tabelas largas (só no telemóvel, onde deslizam).
+function AvisoDeslizar() {
+  return <p className="mt-2 text-xs text-apagado sm:hidden">Desliza a tabela para o lado para ver os outros anos.</p>;
 }
 
 function Titulo({ id, children, texto }: { id: string; children: React.ReactNode; texto: React.ReactNode }) {
@@ -183,7 +196,7 @@ export default function Financas() {
             id="pessoal"
             texto={
               <>
-                As contas mostram os gastos com pessoal de duas maneiras: o que foi <strong className="font-semibold text-tinta">pago</strong> no ano (contabilidade orçamental, disponível desde 2010) e os <strong className="font-semibold text-tinta">gastos</strong> do ano (contabilidade patrimonial, só desde 2021, quando passou a SNC-AP). Não são iguais, mas contam a mesma história.
+                As contas mostram os gastos com pessoal de duas maneiras: o que foi <strong className="font-semibold text-tinta">pago</strong> no ano (contabilidade orçamental, disponível desde 2010) e os <strong className="font-semibold text-tinta">gastos</strong> do ano (contabilidade patrimonial, só desde 2021, quando passou a SNC-AP). Não são iguais, porque medem coisas diferentes, mas evoluem de forma parecida.
               </>
             }
           >
@@ -333,8 +346,8 @@ export default function Financas() {
           </Titulo>
           <div className="max-w-3xl">
             <Grafico
-              periodos={ANOS.slice(1, 15)}
-              series={[porHabitante(despesaPessoalPaga, "Despesas com pessoal pagas"), porHabitante(receitaCorrente, "Receitas correntes"), porHabitante(dividaEfetiva, "Dívida efetiva")].map((x) => ({ nome: x.nome, valores: x.valores.slice(1, 15) }))}
+              periodos={ANOS.slice(1)}
+              series={[porHabitante(despesaPessoalPaga, "Despesas com pessoal pagas"), porHabitante(receitaCorrente, "Receitas correntes"), porHabitante(dividaEfetiva, "Dívida efetiva")].map((x) => ({ nome: x.nome, valores: x.valores.slice(1) }))}
               unidade="€"
               semComparar
             />
@@ -349,8 +362,7 @@ export default function Financas() {
 
           <h3 className="mt-10 text-lg font-bold text-tinta">Receitas por habitante: a Trofa e a sua região</h3>
           <p className="mt-2 max-w-2xl text-texto">
-            O que a Câmara cobra por habitante, comparado com a Área Metropolitana do Porto e com o grupo “Ave e concelhos vizinhos”
-            (um agregado que já vem feito do portal de onde se recolheram os indicadores; ver{" "}
+            O que a Câmara cobra por habitante, ao lado da Área Metropolitana do Porto e de Trofa e vizinhos (os 8 concelhos; ver{" "}
             <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
               Fontes
             </Link>
@@ -373,7 +385,7 @@ export default function Financas() {
                   </th>
                   {COLUNAS_COMPARACAO.map((c) => (
                     <th key={c} scope="col" className="px-3 py-3 text-right font-medium">
-                      {c}
+                      {c === "Ave e concelhos vizinhos" ? ROTULO_GRUPO : c}
                     </th>
                   ))}
                 </tr>
@@ -393,12 +405,12 @@ export default function Financas() {
             </table>
           </div>
           <p className="mt-3 max-w-3xl text-sm text-apagado">
-            Fonte: INE (receitas dos municípios, a partir da Direção-Geral das Autarquias Locais), através do portal de onde se
-            recolheram os indicadores, e população média anual residente. Os agregados juntam concelhos de dimensões muito diferentes; para comparar com concelhos concretos, vê os indicadores de{" "}
-            <Link href="/dados#ambiente" className="underline underline-offset-2 hover:text-tinta">
-              água, saneamento e ambiente
+            Fonte: INE (receitas das câmaras municipais, com dados da Direção-Geral das Autarquias Locais) e população média anual
+            residente. Para ver cada um dos 8 concelhos, abre o indicador (por exemplo,{" "}
+            <Link href="/dados/indicadores/receita_imi" className="underline underline-offset-2 hover:text-tinta">
+              Receita de IMI
             </Link>
-            , que trazem Santo Tirso, a Maia, Vila do Conde e Vila Nova de Famalicão.
+            ).
           </p>
         </section>
 

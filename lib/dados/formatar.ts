@@ -79,8 +79,13 @@ export function tituloProjeto(titulo: string): string {
   return /^[-–—\s]*$/.test(t) ? "Sem título no ficheiro de origem" : t;
 }
 
-// Unidade sem o símbolo inicial, para ler por baixo do número ("% dos votos" → "dos votos").
+// Unidade para ler por baixo do número: "%" sozinho não se repete (já está no número), mas "% dos votos" lê-se inteiro;
+// "€" → "euros", "€/m²" → "euros por m²", "€ por habitante" → "euros por habitante".
 export function legenda(unidade: string): string {
-  const t = unidade.replace(/^(%|‰)\s*/, "").replace(/^€\s*/, "euros ").trim();
+  const t = unidade
+    .replace(/^(%|‰)\s*$/, "")
+    .replace(/^€\s*\/\s*/, "euros por ")
+    .replace(/^€\s*/, "euros ")
+    .trim();
   return t.replace(/^\((.*)\)$/, "$1");
 }

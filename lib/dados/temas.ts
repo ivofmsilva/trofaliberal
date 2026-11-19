@@ -1,7 +1,8 @@
 // Como se arrumam os indicadores nas páginas. Para mudar a ordem, o nome de um tema ou levar um
 // indicador para outro tema, basta editar esta lista (os "slugs" são os nomes em data/indicadores-novo.json).
-// Em cada tema, os primeiros "principais" indicadores ficam à vista e os restantes num "ver mais".
-export type Tema = { id: string; titulo: string; texto: string; slugs: string[]; principais: number };
+// A ordem dos "slugs" é a ordem dos cartões (os primeiros "principais" são os mais importantes do tema). "verTambem" liga o
+// tema às páginas com o mesmo assunto.
+export type Tema = { id: string; titulo: string; texto: string; slugs: string[]; principais: number; verTambem?: { texto: string; href: string }[] };
 
 export const temas: Tema[] = [
   {
@@ -78,12 +79,18 @@ export const temas: Tema[] = [
   {
     id: "educacao",
     titulo: "Educação",
-    texto: "Alunos por nível de ensino e pré-escolar.",
+    texto: "Escolaridade da população, resultados escolares, alunos por nível de ensino e pré-escolar.",
     principais: 4,
     slugs: [
+      "populacao_ensino_superior",
+      "populacao_ensino_secundario",
+      "taxa_conclusao_secundario",
+      "taxa_retencao_basico",
       "alunos_matriculados",
       "taxa_bruta_pre_escolarizacao",
       "alunos_ensino_privado_percentagem",
+      "populacao_3_ciclo",
+      "taxa_analfabetismo",
       "alunos_pre_escolar",
       "alunos_1_ciclo",
       "alunos_2_ciclo",
@@ -155,6 +162,11 @@ export const temas: Tema[] = [
       "eletricidade_industria_percentagem",
       "eletricidade_iluminacao_publica_por_habitante",
       "eletricidade_consumo_total",
+      "eletricidade_consumo_domestico",
+      "eletricidade_consumo_industria",
+      "eletricidade_consumo_servicos",
+      "eletricidade_consumo_agricultura",
+      "eletricidade_iluminacao_publica",
       "gas_natural_domestico_por_1000_habitantes",
       "acessos_banda_larga",
     ],
@@ -189,12 +201,14 @@ export const temas: Tema[] = [
   },
   {
     id: "financas",
+    verTambem: [{ texto: "Ver também as contas da Câmara", href: "/dados/financas" }],
     titulo: "Finanças do município",
     texto: "De onde vem o dinheiro da Câmara, a dívida e o prazo de pagamento.",
     principais: 4,
     slugs: [
       "receita_total_municipal",
       "divida_por_habitante",
+      "divida_total_municipio",
       "divida_percentagem_limite",
       "prazo_medio_pagamentos",
       "receita_imi",
@@ -207,6 +221,10 @@ export const temas: Tema[] = [
   },
   {
     id: "democracia",
+    verTambem: [
+      { texto: "Ver também como vota a Câmara", href: "/dados/camara" },
+      { texto: "Ver também como vota a Assembleia", href: "/dados/assembleia" },
+    ],
     titulo: "Democracia",
     texto: "Participação nas eleições autárquicas.",
     principais: 4,

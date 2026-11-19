@@ -23,7 +23,7 @@ const passosAdesao = [
   },
   {
     titulo: "Já És Membro",
-    texto: "Depois de aprovado, já podes participar na vida interna do partido, nos fóruns de discussão e eventos.",
+    texto: "Depois de aprovado, já podes participar na vida interna do partido, nos fóruns de discussão e nos eventos.",
   },
 ];
 
@@ -38,8 +38,8 @@ const passosDenuncia = [
   { titulo: "Escolhe a Freguesia", texto: "Diz-nos onde ocorre o problema." },
   { titulo: "Descreve o Problema", texto: "Uma breve descrição e, se possível, a morada." },
   {
-    titulo: "Junta fotos ou documentos (opcional)",
-    texto: `Neste formulário não é possível anexar ficheiros. Envia-as para ${links.email}, a indicar a freguesia e a morada.`,
+    titulo: "Tens fotos ou documentos? (opcional)",
+    texto: `Neste formulário não é possível anexar ficheiros. Envia-os para ${links.email}, com a freguesia e a morada.`,
   },
 ];
 
@@ -61,7 +61,7 @@ const separadores: Separador[] = [
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">És Liberal e Não Sabias?</h2>
           <p className="mt-3 text-ink/75">
             Junta-te a nós. Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo
-            para a Trofa e Portugal.
+            para a Trofa e para Portugal.
           </p>
           <ul className="mt-6 space-y-3">
             {razoes.map((r, i) => (
@@ -242,13 +242,7 @@ const separadores: Separador[] = [
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div className="space-y-6">
-          <div className="rounded-2xl bg-navy p-8 text-white">
-            <h2 className="font-display text-2xl font-bold">Email</h2>
-            <a href={`mailto:${links.email}`} className="mt-3 inline-block font-bold text-sun hover:underline">
-              {links.email}
-            </a>
-          </div>
-          <div className="rounded-2xl bg-navy p-8 text-white">
+          <div id="whatsapp" className="scroll-mt-24 rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">WhatsApp</h2>
             <p className="mt-2 text-white/75">
               Queres fazer parte da comunidade de liberais trofenses? Deixa o nome e o telefone e enviamos-te o convite para o grupo.
@@ -265,6 +259,12 @@ const separadores: Separador[] = [
                 ]}
               />
             </div>
+          </div>
+          <div className="rounded-2xl bg-navy p-8 text-white">
+            <h2 className="font-display text-2xl font-bold">Email</h2>
+            <a href={`mailto:${links.email}`} className="mt-3 inline-block font-bold text-sun hover:underline">
+              {links.email}
+            </a>
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
             <h2 className="font-display text-2xl font-bold">Redes Sociais</h2>

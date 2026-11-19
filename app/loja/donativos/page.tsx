@@ -23,7 +23,7 @@ export default function Donativos() {
             termos da lei do financiamento dos partidos (Lei n.º 19/2003) e da Lei Orgânica n.º 2/2005.
           </p>
           <p className="rounded-2xl border-l-4 border-pink bg-mist p-5 text-base">
-            Lembra-te que todas as transferências devem obrigatoriamente ser feitas por pessoas
+            Lembra-te de que todas as transferências devem obrigatoriamente ser feitas por pessoas
             singulares e de contas bancárias pessoais. Transferências de contas empresariais são
             ilegais e terão de ser devolvidas.
           </p>

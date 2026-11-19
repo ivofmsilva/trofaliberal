@@ -198,7 +198,7 @@ export const pontos: Ponto[] = [
       {
         medidas: [
           "Apoio a cooperativas habitacionais privadas, com acesso simplificado a terrenos municipais",
-          "Co-habitação, sobretudo intergeracional, entre seniores ativos e jovens ou pessoas de meia-idade",
+          "Coabitação, sobretudo intergeracional, entre seniores ativos e jovens ou pessoas de meia-idade",
           "Estúdios de curta duração, até seis meses, para quem inicia atividade na Trofa",
           "Projetos híbridos que juntem habitação, serviços e comércio, para reduzir deslocações",
           "Projetos-piloto de habitação modular, rápida e sustentável",

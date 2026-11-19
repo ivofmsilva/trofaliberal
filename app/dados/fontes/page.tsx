@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 type Fonte = { nome: string; texto: string; ligacoes: { nome: string; url: string }[] };
 
-// Os 8 concelhos da coluna de comparação "Ave e concelhos vizinhos" (o grupo dos 8).
+// Os 8 concelhos da coluna de comparação "Trofa e vizinhos" (nos dados: "Ave e concelhos vizinhos").
 const GRUPO_8 = ["Trofa", "Santo Tirso", "Maia", "Vila do Conde", "Vila Nova de Famalicão", "Guimarães", "Vizela", "Fafe"];
 
 export default function Fontes() {
@@ -49,7 +49,7 @@ export default function Fontes() {
     },
     {
       nome: "Portal de dados abertos da Iniciativa Liberal de Lousada",
-      texto: `A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada ao município da Trofa. Hoje, ${conta(nossos)} são recolhidos diretamente por nós ao INE e ao IEFP. Os outros ${doPortal} vêm desse portal, que também já usa o grupo dos 8 concelhos: os da DGAL, da DGEG e da APA, alguns calculados a partir de outros indicadores e os que ainda não recolhemos.`,
+      texto: `A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada ao município da Trofa. Hoje, ${conta(nossos)} são recolhidos diretamente por nós ao INE e ao IEFP. Os outros ${doPortal} vêm desse portal, que também já usa estes 8 concelhos: os da DGAL, da DGEG e da APA, alguns calculados a partir de outros indicadores e os que ainda não recolhemos.`,
       ligacoes: [],
     },
     {
@@ -107,7 +107,7 @@ export default function Fontes() {
       <p className="mt-4 text-texto">Cada indicador mostra a Trofa ao lado de três comparações:</p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-texto">
         <li>
-          <b className="text-tinta">Grupo dos 8</b> (Ave e concelhos vizinhos): {GRUPO_8.slice(0, -1).join(", ")} e {GRUPO_8.at(-1)};
+          <b className="text-tinta">Trofa e vizinhos</b> (8 concelhos): {GRUPO_8.slice(0, -1).join(", ")} e {GRUPO_8.at(-1)};
         </li>
         <li>
           <b className="text-tinta">Área Metropolitana do Porto</b>, a que a Trofa pertence (17 concelhos);
@@ -117,7 +117,7 @@ export default function Fontes() {
         </li>
       </ul>
       <p className="mt-4 text-texto">
-        Os valores da Área Metropolitana e de Portugal são os que a fonte publica. O do grupo dos 8 é calculado por nós a
+        Os valores da Área Metropolitana e de Portugal são os que a fonte publica. O de Trofa e vizinhos é calculado por nós a
         partir dos valores dos 8 concelhos:
       </p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-texto">
@@ -146,10 +146,10 @@ export default function Fontes() {
         Na página de cada indicador está escrito qual destas contas se usou.
       </p>
       <p className="mt-4 text-texto">
-        Se faltar o valor de um dos 8 concelhos num ano, o grupo fica sem valor nesse ano. Nos indicadores que vêm do portal
-        de origem, o grupo dos 8 é o calculado nesse portal. Nas taxas, esse portal usa a média simples dos 8 concelhos,
-        em que cada concelho conta o mesmo, seja qual for o tamanho. Por isso, nesses indicadores, o valor pode ser um
-        pouco diferente do que daria a nossa conta.
+        Se faltar o valor de um dos 8 concelhos num ano, Trofa e vizinhos fica sem valor nesse ano. Nos indicadores que ainda
+        vêm do portal de origem, o valor de Trofa e vizinhos é o calculado nesse portal: nos totais é a soma dos 8 e nas
+        taxas é o total dos 8 a dividir pelo total dos 8, a mesma conta que fazemos. A exceção é o prazo médio de
+        pagamentos, em que não sabemos que conta o portal fez para os três valores de comparação.
       </p>
 
       <h2 className="mt-12 text-xl font-bold text-tinta">Séries que mudaram</h2>

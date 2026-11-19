@@ -1,8 +1,9 @@
 // Todos os indicadores, já juntados por scripts/juntar-indicadores.mjs (INE e IEFP recolhidos por nós; DGAL, DGEG, APA e
-// os calculados vêm do portal de origem). As colunas são sempre Trofa, AMP, grupo dos 8 e Portugal.
+// os calculados vêm do portal de origem). As colunas são sempre Trofa, AMP, Trofa e vizinhos (8 concelhos) e Portugal.
 import bruto from "@/lib/dados/data/indicadores-novo.json";
 import { variacao, variacaoPP } from "./formatar";
 import { destaques, temas, temaDe } from "./temas";
+import { ROTULO_GRUPO } from "./rotulos";
 
 export type Ponto = { v: number | null; var: number | null };
 export type Linha = {
@@ -20,6 +21,8 @@ export type Indicador = {
   colunas: string[];
   linhas: Linha[];
   texto?: string | null;
+  // palavras do dia a dia para a pesquisa ("casa", "lixo", "impostos"); não aparecem na página
+  palavras?: string | null;
   // código no INE (e o da série antiga, quando os anos mais antigos vêm de outro código)
   ine?: string;
   ineAntigo?: string | null;
@@ -49,15 +52,25 @@ export function ultimo(i: Indicador) {
   return null;
 }
 
-// Variação de um valor face ao anterior da mesma coluna: em percentagem ou, quando o indicador já é uma percentagem,
-// em pontos percentuais. Sem valor anterior não há variação.
+// Variação de um valor face ao anterior da mesma coluna, e o período com que se compara ("desde"): em percentagem ou,
+// quando o indicador já é uma percentagem, em pontos percentuais. Sem valor anterior não há variação. O sinal sai dos
+// valores (e não da variação arredondada): uma descida de 0,02% é "▼ menos de 0,1%" e não "＝ 0,0%".
 export function variacaoDe(i: Indicador, linha: number, coluna = 0) {
-  const p = i.linhas[linha]?.valores[coluna];
-  if (!p || p.v === null || p.var === null) return null;
-  if (!i.unidade.startsWith("%")) return variacao(p.var);
+  const atual = i.linhas[linha]?.valores[coluna]?.v ?? null;
+  if (atual === null) return null;
   for (let k = linha - 1; k >= 0; k--) {
     const anterior = i.linhas[k].valores[coluna]?.v ?? null;
-    if (anterior !== null) return variacaoPP(p.v, anterior);
+    if (anterior === null) continue;
+    const desde = i.linhas[k].periodo;
+    if (i.unidade.startsWith("%")) {
+      const v = variacaoPP(atual, anterior);
+      return v && { ...v, desde };
+    }
+    if (anterior === 0) return null;
+    const v = variacao(((atual - anterior) / Math.abs(anterior)) * 100);
+    if (!v) return null;
+    if (atual !== anterior && v.texto === "0,0%") return { texto: "menos de 0,1%", sinal: atual > anterior ? ("sobe" as const) : ("desce" as const), desde };
+    return { ...v, sinal: atual > anterior ? ("sobe" as const) : atual < anterior ? ("desce" as const) : ("igual" as const), desde };
   }
   return null;
 }
@@ -74,21 +87,16 @@ export function emMilhoes(i: Indicador): boolean {
 
 // Colunas de comparação, pela ordem em que aparecem nos cartões (a Trofa primeiro).
 export const NOME_GRUPO = "Ave e concelhos vizinhos";
-const ROTULO: Record<string, string> = { [NOME_GRUPO]: "Grupo dos 8", "Área Metropolitana do Porto": "Área Metropolitana" };
+const ROTULO: Record<string, string> = { [NOME_GRUPO]: ROTULO_GRUPO, "Área Metropolitana do Porto": "Área Metropolitana" };
 export const rotuloColuna = (c: string) => ROTULO[c] ?? c;
 
-// Os valores das colunas comparam-se diretamente quando têm a mesma ordem de grandeza (taxas, valores por habitante,
-// medianas). Quando a coluna de comparação é uma soma (população, empresas, euros), compara-se só a evolução.
+// Os valores das colunas comparam-se diretamente nas taxas, nos valores por habitante e nas medianas. Quando as colunas
+// de comparação são totais (população, empresas, euros, MWh), compara-se a evolução. Decide-se pela conta do grupo
+// (que diz se é um total) e, nos que vêm do portal de origem, pela unidade.
 export function comparavelEmNivel(i: Indicador): boolean {
-  const g = i.colunas.indexOf(NOME_GRUPO);
-  for (let k = i.linhas.length - 1; k >= 0; k--) {
-    const t = i.linhas[k].valores[0]?.v, v = i.linhas[k].valores[g]?.v;
-    if (t != null && v != null && t !== 0) {
-      const r = v / t;
-      return r > 0.25 && r < 4;
-    }
-  }
-  return false;
+  if (i.metodoGrupo === "soma") return false;
+  if (i.metodoGrupo && i.metodoGrupo !== "portal") return true;
+  return /^%|‰| por | por$|dias|habitante|consumidor/.test(i.unidade);
 }
 
 // Comparação do último período da Trofa com as outras colunas: valor e variação de cada uma.

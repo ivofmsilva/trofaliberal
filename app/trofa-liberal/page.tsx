@@ -155,11 +155,11 @@ export default function Sobre() {
         <div className="space-y-5 text-lg text-ink/85">
           <p>
             Acreditamos que a Trofa tem potencial para ser um dos concelhos mais prósperos e
-            inovadores de Portugal. Para isso precisamos de inovar na câmara, tirar burocracia, ter
+            inovadores de Portugal. Para isso precisamos de inovar na Câmara, cortar na burocracia, ter
             menos impostos e mais confiança nas pessoas e nas empresas que aqui vivem e trabalham.
           </p>
           <p>
-            Não somos um partido como os outros. Não prometemos tudo a todos. Apenas prometemos
+            Não somos um partido como os outros. Não prometemos tudo a todos. Prometemos apenas
             defender a liberdade em todas as suas vertentes, porque acreditamos que são as
             pessoas, não os políticos, que devem decidir o seu futuro.
           </p>

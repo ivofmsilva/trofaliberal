@@ -35,7 +35,7 @@ export default function Candidatos() {
                   <p className="mt-1 text-xs font-bold uppercase tracking-widest text-sun">{c.cargo}</p>
                   <p className="mt-3 text-sm text-white/80">“{c.frase}”</p>
                   <span className="mt-4 inline-block text-sm font-bold text-sun group-hover:underline">
-                    Conhecer {c.nome.split(" ")[0]} →
+                    Conhecer {c.nome.split(" ").slice(0, c.nome.startsWith("José ") ? 2 : 1).join(" ")} →
                   </span>
                 </div>
               </Link>

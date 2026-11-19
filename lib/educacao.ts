@@ -198,7 +198,7 @@ export const propostas: Proposta[] = [
     titulo: "Mais autonomia para as escolas públicas",
     resumo: "Dar às escolas públicas mais autonomia na gestão do orçamento e do plano curricular.",
     porque:
-      "A investigação internacional mostra que as escolas com mais autonomia e responsabilidade local produzem melhores resultados. Portugal tem um dos sistemas mais centralizados da OCDE, e os resultados vêem-se. A Trofa tem realidades educativas bastante distintas no seu território e precisa de mais autonomia para as superar: escolas mais ágeis, inovadoras e responsáveis.",
+      "A investigação internacional mostra que as escolas com mais autonomia e responsabilidade local produzem melhores resultados. Portugal tem um dos sistemas mais centralizados da OCDE, e os resultados veem-se. A Trofa tem realidades educativas bastante distintas no seu território e precisa de mais autonomia para as superar: escolas mais ágeis, inovadoras e responsáveis.",
   },
   {
     id: "4.5",

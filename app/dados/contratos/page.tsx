@@ -47,6 +47,7 @@ export default function Contratos() {
         <div className="grid gap-12 lg:grid-cols-3">
           <section aria-label="Por ano">
             <h2 className="text-lg font-bold text-tinta">Por ano</h2>
+            {r.anos.at(-1)?.ano === new Date().getFullYear() && <p className="mt-1 text-sm text-apagado">{r.anos.at(-1)?.ano} ainda não acabou.</p>}
             <ul className="mt-4 space-y-3">
               {r.anos.map((a) => (
                 <li key={a.ano}>
@@ -74,7 +75,7 @@ export default function Contratos() {
                   rotulo: p.nome,
                   valor: p.valor,
                   texto: compacto(p.valor, "€"),
-                  extra: `${numero(p.n)}`,
+                  extra: `${numero(p.n)} ${p.n === 1 ? "contrato" : "contratos"}`,
                 }))}
               />
             </div>
@@ -89,7 +90,7 @@ export default function Contratos() {
                   rotulo: separarEmpresa(e.nome).nome,
                   valor: e.valor,
                   texto: compacto(e.valor, "€"),
-                  extra: `${numero(e.n)}`,
+                  extra: `${numero(e.n)} ${e.n === 1 ? "contrato" : "contratos"}`,
                 }))}
               />
             </div>
@@ -102,7 +103,7 @@ export default function Contratos() {
             <p className="mt-2 mb-6 max-w-2xl text-texto">Valor dos contratos por área (a partir do código CPV, o vocabulário europeu do que se compra).</p>
             <Barras
               titulo="Valor dos contratos por área"
-              itens={areas.map((a) => ({ rotulo: a.nome, valor: a.valor, texto: compacto(a.valor, "€"), extra: `${numero(a.n)}` }))}
+              itens={areas.map((a) => ({ rotulo: a.nome, valor: a.valor, texto: compacto(a.valor, "€"), extra: `${numero(a.n)} ${a.n === 1 ? "contrato" : "contratos"}` }))}
             />
           </div>
           <Link href="/dados/contratos/ajustes-diretos" className="group flex flex-col self-start rounded-2xl border border-linha p-6 transition hover:border-tinta">

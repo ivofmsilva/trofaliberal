@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Metro para a Trofa — Iniciativa Liberal Trofa",
   // A frase principal primeiro (o Google corta perto dos 155 carateres); as estações ajudam quem as pesquisa.
   description:
-    "A IL Trofa defende o metro ligeiro até ao Interface da Trofa, sem transbordo no Muro. Estações previstas: Ribela, Muro, Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface.",
+    "A IL Trofa defende o metro ligeiro até à Interface da Trofa, sem transbordo no Muro. Estações previstas: Ribela, Muro, Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface.",
   openGraph: {
     title: "Metro ligeiro até à Trofa — Iniciativa Liberal Trofa",
     description: "Esperámos mais de 9000 dias. Agora é a nossa vez.",
@@ -211,10 +211,10 @@ export default function Metro() {
         </div>
       </section>
 
-      {/* Porque o metro até ao Interface (os nossos argumentos) */}
+      {/* Porque o metro até à Interface (os nossos argumentos) */}
       <section className="bg-navy py-20 text-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className={`${etiqueta} text-sun`}>Porque defendemos o metro até ao Interface</p>
+          <p className={`${etiqueta} text-sun`}>Porque defendemos o metro até à Interface</p>
           <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">
             Mudar de veículo a meio do caminho não faz sentido
           </h2>

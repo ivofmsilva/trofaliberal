@@ -155,7 +155,7 @@ export function porHabitante(s: SerieContas, nome?: string): SerieContas {
   };
 }
 
-// Receitas dos municípios por habitante: a Trofa, a Área Metropolitana do Porto e "Ave e concelhos vizinhos" (agregados do INE),
+// Receitas dos municípios por habitante: a Trofa, a Área Metropolitana do Porto e "Ave e concelhos vizinhos" (nas páginas: "Trofa e vizinhos", os 8 concelhos),
 // no último ano em que há dados dos três.
 const RECEITAS = [
   ["receita_total_municipal", "Receita total"],

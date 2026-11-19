@@ -37,7 +37,7 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
   }, [parado, atual, ir]);
 
   const seta =
-    "pointer-events-auto absolute top-1/2 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-white/95 text-2xl font-bold text-navy shadow-lg ring-1 ring-navy/10 transition hover:bg-sun md:grid";
+    "grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white text-2xl font-bold leading-none text-navy shadow ring-1 ring-navy/15 transition hover:bg-sun";
 
   return (
     <div
@@ -67,20 +67,13 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
             </div>
           ))}
         </div>
-
-        {/* Setas nos lados do banner (só no computador) */}
-        <div className="pointer-events-none absolute inset-0 hidden md:block">
-          <div className="relative mx-auto h-full max-w-7xl px-4 sm:px-6">
-            <button type="button" onClick={() => ir(atual - 1)} aria-label="Banner anterior" className={`${seta} left-8`}>
-              ‹
-            </button>
-            <button type="button" onClick={() => ir(atual + 1)} aria-label="Banner seguinte" className={`${seta} right-8`}>
-              ›
-            </button>
-          </div>
-        </div>
       </div>
 
+      {/* Setas por baixo do banner, ao lado das bolinhas: em cima do banner tapavam o início do texto */}
+      <div className="flex items-center justify-center gap-2">
+        <button type="button" onClick={() => ir(atual - 1)} aria-label="Banner anterior" className={seta}>
+          ‹
+        </button>
       <ul className="flex items-center justify-center">
         {titulos.map((t, i) => (
           <li key={t}>
@@ -96,6 +89,10 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
           </li>
         ))}
       </ul>
+        <button type="button" onClick={() => ir(atual + 1)} aria-label="Banner seguinte" className={seta}>
+          ›
+        </button>
+      </div>
     </div>
   );
 }

@@ -126,6 +126,7 @@ export default function MailForm({
               name={f.name}
               type={f.type ?? "text"}
               required={f.required}
+              autoComplete={{ nome: "name", email: "email", telefone: "tel", morada: "street-address" }[f.name]}
               defaultValue={f.valorInicial}
               min={f.type === "number" ? 1 : undefined}
               inputMode={f.type === "number" ? "numeric" : undefined}

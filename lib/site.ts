@@ -9,7 +9,7 @@ export const links = {
   facebook: "https://www.facebook.com/TrofaLiberal",
   instagram: "https://www.instagram.com/liberaltrofa/",
   // O link do grupo de WhatsApp não está no site: as pessoas pedem convite aqui.
-  convite: "/participa?t=contactos",
+  convite: "/participa?t=contactos#whatsapp",
   email: "trofa@liberal.pt",
   nacionais: "https://iniciativaliberal.pt/ideias/",
   // Portal original de dados da Trofa (escondido: o menu e o banner abrem a versão do site, em /dados).

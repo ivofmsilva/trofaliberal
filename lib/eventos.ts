@@ -44,7 +44,7 @@ export const outros = [
   {
     titulo: "Fino Liberal",
     texto: "Encontros informais onde se discute política com descontração.",
-    quando: "Está atento ao próximo.",
+    quando: "Fica atento ao próximo.",
     imagem: "/images/eventos/fino-liberal-93.jpeg",
   },
   {
@@ -67,7 +67,7 @@ export const outros = [
   },
   {
     titulo: "Porto Liberal",
-    texto: "Uma tradição do núcleo da Trofa. Um encontro rápido com pão-de-ló e Porto. Uma tradição sem falha desde 2021.",
+    texto: "Um brinde de Natal com pão de ló e vinho do Porto. Não falha desde 2021.",
     quando: "Dezembro",
     imagem: "/images/eventos/porto-liberal.webp",
   },

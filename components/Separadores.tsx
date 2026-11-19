@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 // Um separador tem conteúdo (abre aqui, na mesma página) ou um href (cartão que leva a outra página).
 // `aliases`: outros nomes (de ligações antigas) que abrem este separador.
@@ -26,6 +27,18 @@ export default function Separadores({
 
   const cartao = "flex h-full flex-col rounded-2xl border-2 p-5 text-left transition";
 
+  // O conteúdo só aparece depois de a página carregar: se o endereço trouxer uma âncora (#whatsapp), desce até ela.
+  useEffect(() => {
+    const h = window.location.hash.slice(1);
+    if (h) window.setTimeout(() => document.getElementById(h)?.scrollIntoView({ block: "start" }), 150);
+  }, [ativo]);
+
+  // No telemóvel os cartões enchem o ecrã: depois de escolher, desce-se até ao painel, para se ver que mudou.
+  const escolher = (id: string) => {
+    router.replace(`${caminho}?t=${id}`, { scroll: false });
+    if (window.innerWidth < 1024) window.setTimeout(() => document.getElementById(`painel-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+  };
+
   return (
     <div>
       <ul aria-label={etiqueta} className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -42,7 +55,7 @@ export default function Separadores({
                 type="button"
                 aria-pressed={ativo === s.id}
                 aria-controls={`painel-${s.id}`}
-                onClick={() => router.replace(`${caminho}?t=${s.id}`, { scroll: false })}
+                onClick={() => escolher(s.id)}
                 className={`${cartao} w-full ${
                   ativo === s.id ? "border-navy bg-navy text-white" : "border-mist bg-white text-navy hover:border-cyan"
                 }`}
@@ -61,7 +74,7 @@ export default function Separadores({
           role="region"
           aria-labelledby={`sep-${s.id}`}
           hidden={ativo !== s.id}
-          className="mt-10"
+          className="mt-10 scroll-mt-24"
         >
           {s.conteudo}
         </div>

@@ -8,13 +8,13 @@ export const participacao = {
   assinatura: "Bruno Magalhães, coordenador do núcleo",
   data: "12 de outubro de 2026",
   posicao:
-    "Defendemos metro ligeiro em toda a linha, até ao Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que os documentos em consulta comparem essa escolha com o metro.",
+    "Defendemos metro ligeiro em toda a linha, até à Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que os documentos em consulta comparem essa escolha com o metro.",
   pedidos: [
-    "Avaliar o metro ligeiro até ao Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
+    "Avaliar o metro ligeiro até à Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
     "Publicar os estudos que fundamentam o metrobus, com dados atualizados, e reabrir a participação pública.",
     "Garantir que o troço ISMAI–Muro avança no calendário previsto, sem depender desta reavaliação.",
     "Se, contra a nossa posição, a solução metrobus vier a ser aprovada, impor na Declaração de Impacte Ambiental que viadutos, túnel, canal e cais sejam dimensionados para metro ligeiro, com o custo de conversão publicado e uma data (ou um patamar de procura) para a desencadear.",
-    "Detalhar a integração no Interface e aproximar as estações das zonas residenciais, dos serviços e do comércio.",
+    "Detalhar a integração na Interface e aproximar as estações das zonas residenciais, dos serviços e do comércio.",
   ],
 };
 
@@ -80,7 +80,7 @@ export const cronologia: Facto[] = [
   },
   {
     quando: "Março de 2006",
-    titulo: "O metro chega ao ISMAI e pára",
+    titulo: "O metro chega ao ISMAI e fica por lá",
     texto:
       "A Linha C fica concluída até ao ISMAI, na Maia. Daí até à Trofa, nada. É também em 2006 que começa o protesto da população do Muro.",
   },
@@ -168,7 +168,7 @@ export const cronologia: Facto[] = [
     quando: "31 de agosto a 12 de outubro de 2026",
     titulo: "Consulta pública: 9 estações, só 2 com metro",
     texto:
-      "O Estudo de Impacte Ambiental esteve em consulta pública no Participa.pt. O projeto tem 9 estações: Ribela com metro e o Muro como estação partilhada, onde se muda de veículo; Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface da Trofa ficam com metrobus. São 184 milhões de euros, com obras previstas entre 2027 e 2031. A IL Trofa respondeu, defendendo o metro ligeiro até ao Interface da Trofa.",
+      "O Estudo de Impacte Ambiental esteve em consulta pública no Participa.pt. O projeto tem 9 estações: Ribela com metro e o Muro como estação partilhada, onde se muda de veículo; Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface da Trofa ficam com metrobus. São 184 milhões de euros, com obras previstas entre 2027 e 2031. A IL Trofa respondeu, defendendo o metro ligeiro até à Interface da Trofa.",
     fonte: {
       nome: "Echo Boomer (setembro de 2026)",
       href: "https://echoboomer.pt/metro-do-porto-vai-chegar-gondomar-trofa/",
@@ -216,17 +216,17 @@ export const gestao = {
 export const destaqueParticipacao =
   "O metro deve chegar ao nó que liga a Trofa ao Norte, e não obrigar a mudar de veículo a meio do caminho. Fazer bem agora custa menos do que corrigir depois.";
 
-// ---- Porque o metro até ao Interface (da nossa participação) ----------------
+// ---- Porque o metro até à Interface (da nossa participação) ----------------
 export const argumentos = [
   {
-    titulo: "O metro pára antes do nó",
+    titulo: "O metro fica antes do nó",
     texto:
-      "No Interface da Trofa param os comboios das linhas de Braga e de Guimarães e os autocarros, e convergem os principais acessos ao concelho. Com metro até lá, cada pessoa muda uma vez, no sítio certo. Com o projeto atual, quem chega de comboio e segue para a Maia muda duas vezes.",
+      "Na Interface da Trofa param os comboios das linhas de Braga e de Guimarães e os autocarros, e convergem os principais acessos ao concelho. Com metro até lá, cada pessoa muda uma vez, no sítio certo. Com o projeto atual, quem chega de comboio e segue para a Maia muda duas vezes.",
   },
   {
     titulo: "Viagem direta",
     texto:
-      "Do Interface à Trindade sem mudar de veículo, na Linha C. Cada transbordo custa tempo e afasta passageiros, e esse efeito devia ter sido quantificado.",
+      "Da Interface à Trindade sem mudar de veículo, na Linha C. Cada transbordo custa tempo e afasta passageiros, e esse efeito devia ter sido quantificado.",
   },
   {
     titulo: "Mais capacidade",
@@ -251,7 +251,7 @@ export const argumentos = [
   {
     titulo: "Alivia as linhas de Braga e de Guimarães",
     texto:
-      "As linhas de Braga e de Guimarães, no troço próximo do Porto, têm elevadas taxas de ocupação, e pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir do Interface da Trofa capta os passageiros com destino à Maia, a Matosinhos ou localidades próximas que hoje seguem de comboio até ao Porto para apanhar o metro. É a mesma mudança, feita mais cedo: essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
+      "As linhas de Braga e de Guimarães, no troço próximo do Porto, têm elevadas taxas de ocupação, e pouca capacidade para reforçar a oferta nas horas de ponta. Um metro com frequência e tempos de viagem competitivos a partir da Interface da Trofa capta os passageiros com destino à Maia, a Matosinhos ou localidades próximas que hoje seguem de comboio até ao Porto para apanhar o metro. É a mesma mudança, feita mais cedo: essa transferência na Trofa liberta lugares precisamente no troço mais carregado, para quem não tem alternativa à ferrovia.",
   },
 ];
 

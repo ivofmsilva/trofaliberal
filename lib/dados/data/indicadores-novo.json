@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-19T15:40:13.792Z",
+ "juntado": "2026-11-19T16:47:09.775Z",
  "atualizado": "19/11/2026",
  "indicadores": [
   {
@@ -8,6 +8,7 @@
    "categoria": "demografia",
    "unidade": "habitantes",
    "texto": "População residente a 31 de dezembro de cada ano (estimativas do INE). Os valores de 2021 em diante são os das estimativas que o INE reviu em 2026 (para 2024, por exemplo, passou de 40 294 para 41 315 habitantes); os de 2011 a 2020 vêm da série anterior. A passagem de 2020 para 2021 junta por isso duas séries e deve ler-se com cautela.",
+   "palavras": "habitantes pessoas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -494,6 +495,7 @@
    "categoria": "economia",
    "unidade": "empresas",
    "texto": "Empresas com sede no concelho. Contam-se tanto as sociedades como as empresas individuais (empresários em nome individual e trabalhadores independentes), por isso o número é muito maior do que o das empresas com trabalhadores ao serviço. Uma empresa com sede noutro concelho não entra, mesmo que tenha cá instalações.",
+   "palavras": "negócios",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -1042,6 +1044,7 @@
    "categoria": "economia",
    "unidade": "índice (100 = tantas pessoas nas empresas do concelho como residentes empregados)",
    "texto": "Pessoal ao serviço das empresas com sede no concelho (INE, Sistema de contas integradas das empresas) a dividir pelos residentes empregados (Censos), vezes 100. É uma aproximação: o numerador conta-se pela sede da empresa e não inclui o setor público, por isso não mede exatamente os postos de trabalho que existem no concelho. Só há valores nos anos dos Censos (2011 e 2021).",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -1126,6 +1129,7 @@
    "categoria": "economia",
    "unidade": "índice (Portugal = 100)",
    "texto": "Indicador do Estudo sobre o Poder de Compra Concelhio do INE, que compara o poder de compra por habitante de cada concelho com a média do país (100). Um valor de 90 quer dizer 10% abaixo da média nacional. É um índice construído a partir de várias estatísticas, não um rendimento em euros, e sai de dois em dois anos.",
+   "palavras": "salário dinheiro",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -1499,13 +1503,14 @@
    "categoria": "economia",
    "unidade": "% de água controlada e de boa qualidade",
    "texto": "Percentagem da água da torneira que foi controlada e tem boa qualidade, segundo a entidade reguladora (ERSAR). Junta duas coisas: se foram feitas as análises obrigatórias e se os resultados cumpriram os valores fixados na lei. Quanto mais perto de 100, mais análises foram feitas e cumpridas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Água segura (%) por Localização geográfica (NUTS - 2024); Anual - Entidade Reguladora dos Serviços e Águas e Resíduos",
+   "fonte": "INE, com dados de: Entidade Reguladora dos Serviços e Águas e Resíduos",
    "ine": "0014041",
    "ineAntigo": "0008663",
    "metodoGrupo": "ponderada",
@@ -1872,13 +1877,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "Todo o dinheiro que a Câmara recebeu no ano: impostos e taxas municipais, transferências do Estado e de fundos europeus, venda de bens e serviços, e empréstimos contraídos. Como inclui empréstimos e fundos para obras, pode variar bastante de um ano para o outro.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -1986,13 +1992,14 @@
    "categoria": "ambiente",
    "unidade": "kWh por consumidor",
    "texto": "Eletricidade gasta nas casas durante o ano, a dividir pelo número de consumidores domésticos. Cada consumidor é um contrato de fornecimento (uma casa), não uma pessoa, por isso o valor depende também de quantas pessoas vivem em cada casa.",
+   "palavras": "luz energia casa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Consumo doméstico de energia elétrica por consumidor (kWh/ cons.) por Localização geográfica (NUTS - 2024); Anual - DGEG, Estatísticas do carvão, petróleo, energia elétrica e gás natural",
+   "fonte": "INE, com dados de: DGEG (Direção-Geral de Energia e Geologia)",
    "ine": "0014159",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -2167,13 +2174,14 @@
    "categoria": "ambiente",
    "unidade": "kWh por consumidor",
    "texto": "Eletricidade gasta pela indústria durante o ano, a dividir pelo número de consumidores industriais (contratos de fornecimento). Quanto mais alto, maior o consumo médio de cada instalação. Poucas fábricas de grande consumo chegam para mexer muito no valor.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Consumo de energia elétrica na indústria por consumidor (kWh/ cons.) por Localização geográfica (NUTS - 2024); Anual - DGEG, Estatísticas do carvão, petróleo, energia elétrica e gás natural",
+   "fonte": "INE, com dados de: DGEG (Direção-Geral de Energia e Geologia)",
    "ine": "0014160",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -2348,13 +2356,14 @@
    "categoria": "ambiente",
    "unidade": "kWh por habitante",
    "texto": "Toda a eletricidade consumida no concelho durante o ano (casas, indústria, serviços, agricultura, iluminação pública) a dividir pela população residente. Não é o consumo das famílias: num concelho com muita indústria, o valor sobe mesmo que as casas gastem o mesmo.",
+   "palavras": "luz energia",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Consumo de energia elétrica por habitante (kWh/ hab.) por Local de residência (NUTS - 2024); Anual - DGEG, Estatísticas do carvão, petróleo, energia elétrica e gás natural",
+   "fonte": "INE, com dados de: DGEG (Direção-Geral de Energia e Geologia)",
    "ine": "0014162",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -2529,6 +2538,7 @@
    "categoria": "ambiente",
    "unidade": "€",
    "texto": "O que a Câmara gastou no ano em proteção do ambiente: gestão de resíduos, águas residuais, biodiversidade e paisagem, qualidade do ar, ruído e outros domínios. Junta despesas correntes e investimento, por isso um ano com obras grandes destaca-se dos restantes.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -3046,6 +3056,7 @@
    "categoria": "ambiente",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em ambiente que foi para a proteção da biodiversidade e da paisagem, por exemplo espaços verdes, floresta e conservação da natureza. Junta despesas correntes e investimento.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -3563,6 +3574,7 @@
    "categoria": "ambiente",
    "unidade": "€ por habitante",
    "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento, por isso varia com as obras de cada ano.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -4096,6 +4108,7 @@
    "categoria": "ambiente",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em ambiente que foi para a gestão de resíduos: recolha, transporte e tratamento do lixo e limpeza urbana. Junta despesas correntes e investimento.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -4613,13 +4626,14 @@
    "categoria": "ambiente",
    "unidade": "MWh",
    "texto": "Eletricidade consumida no ano pelas explorações agrícolas e pecuárias do concelho, segundo a Direção-Geral de Energia e Geologia. Um MWh são 1000 kWh.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -4883,13 +4897,14 @@
    "categoria": "ambiente",
    "unidade": "MWh",
    "texto": "Eletricidade consumida no ano nas casas do concelho, segundo a Direção-Geral de Energia e Geologia. Um MWh são 1000 kWh. O total depende do número de casas e do que cada uma gasta.",
+   "palavras": "luz energia casa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -5153,13 +5168,14 @@
    "categoria": "ambiente",
    "unidade": "MWh",
    "texto": "Eletricidade consumida no ano pelas instalações industriais situadas no concelho, segundo a Direção-Geral de Energia e Geologia. Um MWh são 1000 kWh. Conta-se pelo local de consumo, não pela sede da empresa.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -5423,13 +5439,14 @@
    "categoria": "ambiente",
    "unidade": "MWh",
    "texto": "Eletricidade consumida no ano pelo comércio, escritórios e outros serviços do concelho, segundo a Direção-Geral de Energia e Geologia. Um MWh são 1000 kWh.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -5692,14 +5709,15 @@
    "titulo": "Consumo de eletricidade (total)",
    "categoria": "ambiente",
    "unidade": "MWh",
-   "texto": "Toda a eletricidade consumida no concelho durante o ano: casas, indústria, serviços, agricultura e iluminação pública. Um MWh são 1000 kWh. Conta-se pelo local onde a eletricidade é gasta.",
+   "texto": "Toda a eletricidade consumida no concelho durante o ano: casas, indústria, serviços, agricultura e iluminação pública. Um MWh são 1000 kWh. Conta-se pelo local onde a eletricidade é gasta. A soma dos cinco setores publicados fica um pouco abaixo do total (771 MWh em 2024), porque há consumos que não entram em nenhum deles.",
+   "palavras": "luz energia",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -5963,13 +5981,14 @@
    "categoria": "ambiente",
    "unidade": "MWh",
    "texto": "Eletricidade gasta no ano na iluminação das ruas e de outras vias públicas do concelho, segundo a Direção-Geral de Energia e Geologia. Um MWh são 1000 kWh.",
+   "palavras": "luz candeeiros ruas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "DGEG - Consumo de energia eléctrica por município e sector de actividade",
+   "fonte": "DGEG - Consumo de energia elétrica por município e setor de atividade",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -6233,6 +6252,7 @@
    "categoria": "ambiente",
    "unidade": "kWh por habitante",
    "texto": "Eletricidade gasta na iluminação das vias públicas a dividir pela população média do ano. O valor depende do número de candeeiros, do tipo de lâmpada e de quão espalhada vive a população: concelhos com casas mais dispersas têm mais rua para iluminar por pessoa.",
+   "palavras": "luz candeeiros ruas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -6503,6 +6523,7 @@
    "categoria": "ambiente",
    "unidade": "% do consumo total",
    "texto": "Que parte de toda a eletricidade consumida no concelho é gasta pela indústria. Quanto mais alta, mais o consumo total do concelho depende das fábricas e menos das casas e dos serviços.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -6773,6 +6794,7 @@
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
    "texto": "Estimativa da Agência Portuguesa do Ambiente para os gases que aquecem o clima (dióxido de carbono, metano e outros) emitidos no território do concelho, somados em equivalente de CO₂. Uma quilotonelada (kt) são mil toneladas. É uma repartição das emissões nacionais pelos concelhos feita por cálculo, não uma medição no local.",
+   "palavras": "poluição clima",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -6875,6 +6897,7 @@
    "categoria": "ambiente",
    "unidade": "t CO₂ equivalente por habitante",
    "texto": "Emissões estimadas de gases com efeito de estufa (GEE) no território do concelho a dividir pela população média do ano. Conta o que é emitido cá, incluindo fábricas e o trânsito que atravessa o concelho, e não o que cada residente emite no seu dia a dia.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -6977,6 +7000,7 @@
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
    "texto": "A parte das emissões estimadas de gases com efeito de estufa (GEE) que vem dos veículos que circulam nas estradas do concelho. Inclui o trânsito de passagem, por exemplo em autoestradas e estradas nacionais, e não só os carros de quem cá vive.",
+   "palavras": "carros trânsito poluição",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -7079,6 +7103,7 @@
    "categoria": "ambiente",
    "unidade": "toneladas",
    "texto": "Estimativa da Agência Portuguesa do Ambiente para os óxidos de azoto emitidos no território do concelho. São gases poluentes do ar que vêm sobretudo da queima de combustíveis, em veículos e na indústria. É uma repartição das emissões nacionais feita por cálculo, não uma medição da qualidade do ar.",
+   "palavras": "poluição ar",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -7181,6 +7206,7 @@
    "categoria": "ambiente",
    "unidade": "toneladas",
    "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 10 micrómetros emitidas no território do concelho, por exemplo por lareiras, indústria, trânsito e incêndios. Mede o que é emitido, não a concentração no ar que se respira.",
+   "palavras": "poluição ar",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -7283,6 +7309,7 @@
    "categoria": "ambiente",
    "unidade": "toneladas",
    "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 2,5 micrómetros emitidas no território do concelho. São uma parte das PM10, as mais pequenas. Mede o que é emitido, não a concentração no ar que se respira.",
+   "palavras": "poluição ar",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -7385,13 +7412,14 @@
    "categoria": "ambiente",
    "unidade": "m³ por habitante",
    "texto": "Gás natural canalizado gasto nas casas durante o ano, em metros cúbicos por habitante. O INE publica-o em milhares de m³ por 1000 habitantes, o que dá o mesmo número. Depende de quantas casas estão ligadas à rede: o gás de botija não entra.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Consumo doméstico de gás natural por 1000 habitantes (Nm³) por Localização geográfica (NUTS - 2024); Anual - DGEG, Direção-Geral de Energia e Geologia",
+   "fonte": "INE, com dados de: DGEG (Direção-Geral de Energia e Geologia)",
    "ine": "0014566",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -7534,13 +7562,14 @@
    "categoria": "ambiente",
    "unidade": "incêndios",
    "texto": "Número de incêndios em espaços rurais (floresta, matos e terrenos agrícolas) registados no ano pelo Instituto da Conservação da Natureza e das Florestas. Conta ocorrências, grandes ou pequenas, e não a área ardida. Varia muito de ano para ano com o tempo que faz.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Incêndios rurais (N.º) por Localização geográfica (NUTS - 2024) e Dimensão do incêndio; Anual - ICNF, Estatísticas florestais",
+   "fonte": "INE, com dados de: ICNF, Estatísticas florestais",
    "ine": "0013514",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -8051,6 +8080,7 @@
    "categoria": "ambiente",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em proteção da biodiversidade e da paisagem que foi investimento, como obras, terrenos e equipamentos, deixando de fora as despesas correntes. Há anos sem qualquer investimento registado, em que o valor é zero.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -8568,6 +8598,7 @@
    "categoria": "ambiente",
    "unidade": "toneladas",
    "texto": "Resíduos urbanos recolhidos já separados durante o ano: papel e cartão, vidro, embalagens, biorresíduos e outros materiais. Mede o que foi recolhido em separado, não o que acabou de facto reciclado.",
+   "palavras": "lixo reciclagem ecoponto",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -8713,13 +8744,14 @@
    "categoria": "ambiente",
    "unidade": "% dos resíduos urbanos recolhidos",
    "texto": "Que parte de todos os resíduos urbanos recolhidos no concelho foi recolhida já separada (ecopontos, porta a porta, ecocentros). Não é a taxa de reciclagem: nem tudo o que se recolhe em separado é reciclado, e parte do lixo indiferenciado ainda é aproveitada depois.",
+   "palavras": "lixo reciclagem ecoponto",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: recolha selectiva ÷ resíduos urbanos recolhidos (INE)",
+   "fonte": "Calculado: recolha seletiva ÷ resíduos urbanos recolhidos (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -8815,6 +8847,7 @@
    "categoria": "ambiente",
    "unidade": "kg por habitante",
    "texto": "Todo o lixo urbano recolhido no ano, indiferenciado e separado, a dividir pela população residente. Inclui os resíduos do comércio e dos serviços recolhidos com os das casas, por isso não é só o lixo produzido por cada pessoa.",
+   "palavras": "lixo",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -8964,6 +8997,7 @@
    "categoria": "ambiente",
    "unidade": "toneladas",
    "texto": "Total de lixo urbano recolhido no concelho durante o ano, somando o indiferenciado e o separado. O valor é calculado multiplicando os quilos por habitante publicados pelo INE pela população média, por isso pode diferir ligeiramente do total oficial.",
+   "palavras": "lixo",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -9066,13 +9100,14 @@
    "categoria": "cultura",
    "unidade": "bens imóveis",
    "texto": "Monumentos, conjuntos e sítios com proteção legal no concelho, segundo o Património Cultural, I.P. Entram os classificados como monumento nacional, de interesse público ou de interesse municipal.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Bens imóveis culturais (N.º) por Localização geográfica (NUTS - 2024) e Tipo (bem imóvel cultural); Anual - Património Cultural, I.P.",
+   "fonte": "INE, com dados de: Património Cultural, I.P.",
    "ine": "0012763",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -9242,6 +9277,7 @@
    "categoria": "cultura",
    "unidade": "€",
    "texto": "O que a Câmara gastou no ano em atividades culturais e criativas: espetáculos, património, bibliotecas, museus, artes visuais e outros domínios. Junta despesas correntes e investimento, por isso um ano com uma obra grande destaca-se dos restantes.",
+   "palavras": "cultura espetáculos",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -9418,6 +9454,7 @@
    "categoria": "cultura",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em cultura que foi para as artes do espetáculo: música, teatro, dança, festas e festivais, e os recintos onde se realizam. Junta despesas correntes e investimento.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -9594,6 +9631,7 @@
    "categoria": "cultura",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em cultura que foi para as artes visuais, como exposições, galerias, pintura, escultura e fotografia. Junta despesas correntes e investimento.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -9770,6 +9808,7 @@
    "categoria": "cultura",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em cultura que foi para o audiovisual e multimédia, como cinema, vídeo, rádio e televisão. Há anos sem despesa registada neste domínio, em que o valor é zero.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -9946,6 +9985,7 @@
    "categoria": "cultura",
    "unidade": "€",
    "texto": "A parte da despesa da Câmara em cultura que foi para o património cultural: museus, monumentos, sítios arqueológicos e a sua conservação. Junta despesas correntes e investimento, e as obras de recuperação fazem o valor variar muito entre anos.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -10122,6 +10162,7 @@
    "categoria": "cultura",
    "unidade": "€ por habitante",
    "texto": "Despesa da Câmara em atividades culturais e criativas a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento, por isso varia com as obras de cada ano.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -10295,17 +10336,18 @@
   },
   {
    "slug": "partido_mais_votado_assembleia_municipal",
-   "titulo": "Concentração do voto (Assembleia Municipal)",
+   "titulo": "Votos na lista mais votada (Assembleia Municipal)",
    "categoria": "democracia",
    "unidade": "% dos votos válidos",
-   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista.",
+   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos do partido/coligação mais votado nas eleições para as Assembleias Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013648",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -10380,17 +10422,18 @@
   },
   {
    "slug": "partido_mais_votado_camara_municipal",
-   "titulo": "Concentração do voto (Câmara Municipal)",
+   "titulo": "Votos na lista mais votada (Câmara Municipal)",
    "categoria": "democracia",
    "unidade": "% dos votos válidos",
-   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais concentrado está o voto numa só lista.",
+   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos do partido/coligação mais votado nas eleições para as Câmaras Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013641",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -10469,13 +10512,14 @@
    "categoria": "democracia",
    "unidade": "eleitores inscritos",
    "texto": "Pessoas inscritas no recenseamento eleitoral do concelho à data das eleições autárquicas, ou seja, quem podia votar. Inclui os estrangeiros residentes com direito de voto nas autárquicas. Só há valores nos anos de eleições.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - População inscrita nas eleições para as Assembleias de Freguesia (N.º) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013657",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -10552,13 +10596,14 @@
    "categoria": "democracia",
    "unidade": "% dos eleitores inscritos",
    "texto": "Em cada 100 eleitores inscritos, quantos não foram votar na eleição para a Câmara Municipal. Os cadernos eleitorais incluem pessoas que já não vivem no concelho, como emigrantes que mantêm cá a morada, o que faz subir o valor. Só há valores nos anos de eleições autárquicas.",
+   "palavras": "eleições votar autárquicas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Taxa de abstenção nas eleições para as Câmaras Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013637",
    "ineAntigo": "0008713",
    "metodoGrupo": "ponderada",
@@ -10797,13 +10842,14 @@
    "categoria": "democracia",
    "unidade": "% dos votos",
    "texto": "Em cada 100 pessoas que votaram para a Assembleia Municipal, quantas entregaram o boletim sem assinalar nenhuma lista. Só há valores nos anos de eleições autárquicas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos em branco nas eleições para as Assembleias Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013646",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -10882,13 +10928,14 @@
    "categoria": "democracia",
    "unidade": "% dos votos",
    "texto": "Em cada 100 pessoas que votaram para a Câmara Municipal, quantas entregaram o boletim sem assinalar nenhuma lista. Só há valores nos anos de eleições autárquicas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos em branco nas eleições para as Câmaras Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013638",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -10967,13 +11014,14 @@
    "categoria": "democracia",
    "unidade": "% dos votos",
    "texto": "Em cada 100 pessoas que votaram para a Assembleia Municipal, quantas entregaram um boletim que não pôde ser contado, por ter mais de uma lista assinalada, rasuras, desenhos ou palavras escritas. Só há valores nos anos de eleições autárquicas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos nulos nas eleições para as Assembleias Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013647",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -11052,13 +11100,14 @@
    "categoria": "democracia",
    "unidade": "% dos votos",
    "texto": "Em cada 100 pessoas que votaram para a Câmara Municipal, quantas entregaram um boletim que não pôde ser contado, por ter mais de uma lista assinalada, rasuras, desenhos ou palavras escritas. Só há valores nos anos de eleições autárquicas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Proporção de votos nulos nas eleições para as Câmaras Municipais (%) por Local de residência (NUTS - 2024); Não periódica - Secretaria-Geral da Administração Interna - Administração Eleitoral",
+   "fonte": "INE, com dados de: Secretaria-Geral da Administração Interna - Administração Eleitoral",
    "ine": "0013639",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -11137,6 +11186,7 @@
    "categoria": "demografia",
    "unidade": "habitantes por km²",
    "texto": "População residente a dividir pela área do concelho. Quanto mais alta, mais gente vive em cada quilómetro quadrado. É uma média de todo o território: não distingue as zonas urbanas das zonas com poucas casas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -11765,7 +11815,8 @@
    "titulo": "Idade mediana da população",
    "categoria": "demografia",
    "unidade": "anos",
-   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população. No grupo dos 8 concelhos, o valor é a média simples das idades medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das idades medianas de cada concelho, não a mediana do conjunto.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -11942,6 +11993,7 @@
    "categoria": "demografia",
    "unidade": "idosos por 100 pessoas em idade ativa",
    "texto": "Número de pessoas com 65 ou mais anos por cada 100 pessoas dos 15 aos 64 anos. Quanto mais alto, mais idosos há em relação à população em idade de trabalhar. Olha só para as idades: não diz quem trabalha de facto nem quem está reformado.",
+   "palavras": "idosos velhos reformados",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -12443,6 +12495,7 @@
    "categoria": "demografia",
    "unidade": "jovens por 100 pessoas em idade ativa",
    "texto": "Número de crianças e jovens até aos 14 anos por cada 100 pessoas dos 15 aos 64 anos. Quanto mais alto, mais jovens há em relação à população em idade de trabalhar.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -12944,6 +12997,7 @@
    "categoria": "demografia",
    "unidade": "dependentes por 100 pessoas em idade ativa",
    "texto": "Número de jovens até aos 14 anos e de pessoas com 65 ou mais anos, somados, por cada 100 pessoas dos 15 aos 64 anos. É a soma dos índices de dependência de jovens e de idosos. Olha só para as idades, não para quem trabalha de facto.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -13445,6 +13499,7 @@
    "categoria": "demografia",
    "unidade": "idosos por 100 jovens",
    "texto": "Número de pessoas com 65 ou mais anos por cada 100 crianças e jovens até aos 14 anos. Acima de 100 há mais idosos do que jovens; abaixo de 100 há mais jovens do que idosos.",
+   "palavras": "idosos velhos jovens",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -13946,6 +14001,7 @@
    "categoria": "demografia",
    "unidade": "pessoas com 75+ por 100 pessoas com 65+",
    "texto": "Dentro da população com 65 ou mais anos, quantas pessoas em cada 100 têm 75 ou mais. Quanto mais alto, maior o peso dos mais velhos entre os idosos.",
+   "palavras": "idosos velhos",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -14447,6 +14503,7 @@
    "categoria": "demografia",
    "unidade": "habitantes",
    "texto": "Média entre a população residente no fim do ano anterior e no fim do próprio ano. É o número de habitantes usado para calcular os valores \"por habitante\" e as taxas de natalidade e de mortalidade.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -14933,6 +14990,7 @@
    "categoria": "demografia",
    "unidade": "% das mulheres residentes (15-49 anos)",
    "texto": "Em cada 100 mulheres residentes, quantas têm entre 15 e 49 anos, as idades que a estatística considera como período fértil. Ajuda a ler o número de nascimentos: com menos mulheres nestas idades, nascem menos crianças mesmo que cada mulher tenha os mesmos filhos.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -15434,6 +15492,7 @@
    "categoria": "demografia",
    "unidade": "homens por 100 mulheres",
    "texto": "Número de homens residentes por cada 100 mulheres residentes. Abaixo de 100 há mais mulheres do que homens. As mulheres vivem em média mais anos, por isso o valor tende a baixar onde a população é mais envelhecida.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -15934,7 +15993,8 @@
    "titulo": "Saldo migratório",
    "categoria": "demografia",
    "unidade": "pessoas",
-   "texto": "Diferença, num ano, entre as pessoas que vieram viver para o concelho e as que saíram, contando tanto as trocas com o estrangeiro como com outros concelhos. Positivo quer dizer que entraram mais do que saíram. É uma estimativa do INE, que pode ser revista, e não uma contagem de registos.",
+   "texto": "Diferença, num ano, entre as pessoas que vieram viver para o concelho e as que saíram, contando tanto as trocas com o estrangeiro como com outros concelhos. Positivo quer dizer que entraram mais do que saíram. Somado ao saldo natural (nascimentos menos óbitos), dá a variação da população nesse ano. É uma estimativa do INE: os valores de 2021 em diante são os das estimativas revistas em 2026.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -15943,29 +16003,339 @@
    ],
    "fonte": "INE - Indicadores demográficos",
    "ine": "0013179",
-   "ineAntigo": null,
+   "ineAntigo": "0008269",
    "metodoGrupo": "soma",
    "unidadeINE": "Número (N.º)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": -174,
+       "var": null
+      },
+      {
+       "v": -5693,
+       "var": null
+      },
+      {
+       "v": -2887,
+       "var": null
+      },
+      {
+       "v": -25178,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": -273,
+      "Guimarães": -653,
+      "Vila Nova de Famalicão": -517,
+      "Vizela": -115,
+      "Trofa": -174,
+      "Santo Tirso": -369,
+      "Maia": -599,
+      "Vila do Conde": -187
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": -196,
+       "var": 12.6
+      },
+      {
+       "v": -6372,
+       "var": 11.9
+      },
+      {
+       "v": -3159,
+       "var": 9.4
+      },
+      {
+       "v": -37290,
+       "var": 48.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": -278,
+      "Guimarães": -704,
+      "Vila Nova de Famalicão": -554,
+      "Vizela": -112,
+      "Trofa": -196,
+      "Santo Tirso": -406,
+      "Maia": -697,
+      "Vila do Conde": -212
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": -190,
+       "var": -3.1
+      },
+      {
+       "v": -5920,
+       "var": -7.1
+      },
+      {
+       "v": -3033,
+       "var": -4
+      },
+      {
+       "v": -36029,
+       "var": -3.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": -293,
+      "Guimarães": -635,
+      "Vila Nova de Famalicão": -564,
+      "Vizela": -106,
+      "Trofa": -190,
+      "Santo Tirso": -399,
+      "Maia": -658,
+      "Vila do Conde": -188
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": -173,
+       "var": -8.9
+      },
+      {
+       "v": -5746,
+       "var": -2.9
+      },
+      {
+       "v": -2978,
+       "var": -1.8
+      },
+      {
+       "v": -26495,
+       "var": -26.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": -288,
+      "Guimarães": -680,
+      "Vila Nova de Famalicão": -537,
+      "Vizela": -112,
+      "Trofa": -173,
+      "Santo Tirso": -393,
+      "Maia": -632,
+      "Vila do Conde": -163
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": -96,
+       "var": -44.5
+      },
+      {
+       "v": -1779,
+       "var": -69
+      },
+      {
+       "v": -1319,
+       "var": -55.7
+      },
+      {
+       "v": -3528,
+       "var": -86.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": -156,
+      "Guimarães": -313,
+      "Vila Nova de Famalicão": -198,
+      "Vizela": -56,
+      "Trofa": -96,
+      "Santo Tirso": -240,
+      "Maia": -301,
+      "Vila do Conde": 41
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": -65,
+       "var": -32.3
+      },
+      {
+       "v": 81,
+       "var": -104.6
+      },
+      {
+       "v": -687,
+       "var": -47.9
+      },
+      {
+       "v": -629,
+       "var": -82.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": -86,
+      "Guimarães": -144,
+      "Vila Nova de Famalicão": -109,
+      "Vizela": -36,
+      "Trofa": -65,
+      "Santo Tirso": -183,
+      "Maia": -192,
+      "Vila do Conde": 128
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": -22,
+       "var": -66.2
+      },
+      {
+       "v": 3005,
+       "var": 3609.9
+      },
+      {
+       "v": 288,
+       "var": -141.9
+      },
+      {
+       "v": 14896,
+       "var": -2468.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": -57,
+      "Guimarães": 79,
+      "Vila Nova de Famalicão": 87,
+      "Vizela": 1,
+      "Trofa": -22,
+      "Santo Tirso": -92,
+      "Maia": 79,
+      "Vila do Conde": 213
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 22,
+       "var": -200
+      },
+      {
+       "v": 5096,
+       "var": 69.6
+      },
+      {
+       "v": 978,
+       "var": 239.6
+      },
+      {
+       "v": 23757,
+       "var": 59.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": -32,
+      "Guimarães": 208,
+      "Vila Nova de Famalicão": 274,
+      "Vizela": 1,
+      "Trofa": 22,
+      "Santo Tirso": -37,
+      "Maia": 220,
+      "Vila do Conde": 322
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 126,
+       "var": 472.7
+      },
+      {
+       "v": 8783,
+       "var": 72.4
+      },
+      {
+       "v": 2362,
+       "var": 141.5
+      },
+      {
+       "v": 67163,
+       "var": 182.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 110,
+      "Guimarães": 469,
+      "Vila Nova de Famalicão": 668,
+      "Vizela": 30,
+      "Trofa": 126,
+      "Santo Tirso": 31,
+      "Maia": 418,
+      "Vila do Conde": 510
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 107,
+       "var": -15.1
+      },
+      {
+       "v": 2792,
+       "var": -68.2
+      },
+      {
+       "v": 3332,
+       "var": 41.1
+      },
+      {
+       "v": 57768,
+       "var": -14
+      }
+     ],
+     "concelhos": {
+      "Fafe": 288,
+      "Guimarães": 410,
+      "Vila Nova de Famalicão": 1046,
+      "Vizela": 220,
+      "Trofa": 107,
+      "Santo Tirso": 285,
+      "Maia": 313,
+      "Vila do Conde": 663
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 313,
-       "var": null
+       "var": 192.5
       },
       {
        "v": 24390,
-       "var": null
+       "var": 773.6
       },
       {
        "v": 3875,
-       "var": null
+       "var": 16.3
       },
       {
        "v": 250079,
-       "var": null
+       "var": 332.9
       }
      ],
      "concelhos": {
@@ -16111,6 +16481,7 @@
    "categoria": "demografia",
    "unidade": "‰ (óbitos por mil habitantes)",
    "texto": "Número de mortes de residentes no ano por cada 1000 habitantes. Chama-se \"bruta\" porque não tem em conta as idades: um concelho com mais idosos tem uma taxa mais alta sem que isso diga algo sobre a saúde ou os cuidados de saúde.",
+   "palavras": "mortes óbitos",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -16612,6 +16983,7 @@
    "categoria": "demografia",
    "unidade": "‰ (nados-vivos por mil habitantes)",
    "texto": "Número de bebés nascidos com vida no ano, filhos de mães residentes no concelho, por cada 1000 habitantes. Conta pela morada da mãe e não pelo hospital onde nasceu. Chama-se \"bruta\" porque não tem em conta as idades da população.",
+   "palavras": "nascimentos bebés filhos",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -17113,6 +17485,7 @@
    "categoria": "economia",
    "unidade": "camas (lugares)",
    "texto": "Número de pessoas que os hotéis e outros alojamentos turísticos do concelho podem alojar ao mesmo tempo. Onde há poucos estabelecimentos, a abertura ou o fecho de um só muda muito o valor.",
+   "palavras": "turismo hotéis camas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -17227,13 +17600,14 @@
    "categoria": "economia",
    "unidade": "€ por habitante",
    "texto": "Valor das compras pagas com cartão nos terminais de pagamento automático (TPA) das lojas e serviços do concelho, a dividir pela população residente. Conta-se pelo local da compra: entram as compras de quem vem de fora e não entram as que os residentes fazem noutros concelhos ou na Internet.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Compras através de Terminais de Pagamento Automático por habitante (€) por Localização geográfica (NUTS - 2024); Anual - SIBS, Estatísticas das operações da Rede Multibanco",
+   "fonte": "INE, com dados de: SIBS, Estatísticas das operações da Rede Multibanco",
    "ine": "0012726",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -17440,6 +17814,7 @@
    "categoria": "economia",
    "unidade": "€ por habitante",
    "texto": "Crédito à habitação registado nos balcões de bancos, caixas económicas e caixas de crédito agrícola do concelho, a dividir pela população média do ano. É o valor em dívida, não o crédito novo do ano, e conta-se pelo balcão e não pela morada de quem pediu o empréstimo. É uma média por todos os habitantes, incluindo quem não tem empréstimo.",
+   "palavras": "casa empréstimo banco",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -17557,6 +17932,7 @@
    "categoria": "economia",
    "unidade": "dormidas por 100 habitantes",
    "texto": "Noites passadas por hóspedes nos hotéis e outros alojamentos turísticos do concelho durante o ano, por cada 100 residentes. Uma pessoa que fica três noites conta três dormidas. Quanto mais alto, maior o peso do turismo em relação à população.",
+   "palavras": "turismo hotéis",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -17957,6 +18333,7 @@
    "categoria": "economia",
    "unidade": "estabelecimentos",
    "texto": "Número de hotéis e outros alojamentos turísticos em funcionamento no concelho, segundo o inquérito do INE.",
+   "palavras": "turismo hotéis",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -18102,13 +18479,14 @@
    "categoria": "economia",
    "unidade": "operações por habitante",
    "texto": "Número de operações feitas no ano nas caixas Multibanco situadas no concelho (levantamentos, pagamentos, consultas e outras), a dividir pela população residente. Conta-se pelo local da caixa, por isso inclui as operações de quem vem de fora.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Operações em Caixas Automáticos Multibanco por habitante (N.º) por Localização geográfica (NUTS - 2024); Anual - SIBS, Estatísticas das operações da Rede Multibanco",
+   "fonte": "INE, com dados de: SIBS, Estatísticas das operações da Rede Multibanco",
    "ine": "0012724",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -18315,6 +18693,7 @@
    "categoria": "economia",
    "unidade": "pessoas ao serviço",
    "texto": "Pessoas que trabalham nas empresas com sede no concelho (INE, Sistema de contas integradas das empresas). Conta-se pela sede da empresa e não pelo local de trabalho: inclui quem trabalha em estabelecimentos dessas empresas fora do concelho e não inclui quem trabalha cá para empresas com sede noutro lado. O setor público não entra.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -18863,6 +19242,7 @@
    "categoria": "economia",
    "unidade": "residentes empregados",
    "texto": "Pessoas que vivem no concelho e tinham trabalho à data dos Censos, seja cá ou noutro concelho, por conta de outrem ou por conta própria. Só há valores nos anos dos Censos (2011 e 2021).",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -18946,6 +19326,7 @@
    "categoria": "economia",
    "unidade": "€ por sujeito passivo",
    "texto": "Rendimento anual declarado no IRS pelos contribuintes com morada fiscal no concelho, antes de impostos e deduções, a dividir pelo número de sujeitos passivos (as pessoas que entregam a declaração). É uma média, por isso alguns rendimentos muito altos puxam o valor para cima. Só conta o que é declarado no IRS.",
+   "palavras": "salário ordenado ganhar irs",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -19190,7 +19571,8 @@
    "titulo": "Rendimento líquido mediano (por agregado fiscal)",
    "categoria": "economia",
    "unidade": "€ por agregado fiscal",
-   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima. No grupo dos 8 concelhos, o valor é a média simples das medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho, não a mediana do conjunto.",
+   "palavras": "salário ordenado ganhar",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -19425,10 +19807,11 @@
   },
   {
    "slug": "taxa_credito_habitacao",
-   "titulo": "Taxa de crédito à habitação",
+   "titulo": "Peso do crédito à habitação no crédito total",
    "categoria": "economia",
-   "unidade": "%",
+   "unidade": "% do crédito a clientes",
    "texto": "Que parte de todo o crédito a clientes registado nos balcões de bancos do concelho é crédito à habitação. Não é uma taxa de juro nem a percentagem de famílias com empréstimo. Quanto mais alta, mais o crédito bancário no concelho se concentra na compra de casa e menos nas empresas e no consumo. Conta-se pelo balcão e não pela morada do cliente.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -19546,6 +19929,7 @@
    "categoria": "economia",
    "unidade": "% das camas disponíveis",
    "texto": "Em cada 100 camas disponíveis nos alojamentos turísticos ao longo do ano, quantas foram ocupadas. \"Líquida\" quer dizer que só contam as camas dos dias em que os estabelecimentos estiveram abertos. Onde há poucos estabelecimentos, o valor reflete quase só a atividade de um ou dois.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -19695,6 +20079,7 @@
    "categoria": "economia",
    "unidade": "€",
    "texto": "Riqueza criada no ano pelas empresas com sede no concelho: o valor do que produziram menos o que gastaram em matérias-primas, energia e serviços comprados a outros. Conta-se pela sede da empresa e não pelo local onde se produz, e o setor público não entra.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -20242,7 +20627,8 @@
    "titulo": "Valor mediano de venda de habitação",
    "categoria": "economia",
    "unidade": "€/m²",
-   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período. No grupo dos 8 concelhos, o valor é a média simples das medianas de cada concelho.",
+   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho.",
+   "palavras": "casa comprar preço apartamento",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -20481,6 +20867,7 @@
    "categoria": "economia",
    "unidade": "€",
    "texto": "Total das vendas e dos serviços prestados no ano pelas empresas com sede no concelho, sem IVA. Não é lucro: os custos não são descontados. Conta-se pela sede da empresa, por isso inclui o que essas empresas faturam em instalações fora do concelho.",
+   "palavras": "vendas negócios",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -21029,13 +21416,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Alunos matriculados do 1.º ao 4.º ano nas escolas do concelho, públicas e privadas, em cada ano letivo. Conta-se pelo local da escola e não pela morada do aluno.",
+   "palavras": "escolas primária",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -21391,13 +21779,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Alunos matriculados no 5.º e 6.º anos nas escolas do concelho, públicas e privadas, em cada ano letivo. Conta-se pelo local da escola e não pela morada do aluno.",
+   "palavras": "escolas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -21753,13 +22142,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Alunos matriculados do 7.º ao 9.º ano nas escolas do concelho, públicas e privadas, em cada ano letivo. Conta-se pelo local da escola e não pela morada do aluno.",
+   "palavras": "escolas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -22115,13 +22505,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Crianças e alunos matriculados em estabelecimentos privados do concelho, do pré-escolar ao secundário, em cada ano letivo. Conta-se pelo local da escola e não pela morada do aluno.",
+   "palavras": "escolas colégio",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -22477,6 +22868,7 @@
    "categoria": "educacao",
    "unidade": "% dos alunos matriculados",
    "texto": "Em cada 100 crianças e alunos matriculados nas escolas do concelho, do pré-escolar ao secundário, quantos estão em estabelecimentos privados. Conta-se pelo local da escola: os residentes que estudam fora do concelho não entram.",
+   "palavras": "escolas colégio",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -22840,13 +23232,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Crianças e alunos matriculados nas escolas do concelho, do pré-escolar ao secundário, no ensino público e privado, em cada ano letivo. Conta-se pelo local da escola e não pela morada: entram alunos que vêm de outros concelhos e não entram os residentes que estudam fora.",
+   "palavras": "escolas estudantes",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -23202,13 +23595,14 @@
    "categoria": "educacao",
    "unidade": "crianças",
    "texto": "Crianças inscritas nos jardins de infância do concelho, públicos e privados, em cada ano letivo. O pré-escolar vai dos 3 anos até à entrada no 1.º ciclo; as creches não entram. Conta-se pelo local do jardim de infância e não pela morada da criança.",
+   "palavras": "escolas infantário jardim de infância",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -23564,13 +23958,14 @@
    "categoria": "educacao",
    "unidade": "alunos",
    "texto": "Alunos matriculados do 10.º ao 12.º ano nas escolas do concelho, incluindo os cursos profissionais, em cada ano letivo. Conta-se pelo local da escola e não pela morada, e no secundário é frequente estudar num concelho vizinho.",
+   "palavras": "escolas liceu",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Alunas/os matriculadas/os no ensino não superior (N.º) por Localização geográfica (NUTS - 2024), Nível de ensino e Natureza institucional; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012424",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -23924,15 +24319,16 @@
    "slug": "taxa_bruta_pre_escolarizacao",
    "titulo": "Taxa bruta de pré-escolarização",
    "categoria": "educacao",
-   "unidade": "%",
+   "unidade": "% das crianças dos 3 aos 5 anos",
    "texto": "Crianças inscritas no pré-escolar do concelho a dividir pelas crianças residentes dos 3 aos 5 anos, vezes 100. Pode passar de 100, porque entram crianças que vivem noutros concelhos ou que têm outra idade. Abaixo de 100 não significa que as restantes estejam sem pré-escolar: podem frequentá-lo noutro concelho.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Taxa bruta de pré-escolarização (%) por Localização geográfica (NUTS - 2024) e Sexo; Anual - Direção-Geral de Estatísticas da Educação e Ciência",
+   "fonte": "INE, com dados de: Direção-Geral de Estatísticas da Educação e Ciência",
    "ine": "0012616",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -24299,6 +24695,7 @@
    "categoria": "emprego",
    "unidade": "% do desemprego registado",
    "texto": "Em cada 100 desempregados inscritos no centro de emprego em dezembro, quantos estão inscritos há um ano ou mais. Quanto mais alta, maior a parte dos inscritos que procura trabalho há muito tempo.",
+   "palavras": "trabalho emprego",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -24725,6 +25122,7 @@
    "categoria": "emprego",
    "unidade": "desempregados inscritos",
    "texto": "Pessoas residentes no concelho inscritas como desempregadas nos centros de emprego do IEFP no fim de dezembro de cada ano. Só conta quem está inscrito: quem procura trabalho sem se inscrever fica de fora. Não é a taxa de desemprego do INE, que se calcula por inquérito.",
+   "palavras": "trabalho emprego centro de emprego",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -25147,6 +25545,7 @@
    "categoria": "emprego",
    "unidade": "desempregados inscritos",
    "texto": "Pessoas com menos de 25 anos residentes no concelho e inscritas como desempregadas nos centros de emprego do IEFP no fim de dezembro de cada ano. Só conta quem está inscrito, e muitos jovens à procura do primeiro emprego não se inscrevem.",
+   "palavras": "trabalho emprego jovens",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -25569,6 +25968,7 @@
    "categoria": "emprego",
    "unidade": "desempregados inscritos",
    "texto": "Pessoas residentes no concelho inscritas como desempregadas nos centros de emprego do IEFP há 12 meses ou mais, no fim de dezembro de cada ano. O tempo conta-se desde a inscrição, não desde que a pessoa perdeu o emprego.",
+   "palavras": "trabalho emprego",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -25991,6 +26391,7 @@
    "categoria": "emprego",
    "unidade": "desempregados inscritos por 1000 habitantes",
    "texto": "Desempregados inscritos nos centros de emprego em dezembro por cada 1000 residentes de todas as idades. Não é uma taxa de desemprego: essa calcula-se sobre a população ativa e não sobre todos os habitantes, por isso os valores são mais baixos e não se comparam com ela.",
+   "palavras": "trabalho emprego",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -26412,10 +26813,11 @@
   },
   {
    "slug": "divida_percentagem_limite",
-   "titulo": "Dívida total em % do limite legal",
+   "titulo": "Dívida em % do limite legal",
    "categoria": "financas",
    "unidade": "% do limite legal",
-   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita.",
+   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita. Na página das Finanças este valor chama-se dívida efetiva. A dívida total das contas da Câmara é mais alta, porque inclui o que a lei não conta para o limite.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -26682,10 +27084,11 @@
   },
   {
    "slug": "divida_por_habitante",
-   "titulo": "Dívida total da Câmara por habitante",
+   "titulo": "Dívida da Câmara por habitante (a que conta para o limite legal)",
    "categoria": "financas",
    "unidade": "€ por habitante",
-   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes.",
+   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes. Na página das Finanças este valor chama-se dívida efetiva. A dívida total das contas da Câmara é mais alta, porque inclui o que a lei não conta para o limite. Para Portugal só há valor até 2022.",
+   "palavras": "dívida câmara",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -26935,6 +27338,7 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "O que a Câmara deve a 31 de dezembro, calculado como manda a Lei das Finanças Locais: empréstimos, dívidas a fornecedores e outros débitos, incluindo a parte que lhe cabe nas dívidas de empresas municipais, associações de municípios e outras entidades em que participa. As dívidas de operações não orçamentais ficam de fora.",
+   "palavras": "dívida câmara",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -27205,6 +27609,7 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "Valor máximo que a dívida total da Câmara pode ter a 31 de dezembro, segundo o artigo 52.º da Lei das Finanças Locais (Lei n.º 73/2013): uma vez e meia a média da receita corrente líquida cobrada nos três anos anteriores. Sobe e desce com a receita da Câmara.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -27475,6 +27880,7 @@
    "categoria": "financas",
    "unidade": "dias",
    "texto": "Quantos dias, em média, a Câmara demora a pagar aos fornecedores, calculado pela Direção-Geral das Autarquias Locais com a fórmula oficial: compara o que está por pagar com as compras dos últimos quatro trimestres. O valor é o apurado a 31 de dezembro. É uma média: há faturas pagas mais depressa e outras mais devagar.",
+   "palavras": "fornecedores pagar câmara",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -27640,13 +28046,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "O que a Câmara recebeu de derrama, um imposto municipal sobre o lucro tributável das empresas, na parte gerada no concelho. A taxa é fixada todos os anos pelo município, até ao máximo de 1,5%, e pode ter reduções ou isenções. A receita depende da taxa e dos lucros das empresas, por isso varia de ano para ano.",
+   "palavras": "impostos empresas",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -27754,13 +28161,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "O que a Câmara recebeu de IMI (imposto municipal sobre imóveis), o imposto pago todos os anos pelos donos de casas, terrenos e outros prédios, calculado sobre o valor patrimonial fixado pelas Finanças. A taxa dos prédios urbanos é fixada pelo município dentro dos limites da lei.",
+   "palavras": "impostos casa",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -27868,13 +28276,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "O que a Câmara recebeu de IMT (imposto municipal sobre as transmissões onerosas de imóveis), o imposto pago por quem compra uma casa, um terreno ou outro imóvel. Depende do número e do valor das vendas no concelho, por isso varia muito com o mercado imobiliário.",
+   "palavras": "impostos casa compra",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -27982,13 +28391,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "A parte do IUC (imposto único de circulação) que cabe à Câmara. O IUC é o imposto pago todos os anos pelos donos de veículos; a receita vai para o município onde o proprietário tem morada, com uma parte a ficar para o Estado em alguns tipos de veículo.",
+   "palavras": "impostos carros",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -28096,13 +28506,14 @@
    "categoria": "financas",
    "unidade": "€",
    "texto": "A parte do IRS pago pelos contribuintes com morada fiscal no concelho que o Estado entrega à Câmara. Cada município pode ficar com até 5% desse IRS; se decidir ficar com menos, a diferença é devolvida aos contribuintes do concelho.",
+   "palavras": "impostos irs",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+   "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -28210,6 +28621,7 @@
    "categoria": "habitacao",
    "unidade": "alojamentos",
    "texto": "Número de casas e apartamentos que existem no concelho, ocupados ou não, incluindo casas vagas e segundas habitações. É uma estimativa do INE: parte dos Censos e vai sendo atualizada com as obras concluídas e as demolições.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -28603,6 +29015,7 @@
    "categoria": "habitacao",
    "unidade": "edifícios",
    "texto": "Edifícios cujas obras terminaram no ano, somando construções novas, ampliações, alterações e reconstruções, para habitação ou para outros fins. Um prédio com vários apartamentos conta como um só edifício. Os anos mais recentes podem ser revistos pelo INE.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -29089,6 +29502,7 @@
    "categoria": "habitacao",
    "unidade": "edifícios",
    "texto": "Número de edifícios do concelho que servem para habitação, desde moradias a prédios de apartamentos. Um prédio conta como um só edifício, seja qual for o número de casas que tem. É uma estimativa do INE, atualizada a partir dos Censos com as obras concluídas e as demolições.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -29482,6 +29896,7 @@
    "categoria": "habitacao",
    "unidade": "contratos",
    "texto": "Contratos de arrendamento de casas celebrados no ano e comunicados às Finanças. Não conta os contratos antigos que continuam em vigor nem os arrendamentos não declarados. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo.",
+   "palavras": "casa arrendar aluguer renda",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -29690,6 +30105,7 @@
    "categoria": "habitacao",
    "unidade": "€/m²",
    "texto": "Valor por metro quadrado que os bancos atribuem às casas quando as avaliam para um pedido de crédito à habitação: metade das avaliações fica abaixo e metade acima. Não é o preço a que as casas se vendem e só abrange as compras com empréstimo. O valor de cada ano é o de dezembro, para todas as casas avaliadas (apartamentos e moradias).",
+   "palavras": "casa comprar banco empréstimo",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -30175,7 +30591,8 @@
    "titulo": "Renda mediana dos novos contratos de arrendamento",
    "categoria": "habitacao",
    "unidade": "€/m²",
-   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo. No grupo dos 8 concelhos, o valor é a média simples das medianas de cada concelho.",
+   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho.",
+   "palavras": "casa arrendar aluguer renda",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -30384,6 +30801,7 @@
    "categoria": "outros",
    "unidade": "acessos",
    "texto": "Ligações fixas à Internet em banda larga (fibra, cabo e outras) ativas no concelho, em casas e em empresas, segundo a ANACOM. Conta ligações contratadas, não pessoas: uma ligação serve toda a casa. A Internet no telemóvel não entra.",
+   "palavras": "internet fibra",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -30560,6 +30978,7 @@
    "categoria": "outros",
    "unidade": "acessos por 100 habitantes",
    "texto": "Ligações fixas à Internet em banda larga por cada 100 residentes. Como cada ligação serve uma casa ou uma empresa inteira, o valor fica sempre muito abaixo de 100 e não é a percentagem de pessoas com Internet.",
+   "palavras": "internet fibra",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -30737,13 +31156,14 @@
    "categoria": "outros",
    "unidade": "veículos por 1000 habitantes",
    "texto": "Veículos novos registados no ano em nome de proprietários com morada no concelho, por cada 1000 residentes. Entram os veículos de particulares e os de empresas, por isso um concelho com sedes de empresas com frotas tem valores mais altos.",
+   "palavras": "carros automóveis",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Registo de propriedade de veículos novos por 1000 habitantes (N.º) por Local de residência (NUTS - 2024) e Tipo de veículo; Anual - Instituto dos Registos e Notariado",
+   "fonte": "INE, com dados de: Instituto dos Registos e Notariado",
    "ine": "0013171",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -30918,6 +31338,7 @@
    "categoria": "saude",
    "unidade": "enfermeiros por 1000 habitantes",
    "texto": "Enfermeiros inscritos na Ordem dos Enfermeiros que trabalham no concelho, por cada 1000 residentes. Conta-se pelo local de trabalho, por isso os concelhos com hospitais têm valores mais altos, e os residentes também são atendidos em unidades de saúde de outros concelhos.",
+   "palavras": "saúde",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -31099,6 +31520,7 @@
    "categoria": "saude",
    "unidade": "farmácias por 1000 habitantes",
    "texto": "Farmácias e postos farmacêuticos móveis existentes no concelho por cada 1000 residentes, segundo o INFARMED. Um valor de 0,2 corresponde a uma farmácia por cada 5000 habitantes. Como o valor é pequeno e arredondado, pequenas diferenças podem não se ver.",
+   "palavras": "saúde medicamentos",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -31248,6 +31670,7 @@
    "categoria": "saude",
    "unidade": "médicos por 1000 habitantes",
    "texto": "Médicos inscritos na Ordem dos Médicos que vivem no concelho, por cada 1000 residentes. Conta-se pela morada do médico e não pelo local onde trabalha, por isso não mede quantos médicos atendem no concelho.",
+   "palavras": "saúde médicos centro de saúde",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -31429,6 +31852,7 @@
    "categoria": "saude",
    "unidade": "‰ (óbitos por mil habitantes)",
    "texto": "Mortes de residentes por cancro no ano, por cada 1000 habitantes. Não tem em conta as idades: como o cancro é mais frequente em idades avançadas, um concelho com mais idosos tende a ter uma taxa mais alta. Em concelhos pequenos, poucos casos a mais ou a menos mudam o valor.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -31546,13 +31970,14 @@
    "categoria": "seguranca",
    "unidade": "crimes",
    "texto": "Crimes participados às autoridades policiais (PSP, GNR, Polícia Judiciária e outras) ou detetados por elas, ocorridos no concelho durante o ano. Só conta o que chega ao conhecimento das polícias, por isso o valor depende também de as pessoas apresentarem queixa.",
+   "palavras": "crime segurança polícia",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Crimes registados (N.º) pelas autoridades policiais por Localização geográfica (NUTS - 2024) e Categoria de crime; Anual - Direcção-Geral da Política de Justiça",
+   "fonte": "INE, com dados de: Direção-Geral da Política de Justiça",
    "ine": "0012261",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -31722,13 +32147,14 @@
    "categoria": "seguranca",
    "unidade": "crimes",
    "texto": "Crimes de violência doméstica contra cônjuge, ex-cônjuge, companheiro ou namorado (\"ou análogos\") participados às autoridades policiais no ano. É a parte maior da violência doméstica, mas não a inclui toda (ficam de fora os casos contra menores e outros tipos de violência doméstica). Só conta o que chega às polícias, por isso uma subida tanto pode vir de mais casos como de mais queixas.",
+   "palavras": "crime violência",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Crimes registados (N.º) pelas autoridades policiais por Localização geográfica (NUTS - 2024) e Categoria de crime; Anual - Direcção-Geral da Política de Justiça",
+   "fonte": "INE, com dados de: Direção-Geral da Política de Justiça",
    "ine": "0012261",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -31898,13 +32324,14 @@
    "categoria": "seguranca",
    "unidade": "‰ (crimes por mil habitantes)",
    "texto": "Crimes registados pelas autoridades policiais no ano por cada 1000 residentes. Divide-se pela população residente, mas os crimes contam-se onde acontecem: concelhos com muita gente de passagem (comércio, trabalho, turismo) podem ter, por isso, valores mais altos. Só conta os crimes que chegam ao conhecimento das polícias.",
+   "palavras": "crime segurança polícia",
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Taxa de criminalidade (‰) por Localização geográfica (NUTS - 2024) e Categoria de crime; Anual - Direcção-Geral da Política de Justiça",
+   "fonte": "INE, com dados de: Direção-Geral da Política de Justiça",
    "ine": "0012260",
    "ineAntigo": null,
    "metodoGrupo": "ponderada",
@@ -32077,8 +32504,9 @@
    "slug": "aguas_residuais_drenadas_por_habitante",
    "titulo": "Águas residuais drenadas por habitante",
    "categoria": "ambiente",
-   "unidade": "m³/hab.",
+   "unidade": "m³ por habitante",
    "texto": "Volume de águas residuais recolhidas pela rede pública de drenagem, por habitante do concelho. Mede quanto se recolhe, não a percentagem da população ligada à rede: este indicador não diz quantas casas estão servidas.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -32514,8 +32942,9 @@
    "slug": "despesas_cultura_desporto_no_total",
    "titulo": "Despesas em cultura e desporto no total das despesas da Câmara",
    "categoria": "economia",
-   "unidade": "%",
-   "texto": "A parte das despesas da Câmara que vai para cultura e desporto.",
+   "unidade": "% da despesa total da Câmara",
+   "texto": "Em cada 100 euros gastos pela Câmara no ano, quantos foram para cultura e desporto. Junta despesas correntes e investimento, por isso um ano com uma obra grande destaca-se dos restantes.",
+   "palavras": null,
    "colunas": [
     "Trofa",
     "Área Metropolitana do Porto",
@@ -32686,6 +33115,1066 @@
       "Santo Tirso": 7.3,
       "Maia": 11.6,
       "Vila do Conde": 14
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "populacao_ensino_superior",
+   "titulo": "População com ensino superior",
+   "categoria": "educacao",
+   "unidade": "% dos residentes com 21 ou mais anos",
+   "texto": "Em cada 100 residentes com 21 ou mais anos, quantos têm um curso superior concluído (bacharelato, licenciatura, mestrado ou doutoramento). Conta-se pela morada: quem estudou na Trofa e foi viver para outro lado não entra. Só há valores nos anos dos Censos (2011 e 2021).",
+   "palavras": "universidade licenciatura curso",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Recenseamento da população e habitação (Censos 2011 e 2021)",
+   "ine": "0011649",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 9.71,
+       "var": null
+      },
+      {
+       "v": 15.88,
+       "var": null
+      },
+      {
+       "v": 12.43,
+       "var": null
+      },
+      {
+       "v": 14.99,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 9.34,
+      "Guimarães": 10.27,
+      "Vila Nova de Famalicão": 10.99,
+      "Vizela": 6.74,
+      "Trofa": 9.71,
+      "Santo Tirso": 9.63,
+      "Maia": 20.63,
+      "Vila do Conde": 12.66
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 15.29,
+       "var": 57.5
+      },
+      {
+       "v": 22.54,
+       "var": 41.9
+      },
+      {
+       "v": 18.32,
+       "var": 47.4
+      },
+      {
+       "v": 21.2,
+       "var": 41.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 13.98,
+      "Guimarães": 16.09,
+      "Vila Nova de Famalicão": 16.38,
+      "Vizela": 11.63,
+      "Trofa": 15.29,
+      "Santo Tirso": 15.25,
+      "Maia": 27.54,
+      "Vila do Conde": 18.92
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "populacao_ensino_secundario",
+   "titulo": "População com pelo menos o ensino secundário",
+   "categoria": "educacao",
+   "unidade": "% dos residentes com 18 ou mais anos",
+   "texto": "Em cada 100 residentes com 18 ou mais anos, quantos concluíram pelo menos o ensino secundário (12.º ano ou equivalente), incluindo os que têm um curso superior. Só há valores nos anos dos Censos (2011 e 2021).",
+   "palavras": null,
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Recenseamento da população e habitação (Censos 2011 e 2021)",
+   "ine": "0011660",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 25.34,
+       "var": null
+      },
+      {
+       "v": 32.03,
+       "var": null
+      },
+      {
+       "v": 27.61,
+       "var": null
+      },
+      {
+       "v": 31.7,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 21.15,
+      "Guimarães": 24.3,
+      "Vila Nova de Famalicão": 26.3,
+      "Vizela": 19.54,
+      "Trofa": 25.34,
+      "Santo Tirso": 22.86,
+      "Maia": 39.99,
+      "Vila do Conde": 27.22
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 39.2,
+       "var": 54.7
+      },
+      {
+       "v": 46.16,
+       "var": 44.1
+      },
+      {
+       "v": 41.4,
+       "var": 49.9
+      },
+      {
+       "v": 45.64,
+       "var": 44
+      }
+     ],
+     "concelhos": {
+      "Fafe": 33.04,
+      "Guimarães": 38,
+      "Vila Nova de Famalicão": 40.48,
+      "Vizela": 33.6,
+      "Trofa": 39.2,
+      "Santo Tirso": 36.3,
+      "Maia": 53.42,
+      "Vila do Conde": 41.91
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "populacao_3_ciclo",
+   "titulo": "População com pelo menos o 3.º ciclo",
+   "categoria": "educacao",
+   "unidade": "% dos residentes com 15 ou mais anos",
+   "texto": "Em cada 100 residentes com 15 ou mais anos, quantos concluíram pelo menos o 3.º ciclo do ensino básico (9.º ano), incluindo os que têm o secundário ou um curso superior. Só há valores dos Censos 2021.",
+   "palavras": null,
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Recenseamento da população e habitação (Censos 2021)",
+   "ine": "0011648",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 57.12,
+       "var": null
+      },
+      {
+       "v": 62.36,
+       "var": null
+      },
+      {
+       "v": 58.22,
+       "var": null
+      },
+      {
+       "v": 62.26,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 49.1,
+      "Guimarães": 55.51,
+      "Vila Nova de Famalicão": 57.62,
+      "Vizela": 52.11,
+      "Trofa": 57.12,
+      "Santo Tirso": 52.35,
+      "Maia": 69.06,
+      "Vila do Conde": 58.91
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "taxa_analfabetismo",
+   "titulo": "Taxa de analfabetismo",
+   "categoria": "educacao",
+   "unidade": "% dos residentes com 10 ou mais anos",
+   "texto": "Em cada 100 residentes com 10 ou mais anos, quantos não sabem ler nem escrever, segundo o que foi respondido nos Censos. Concentra-se sobretudo nas pessoas mais velhas. Só há valores nos anos dos Censos (2011 e 2021).",
+   "palavras": null,
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Recenseamento da população e habitação (Censos 2011 e 2021)",
+   "ine": "0011606",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 3.53,
+       "var": null
+      },
+      {
+       "v": 3.43,
+       "var": null
+      },
+      {
+       "v": 3.97,
+       "var": null
+      },
+      {
+       "v": 5.22,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 6.19,
+      "Guimarães": 4.4,
+      "Vila Nova de Famalicão": 3.99,
+      "Vizela": 4.96,
+      "Trofa": 3.53,
+      "Santo Tirso": 4.28,
+      "Maia": 2.52,
+      "Vila do Conde": 3.76
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 2.22,
+       "var": -37.1
+      },
+      {
+       "v": 2.14,
+       "var": -37.6
+      },
+      {
+       "v": 2.38,
+       "var": -40.1
+      },
+      {
+       "v": 3.08,
+       "var": -41
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3.73,
+      "Guimarães": 2.61,
+      "Vila Nova de Famalicão": 2.3,
+      "Vizela": 3.06,
+      "Trofa": 2.22,
+      "Santo Tirso": 2.55,
+      "Maia": 1.6,
+      "Vila do Conde": 2.3
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "taxa_retencao_basico",
+   "titulo": "Retenção e desistência no ensino básico",
+   "categoria": "educacao",
+   "unidade": "% dos alunos matriculados",
+   "texto": "Em cada 100 alunos do ensino básico regular (1.º ao 9.º ano) das escolas do concelho, quantos ficaram no mesmo ano de escolaridade no ano letivo seguinte, por não terem aproveitamento ou por quererem melhorar a nota. Conta-se pelo local da escola.",
+   "palavras": "escolas chumbar reprovar",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Direção-Geral de Estatísticas da Educação e Ciência (DGEEC)",
+   "ine": "0012618",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2014/15",
+     "valores": [
+      {
+       "v": 9,
+       "var": null
+      },
+      {
+       "v": 7.3,
+       "var": null
+      },
+      {
+       "v": 5.9,
+       "var": null
+      },
+      {
+       "v": 7.9,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 5.5,
+      "Guimarães": 5.3,
+      "Vila Nova de Famalicão": 5.4,
+      "Vizela": 5.8,
+      "Trofa": 9,
+      "Santo Tirso": 5.3,
+      "Maia": 6,
+      "Vila do Conde": 7.2
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2015/16",
+     "valores": [
+      {
+       "v": 7.6,
+       "var": -15.6
+      },
+      {
+       "v": 5.9,
+       "var": -19.2
+      },
+      {
+       "v": 4.9,
+       "var": -16.9
+      },
+      {
+       "v": 6.6,
+       "var": -16.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4.1,
+      "Guimarães": 4.8,
+      "Vila Nova de Famalicão": 3.7,
+      "Vizela": 6.5,
+      "Trofa": 7.6,
+      "Santo Tirso": 4.3,
+      "Maia": 4.9,
+      "Vila do Conde": 6.1
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2016/17",
+     "valores": [
+      {
+       "v": 5.8,
+       "var": -23.7
+      },
+      {
+       "v": 4.7,
+       "var": -20.3
+      },
+      {
+       "v": 3.8,
+       "var": -22.4
+      },
+      {
+       "v": 5.5,
+       "var": -16.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3.1,
+      "Guimarães": 3.3,
+      "Vila Nova de Famalicão": 4.1,
+      "Vizela": 4.4,
+      "Trofa": 5.8,
+      "Santo Tirso": 3.2,
+      "Maia": 4.2,
+      "Vila do Conde": 3.5
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2017/18",
+     "valores": [
+      {
+       "v": 4.4,
+       "var": -24.1
+      },
+      {
+       "v": 4.1,
+       "var": -12.8
+      },
+      {
+       "v": 3.1,
+       "var": -18.4
+      },
+      {
+       "v": 5.1,
+       "var": -7.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1.4,
+      "Guimarães": 2.4,
+      "Vila Nova de Famalicão": 2.8,
+      "Vizela": 3.8,
+      "Trofa": 4.4,
+      "Santo Tirso": 3.2,
+      "Maia": 3.8,
+      "Vila do Conde": 3.9
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2018/19",
+     "valores": [
+      {
+       "v": 4.3,
+       "var": -2.3
+      },
+      {
+       "v": 3.1,
+       "var": -24.4
+      },
+      {
+       "v": 2.1,
+       "var": -32.3
+      },
+      {
+       "v": 3.8,
+       "var": -25.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.7,
+      "Guimarães": 1.7,
+      "Vila Nova de Famalicão": 1.5,
+      "Vizela": 2.4,
+      "Trofa": 4.3,
+      "Santo Tirso": 2.3,
+      "Maia": 2.7,
+      "Vila do Conde": 2.8
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2019/20",
+     "valores": [
+      {
+       "v": 1.5,
+       "var": -65.1
+      },
+      {
+       "v": 1.5,
+       "var": -51.6
+      },
+      {
+       "v": 1.1,
+       "var": -47.6
+      },
+      {
+       "v": 2.2,
+       "var": -42.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.1,
+      "Guimarães": 0.8,
+      "Vila Nova de Famalicão": 0.7,
+      "Vizela": 0.7,
+      "Trofa": 1.5,
+      "Santo Tirso": 1.4,
+      "Maia": 1.7,
+      "Vila do Conde": 1.2
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2020/21",
+     "valores": [
+      {
+       "v": 2.5,
+       "var": 66.7
+      },
+      {
+       "v": 2.3,
+       "var": 53.3
+      },
+      {
+       "v": 1.5,
+       "var": 36.4
+      },
+      {
+       "v": 3.1,
+       "var": 40.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.2,
+      "Guimarães": 0.9,
+      "Vila Nova de Famalicão": 1.5,
+      "Vizela": 1.1,
+      "Trofa": 2.5,
+      "Santo Tirso": 1.7,
+      "Maia": 1.9,
+      "Vila do Conde": 2.5
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2021/22",
+     "valores": [
+      {
+       "v": 2.4,
+       "var": -4
+      },
+      {
+       "v": 2.1,
+       "var": -8.7
+      },
+      {
+       "v": 1.4,
+       "var": -6.7
+      },
+      {
+       "v": 3.1,
+       "var": 0
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.3,
+      "Guimarães": 0.7,
+      "Vila Nova de Famalicão": 1.5,
+      "Vizela": 1.2,
+      "Trofa": 2.4,
+      "Santo Tirso": 1.6,
+      "Maia": 2,
+      "Vila do Conde": 1.9
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2022/23",
+     "valores": [
+      {
+       "v": 2.6,
+       "var": 8.3
+      },
+      {
+       "v": 2.5,
+       "var": 19
+      },
+      {
+       "v": 1.8,
+       "var": 28.6
+      },
+      {
+       "v": 3.8,
+       "var": 22.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.5,
+      "Guimarães": 1.4,
+      "Vila Nova de Famalicão": 2.1,
+      "Vizela": 2.2,
+      "Trofa": 2.6,
+      "Santo Tirso": 1.3,
+      "Maia": 1.9,
+      "Vila do Conde": 2.3
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2023/24",
+     "valores": [
+      {
+       "v": 2.8,
+       "var": 7.7
+      },
+      {
+       "v": 2.2,
+       "var": -12
+      },
+      {
+       "v": 1.8,
+       "var": 0
+      },
+      {
+       "v": 3.9,
+       "var": 2.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.6,
+      "Guimarães": 1.2,
+      "Vila Nova de Famalicão": 2,
+      "Vizela": 1.7,
+      "Trofa": 2.8,
+      "Santo Tirso": 1.1,
+      "Maia": 2.1,
+      "Vila do Conde": 2.6
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2024/25",
+     "valores": [
+      {
+       "v": 1.6,
+       "var": -42.9
+      },
+      {
+       "v": 1.9,
+       "var": -13.6
+      },
+      {
+       "v": 1.3,
+       "var": -27.8
+      },
+      {
+       "v": 3.6,
+       "var": -7.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 0.5,
+      "Guimarães": 0.6,
+      "Vila Nova de Famalicão": 1.6,
+      "Vizela": 1.2,
+      "Trofa": 1.6,
+      "Santo Tirso": 1.2,
+      "Maia": 1.4,
+      "Vila do Conde": 2.3
+     },
+     "pesoGrupo": "população"
+    }
+   ]
+  },
+  {
+   "slug": "taxa_conclusao_secundario",
+   "titulo": "Taxa de transição e conclusão no ensino secundário",
+   "categoria": "educacao",
+   "unidade": "% dos alunos matriculados",
+   "texto": "Em cada 100 alunos do ensino secundário das escolas do concelho (cursos gerais e profissionais), quantos tiveram aproveitamento no fim do ano letivo e puderam passar de ano ou concluir o secundário. Conta-se pelo local da escola.",
+   "palavras": "escolas chumbar passar",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Direção-Geral de Estatísticas da Educação e Ciência (DGEEC)",
+   "ine": "0012635",
+   "ineAntigo": null,
+   "metodoGrupo": "ponderada",
+   "unidadeINE": "Percentagem (%)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2014/15",
+     "valores": [
+      {
+       "v": 92.7,
+       "var": null
+      },
+      {
+       "v": 86.1,
+       "var": null
+      },
+      {
+       "v": 85.6,
+       "var": null
+      },
+      {
+       "v": 83.4,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 85.3,
+      "Guimarães": 87.6,
+      "Vila Nova de Famalicão": 85.3,
+      "Vizela": 85.9,
+      "Trofa": 92.7,
+      "Santo Tirso": 89.6,
+      "Maia": 81.4,
+      "Vila do Conde": 82.7
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2015/16",
+     "valores": [
+      {
+       "v": 90.1,
+       "var": -2.8
+      },
+      {
+       "v": 86.8,
+       "var": 0.8
+      },
+      {
+       "v": 86,
+       "var": 0.5
+      },
+      {
+       "v": 84.3,
+       "var": 1.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 84.7,
+      "Guimarães": 87.5,
+      "Vila Nova de Famalicão": 87.7,
+      "Vizela": 85.9,
+      "Trofa": 90.1,
+      "Santo Tirso": 90,
+      "Maia": 82.1,
+      "Vila do Conde": 81.8
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2016/17",
+     "valores": [
+      {
+       "v": 91.8,
+       "var": 1.9
+      },
+      {
+       "v": 88,
+       "var": 1.4
+      },
+      {
+       "v": 87.1,
+       "var": 1.3
+      },
+      {
+       "v": 84.9,
+       "var": 0.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 89.7,
+      "Guimarães": 86.1,
+      "Vila Nova de Famalicão": 88.5,
+      "Vizela": 84.9,
+      "Trofa": 91.8,
+      "Santo Tirso": 90.8,
+      "Maia": 85.3,
+      "Vila do Conde": 83
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2017/18",
+     "valores": [
+      {
+       "v": 92.4,
+       "var": 0.7
+      },
+      {
+       "v": 88.6,
+       "var": 0.7
+      },
+      {
+       "v": 88.8,
+       "var": 2
+      },
+      {
+       "v": 86.1,
+       "var": 1.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 92.7,
+      "Guimarães": 89.2,
+      "Vila Nova de Famalicão": 90,
+      "Vizela": 91,
+      "Trofa": 92.4,
+      "Santo Tirso": 92.2,
+      "Maia": 84,
+      "Vila do Conde": 86.6
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2018/19",
+     "valores": [
+      {
+       "v": 93,
+       "var": 0.6
+      },
+      {
+       "v": 89.1,
+       "var": 0.6
+      },
+      {
+       "v": 89.7,
+       "var": 1
+      },
+      {
+       "v": 86.9,
+       "var": 0.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 89.9,
+      "Guimarães": 90.8,
+      "Vila Nova de Famalicão": 92.5,
+      "Vizela": 90.7,
+      "Trofa": 93,
+      "Santo Tirso": 92.4,
+      "Maia": 85.3,
+      "Vila do Conde": 85.7
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2019/20",
+     "valores": [
+      {
+       "v": 97.7,
+       "var": 5.1
+      },
+      {
+       "v": 93.2,
+       "var": 4.6
+      },
+      {
+       "v": 94.2,
+       "var": 5
+      },
+      {
+       "v": 91.5,
+       "var": 5.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 94.1,
+      "Guimarães": 94.6,
+      "Vila Nova de Famalicão": 95.7,
+      "Vizela": 96.1,
+      "Trofa": 97.7,
+      "Santo Tirso": 95.4,
+      "Maia": 92.1,
+      "Vila do Conde": 91.1
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2020/21",
+     "valores": [
+      {
+       "v": 95.1,
+       "var": -2.7
+      },
+      {
+       "v": 93.8,
+       "var": 0.6
+      },
+      {
+       "v": 94.9,
+       "var": 0.7
+      },
+      {
+       "v": 91.7,
+       "var": 0.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 95.7,
+      "Guimarães": 95.4,
+      "Vila Nova de Famalicão": 95,
+      "Vizela": 95.2,
+      "Trofa": 95.1,
+      "Santo Tirso": 96.7,
+      "Maia": 93.7,
+      "Vila do Conde": 93.8
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2021/22",
+     "valores": [
+      {
+       "v": 93.9,
+       "var": -1.3
+      },
+      {
+       "v": 93.8,
+       "var": 0
+      },
+      {
+       "v": 95.2,
+       "var": 0.3
+      },
+      {
+       "v": 91.4,
+       "var": -0.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 97.4,
+      "Guimarães": 96.4,
+      "Vila Nova de Famalicão": 95.5,
+      "Vizela": 95.8,
+      "Trofa": 93.9,
+      "Santo Tirso": 96,
+      "Maia": 92.9,
+      "Vila do Conde": 94.3
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2022/23",
+     "valores": [
+      {
+       "v": 92.7,
+       "var": -1.3
+      },
+      {
+       "v": 92.9,
+       "var": -1
+      },
+      {
+       "v": 94.3,
+       "var": -0.9
+      },
+      {
+       "v": 90.2,
+       "var": -1.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 98.2,
+      "Guimarães": 94.8,
+      "Vila Nova de Famalicão": 94.8,
+      "Vizela": 96,
+      "Trofa": 92.7,
+      "Santo Tirso": 96.2,
+      "Maia": 91.9,
+      "Vila do Conde": 93.3
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2023/24",
+     "valores": [
+      {
+       "v": 92.3,
+       "var": -0.4
+      },
+      {
+       "v": 93,
+       "var": 0.1
+      },
+      {
+       "v": 94.7,
+       "var": 0.4
+      },
+      {
+       "v": 90.4,
+       "var": 0.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 97.5,
+      "Guimarães": 95.1,
+      "Vila Nova de Famalicão": 94.8,
+      "Vizela": 95,
+      "Trofa": 92.3,
+      "Santo Tirso": 96.2,
+      "Maia": 93.7,
+      "Vila do Conde": 93.2
+     },
+     "pesoGrupo": "população"
+    },
+    {
+     "periodo": "2024/25",
+     "valores": [
+      {
+       "v": 92.7,
+       "var": 0.4
+      },
+      {
+       "v": 93.8,
+       "var": 0.9
+      },
+      {
+       "v": 94.8,
+       "var": 0.1
+      },
+      {
+       "v": 91.2,
+       "var": 0.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 97.6,
+      "Guimarães": 94.8,
+      "Vila Nova de Famalicão": 95,
+      "Vizela": 93.9,
+      "Trofa": 92.7,
+      "Santo Tirso": 97.1,
+      "Maia": 94,
+      "Vila do Conde": 93.5
      },
      "pesoGrupo": "população"
     }
