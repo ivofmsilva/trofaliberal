@@ -9,7 +9,8 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: { default: "Dados da Trofa — Iniciativa Liberal Trofa", template: "%s · Dados da Trofa" },
-  description: "Indicadores, contas, contratos e decisões do concelho da Trofa, a partir de fontes públicas.",
+  description:
+    "Portal de dados abertos sobre o concelho da Trofa: indicadores, contas, contratos e decisões, com os números das fontes oficiais e sem leitura política.",
   // Nas partilhas, cada página aparece com o seu título ("Renda mediana… · Dados da Trofa"); a imagem vem do modelo geral.
 };
 

@@ -90,8 +90,10 @@ export default function Inicio() {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c9bbf6]">Dados abertos · fontes oficiais</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">A Trofa em números</h1>
           <p className="mt-3 max-w-2xl text-base text-white/85 sm:mt-4 sm:text-lg">
-            Indicadores oficiais do concelho, ao lado de três comparações: os 8 concelhos próximos (a Trofa e mais 7), a Área
-            Metropolitana do Porto e o país. Cada indicador diz a fonte e liga a ela, e a tabela pode descarregar-se.
+            <b className="font-semibold text-white">Portal de dados abertos sobre o concelho da Trofa.</b> Os números são os das
+            fontes oficiais (INE, IEFP, DGAL e outras), sem comentários nem leitura política: cada pessoa tira as suas
+            conclusões. Cada indicador compara a Trofa com os 8 concelhos próximos, a Área Metropolitana do Porto e o país, diz
+            de onde vem e pode descarregar-se.
           </p>
           <ul className="mt-6 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
             {factos.map((f) => (
