@@ -49,7 +49,7 @@ export default function Fontes() {
     },
     {
       nome: "Portal de dados abertos da Iniciativa Liberal de Lousada",
-      texto: `A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem duma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada ao município da Trofa. Hoje, ${conta(nossos)} são recolhidos diretamente por nós ao INE e ao IEFP. Os outros ${doPortal} vêm desse portal, que também já usa estes 8 concelhos: os da DGAL, da DGEG e da APA, alguns calculados a partir de outros indicadores e os que ainda não recolhemos.`,
+      texto: `A recolha de partida dos indicadores, dos contratos e dos fundos europeus vem de uma adaptação do portal de dados abertos da Iniciativa Liberal de Lousada ao município da Trofa. Hoje, ${conta(nossos)} são recolhidos diretamente do INE e do IEFP. Os outros ${doPortal} vêm desse portal, que também já usa estes 8 concelhos: os da DGAL, da DGEG e da APA, alguns calculados a partir de outros indicadores e os que ainda não recolhemos.`,
       ligacoes: [],
     },
     {
