@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Metro para a Trofa — Iniciativa Liberal Trofa",
   // A frase principal primeiro (o Google corta perto dos 155 carateres); as estações ajudam quem as pesquisa.
   description:
-    "A IL Trofa defende o metro ligeiro até ao Interface da Trofa, sem transbordo no Muro. Estações: Ribela, Muro, Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface.",
+    "A IL Trofa defende o metro ligeiro até ao Interface da Trofa, sem transbordo no Muro. Estações atuais: Ribela, Muro, Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface.",
   openGraph: {
     title: "Metro ligeiro até à Trofa — Iniciativa Liberal Trofa",
     description: "Esperámos mais de 9000 dias. Agora é a nossa vez.",
