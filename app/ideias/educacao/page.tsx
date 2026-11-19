@@ -20,19 +20,19 @@ const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";
 
 const principios = [
   {
-    titulo: "Autonomia para as Escolas",
+    titulo: "Autonomia para as escolas",
     texto: "Menos tutela burocrática e mais responsabilidade local, porque as decisões não devem vir todas de Lisboa.",
   },
   {
-    titulo: "Liberdade de Escolha",
+    titulo: "Liberdade de escolha",
     texto: "Famílias informadas e projetos pedagógicos diversos, para que escolher não seja um privilégio de quem já sabe.",
   },
   {
-    titulo: "Sociedade Civil na Educação",
+    titulo: "Sociedade civil na educação",
     texto: "Abertura, cooperação e criatividade em vez de controlo e despesa sem fim.",
   },
   {
-    titulo: "Mérito e Apoio Certo",
+    titulo: "Mérito e apoio certo",
     texto: "Apoio social onde é preciso, temporário, bem direcionado e com resultados medidos, para que todos possam aprender e crescer.",
   },
 ];
@@ -76,7 +76,7 @@ export default function Educacao() {
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-white/85">
             Durante demasiado tempo, governos e autarquias trataram a educação como um sistema fechado e
-            centralizado, onde as famílias têm pouca escolha, as escolas pouca autonomia e os alunos pouca
+            centralizado, onde as famílias tinham pouca escolha, as escolas pouca autonomia e os alunos pouca
             margem para desenvolver o seu potencial. Na Trofa queremos mudar este cenário.
           </p>
           <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -184,7 +184,7 @@ export default function Educacao() {
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <p className={`${etiqueta} text-cyan-dark`}>Na campanha</p>
         <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">
-          Levámos a Educação para a Rua
+          Levámos a Educação para a rua
         </h2>
         <ul className="mt-10 grid gap-6 sm:grid-cols-3">
           {cartazesEducacao.map((c) => (

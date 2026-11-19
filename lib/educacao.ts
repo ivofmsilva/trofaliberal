@@ -58,7 +58,7 @@ export const propostas: Proposta[] = [
     eixo: 1,
     titulo: "Atualizar a rede escolar do 1.º ciclo",
     resumo:
-      "Melhorar as condições de aprendizagem, combater a subutilização dos espaços e as turmas mistas, e libertar espaços para creches, biblioteca municipal e salas de estudo.",
+      "Melhorar as condições de aprendizagem, combater a subutilização dos espaços e as turmas mistas, e libertar espaço para creches, a biblioteca municipal e salas de estudo.",
     porque:
       "A rede escolar da Trofa foi desenhada para uma realidade demográfica e de mobilidade que já não existe. As turmas mistas, com alunos de anos diferentes na mesma sala, são um dos sintomas. Reorganizar os agrupamentos, com rigor e dados, elimina-as, melhora a aprendizagem e liberta espaços para as necessidades crescentes do concelho. A carta educativa pode ser o ponto de partida de uma discussão pública sobre a rede escolar, alinhada com as mudanças estruturais que o Ministério da Educação prepara.",
   },
@@ -76,7 +76,7 @@ export const propostas: Proposta[] = [
     titulo: "Mais componentes educativas",
     resumo: "Desporto, artes, apoio psicológico e novas competências para todos os alunos.",
     porque:
-      "A prática desportiva regular na infância é determinante para a saúde, o equilíbrio emocional e o rendimento escolar. O bullying, as redes sociais, a IA e a falta de psicólogos estão no centro da experiência escolar de muitos jovens. O município pode usar a sua influência e recursos, em articulação com os agrupamentos, para que nenhum jovem fique sem apoio por falta de meios.",
+      "A prática desportiva regular na infância é determinante para a saúde, o equilíbrio emocional e o rendimento escolar. O bullying, as redes sociais, a IA e a falta de psicólogos estão no centro da experiência escolar de muitos jovens. O município pode usar a sua influência e os seus recursos, em articulação com os agrupamentos, para que nenhum jovem fique sem apoio por falta de meios.",
     itens: [
       "Desporto escolar de grande qualidade logo no 1.º ciclo, com bons espaços desportivos em todas as escolas.",
       "Protocolos formais para as AEC de artes, para que o ensino artístico chegue a todas as crianças.",
@@ -92,7 +92,7 @@ export const propostas: Proposta[] = [
     titulo: "Uma biblioteca municipal à altura do concelho",
     resumo: "Uma biblioteca moderna e de excelência, com salas de estudo 24 horas acessíveis por cartão.",
     porque:
-      "A Trofa tem biblioteca municipal, mas não está à altura de um território com 40 759 habitantes (2023) e duas escolas secundárias. Falta uma biblioteca moderna, com salas de estudo em condições. Uma biblioteca assim reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestrutura escolar já existente torna a medida mais eficiente e sustentável.",
+      "A Trofa tem biblioteca municipal, mas não está à altura de um território com 41 512 habitantes (2025) e duas escolas secundárias. Falta uma biblioteca moderna, com salas de estudo em condições. Uma biblioteca assim reduz o abandono escolar e apoia quem não tem condições em casa para estudar, minimizando as diferenças sociais. Aproveitar infraestruturas escolares que já existem torna a medida mais eficiente e sustentável.",
   },
   {
     id: "1.5",
@@ -117,7 +117,7 @@ export const propostas: Proposta[] = [
     titulo: "Elevar o Conselho Municipal de Educação",
     resumo: "Mais discussão, mais transparência e mais especialistas no debate.",
     porque:
-      "No anterior mandato o conselho foi raramente convocado e produziu pouca discussão. Um conselho mais ativo traz ao debate os especialistas em educação do concelho, permite aos agentes educativos maior coordenação e complementaridade, e deixa os munícipes acompanhar o trabalho.",
+      "No anterior mandato, o conselho foi raramente convocado e produziu pouca discussão. Um conselho mais ativo traz ao debate os especialistas em educação do concelho, permite aos agentes educativos maior coordenação e complementaridade, e deixa os munícipes acompanhar o trabalho.",
   },
   {
     id: "2.2",
@@ -133,7 +133,7 @@ export const propostas: Proposta[] = [
     titulo: "Apoiar a sociedade civil e estimular o mecenato educativo",
     resumo: "Protocolos, infraestruturas e reconhecimento para quem melhora a educação no concelho.",
     porque:
-      "A Câmara deve apoiar e facilitar o trabalho das entidades da sociedade civil, com protocolos formais, acesso a infraestrutura municipal e reconhecimento, sem cheques em branco e com resultados mensuráveis. O aluno está no centro da ação educativa. O mecenato educativo, a criação de tutores e o envolvimento das empresas locais trazem a sociedade civil para a educação do concelho, em benefício dos alunos.",
+      "A Câmara deve apoiar e facilitar o trabalho das entidades da sociedade civil, com protocolos formais, acesso a infraestrutura municipal e reconhecimento, sem cheques em branco e com resultados mensuráveis. O aluno está no centro da ação educativa. O mecenato educativo, os programas de tutoria e o envolvimento das empresas locais trazem a sociedade civil para a educação do concelho, em benefício dos alunos.",
   },
   {
     id: "3.1",
@@ -164,7 +164,7 @@ export const propostas: Proposta[] = [
     resumo:
       "Abrir escolas e bibliotecas fora do horário letivo e criar estágios de verão no município e nas empresas locais.",
     porque:
-      "Quanto mais contacto com o mundo do trabalho, maior a motivação e a preparação dos jovens. Abrir as escolas e bibliotecas ao exterior depois das aulas, com regras simples e claras, aproveita espaços que já existem. Os estágios de verão dão aos jovens do concelho o primeiro contacto com o mercado de trabalho.",
+      "Quanto mais contacto com o mundo do trabalho, maior a motivação e a preparação dos jovens. Abrir as escolas e as bibliotecas à comunidade depois das aulas, com regras simples e claras, aproveita espaços que já existem. Os estágios de verão dão aos jovens do concelho o primeiro contacto com o mercado de trabalho.",
   },
   {
     id: "4.1",
@@ -207,7 +207,7 @@ export const propostas: Proposta[] = [
     resumo:
       "Acabar com a injustiça de a gratuitidade dos manuais depender de a escola ser pública ou privada, e não das possibilidades da família.",
     porque:
-      "Para algumas famílias, o valor dos manuais escolares é uma barreira real ao acesso à educação. Que a gratuitidade dependa da escola frequentada, e não das condições económicas, é uma injustiça que o Estado mantém sem justificação. A medida tem um custo orçamental modesto e um impacto de equidade significativo: nenhuma família escolhe a escola pelo custo dos manuais, e sim pelo projeto educativo que melhor serve os seus filhos.",
+      "Para algumas famílias, o valor dos manuais escolares é uma barreira real ao acesso à educação. Que a gratuitidade dependa da escola frequentada, e não das condições económicas, é uma injustiça que o Estado mantém sem justificação. A medida tem um custo orçamental modesto e um impacto de equidade significativo: nenhuma família deve escolher a escola pelo custo dos manuais, mas sim pelo projeto educativo que melhor serve os seus filhos.",
   },
   {
     id: "4.6",
@@ -231,12 +231,12 @@ export const propostas: Proposta[] = [
 export const numeros = [
   {
     valor: "15,3%",
-    legenda: "da população residente na Trofa tem o ensino superior completo, contra 21,2% em Portugal",
+    legenda: "dos residentes na Trofa com 21 ou mais anos têm o ensino superior completo, contra 21,2% em Portugal",
     fonte: "INE, Censos 2021",
   },
   {
     valor: "+5,6",
-    legenda: "pontos em dez anos, de 9,7% para 15,3%, na população com ensino superior. Portugal subiu 6,2, por isso a distância aumentou",
+    legenda: "pontos em dez anos, de 9,7% para 15,3%, nos residentes com ensino superior. Portugal subiu 6,2, por isso a distância aumentou",
     fonte: "INE, Censos 2011 e 2021 (cálculo nosso)",
   },
   {
