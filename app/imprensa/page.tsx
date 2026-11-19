@@ -8,7 +8,7 @@ import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
 import { datasCelebradas, diaPorExtenso } from "@/lib/datasAnuais";
-import { agendados, aoLongoDoAno } from "@/lib/eventos";
+import { agendados, outros } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
 
@@ -66,7 +66,7 @@ export default function Imprensa() {
   const comItens = (["noticias", "artigos", "comunicados"] as Categoria[]).filter((cat) => ordenados(cat).length > 0);
 
   const proximos = agendados();
-  const outros = aoLongoDoAno();
+  // os encontros de todos os anos aparecem sempre, com a imagem (o Porto Liberal também, mesmo quando está nos próximos)
   const eventos: Separador = {
     id: "eventos",
     label: "Eventos",

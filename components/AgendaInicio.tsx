@@ -1,14 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import CartaoEvento from "@/components/CartaoEvento";
 import { DadosEventos } from "@/components/DadosEstruturados";
-import { agendados, aoLongoDoAno } from "@/lib/eventos";
+import { agendados } from "@/lib/eventos";
 
-// Agenda na página inicial. Mostra os próximos eventos quando os há (lib/eventos.ts) e, mesmo
-// sem datas marcadas, os encontros do núcleo ao longo do ano, para a agenda nunca parecer vazia.
+// Agenda na página inicial: só os próximos eventos (lib/eventos.ts) e a ligação para a página dos eventos, onde estão
+// também os encontros que o núcleo faz ao longo do ano. Sem eventos marcados, fica uma frase curta com essa ligação.
 export default function AgendaInicio() {
   const proximos = agendados();
-  const outros = aoLongoDoAno();
   return (
     <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
       <DadosEventos />
@@ -21,33 +19,11 @@ export default function AgendaInicio() {
             <CartaoEvento key={`${e.titulo}-${e.data}`} evento={e} />
           ))}
         </ul>
-      ) : null}
+      ) : (
+        <p className="mt-6 max-w-xl text-lg text-ink/75">Sem eventos marcados de momento. Vê os encontros que fazemos ao longo do ano.</p>
+      )}
 
-      {proximos.length > 0 && <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>}
-      <ul className={`${proximos.length > 0 ? "mt-6" : "mt-8 sm:mt-10"} -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden`}>
-        {outros.map((o) => (
-          <li key={o.titulo} className="w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink sm:w-auto">
-            <div className="relative">
-              <Image
-                src={o.imagem}
-                alt={o.titulo}
-                width={480}
-                height={320}
-                sizes="(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw"
-                className="aspect-[3/2] w-full object-cover"
-              />
-              <span className="absolute left-3 top-3 bg-pink px-3 py-1 text-xs font-black uppercase tracking-wider text-sun">
-                {o.quando.startsWith("Fica") ? "Sem data fixa" : o.quando}
-              </span>
-            </div>
-            <div className="p-5">
-              <h4 className="font-display text-xl font-bold text-navy">{o.titulo}</h4>
-              <p className="mt-2 text-sm text-ink/75">{o.texto}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <Link href="/imprensa?t=eventos" className="mt-2 inline-block py-2 font-bold text-cyan-dark hover:underline sm:mt-6">
+      <Link href="/imprensa?t=eventos" className="mt-4 inline-block py-2 font-bold text-cyan-dark hover:underline sm:mt-6">
         Ver todos os eventos →
       </Link>
     </section>

@@ -49,12 +49,6 @@ export function agendados(): Evento[] {
   return proximos.filter((e) => !e.inicio || new Date(e.inicio).getTime() + 24 * 3600 * 1000 > agora);
 }
 
-// Os encontros ao longo do ano, sem os que já estão nos próximos (para não aparecerem duas vezes).
-export function aoLongoDoAno() {
-  const ag = agendados().map((e) => e.titulo);
-  return outros.filter((o) => !ag.includes(o.titulo));
-}
-
 export const outros = [
   {
     titulo: "Fino Liberal",
