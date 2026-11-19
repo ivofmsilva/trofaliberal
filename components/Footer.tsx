@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-[1.2fr_1.4fr_1fr] md:gap-10 md:py-10">
         <div>
           <div className="flex items-center gap-3">
-            <Image src="/il-trofa-mark.png" alt="" width={32} height={32} className="rounded-full" />
+            <Image src="/il-trofa-logo.png" alt="" width={36} height={36} className="rounded-full" />
             <span className="font-display text-base font-bold text-white">Iniciativa Liberal Trofa</span>
           </div>
           <p className="mt-3 text-sm">Núcleo territorial da Trofa. Somos a energia que a Trofa precisa!</p>

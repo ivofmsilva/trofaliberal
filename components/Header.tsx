@@ -27,7 +27,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-navy text-white shadow-lg shadow-black/20">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image src="/il-trofa-mark.png" alt="" width={36} height={36} className="rounded-full" />
+          <Image src="/il-trofa-logo.png" alt="" width={40} height={40} className="rounded-full" />
           <span className="font-display leading-none">
             <span className="block text-sm font-bold">Iniciativa Liberal</span>
             <span className="block text-xs font-bold tracking-widest text-sun">TROFA</span>
