@@ -166,9 +166,13 @@ export const cronologia: Facto[] = [
   },
   {
     quando: "31 de agosto a 12 de outubro de 2026",
-    titulo: "Consulta pública do projeto",
+    titulo: "Consulta pública: 9 estações, só 2 com metro",
     texto:
-      "O Estudo de Impacte Ambiental esteve em consulta pública no Participa.pt. A IL Trofa respondeu, defendendo o metro ligeiro até ao Interface da Trofa.",
+      "O Estudo de Impacte Ambiental esteve em consulta pública no Participa.pt. O projeto tem 9 estações: Ribela com metro e o Muro como estação partilhada, onde se muda de veículo; Serra, Lantemil, Bougado, Pateiras, Paços do Concelho, Trofa Sul e Interface da Trofa ficam com metrobus. São 184 milhões de euros, com obras previstas entre 2027 e 2031. A IL Trofa respondeu, defendendo o metro ligeiro até ao Interface da Trofa.",
+    fonte: {
+      nome: "Echo Boomer (setembro de 2026)",
+      href: "https://echoboomer.pt/metro-do-porto-vai-chegar-gondomar-trofa/",
+    },
     ligacao: { nome: "Ver a nossa participação", href: "#participacao" },
   },
   {
