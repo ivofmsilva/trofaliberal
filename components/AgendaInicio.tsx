@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import CartaoEvento from "@/components/CartaoEvento";
 import { DadosEventos } from "@/components/DadosEstruturados";
-import { outros, proximos } from "@/lib/eventos";
+import { agendados, aoLongoDoAno } from "@/lib/eventos";
 
 // Agenda na página inicial. Mostra os próximos eventos quando os há (lib/eventos.ts) e, mesmo
 // sem datas marcadas, os encontros do núcleo ao longo do ano, para a agenda nunca parecer vazia.
 export default function AgendaInicio() {
+  const proximos = agendados();
+  const outros = aoLongoDoAno();
   return (
     <section className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
       <DadosEventos />
       <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Agenda</p>
-      <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Encontra-nos ao Vivo</h2>
+      <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">Encontra-nos ao vivo</h2>
 
       {proximos.length > 0 ? (
         <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -21,7 +23,7 @@ export default function AgendaInicio() {
         </ul>
       ) : null}
 
-      {proximos.length > 0 && <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao Longo do Ano</h3>}
+      {proximos.length > 0 && <h3 className="font-display mt-12 text-2xl font-bold text-navy">Ao longo do ano</h3>}
       <ul className={`${proximos.length > 0 ? "mt-6" : "mt-8 sm:mt-10"} -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5 [&::-webkit-scrollbar]:hidden`}>
         {outros.map((o) => (
           <li key={o.titulo} className="w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink sm:w-auto">
@@ -35,7 +37,7 @@ export default function AgendaInicio() {
                 className="aspect-[3/2] w-full object-cover"
               />
               <span className="absolute left-3 top-3 bg-pink px-3 py-1 text-xs font-black uppercase tracking-wider text-sun">
-                {o.quando.startsWith("Está") ? "Sem data fixa" : o.quando}
+                {o.quando.startsWith("Fica") ? "Sem data fixa" : o.quando}
               </span>
             </div>
             <div className="p-5">

@@ -31,20 +31,20 @@ export const metadata: Metadata = {
 
 const principios = [
   {
-    titulo: "Liberdade Social, Política e Económica",
+    titulo: "Liberdade social, política e económica",
     texto: "Defendemos a liberdade de cada pessoa fazer as suas próprias escolhas.",
   },
   {
-    titulo: "Igualdade de Oportunidades",
-    texto: "Um concelho onde as oportunidades são maximizadas para todos.",
+    titulo: "Igualdade de oportunidades",
+    texto: "Um concelho onde o ponto de partida de cada um não decide até onde pode chegar.",
   },
   {
-    titulo: "Mais Crescimento Económico e Sociedade Civil Forte",
+    titulo: "Mais crescimento económico e sociedade civil forte",
     texto:
-      "Acreditamos que a livre iniciativa e a concorrência geram prosperidade e inovação para todos. Onde a iniciativa é valorizada e incentivada.",
+      "Acreditamos que a livre iniciativa e a concorrência geram prosperidade e inovação para todos. Queremos um concelho que valoriza quem arrisca.",
   },
   {
-    titulo: "Combate ao Excesso do Estado e à Burocracia",
+    titulo: "Combate ao excesso do Estado e à burocracia",
     texto:
       "O Estado deve focar-se nas suas funções essenciais, deixando espaço para a sociedade civil florescer.",
   },
@@ -84,7 +84,7 @@ export default function Home() {
             Um concelho onde cada trofense pode viver de forma livre, com mais oportunidades e futuro.
           </p>
           <p className="font-display mt-4 text-xl font-bold text-sun">
-            Somos a energia que a Trofa precisa!
+            Somos a energia de que a Trofa precisa!
           </p>
           <div className="mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <Link
@@ -125,7 +125,7 @@ export default function Home() {
             ...datas.map((d) => d.titulo),
             "Metro para a Trofa",
             "Trofa no topo da Educação",
-            "Construir para o Futuro",
+            "Construir para o futuro",
             "Novo coordenador",
             "Dados da Trofa",
             "Packs de Natal",
@@ -152,7 +152,7 @@ export default function Home() {
               No Instagram
             </p>
             <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-              Últimas Publicações
+              Últimas publicações
             </h2>
           </div>
           <a
@@ -184,7 +184,7 @@ export default function Home() {
           Os nossos valores
         </p>
         <h2 className="font-display mt-3 text-4xl font-bold text-navy md:text-5xl">
-          O que Defendemos?
+          O que defendemos
         </h2>
         <ol className="-mx-4 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:mt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3 [&::-webkit-scrollbar]:hidden">
           {principios.map((p, i) => (
@@ -215,7 +215,7 @@ export default function Home() {
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[1fr_220px]">
           <div className="text-center md:text-left">
-            <h2 className="font-display text-4xl font-bold md:text-5xl">Faz-te Membro</h2>
+            <h2 className="font-display text-4xl font-bold md:text-5xl">Faz-te membro</h2>
             <p className="mt-4 text-lg font-medium">
               Ajuda-nos a construir um futuro mais livre para a Trofa.
             </p>

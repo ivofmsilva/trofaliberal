@@ -68,7 +68,7 @@ const ligacao = "font-bold text-cyan-dark underline";
 export default function Privacidade() {
   return (
     <>
-      <PageHero eyebrow="Privacidade" title="Política de Privacidade e Cookies">
+      <PageHero eyebrow="Privacidade" title="Política de privacidade e cookies">
         Como tratamos os dados pessoais que nos dás neste site.
       </PageHero>
 

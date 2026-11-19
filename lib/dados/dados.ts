@@ -1,5 +1,5 @@
 // Todos os indicadores, já juntados por scripts/juntar-indicadores.mjs (INE e IEFP recolhidos por nós; DGAL, DGEG, APA e
-// os calculados vêm do portal de origem). As colunas são sempre Trofa, AMP, Trofa e vizinhos (8 concelhos) e Portugal.
+// os calculados vêm do portal de origem). As colunas são sempre Trofa, AMP, os 8 concelhos próximos e Portugal.
 import bruto from "@/lib/dados/data/indicadores-novo.json";
 import { variacao, variacaoPP } from "./formatar";
 import { destaques, temas, temaDe } from "./temas";

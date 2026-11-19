@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Candidatos() {
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Quem Leva a Trofa para Cima">
+      <PageHero eyebrow="Autárquicas 2025" title="Quem leva a Trofa para cima">
         Conhece as pessoas que se candidataram pela Iniciativa Liberal nas Autárquicas 2025.
       </PageHero>
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Marcos, { type Marco } from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import RostosLiberais from "@/components/RostosLiberais";
@@ -58,7 +59,7 @@ const mandatos = [
 const marcos: Marco[] = [
   {
     ano: "2021",
-    titulo: "Primeiro Encontro Liberal na Trofa",
+    titulo: "Primeiro encontro liberal na Trofa",
     texto: "Primeiro contacto entre simpatizantes e membros da IL no concelho.",
     foto: {
       src: "/images/geral/primeiro-encontro-liberais.jpg",
@@ -67,7 +68,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2022",
-    titulo: "Deputados Liberais Eleitos pelo Círculo do Porto",
+    titulo: "Deputados liberais eleitos pelo círculo do Porto",
     texto: "Primeira campanha liberal a passar na Trofa.",
     foto: {
       src: "/images/geral/sobre-acao-tenda.jpg",
@@ -76,7 +77,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2022",
-    titulo: "Plenário Fundador do Núcleo",
+    titulo: "Plenário fundador do núcleo",
     texto: "Primeiro grupo de coordenação eleito em São Romão do Coronado.",
     foto: {
       src: "/images/geral/plenario-2022-mesa.jpg",
@@ -94,7 +95,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2024",
-    titulo: "Plenário Eletivo",
+    titulo: "Plenário eletivo",
     texto: "Novo Grupo de Coordenação da IL Trofa eleito em Santiago de Bougado.",
     foto: {
       src: "/images/geral/plenario-2024-bougado.jpg",
@@ -103,7 +104,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2025",
-    titulo: "Primeiras Autárquicas",
+    titulo: "Primeiras autárquicas",
     texto:
       "Listas à Câmara e à Assembleia Municipal da Trofa e às juntas de freguesia de Bougado e Alvarelhos. A IL trouxe uma nova forma de fazer política às eleições.",
     foto: {
@@ -122,7 +123,7 @@ const marcos: Marco[] = [
   },
   {
     ano: "2026",
-    titulo: "Plenário Eletivo",
+    titulo: "Plenário eletivo",
     texto: plenario2026.realizado
       ? `Novo Grupo de Coordenação da IL Trofa eleito no ${plenario2026.local}, a ${plenario2026.data}.`
       : `Plenário eletivo da IL Trofa, no ${plenario2026.local}, para eleger o novo Grupo de Coordenação.`,
@@ -139,7 +140,7 @@ export default function Sobre() {
     <>
       <PageHero
         eyebrow="Sobre a IL Trofa"
-        title="Um Caminho Liberal para a Trofa"
+        title="Um caminho liberal para a Trofa"
         image={{ src: "/images/geral/grupo-mar-corte.jpeg", alt: "Membros da IL Trofa junto ao mar", w: 575, h: 304 }}
       >
         A IL Trofa existe para defender um concelho onde cada trofense possa viver com mais
@@ -215,7 +216,7 @@ export default function Sobre() {
             ))}
           </ul>
 
-          <h3 className="font-display mt-16 text-2xl font-bold text-navy md:text-3xl">Mandatos Anteriores</h3>
+          <h3 className="font-display mt-16 text-2xl font-bold text-navy md:text-3xl">Mandatos anteriores</h3>
           <ol className="mt-6 space-y-4">
             {mandatos.map((m) => (
               <li key={m.periodo}>
@@ -260,7 +261,7 @@ export default function Sobre() {
       <section id="juventude" className="mx-auto grid max-w-7xl scroll-mt-24 items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-cyan-dark">Conselho Municipal da Juventude</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">A Tua Voz na Juventude Trofense</h2>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">A tua voz na juventude trofense</h2>
           <div className="mt-5 space-y-4 text-lg text-ink/85">
             <p>
               O Conselho Municipal da Juventude (CMJ) da Trofa iniciou um novo mandato a 7 de fevereiro
@@ -291,7 +292,7 @@ export default function Sobre() {
       <section id="historia" className="scroll-mt-24 bg-navy py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-sun">A nossa história</p>
-          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do Núcleo</h2>
+          <h2 className="font-display mt-3 text-4xl font-bold md:text-5xl">Marcos do núcleo</h2>
           <Marcos marcos={marcos} />
         </div>
       </section>
@@ -328,6 +329,15 @@ export default function Sobre() {
             </figcaption>
           </div>
         </figure>
+      </section>
+
+      <section className="bg-navy py-14 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <h2 className="font-display text-3xl font-bold">Queres fazer parte desta equipa?</h2>
+          <Link href="/participa?t=membro" className="inline-block rounded-full bg-pink px-8 py-3 font-bold text-white transition hover:bg-sun hover:text-navy">
+            Faz-te membro
+          </Link>
+        </div>
       </section>
     </>
   );

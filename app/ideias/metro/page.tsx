@@ -174,7 +174,7 @@ export default function Metro() {
                 </a>
               )}
               {f.ligacao && (
-                <a href={f.ligacao.href} className="mt-1 inline-block py-1.5 text-sm font-bold text-cyan-dark hover:underline">
+                <a href={f.ligacao.href} className="mt-1 ml-0 block py-1.5 text-sm font-bold text-cyan-dark hover:underline sm:ml-4 sm:inline-block">
                   {f.ligacao.nome} →
                 </a>
               )}
@@ -296,10 +296,10 @@ export default function Metro() {
           </figcaption>
         </figure>
 
-        <h3 className="font-display mt-10 text-2xl font-bold text-navy">A Nossa Posição</h3>
+        <h3 className="font-display mt-10 text-2xl font-bold text-navy">A nossa posição</h3>
         <p className="mt-3 text-lg text-ink/85">{participacao.posicao}</p>
 
-        <h3 className="font-display mt-10 text-2xl font-bold text-navy">O que Pedimos</h3>
+        <h3 className="font-display mt-10 text-2xl font-bold text-navy">O que pedimos</h3>
         <ol className="mt-5 space-y-3">
           {participacao.pedidos.map((p, i) => (
             <li key={p} className="flex gap-4 rounded-2xl bg-mist p-5 text-ink/85">
@@ -338,7 +338,7 @@ export default function Metro() {
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres Metro na Trofa?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres metro na Trofa?</h2>
           <p className="mt-3 text-lg font-medium">
             A Trofa só muda com mais liberais a dar a cara. Junta-te à causa e ajuda-nos a espalhar
             a mensagem.

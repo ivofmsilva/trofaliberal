@@ -20,7 +20,7 @@ export const gcl: Membro[] = [
 ];
 
 export const mesa: Membro[] = [
-  { nome: "Afonso Couto", cargo: "Presidente da Mesa do Plenário", foto: "/images/equipa/afonso-couto.png" },
-  { nome: "Manuel Vilas Boas", cargo: "1.º Secretário da Mesa do Plenário", foto: "/images/equipa/manuel-vilas-boas.png" },
-  { nome: "João Barros", cargo: "2.º Secretário da Mesa do Plenário", foto: "/images/equipa/joao-barros.png" },
+  { nome: "Afonso Couto", cargo: "Presidente", foto: "/images/equipa/afonso-couto.png" },
+  { nome: "Manuel Vilas Boas", cargo: "1.º Secretário", foto: "/images/equipa/manuel-vilas-boas.png" },
+  { nome: "João Barros", cargo: "2.º Secretário", foto: "/images/equipa/joao-barros.png" },
 ];

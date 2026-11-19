@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Galeria from "@/components/Galeria";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
@@ -32,7 +33,7 @@ export default function Lit() {
             futuro da Educação no concelho.
           </p>
           <p>
-            Entre 23 e 27 de março, a IL Trofa realizou visitas a estabelecimentos de ensino do
+            Entre 23 e 27 de março de 2026, a IL Trofa realizou visitas a estabelecimentos de ensino do
             concelho, cobrindo as várias vertentes do sistema educativo. O objetivo era conhecer a
             realidade de cada instituição e recolher perspetivas diretas dos seus responsáveis,
             construindo assim um retrato rigoroso e diversificado da educação na Trofa antes do
@@ -56,7 +57,7 @@ export default function Lit() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Resumo da Semana</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Resumo da semana</h2>
         <ol className="mt-8 grid gap-5 md:grid-cols-3">
           {resumoSemana.map((r) => (
             <li key={r.quando} className="rounded-2xl bg-navy p-6 text-white">
@@ -70,13 +71,13 @@ export default function Lit() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de Fotos</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
           <Galeria fotos={fotos("lit")} alt="Jornadas Liberais da Trofa" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Notícias na Imprensa</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Notícias na imprensa</h2>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {imprensa.map((n) => (
             <li key={n.href}>
@@ -88,8 +89,9 @@ export default function Lit() {
 
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3">
+          {apresentacoes.length > 0 && (
           <div>
-            <h2 className="font-display text-3xl font-bold">Material das Apresentações</h2>
+            <h2 className="font-display text-3xl font-bold">Material das apresentações</h2>
             {apresentacoes.length ? (
               <ul className="mt-4 space-y-2">
                 {apresentacoes.map((a) => (
@@ -100,23 +102,26 @@ export default function Lit() {
                   </li>
                 ))}
               </ul>
-            ) : (
-              <p className="mt-2 text-white/70">PDFs das apresentações em breve.</p>
-            )}
+            ) : null}
           </div>
+          )}
+          {relatorio && (
           <div>
             <h2 className="font-display text-3xl font-bold">Relatório das Jornadas</h2>
             {relatorio ? (
               <a href={relatorio} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block rounded-full bg-pink px-7 py-3 font-bold text-white transition hover:bg-white hover:text-navy">
                 Descarregar relatório (PDF) ↓
               </a>
-            ) : (
-              <p className="mt-2 text-white/70">Download em breve.</p>
-            )}
+            ) : null}
           </div>
+          )}
           <div>
-            <h2 className="font-display text-3xl font-bold">Edições Futuras</h2>
-            <p className="mt-2 text-sun">Brevemente.</p>
+            <h2 className="font-display text-3xl font-bold">As propostas</h2>
+            <p className="mt-2 text-white/80">Das Jornadas saiu o manifesto pela Educação, com 19 propostas.</p>
+            <Link href="/ideias/educacao" className="mt-4 inline-block font-bold text-sun hover:underline">
+              Ver as 19 propostas →
+            </Link>
+            <p className="mt-6 text-white/70">A próxima edição é anunciada aqui e no Instagram.</p>
           </div>
         </div>
       </section>

@@ -250,7 +250,7 @@ export default function Habitacao() {
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres Construir o Futuro da Trofa?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres construir o futuro da Trofa?</h2>
           <p className="mt-3 text-lg font-medium">
             Estas medidas são um ponto de partida. Diz-nos o que falta e ajuda-nos a pô-las em prática.
           </p>

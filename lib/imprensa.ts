@@ -48,8 +48,8 @@ export const categorias: Record<
     vazio: "Conteúdo em breve.",
   },
   artigos: {
-    titulo: "Artigos de Opinião",
-    descricao: "Textos de membros do núcleo sobre os temas que importam.",
+    titulo: "Artigos de opinião",
+    descricao: "A crónica “Folha Liberal”, de Diamantino Costa, n'O Notícias da Trofa.",
     // Aparece no fim da lista dos artigos.
     nota: "Os artigos de opinião exprimem a opinião de quem os assina, ficando apenas a eles vinculados.",
     verTodos: "Ver todos",
@@ -687,6 +687,7 @@ export const itens: Record<Categoria, Item[]> = {
     {
       titulo: "A Iniciativa Liberal da Trofa reafirma a defesa do Metro ligeiro até à Trofa",
       fonte: "Comunicado",
+      data: "2026-09-06",
       slug: "metro-ligeiro-ate-a-trofa",
       href: "/imprensa/comunicados/metro-ligeiro-ate-a-trofa",
       documento: "https://drive.google.com/file/d/18maEmy2VDbClEd6jUgvitJkUQsZOqz3P/view",
@@ -726,6 +727,7 @@ export const itens: Record<Categoria, Item[]> = {
     {
       titulo: "IL Trofa toma nota do acordo de maioria entre a Câmara e o PS",
       fonte: "Instagram",
+      data: "2025-11-24",
       href: "https://www.instagram.com/p/DRc-eUEjIQ-/",
     },
   ],

@@ -9,6 +9,8 @@ export type Evento = {
   // Opcionais: uma frase a explicar o evento e o cartaz (ficheiro em public/images/eventos/).
   texto?: string;
   imagem?: string;
+  // Opcional: uma ação dentro do site (ex.: reservar → contactos).
+  acao?: { texto: string; href: string };
 };
 
 // COMO ADICIONAR UM EVENTO: acrescenta um bloco igual ao exemplo abaixo (entre as
@@ -30,15 +32,28 @@ export const proximos: Evento[] = [
     data: "5 de dezembro, sábado, 20h",
     inicio: "2026-12-05T20:00:00+00:00",
     local: "Casa da Agra, Maia",
-    texto: "O Núcleo da Trofa junta-se a mais dez núcleos da Iniciativa Liberal do distrito do Porto. Reserva a data.",
+    texto: "O Núcleo da Trofa junta-se a mais dez núcleos da Iniciativa Liberal do distrito do Porto. Para reservar, fala connosco.",
+    acao: { texto: "Reservar: fala connosco →", href: "/participa?t=contactos" },
     imagem: "/images/eventos/jantar-natal-2026.webp",
   },
   {
     titulo: "Porto Liberal",
     data: "Dezembro · data a anunciar",
-    texto: "Pão-de-ló e vinho do Porto para celebrar o Natal com o núcleo. Uma tradição sem falha desde 2021.",
+    texto: "Pão de ló e vinho do Porto para celebrar o Natal com o núcleo. Não falha desde 2021.",
   },
 ];
+
+// Os próximos que ainda não passaram (um evento com "inicio" sai sozinho no dia seguinte).
+export function agendados(): Evento[] {
+  const agora = Date.now();
+  return proximos.filter((e) => !e.inicio || new Date(e.inicio).getTime() + 24 * 3600 * 1000 > agora);
+}
+
+// Os encontros ao longo do ano, sem os que já estão nos próximos (para não aparecerem duas vezes).
+export function aoLongoDoAno() {
+  const ag = agendados().map((e) => e.titulo);
+  return outros.filter((o) => !ag.includes(o.titulo));
+}
 
 export const outros = [
   {
@@ -48,7 +63,7 @@ export const outros = [
     imagem: "/images/eventos/fino-liberal-93.jpeg",
   },
   {
-    titulo: "Aniversário do Núcleo",
+    titulo: "Aniversário do núcleo",
     texto: "Desde 2022 a lutar por um bolo maior para todos.",
     quando: "Junho",
     imagem: "/images/eventos/aniversario-99.png",

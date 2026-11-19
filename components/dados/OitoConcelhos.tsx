@@ -1,6 +1,6 @@
 import { milhoes, valor } from "@/lib/dados/formatar";
 
-// Os 8 concelhos de "Trofa e vizinhos" no último período com os 8 valores: barras ordenadas da maior para a menor, a Trofa
+// Os 8 concelhos próximos no último período com os 8 valores: barras ordenadas da maior para a menor, a Trofa
 // a violeta e os outros a cinzento. Cada barra tem o nome e o valor escritos, por isso não precisa de legenda nem de dica.
 // O valor tem largura fixa, para as calhas terem todas o mesmo comprimento (e as barras a mesma escala).
 const CURTO: Record<string, string> = { "Vila Nova de Famalicão": "V. N. de Famalicão" };
@@ -42,7 +42,7 @@ export default function OitoConcelhos({
   const formata = (v: number) => (emMilhoes ? milhoes(v) : valor(v, unidade));
 
   return (
-    <section aria-label="Os 8 concelhos de Trofa e vizinhos" className="mt-12">
+    <section aria-label="Os 8 concelhos próximos" className="mt-12">
       <h2 className="text-lg font-bold text-tinta">Os 8 concelhos em {periodo}</h2>
       {frase && <p className="mt-1 text-sm text-apagado">{frase}</p>}
       <ol className="mt-4 grid gap-2">

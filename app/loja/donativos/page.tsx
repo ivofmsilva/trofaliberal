@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Donativos() {
   return (
     <>
-      <PageHero eyebrow="Donativos" title="Donativos Iniciativa Liberal Trofa">
+      <PageHero eyebrow="Donativos" title="Apoia a Iniciativa Liberal da Trofa">
         Obrigado por apoiares o Núcleo da Iniciativa Liberal da Trofa!
       </PageHero>
 

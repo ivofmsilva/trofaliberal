@@ -90,7 +90,7 @@ export const candidatos: Candidato[] = [
   {
     slug: "pedro-rebelo",
     nome: "Pedro Rebelo",
-    cargo: "Candidato à Junta de Freguesia de Bougado",
+    cargo: "Candidato à União das Freguesias de Bougado",
     frase: "Ideias, visão e energia para melhorar Bougado.",
     bio: [
       "Assistente Técnico desde 1999 até à presente data, exerceu funções na DREN — Direção Regional de Educação Norte — e, desde 2007, no Agrupamento de Escolas da Trofa, pertencendo ao Ministério da Educação. Desde 2023 pertence aos quadros do Município da Trofa.",

@@ -1,4 +1,4 @@
-import { proximos } from "@/lib/eventos";
+import { agendados } from "@/lib/eventos";
 import { links } from "@/lib/site";
 import { siteUrl } from "@/lib/url";
 
@@ -28,7 +28,7 @@ export function DadosNucleo() {
 }
 
 export function DadosEventos() {
-  const eventos = proximos
+  const eventos = agendados()
     .filter((e) => e.inicio)
     .map((e) => ({
       "@type": "Event",

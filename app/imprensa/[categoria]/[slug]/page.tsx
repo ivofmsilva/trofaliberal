@@ -25,7 +25,7 @@ export async function generateMetadata({
   const item = encontrar(categoria, slug);
   const inicio = item?.corpo?.[0]?.paragrafos[0];
   return {
-    title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos",
+    title: item ? `${item.titulo} — Iniciativa Liberal Trofa` : "Imprensa e eventos",
     description: inicio ? (inicio.length > 155 ? `${inicio.slice(0, 152).replace(/\s+\S*$/, "")}…` : inicio) : undefined,
   };
 }
@@ -69,6 +69,11 @@ export default async function Artigo({
             >
               Ver documento original (PDF) ↗
             </a>
+          )}
+          {item.slug === "metro-ligeiro-ate-a-trofa" && (
+            <Link href="/ideias/metro" className="rounded-full border-2 border-navy px-7 py-3 font-bold text-navy transition hover:bg-navy hover:text-white">
+              Ver a página do Metro →
+            </Link>
           )}
           <Link href={`/imprensa/${categoria}`} className="font-bold text-cyan-dark hover:underline">
             ← {cat.titulo}

@@ -21,7 +21,7 @@ export async function generateMetadata({
   const { categoria } = await params;
   const c = categorias[categoria as Categoria];
   return {
-    title: c ? `${c.titulo} — Iniciativa Liberal Trofa` : "Imprensa e Eventos",
+    title: c ? `${c.titulo} — Iniciativa Liberal Trofa` : "Imprensa e eventos",
     description: c ? `${c.titulo} da Iniciativa Liberal Trofa. ${c.descricao}` : undefined,
   };
 }
@@ -43,7 +43,7 @@ export default async function Lista({ params }: { params: Promise<{ categoria: s
 
   return (
     <>
-      <PageHero eyebrow="Imprensa e Eventos" title={c.titulo}>
+      <PageHero eyebrow="Imprensa e eventos" title={c.titulo}>
         {c.descricao}
       </PageHero>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">

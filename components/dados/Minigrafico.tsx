@@ -1,4 +1,4 @@
-// Linha pequena de evolução, só desenho (sem texto): a Trofa a violeta e, se houver, Trofa e vizinhos (os 8 concelhos) a cinzento tracejado.
+// Linha pequena de evolução, só desenho (sem texto): a Trofa a violeta e, se houver, os 8 concelhos próximos a cinzento tracejado.
 // Quando os dois não têm a mesma ordem de grandeza (o grupo é uma soma), desenham-se como índice (primeiro valor = 100),
 // para se comparar a evolução e não o tamanho.
 export default function Minigrafico({

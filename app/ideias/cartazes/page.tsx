@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { cartazesNacionais } from "@/lib/cartazes-nacionais";
@@ -42,7 +43,7 @@ const src = (i: number) => `/images/cartazes/cartaz-${i}.${ficheiros[i]}`;
 export default function Cartazes() {
   return (
     <>
-      <PageHero eyebrow="Ideias · Cartazes" title="Cartazes e Mensagens">
+      <PageHero eyebrow="Ideias · Cartazes" title="Cartazes e mensagens">
         Aqui podes consultar todos os cartazes e mensagens que já espalhámos pela Trofa e, no fim, os cartazes que
         marcaram a Iniciativa Liberal em todo o país.
       </PageHero>
@@ -129,6 +130,12 @@ export default function Cartazes() {
             ))}
           </ul>
         </section>
+
+        <p className="mt-14 text-lg">
+          <Link href="/participa?t=ideia" className="font-bold text-cyan-dark hover:underline">
+            Tens uma ideia para o próximo cartaz? Conta-nos →
+          </Link>
+        </p>
       </div>
     </>
   );

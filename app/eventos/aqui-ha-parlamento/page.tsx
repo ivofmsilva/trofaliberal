@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description: "Aqui há Parlamento: os deputados eleitos pelo Porto vêm à Trofa falar com a população sobre o trabalho parlamentar.",
 };
 
-const imprensa = itens.noticias.filter((n) => n.data?.startsWith("2022"));
+// só a notícia do próprio evento (as outras de 2022 são da fundação do núcleo)
+const imprensa = itens.noticias.filter((n) => n.titulo === "Deputados da IL em Bougado");
 
 const intervencoes = [
   { nome: "Carlos Guimarães Pinto", id: "nnrLmVIAwik" },
@@ -37,8 +38,8 @@ export default function AquiHaParlamento() {
             eleitos em 2022.
           </p>
           <p>
-            A iniciativa teve lugar no dia 17 de dezembro às 16h no Auditório da Junta de Freguesia
-            de Santiago de Bougado.
+            A primeira edição realizou-se a 17 de dezembro de 2022, às 16h, no Auditório da Junta de
+            Freguesia de Santiago de Bougado.
           </p>
           <p>
             Este evento tem o propósito de aproximar as pessoas dos deputados eleitos, sendo
@@ -54,13 +55,13 @@ export default function AquiHaParlamento() {
 
       <section className="bg-mist py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de Fotos</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Galeria de fotos</h2>
           <Galeria fotos={fotos("aqui-ha-parlamento")} alt="Aqui há Parlamento" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Intervenções dos Deputados</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Intervenções dos deputados</h2>
         <ul className="mt-8 grid gap-8 md:grid-cols-2">
           {intervencoes.map((v) => (
             <li key={v.id}>
@@ -81,7 +82,7 @@ export default function AquiHaParlamento() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Na Imprensa</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Na imprensa</h2>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {imprensa.map((n) => (
             <li key={n.href}>
@@ -93,8 +94,12 @@ export default function AquiHaParlamento() {
 
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="font-display text-3xl font-bold">Edições Futuras</h2>
-          <p className="mt-2 text-sun">Brevemente.</p>
+          <h2 className="font-display text-3xl font-bold">Parlamento na Praia</h2>
+          <p className="mt-2 max-w-3xl text-white/80">
+            A 6 de setembro de 2026, o Aqui há Parlamento juntou-se ao Destrave Liberal no “Parlamento na Praia”, com Carlos
+            Guimarães Pinto e Miguel Rangel. Foi a primeira vez que se fez nestes moldes.
+          </p>
+          <p className="mt-6 text-sun">A próxima edição é anunciada aqui e no Instagram.</p>
         </div>
       </section>
     </>

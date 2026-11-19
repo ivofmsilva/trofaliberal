@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Diario() {
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Diário de Campanha">
+      <PageHero eyebrow="Autárquicas 2025" title="Diário de campanha">
         Os 10 dias oficiais de campanha, com um tema do programa em cada dia.
       </PageHero>
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">

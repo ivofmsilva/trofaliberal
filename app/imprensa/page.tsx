@@ -8,7 +8,7 @@ import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
 import { datasCelebradas, diaPorExtenso } from "@/lib/datasAnuais";
-import { outros, proximos } from "@/lib/eventos";
+import { agendados, aoLongoDoAno } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
 
@@ -65,16 +65,18 @@ export default function Imprensa() {
   // Categorias sem itens (ex.: artigos de opinião) não aparecem até haver conteúdo.
   const comItens = (["noticias", "artigos", "comunicados"] as Categoria[]).filter((cat) => ordenados(cat).length > 0);
 
+  const proximos = agendados();
+  const outros = aoLongoDoAno();
   const eventos: Separador = {
     id: "eventos",
     label: "Eventos",
     resumo: proximos.length
-      ? `${proximos.length} agendado${proximos.length > 1 ? "s" : ""}. Jornadas Liberais, Aqui há Parlamento e mais.`
+      ? `${proximos.length} ${proximos.length > 1 ? "eventos agendados" : "evento agendado"}. E ainda as Jornadas Liberais e o Aqui há Parlamento.`
       : "Jornadas Liberais, Aqui há Parlamento e as nossas ações na Trofa.",
     conteudo: (
       <>
         <DadosEventos />
-        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos Eventos</h2>
+        <h2 className="font-display text-4xl font-bold text-navy md:text-5xl">Próximos eventos</h2>
         {proximos.length ? (
           <ul className="mt-8 grid gap-5 md:grid-cols-2">
             {proximos.map((e) => (
@@ -112,7 +114,7 @@ export default function Imprensa() {
           ))}
         </ul>
 
-        <h3 className="font-display mt-16 text-3xl font-bold text-navy">Outros Eventos</h3>
+        <h3 className="font-display mt-16 text-3xl font-bold text-navy">Outros eventos</h3>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {outros.map((o) => (
             <li key={o.titulo} className="overflow-hidden rounded-2xl border-2 border-mist transition hover:border-pink">
@@ -134,8 +136,8 @@ export default function Imprensa() {
               {i > 0 && " · "}
               <Link href={d.slug} className="font-bold text-cyan-dark hover:underline">
                 {d.titulo}
-              </Link>{" "}
-              ({diaPorExtenso(d)})
+              </Link>
+              {!d.titulo.toLowerCase().includes(diaPorExtenso(d).toLowerCase()) && <> ({diaPorExtenso(d)})</>}
             </span>
           ))}
           . <span className="text-ink/60">Ao longo do próximo ano vamos juntando outras. Fica atento.</span>
@@ -163,7 +165,7 @@ export default function Imprensa() {
       ? [
           {
             id: "noticias",
-            label: "Notícias e Comunicados",
+            label: "Notícias e comunicados",
             aliases: ["comunicados"],
             resumo: (juntos.includes("noticias") ? contagem("noticias", "notícia", "notícias") + ". " : "") + "O que a imprensa escreve e o que dizemos nós.",
             conteudo: (
@@ -195,7 +197,7 @@ export default function Imprensa() {
   return (
     <>
       <PageHero
-        eyebrow="Imprensa e Eventos"
+        eyebrow="Imprensa e eventos"
         title="Onde estamos e o que se escreve sobre nós"
         image={{ src: "/images/geral/imprensa-reportagem.jpeg", alt: "Reportagem sobre a IL Trofa", w: 673, h: 1008 }}
       >
@@ -205,7 +207,7 @@ export default function Imprensa() {
 
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <Suspense fallback={null}>
-          <Separadores separadores={separadores} caminho="/imprensa" etiqueta="Imprensa e Eventos" />
+          <Separadores separadores={separadores} caminho="/imprensa" etiqueta="Imprensa e eventos" />
         </Suspense>
       </div>
     </>

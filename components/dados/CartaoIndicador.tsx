@@ -62,7 +62,7 @@ export default function CartaoIndicador({ i, mostrarTema = false }: { i: Cartao;
       {i.comparacao && i.comparacao.length > 1 && (
         <ul className="mt-3 grid gap-1.5 border-t border-dashed border-linha pt-3 text-xs text-texto">
           {i.comparacao.map((c) => (
-            <li key={c.nome} className="grid grid-cols-[7rem_1fr_auto] items-center gap-2">
+            <li key={c.nome} className="grid grid-cols-[8.5rem_1fr_auto] items-center gap-2">
               <span className={c.trofa ? "font-semibold text-tinta" : ""}>{c.nome}</span>
               {c.fracao !== null ? (
                 <span className="h-2 rounded-full bg-[#eeedf3]">

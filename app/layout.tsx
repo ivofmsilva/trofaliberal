@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Iniciativa Liberal Trofa",
   },
   description:
-    "Iniciativa Liberal Trofa: uma Trofa com mais liberdade começa aqui! Somos a energia que a Trofa precisa.",
+    "Iniciativa Liberal Trofa: uma Trofa com mais liberdade começa aqui! Somos a energia de que a Trofa precisa.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

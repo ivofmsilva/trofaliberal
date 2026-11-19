@@ -13,7 +13,7 @@ export default function Footer() {
             <Image src="/il-trofa-logo.png" alt="" width={36} height={36} className="rounded-full" />
             <span className="font-display text-base font-bold text-white">Iniciativa Liberal Trofa</span>
           </div>
-          <p className="mt-3 text-sm">Núcleo territorial da Trofa. Somos a energia que a Trofa precisa!</p>
+          <p className="mt-3 text-sm">Núcleo territorial da Trofa. Somos a energia de que a Trofa precisa!</p>
           <a href={`mailto:${links.email}`} className="mt-1 inline-block py-1 text-sm font-bold text-sun">
             {links.email}
           </a>

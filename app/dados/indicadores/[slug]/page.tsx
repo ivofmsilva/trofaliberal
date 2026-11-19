@@ -31,22 +31,22 @@ function ligacaoFonte(i: { ine?: string; fonte: string }): { nome: string; url: 
   return null;
 }
 
-// Como se calculou a coluna Trofa e vizinhos (os 8 concelhos) neste indicador.
+// Como se calculou a coluna dos 8 concelhos próximos neste indicador.
 function comoGrupo(i: { slug: string; metodoGrupo?: string }): string {
-  if (i.slug === "densidade_populacional") return "Aqui, o valor de Trofa e vizinhos é o total de habitantes dos 8 a dividir pela área dos 8.";
+  if (i.slug === "densidade_populacional") return "Aqui, o valor dos 8 concelhos próximos é o total de habitantes dos 8 a dividir pela área dos 8.";
   if (/^(taxa_abstencao|votos_brancos|votos_nulos|partido_mais_votado)/.test(i.slug) && i.metodoGrupo === "ponderada")
-    return "Aqui, o valor de Trofa e vizinhos é a média dos 8 pesada pelos eleitores inscritos em cada concelho.";
+    return "Aqui, o valor dos 8 concelhos próximos é a média dos 8 pesada pelos eleitores inscritos em cada concelho.";
   switch (i.metodoGrupo) {
     case "soma":
-      return "Aqui, o valor de Trofa e vizinhos é a soma dos 8.";
+      return "Aqui, o valor dos 8 concelhos próximos é a soma dos 8.";
     case "media":
-      return "Aqui, o valor de Trofa e vizinhos é a média simples dos valores dos 8 (uma aproximação: a mediana do conjunto não é pública).";
+      return "Aqui, o valor dos 8 concelhos próximos é a média simples dos valores dos 8 (uma aproximação: a mediana do conjunto não é pública).";
     case "ponderada":
-      return "Aqui, o valor de Trofa e vizinhos é a média dos 8 pesada pela população de cada concelho.";
+      return "Aqui, o valor dos 8 concelhos próximos é a média dos 8 pesada pela população de cada concelho.";
     case "razão das somas":
-      return "Aqui, o valor de Trofa e vizinhos calcula-se com os totais dos 8 (a soma dos numeradores a dividir pela soma dos denominadores).";
+      return "Aqui, o valor dos 8 concelhos próximos calcula-se com os totais dos 8 (a soma dos numeradores a dividir pela soma dos denominadores).";
     case "portal":
-      return "Aqui, o valor de Trofa e vizinhos vem já calculado do portal de onde partiu a recolha (ver Fontes).";
+      return "Aqui, o valor dos 8 concelhos próximos vem já calculado do portal de onde partiu a recolha (ver Fontes).";
     default:
       return "";
   }
@@ -195,7 +195,7 @@ export default async function Pagina({ params }: Props) {
         <div className="mt-4">
           <BotaoCSV
             nome={i.slug}
-            cabecalho={["Período", ...colunas.map((c) => (i.colunas[c] === "Ave e concelhos vizinhos" ? rotuloColuna(i.colunas[c]) + " (8 concelhos)" : i.colunas[c]))]}
+            cabecalho={["Período", ...colunas.map((c) => (i.colunas[c] === "Ave e concelhos vizinhos" ? rotuloColuna(i.colunas[c]) : i.colunas[c]))]}
             linhas={cres.map((l) => [l.periodo, ...colunas.map((c) => l.valores[c]?.v ?? null)])}
           />
         </div>
@@ -212,7 +212,7 @@ export default async function Pagina({ params }: Props) {
         </p>
         {i.colunas.includes("Ave e concelhos vizinhos") && (
           <p className="mt-2 text-sm text-apagado">
-            “Trofa e vizinhos” são 8 concelhos: Trofa, Santo Tirso, Maia, Vila do Conde, Vila Nova de Famalicão,
+            Os “8 concelhos próximos” são a Trofa, Santo Tirso, a Maia, Vila do Conde, Vila Nova de Famalicão,
             Guimarães, Vizela e Fafe. {comoGrupo(i)} Mais em{" "}
             <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
               Fontes e método

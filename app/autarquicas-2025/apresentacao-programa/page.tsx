@@ -29,7 +29,7 @@ export default function ApresentacaoPrograma() {
   const p = campanha.programa;
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Apresentação do Programa Eleitoral">
+      <PageHero eyebrow="Autárquicas 2025" title="Apresentação do programa eleitoral">
         Fotos e vídeo da sessão de apresentação do programa eleitoral, no auditório da Escola
         Secundária da Trofa.
       </PageHero>
@@ -76,7 +76,7 @@ export default function ApresentacaoPrograma() {
           </ul>
         </section>
         <section>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Mais Publicações</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Mais publicações</h2>
           <ul className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {campanha.programaPublicacoes.map((l) => (
               <li key={l.href}>

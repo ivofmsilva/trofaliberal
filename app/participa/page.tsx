@@ -9,20 +9,20 @@ import { aderir, freguesias, links } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Participa — Iniciativa Liberal Trofa",
-  description: "Faz-te membro, partilha uma ideia, faz uma denúncia ou fala connosco.",
+  description: "Faz-te membro da Iniciativa Liberal na Trofa, partilha uma ideia, denuncia um problema na tua freguesia ou pede convite para o grupo de WhatsApp.",
 };
 
 const passosAdesao = [
   {
-    titulo: "Preenche a Adesão",
+    titulo: "Preenche a adesão",
     texto: "No site da Iniciativa Liberal, escolhendo o núcleo da Trofa.",
   },
   {
-    titulo: "O Coordenador Liga-te",
+    titulo: "O coordenador liga-te",
     texto: "O teu pedido chega ao núcleo, e o nosso coordenador telefona-te para te dar as boas-vindas.",
   },
   {
-    titulo: "Já És Membro",
+    titulo: "Já és membro",
     texto: "Depois de aprovado, já podes participar na vida interna do partido, nos fóruns de discussão e nos eventos.",
   },
 ];
@@ -35,8 +35,8 @@ const razoes = [
 ];
 
 const passosDenuncia = [
-  { titulo: "Escolhe a Freguesia", texto: "Diz-nos onde ocorre o problema." },
-  { titulo: "Descreve o Problema", texto: "Uma breve descrição e, se possível, a morada." },
+  { titulo: "Escolhe a freguesia", texto: "Diz-nos onde ocorre o problema." },
+  { titulo: "Descreve o problema", texto: "Uma breve descrição e, se possível, a morada." },
   {
     titulo: "Tens fotos ou documentos? (opcional)",
     texto: `Neste formulário não é possível anexar ficheiros. Envia-os para ${links.email}, com a freguesia e a morada.`,
@@ -53,16 +53,24 @@ const caixa = "rounded-2xl border-2 border-mist p-8";
 const separadores: Separador[] = [
   {
     id: "membro",
-    label: "Faz-te Membro",
+    label: "Faz-te membro",
     resumo: "Junta-te à Iniciativa Liberal da Trofa e ajuda a construir o concelho.",
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">És Liberal e Não Sabias?</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">És liberal e não sabias?</h2>
           <p className="mt-3 text-ink/75">
             Junta-te a nós. Torna-te membro e ajuda-nos a construir um futuro mais livre, próspero e justo
             para a Trofa e para Portugal.
           </p>
+          <a
+            href={aderir.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block rounded-full bg-pink px-7 py-3 font-bold text-white transition hover:bg-navy"
+          >
+            Aderir agora ↗
+          </a>
           <ul className="mt-6 space-y-3">
             {razoes.map((r, i) => (
               <li key={r} className="flex gap-4 rounded-2xl bg-navy p-5 text-white">
@@ -92,7 +100,7 @@ const separadores: Separador[] = [
             </li>
           </ul>
 
-          <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como Funciona</h3>
+          <h3 className="font-display mt-8 text-2xl font-bold text-navy">Como funciona</h3>
           <ol className="mt-4 space-y-3">
             {passosAdesao.map((p, i) => (
               <li key={p.titulo} className="flex gap-4">
@@ -160,11 +168,11 @@ const separadores: Separador[] = [
   },
   {
     id: "ideia",
-    label: "Tens uma Ideia?",
+    label: "Tens uma ideia?",
     resumo: "Diz-nos o que mudavas na Trofa.",
     conteudo: (
       <div className="mx-auto max-w-2xl">
-        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Partilha a Tua Ideia</h2>
+        <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Partilha a tua ideia</h2>
         <p className="mt-3 text-ink/75">
           As melhores propostas nascem de quem vive a Trofa todos os dias. Conta-nos a tua.
         </p>
@@ -191,10 +199,10 @@ const separadores: Separador[] = [
     conteudo: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Dá Voz às Tuas Denúncias</h2>
+          <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Há um problema na tua rua? Conta-nos.</h2>
           <p className="mt-3 text-ink/75">
-            Estradas em mau estado, espaços públicos abandonados, serviços que não funcionam?
-            Reporta tudo de forma simples e rápida.
+            Estradas em mau estado, espaços públicos abandonados, serviços que não funcionam? Diz-nos onde e o
+            quê.
           </p>
           <ol className="mt-6 space-y-3">
             {passosDenuncia.map((p, i) => (
@@ -267,7 +275,7 @@ const separadores: Separador[] = [
             </a>
           </div>
           <div className="rounded-2xl bg-navy p-8 text-white">
-            <h2 className="font-display text-2xl font-bold">Redes Sociais</h2>
+            <h2 className="font-display text-2xl font-bold">Redes sociais</h2>
             <ul className="mt-4 flex flex-wrap gap-3">
               {redes.map((r) => (
                 <li key={r.label}>

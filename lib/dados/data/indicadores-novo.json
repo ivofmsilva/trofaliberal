@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-19T16:47:09.775Z",
+ "juntado": "2026-11-19T17:18:23.518Z",
  "atualizado": "19/11/2026",
  "indicadores": [
   {
@@ -6793,7 +6793,7 @@
    "titulo": "Emissões de gases com efeito de estufa",
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para os gases que aquecem o clima (dióxido de carbono, metano e outros) emitidos no território do concelho, somados em equivalente de CO₂. Uma quilotonelada (kt) são mil toneladas. É uma repartição das emissões nacionais pelos concelhos feita por cálculo, não uma medição no local.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para os gases que aquecem o clima (dióxido de carbono, metano e outros) emitidos no território do concelho, somados em equivalente de CO₂. Uma quilotonelada (kt) são mil toneladas. É uma repartição das emissões nacionais pelos concelhos feita por cálculo, não uma medição no local. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são quilotoneladas de CO₂ equivalente.",
    "palavras": "poluição clima",
    "colunas": [
     "Trofa",
@@ -6999,7 +6999,7 @@
    "titulo": "Emissões de GEE do transporte rodoviário",
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
-   "texto": "A parte das emissões estimadas de gases com efeito de estufa (GEE) que vem dos veículos que circulam nas estradas do concelho. Inclui o trânsito de passagem, por exemplo em autoestradas e estradas nacionais, e não só os carros de quem cá vive.",
+   "texto": "A parte das emissões estimadas de gases com efeito de estufa (GEE) que vem dos veículos que circulam nas estradas do concelho. Inclui o trânsito de passagem, por exemplo em autoestradas e estradas nacionais, e não só os carros de quem cá vive. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são quilotoneladas de CO₂ equivalente.",
    "palavras": "carros trânsito poluição",
    "colunas": [
     "Trofa",
@@ -7102,7 +7102,7 @@
    "titulo": "Emissões de óxidos de azoto (NOx)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para os óxidos de azoto emitidos no território do concelho. São gases poluentes do ar que vêm sobretudo da queima de combustíveis, em veículos e na indústria. É uma repartição das emissões nacionais feita por cálculo, não uma medição da qualidade do ar.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para os óxidos de azoto emitidos no território do concelho. São gases poluentes do ar que vêm sobretudo da queima de combustíveis, em veículos e na indústria. É uma repartição das emissões nacionais feita por cálculo, não uma medição da qualidade do ar. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -7205,7 +7205,7 @@
    "titulo": "Emissões de partículas (PM10)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 10 micrómetros emitidas no território do concelho, por exemplo por lareiras, indústria, trânsito e incêndios. Mede o que é emitido, não a concentração no ar que se respira.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 10 micrómetros emitidas no território do concelho, por exemplo por lareiras, indústria, trânsito e incêndios. Mede o que é emitido, não a concentração no ar que se respira. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -7308,7 +7308,7 @@
    "titulo": "Emissões de partículas finas (PM2,5)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 2,5 micrómetros emitidas no território do concelho. São uma parte das PM10, as mais pequenas. Mede o que é emitido, não a concentração no ar que se respira.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 2,5 micrómetros emitidas no território do concelho. São uma parte das PM10, as mais pequenas. Mede o que é emitido, não a concentração no ar que se respira. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -11815,7 +11815,7 @@
    "titulo": "Idade mediana da população",
    "categoria": "demografia",
    "unidade": "anos",
-   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das idades medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população. Nos 8 concelhos próximos, o valor é a média simples das idades medianas de cada concelho, não a mediana do conjunto.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -19571,7 +19571,7 @@
    "titulo": "Rendimento líquido mediano (por agregado fiscal)",
    "categoria": "economia",
    "unidade": "€ por agregado fiscal",
-   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho, não a mediana do conjunto.",
    "palavras": "salário ordenado ganhar",
    "colunas": [
     "Trofa",
@@ -20627,7 +20627,7 @@
    "titulo": "Valor mediano de venda de habitação",
    "categoria": "economia",
    "unidade": "€/m²",
-   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho.",
+   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho.",
    "palavras": "casa comprar preço apartamento",
    "colunas": [
     "Trofa",
@@ -30591,7 +30591,7 @@
    "titulo": "Renda mediana dos novos contratos de arrendamento",
    "categoria": "habitacao",
    "unidade": "€/m²",
-   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo. Em Trofa e vizinhos (os 8 concelhos), o valor é a média simples das medianas de cada concelho.",
+   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho.",
    "palavras": "casa arrendar aluguer renda",
    "colunas": [
     "Trofa",

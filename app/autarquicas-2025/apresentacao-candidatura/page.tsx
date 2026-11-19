@@ -50,7 +50,7 @@ export default function ApresentacaoCandidatura() {
   const c = campanha.candidatura;
   return (
     <>
-      <PageHero eyebrow="Autárquicas 2025" title="Apresentação da Candidatura">
+      <PageHero eyebrow="Autárquicas 2025" title="Apresentação da candidatura">
         No dia 2 de agosto, a Iniciativa Liberal apresentou os seus candidatos às eleições
         autárquicas na Trofa. Esta é a candidatura Trofa Para Cima.
       </PageHero>
@@ -73,7 +73,7 @@ export default function ApresentacaoCandidatura() {
                 uma Trofa mais transparente, menos burocrática, com redução dos impostos e foco no
                 desenvolvimento económico e habitacional. Com ele, apresentámos José Pedro Reis para a
                 Assembleia Municipal, Bruno Magalhães para a Junta de Freguesia de Alvarelhos e Pedro
-                Rebelo para a Junta de Freguesia de Bougado.
+                Rebelo para a União das Freguesias de Bougado.
               </p>
               <p>
                 Foi uma candidatura nascida da participação das pessoas: um programa eleitoral aberto

@@ -8,7 +8,7 @@ export type Serie = { nome: string; valores: (number | null)[] };
 
 // Cada série tem o seu traço. A Trofa é sempre a linha violeta e grossa; as comparações são cinzentas e distinguem-se
 // também pelo traço (e pelo nome escrito no fim da linha), para não depender só da cor.
-// Ordem das colunas: Trofa, Área Metropolitana do Porto, Ave e concelhos vizinhos (Trofa e vizinhos, 8 concelhos), Portugal.
+// Ordem das colunas: Trofa, Área Metropolitana do Porto, Ave e concelhos vizinhos (os 8 concelhos próximos), Portugal.
 const ESTILOS = [
   { cor: "#6b3fd4", largura: 3, tracejado: "" },
   { cor: "#7d8794", largura: 2, tracejado: "6 4" },

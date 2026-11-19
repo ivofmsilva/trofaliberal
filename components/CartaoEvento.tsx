@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Evento } from "@/lib/eventos";
 
 // Cartão de um próximo evento (agenda da página inicial e página de eventos).
@@ -10,6 +11,11 @@ export default function CartaoEvento({ evento: e }: { evento: Evento }) {
       <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
       {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
       {e.texto && <p className="mt-3 text-white/80">{e.texto}</p>}
+      {e.acao && (
+        <Link href={e.acao.href} className="mt-4 inline-block font-bold text-sun hover:underline">
+          {e.acao.texto}
+        </Link>
+      )}
       {e.href && (
         <a href={e.href} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block font-bold text-sun hover:underline">
           Mais informação ↗

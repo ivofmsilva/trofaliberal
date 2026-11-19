@@ -167,7 +167,7 @@ export default function Educacao() {
 
           {imprensaJornadas.length > 0 && (
             <>
-              <h3 className="font-display mt-14 text-2xl font-bold text-navy">Na Imprensa</h3>
+              <h3 className="font-display mt-14 text-2xl font-bold text-navy">Na imprensa</h3>
               <ul className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
                 {imprensaJornadas.map((n) => (
                   <li key={n.href}>
@@ -205,7 +205,7 @@ export default function Educacao() {
       {/* Fecho */}
       <section className="bg-sun py-16 text-navy">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-4xl font-bold">Queres a Trofa no Topo da Educação?</h2>
+          <h2 className="font-display text-4xl font-bold">Queres a Trofa no topo da Educação?</h2>
           <p className="mt-3 text-lg font-medium">
             Estas propostas são um ponto de partida. Diz-nos o que falta e ajuda-nos a pô-las em prática.
           </p>

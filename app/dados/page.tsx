@@ -90,7 +90,7 @@ export default function Inicio() {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#c9bbf6]">Dados abertos · fontes oficiais</p>
           <h1 className="mt-3 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">A Trofa em números</h1>
           <p className="mt-3 max-w-2xl text-base text-white/85 sm:mt-4 sm:text-lg">
-            Indicadores oficiais do concelho, ao lado de três comparações: a Trofa e os 7 concelhos vizinhos, a Área
+            Indicadores oficiais do concelho, ao lado de três comparações: os 8 concelhos próximos (a Trofa e mais 7), a Área
             Metropolitana do Porto e o país. Cada indicador diz a fonte e liga a ela, e a tabela pode descarregar-se.
           </p>
           <ul className="mt-6 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
@@ -110,7 +110,7 @@ export default function Inicio() {
                     )}
                     {f.grupo && (
                       <span className="mt-0.5 hidden text-white/70 sm:block">
-                        {f.grupo.sinal ? "Trofa e vizinhos: " : "Em Trofa e vizinhos: "}
+                        {f.grupo.sinal ? "8 concelhos próximos: " : "Nos 8 concelhos próximos: "}
                         <span className="whitespace-nowrap">
                           {f.grupo.sinal && <Seta sinal={f.grupo.sinal} />} {f.grupo.texto}
                         </span>
