@@ -49,7 +49,7 @@ export const categorias: Record<
   },
   artigos: {
     titulo: "Artigos de opinião",
-    descricao: "A crónica “Folha Liberal”, de Diamantino Costa, n'O Notícias da Trofa.",
+    descricao: "Artigos de opinião de membros do núcleo sobre os temas que importam à Trofa.",
     // Aparece no fim da lista dos artigos.
     nota: "Os artigos de opinião exprimem a opinião de quem os assina, ficando apenas a eles vinculados.",
     verTodos: "Ver todos",
