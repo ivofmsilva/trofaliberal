@@ -2,7 +2,7 @@
 export const aderir = {
   href: "https://iniciativaliberal.pt/aderir/",
   quotaAnual: 40,
-  quotaJovem: 25,
+  quotaJovem: 20, // até aos 25 anos, inclusive
 };
 
 export const links = {
