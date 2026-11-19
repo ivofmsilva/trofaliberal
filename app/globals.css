@@ -18,6 +18,14 @@
   --apagado: #777777;
   --linha: #e4e4e0;
   --acento: #1f3a5f;
+  /* Dados da Trofa (novo desenho): uma cor só para a Trofa (violeta, que não é cor de nenhum partido); tudo o que é
+     comparação fica em cinzento. Subidas e descidas sem verde/vermelho: a cor não dá opinião. */
+  --papel: #f6f5f1;
+  --trofa: #6b3fd4;
+  --trofa-suave: #efe9fd;
+  --cmp: #5f6b7a;
+  --cmp-2: #9aa5b3;
+  --noite: #191c33;
 }
 
 @theme inline {
@@ -37,6 +45,12 @@
   --color-apagado: var(--apagado);
   --color-linha: var(--linha);
   --color-acento: var(--acento);
+  --color-papel: var(--papel);
+  --color-trofa: var(--trofa);
+  --color-trofa-suave: var(--trofa-suave);
+  --color-cmp: var(--cmp);
+  --color-cmp2: var(--cmp-2);
+  --color-noite: var(--noite);
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
   --font-display: var(--font-grotesk), var(--font-jakarta), system-ui, sans-serif;
 }

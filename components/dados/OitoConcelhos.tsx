@@ -1,0 +1,61 @@
+import { milhoes, valor } from "@/lib/dados/formatar";
+
+// Os 8 concelhos do grupo no último período com os 8 valores: barras ordenadas da maior para a menor, a Trofa a violeta
+// e os outros a cinzento. Cada barra tem o nome e o valor escritos, por isso não precisa de legenda nem de dica.
+export default function OitoConcelhos({
+  periodo,
+  concelhos,
+  unidade,
+  emMilhoes = false,
+}: {
+  periodo: string;
+  concelhos: Record<string, number | null>;
+  unidade: string;
+  emMilhoes?: boolean;
+}) {
+  const lista = Object.entries(concelhos)
+    .filter((x): x is [string, number] => x[1] !== null)
+    .sort((a, b) => b[1] - a[1]);
+  if (lista.length < 2) return null;
+  const pos = lista.findIndex(([n]) => n === "Trofa") + 1;
+  // escala com o zero sempre à vista (há indicadores com valores negativos, como o saldo migratório)
+  const min = Math.min(0, ...lista.map(([, v]) => v));
+  const max = Math.max(0, ...lista.map(([, v]) => v));
+  const amplitude = max - min || 1;
+  const zero = ((0 - min) / amplitude) * 100;
+  const formata = (v: number) => (emMilhoes ? milhoes(v) : valor(v, unidade));
+
+  return (
+    <section aria-label="Os 8 concelhos do grupo" className="mt-12">
+      <h2 className="text-lg font-bold text-tinta">Os 8 concelhos em {periodo}</h2>
+      {pos > 0 && (
+        <p className="mt-1 text-sm text-apagado">
+          A Trofa tem o {pos}.º valor mais alto dos {lista.length}.
+        </p>
+      )}
+      <ol className="mt-4 grid gap-2">
+        {lista.map(([nome, v]) => {
+          const trofa = nome === "Trofa";
+          const inicio = v >= 0 ? zero : ((v - min) / amplitude) * 100;
+          const largura = (Math.abs(v) / amplitude) * 100;
+          return (
+            <li key={nome} className="grid grid-cols-[minmax(0,9.5rem)_1fr_auto] items-center gap-3 text-sm sm:grid-cols-[12rem_1fr_6.5rem]">
+              <span className={`truncate ${trofa ? "font-bold text-trofa" : "text-texto"}`}>{nome}</span>
+              <span className="relative h-3 rounded-full bg-[#eeedf3]">
+                <span
+                  className="absolute inset-y-0 rounded-full"
+                  style={{
+                    left: `${inicio}%`,
+                    width: `${Math.max(largura, 0.8)}%`,
+                    background: trofa ? "var(--trofa)" : "var(--cmp-2)",
+                  }}
+                />
+              </span>
+              <span className={`text-right tabular-nums ${trofa ? "font-bold text-trofa" : "font-medium text-tinta"}`}>{formata(v)}</span>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}

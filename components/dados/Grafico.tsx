@@ -5,13 +5,16 @@ import { milhoes, numero, sufixo, valor as fmtValor } from "@/lib/dados/formatar
 
 export type Serie = { nome: string; valores: (number | null)[] };
 
-// Cada série tem o seu traço. A Trofa é sempre a linha escura e grossa.
+// Cada série tem o seu traço. A Trofa é sempre a linha violeta e grossa; as comparações são cinzentas e distinguem-se
+// também pelo traço (e pelo nome escrito no fim da linha), para não depender só da cor.
+// Ordem das colunas: Trofa, Área Metropolitana do Porto, Ave e concelhos vizinhos (grupo dos 8), Portugal.
 const ESTILOS = [
-  { cor: "#151515", largura: 2.75, tracejado: "" },
-  { cor: "#8c8c87", largura: 1.75, tracejado: "" },
-  { cor: "#b7b7b1", largura: 1.75, tracejado: "" },
-  { cor: "#5c5c58", largura: 1.75, tracejado: "5 4" },
+  { cor: "#6b3fd4", largura: 3, tracejado: "" },
+  { cor: "#9aa5b3", largura: 2, tracejado: "6 4" },
+  { cor: "#5f6b7a", largura: 2, tracejado: "" },
+  { cor: "#9aa5b3", largura: 2, tracejado: "2 4" },
 ];
+const ROTULOS: Record<string, string> = { "Ave e concelhos vizinhos": "Grupo dos 8", "Área Metropolitana do Porto": "AMP" };
 
 function bonitos(min: number, max: number, n = 4) {
   if (min === max) return [min];
@@ -40,6 +43,7 @@ export default function Grafico({
   semComparar = false,
   casas,
   emMilhoes = false,
+  nivel = false,
 }: {
   periodos: string[];
   series: Serie[];
@@ -48,11 +52,14 @@ export default function Grafico({
   casas?: number;
   // Valores em euros que se leem em milhões (M€) na caixa que aparece ao passar o rato.
   emMilhoes?: boolean;
+  // As colunas comparam-se diretamente (taxas, por habitante, medianas); se não, a comparação é da evolução (índice).
+  nivel?: boolean;
 }) {
   const caixa = useRef<HTMLDivElement>(null);
   const [larguraCaixa, setLarguraCaixa] = useState(720);
   const [rolavel, setRolavel] = useState(false);
-  const [modo, setModo] = useState<"valores" | "comparar">("valores");
+  // Abre já na comparação: é o que dá sentido ao número da Trofa.
+  const [modo, setModo] = useState<"valores" | "comparar">("comparar");
   const [ativo, setAtivo] = useState<number | null>(null);
 
   // No telemóvel o gráfico não se aperta: fica com uma largura mínima e desliza-se para o lado (começa nos anos mais recentes).
@@ -86,16 +93,20 @@ export default function Grafico({
   const podeComparar = !semComparar && series.length > 1 && series[0].valores.filter((v) => v !== null).length >= 3;
   const modoEfetivo = podeComparar ? modo : "valores";
 
-  // No modo "comparar" cada série vira índice (100 = primeiro valor), para se ver quem cresce mais.
+  // No modo "comparar": os valores tal como são, quando se comparam diretamente; senão, cada série vira índice
+  // (100 = primeiro valor), para se ver quem cresce mais sem misturar um concelho com uma soma de concelhos.
+  const emIndice = modoEfetivo === "comparar" && !nivel;
   const visiveis: Serie[] =
     modoEfetivo === "valores"
       ? semComparar
         ? series
         : [series[0]]
-      : series.map((s) => {
-          const base = s.valores.find((v) => v !== null);
-          return { nome: s.nome, valores: s.valores.map((v) => (v === null || !base ? null : (v / base) * 100)) };
-        });
+      : nivel
+        ? series
+        : series.map((s) => {
+            const base = s.valores.find((v) => v !== null);
+            return { nome: s.nome, valores: s.valores.map((v) => (v === null || !base ? null : (v / base) * 100)) };
+          });
   const estiloDe = (nome: string) => ESTILOS[Math.max(0, series.findIndex((s) => s.nome === nome))] ?? ESTILOS[1];
 
   const todos = visiveis.flatMap((s) => s.valores.filter((v): v is number => v !== null));
@@ -109,7 +120,7 @@ export default function Grafico({
   const pad = (max - min) * 0.08;
   // A folga não leva o eixo para onde os valores não podem estar: abaixo de zero, ou acima de 100 numa percentagem.
   const baixo = min >= 0 ? Math.max(0, min - pad) : min - pad;
-  const cima = modoEfetivo === "valores" && unidade.startsWith("%") && max <= 100 ? Math.min(100, max + pad) : max + pad;
+  const cima = !emIndice && unidade.startsWith("%") && max <= 100 ? Math.min(100, max + pad) : max + pad;
   const ticks = bonitos(baixo, cima, 4);
   const yMin = Math.min(ticks[0], min);
   const yMax = Math.max(ticks[ticks.length - 1], max);
@@ -120,7 +131,9 @@ export default function Grafico({
   const xMax = numerico ? Math.max(...anos) : periodos.length - 1;
 
   const altura = larguraCaixa < 520 ? 230 : 340;
-  const m = { e: larguraCaixa < 520 ? 50 : 62, d: 18, t: 16, b: 30 };
+  // Com várias linhas, guarda-se espaço à direita para escrever o nome de cada uma no fim.
+  const comRotulos = visiveis.length > 1;
+  const m = { e: larguraCaixa < 520 ? 50 : 62, d: comRotulos ? (larguraCaixa < 520 ? 74 : 96) : 18, t: 16, b: 30 };
   const w = largura - m.e - m.d;
   const h = altura - m.t - m.b;
   const X = (i: number) => m.e + (xMax === xMin ? w / 2 : (((numerico ? anos[i] : i) - xMin) / (xMax - xMin)) * w);
@@ -128,11 +141,11 @@ export default function Grafico({
 
   // As marcas do eixo escrevem-se todas com as mesmas casas decimais, as que o intervalo entre elas pede.
   const passoEixo = ticks.length > 1 ? ticks[1] - ticks[0] : 0;
-  const eixoEmMilhoes = modoEfetivo === "valores" && unidade === "€" && ticks.some((t) => Math.abs(t) >= 1_000_000);
+  const eixoEmMilhoes = !emIndice && unidade === "€" && ticks.some((t) => Math.abs(t) >= 1_000_000);
   const fmtEixo = (v: number) =>
     eixoEmMilhoes
       ? numero(v / 1_000_000, casasDoPasso(passoEixo / 1_000_000)) + " M€"
-      : casas !== undefined && modoEfetivo === "valores"
+      : casas !== undefined && !emIndice
         ? numero(v, Math.max(casas, casasDoPasso(passoEixo))) + sufixo(unidade)
         : numero(v, casasDoPasso(passoEixo));
 
@@ -163,8 +176,8 @@ export default function Grafico({
         <div role="tablist" aria-label="Tipo de gráfico" className="mb-4 inline-flex rounded-full border border-linha bg-suave p-1 text-sm font-medium">
           {(
             [
-              ["valores", "Valores da Trofa"],
-              ["comparar", "Comparar com outros"],
+              ["comparar", nivel ? "Comparar" : "Comparar a evolução"],
+              ["valores", "Só a Trofa"],
             ] as const
           ).map(([id, rotulo]) => (
             <button
@@ -201,7 +214,7 @@ export default function Grafico({
               </text>
             </g>
           ))}
-          {modoEfetivo === "comparar" && yMin < 100 && yMax > 100 && (
+          {emIndice && yMin < 100 && yMax > 100 && (
             <line x1={m.e} x2={largura - m.d} y1={Y(100)} y2={Y(100)} stroke="#9a9a96" strokeWidth="1" strokeDasharray="2 3" />
           )}
           {comDados
@@ -241,6 +254,24 @@ export default function Grafico({
               const v = s.valores[tip];
               return v === null ? null : <circle key={s.nome} cx={X(tip)} cy={Y(v)} r="5" fill={estiloDe(s.nome).cor} stroke="#fff" strokeWidth="2" />;
             })}
+          {comRotulos &&
+            (() => {
+              // Nome de cada linha junto ao seu último ponto; se dois ficarem em cima um do outro, afastam-se 13 px.
+              const fins = visiveis
+                .map((s) => {
+                  let k = s.valores.length - 1;
+                  while (k >= 0 && s.valores[k] === null) k--;
+                  return k < 0 ? null : { nome: s.nome, x: X(k), y: Y(s.valores[k] as number), trofa: estiloDe(s.nome) === ESTILOS[0] };
+                })
+                .filter((f): f is { nome: string; x: number; y: number; trofa: boolean } => f !== null)
+                .sort((a, b) => a.y - b.y);
+              for (let k = 1; k < fins.length; k++) if (fins[k].y - fins[k - 1].y < 13) fins[k].y = fins[k - 1].y + 13;
+              return fins.map((f) => (
+                <text key={f.nome} x={f.x + 8} y={f.y + 4} fontSize="11.5" fontWeight={f.trofa ? 700 : 500} fill={f.trofa ? "#1d2136" : "#4a5066"}>
+                  {ROTULOS[f.nome] ?? f.nome}
+                </text>
+              ));
+            })()}
         </svg>
 
         {tip !== null && (
@@ -256,10 +287,10 @@ export default function Grafico({
                 <p key={s.nome} className="flex items-center justify-between gap-4 text-texto">
                   <span className="flex items-center gap-1.5">
                     <span className="inline-block h-0.5 w-3" style={{ background: estiloDe(s.nome).cor }} />
-                    {s.nome}
+                    {ROTULOS[s.nome] ?? s.nome}
                   </span>
                   <span className="font-medium tabular-nums text-tinta">
-                    {v === null ? "—" : modoEfetivo === "comparar" ? numero(v, 1) : emMilhoes ? milhoes(original) : fmtValor(original, unidade)}
+                    {v === null ? "—" : emIndice ? numero(v, 1) : emMilhoes ? milhoes(original) : fmtValor(original, unidade)}
                   </span>
                 </p>
               );
@@ -278,7 +309,7 @@ export default function Grafico({
               <svg width="22" height="8" aria-hidden>
                 <line x1="0" y1="4" x2="22" y2="4" stroke={est.cor} strokeWidth={est.largura} strokeDasharray={est.tracejado} />
               </svg>
-              {s.nome}
+              {s.nome === "Ave e concelhos vizinhos" ? "Grupo dos 8 (Ave e concelhos vizinhos)" : s.nome}
             </li>
           );
         })}

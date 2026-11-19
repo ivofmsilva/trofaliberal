@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import NavDados from "@/components/dados/NavDados";
 
-// Portal de dados: desenho neutro (cinzentos), à parte das cores do resto do site.
+// Portal de dados: desenho próprio, à parte das cores do resto do site (a Trofa a violeta, as comparações a cinzento;
+// cores em app/globals.css: --trofa, --cmp, --papel, --noite).
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Grafico from "@/components/dados/Grafico";
-import { colunasComDados, emMilhoes, indicadores, porSlug, temaDe, ultimo, variacaoDe } from "@/lib/dados/dados";
+import OitoConcelhos from "@/components/dados/OitoConcelhos";
+import { colunasComDados, comparavelEmNivel, emMilhoes, indicadores, porSlug, temaDe, ultimo, variacaoDe } from "@/lib/dados/dados";
 import { compacto, legenda, milhoes, sufixo, valor } from "@/lib/dados/formatar";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -18,6 +19,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const seta = { sobe: "▲", desce: "▼", igual: "＝" } as const;
+
+// Como se calculou a coluna do grupo dos 8 neste indicador.
+function comoGrupo(i: { slug: string; metodoGrupo?: string }): string {
+  if (i.slug === "densidade_populacional") return "Aqui o grupo é o total de habitantes dos 8 a dividir pela área dos 8.";
+  if (/^(taxa_abstencao|votos_brancos|votos_nulos|partido_mais_votado)/.test(i.slug) && i.metodoGrupo === "ponderada")
+    return "Aqui o grupo é a média dos 8 pesada pelos eleitores inscritos em cada concelho.";
+  switch (i.metodoGrupo) {
+    case "soma":
+      return "Aqui o grupo é a soma dos 8.";
+    case "media":
+      return "Aqui o grupo é a média simples dos valores dos 8 (aproximação: a mediana do conjunto não é pública).";
+    case "ponderada":
+      return "Aqui o grupo é a média dos 8 pesada pela população de cada concelho.";
+    case "razão das somas":
+      return "Aqui o grupo calcula-se com os totais dos 8 (a soma dos numeradores a dividir pela soma dos denominadores).";
+    case "portal":
+      return "Neste indicador, o valor do grupo vem do portal de origem.";
+    default:
+      return "";
+  }
+}
 
 export default async function Pagina({ params }: Props) {
   const { slug } = await params;
@@ -37,6 +59,9 @@ export default async function Pagina({ params }: Props) {
   const milhoesDeEuros = emMilhoes(i);
   const emPercentagem = i.unidade.startsWith("%");
   const unidadeLonga = milhoesDeEuros ? "milhões de euros" : legenda(i.unidade);
+
+  // o último período com o valor de cada um dos 8 concelhos (só nos indicadores que recolhemos nós)
+  const comOito = [...cres].reverse().find((l) => l.concelhos && l.concelhos.Trofa != null && Object.values(l.concelhos).filter((x) => x != null).length >= 2);
 
   const pos = tema ? tema.slugs.indexOf(slug) : -1;
   const anterior = tema && pos > 0 ? porSlug(tema.slugs[pos - 1]) : undefined;
@@ -61,11 +86,12 @@ export default async function Pagina({ params }: Props) {
       <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-tinta md:text-5xl">{i.titulo}</h1>
       {i.texto && <p className="mt-4 max-w-2xl text-lg text-texto">{i.texto}</p>}
       <p className="mt-3 text-sm text-apagado">Fonte: {i.fonte}</p>
+      {i.notaColunas && <p className="mt-1 text-sm text-apagado">{i.notaColunas}</p>}
 
       {u && (
         <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-3 border-y border-linha py-6">
           <div>
-            <p className="text-5xl font-bold tabular-nums tracking-tight text-tinta md:text-6xl">{compacto(u.v, i.unidade)}</p>
+            <p className="text-5xl font-bold tabular-nums tracking-tight text-trofa md:text-6xl">{compacto(u.v, i.unidade)}</p>
             <p className="mt-2 text-sm text-apagado">
               {unidadeLonga ? `${unidadeLonga} · ` : ""}
               {u.periodo}
@@ -83,9 +109,11 @@ export default async function Pagina({ params }: Props) {
       {periodos.length >= 2 && (
         <section aria-label="Evolução" className="mt-10">
           <h2 className="mb-4 text-lg font-bold text-tinta">Evolução</h2>
-          <Grafico periodos={periodos} series={series} unidade={i.unidade} semComparar={Boolean(i.ine)} emMilhoes={milhoesDeEuros} />
+          <Grafico periodos={periodos} series={series} unidade={i.unidade} emMilhoes={milhoesDeEuros} nivel={comparavelEmNivel(i)} />
         </section>
       )}
+
+      {comOito?.concelhos && <OitoConcelhos periodo={comOito.periodo} concelhos={comOito.concelhos} unidade={i.unidade} emMilhoes={milhoesDeEuros} />}
 
       <section aria-label="Valores por período" className="mt-12">
         <h2 className="mb-4 text-lg font-bold text-tinta">Valores por período</h2>
@@ -98,7 +126,7 @@ export default async function Pagina({ params }: Props) {
                 </th>
                 {colunas.map((c) => (
                   <th key={c} scope="col" className={`px-4 py-3 text-right font-medium ${c === 0 ? "text-tinta" : ""}`}>
-                    {i.colunas[c]}
+                    {i.colunas[c] === "Ave e concelhos vizinhos" ? "Grupo dos 8" : i.colunas[c]}
                   </th>
                 ))}
               </tr>
@@ -113,7 +141,7 @@ export default async function Pagina({ params }: Props) {
                     const p = l.valores[c] ?? { v: null, var: null };
                     const vv = variacaoDe(i, l.linha, c);
                     return (
-                      <td key={c} className={`px-4 py-2.5 text-right tabular-nums ${c === 0 ? "bg-suave/60 font-semibold text-tinta" : "text-texto"}`}>
+                      <td key={c} className={`px-4 py-2.5 text-right tabular-nums ${c === 0 ? "bg-trofa-suave font-semibold text-trofa" : "text-texto"}`}>
                         <span className="block">{milhoesDeEuros ? milhoes(p.v) : valor(p.v, i.unidade)}</span>
                         {vv && (
                           <span className="block text-xs font-normal text-apagado">
@@ -130,7 +158,7 @@ export default async function Pagina({ params }: Props) {
         </div>
         {u && (milhoesDeEuros || sufixo(i.unidade) === "") && unidadeLonga && (
           <p className="mt-3 text-sm text-apagado">
-            Unidade: {unidadeLonga.replace(/.$/, "")}
+            Unidade: {unidadeLonga.replace(/\.$/, "")}
             {milhoesDeEuros ? " (M€)" : ""}.
           </p>
         )}
@@ -141,11 +169,12 @@ export default async function Pagina({ params }: Props) {
         </p>
         {i.colunas.includes("Ave e concelhos vizinhos") && (
           <p className="mt-2 text-sm text-apagado">
-            “Ave e concelhos vizinhos” é um agregado que já vem feito do portal de onde se recolheram estes dados (ver{" "}
+            “Ave e concelhos vizinhos” é o grupo dos 8 concelhos: Trofa, Santo Tirso, Maia, Vila do Conde, Vila Nova de Famalicão,
+            Guimarães, Vizela e Fafe. {comoGrupo(i)} Mais em{" "}
             <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
-              Fontes
+              Fontes e método
             </Link>
-            ).
+            .
           </p>
         )}
         {semDados.length > 0 && (
