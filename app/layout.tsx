@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   description:
-    "Página oficial da Iniciativa Liberal na Trofa: ideias para o concelho, dados da Câmara, eventos e como participar. Uma Trofa com mais liberdade começa aqui!",
+    "Uma Trofa com mais liberdade começa aqui! Somos a energia que a Trofa precisa.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
