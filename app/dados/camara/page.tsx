@@ -43,9 +43,6 @@ export default function Camara() {
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
           <h2 className="mb-6 text-2xl font-bold tracking-tight text-tinta">Composição e funções</h2>
           <ComposicaoCamara />
-        <p className="mt-10 max-w-3xl text-sm text-apagado">
-          As freguesias (as juntas de freguesia das 6 freguesias do concelho) não são abordadas para já; serão no futuro.
-        </p>
         </div>
       </section>
 

@@ -91,6 +91,9 @@ export default function Fontes() {
           Cada indicador diz a fonte e o ano a que se refere. Aqui explicamos de onde vêm os números e como se fazem as
           comparações.
         </p>
+        <p className="mt-3 text-texto">
+          O portal trata do município (Câmara e Assembleia Municipal); as juntas e as assembleias de freguesia não são abordadas.
+        </p>
       </div>
     </section>
     <div className="mx-auto max-w-3xl px-4 pb-12 sm:px-6 md:pb-16">
