@@ -1148,6 +1148,24 @@ export const comemoracoes: Comemoracao[] = [
     banner: { etiqueta: "9 de dezembro", titulo: "Contra a corrupção", frase: "Transparência é o melhor remédio." },
     partilhar: "9 de dezembro, Dia contra a Corrupção: dinheiro público tem de estar à vista de todos.",
   },
+  {
+    data: { slug: "/4-20", titulo: "4/20", dia: [4, 20] },
+    etiqueta: "20 de abril · 4/20",
+    titulo: "4/20: liberdade com responsabilidade",
+    subtitulo: "Canábis: regras claras para adultos, em vez do mercado negro.",
+    descricao: "20 de abril (4/20): a Iniciativa Liberal defende a legalização responsável da canábis para adultos, com regras e sem mercado negro.",
+    abertura: "O 20 de abril (4/20, na forma americana de escrever a data) tornou-se, em todo o mundo, o dia de quem defende o fim da proibição da canábis.",
+    blocos: [
+      "Portugal foi pioneiro: desde 2001, o consumo de drogas deixou de ser crime e passou a ser tratado como um problema de saúde. Em 2018, o Parlamento aprovou o uso medicinal da canábis.",
+      "Mas, para uso pessoal, a canábis continua a ser vendida só no mercado ilegal: sem controlo de qualidade, sem proteção para os menores e com o dinheiro a ir para redes criminosas.",
+      "Por isso a Iniciativa Liberal propôs, em 2021 e em 2023, a legalização responsável da canábis para adultos: venda em estabelecimentos registados e com regras sobre onde podem abrir, autocultivo limitado e só para maiores de idade.",
+      { destaque: "Adultos livres e informados decidem por si. O papel do Estado é proteger os menores e a saúde pública, não alimentar o mercado negro." },
+      "Não é um incentivo ao consumo. É tirar o negócio aos traficantes e pôr regras onde hoje não há nenhumas.",
+    ],
+    imagem: F["canabis"],
+    banner: { etiqueta: "20 de abril", titulo: "4/20", frase: "Liberdade com responsabilidade: canábis legal e regulada para adultos." },
+    partilhar: "4/20: liberdade com responsabilidade. Regras claras para adultos, em vez do mercado negro.",
+  },
 ];
 
 export const comemoracaoDe = (slug: string) => comemoracoes.find((c) => c.data.slug === `/${slug}`);

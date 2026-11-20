@@ -60,6 +60,7 @@ Revisto a 20/11/2026 com as datas novas do Ivo (12 dez, 2 abr e 24 ago).
 | 31 out | Dia Mundial da Poupança | /dia-da-poupanca | Impostos e poupança |
 | 31 out | Halloween | /halloween | "Os sustos do ano"; a sátira dos sugadores de impostos (2025) |
 | 5 dez | Dia Internacional do Voluntariado | /dia-do-voluntariado | Ação social |
+| 20 abr | 4/20 | /4-20 | Legalização responsável da canábis para adultos (propostas da IL em 2021 e 2023) |
 | 18 abr | Dia Internacional dos Monumentos e Sítios | /monumentos-e-sitios | Castro de Alvarelhos (Monumento Nacional, 1910) |
 | 23 abr | Dia Mundial do Livro | /dia-do-livro | Biblioteca municipal e salas de estudo 24 h |
 | 3 mai | Dia Mundial da Liberdade de Imprensa | /liberdade-de-imprensa | Lápis azul; jornais locais |
