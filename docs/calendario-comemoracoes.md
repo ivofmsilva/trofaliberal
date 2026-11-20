@@ -46,7 +46,7 @@ Revisto a 20/11/2026 com as datas novas do Ivo (12 dez, 2 abr e 24 ago).
 | 24 jan | Dia Internacional da Educação (ONU, 2019) | /dia-da-educacao | Ensino superior na Trofa abaixo do país; propostas |
 | 27 jan | Memória das Vítimas do Holocausto (ONU, 2005) | /holocausto | Aristides de Sousa Mendes |
 | Carnaval (terça, muda com a Páscoa) | Carnaval | /carnaval | Sátira e caricaturas: "É Carnaval, ninguém leva a mal" |
-| 23 fev | Último comboio na linha de via estreita da Trofa (fevereiro de 2002; as fontes dizem 23 ou 24) | /ultimo-comboio | Anos sem comboio; o Metro até à Trofa |
+| 23 fev | Último comboio na linha de via estreita, que passava pelo Muro (fevereiro de 2002; as fontes dizem 23 ou 24) | /ultimo-comboio | A Trofa mantém a Linha do Minho; o Muro ficou sem comboio; o Metro até à Trofa |
 | 24 fev | Invasão da Ucrânia (2022) | /ucrania | Do lado da Ucrânia e da liberdade |
 | 8 mar | Dia Internacional da Mulher | /dia-da-mulher | Carolina Beatriz Ângelo; Mariana Leitão |
 | 19 mar | Dia do Pai | /dia-do-pai | Creches, horários flexíveis, menos impostos |
