@@ -1,7 +1,7 @@
 // Festas das freguesias: uma página com todas (/festas-da-nossa-terra) e um banner para cada uma, à volta do dia.
 // As datas seguem as regras tradicionais (Infopédia, artigo "Trofa", e a lista do Ivo) e calculam-se sozinhas.
 // Antes de cada festa convém confirmar no programa da comissão de festas ou da Junta.
-// Banner: nas festas de domingo aparece de sexta a domingo; nas de dia fixo, na véspera, no dia e no dia seguinte.
+// Banner: nas festas de domingo aparece de sexta a domingo; nas de dia fixo, só no próprio dia.
 
 import type { Img } from "@/lib/comemoracoes";
 import { nesimo, pascoa, somarDias, ultimo, type DataAnual } from "@/lib/datasAnuais";
@@ -39,7 +39,7 @@ function festa(id: string, nome: string, freguesia: string, quando: string, regr
     id,
     nome,
     freguesia,
-    data: { slug: `${PAGINA}#${id}`, titulo: nome, regra, quando, janela: fixa ? [1, 1] : DOMINGO },
+    data: { slug: `${PAGINA}#${id}`, titulo: nome, regra, quando, janela: fixa ? [0, 0] : DOMINGO },
     imagem: FOTO[id] ? F[FOTO[id]] : undefined,
     ...extra,
   };

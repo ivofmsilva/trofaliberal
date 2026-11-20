@@ -1,6 +1,6 @@
 // Datas que celebramos (Dia do Concelho, 25 de Novembro, Natal, festas das freguesias...): o banner na página
-// inicial só aparece à volta do dia. Por defeito aparece três dias (véspera, dia e dia seguinte); cada data pode
-// ter a sua janela. As páginas ficam sempre online (calendário em /datas e no sitemap) para quem as procurar.
+// inicial só aparece à volta do dia. Por defeito aparece só no próprio dia; as datas grandes (Dia do Concelho,
+// 25 de Abril, 25 de Novembro, aniversários) têm três dias e os eventos de vários dias têm a sua janela. As páginas ficam sempre online (calendário em /datas e no sitemap) para quem as procurar.
 // Repete-se todos os anos sozinha: a página e o banner aparecem e desaparecem com a data de Lisboa (as páginas
 // voltam a ser geradas de hora a hora). Textos das datas em lib/comemoracoes.ts; calendário completo em
 // docs/calendario-comemoracoes.md.
@@ -12,11 +12,11 @@ export type DataAnual = {
   regra?: (ano: number) => [number, number]; // datas que mudam de ano para ano (domingos, Páscoa)
   quando?: string; // como se diz a data quando muda ("1.º sábado de março")
   desde?: number; // ano do acontecimento, para contar os anos
-  janela?: [number, number]; // dias antes e depois em que o banner aparece (por defeito [1, 1])
+  janela?: [number, number]; // dias antes e depois em que o banner aparece (por defeito [0, 0]: só no dia)
 };
 
-export const diaDoConcelho: DataAnual = { slug: "/dia-do-concelho", titulo: "Dia do Concelho", dia: [11, 19], desde: 1998 };
-export const vinteCincoNovembro: DataAnual = { slug: "/25-de-novembro", titulo: "25 de Novembro", dia: [11, 25], desde: 1975 };
+export const diaDoConcelho: DataAnual = { slug: "/dia-do-concelho", titulo: "Dia do Concelho", dia: [11, 19], desde: 1998, janela: [1, 1] };
+export const vinteCincoNovembro: DataAnual = { slug: "/25-de-novembro", titulo: "25 de Novembro", dia: [11, 25], desde: 1975, janela: [1, 1] };
 
 export const MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 
@@ -86,9 +86,9 @@ export function diasPara(d: DataAnual, agora = agoraReal()) {
   return ocorrencia(d, agora).dias;
 }
 
-// Está na altura do banner? (por defeito: véspera, dia e dia seguinte)
+// Está na altura do banner? (por defeito: só no próprio dia)
 export function estaNaSemana(d: DataAnual, agora = agoraReal()) {
-  const [antes, depois] = d.janela ?? [1, 1];
+  const [antes, depois] = d.janela ?? [0, 0];
   const n = diasPara(d, agora);
   return n <= antes && n >= -depois;
 }

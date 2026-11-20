@@ -1,7 +1,8 @@
 # Calendário de comemorações do site (dez. 2026 – nov. 2027)
 
-Cada data tem **uma página** (texto e fotos, sempre online) e **um banner** na página inicial, que só aparece
-à volta do dia (por defeito na véspera, no dia e no dia seguinte) e volta sozinho todos os anos.
+Cada data tem **uma página** (texto e fotos, sempre online) e **um banner** na página inicial, que aparece **só no próprio dia**
+(três dias no Dia do Concelho, 25 de Abril, 25 de Novembro e aniversários da IL e do núcleo; os eventos de vários dias têm a sua janela)
+e volta sozinho todos os anos.
 Os textos estão em `lib/comemoracoes.ts`, as festas em `lib/festas.ts` e o calendário do site em `/datas`.
 
 - **Festas das freguesias**: uma página com todas (`/festas-da-nossa-terra`) e um banner para cada festa
@@ -37,6 +38,44 @@ Revisto a 20/11/2026 com as datas novas do Ivo (12 dez, 2 abr e 24 ago).
 | 9 nov | Queda do Muro de Berlim (1989) | 38 | /queda-do-muro-de-berlim | Caiu porque as pessoas queriam ser livres |
 | 19 nov | Dia do Concelho (1998) | 29 | /dia-do-concelho | Feito |
 | 25 nov | 25 de Novembro (1975) | 52 | /25-de-novembro | Feito (sem igualar Novembro a Abril) |
+
+## Datas juntadas a 20/11/2026 (pedido do Ivo)
+
+| Data | O quê | Página | Ideia |
+|---|---|---|---|
+| 24 jan | Dia Internacional da Educação (ONU, 2019) | /dia-da-educacao | Ensino superior na Trofa abaixo do país; propostas |
+| 27 jan | Memória das Vítimas do Holocausto (ONU, 2005) | /holocausto | Aristides de Sousa Mendes |
+| Carnaval (terça, muda com a Páscoa) | Carnaval | /carnaval | Sátira e caricaturas: "É Carnaval, ninguém leva a mal" |
+| 24 fev | Invasão da Ucrânia (2022) | /ucrania | Do lado da Ucrânia e da liberdade |
+| 8 mar | Dia Internacional da Mulher | /dia-da-mulher | Carolina Beatriz Ângelo; Mariana Leitão |
+| 19 mar | Dia do Pai | /dia-do-pai | Creches, horários flexíveis, menos impostos |
+| 1.º domingo de maio | Dia da Mãe | /dia-da-mae | Par do Dia do Pai |
+| 17 mai | Dia contra a Homofobia, a Transfobia e a Bifobia | /dia-contra-a-homofobia | Liberdade para amar (escolhido em vez do 28 de junho) |
+| 31 mai | Dia Nacional das Coletividades | /dia-das-coletividades | Associações, ranchos, bandas, voluntários |
+| até ao 1.º domingo de julho (5 dias) | ExpoTrofa | /expotrofa | Alameda da Estação; mostra das escolas |
+| fim de julho (quinta a sábado) | BeLive, Festival da Juventude (Câmara) | /belive | Jovens com razões para ficar; data a confirmar todos os anos |
+| 1 out | Dia Internacional do Idoso | /dia-do-idoso | Dignidade, escolha, solidão |
+| 10 out | Dia Mundial da Saúde Mental | /saude-mental | SNS 24 (opção 4), 1411, 112 |
+| 17 out | Erradicação da Pobreza | /erradicacao-da-pobreza | O que tira as pessoas da pobreza é crescer |
+| 31 out | Dia Mundial da Poupança | /dia-da-poupanca | Impostos e poupança |
+| 31 out | Halloween | /halloween | "Os sustos do ano"; a sátira dos sugadores de impostos (2025) |
+| 5 dez | Dia Internacional do Voluntariado | /dia-do-voluntariado | Ação social |
+| 18 abr | Dia Internacional dos Monumentos e Sítios | /monumentos-e-sitios | Castro de Alvarelhos (Monumento Nacional, 1910) |
+| 23 abr | Dia Mundial do Livro | /dia-do-livro | Biblioteca municipal e salas de estudo 24 h |
+| 3 mai | Dia Mundial da Liberdade de Imprensa | /liberdade-de-imprensa | Lápis azul; jornais locais |
+| 18 mai | Dia Internacional dos Museus | /dia-dos-museus | Memória e cultura |
+| 1 jun | Dia Mundial da Criança | /dia-da-crianca | Creches para todos |
+| 23 jun | S. João do Porto | /sao-joao | A noite mais longa |
+| 26 jul | Dia dos Avós | /dia-dos-avos | Par do Dia do Idoso |
+| 12 ago | Dia Internacional da Juventude | /dia-da-juventude | Casa, emprego, Conselho Municipal da Juventude |
+| meados de setembro | Regresso às aulas | /regresso-as-aulas | Bom ano letivo |
+| 21 set | Dia Internacional da Paz | /dia-da-paz | Não há paz sem liberdade |
+| 22 set | Dia Europeu sem Carros | /dia-sem-carros | Metro até à Trofa |
+| setembro (muda todos os anos) | Jornadas Europeias do Património | /jornadas-do-patrimonio | Confirmar as datas de cada ano |
+| 11 nov | Magusto e S. Martinho | /magusto | Magusto Liberal |
+| 20 nov | Dia Internacional dos Direitos da Criança | /direitos-da-crianca | Convenção da ONU (1989) |
+| 3 dez | Dia Internacional das Pessoas com Deficiência | /pessoas-com-deficiencia | Acessibilidade |
+| 9 dez | Dia Internacional contra a Corrupção | /contra-a-corrupcao | Transparência, portal Dados da Trofa |
 
 ## Datas da Trofa
 

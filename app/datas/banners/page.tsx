@@ -21,8 +21,9 @@ const dia = ([m, d]: [number, number]) => `${d} de ${MESES[m - 1]}`;
 
 function quando(d: DataAnual) {
   const p = proximaVez(d);
-  const [antes, depois] = d.janela ?? [1, 1];
-  return `${dia(somarDias(p.ano, [p.mes, p.dia], -antes))} a ${dia(somarDias(p.ano, [p.mes, p.dia], depois))} de ${p.ano}`;
+  const [antes, depois] = d.janela ?? [0, 0];
+  if (!antes && !depois) return `só a ${dia([p.mes, p.dia])} de ${p.ano}`;
+  return `de ${dia(somarDias(p.ano, [p.mes, p.dia], -antes))} a ${dia(somarDias(p.ano, [p.mes, p.dia], depois))} de ${p.ano}`;
 }
 
 // O dia em que cada data vai acontecer, para mostrar o banner com os anos e a data certos.
@@ -51,7 +52,7 @@ export default function Banners() {
               <Link href={t.data.slug} className="font-bold text-navy hover:underline">
                 {t.titulo}
               </Link>{" "}
-              · aparece de {quando(t.data)}
+              · aparece {quando(t.data)}
             </p>
             {t.banner}
           </div>
