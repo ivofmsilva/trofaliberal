@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 // `vertical`: imagem já recortada na vertical (por exemplo, um cartaz): mostra-se inteira, em altura fixa.
-export type HeroImage = { src: string; alt: string; w: number; h: number; vertical?: boolean };
+// `foco`: que parte da imagem fica à vista quando é cortada (CSS object-position, por exemplo "50% 0%" para o topo).
+export type HeroImage = { src: string; alt: string; w: number; h: number; vertical?: boolean; foco?: string };
 
 // Faixa azul no topo de cada página: compacta, para o conteúdo aparecer logo.
-// A imagem só se mostra em ecrãs largos (no telemóvel ocuparia demasiado espaço).
+// No telemóvel a imagem aparece por baixo do texto, baixa (faixa 2:1, ou o cartaz vertical a 12 rem de altura), para a faixa
+// não ficar comprida; em ecrãs largos fica ao lado do texto.
 export default function PageHero({
   eyebrow,
   title,
@@ -38,9 +40,12 @@ export default function PageHero({
             width={image.w}
             height={image.h}
             priority
-            sizes={image.vertical ? "200px" : "300px"}
-            className={`hidden rounded-2xl shadow-xl shadow-black/30 ring-4 ring-white/30 md:block ${
-              image.vertical ? "h-72 w-auto justify-self-end object-contain" : "aspect-[16/9] w-full object-cover object-[50%_30%]"
+            style={image.foco ? { objectPosition: image.foco } : undefined}
+            sizes={image.vertical ? "(min-width: 768px) 200px, 160px" : "(min-width: 768px) 300px, 100vw"}
+            className={`mt-5 rounded-2xl shadow-xl shadow-black/30 ring-4 ring-white/30 md:mt-0 ${
+              image.vertical
+                ? "h-48 w-auto object-contain md:h-72 md:justify-self-end"
+                : "aspect-[2/1] w-full object-cover object-[50%_30%] md:aspect-[16/9]"
             }`}
           />
         )}

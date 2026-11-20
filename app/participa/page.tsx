@@ -316,7 +316,7 @@ export default function Participa() {
       <PageHero
         eyebrow="Participa"
         title="Salta do sofá. A Trofa faz-se contigo."
-        image={{ src: "/images/geral/junta-te-forca-liberal.png", alt: "Cartaz: Junta-te à força liberal", w: 431, h: 537 }}
+        image={{ src: "/images/geral/junta-te-forca-liberal.png", alt: "Cartaz: Junta-te à força liberal", w: 431, h: 537, foco: "50% 10%" }}
       >
         Faz-te membro, partilha uma ideia, denuncia um problema ou fala connosco: escolhe abaixo.
       </PageHero>
