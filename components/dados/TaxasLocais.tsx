@@ -4,6 +4,15 @@ import { dataCurta, derrama, imi, irs, pc, textoVoto } from "@/lib/dados/taxas";
 
 const ultimo = <T,>(l: T[], ok: (x: T) => boolean) => [...l].reverse().find(ok);
 
+// Participação no IRS que falta no texto das deliberações, tirada da consulta oficial do Portal das Finanças ("Taxa de
+// Participação no IRS dos Municípios", lida a 20/11/2026). Cada deliberação vale para os rendimentos do ano seguinte; de
+// 2018 a 2025 a taxa da deliberação é sempre a que foi comunicada às Finanças nesse ano. Até 2017 a taxa estava num anexo;
+// a deliberação de 3/12/2020 diz 0,48% por engano (retificada a 19/01/2021) e a taxa comunicada foi 4,8%.
+const FINANCAS = "https://www.portaldasfinancas.gov.pt/pt/consultarTaxasIRSMunicipiosForm.action";
+const IRS_FINANCAS: Record<string, number> = { "2015-09-24": 5, "2016-09-30": 5, "2017-11-23": 5, "2020-12-03": 4.8 };
+const taxaIRS = (x: { sessao: string; percentagem: number | null }) =>
+  IRS_FINANCAS[x.sessao] ?? (x.percentagem !== null && x.percentagem >= 1 ? x.percentagem : null);
+
 export default function TaxasLocais() {
   const imiAtual = ultimo(imi, (x) => x.urbanos !== null)!;
   const irsAtual = ultimo(irs, (x) => x.percentagem !== null && !x.retificacao)!;
@@ -13,9 +22,8 @@ export default function TaxasLocais() {
   const imiComTaxa = imi.filter((x) => x.urbanos !== null);
   const imiAnos = imiComTaxa.map((x) => x.sessao.slice(0, 4));
   const ultimaSessao = [...imi, ...irs, ...derrama].map((x) => x.sessao).sort().pop()!;
-  // IRS: a deliberação de 2020 diz 0,48% (uma gralha, retificada em janeiro de 2021): fica fora do gráfico.
-  const irsAnoOk = irs.filter((x) => x.percentagem !== null && !x.retificacao && x.percentagem >= 1);
-  const irsAnos = [...new Set(irs.filter((x) => !x.retificacao && x.percentagem !== null).map((x) => x.sessao.slice(0, 4)))];
+  const irsComTaxa = irs.filter((x) => !x.retificacao && taxaIRS(x) !== null);
+  const irsAnos = irsComTaxa.map((x) => x.sessao.slice(0, 4));
   const derramaComTaxa = derrama.filter((x) => x.normal !== null);
   const derramaAnos = derramaComTaxa.map((x) => x.sessao.slice(0, 4));
 
@@ -87,7 +95,7 @@ export default function TaxasLocais() {
           <div className="max-w-3xl">
             <Grafico
               periodos={irsAnos}
-              series={[{ nome: "Participação no IRS", valores: irsAnos.map((a) => irsAnoOk.find((x) => x.sessao.startsWith(a))?.percentagem ?? null) }]}
+              series={[{ nome: "Participação no IRS", valores: irsComTaxa.map((x) => taxaIRS(x)) }]}
               unidade="%"
               semComparar
               casas={1}
@@ -100,13 +108,17 @@ export default function TaxasLocais() {
               <a key="u" href={x.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
                 {dataCurta(x.sessao)} ↗{x.retificacao ? " (retificação)" : ""}
               </a>,
-              x.retificacao ? "—" : x.percentagem !== null && x.percentagem < 1 ? `${pc(x.percentagem)} *` : pc(x.percentagem, 1),
+              x.retificacao ? "—" : IRS_FINANCAS[x.sessao] !== undefined ? `${pc(IRS_FINANCAS[x.sessao], 1)} *` : pc(x.percentagem, 1),
               textoVoto(x, x.sessao),
             ])}
           />
           <p className="mt-2 max-w-3xl text-sm text-apagado">
-            * O texto da deliberação de 3 de dezembro de 2020 diz 0,48%. A Assembleia retificou essa deliberação em 19 de
-            janeiro de 2021 (o texto da retificação não repete o valor), por isso a linha fica fora do gráfico.
+            * Valor da{" "}
+            <a href={FINANCAS} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+              consulta do Portal das Finanças ↗
+            </a>{" "}
+            (taxa comunicada para os rendimentos do ano seguinte). Até 2017 a taxa não está no texto da deliberação; a de 3 de
+            dezembro de 2020 diz 0,48% por engano e foi retificada a 19 de janeiro de 2021.
           </p>
         </section>
 

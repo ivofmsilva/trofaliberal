@@ -36,6 +36,13 @@ export const metadata: Metadata = {
 };
 
 const ultimo = (s: SerieContas) => s.valores[s.valores.length - 1];
+// O gráfico começa no primeiro ano em que alguma série tem valor (a receita só existe desde 2017 e a dívida desde 2013),
+// para não ficar um espaço vazio à esquerda.
+function desdeOPrimeiroAno(series: { nome: string; valores: (number | null)[] }[]) {
+  const inicios = series.map((s) => s.valores.findIndex((v) => v !== null)).filter((i) => i >= 0);
+  const i = inicios.length ? Math.min(...inicios) : 0;
+  return { periodos: ANOS.slice(i), series: series.map((s) => ({ nome: s.nome, valores: s.valores.slice(i) })) };
+}
 // variação com sinal: "+66%" e "−65%" (sinal de menos verdadeiro, não o hífen)
 const pc = (v: number | null, casas = 0) => (v === null ? "—" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${numero(Math.abs(v), casas)}%`);
 const m = (v: number | null, casas = 2) => (v === null ? "—" : numero(v / 1_000_000, casas));
@@ -232,13 +239,12 @@ export default function Financas() {
           </Titulo>
           <div className="max-w-3xl">
             <Grafico
-              periodos={ANOS}
-              series={[
+              {...desdeOPrimeiroAno([
                 { nome: receitaTotal.nome, valores: receitaTotal.valores },
                 { nome: receitaCorrente.nome, valores: receitaCorrente.valores },
                 { nome: transferenciasCorrentes.nome, valores: transferenciasCorrentes.valores },
                 { nome: impostosDiretos.nome, valores: impostosDiretos.valores },
-              ]}
+              ])}
               unidade="€"
               semComparar
             />
@@ -267,11 +273,10 @@ export default function Financas() {
           </Titulo>
           <div className="max-w-3xl">
             <Grafico
-              periodos={ANOS}
-              series={[
+              {...desdeOPrimeiroAno([
                 { nome: dividaTotal.nome, valores: dividaTotal.valores },
                 { nome: dividaEfetiva.nome, valores: dividaEfetiva.valores },
-              ]}
+              ])}
               unidade="€"
               semComparar
             />
