@@ -64,7 +64,7 @@ export default function Metro() {
               <DiasEmEspera desde={esperaDesde} inicial={diasDesde(esperaDesde)} />
             </div>
             <p className="mt-8 text-lg text-ink/85">
-              Em 2002 o comboio da Trofa deixou de circular, com a promessa de que o Metro ocuparia o
+              Em 2002 o comboio da linha de via estreita deixou de circular, com a promessa de que o Metro ocuparia o
               seu lugar. A promessa continua por cumprir. O Metro para a Trofa é uma causa que
               sempre uniu a população.
             </p>
