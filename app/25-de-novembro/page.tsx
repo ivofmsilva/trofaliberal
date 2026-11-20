@@ -86,7 +86,7 @@ export default function VinteCincoNovembro() {
             há oportunidades para todos.
           </p>
           <p className="font-display text-2xl font-bold text-pink">
-            Viva o 25 de Abril. Viva o 25 de Novembro. Viva a liberdade!
+            Viva o 25 de Novembro. Viva a liberdade!
           </p>
           <figure className="pt-4">
             <Image
