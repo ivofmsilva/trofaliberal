@@ -5,6 +5,7 @@
 
 import type { Img } from "@/lib/comemoracoes";
 import { nesimo, pascoa, somarDias, ultimo, type DataAnual } from "@/lib/datasAnuais";
+import { fotosDatas as F } from "@/lib/fotosDatas";
 
 export type Festa = {
   id: string; // âncora na página
@@ -16,6 +17,21 @@ export type Festa = {
 };
 
 const PAGINA = "/festas-da-nossa-terra";
+// Foto de cada festa (do Commons): a igreja ou um sítio da freguesia. Covelas e Guidões ainda não têm.
+const FOTO: Record<string, string> = {
+  "senhora-do-desterro": "igreja-santiago",
+  "espirito-santo": "santeiros",
+  "senhora-do-rosario": "igreja-santiago",
+  "senhora-da-livracao": "igreja-santiago",
+  "s-cristovao": "igreja-muro",
+  "santiago": "igreja-santiago",
+  "s-pantaleao": "igreja-muro",
+  "senhora-das-dores": "capela-dores",
+  "s-roque": "castro-alvarelhos",
+  "s-gens": "sao-gens",
+  "santa-eufemia": "castro-alvarelhos",
+  "s-martinho": "igreja-sao-martinho"
+};
 const DOMINGO: [number, number] = [2, 0];
 
 function festa(id: string, nome: string, freguesia: string, quando: string, regra: DataAnual["regra"], extra: Partial<Festa> = {}, fixa = false): Festa {
@@ -24,6 +40,7 @@ function festa(id: string, nome: string, freguesia: string, quando: string, regr
     nome,
     freguesia,
     data: { slug: `${PAGINA}#${id}`, titulo: nome, regra, quando, janela: fixa ? [1, 1] : DOMINGO },
+    imagem: FOTO[id] ? F[FOTO[id]] : undefined,
     ...extra,
   };
 }
@@ -52,4 +69,4 @@ export const festas: Festa[] = [
 export const paginaFestas = PAGINA;
 
 // Foto dos banners das festas que ainda não têm foto própria.
-export const fotoDasFestas: Img = { src: "/images/geral/grupo-nucleo.jpg", w: 1440, h: 1440, alt: "Membros da IL Trofa" };
+export const fotoDasFestas: Img = F["trofa-vista"];

@@ -45,8 +45,7 @@ Usamos o dia da aprovação na Assembleia da República, como no Dia do Concelho
 | Data | O quê | Anos (próxima vez) | Página | Ideia |
 |---|---|---|---|---|
 | 1.º fim de semana de março | Grande Feira Anual da Trofa ("Feira de Março") | 6 mar 2027 | /feira-de-marco | Quem faz a Trofa crescer |
-| 16 mai | Trofa vila (Lei n.º 19/84, de 28 de junho) | 43 | /trofa-vila | Vila → cidade → concelho |
-| 27 mai | Trofa cidade (Lei n.º 29/93, de 2 de julho) | 34 | /trofa-cidade | Mesma pequena história |
+| 27 mai | Trofa cidade (Lei n.º 29/93, de 2 de julho); a página lembra que passou a vila a 16 mai 1984 (Lei n.º 19/84) | 34 | /trofa-cidade | Vila → cidade → concelho |
 | 20 jun | Vila do Coronado (Lei n.º 82/97, de 24 de julho) | **30** | /vila-do-coronado | Foi lá que nasceu o núcleo |
 
 ## Festas das freguesias (domingos que mudam; datas de 2027)
@@ -77,6 +76,7 @@ da comissão de festas ou da Junta.
 - **Uma página para cada data**, mesmo que pequena, e com imagens.
 - Festas: **uma página com todas** e **um banner para cada festa**.
 - Ano Novo sem resumo do ano (mostrava pouco).
+- A passagem a vila (16 mai 1984) não tem página própria: fica referida na da cidade (pedido do Ivo).
 - Novas datas pedidas pelo Ivo: Dia do Estudante (24 mar) e Dia Mundial do Ambiente (5 jun).
 - Porto Liberal: costuma ser a 22 ou 23 de dezembro; a data de 2026 ainda não está marcada.
 

@@ -31,8 +31,9 @@ function Banner({ href, etiqueta, titulo, frase, imagem, botao }: { href: string
   );
 }
 
-export function BannerComemoracao({ c }: { c: Comemoracao }) {
-  const v = valoresDe(c);
+// `agora` só serve para a página de revisão (mostra cada banner como vai aparecer no seu dia).
+export function BannerComemoracao({ c, agora }: { c: Comemoracao; agora?: Date }) {
+  const v = valoresDe(c, agora);
   return (
     <Banner
       href={c.data.slug}
@@ -51,12 +52,12 @@ export function lugarDe(freguesia: string) {
   return m ? `${m[2]} ${m[1] === "Coronado" ? "do" : "de"} ${m[1]}` : freguesia;
 }
 
-export function BannerFesta({ f, imagem }: { f: Festa; imagem: Img }) {
+export function BannerFesta({ f, imagem, agora }: { f: Festa; imagem: Img; agora?: Date }) {
   const lugar = lugarDe(f.freguesia);
   return (
     <Banner
       href={f.data.slug}
-      etiqueta={`${dataProxima(f.data)}`}
+      etiqueta={dataProxima(f.data, agora)}
       titulo={f.nome}
       frase={`Boas festas, ${lugar}! Tradição, convívio e o encontro de quem vive cá e de quem volta.`}
       imagem={f.imagem ?? imagem}

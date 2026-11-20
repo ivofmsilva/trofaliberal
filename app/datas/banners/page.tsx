@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Banner25Novembro from "@/components/Banner25Novembro";
-import { BannerComemoracao, BannerFesta } from "@/components/BannerComemoracao";
+import { BannerComemoracao, BannerFesta, lugarDe } from "@/components/BannerComemoracao";
 import BannerConcelho from "@/components/BannerConcelho";
 import PageHero from "@/components/PageHero";
 import { comemoracoes } from "@/lib/comemoracoes";
@@ -25,12 +25,18 @@ function quando(d: DataAnual) {
   return `${dia(somarDias(p.ano, [p.mes, p.dia], -antes))} a ${dia(somarDias(p.ano, [p.mes, p.dia], depois))} de ${p.ano}`;
 }
 
+// O dia em que cada data vai acontecer, para mostrar o banner com os anos e a data certos.
+const noDia = (d: DataAnual) => {
+  const p = proximaVez(d);
+  return new Date(Date.UTC(p.ano, p.mes - 1, p.dia, 12));
+};
+
 export default function Banners() {
   const todos = [
     { data: diaDoConcelho, titulo: "Dia do Concelho", banner: <BannerConcelho /> },
     { data: vinteCincoNovembro, titulo: "25 de Novembro", banner: <Banner25Novembro /> },
-    ...comemoracoes.map((c) => ({ data: c.data as DataAnual, titulo: c.data.titulo, banner: <BannerComemoracao c={c} /> })),
-    ...festas.map((f) => ({ data: f.data, titulo: `Festa: ${f.nome} (${f.freguesia})`, banner: <BannerFesta f={f} imagem={fotoDasFestas} /> })),
+    ...comemoracoes.map((c) => ({ data: c.data as DataAnual, titulo: c.data.titulo, banner: <BannerComemoracao c={c} agora={noDia(c.data)} /> })),
+    ...festas.map((f) => ({ data: f.data, titulo: `Festa: ${f.nome} (${lugarDe(f.freguesia)})`, banner: <BannerFesta f={f} imagem={fotoDasFestas} agora={noDia(f.data)} /> })),
   ].sort((a, b) => proximaVez(a.data).dias - proximaVez(b.data).dias);
 
   return (
