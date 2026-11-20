@@ -1,14 +1,15 @@
 import Link from "next/link";
 
-// Barra comum às páginas de Contratos e Fundos europeus: no menu é um só separador.
-export default function SubNav({ atual }: { atual: "contratos" | "ajustes" | "fundos" }) {
+// Barra comum às páginas de Contratos, Fundos europeus e Empresas municipais: no menu é um só separador.
+export default function SubNav({ atual }: { atual: "contratos" | "ajustes" | "fundos" | "empresas" }) {
   const itens = [
     { id: "contratos", nome: "Contratos públicos", href: "/dados/contratos" },
     { id: "ajustes", nome: "Ajustes diretos", href: "/dados/contratos/ajustes-diretos" },
     { id: "fundos", nome: "Fundos europeus", href: "/dados/fundos-europeus" },
+    { id: "empresas", nome: "Empresas municipais", href: "/dados/contratos/empresas-municipais" },
   ] as const;
   return (
-    <nav aria-label="Contratos e fundos europeus" className="border-b border-linha bg-fundo">
+    <nav aria-label="Contratos, fundos europeus e empresas municipais" className="border-b border-linha bg-fundo">
       <ul className="mx-auto flex max-w-6xl flex-wrap gap-2 px-4 py-3 sm:px-6">
         {itens.map((i) => (
           <li key={i.id}>
