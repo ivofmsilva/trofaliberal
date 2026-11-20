@@ -82,14 +82,18 @@ export default function Fontes() {
   ];
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
-      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Dados da Trofa</p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fontes e método</h1>
-      <p className="mt-5 text-lg text-texto">
-        Cada indicador diz a fonte e o ano a que se refere. Aqui explicamos de onde vêm os números e como se fazem as
-        comparações.
-      </p>
-
+    <>
+    <section className="topo-escuro">
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Dados da Trofa</p>
+        <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fontes e método</h1>
+        <p className="mt-5 text-lg text-texto">
+          Cada indicador diz a fonte e o ano a que se refere. Aqui explicamos de onde vêm os números e como se fazem as
+          comparações.
+        </p>
+      </div>
+    </section>
+    <div className="mx-auto max-w-3xl px-4 pb-12 sm:px-6 md:pb-16">
       <h2 className="mt-12 text-xl font-bold text-tinta">De onde vêm os números</h2>
       <ul className="mt-4 divide-y divide-linha border-y border-linha">
         {fontes.map((f) => (
@@ -192,5 +196,6 @@ export default function Fontes() {
         muda de indicador para indicador: {anos.map(([ano, n]) => `${ano} (${conta(n)})`).join(", ")}.
       </p>
     </div>
+    </>
   );
 }

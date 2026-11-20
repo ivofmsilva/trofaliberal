@@ -138,7 +138,7 @@ export default function Financas() {
   const receitaContas = receitaIne ? porHabitante(receitaTotal).valores[ANOS.indexOf(receitaIne.ano)] : null;
   return (
     <>
-      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
+      <section className="topo-escuro">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Finanças locais</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Finanças do município</h1>
@@ -245,10 +245,10 @@ export default function Financas() {
           </div>
           <Tabela series={[receitaTotal, receitaCorrente, transferenciasCorrentes, impostosDiretos]} />
           <p className="mt-3 max-w-3xl text-sm text-texto">
-            Há dois totais: a <strong className="font-semibold text-tinta">receita total</strong> inclui as receitas de capital (como os fundos europeus) e os empréstimos contraídos; as <strong className="font-semibold text-tinta">receitas correntes</strong> são só impostos, taxas, transferências correntes e vendas. O valor da receita total dos municípios que o INE publica (e que aparece nos indicadores da página inicial) é o primeiro: 41,2 M€ em 2021, 35,7 M€ em 2022 e 40,0 M€ em 2023, muito próximo do das contas da Câmara. Em 2018 a receita total inclui 24,1 M€ de empréstimos contraídos para pagar dívida antiga.
+            A <strong className="font-semibold text-tinta">receita total</strong> inclui as receitas de capital (como os fundos europeus) e os empréstimos contraídos; as <strong className="font-semibold text-tinta">receitas correntes</strong> são só impostos, taxas, transferências correntes e vendas. Em 2018 a receita total inclui 24,1 M€ de empréstimos.
           </p>
           <p className="mt-3 max-w-3xl text-sm text-texto">
-            Os impostos diretos são sobretudo o IMI, o IMT e o IUC, mais a participação variável no IRS. Vê as taxas que a
+            Os impostos diretos são o IMI, o IUC, o IMT e a derrama. Vê as taxas que a
             Assembleia fixou, mais abaixo, em{" "}
             <a href="#taxas" className="underline underline-offset-2 hover:text-tinta">
               Taxas e impostos locais
@@ -323,7 +323,7 @@ export default function Financas() {
             </table>
           </div>
           <p className="mt-4 max-w-3xl text-sm text-texto">
-            O relatório do orçamento diz que a Câmara tem 502 trabalhadores, dos quais 25 têm entre 60 e 64 anos, e que a
+            O relatório do orçamento diz que a Câmara tem 502 trabalhadores e que a
             despesa com pessoal inclui o pessoal não docente das escolas (4,14 M€) transferido do Estado. Explica o aumento
             com as atualizações salariais, a descentralização de competências, as mudanças obrigatórias de posição remuneratória, o
             salário mínimo e novos recrutamentos.
@@ -370,9 +370,8 @@ export default function Financas() {
             {receitaIne && receitaContas != null && receitaContas !== receitaIne.trofa && (
               <>
                 {" "}
-                Aqui os valores são os que o INE publica para todos os municípios, e não os das contas da Câmara: por isso a receita
-                total por habitante da Trofa em {receitaIne.ano} aparece com {numero(receitaIne.trofa)} € nesta tabela e com{" "}
-                {numero(receitaContas)} € na de cima.
+                Aqui os valores são os que o INE publica para todos os municípios, por isso podem diferir um pouco dos das contas da
+                Câmara, na tabela de cima.
               </>
             )}
           </p>

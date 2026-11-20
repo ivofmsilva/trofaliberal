@@ -13,19 +13,24 @@ export const metadata: Metadata = {
 
 export default function Concelho() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
-      <Link href="/dados/fundos-europeus" className="text-sm text-apagado hover:text-tinta hover:underline">
-        ← Fundos europeus
-      </Link>
-      <h1 className="mt-4 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Projetos no concelho</h1>
-      <p className="mt-4 mb-8 max-w-2xl text-lg text-texto">
-        Todos os projetos financiados por fundos europeus com execução localizada na Trofa: câmara, empresas e
-        associações. Para ver só o dinheiro gerido diretamente pelo Município, vê os{" "}
-        <Link href="/dados/fundos-europeus/municipio" className="font-semibold text-tinta underline underline-offset-2">
-          projetos do Município
-        </Link>
-        .
-      </p>
+    <>
+      <section className="topo-escuro">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+          <Link href="/dados/fundos-europeus" className="text-sm text-apagado hover:text-tinta hover:underline">
+            ← Fundos europeus
+          </Link>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Projetos no concelho</h1>
+          <p className="mt-4 max-w-2xl text-lg text-texto">
+            Todos os projetos financiados por fundos europeus com execução localizada na Trofa: câmara, empresas e
+            associações. Para ver só o dinheiro gerido diretamente pelo Município, vê os{" "}
+            <Link href="/dados/fundos-europeus/municipio" className="font-semibold text-tinta underline underline-offset-2">
+              projetos do Município
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <TabelaFundos ficheiro="fundos-concelho" mostrarBeneficiario />
       <p className="mt-10 max-w-3xl text-sm text-apagado">
         Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado atribuível a este
@@ -33,6 +38,7 @@ export default function Concelho() {
         “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou. Dados até: a conclusão mais recente
         registada nos ficheiros é de {dataCurta(ultimaConclusao(fundosConcelho))}.
       </p>
-    </div>
+      </div>
+    </>
   );
 }

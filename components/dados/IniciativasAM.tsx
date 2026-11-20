@@ -100,10 +100,6 @@ export default function IniciativasAM() {
           </tbody>
         </table>
       </div>
-      <p className="mt-3 max-w-2xl text-sm text-apagado">
-        No mandato atual (desde outubro de 2025) não há nas deliberações nenhuma moção, voto ou recomendação votados. A última, um
-        voto de pesar, é de 5 de setembro de 2025, ainda do mandato anterior. Em 2018 também não há nenhuma.
-      </p>
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Por quem foram apresentadas</h3>
       <div className="mt-3 overflow-x-auto rounded-xl border border-linha">

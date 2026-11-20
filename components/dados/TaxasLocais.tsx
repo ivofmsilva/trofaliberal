@@ -82,7 +82,7 @@ export default function TaxasLocais() {
         <section aria-label="IRS">
           <h3 className="text-xl font-bold tracking-tight text-tinta">Participação variável no IRS</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
-            A percentagem do IRS dos residentes que o município fica a receber (o resto vai para o Estado).
+            A parte do IRS dos residentes que fica para o município (até 5%). O que o município não fica é devolvido aos contribuintes.
           </p>
           <div className="max-w-3xl">
             <Grafico
@@ -113,7 +113,7 @@ export default function TaxasLocais() {
         <section aria-label="Derrama">
           <h3 className="text-xl font-bold tracking-tight text-tinta">Derrama</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
-            Imposto sobre o lucro das empresas com sede no concelho. Há uma taxa normal e, desde 2020, uma reduzida para as
+            Imposto municipal sobre o lucro tributável das empresas, na parte gerada no concelho. Há uma taxa normal e, desde 2020, uma reduzida para as
             empresas com menor volume de negócios.
           </p>
           <div className="max-w-3xl">

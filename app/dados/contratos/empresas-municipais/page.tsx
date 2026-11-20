@@ -66,7 +66,7 @@ export default function EmpresasMunicipais() {
   return (
     <>
       <SubNav atual="empresas" />
-      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
+      <section className="topo-escuro">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <h1 className="text-4xl font-bold tracking-tight text-tinta md:text-5xl">Empresas municipais</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
@@ -124,11 +124,12 @@ export default function EmpresasMunicipais() {
               <Externa href={doc(/^Adenda Contrato Programa 2015/i)}>Adenda ↗</Externa>
             </li>
             <li>
-              As piscinas Aquaplace não aparecem nos estatutos nem nos contratos-programa da TrofAmbiente; os contratos do Aquaplace no Portal BASE
-              (2021–2026) são da Câmara.{" "}
-              <a href="/dados/contratos" className={ligacao}>
-                Contratos da Câmara
+              As piscinas Aquaplace não aparecem nos estatutos nem nos contratos-programa da TrofAmbiente: a gestão do Aquaplace é um
+              pelouro de uma vereadora da Câmara (vê os pelouros na{" "}
+              <a href="/dados/camara" className={ligacao}>
+                página da Câmara
               </a>
+              ).
             </li>
           </ul>
         </section>

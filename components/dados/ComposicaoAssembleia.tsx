@@ -92,7 +92,16 @@ export default function ComposicaoAssembleia() {
           <a href={FONTE_POSSE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
             tomada de posse (24 de outubro de 2025) ↗
           </a>
-          . A divisão de 12 do PSD e 2 do CDS-PP vem das votações da Assembleia; não está publicado quais dos 14 são de cada partido.
+          . A divisão de 12 do PSD e 2 do CDS-PP é a que aparece nas{" "}
+          <a
+            href="https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2025/Deliberacoes-09-12-2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-tinta"
+          >
+            deliberações de 9 de dezembro de 2025 ↗
+          </a>
+          ; não está publicado quais dos 14 são de cada partido.
         </p>
       </div>
     </div>

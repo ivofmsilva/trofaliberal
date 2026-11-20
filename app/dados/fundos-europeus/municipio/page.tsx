@@ -13,15 +13,20 @@ export const metadata: Metadata = {
 
 export default function Municipio() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
-      <Link href="/dados/fundos-europeus" className="text-sm text-apagado hover:text-tinta hover:underline">
-        ← Fundos europeus
-      </Link>
-      <h1 className="mt-4 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Projetos do Município</h1>
-      <p className="mt-4 mb-8 max-w-2xl text-lg text-texto">
-        Projetos financiados por fundos europeus em que a Câmara Municipal é a própria beneficiária. Clica num projeto
-        para ver os detalhes.
-      </p>
+    <>
+      <section className="topo-escuro">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+          <Link href="/dados/fundos-europeus" className="text-sm text-apagado hover:text-tinta hover:underline">
+            ← Fundos europeus
+          </Link>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Projetos do Município</h1>
+          <p className="mt-4 max-w-2xl text-lg text-texto">
+            Projetos financiados por fundos europeus em que a Câmara Municipal é a própria beneficiária. Clica num projeto
+            para ver os detalhes.
+          </p>
+        </div>
+      </section>
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <TabelaFundos ficheiro="fundos-municipio" mostrarBeneficiario={false} />
       <p className="mt-10 max-w-3xl text-sm text-apagado">
         Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado atribuível a este
@@ -29,6 +34,7 @@ export default function Municipio() {
         “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou. Dados até: a conclusão mais recente
         registada nos ficheiros é de {dataCurta(ultimaConclusao(fundosMunicipio))}.
       </p>
-    </div>
+      </div>
+    </>
   );
 }

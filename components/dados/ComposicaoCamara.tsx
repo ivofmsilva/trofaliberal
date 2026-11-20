@@ -24,6 +24,50 @@ const camara: Bancada[] = [
   },
 ];
 
+// Pelouros de cada vereador, tal como estão na página de cada um em mun-trofa.pt (Vereação), lidos a 20/11/2026.
+// O presidente tem a sua página no menu "Presidente"; os vereadores da TDT não têm pelouros indicados.
+const PELOUROS: { nome: string; cargo?: string; url: string; desde?: string; areas: string[] }[] = [
+  {
+    nome: "Sérgio Araújo",
+    cargo: "presidente",
+    url: "https://mun-trofa.pt/25404/sergio-araujo--presidente-da-camara-municipal-da",
+    areas: [
+      "Coordenação geral da atividade municipal, relações interinstitucionais e cooperação externa", "Gestão dos Recursos Humanos",
+      "Comunicação", "Finanças", "Sistemas de Informação", "Educação", "Proteção Civil", "Planeamento", "Mobilidade", "Obras Municipais",
+      "Gestão de Projetos Financiados",
+    ],
+  },
+  {
+    nome: "João Marques",
+    cargo: "vice-presidente",
+    url: "https://mun-trofa.pt/25411/joao-marques--vice-presidente-da-camara-municipal",
+    areas: ["Contratação Pública", "Património", "Cultura", "Desporto", "Juventude", "Medicina no Trabalho", "Obras Particulares", "Ação Social e Saúde"],
+  },
+  {
+    nome: "Isabel Cruz",
+    url: "https://mun-trofa.pt/25412/isabel-cruz--vereadora-da-camara-municipal-da-tro",
+    areas: [
+      "Apoio à Assembleia Municipal e Juntas de Freguesia", "Atendimento", "Taxas e Licenças", "Modernização Administrativa",
+      "Polícia Municipal", "Turismo", "Educação (coadjuva o presidente)", "Transportes e Logística", "Ambiente e Espaços Urbanos",
+      "Gabinete Técnico Florestal", "Informação ao Consumidor", "Desenvolvimento Económico", "Gestão do Aquaplace",
+    ],
+  },
+  {
+    nome: "Amadeu Dias",
+    url: "https://mun-trofa.pt/25417/amadeu-dias--vereador-da-camara-municipal-da-trof",
+    desde: "2 de dezembro de 2025",
+    areas: [
+      "Mercados e Feiras", "Comércio Local", "Urbanismo", "Ordenamento do Território", "Planeamento (coadjuva o presidente)",
+      "Higiene e Segurança no Trabalho", "Formação Interna", "Veterinário Municipal e Bem-Estar Animal",
+    ],
+  },
+  {
+    nome: "Luís Cameirão",
+    url: "https://mun-trofa.pt/25416/luis-cameirao--vereador-da-camara-municipal-da-tr",
+    areas: ["Jurídico/Contencioso", "Auditoria e Controlo Interno", "Qualidade", "Energia", "Metrologia", "Investimento Externo"],
+  },
+];
+
 export default function ComposicaoCamara() {
   return (
     <div className="grid gap-10 lg:grid-cols-2">
@@ -47,7 +91,7 @@ export default function ComposicaoCamara() {
           </li>
           <li>O presidente pode entregar áreas (pelouros) a vereadores, mas todos os 7 votam nas reuniões.</li>
         </ul>
-        <p className="mt-4 max-w-xl text-sm text-apagado">Reúne de quinze em quinze dias, em reunião pública, e as deliberações ficam publicadas.</p>
+        <p className="mt-4 max-w-xl text-sm text-apagado">Reúne normalmente de quinze em quinze dias, e as deliberações ficam publicadas.</p>
       </div>
       <div>
         <h3 className="text-lg font-bold text-tinta">Quantos lugares tem cada lista e quem são</h3>
@@ -58,6 +102,23 @@ export default function ComposicaoCamara() {
         <p className="mt-3 text-sm text-texto">
           Nenhuma lista tem sozinha a maioria dos 7 votos (são precisos 4). Os nomes aparecem pelo primeiro e último.
         </p>
+        <h4 className="mt-6 text-sm font-semibold uppercase tracking-[0.12em] text-apagado">Pelouros</h4>
+        <dl className="mt-3 space-y-3 text-sm">
+          {PELOUROS.map((p) => (
+            <div key={p.nome}>
+              <dt className="font-semibold text-tinta">
+                {p.nome}
+                {p.cargo ? `, ${p.cargo}` : ""}
+                {p.desde ? <span className="font-normal text-apagado"> · desde {p.desde}</span> : null}{" "}
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="font-normal text-apagado underline underline-offset-2 hover:text-tinta">
+                  ↗
+                </a>
+              </dt>
+              <dd className="text-texto">{p.areas.join(", ")}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-3 text-sm text-apagado">Os vereadores da TDT não têm pelouros indicados no site do município.</p>
         <p className="mt-2 text-sm text-apagado">
           Fontes:{" "}
           <a href={FONTE_POSSE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">

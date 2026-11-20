@@ -55,6 +55,22 @@
   --font-display: var(--font-grotesk), var(--font-jakarta), system-ui, sans-serif;
 }
 
+/* Dados da Trofa: topo escuro, igual ao da página inicial dos dados, no cabeçalho de todas as páginas do portal.
+   As cores de texto, linhas e destaque trocam-se só dentro deste bloco (igual a il-trofa-dados/app/globals.css). */
+.topo-escuro {
+  --tinta: #ffffff;
+  --texto: rgba(255, 255, 255, 0.86);
+  --apagado: rgba(255, 255, 255, 0.7);
+  --linha: rgba(255, 255, 255, 0.2);
+  --fundo: rgba(255, 255, 255, 0.07);
+  --trofa: #c9bbf6;
+  --acento: #c9bbf6;
+  color: var(--texto);
+  background:
+    radial-gradient(circle 15rem at calc(100% - 7rem) 5rem, rgba(107, 63, 212, 0.55), rgba(107, 63, 212, 0) 70%),
+    var(--noite);
+}
+
 html {
   scroll-behavior: smooth;
 }
