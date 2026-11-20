@@ -14,25 +14,29 @@ export default function TodosOsIndicadores() {
   const temas = porTema();
   return (
     <div className="bg-papel">
-      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 md:py-14">
-        <nav aria-label="Caminho" className="text-sm text-apagado">
-          <Link href="/dados" className="inline-block py-2 hover:text-tinta hover:underline">
-            Início
-          </Link>
-        </nav>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Todos os indicadores</h1>
-        <p className="mt-4 text-lg text-texto">
-          {indicadores.length} indicadores, por tema, com o último valor da Trofa e o ano. Atualizado a {atualizado ?? "—"}.
-        </p>
-        <ul className="mt-6 flex flex-wrap gap-2">
-          {temas.map((t) => (
-            <li key={t.id}>
-              <a href={`#${t.id}`} className="inline-block rounded-full border border-linha bg-fundo px-3.5 py-2 text-sm font-medium text-texto hover:border-tinta hover:text-tinta">
-                {t.titulo}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <section className="topo-escuro">
+        <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 md:py-14">
+          <nav aria-label="Caminho" className="text-sm text-apagado">
+            <Link href="/dados" className="inline-block py-2 hover:text-tinta hover:underline">
+              Início
+            </Link>
+          </nav>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Todos os indicadores</h1>
+          <p className="mt-4 text-lg text-texto">
+            {indicadores.length} indicadores, por tema, com o último valor da Trofa e o ano. Atualizado a {atualizado ?? "—"}.
+          </p>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {temas.map((t) => (
+              <li key={t.id}>
+                <a href={`#${t.id}`} className="inline-block rounded-full border border-linha bg-fundo px-3.5 py-2 text-sm font-medium text-texto hover:border-tinta hover:text-tinta">
+                  {t.titulo}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <div className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 md:pb-14">
 
         {temas.map((t) => {
           const cor = corDoTema(t.id);

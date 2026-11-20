@@ -12,9 +12,12 @@ const semAcentos = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toL
 const eur = (v: number) => numero(v, Number.isInteger(v) ? 0 : 2) + " €";
 const data = (iso: string | null) => (iso ? iso.split("-").reverse().join("/") : "—");
 
+// Nome sem o NIF; nos agrupamentos de empresas (separados por ";") juntam-se os nomes com "e".
 function empresa(texto: string) {
-  const m = texto.match(/^\s*(\d{8,9})\s*-\s*(.*)$/);
-  return m ? { nome: m[2].trim(), nif: m[1] } : { nome: texto.replace(/^[-\s]+/, "").trim(), nif: null };
+  const partes = texto.split(";").map((p) => p.trim()).filter(Boolean);
+  const nif = partes[0]?.match(/^(\d{8,9})\s*-/)?.[1] ?? null;
+  const nome = partes.map((p) => p.replace(/^\d{8,9}\s*-\s*/, "").replace(/^[-\s]+/, "").trim()).filter(Boolean).join(" e ");
+  return { nome: nome || texto.trim(), nif };
 }
 
 export default function TabelaContratos() {

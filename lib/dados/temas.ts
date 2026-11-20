@@ -30,7 +30,7 @@ export const temas: Tema[] = [
   {
     id: "economia",
     titulo: "Economia e rendimento",
-    texto: "Empresas, postos de trabalho, rendimento e consumo.",
+    texto: "Empresas, pessoal ao serviço, rendimento e consumo.",
     principais: 4,
     slugs: [
       "empresas",

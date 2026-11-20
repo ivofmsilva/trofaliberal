@@ -57,7 +57,7 @@ export default function ComoVotam({ corpo }: { corpo: "camara" | "assembleia" })
           </tbody>
         </table>
       </div>
-      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Só contam as reuniões de que a Câmara publicou as deliberações (a lista das que faltam está em Deliberações). Os documentos digitalizados foram lidos por reconhecimento de texto e os pontos em que o voto não se leu ficam de fora das contas (na lista das deliberações aparecem à parte, como “não legível”).{comSecreto ? " As votações por escrutínio secreto são eleições e designações." : ""}{anoEmCurso}</p>}
+      {corpo === "camara" && <p className="mt-3 text-sm text-apagado">Só contam as reuniões com deliberações publicadas (as que faltam estão em Deliberações); nos documentos digitalizados, os votos que não se leram ficam de fora.{comSecreto ? " As votações por escrutínio secreto são eleições e designações." : ""}{anoEmCurso}</p>}
       {corpo === "assembleia" && <p className="mt-3 text-sm text-apagado">Só contam as sessões de que o município publicou as deliberações (as que têm ata mas não têm deliberações estão indicadas em Votações).{anoEmCurso}</p>}
 
       <h3 className="mt-10 text-lg font-bold text-tinta">Nas votações por maioria</h3>

@@ -80,7 +80,9 @@ export default async function Pagina({ params }: Props) {
   const seguinte = tema && pos >= 0 && pos < tema.slugs.length - 1 ? porSlug(tema.slugs[pos + 1]) : undefined;
 
   return (
-    <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6 md:py-14">
+    <article>
+      <div className="topo-escuro">
+      <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 md:py-14">
       <nav aria-label="Caminho" className="text-sm text-apagado">
         <Link href="/dados" className="inline-block py-2 hover:text-tinta hover:underline">
           Início
@@ -109,7 +111,17 @@ export default async function Pagina({ params }: Props) {
             </a>
           </>
         )}
-        {" · "}recolhido a {atualizado ?? "—"}
+        {i.origem === "portal" ? (
+          <>
+            {" · "}valores do portal de origem (ver{" "}
+            <Link href="/dados/fontes" className="underline underline-offset-2 hover:text-tinta">
+              Fontes
+            </Link>
+            )
+          </>
+        ) : (
+          <>{" · "}atualizado a {atualizado ?? "—"}</>
+        )}
       </p>
       {i.notaColunas && <p className="mt-1 text-sm text-apagado">{i.notaColunas}</p>}
 
@@ -130,7 +142,10 @@ export default async function Pagina({ params }: Props) {
           )}
         </div>
       )}
+      </div>
+      </div>
 
+      <div className="mx-auto max-w-4xl px-4 pb-10 sm:px-6 md:pb-14">
       {periodos.length >= 2 && (
         <section aria-label="Evolução" className="mt-10">
           <h2 className="mb-4 text-lg font-bold text-tinta">Evolução</h2>
@@ -245,6 +260,7 @@ export default async function Pagina({ params }: Props) {
           )}
         </nav>
       )}
+      </div>
     </article>
   );
 }

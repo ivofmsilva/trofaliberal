@@ -120,11 +120,13 @@ export function resumoFundos(lista: Projeto[]) {
   };
 }
 
-// Nome da empresa sem o NIF à frente ("500119309 - FRANCISCO…" → nome e NIF à parte).
+// Nome da empresa sem o NIF à frente ("500119309 - FRANCISCO…" → nome e NIF à parte). Nos agrupamentos de empresas
+// (vários adjudicatários no mesmo contrato, separados por ";") tiram-se todos os NIF e juntam-se os nomes com "e".
 export function separarEmpresa(texto: string): { nome: string; nif: string | null } {
-  const m = texto.match(/^\s*(\d{8,9})\s*-\s*(.*)$/);
-  if (m) return { nome: m[2].trim(), nif: m[1] };
-  return { nome: texto.replace(/^[-\s]+/, "").trim(), nif: null };
+  const partes = texto.split(";").map((p) => p.trim()).filter(Boolean);
+  const nif = partes[0]?.match(/^(\d{8,9})\s*-/)?.[1] ?? null;
+  const nome = partes.map((p) => p.replace(/^\d{8,9}\s*-\s*/, "").replace(/^[-\s]+/, "").trim()).filter(Boolean).join(" e ");
+  return { nome: nome || texto.trim(), nif };
 }
 
 // ---- Ajustes diretos ------------------------------------------------------------------------------
@@ -191,7 +193,7 @@ export function resumoAjustes() {
   for (const c of ads) {
     somar(porTipo, c.tipo_contrato, c.valor_contratual);
     somar(fund, (c.fund ?? "Sem fundamentação indicada").replace(/ do Código dos Contratos Públicos/, ""), c.valor_contratual);
-    somar(motivo, c.fundAD && c.fundAD.trim() ? c.fundAD.trim() : "Sem motivo indicado", c.valor_contratual);
+    somar(motivo, c.fundAD && c.fundAD.trim() ? c.fundAD.trim() : "Campo em branco no Portal BASE", c.valor_contratual);
     entidadesDiferentes.add(c.ps ? `pessoa:${c.pid}` : chaveEntidade(c.adjudicatario));
     if (c.ps) {
       pessoas.n++;

@@ -79,6 +79,22 @@ export function tituloProjeto(titulo: string): string {
   return /^[-–—\s]*$/.test(t) ? "Sem título no ficheiro de origem" : t;
 }
 
+// Nome curto de um projeto, para as listas. No Portugal 2020 o "título" é muitas vezes a descrição da candidatura,
+// escrita pelo próprio beneficiário ("constitui um projeto ambicioso…"); nas listas mostra-se só o nome da operação:
+// o que está entre aspas logo no início, ou o objeto de "A presente operação consiste na…". A descrição inteira
+// continua a ver-se ao abrir o projeto.
+export function nomeProjeto(titulo: string): string {
+  const t = tituloProjeto(titulo).replace(/\s+/g, " ");
+  if (t.length <= 140) return t;
+  const aspas = t.match(/^(?:A presente operação|A operação|Com a operação(?: d[oa])?|O|A)\s*["'‘’“”«]([^"'‘’“”«»]{8,140})["'‘’“”»]/);
+  if (aspas) return aspas[1].trim();
+  const objeto = t.match(/^A presente operação (?:consiste n[oa]s?|visa)\s+(?:a |o |as |os )?(.+)$/);
+  const base = objeto ? objeto[1].charAt(0).toUpperCase() + objeto[1].slice(1) : t;
+  const corte = base.search(/[,.;:](\s|$)/);
+  const frase = corte > 20 ? base.slice(0, corte) + (base[corte] === ":" ? "…" : "") : base;
+  return frase.length <= 140 ? frase : frase.slice(0, frase.lastIndexOf(" ", 130)) + "…";
+}
+
 // Unidade para ler por baixo do número: "%" sozinho não se repete (já está no número), mas "% dos votos" lê-se inteiro;
 // "€" → "euros", "€/m²" → "euros por m²", "€ por habitante" → "euros por habitante".
 export function legenda(unidade: string): string {

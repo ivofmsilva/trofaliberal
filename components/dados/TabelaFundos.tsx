@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Cab from "./Cab";
-import { numero, tituloProjeto } from "@/lib/dados/formatar";
+import { nomeProjeto, numero, tituloProjeto } from "@/lib/dados/formatar";
 import type { Projeto } from "@/lib/dados/transparencia";
 
 type Campo = "valor" | "titulo" | "programa";
@@ -145,13 +145,16 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
                     {p.programa}
                     <span className="block text-xs">{p.estado}</span>
                   </span>
-                  <span className="text-sm font-medium text-tinta">{curto(tituloProjeto(p.titulo))}</span>
+                  <span className="text-sm font-medium text-tinta">{curto(nomeProjeto(p.titulo))}</span>
                   {mostrarBeneficiario && <span className="text-sm text-texto">{curto(p.beneficiario, 70)}</span>}
                   <span className="text-sm font-semibold tabular-nums text-tinta md:text-right">{eur(p.valor_aprovado_municipio)}</span>
                 </button>
                 {open && (
                   <div className="space-y-4 bg-suave px-4 py-4 text-sm">
-                    <p className="whitespace-pre-line text-texto">{tituloProjeto(p.titulo)}</p>
+                    <p className="whitespace-pre-line text-texto">
+                      {p.titulo.length > 140 && <span className="block text-xs text-apagado">Descrição na candidatura:</span>}
+                      {tituloProjeto(p.titulo)}
+                    </p>
                     <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
                       <div className="sm:col-span-2">
                         <dt className="text-apagado">{p.n_beneficiarios > 1 ? `Beneficiários (${p.n_beneficiarios})` : "Beneficiário"}</dt>

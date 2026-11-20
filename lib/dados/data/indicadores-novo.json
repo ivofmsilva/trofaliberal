@@ -1,13 +1,13 @@
 {
- "juntado": "2026-11-19T17:18:23.518Z",
- "atualizado": "19/11/2026",
+ "juntado": "2026-11-20T18:00:06.726Z",
+ "atualizado": "20/11/2026",
  "indicadores": [
   {
    "slug": "populacao_residente",
    "titulo": "População residente",
    "categoria": "demografia",
    "unidade": "habitantes",
-   "texto": "População residente a 31 de dezembro de cada ano (estimativas do INE). Os valores de 2021 em diante são os das estimativas que o INE reviu em 2026 (para 2024, por exemplo, passou de 40 294 para 41 315 habitantes); os de 2011 a 2020 vêm da série anterior. A passagem de 2020 para 2021 junta por isso duas séries e deve ler-se com cautela.",
+   "texto": "População residente a 31 de dezembro de cada ano (estimativas do INE). De 2021 em diante é a série revista pelo INE; até 2020, a anterior.",
    "palavras": "habitantes pessoas",
    "colunas": [
     "Trofa",
@@ -494,7 +494,7 @@
    "titulo": "Número de empresas",
    "categoria": "economia",
    "unidade": "empresas",
-   "texto": "Empresas com sede no concelho. Contam-se tanto as sociedades como as empresas individuais (empresários em nome individual e trabalhadores independentes), por isso o número é muito maior do que o das empresas com trabalhadores ao serviço. Uma empresa com sede noutro concelho não entra, mesmo que tenha cá instalações.",
+   "texto": "Empresas com sede no concelho. Contam-se tanto as sociedades como as empresas individuais (empresários em nome individual e trabalhadores independentes), por isso o número é maior do que o das empresas com trabalhadores ao serviço. Uma empresa com sede noutro concelho não entra, mesmo que tenha cá instalações.",
    "palavras": "negócios",
    "colunas": [
     "Trofa",
@@ -1051,7 +1051,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: pessoal ao serviço nas empresas (INE/SCIE) ÷ população empregada residente (INE/Censos)",
+   "fonte": "cálculo nosso: pessoal ao serviço nas empresas (INE/SCIE) ÷ população empregada residente (INE/Censos)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "pessoal_ao_servico",
@@ -1510,7 +1510,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE, com dados de: Entidade Reguladora dos Serviços e Águas e Resíduos",
+   "fonte": "INE, com dados de: Entidade Reguladora dos Serviços de Águas e Resíduos (ERSAR)",
    "ine": "0014041",
    "ineAntigo": "0008663",
    "metodoGrupo": "ponderada",
@@ -1907,7 +1907,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 9922319000,
        "var": null
       }
      ],
@@ -1938,8 +1938,8 @@
        "var": 2.8
       },
       {
-       "v": null,
-       "var": null
+       "v": 10869788000,
+       "var": 9.5
       }
      ],
      "concelhos": {
@@ -1969,8 +1969,8 @@
        "var": 11.9
       },
       {
-       "v": null,
-       "var": null
+       "v": 11767165000,
+       "var": 8.3
       }
      ],
      "concelhos": {
@@ -1982,6 +1982,68 @@
       "Santo Tirso": 57276000,
       "Maia": 106106000,
       "Vila do Conde": 72722000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 38055000,
+       "var": -5
+      },
+      {
+       "v": 1717410000,
+       "var": 12.2
+      },
+      {
+       "v": 674742000,
+       "var": 14.6
+      },
+      {
+       "v": 13125521000,
+       "var": 11.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 53432000,
+      "Guimarães": 136666000,
+      "Vila Nova de Famalicão": 149029000,
+      "Vizela": 22737000,
+      "Trofa": 38055000,
+      "Santo Tirso": 61446000,
+      "Maia": 134301000,
+      "Vila do Conde": 79076000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 48935000,
+       "var": 28.6
+      },
+      {
+       "v": 2038393000,
+       "var": 18.7
+      },
+      {
+       "v": 774652000,
+       "var": 14.8
+      },
+      {
+       "v": 14973959000,
+       "var": 14.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 58963000,
+      "Guimarães": 161335000,
+      "Vila Nova de Famalicão": 161838000,
+      "Vizela": 27936000,
+      "Trofa": 48935000,
+      "Santo Tirso": 69849000,
+      "Maia": 145085000,
+      "Vila do Conde": 100711000
      }
     }
    ]
@@ -2537,7 +2599,7 @@
    "titulo": "Despesa da Câmara em ambiente",
    "categoria": "ambiente",
    "unidade": "€",
-   "texto": "O que a Câmara gastou no ano em proteção do ambiente: gestão de resíduos, águas residuais, biodiversidade e paisagem, qualidade do ar, ruído e outros domínios. Junta despesas correntes e investimento, por isso um ano com obras grandes destaca-se dos restantes.",
+   "texto": "O que a Câmara gastou no ano em proteção do ambiente: gestão de resíduos, águas residuais, biodiversidade e paisagem, qualidade do ar, ruído e outros domínios. Junta despesas correntes e investimento.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -3573,7 +3635,7 @@
    "titulo": "Despesa da Câmara em ambiente por habitante",
    "categoria": "ambiente",
    "unidade": "€ por habitante",
-   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento, por isso varia com as obras de cada ano.",
+   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -6259,7 +6321,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: iluminação pública (DGEG) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: iluminação pública (DGEG) ÷ população média residente (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -6530,7 +6592,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: consumo na indústria ÷ consumo total (DGEG)",
+   "fonte": "cálculo nosso: consumo na indústria ÷ consumo total (DGEG)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -6793,7 +6855,7 @@
    "titulo": "Emissões de gases com efeito de estufa",
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para os gases que aquecem o clima (dióxido de carbono, metano e outros) emitidos no território do concelho, somados em equivalente de CO₂. Uma quilotonelada (kt) são mil toneladas. É uma repartição das emissões nacionais pelos concelhos feita por cálculo, não uma medição no local. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são quilotoneladas de CO₂ equivalente.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para os gases que aquecem o clima (dióxido de carbono, metano e outros) emitidos no território do concelho, somados em equivalente de CO₂. Uma quilotonelada (kt) são mil toneladas. É uma repartição das emissões nacionais pelos concelhos feita por cálculo, não uma medição no local.",
    "palavras": "poluição clima",
    "colunas": [
     "Trofa",
@@ -6904,7 +6966,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: emissões de GEE (APA) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: emissões de GEE (APA) ÷ população média residente (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -6999,7 +7061,7 @@
    "titulo": "Emissões de GEE do transporte rodoviário",
    "categoria": "ambiente",
    "unidade": "kt CO₂ equivalente",
-   "texto": "A parte das emissões estimadas de gases com efeito de estufa (GEE) que vem dos veículos que circulam nas estradas do concelho. Inclui o trânsito de passagem, por exemplo em autoestradas e estradas nacionais, e não só os carros de quem cá vive. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são quilotoneladas de CO₂ equivalente.",
+   "texto": "A parte das emissões estimadas de gases com efeito de estufa (GEE) que vem dos veículos que circulam nas estradas do concelho. Inclui o trânsito de passagem, por exemplo em autoestradas e estradas nacionais, e não só os carros de quem cá vive.",
    "palavras": "carros trânsito poluição",
    "colunas": [
     "Trofa",
@@ -7102,7 +7164,7 @@
    "titulo": "Emissões de óxidos de azoto (NOx)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para os óxidos de azoto emitidos no território do concelho. São gases poluentes do ar que vêm sobretudo da queima de combustíveis, em veículos e na indústria. É uma repartição das emissões nacionais feita por cálculo, não uma medição da qualidade do ar. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para os óxidos de azoto emitidos no território do concelho. São gases poluentes do ar que vêm sobretudo da queima de combustíveis, em veículos e na indústria. É uma repartição das emissões nacionais feita por cálculo, não uma medição da qualidade do ar.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -7205,7 +7267,7 @@
    "titulo": "Emissões de partículas (PM10)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 10 micrómetros emitidas no território do concelho, por exemplo por lareiras, indústria, trânsito e incêndios. Mede o que é emitido, não a concentração no ar que se respira. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 10 micrómetros emitidas no território do concelho, por exemplo por lareiras, indústria, trânsito e incêndios. Mede o que é emitido, não a concentração no ar que se respira.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -7308,7 +7370,7 @@
    "titulo": "Emissões de partículas finas (PM2,5)",
    "categoria": "ambiente",
    "unidade": "toneladas",
-   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 2,5 micrómetros emitidas no território do concelho. São uma parte das PM10, as mais pequenas. Mede o que é emitido, não a concentração no ar que se respira. A fonte não indica a unidade; pela ordem de grandeza dos valores nacionais, são toneladas.",
+   "texto": "Estimativa da Agência Portuguesa do Ambiente para as partículas com menos de 2,5 micrómetros emitidas no território do concelho. São uma parte das PM10, as mais pequenas. Mede o que é emitido, não a concentração no ar que se respira.",
    "palavras": "poluição ar",
    "colunas": [
     "Trofa",
@@ -7561,7 +7623,7 @@
    "titulo": "Incêndios rurais",
    "categoria": "ambiente",
    "unidade": "incêndios",
-   "texto": "Número de incêndios em espaços rurais (floresta, matos e terrenos agrícolas) registados no ano pelo Instituto da Conservação da Natureza e das Florestas. Conta ocorrências, grandes ou pequenas, e não a área ardida. Varia muito de ano para ano com o tempo que faz.",
+   "texto": "Número de incêndios em espaços rurais (floresta, matos e terrenos agrícolas) registados no ano pelo Instituto da Conservação da Natureza e das Florestas. Conta ocorrências, grandes ou pequenas, e não a área ardida.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -8751,7 +8813,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: recolha seletiva ÷ resíduos urbanos recolhidos (INE)",
+   "fonte": "cálculo nosso: recolha seletiva ÷ resíduos urbanos recolhidos (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -9004,7 +9066,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: capitação de resíduos urbanos (INE) × população média residente (INE)",
+   "fonte": "cálculo nosso: capitação de resíduos urbanos (INE) × população média residente (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -9276,7 +9338,7 @@
    "titulo": "Despesa da Câmara em cultura",
    "categoria": "cultura",
    "unidade": "€",
-   "texto": "O que a Câmara gastou no ano em atividades culturais e criativas: espetáculos, património, bibliotecas, museus, artes visuais e outros domínios. Junta despesas correntes e investimento, por isso um ano com uma obra grande destaca-se dos restantes.",
+   "texto": "O que a Câmara gastou no ano em atividades culturais e criativas: espetáculos, património, bibliotecas, museus, artes visuais e outros domínios. Junta despesas correntes e investimento.",
    "palavras": "cultura espetáculos",
    "colunas": [
     "Trofa",
@@ -9807,7 +9869,7 @@
    "titulo": "Despesa em cultura: audiovisual e multimédia",
    "categoria": "cultura",
    "unidade": "€",
-   "texto": "A parte da despesa da Câmara em cultura que foi para o audiovisual e multimédia, como cinema, vídeo, rádio e televisão. Há anos sem despesa registada neste domínio, em que o valor é zero.",
+   "texto": "A parte da despesa da Câmara em cultura que foi para o audiovisual e multimédia, como cinema, vídeo, rádio e televisão. Zero quer dizer que não foi registada despesa neste domínio.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -9984,7 +10046,7 @@
    "titulo": "Despesa em cultura: património",
    "categoria": "cultura",
    "unidade": "€",
-   "texto": "A parte da despesa da Câmara em cultura que foi para o património cultural: museus, monumentos, sítios arqueológicos e a sua conservação. Junta despesas correntes e investimento, e as obras de recuperação fazem o valor variar muito entre anos.",
+   "texto": "A parte da despesa da Câmara em cultura que foi para o património cultural: museus, monumentos, sítios arqueológicos e a sua conservação. Junta despesas correntes e investimento.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -10161,7 +10223,7 @@
    "titulo": "Despesa da Câmara em cultura por habitante",
    "categoria": "cultura",
    "unidade": "€ por habitante",
-   "texto": "Despesa da Câmara em atividades culturais e criativas a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento, por isso varia com as obras de cada ano.",
+   "texto": "Despesa da Câmara em atividades culturais e criativas a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -10169,7 +10231,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: despesas das câmaras municipais em cultura, total (INE) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: despesas das câmaras municipais em cultura, total (INE) ÷ população média residente (INE)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "despesas_cultura",
@@ -10595,7 +10657,7 @@
    "titulo": "Abstenção nas eleições autárquicas (Câmara)",
    "categoria": "democracia",
    "unidade": "% dos eleitores inscritos",
-   "texto": "Em cada 100 eleitores inscritos, quantos não foram votar na eleição para a Câmara Municipal. Os cadernos eleitorais incluem pessoas que já não vivem no concelho, como emigrantes que mantêm cá a morada, o que faz subir o valor. Só há valores nos anos de eleições autárquicas.",
+   "texto": "Em cada 100 eleitores inscritos, quantos não foram votar na eleição para a Câmara Municipal. Só há valores nos anos de eleições autárquicas.",
    "palavras": "eleições votar autárquicas",
    "colunas": [
     "Trofa",
@@ -11815,7 +11877,7 @@
    "titulo": "Idade mediana da população",
    "categoria": "demografia",
    "unidade": "anos",
-   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população. Nos 8 concelhos próximos, o valor é a média simples das idades medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "A idade que divide a população em duas metades iguais: metade dos residentes é mais nova e a outra metade é mais velha. Quanto mais alta, mais envelhecida é a população.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -15491,7 +15553,7 @@
    "titulo": "Relação de masculinidade",
    "categoria": "demografia",
    "unidade": "homens por 100 mulheres",
-   "texto": "Número de homens residentes por cada 100 mulheres residentes. Abaixo de 100 há mais mulheres do que homens. As mulheres vivem em média mais anos, por isso o valor tende a baixar onde a população é mais envelhecida.",
+   "texto": "Número de homens residentes por cada 100 mulheres residentes. Abaixo de 100 há mais mulheres do que homens.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -19249,7 +19311,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "INE - Recenseamento da população e habitação - Censos 2021",
+   "fonte": "INE - Recenseamento da população e habitação - Censos 2011 e 2021",
    "ine": "0011698",
    "ineAntigo": null,
    "metodoGrupo": "soma",
@@ -19571,7 +19633,7 @@
    "titulo": "Rendimento líquido mediano (por agregado fiscal)",
    "categoria": "economia",
    "unidade": "€ por agregado fiscal",
-   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho, não a mediana do conjunto.",
+   "texto": "Rendimento anual declarado no IRS depois de descontado o imposto, por agregado fiscal (quem entrega a declaração em conjunto). Metade dos agregados fica abaixo deste valor e metade acima.",
    "palavras": "salário ordenado ganhar",
    "colunas": [
     "Trofa",
@@ -20627,7 +20689,7 @@
    "titulo": "Valor mediano de venda de habitação",
    "categoria": "economia",
    "unidade": "€/m²",
-   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho.",
+   "texto": "Preço por metro quadrado das casas vendidas no concelho: metade foi vendida abaixo deste valor e metade acima. Baseia-se nas vendas declaradas às Finanças e depende do tipo de casas vendidas em cada período.",
    "palavras": "casa comprar preço apartamento",
    "colunas": [
     "Trofa",
@@ -22875,7 +22937,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: alunos matriculados no ensino privado ÷ alunos matriculados (INE/DGEEC)",
+   "fonte": "cálculo nosso: alunos matriculados no ensino privado ÷ alunos matriculados (INE/DGEEC)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "alunos_ensino_privado",
@@ -23957,7 +24019,7 @@
    "titulo": "Alunos do ensino secundário",
    "categoria": "educacao",
    "unidade": "alunos",
-   "texto": "Alunos matriculados do 10.º ao 12.º ano nas escolas do concelho, incluindo os cursos profissionais, em cada ano letivo. Conta-se pelo local da escola e não pela morada, e no secundário é frequente estudar num concelho vizinho.",
+   "texto": "Alunos matriculados do 10.º ao 12.º ano nas escolas do concelho, incluindo os cursos profissionais, em cada ano letivo. Conta-se pelo local da escola e não pela morada.",
    "palavras": "escolas liceu",
    "colunas": [
     "Trofa",
@@ -24702,13 +24764,13 @@
     "Ave e concelhos vizinhos",
     "Continente"
    ],
-   "fonte": "Calculado: desemprego registado há um ano ou mais ÷ desemprego registado, em dezembro (IEFP)",
+   "fonte": "cálculo nosso: desemprego registado há um ano ou mais ÷ desemprego registado, em dezembro (IEFP)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "desemprego_registado_longa_duracao",
     "desemprego_registado"
    ],
-   "notaColunas": "Neste indicador a coluna Portugal é só o Continente (o IEFP não inclui os Açores e a Madeira).",
+   "notaColunas": "O IEFP só publica o Continente (sem os Açores e a Madeira).",
    "origem": "calculado",
    "linhas": [
     {
@@ -25131,7 +25193,7 @@
    ],
    "fonte": "IEFP, Estatísticas mensais por concelhos (dezembro)",
    "metodoGrupo": "soma",
-   "notaColunas": "Neste indicador a coluna Portugal é só o Continente (o IEFP não inclui os Açores e a Madeira).",
+   "notaColunas": "O IEFP só publica o Continente (sem os Açores e a Madeira).",
    "origem": "iefp",
    "linhas": [
     {
@@ -25544,7 +25606,7 @@
    "titulo": "Desemprego registado jovem (menos de 25 anos)",
    "categoria": "emprego",
    "unidade": "desempregados inscritos",
-   "texto": "Pessoas com menos de 25 anos residentes no concelho e inscritas como desempregadas nos centros de emprego do IEFP no fim de dezembro de cada ano. Só conta quem está inscrito, e muitos jovens à procura do primeiro emprego não se inscrevem.",
+   "texto": "Pessoas com menos de 25 anos residentes no concelho e inscritas como desempregadas nos centros de emprego do IEFP no fim de dezembro de cada ano. Só conta quem está inscrito.",
    "palavras": "trabalho emprego jovens",
    "colunas": [
     "Trofa",
@@ -25554,7 +25616,7 @@
    ],
    "fonte": "IEFP, Estatísticas mensais por concelhos (dezembro)",
    "metodoGrupo": "soma",
-   "notaColunas": "Neste indicador a coluna Portugal é só o Continente (o IEFP não inclui os Açores e a Madeira).",
+   "notaColunas": "O IEFP só publica o Continente (sem os Açores e a Madeira).",
    "origem": "iefp",
    "linhas": [
     {
@@ -25977,7 +26039,7 @@
    ],
    "fonte": "IEFP, Estatísticas mensais por concelhos (dezembro)",
    "metodoGrupo": "soma",
-   "notaColunas": "Neste indicador a coluna Portugal é só o Continente (o IEFP não inclui os Açores e a Madeira).",
+   "notaColunas": "O IEFP só publica o Continente (sem os Açores e a Madeira).",
    "origem": "iefp",
    "linhas": [
     {
@@ -26398,7 +26460,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: desemprego registado em dezembro (IEFP) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: desemprego registado em dezembro (IEFP) ÷ população média residente (INE)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "desemprego_registado",
@@ -26816,7 +26878,7 @@
    "titulo": "Dívida em % do limite legal",
    "categoria": "financas",
    "unidade": "% do limite legal",
-   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita. Na página das Finanças este valor chama-se dívida efetiva. A dívida total das contas da Câmara é mais alta, porque inclui o que a lei não conta para o limite.",
+   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita. Corresponde ao que a página das Finanças chama dívida efetiva (com pequenas diferenças entre a DGAL e o relatório de contas).",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -26824,7 +26886,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: dívida total ÷ limite da dívida total (DGAL)",
+   "fonte": "cálculo nosso: dívida total ÷ limite da dívida total (DGAL)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -27087,7 +27149,7 @@
    "titulo": "Dívida da Câmara por habitante (a que conta para o limite legal)",
    "categoria": "financas",
    "unidade": "€ por habitante",
-   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes. Na página das Finanças este valor chama-se dívida efetiva. A dívida total das contas da Câmara é mais alta, porque inclui o que a lei não conta para o limite. Para Portugal só há valor até 2022.",
+   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes. Corresponde ao que a página das Finanças chama dívida efetiva (com pequenas diferenças entre a DGAL e o relatório de contas).",
    "palavras": "dívida câmara",
    "colunas": [
     "Trofa",
@@ -27095,7 +27157,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: dívida total (DGAL) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: dívida total (DGAL) ÷ população média residente (INE)",
    "metodoGrupo": "portal",
    "origem": "portal",
    "linhas": [
@@ -28076,7 +28138,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 297458000,
        "var": null
       }
      ],
@@ -28107,8 +28169,8 @@
        "var": 24.4
       },
       {
-       "v": null,
-       "var": null
+       "v": 375327000,
+       "var": 26.2
       }
      ],
      "concelhos": {
@@ -28138,8 +28200,8 @@
        "var": 20.5
       },
       {
-       "v": null,
-       "var": null
+       "v": 420545000,
+       "var": 12
       }
      ],
      "concelhos": {
@@ -28151,6 +28213,68 @@
       "Santo Tirso": 3694000,
       "Maia": 12591000,
       "Vila do Conde": 3435000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 2495000,
+       "var": 0.2
+      },
+      {
+       "v": 93107000,
+       "var": 12.1
+      },
+      {
+       "v": 35975000,
+       "var": -3.1
+      },
+      {
+       "v": 481326000,
+       "var": 14.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 893000,
+      "Guimarães": 6285000,
+      "Vila Nova de Famalicão": 7589000,
+      "Vizela": 296000,
+      "Trofa": 2495000,
+      "Santo Tirso": 2403000,
+      "Maia": 12143000,
+      "Vila do Conde": 3871000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 2363000,
+       "var": -5.3
+      },
+      {
+       "v": 91519000,
+       "var": -1.7
+      },
+      {
+       "v": 35326000,
+       "var": -1.8
+      },
+      {
+       "v": 495639000,
+       "var": 3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 928000,
+      "Guimarães": 5763000,
+      "Vila Nova de Famalicão": 7976000,
+      "Vizela": 266000,
+      "Trofa": 2363000,
+      "Santo Tirso": 2512000,
+      "Maia": 11584000,
+      "Vila do Conde": 3934000
      }
     }
    ]
@@ -28191,7 +28315,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 1480292000,
        "var": null
       }
      ],
@@ -28222,8 +28346,8 @@
        "var": 0.6
       },
       {
-       "v": null,
-       "var": null
+       "v": 1488693000,
+       "var": 0.6
       }
      ],
      "concelhos": {
@@ -28253,8 +28377,8 @@
        "var": 0.1
       },
       {
-       "v": null,
-       "var": null
+       "v": 1504365000,
+       "var": 1.1
       }
      ],
      "concelhos": {
@@ -28266,6 +28390,68 @@
       "Santo Tirso": 8002000,
       "Maia": 20953000,
       "Vila do Conde": 10795000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 5829000,
+       "var": -5.6
+      },
+      {
+       "v": 235794000,
+       "var": -0.6
+      },
+      {
+       "v": 86143000,
+       "var": -2
+      },
+      {
+       "v": 1500417000,
+       "var": -0.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4481000,
+      "Guimarães": 18631000,
+      "Vila Nova de Famalicão": 15898000,
+      "Vizela": 2501000,
+      "Trofa": 5829000,
+      "Santo Tirso": 6505000,
+      "Maia": 21402000,
+      "Vila do Conde": 10896000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 5845000,
+       "var": 0.3
+      },
+      {
+       "v": 251167000,
+       "var": 6.5
+      },
+      {
+       "v": 91504000,
+       "var": 6.2
+      },
+      {
+       "v": 1589419000,
+       "var": 5.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4995000,
+      "Guimarães": 19955000,
+      "Vila Nova de Famalicão": 16892000,
+      "Vizela": 2568000,
+      "Trofa": 5845000,
+      "Santo Tirso": 6857000,
+      "Maia": 22584000,
+      "Vila do Conde": 11808000
      }
     }
    ]
@@ -28306,7 +28492,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 1345079000,
        "var": null
       }
      ],
@@ -28337,8 +28523,8 @@
        "var": 23.7
       },
       {
-       "v": null,
-       "var": null
+       "v": 1696720000,
+       "var": 26.1
       }
      ],
      "concelhos": {
@@ -28368,8 +28554,8 @@
        "var": 6.2
       },
       {
-       "v": null,
-       "var": null
+       "v": 1714537000,
+       "var": 1.1
       }
      ],
      "concelhos": {
@@ -28381,6 +28567,68 @@
       "Santo Tirso": 4422000,
       "Maia": 15705000,
       "Vila do Conde": 10850000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 3200000,
+       "var": -23.4
+      },
+      {
+       "v": 255519000,
+       "var": 10.9
+      },
+      {
+       "v": 71899000,
+       "var": 19.3
+      },
+      {
+       "v": 1728598000,
+       "var": 0.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 2099000,
+      "Guimarães": 13779000,
+      "Vila Nova de Famalicão": 15477000,
+      "Vizela": 1204000,
+      "Trofa": 3200000,
+      "Santo Tirso": 5158000,
+      "Maia": 18890000,
+      "Vila do Conde": 12092000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 5457000,
+       "var": 70.5
+      },
+      {
+       "v": 365708000,
+       "var": 43.1
+      },
+      {
+       "v": 96455000,
+       "var": 34.2
+      },
+      {
+       "v": 2305149000,
+       "var": 33.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3724000,
+      "Guimarães": 16044000,
+      "Vila Nova de Famalicão": 18076000,
+      "Vizela": 2667000,
+      "Trofa": 5457000,
+      "Santo Tirso": 6946000,
+      "Maia": 27947000,
+      "Vila do Conde": 15594000
      }
     }
    ]
@@ -28421,7 +28669,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 291048000,
        "var": null
       }
      ],
@@ -28452,8 +28700,8 @@
        "var": 9.6
       },
       {
-       "v": null,
-       "var": null
+       "v": 311070000,
+       "var": 6.9
       }
      ],
      "concelhos": {
@@ -28483,8 +28731,8 @@
        "var": 7.6
       },
       {
-       "v": null,
-       "var": null
+       "v": 334310000,
+       "var": 7.5
       }
      ],
      "concelhos": {
@@ -28496,6 +28744,68 @@
       "Santo Tirso": 2065000,
       "Maia": 4196000,
       "Vila do Conde": 2397000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 1359000,
+       "var": 2.3
+      },
+      {
+       "v": 55294000,
+       "var": 2.6
+      },
+      {
+       "v": 21666000,
+       "var": 1.8
+      },
+      {
+       "v": 341295000,
+       "var": 2.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1603000,
+      "Guimarães": 4767000,
+      "Vila Nova de Famalicão": 4483000,
+      "Vizela": 666000,
+      "Trofa": 1359000,
+      "Santo Tirso": 2102000,
+      "Maia": 4238000,
+      "Vila do Conde": 2448000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 1416000,
+       "var": 4.2
+      },
+      {
+       "v": 57877000,
+       "var": 4.7
+      },
+      {
+       "v": 22783000,
+       "var": 5.2
+      },
+      {
+       "v": 356774000,
+       "var": 4.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1703000,
+      "Guimarães": 5022000,
+      "Vila Nova de Famalicão": 4748000,
+      "Vizela": 709000,
+      "Trofa": 1416000,
+      "Santo Tirso": 2216000,
+      "Maia": 4408000,
+      "Vila do Conde": 2561000
      }
     }
    ]
@@ -28536,7 +28846,7 @@
        "var": null
       },
       {
-       "v": null,
+       "v": 489952000,
        "var": null
       }
      ],
@@ -28567,8 +28877,8 @@
        "var": 2.1
       },
       {
-       "v": null,
-       "var": null
+       "v": 497455000,
+       "var": 1.5
       }
      ],
      "concelhos": {
@@ -28598,8 +28908,8 @@
        "var": 13
       },
       {
-       "v": null,
-       "var": null
+       "v": 523875000,
+       "var": 5.3
       }
      ],
      "concelhos": {
@@ -28611,6 +28921,68 @@
       "Santo Tirso": 2817000,
       "Maia": 10462000,
       "Vila do Conde": 4508000
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 1890000,
+       "var": 13.4
+      },
+      {
+       "v": 114653000,
+       "var": 6.2
+      },
+      {
+       "v": 37585000,
+       "var": 12.3
+      },
+      {
+       "v": 561304000,
+       "var": 7.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1041000,
+      "Guimarães": 7756000,
+      "Vila Nova de Famalicão": 6225000,
+      "Vizela": 660000,
+      "Trofa": 1890000,
+      "Santo Tirso": 3209000,
+      "Maia": 11699000,
+      "Vila do Conde": 5105000
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 2038000,
+       "var": 7.8
+      },
+      {
+       "v": 115918000,
+       "var": 1.1
+      },
+      {
+       "v": 39219000,
+       "var": 4.3
+      },
+      {
+       "v": 560627000,
+       "var": -0.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1116000,
+      "Guimarães": 8118000,
+      "Vila Nova de Famalicão": 6753000,
+      "Vizela": 682000,
+      "Trofa": 2038000,
+      "Santo Tirso": 2721000,
+      "Maia": 12312000,
+      "Vila do Conde": 5479000
      }
     }
    ]
@@ -29895,7 +30267,7 @@
    "titulo": "Novos contratos de arrendamento",
    "categoria": "habitacao",
    "unidade": "contratos",
-   "texto": "Contratos de arrendamento de casas celebrados no ano e comunicados às Finanças. Não conta os contratos antigos que continuam em vigor nem os arrendamentos não declarados. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo.",
+   "texto": "Contratos de arrendamento de casas celebrados no ano e comunicados às Finanças. Não conta os contratos antigos que continuam em vigor nem os arrendamentos não declarados. Série da \"Metodologia 2026\" do INE; não se compara com a anterior.",
    "palavras": "casa arrendar aluguer renda",
    "colunas": [
     "Trofa",
@@ -30591,7 +30963,7 @@
    "titulo": "Renda mediana dos novos contratos de arrendamento",
    "categoria": "habitacao",
    "unidade": "€/m²",
-   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. O INE passou a publicar esta série com a \"Metodologia 2026\"; a série anterior (Metodologia 2021) acabou em 2024 e os valores não se comparam com os publicados antes com o método antigo. Nos 8 concelhos próximos, o valor é a média simples das medianas de cada concelho.",
+   "texto": "Renda mensal por metro quadrado nos contratos de arrendamento de casas celebrados no período: metade tem renda abaixo deste valor e metade acima. Não mede as rendas dos contratos antigos. Série da \"Metodologia 2026\" do INE; não se compara com a anterior.",
    "palavras": "casa arrendar aluguer renda",
    "colunas": [
     "Trofa",
@@ -30977,7 +31349,7 @@
    "titulo": "Banda larga fixa por 100 habitantes",
    "categoria": "outros",
    "unidade": "acessos por 100 habitantes",
-   "texto": "Ligações fixas à Internet em banda larga por cada 100 residentes. Como cada ligação serve uma casa ou uma empresa inteira, o valor fica sempre muito abaixo de 100 e não é a percentagem de pessoas com Internet.",
+   "texto": "Ligações fixas à Internet em banda larga por cada 100 residentes. Como cada ligação serve uma casa ou uma empresa inteira, o valor fica abaixo de 100 e não é a percentagem de pessoas com Internet.",
    "palavras": "internet fibra",
    "colunas": [
     "Trofa",
@@ -30985,7 +31357,7 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "Calculado: acessos à Internet em banda larga fixa (INE/ANACOM) ÷ população média residente (INE)",
+   "fonte": "cálculo nosso: acessos à Internet em banda larga fixa (INE/ANACOM) ÷ população média residente (INE)",
    "metodoGrupo": "razão das somas",
    "componentes": [
     "acessos_banda_larga",
@@ -31155,7 +31527,7 @@
    "titulo": "Veículos novos registados por 1000 habitantes",
    "categoria": "outros",
    "unidade": "veículos por 1000 habitantes",
-   "texto": "Veículos novos registados no ano em nome de proprietários com morada no concelho, por cada 1000 residentes. Entram os veículos de particulares e os de empresas, por isso um concelho com sedes de empresas com frotas tem valores mais altos.",
+   "texto": "Veículos novos registados no ano em nome de proprietários com morada no concelho, por cada 1000 residentes. Entram os veículos de particulares e os de empresas.",
    "palavras": "carros automóveis",
    "colunas": [
     "Trofa",
@@ -32146,7 +32518,7 @@
    "titulo": "Violência doméstica contra cônjuge ou análogos",
    "categoria": "seguranca",
    "unidade": "crimes",
-   "texto": "Crimes de violência doméstica contra cônjuge, ex-cônjuge, companheiro ou namorado (\"ou análogos\") participados às autoridades policiais no ano. É a parte maior da violência doméstica, mas não a inclui toda (ficam de fora os casos contra menores e outros tipos de violência doméstica). Só conta o que chega às polícias, por isso uma subida tanto pode vir de mais casos como de mais queixas.",
+   "texto": "Crimes de violência doméstica contra cônjuge, ex-cônjuge, companheiro ou namorado (\"ou análogos\") participados às autoridades policiais no ano. Não inclui toda a violência doméstica (ficam de fora os casos contra menores e outros tipos). Só conta o que chega às polícias, por isso uma subida tanto pode vir de mais casos como de mais queixas.",
    "palavras": "crime violência",
    "colunas": [
     "Trofa",
@@ -32943,7 +33315,7 @@
    "titulo": "Despesas em cultura e desporto no total das despesas da Câmara",
    "categoria": "economia",
    "unidade": "% da despesa total da Câmara",
-   "texto": "Em cada 100 euros gastos pela Câmara no ano, quantos foram para cultura e desporto. Junta despesas correntes e investimento, por isso um ano com uma obra grande destaca-se dos restantes.",
+   "texto": "Em cada 100 euros gastos pela Câmara no ano, quantos foram para cultura e desporto. Junta despesas correntes e investimento.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -33125,7 +33497,7 @@
    "titulo": "População com ensino superior",
    "categoria": "educacao",
    "unidade": "% dos residentes com 21 ou mais anos",
-   "texto": "Em cada 100 residentes com 21 ou mais anos, quantos têm um curso superior concluído (bacharelato, licenciatura, mestrado ou doutoramento). Conta-se pela morada: quem estudou na Trofa e foi viver para outro lado não entra. Só há valores nos anos dos Censos (2011 e 2021).",
+   "texto": "Em cada 100 residentes com 21 ou mais anos, quantos têm um curso superior concluído (bacharelato, licenciatura, mestrado ou doutoramento). Conta-se pela morada. Só há valores nos anos dos Censos (2011 e 2021).",
    "palavras": "universidade licenciatura curso",
    "colunas": [
     "Trofa",
@@ -33437,7 +33809,7 @@
    "titulo": "Retenção e desistência no ensino básico",
    "categoria": "educacao",
    "unidade": "% dos alunos matriculados",
-   "texto": "Em cada 100 alunos do ensino básico regular (1.º ao 9.º ano) das escolas do concelho, quantos ficaram no mesmo ano de escolaridade no ano letivo seguinte, por não terem aproveitamento ou por quererem melhorar a nota. Conta-se pelo local da escola.",
+   "texto": "Em cada 100 alunos do ensino básico regular (1.º ao 9.º ano) das escolas do concelho, quantos não passaram de ano, por retenção ou desistência. Conta-se pelo local da escola.",
    "palavras": "escolas chumbar reprovar",
    "colunas": [
     "Trofa",

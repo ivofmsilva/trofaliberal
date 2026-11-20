@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
 import SubNav from "@/components/dados/SubNav";
-import { compacto, dataCurta, numero, tituloProjeto } from "@/lib/dados/formatar";
+import { compacto, dataCurta, nomeProjeto, numero } from "@/lib/dados/formatar";
 import { fundosConcelho, fundosMunicipio, resumoFundos } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function Fundos() {
   return (
     <>
       <SubNav atual="fundos" />
-      <section className="border-b border-linha bg-gradient-to-b from-cinza to-suave">
+      <section className="topo-escuro">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Transparência</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fundos europeus</h1>
@@ -77,7 +77,7 @@ export default function Fundos() {
                   <p className="text-sm text-apagado">
                     {p.programa} · {p.estado}
                   </p>
-                  <p className="mt-0.5 text-tinta">{p.titulo.length > 180 ? tituloProjeto(p.titulo.slice(0, p.titulo.lastIndexOf(" ", 180))) + "…" : tituloProjeto(p.titulo)}</p>
+                  <p className="mt-0.5 text-tinta">{nomeProjeto(p.titulo)}</p>
                 </div>
                 <p className="font-semibold tabular-nums text-tinta sm:text-right">{compacto(p.valor_aprovado_municipio, "€")}</p>
               </li>
