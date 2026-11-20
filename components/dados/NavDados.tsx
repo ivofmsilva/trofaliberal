@@ -9,6 +9,7 @@ const ITENS = [
   { rotulo: "Indicadores", caminho: "", ancora: "#temas", exato: true },
   { rotulo: "Contratos e fundos", caminho: "/contratos", tambem: ["/fundos-europeus"] },
   { rotulo: "Finanças", caminho: "/financas" },
+  { rotulo: "Empresas municipais", caminho: "/empresas-municipais" },
   { rotulo: "Câmara Municipal", caminho: "/camara" },
   { rotulo: "Assembleia Municipal", caminho: "/assembleia" },
   { rotulo: "Fontes", caminho: "/fontes" },

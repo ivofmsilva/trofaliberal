@@ -73,6 +73,12 @@ export default function Fontes() {
       texto: "Atas da Câmara e documentos da Assembleia Municipal, relatórios de gestão e contas e orçamento, tal como o município os publica.",
       ligacoes: [{ nome: "mun-trofa.pt", url: "https://mun-trofa.pt/" }],
     },
+    {
+      nome: "TrofAmbiente",
+      texto:
+        "Contratos-programa com a Câmara, relatórios e contas, estatutos e restantes documentos da empresa municipal, tal como ela os publica. Os documentos são digitalizações: os valores dos contratos-programa foram lidos por reconhecimento de texto e conferidos à mão, e os das contas foram passados da imagem de cada página e conferidos pelas somas da própria demonstração de resultados.",
+      ligacoes: [{ nome: "trofambiente.pt", url: "https://www.trofambiente.pt/" }],
+    },
   ];
 
   return (
