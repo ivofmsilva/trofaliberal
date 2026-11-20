@@ -38,14 +38,17 @@ export default function VinteCincoNovembro() {
 
       <article className="mx-auto max-w-3xl px-4 py-14 text-lg leading-relaxed text-ink/85 sm:px-6">
         <p className="font-display text-2xl font-bold leading-snug text-navy md:text-3xl">
-          A 25 de novembro de 1975, Portugal escolheu a democracia liberal.
+          A 25 de novembro de 1975, Portugal garantiu a liberdade que tinha conquistado no 25 de Abril.
         </p>
         <div className="mt-6 space-y-5">
           <p>
-            O 25 de Abril abriu a porta à liberdade. Mas, nos meses seguintes, o país viveu tempos de grande
-            tensão: ocupações, nacionalizações e o risco de trocar uma ditadura por outra, e de
-            Portugal se tornar a “Cuba da Europa”. Muitos portugueses temeram perder a liberdade que tinham
-            acabado de conquistar.
+            O 25 de Abril de 1974 é a data maior da nossa democracia. Pôs fim a 48 anos de ditadura, devolveu a
+            liberdade aos portugueses e, um ano depois, deu-lhes as primeiras eleições livres.
+          </p>
+          <p>
+            Mas esses meses foram também de grande tensão: ocupações, nacionalizações e o risco de trocar uma
+            ditadura por outra, e de Portugal se tornar a “Cuba da Europa”. Muitos portugueses temeram perder a
+            liberdade que tinham acabado de conquistar.
           </p>
           <p>
             No 25 de Novembro, essa deriva foi travada. Ficou garantido que se respeitava a vontade que os
@@ -53,8 +56,8 @@ export default function VinteCincoNovembro() {
             eleições legislativas. Desde então, quem governa Portugal é escolhido pelo voto.
           </p>
           <p>
-            Não é por acaso que o V-Dem, o projeto internacional que mede a democracia em todo o mundo, só
-            considera Portugal uma democracia a partir de 1976, depois do 25 de Novembro.
+            O V-Dem, o projeto internacional que mede a democracia em todo o mundo, só considera Portugal uma
+            democracia a partir de 1976: foi depois do 25 de Novembro que se completou o caminho aberto em Abril.
           </p>
           <figure className="py-2">
             <Image
@@ -68,14 +71,14 @@ export default function VinteCincoNovembro() {
             <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal em Lisboa.</figcaption>
           </figure>
           <p className="font-display text-xl font-bold text-navy md:text-2xl">
-            O 25 de Abril e o 25 de Novembro não competem, completam-se. Abril deu-nos a liberdade; Novembro
-            garantiu que ela ficava. Democracia, liberdade e prosperidade: são estas as conquistas do 25 de
-            Novembro.
+            O 25 de Abril e o 25 de Novembro não competem, completam-se. Mas Abril é a data maior: foi nesse
+            dia que Portugal recuperou a liberdade. Novembro garantiu que ela ficava. Por isso dizemos que
+            Novembro cumpriu Abril.
           </p>
           <p>
-            Durante anos, as instituições quase apagaram esta data. A Iniciativa Liberal celebra, desde a sua
-            fundação, o 25 de Abril e o 25 de Novembro, sem complexos: são dois passos do mesmo caminho para um
-            país assente na liberdade e na democracia.
+            Durante anos, as instituições quase apagaram o 25 de Novembro. A Iniciativa Liberal celebra, desde a
+            sua fundação, as duas datas, sem complexos: Abril, que nos deu a liberdade, e Novembro, que a
+            garantiu. São dois passos do mesmo caminho para um país assente na liberdade e na democracia.
           </p>
           <p>
             Para os liberais, esta lição não envelhece: a liberdade não se dá por garantida. Defende-se todos os
@@ -84,7 +87,20 @@ export default function VinteCincoNovembro() {
             Cabe-nos agora trabalhar por uma democracia mais robusta e por um país onde o mérito é reconhecido e
             há oportunidades para todos.
           </p>
-          <p className="font-display text-2xl font-bold text-pink">Viva o 25 de Novembro. Viva a liberdade!</p>
+          <p className="font-display text-2xl font-bold text-pink">
+            Viva o 25 de Abril. Viva o 25 de Novembro. Viva a liberdade!
+          </p>
+          <figure className="pt-4">
+            <Image
+              src="/images/eventos/25-novembro-conquistas.webp"
+              alt="Cartaz da Iniciativa Liberal: As conquistas do 25 de Novembro. Democracia, liberdade, prosperidade, com um cravo vermelho, um azul e um branco. Novembro cumpriu Abril."
+              width={1600}
+              height={1200}
+              sizes="(min-width: 768px) 720px, 100vw"
+              className="w-full rounded-2xl shadow-lg"
+            />
+            <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal.</figcaption>
+          </figure>
         </div>
         <div className="mt-8">
           <PartilharBotao
