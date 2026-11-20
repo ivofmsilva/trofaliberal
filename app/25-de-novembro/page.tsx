@@ -42,8 +42,8 @@ export default function VinteCincoNovembro() {
         </p>
         <div className="mt-6 space-y-5">
           <p>
-            O 25 de Abril de 1974 é a data maior da nossa democracia. Pôs fim a 48 anos de ditadura, devolveu a
-            liberdade aos portugueses e, um ano depois, deu-lhes as primeiras eleições livres.
+            O 25 de Abril de 1974 pôs fim a 48 anos de ditadura e devolveu a liberdade aos portugueses. Um ano
+            depois, vieram as primeiras eleições livres.
           </p>
           <p>
             Mas esses meses foram também de grande tensão: ocupações, nacionalizações e o risco de trocar uma
@@ -71,14 +71,12 @@ export default function VinteCincoNovembro() {
             <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal em Lisboa.</figcaption>
           </figure>
           <p className="font-display text-xl font-bold text-navy md:text-2xl">
-            O 25 de Abril e o 25 de Novembro não competem, completam-se. Mas Abril é a data maior: foi nesse
-            dia que Portugal recuperou a liberdade. Novembro garantiu que ela ficava. Por isso dizemos que
-            Novembro cumpriu Abril.
+            Abril deu-nos a liberdade; Novembro garantiu que ela ficava. Por isso dizemos que Novembro cumpriu
+            Abril.
           </p>
           <p>
-            Durante anos, as instituições quase apagaram o 25 de Novembro. A Iniciativa Liberal celebra, desde a
-            sua fundação, as duas datas, sem complexos: Abril, que nos deu a liberdade, e Novembro, que a
-            garantiu. São dois passos do mesmo caminho para um país assente na liberdade e na democracia.
+            Durante anos, as instituições quase apagaram o 25 de Novembro. A Iniciativa Liberal celebra-o desde a
+            sua fundação, sem complexos, tal como celebra o 25 de Abril.
           </p>
           <p>
             Para os liberais, esta lição não envelhece: a liberdade não se dá por garantida. Defende-se todos os
