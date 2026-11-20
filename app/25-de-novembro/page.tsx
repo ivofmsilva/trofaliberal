@@ -53,7 +53,7 @@ export default function VinteCincoNovembro() {
           <p>
             No 25 de Novembro, essa deriva foi travada. Ficou garantido que se respeitava a vontade que os
             portugueses tinham mostrado nas urnas, e abriu-se caminho à Constituição de 1976 e às primeiras
-            eleições legislativas. A partir daí, quem governa Portugal passou a ser escolhido pelo voto.
+            eleições legislativas. A partir daí, quem governa Portugal é escolhido em eleições livres, com o voto de todos.
           </p>
           <p>
             O V-Dem, o projeto internacional que mede a democracia em todo o mundo, só considera Portugal uma
