@@ -10,6 +10,17 @@ const ultimo = <T,>(l: T[], ok: (x: T) => boolean) => [...l].reverse().find(ok);
 // a deliberação de 3/12/2020 diz 0,48% por engano (retificada a 19/01/2021) e a taxa comunicada foi 4,8%.
 const FINANCAS = "https://www.portaldasfinancas.gov.pt/pt/consultarTaxasIRSMunicipiosForm.action";
 const IRS_FINANCAS: Record<string, number> = { "2015-09-24": 5, "2016-09-30": 5, "2017-11-23": 5, "2020-12-03": 4.8 };
+// IMI de 2015 a 2017: o texto da deliberação não traz a taxa (está num anexo) e a consulta das Finanças por município exige
+// autenticação. Valores das listas de taxas de IMI publicadas pelo economiafinancas.com a partir das da Autoridade Tributária
+// (lidas a 21/11/2026; a de 2016 bate com o que se disse na sessão da Assembleia de 30/09/2016).
+const IMI_LISTAS: Record<string, { urbanos: number; rusticos: number; url: string }> = {
+  "2015-09-24": { urbanos: 0.5, rusticos: 0.8, url: "https://economiafinancas.com/2016/taxas-de-imi-por-municipio-para-o-ano-2015/" },
+  "2016-09-30": { urbanos: 0.45, rusticos: 0.8, url: "https://economiafinancas.com/2016/taxas-de-imi-por-municipio-a-pagar-em-2017/" },
+  "2017-11-23": { urbanos: 0.45, rusticos: 0.8, url: "https://economiafinancas.com/2018/taxas-imi-municipio-pagar-2018/" },
+};
+const imiUrbanos = (x: { sessao: string; urbanos: number | null }) => x.urbanos ?? IMI_LISTAS[x.sessao]?.urbanos ?? null;
+const imiRusticos = (x: { sessao: string; rusticos: number | null }) => x.rusticos ?? IMI_LISTAS[x.sessao]?.rusticos ?? null;
+
 const taxaIRS = (x: { sessao: string; percentagem: number | null }) =>
   IRS_FINANCAS[x.sessao] ?? (x.percentagem !== null && x.percentagem >= 1 ? x.percentagem : null);
 
@@ -23,7 +34,7 @@ export default function TaxasLocais() {
   //  - IRS: a taxa é a dos rendimentos de N+1 (consulta do Portal das Finanças);
   //  - derrama: incide sobre os lucros de N e paga-se em N+1 (Lei 73/2013: comunicada até 31 de dezembro do ano anterior ao da cobrança).
   const seguinte = (sessao: string) => String(Number(sessao.slice(0, 4)) + 1);
-  const imiComTaxa = imi.filter((x) => x.urbanos !== null);
+  const imiComTaxa = imi.filter((x) => imiUrbanos(x) !== null);
   const imiAnos = imiComTaxa.map((x) => String(x.paraAno));
   const ultimaSessao = [...imi, ...irs, ...derrama].map((x) => x.sessao).sort().pop()!;
   const irsComTaxa = irs.filter((x) => !x.retificacao && taxaIRS(x) !== null);
@@ -73,7 +84,7 @@ export default function TaxasLocais() {
             é 0,8% em todos os anos em que o valor consta.
           </p>
           <div className="max-w-3xl">
-            <Grafico periodos={imiAnos} series={[{ nome: "Prédios urbanos", valores: imiComTaxa.map((x) => x.urbanos) }]} unidade="%" semComparar casas={2} />
+            <Grafico periodos={imiAnos} series={[{ nome: "Prédios urbanos", valores: imiComTaxa.map((x) => imiUrbanos(x)) }]} unidade="%" semComparar casas={2} />
             <p className="mt-2 text-xs text-apagado">No eixo, o ano em que se paga o IMI com essa taxa (a decidida em {Number(imiAtual.paraAno) - 1} é a do IMI pago em {imiAtual.paraAno}).</p>
           </div>
           <Tabela
@@ -83,12 +94,22 @@ export default function TaxasLocais() {
                 {dataCurta(x.sessao)} ↗
               </a>,
               String(x.paraAno),
-              pc(x.urbanos),
-              pc(x.rusticos, 1),
+              IMI_LISTAS[x.sessao] && x.urbanos === null ? `${pc(imiUrbanos(x))} †` : pc(x.urbanos),
+              IMI_LISTAS[x.sessao] && x.rusticos === null ? `${pc(imiRusticos(x), 1)} †` : pc(x.rusticos, 1),
               textoVoto(x, x.sessao),
             ])}
           />
-          <p className="mt-2 text-sm text-apagado">Até 2018 o texto da deliberação não diz a taxa (está num anexo): só se mostra a votação.</p>
+          <p className="mt-2 max-w-3xl text-sm text-apagado">
+            † Até 2017 o texto da deliberação não diz a taxa (está num anexo). Valor das listas de taxas de IMI publicadas a partir
+            das da Autoridade Tributária ({Object.entries(IMI_LISTAS).map(([sessao, l], k) => (
+              <span key={sessao}>
+                {k > 0 ? ", " : ""}
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                  {Number(sessao.slice(0, 4)) + 1} ↗
+                </a>
+              </span>
+            ))}).
+          </p>
         </section>
 
         <section aria-label="IRS" id="taxa-irs" className="scroll-mt-24">
