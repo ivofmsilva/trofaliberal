@@ -8,6 +8,8 @@ export type Voto = {
   grupos: { favor: Sentidos; contra: Sentidos; abstencoes: Sentidos; brancos: Sentidos } | null;
 };
 export type TaxaIMI = Voto & { sessao: string; url: string; paraAno: number; urbanos: number | null; rusticos: number | null };
+// IMI familiar: redução do IMI (em euros) para 1, 2 e 3 ou mais dependentes; null quando o texto não diz o valor.
+export type IMIFamiliar = Voto & { sessao: string; url: string; paraAno: number; retificacao: boolean; um: number | null; dois: number | null; tres: number | null };
 export type TaxaIRS = Voto & { sessao: string; url: string; percentagem: number | null; retificacao: boolean };
 export type TaxaDerrama = {
   sessao: string;
@@ -18,8 +20,9 @@ export type TaxaDerrama = {
   votoReduzida: Voto | null;
 };
 
-const dados = bruto as unknown as { imi: TaxaIMI[]; irs: TaxaIRS[]; derrama: TaxaDerrama[] };
+const dados = bruto as unknown as { imi: TaxaIMI[]; imiFamiliar: IMIFamiliar[]; irs: TaxaIRS[]; derrama: TaxaDerrama[] };
 export const imi = dados.imi;
+export const imiFamiliar = dados.imiFamiliar ?? [];
 export const irs = dados.irs;
 export const derrama = dados.derrama;
 

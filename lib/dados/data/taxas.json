@@ -242,6 +242,121 @@
    }
   }
  ],
+ "imiFamiliar": [
+  {
+   "sessao": "2015-09-24",
+   "url": "https://mun-trofa.pt/upload_files/1/1/documentos/Assembleia/Deliberacoes/5Deliberacoes-5.PDF",
+   "paraAno": 2016,
+   "retificacao": false,
+   "um": null,
+   "dois": null,
+   "tres": null,
+   "tipo": "maioria",
+   "totais": {
+    "favor": 25,
+    "contra": 0,
+    "abstencoes": 1,
+    "brancos": 0
+   },
+   "grupos": {
+    "favor": {
+     "PSD": 12,
+     "CDS-PP": 2,
+     "IPM": 1,
+     "PS": 10
+    },
+    "contra": {},
+    "abstencoes": {
+     "PCP/PEV": 1
+    },
+    "brancos": {}
+   }
+  },
+  {
+   "sessao": "2020-12-03",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/DELIBERA%C3%87%C3%95ES%20DA%20ASSEMBLEIA%20MUNICIPAL_03_12_2020.pdf",
+   "paraAno": 2021,
+   "retificacao": false,
+   "um": 20,
+   "dois": 40,
+   "tres": 70,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2021-12-06",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/DELIBERA%C3%87%C3%95ES%20AM%20-%2006.12.2021.pdf",
+   "paraAno": 2022,
+   "retificacao": false,
+   "um": 20,
+   "dois": 40,
+   "tres": 70,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2022-12-07",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/DELIBERA%C3%87%C3%95ES%20A.%20M.%2007.12.2022.pdf",
+   "paraAno": 2023,
+   "retificacao": false,
+   "um": 20,
+   "dois": 40,
+   "tres": 70,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2023-12-15",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2023/DELIBERA%C3%87%C3%95ES%20A.M.%20-%2015.12.2023.pdf",
+   "paraAno": 2024,
+   "retificacao": false,
+   "um": 20,
+   "dois": 40,
+   "tres": 70,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2024-02-02",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2024/DELIBERA%C3%87%C3%95ES%20AM%2002.02.2024.pdf",
+   "paraAno": 2024,
+   "retificacao": true,
+   "um": null,
+   "dois": null,
+   "tres": null,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2024-11-28",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2024/DELIBERA%C3%87%C3%95ES%20AM%2028.11.2024.pdf",
+   "paraAno": 2025,
+   "retificacao": false,
+   "um": 30,
+   "dois": 70,
+   "tres": 140,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  },
+  {
+   "sessao": "2025-12-29",
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/deliberacoes/2025/DELIBERA%C3%87%C3%95ES%20AM%2029.12.2025.pdf",
+   "paraAno": 2026,
+   "retificacao": false,
+   "um": 30,
+   "dois": 70,
+   "tres": 140,
+   "tipo": "unanimidade",
+   "totais": null,
+   "grupos": null
+  }
+ ],
  "irs": [
   {
    "sessao": "2015-09-24",

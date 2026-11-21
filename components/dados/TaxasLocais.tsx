@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Grafico from "@/components/dados/Grafico";
-import { dataCurta, derrama, imi, irs, pc, textoVoto } from "@/lib/dados/taxas";
+import { dataCurta, derrama, imi, imiFamiliar, irs, pc, textoVoto } from "@/lib/dados/taxas";
 
 const ultimo = <T,>(l: T[], ok: (x: T) => boolean) => [...l].reverse().find(ok);
 
@@ -20,6 +20,33 @@ const IMI_LISTAS: Record<string, { urbanos: number; rusticos: number; url: strin
 };
 const imiUrbanos = (x: { sessao: string; urbanos: number | null }) => x.urbanos ?? IMI_LISTAS[x.sessao]?.urbanos ?? null;
 const imiRusticos = (x: { sessao: string; rusticos: number | null }) => x.rusticos ?? IMI_LISTAS[x.sessao]?.rusticos ?? null;
+
+// IMI familiar em texto: os anos seguidos com os mesmos valores juntam-se ("de 2021 a 2024, 20 €, 40 € e 70 €").
+function textoIMIFamiliar() {
+  const l = imiFamiliar.filter((x) => !x.retificacao).sort((a, b) => a.paraAno - b.paraAno);
+  const grupos: { de: number; ate: number; v: [number, number, number] | null }[] = [];
+  for (const x of l) {
+    const v: [number, number, number] | null = x.um !== null && x.dois !== null && x.tres !== null ? [x.um, x.dois, x.tres] : null;
+    const g = grupos[grupos.length - 1];
+    if (g && v && g.v && g.ate === x.paraAno - 1 && g.v.join() === v.join()) g.ate = x.paraAno;
+    else grupos.push({ de: x.paraAno, ate: x.paraAno, v });
+  }
+  const anos = (g: { de: number; ate: number }) => (g.de === g.ate ? `em ${g.de}` : g.ate === g.de + 1 ? `em ${g.de} e ${g.ate}` : `de ${g.de} a ${g.ate}`);
+  const partes = grupos.map((g, k) =>
+    g.v
+      ? k === grupos.findIndex((x) => x.v)
+        ? `${anos(g)}, ${g.v[0]} € com 1 dependente, ${g.v[1]} € com 2 e ${g.v[2]} € com 3 ou mais`
+        : `${anos(g)}, ${g.v[0]} €, ${g.v[1]} € e ${g.v[2]} €`
+      : `${anos(g)} (o texto da deliberação não diz os valores)`,
+  );
+  // anos sem deliberação entre o primeiro e o último
+  const falta: number[] = [];
+  for (let a = l[0]?.paraAno ?? 0; a <= (l[l.length - 1]?.paraAno ?? 0); a++) if (!l.some((x) => x.paraAno === a)) falta.push(a);
+  // depois do intervalo sem deliberações: foram todas por unanimidade?
+  const depois = falta.length ? l.filter((x) => x.paraAno > falta[falta.length - 1]) : l;
+  const unanimesDesde = depois.length > 0 && depois.every((x) => x.tipo === "unanimidade") ? depois[0].sessao : null;
+  return { partes, falta, unanimesDesde };
+}
 
 const taxaIRS = (x: { sessao: string; percentagem: number | null }) =>
   IRS_FINANCAS[x.sessao] ?? (x.percentagem !== null && x.percentagem >= 1 ? x.percentagem : null);
@@ -110,6 +137,32 @@ export default function TaxasLocais() {
               </span>
             ))}).
           </p>
+          {imiFamiliar.length > 0 &&
+            (() => {
+              const { partes, falta, unanimesDesde } = textoIMIFamiliar();
+              return (
+                <div className="mt-8 max-w-3xl">
+                  <h4 className="font-bold text-tinta">IMI familiar (redução por dependentes)</h4>
+                  <p className="mt-2 text-texto">
+                    A Assembleia aprovou uma redução do IMI para as famílias com dependentes, no IMI pago {partes.join("; ")}.
+                    {falta.length > 0 && ` Nas deliberações publicadas não há esta redução para o IMI pago de ${falta[0]} a ${falta[falta.length - 1]}.`}
+                    {unanimesDesde && ` Desde a deliberação de ${dataCurta(unanimesDesde)}, foi sempre aprovada por unanimidade.`}
+                  </p>
+                  <p className="mt-2 text-sm text-apagado">
+                    Deliberações:{" "}
+                    {imiFamiliar.map((x, k) => (
+                      <span key={x.sessao}>
+                        {k > 0 ? " · " : ""}
+                        <a href={x.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                          {dataCurta(x.sessao)}
+                          {x.retificacao ? " (retificação)" : ""} ↗
+                        </a>
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              );
+            })()}
         </section>
 
         <section aria-label="IRS" id="taxa-irs" className="scroll-mt-24">
