@@ -369,12 +369,26 @@ export default function Financas() {
           </div>
           <ul className="mt-4 max-w-3xl list-disc space-y-1.5 pl-5 text-sm text-texto">
             <li>
+              2009: por contrato com o Ministério da Educação (Contrato n.º 208/2009, Diário da República de 24 de julho de 2009), passaram
+              para a Câmara cerca de 150 trabalhadores não docentes das escolas EB 2,3 (Trofa, Alvarelhos e Coronado), das escolas do 1.º
+              ciclo e do pré-escolar. Já estão contados desde o início da série.
+            </li>
+            <li>
               2018: concursos para 70 lugares, com contratos em 2018 e 2019 (relatório de contas de
               2019).
             </li>
             <li>
-              Com a transferência de competências na educação, em abril de 2022, entraram mais 30 trabalhadores; o pessoal não docente das
-              escolas básicas e do pré-escolar já era da Câmara desde 2009, por contrato com o Ministério da Educação (orçamento de 2026).
+              Abril de 2022: com a transferência de competências na educação, passaram para a Câmara cerca de 30 trabalhadores que ainda eram
+              do Ministério (orçamento de 2026). Desde então, a Câmara contrata o pessoal não docente de todas as escolas do concelho; o
+              orçamento de 2026 conta 219 trabalhadores nas escolas.
+            </li>
+            <li>
+              Abril de 2023 e janeiro de 2024: chegaram as competências da ação social e da saúde.
+            </li>
+            <li>
+              Entre 2021 e 2025, o número passou de {trabalhadoresCamara["2021"]} para {trabalhadoresCamara["2025"]} (mais{" "}
+              {trabalhadoresCamara["2025"] - trabalhadoresCamara["2021"]}). A passagem de abril de 2022 explica cerca de 30. Os documentos
+              usados não dividem as restantes entradas por área.
             </li>
           </ul>
           <p className="mt-3 max-w-3xl text-sm text-apagado">
