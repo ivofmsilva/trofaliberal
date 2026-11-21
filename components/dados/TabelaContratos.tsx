@@ -194,7 +194,7 @@ export default function TabelaContratos() {
                     </div>
                     <div>
                       <dt className="text-apagado">Concorrentes</dt>
-                      <dd className="text-tinta">{c.n_concorrentes ?? "—"}</dd>
+                      <dd className="text-tinta">{c.n_concorrentes ? c.n_concorrentes : "—"}</dd>
                     </div>
                     <div>
                       <dt className="text-apagado">Prazo de execução</dt>

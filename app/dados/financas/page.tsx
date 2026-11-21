@@ -446,8 +446,8 @@ export default function Financas() {
               <strong className="font-semibold text-tinta">2011, 0,5 M€:</strong> empréstimo de curto prazo para tesouraria, pago no mesmo ano.
             </li>
             <li>
-              <strong className="font-semibold text-tinta">2013 e 2014, 30,3 M€:</strong> para pagar dívidas. 13,8 M€ da Caixa Geral de
-              Depósitos, num reequilíbrio financeiro &ldquo;destinado à regularização de dívidas a terceiros&rdquo;, e 16,6 M€ do Estado,
+              <strong className="font-semibold text-tinta">2013 e 2014, 30,3 M€:</strong> para pagar dívidas. 13,76 M€ da Caixa Geral de
+              Depósitos, num reequilíbrio financeiro &ldquo;destinado à regularização de dívidas a terceiros&rdquo;, e 16,56 M€ do Estado,
               pelo Programa de Apoio à Economia Local (PAEL), recebidos em duas vezes.
             </li>
             <li>
@@ -507,7 +507,7 @@ export default function Financas() {
                       </th>
                       <td className="px-4 py-2.5 text-right text-texto">{milhoes(o.ano2025)}</td>
                       <td className="px-4 py-2.5 text-right text-texto">{milhoes(o.ano2026)}</td>
-                      <td className="px-4 py-2.5 text-right text-tinta">{pc(o.variacao, 1)}</td>
+                      <td className="px-4 py-2.5 text-right text-tinta">{pc(((o.ano2026 - o.ano2025) / o.ano2025) * 100, 1)}</td>
                     </tr>
                   );
                 })}

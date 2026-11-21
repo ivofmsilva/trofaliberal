@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-21T12:03:03.499Z",
+ "juntado": "2026-11-21T14:04:07.775Z",
  "atualizado": "21/11/2026",
  "indicadores": [
   {
@@ -3945,7 +3945,7 @@
    "titulo": "Despesa da Câmara em ambiente por habitante",
    "categoria": "ambiente",
    "unidade": "€ por habitante",
-   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento.",
+   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento. É o valor que o INE publica, calculado com as estimativas de população anteriores à última revisão, por isso pode diferir um pouco de dividir pela população que aqui se mostra.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -10710,8 +10710,8 @@
    "slug": "partido_mais_votado_assembleia_municipal",
    "titulo": "Votos na lista mais votada (Assembleia Municipal)",
    "categoria": "democracia",
-   "unidade": "% dos votos válidos",
-   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista.",
+   "unidade": "% dos votos",
+   "texto": "A percentagem dos votos, contando os brancos e os nulos, que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista. Na Área Metropolitana e em Portugal é a da força mais votada nesse território todo; nos 8 concelhos próximos é a média das percentagens do vencedor de cada concelho (pesada pelos inscritos), por isso as colunas não se comparam diretamente.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -10796,8 +10796,8 @@
    "slug": "partido_mais_votado_camara_municipal",
    "titulo": "Votos na lista mais votada (Câmara Municipal)",
    "categoria": "democracia",
-   "unidade": "% dos votos válidos",
-   "texto": "A percentagem dos votos válidos que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista.",
+   "unidade": "% dos votos",
+   "texto": "A percentagem dos votos, contando os brancos e os nulos, que teve a lista mais votada. Quanto mais alta, mais votos se concentraram numa só lista. Na Área Metropolitana e em Portugal é a da força mais votada nesse território todo; nos 8 concelhos próximos é a média das percentagens do vencedor de cada concelho (pesada pelos inscritos), por isso as colunas não se comparam diretamente.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -33714,7 +33714,7 @@
    "titulo": "Enfermeiros por 1000 habitantes",
    "categoria": "saude",
    "unidade": "enfermeiros por 1000 habitantes",
-   "texto": "Enfermeiros inscritos na Ordem dos Enfermeiros que trabalham no concelho, por cada 1000 residentes. Conta-se pelo local de trabalho, por isso os concelhos com hospitais têm valores mais altos, e os residentes também são atendidos em unidades de saúde de outros concelhos.",
+   "texto": "Enfermeiros inscritos na Ordem dos Enfermeiros que trabalham no concelho, por cada 1000 residentes. Conta-se pelo local de trabalho, por isso depende de onde ficam os hospitais e os centros de saúde, e os residentes também são atendidos noutros concelhos. Em 2024 o valor subiu em vários concelhos (na Trofa, de 3,9 para 5,9; nos 8 concelhos próximos, de 5,4 para 7,5) sem que o INE assinale quebra de série.",
    "palavras": "saúde",
    "colunas": [
     "Trofa",
@@ -34882,7 +34882,7 @@
    "titulo": "Águas residuais drenadas por habitante",
    "categoria": "ambiente",
    "unidade": "m³ por habitante",
-   "texto": "Volume de águas residuais recolhidas pela rede pública de drenagem, por habitante do concelho. Mede quanto se recolhe, não a percentagem da população ligada à rede: este indicador não diz quantas casas estão servidas.",
+   "texto": "Volume de águas residuais recolhidas pela rede pública de drenagem, por habitante do concelho. Mede quanto se recolhe, não a percentagem da população ligada à rede: este indicador não diz quantas casas estão servidas. É o valor que o INE publica, calculado com as estimativas de população anteriores à última revisão.",
    "palavras": null,
    "colunas": [
     "Trofa",

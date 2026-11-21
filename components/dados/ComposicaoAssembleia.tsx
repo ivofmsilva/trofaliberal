@@ -101,7 +101,8 @@ export default function ComposicaoAssembleia() {
           >
             deliberações de 9 de dezembro de 2025 ↗
           </a>
-          ; não está publicado quais dos 14 são de cada partido.
+          . Segundo a notícia da tomada de posse, dos 8 eleitos diretamente pela coligação, 6 são do PSD e 2 do CDS-PP (Hélder Reis
+          e Carlos Martins).
         </p>
       </div>
     </div>

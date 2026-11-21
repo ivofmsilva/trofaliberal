@@ -49,11 +49,27 @@ const soma = (xs: number[]) => xs.reduce((a, b) => a + b, 0);
 // Quem recebeu o contrato conta-se pelo NIF e não pelo texto: o Portal BASE escreve a mesma empresa de várias maneiras
 // ("EDP Comercial, SA" / "EDP Comercial – Comercialização de Energia, S.A."), e pelo texto a mesma empresa aparecia partida em várias. Um agrupamento de empresas
 // (vários NIF no mesmo contrato) é uma entidade à parte. Só quando não há NIF se usa o nome, sem acentos nem pontuação.
+// Alguns contratos vêm sem o NIF de uma empresa que noutros contratos o tem (ex.: "- - Eurest (Portugal)…" e
+// "500347506 - EUREST (PORTUGAL)…"): pelo nome, sem acentos nem pontuação, vai buscar-se o NIF desses outros contratos.
+const nomeSemNif = (t: string) =>
+  t.replace(/^[-\s]*(\d{8,9}\s*-)?\s*/, "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+let nifDoNome: Map<string, string> | null = null;
+function nifPeloNome(nome: string) {
+  if (!nifDoNome) {
+    nifDoNome = new Map();
+    for (const c of contratos) {
+      const t = String(c.adjudicatario ?? "");
+      const m = t.match(/^\s*(\d{8,9})\s*-/);
+      if (m && !t.includes(";")) nifDoNome.set(nomeSemNif(t), m[1]);
+    }
+  }
+  return nifDoNome.get(nome);
+}
 export function chaveEntidade(texto: string): string {
   const nifs = [...texto.matchAll(/(?:^|;)\s*(\d{8,9})\s*-/g)].map((m) => m[1]);
   if (nifs.length) return [...new Set(nifs)].sort().join("+");
-  const nome = texto.replace(/^[-\s]+/, "");
-  return "nome:" + nome.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const nome = nomeSemNif(texto);
+  return nifPeloNome(nome) ?? "nome:" + nome;
 }
 
 type Entidade = { n: number; valor: number; nomes: Map<string, number> };

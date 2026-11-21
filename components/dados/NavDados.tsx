@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 // Menu do portal de dados. `base` é "" no portal à parte e "/dados" quando está dentro do site.
 // No telemóvel os itens passam para linhas seguintes (nada fica escondido à direita) e o separador atual fica a escuro.
 const ITENS = [
-  { rotulo: "Indicadores", caminho: "", ancora: "#temas", exato: true },
+  { rotulo: "Indicadores", caminho: "", ancora: "#explorar", exato: true },
   { rotulo: "Contratos e fundos", caminho: "/contratos", tambem: ["/fundos-europeus"] },
   { rotulo: "Finanças", caminho: "/financas" },
   { rotulo: "Câmara Municipal", caminho: "/camara" },

@@ -81,7 +81,7 @@ export const problemaResposta = [
     resposta: "Um portal digital com pedido único, acompanhamento do processo e alertas de atraso, e um prazo médio de 40 dias úteis quando não são precisos pareceres externos.",
   },
   {
-    problema: "A construção nova esteve parada, por falta de incentivos, excesso de taxas e insegurança nos processos",
+    problema: "A construção nova esteve parada, também por falta de incentivos, excesso de taxas e insegurança nos processos",
     resposta: "Menos taxas urbanísticas, nenhuma na primeira habitação, e a construção em altura nos centros.",
   },
   {

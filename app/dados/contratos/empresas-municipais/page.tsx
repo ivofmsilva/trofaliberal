@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Grafico from "@/components/dados/Grafico";
+import AvisoDeslizar from "@/components/dados/AvisoDeslizar";
 import SubNav from "@/components/dados/SubNav";
 import { compacto, numero } from "@/lib/dados/formatar";
 import { contaEm, contas, contratoEm, contratos, contratosPublicos, pessoasAoServico, recolhido, trofambiente, ultimoContrato } from "@/lib/dados/empresas";
@@ -7,7 +8,7 @@ import { contaEm, contas, contratoEm, contratos, contratosPublicos, pessoasAoSer
 export const metadata: Metadata = {
   title: "Empresas municipais",
   description:
-    "A TrofAmbiente (antes Trofáguas), a empresa municipal da Trofa: subsídio de cada contrato-programa desde 2006, contas desde 2009, contratos públicos e documentos.",
+    "A TrofAmbiente (antes Trofáguas), a empresa municipal da Trofa: subsídio de cada contrato-programa desde 2006, contas desde 2010, contratos públicos e documentos.",
 };
 
 const pc = (v: number | null) => (v === null ? "—" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${numero(Math.abs(v), 0)}%`);
@@ -20,6 +21,8 @@ const ligacao = "text-trofa underline-offset-2 hover:underline";
 // Documentos da empresa, procurados pelo título (ligações para o site da TrofAmbiente)
 const todos = trofambiente.documentos.flatMap((c) => c.documentos);
 const doc = (re: RegExp) => todos.find((d) => re.test(d.titulo))?.url ?? trofambiente.site;
+// Documentos que a TrofAmbiente lista mas cujo ficheiro dá erro 404 no site dela (verificado a 21/11/2026).
+const SEM_FICHEIRO = new Set(["https://www.trofambiente.pt/upload_files/1/2/ParecerdoFiscalUnicosobreoCPacelebrarparaoanode2017.pdf"]);
 
 
 function Externa({ href, children }: { href: string; children: React.ReactNode }) {
@@ -189,6 +192,7 @@ export default function EmpresasMunicipais() {
               </tbody>
             </table>
           </div>
+          <AvisoDeslizar />
           <p className="mt-3 max-w-3xl text-sm text-apagado">
             Os contratos de {contratos[0].ano} a {DESDE - 1} estão nos <a href="#documentos" className={ligacao}>documentos</a>. Não entram aqui porque foram
             alterados depois de assinados e vários incluíam também apoio ao investimento.
@@ -238,6 +242,7 @@ export default function EmpresasMunicipais() {
               </tbody>
             </table>
           </div>
+          <AvisoDeslizar />
           <p className="mt-3 max-w-3xl text-sm text-apagado">
             Euros, arredondados. Página do ficheiro PDF.
             {contas
@@ -249,7 +254,7 @@ export default function EmpresasMunicipais() {
 
           <h3 id="trabalhadores" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Trabalhadores</h3>
           <p className="mt-2 mb-6 max-w-3xl text-texto">
-            Número médio de pessoas ao serviço da empresa em cada ano. Em abril de 2015 o saneamento passou para a Águas do Norte e,
+            Número médio de pessoas ao serviço da empresa em cada ano. Em abril de 2015 o saneamento passou para a Águas do Noroeste (hoje Águas do Norte) e,
             segundo o relatório e contas de 2015, &ldquo;grande parte da estrutura de pessoal acompanhou essa transferência&rdquo;.
           </p>
           <div className="max-w-3xl">
@@ -348,6 +353,7 @@ export default function EmpresasMunicipais() {
                 </tbody>
               </table>
             </div>
+            <AvisoDeslizar />
           </details>
         </section>
 
@@ -371,9 +377,13 @@ export default function EmpresasMunicipais() {
                 <ul className="mt-3 space-y-1.5 text-sm">
                   {c.documentos.map((d) => (
                     <li key={d.url}>
-                      <a href={d.url} className="text-texto underline-offset-2 hover:text-trofa hover:underline" target="_blank" rel="noopener noreferrer">
-                        {d.titulo}
-                      </a>
+                      {SEM_FICHEIRO.has(d.url) ? (
+                        <span className="text-apagado">{d.titulo} (o ficheiro não abre no site da TrofAmbiente)</span>
+                      ) : (
+                        <a href={d.url} className="text-texto underline-offset-2 hover:text-trofa hover:underline" target="_blank" rel="noopener noreferrer">
+                          {d.titulo}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

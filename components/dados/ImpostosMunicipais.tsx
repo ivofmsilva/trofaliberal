@@ -35,7 +35,7 @@ export default function ImpostosMunicipais({ impostos }: { impostos: ReceitaImpo
           </button>
         ))}
       </div>
-      <div className="mt-6 grid gap-10 lg:grid-cols-2">
+      <div className="mt-6 grid gap-10 lg:grid-cols-2 [&>*]:min-w-0">
         {impostos.map((i) => (
           <div key={i.slug}>
             <h4 className="font-bold text-tinta">

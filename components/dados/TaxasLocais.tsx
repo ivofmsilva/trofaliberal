@@ -24,20 +24,26 @@ const imiRusticos = (x: { sessao: string; rusticos: number | null }) => x.rustic
 // IMI familiar em texto: os anos seguidos com os mesmos valores juntam-se ("de 2021 a 2024, 20 €, 40 € e 70 €").
 function textoIMIFamiliar() {
   const l = imiFamiliar.filter((x) => !x.retificacao).sort((a, b) => a.paraAno - b.paraAno);
-  const grupos: { de: number; ate: number; v: [number, number, number] | null }[] = [];
+  // Anos em que a deliberação foi depois retificada e o texto publicado da retificação não traz os valores (IMI pago em
+  // 2024: deliberação de 15/12/2023 com 20/40/70 €, retificada na Câmara a 28/12/2023 e na Assembleia a 02/02/2024).
+  const retificados = new Set(imiFamiliar.filter((x) => x.retificacao && x.um === null).map((x) => x.paraAno));
+  const grupos: { de: number; ate: number; v: [number, number, number] | null; retificado?: boolean }[] = [];
   for (const x of l) {
     const v: [number, number, number] | null = x.um !== null && x.dois !== null && x.tres !== null ? [x.um, x.dois, x.tres] : null;
     const g = grupos[grupos.length - 1];
-    if (g && v && g.v && g.ate === x.paraAno - 1 && g.v.join() === v.join()) g.ate = x.paraAno;
+    if (retificados.has(x.paraAno)) grupos.push({ de: x.paraAno, ate: x.paraAno, v, retificado: true });
+    else if (g && v && g.v && !g.retificado && g.ate === x.paraAno - 1 && g.v.join() === v.join()) g.ate = x.paraAno;
     else grupos.push({ de: x.paraAno, ate: x.paraAno, v });
   }
   const anos = (g: { de: number; ate: number }) => (g.de === g.ate ? `em ${g.de}` : g.ate === g.de + 1 ? `em ${g.de} e ${g.ate}` : `de ${g.de} a ${g.ate}`);
   const partes = grupos.map((g, k) =>
-    g.v
-      ? k === grupos.findIndex((x) => x.v)
-        ? `${anos(g)}, ${g.v[0]} € com 1 dependente, ${g.v[1]} € com 2 e ${g.v[2]} € com 3 ou mais`
-        : `${anos(g)}, ${g.v[0]} €, ${g.v[1]} € e ${g.v[2]} €`
-      : `${anos(g)} (o texto da deliberação não diz os valores)`,
+    g.retificado
+      ? `${anos(g)}, a deliberação diz ${g.v ? `${g.v[0]} €, ${g.v[1]} € e ${g.v[2]} €` : "os valores"}, mas foi retificada e o texto publicado da retificação não diz os valores`
+      : g.v
+        ? k === grupos.findIndex((x) => x.v)
+          ? `${anos(g)}, ${g.v[0]} € com 1 dependente, ${g.v[1]} € com 2 e ${g.v[2]} € com 3 ou mais`
+          : `${anos(g)}, ${g.v[0]} €, ${g.v[1]} € e ${g.v[2]} €`
+        : `${anos(g)} (o texto da deliberação não diz os valores)`,
   );
   // anos sem deliberação entre o primeiro e o último
   const falta: number[] = [];
@@ -76,7 +82,7 @@ export default function TaxasLocais() {
           Taxas e impostos locais
         </h2>
         <p className="mt-2 max-w-2xl text-texto">
-          Todos os anos, no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
+          Todos os anos, em geral no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
           Aqui está o que foi decidido desde 2015 e como foi votada cada deliberação.
         </p>
         <dl className="mt-6 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
@@ -206,7 +212,7 @@ export default function TaxasLocais() {
         <section aria-label="Derrama" id="taxa-derrama" className="scroll-mt-24">
           <h3 className="text-xl font-bold tracking-tight text-tinta">Derrama</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
-            Imposto municipal sobre o lucro tributável das empresas, na parte gerada no concelho. Há uma taxa normal e, desde 2020, uma reduzida para as
+            Imposto municipal sobre o lucro tributável das empresas, na parte gerada no concelho. Há uma taxa normal e, na derrama paga desde 2021, uma reduzida para as
             empresas com menor volume de negócios.
           </p>
           <div className="max-w-3xl">

@@ -120,7 +120,7 @@ export default function Fontes() {
       <p className="mt-4 text-texto">Cada indicador mostra a Trofa ao lado de três comparações:</p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-texto">
         <li>
-          <b className="text-tinta">8 concelhos próximos</b>, a Trofa e mais 7: {GRUPO_8.slice(0, -1).join(", ")} e {GRUPO_8.at(-1)};
+          <b className="text-tinta">8 concelhos próximos</b>, a Trofa e mais 7: {GRUPO_8.slice(1, -1).join(", ")} e {GRUPO_8.at(-1)};
         </li>
         <li>
           <b className="text-tinta">Área Metropolitana do Porto</b>, a que a Trofa pertence (17 concelhos);
@@ -130,8 +130,9 @@ export default function Fontes() {
         </li>
       </ul>
       <p className="mt-4 text-texto">
-        Os valores da Área Metropolitana e de Portugal são os que a fonte publica. O dos 8 concelhos próximos é calculado por nós a
-        partir dos valores dos 8 concelhos:
+        Os valores da Área Metropolitana e de Portugal são os que a fonte publica, exceto no desemprego registado (o IEFP não
+        publica a Área Metropolitana, que aqui é a soma dos 17 concelhos) e nos indicadores calculados por nós. O dos 8 concelhos
+        próximos é calculado por nós a partir dos valores dos 8 concelhos:
       </p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-texto">
         <li>

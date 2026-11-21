@@ -57,7 +57,7 @@ export const DIVISOES: Record<string, string> = {
   "75": "Serviços da administração pública",
   "76": "Serviços da indústria petrolífera",
   "77": "Serviços agrícolas e florestais",
-  "79": "Serviços às empresas (consultoria, publicidade, formação)",
+  "79": "Serviços a empresas (direito, marketing, consultoria, recrutamento, impressão e segurança)",
   "80": "Ensino e formação",
   "85": "Saúde e ação social",
   "90": "Esgotos, resíduos, limpeza e ambiente",

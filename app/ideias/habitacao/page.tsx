@@ -89,8 +89,8 @@ export default function Habitacao() {
             A forma mais eficaz de baixar os preços é haver mais casas
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-white/85">
-            A Câmara deve planear de forma descentralizada e transparente a gestão do território. Deve garantir
-            liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.
+            O papel da Câmara não é construir nem planear centralmente as construções, mas garantir liberdade,
+            regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.
           </p>
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {principios.map((p, i) => (

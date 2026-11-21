@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
+import AvisoDeslizar from "@/components/dados/AvisoDeslizar";
 import SubNav from "@/components/dados/SubNav";
 import { compacto, dataCurta, numero } from "@/lib/dados/formatar";
 import { contratos, resumoAjustes } from "@/lib/dados/transparencia";
@@ -97,7 +98,8 @@ export default function AjustesDiretos() {
               </tbody>
             </table>
           </div>
-          <p className="mt-2 text-sm text-apagado">2026 ainda não acabou.</p>
+          <AvisoDeslizar />
+          {r.anos.at(-1)?.ano === new Date().getFullYear() && <p className="mt-2 text-sm text-apagado">{r.anos.at(-1)?.ano} ainda não acabou.</p>}
         </section>
 
         <section aria-label="Por área">
@@ -132,6 +134,7 @@ export default function AjustesDiretos() {
               </tbody>
             </table>
           </div>
+          <AvisoDeslizar />
         </section>
 
         <div className="grid gap-14 lg:grid-cols-2">

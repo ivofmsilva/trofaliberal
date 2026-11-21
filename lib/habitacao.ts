@@ -59,7 +59,7 @@ export const pontos: Ponto[] = [
     n: 1,
     titulo: "Aumentar a oferta com liberdade e iniciativa privada",
     intro:
-      "A Câmara deve planear de forma descentralizada e transparente a gestão do território. Deve garantir liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.",
+      "O papel da Câmara não é construir nem planear centralmente as construções, mas garantir liberdade, regras claras e neutralidade fiscal a quem quer investir e viver na Trofa.",
     grupos: [
       {
         titulo: "Património público ao serviço da comunidade",
