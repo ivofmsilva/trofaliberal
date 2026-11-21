@@ -62,7 +62,7 @@ export default function TaxasLocais() {
       </div>
 
       <div className="space-y-14">
-        <section aria-label="IMI">
+        <section aria-label="IMI" id="taxa-imi" className="scroll-mt-24">
           <h3 className="text-xl font-bold tracking-tight text-tinta">IMI: Imposto Municipal sobre Imóveis</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             A taxa dos prédios urbanos que a Assembleia fixou em cada ano, para valer no ano seguinte. A dos prédios rústicos
@@ -87,7 +87,7 @@ export default function TaxasLocais() {
           <p className="mt-2 text-sm text-apagado">Até 2018 o texto da deliberação não diz a taxa (está num anexo): só se mostra a votação.</p>
         </section>
 
-        <section aria-label="IRS">
+        <section aria-label="IRS" id="taxa-irs" className="scroll-mt-24">
           <h3 className="text-xl font-bold tracking-tight text-tinta">Participação variável no IRS</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             A parte do IRS dos residentes que fica para o município (até 5%). O que o município não fica é devolvido aos contribuintes.
@@ -122,7 +122,7 @@ export default function TaxasLocais() {
           </p>
         </section>
 
-        <section aria-label="Derrama">
+        <section aria-label="Derrama" id="taxa-derrama" className="scroll-mt-24">
           <h3 className="text-xl font-bold tracking-tight text-tinta">Derrama</h3>
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             Imposto municipal sobre o lucro tributável das empresas, na parte gerada no concelho. Há uma taxa normal e, desde 2020, uma reduzida para as

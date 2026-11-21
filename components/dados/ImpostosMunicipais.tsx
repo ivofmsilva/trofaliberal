@@ -7,6 +7,10 @@ import type { ReceitaImposto } from "@/lib/dados/financas";
 
 // Um gráfico por imposto, com a escolha entre o total (só a Trofa) e o valor por habitante (a Trofa ao lado da Área
 // Metropolitana do Porto, dos 8 concelhos próximos e de Portugal).
+// Os impostos cuja taxa é decidida pela Assembleia Municipal: ligação para o gráfico e as votações em "Taxas e impostos
+// locais", mais abaixo na página. (O IMT e o IUC têm taxas fixadas por lei.)
+const TAXA: Record<string, string> = { receita_imi: "#taxa-imi", receita_participacao_irs: "#taxa-irs", receita_derrama: "#taxa-derrama" };
+
 export default function ImpostosMunicipais({ impostos }: { impostos: ReceitaImposto[] }) {
   const [modo, setModo] = useState<"total" | "habitante">("total");
   return (
@@ -54,6 +58,14 @@ export default function ImpostosMunicipais({ impostos }: { impostos: ReceitaImpo
                 />
               )}
             </div>
+            {TAXA[i.slug] && (
+              <p className="mt-2 text-sm text-apagado">
+                Taxa decidida pela Assembleia Municipal:{" "}
+                <a href={TAXA[i.slug]} className="underline underline-offset-2 hover:text-tinta">
+                  ver a evolução
+                </a>
+              </p>
+            )}
           </div>
         ))}
       </div>
