@@ -1,6 +1,6 @@
 {
- "juntado": "2026-11-20T18:00:06.726Z",
- "atualizado": "20/11/2026",
+ "juntado": "2026-11-21T10:11:09.263Z",
+ "atualizado": "21/11/2026",
  "indicadores": [
   {
    "slug": "populacao_residente",
@@ -1886,29 +1886,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 18963000,
+       "var": null
+      },
+      {
+       "v": 1034036000,
+       "var": null
+      },
+      {
+       "v": 415519000,
+       "var": null
+      },
+      {
+       "v": 7771493000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 31994000,
+      "Guimarães": 101100000,
+      "Vila Nova de Famalicão": 82440000,
+      "Vizela": 13534000,
+      "Trofa": 18963000,
+      "Santo Tirso": 51674000,
+      "Maia": 61815000,
+      "Vila do Conde": 53999000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 18789000,
+       "var": -0.9
+      },
+      {
+       "v": 931667000,
+       "var": -9.9
+      },
+      {
+       "v": 381529000,
+       "var": -8.2
+      },
+      {
+       "v": 7683579000,
+       "var": -1.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 28367000,
+      "Guimarães": 91654000,
+      "Vila Nova de Famalicão": 86571000,
+      "Vizela": 12050000,
+      "Trofa": 18789000,
+      "Santo Tirso": 36864000,
+      "Maia": 61201000,
+      "Vila do Conde": 46033000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 44003000,
+       "var": 134.2
+      },
+      {
+       "v": 1104588000,
+       "var": 18.6
+      },
+      {
+       "v": 399908000,
+       "var": 4.8
+      },
+      {
+       "v": 7807234000,
+       "var": 1.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 27250000,
+      "Guimarães": 78095000,
+      "Vila Nova de Famalicão": 63124000,
+      "Vizela": 13183000,
+      "Trofa": 44003000,
+      "Santo Tirso": 35632000,
+      "Maia": 55655000,
+      "Vila do Conde": 82966000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 30625000,
+       "var": -30.4
+      },
+      {
+       "v": 907173000,
+       "var": -17.9
+      },
+      {
+       "v": 369881000,
+       "var": -7.5
+      },
+      {
+       "v": 7337759000,
+       "var": -6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 30420000,
+      "Guimarães": 76516000,
+      "Vila Nova de Famalicão": 71989000,
+      "Vizela": 24820000,
+      "Trofa": 30625000,
+      "Santo Tirso": 32857000,
+      "Maia": 55563000,
+      "Vila do Conde": 47091000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 23586000,
+       "var": -23
+      },
+      {
+       "v": 938649000,
+       "var": 3.5
+      },
+      {
+       "v": 391603000,
+       "var": 5.9
+      },
+      {
+       "v": 7520651000,
+       "var": 2.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 32720000,
+      "Guimarães": 86156000,
+      "Vila Nova de Famalicão": 71680000,
+      "Vizela": 19433000,
+      "Trofa": 23586000,
+      "Santo Tirso": 37123000,
+      "Maia": 74489000,
+      "Vila do Conde": 46416000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 20762000,
+       "var": -12
+      },
+      {
+       "v": 1039925000,
+       "var": 10.8
+      },
+      {
+       "v": 387031000,
+       "var": -1.2
+      },
+      {
+       "v": 7738249000,
+       "var": 2.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 31378000,
+      "Guimarães": 84356000,
+      "Vila Nova de Famalicão": 88621000,
+      "Vizela": 13364000,
+      "Trofa": 20762000,
+      "Santo Tirso": 34416000,
+      "Maia": 66585000,
+      "Vila do Conde": 47549000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 22078000,
+       "var": 6.3
+      },
+      {
+       "v": 1045998000,
+       "var": 0.6
+      },
+      {
+       "v": 427454000,
+       "var": 10.4
+      },
+      {
+       "v": 8311730000,
+       "var": 7.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 30106000,
+      "Guimarães": 85197000,
+      "Vila Nova de Famalicão": 86469000,
+      "Vizela": 22708000,
+      "Trofa": 22078000,
+      "Santo Tirso": 40631000,
+      "Maia": 66299000,
+      "Vila do Conde": 73966000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 46454000,
+       "var": 110.4
+      },
+      {
+       "v": 1122480000,
+       "var": 7.3
+      },
+      {
+       "v": 423985000,
+       "var": -0.8
+      },
+      {
+       "v": 8539599000,
+       "var": 2.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 31108000,
+      "Guimarães": 83311000,
+      "Vila Nova de Famalicão": 89113000,
+      "Vizela": 13236000,
+      "Trofa": 46454000,
+      "Santo Tirso": 38649000,
+      "Maia": 73980000,
+      "Vila do Conde": 48134000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 25733000,
+       "var": -44.6
+      },
+      {
+       "v": 1149514000,
+       "var": 2.4
+      },
+      {
+       "v": 422901000,
+       "var": -0.3
+      },
+      {
+       "v": 9041442000,
+       "var": 5.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 34327000,
+      "Guimarães": 87776000,
+      "Vila Nova de Famalicão": 93032000,
+      "Vizela": 15519000,
+      "Trofa": 25733000,
+      "Santo Tirso": 41772000,
+      "Maia": 73465000,
+      "Vila do Conde": 51277000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 25463000,
+       "var": -1
+      },
+      {
+       "v": 1136501000,
+       "var": -1.1
+      },
+      {
+       "v": 445190000,
+       "var": 5.3
+      },
+      {
+       "v": 8777184000,
+       "var": -2.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 33377000,
+      "Guimarães": 94759000,
+      "Vila Nova de Famalicão": 97153000,
+      "Vizela": 17166000,
+      "Trofa": 25463000,
+      "Santo Tirso": 41562000,
+      "Maia": 79942000,
+      "Vila do Conde": 55768000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 41172000,
-       "var": null
+       "var": 61.7
       },
       {
        "v": 1297394000,
-       "var": null
+       "var": 14.2
       },
       {
        "v": 512128000,
-       "var": null
+       "var": 15
       },
       {
        "v": 9922319000,
-       "var": null
+       "var": 13
       }
      ],
      "concelhos": {
@@ -28117,29 +28427,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 965000,
+       "var": null
+      },
+      {
+       "v": 44308000,
+       "var": null
+      },
+      {
+       "v": 18062000,
+       "var": null
+      },
+      {
+       "v": 251835000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 510000,
+      "Guimarães": 2158000,
+      "Vila Nova de Famalicão": 5919000,
+      "Vizela": 151000,
+      "Trofa": 965000,
+      "Santo Tirso": 1189000,
+      "Maia": 5077000,
+      "Vila do Conde": 2093000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 834000,
+       "var": -13.6
+      },
+      {
+       "v": 40262000,
+       "var": -9.1
+      },
+      {
+       "v": 22173000,
+       "var": 22.8
+      },
+      {
+       "v": 261218000,
+       "var": 3.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 373000,
+      "Guimarães": 2143000,
+      "Vila Nova de Famalicão": 10234000,
+      "Vizela": 149000,
+      "Trofa": 834000,
+      "Santo Tirso": 983000,
+      "Maia": 5604000,
+      "Vila do Conde": 1853000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 784000,
+       "var": -6
+      },
+      {
+       "v": 42894000,
+       "var": 6.5
+      },
+      {
+       "v": 10976000,
+       "var": -50.5
+      },
+      {
+       "v": 207644000,
+       "var": -20.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 418000,
+      "Guimarães": 1974000,
+      "Vila Nova de Famalicão": 0,
+      "Vizela": 198000,
+      "Trofa": 784000,
+      "Santo Tirso": 1134000,
+      "Maia": 5315000,
+      "Vila do Conde": 1153000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 1221000,
+       "var": 55.7
+      },
+      {
+       "v": 41684000,
+       "var": -2.8
+      },
+      {
+       "v": 18431000,
+       "var": 67.9
+      },
+      {
+       "v": 212326000,
+       "var": 2.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 564000,
+      "Guimarães": 2591000,
+      "Vila Nova de Famalicão": 6754000,
+      "Vizela": 270000,
+      "Trofa": 1221000,
+      "Santo Tirso": 1161000,
+      "Maia": 3752000,
+      "Vila do Conde": 2118000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 1372000,
+       "var": 12.4
+      },
+      {
+       "v": 41186000,
+       "var": -1.2
+      },
+      {
+       "v": 14641000,
+       "var": -20.6
+      },
+      {
+       "v": 208407000,
+       "var": -1.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 565000,
+      "Guimarães": 2983000,
+      "Vila Nova de Famalicão": 0,
+      "Vizela": 338000,
+      "Trofa": 1372000,
+      "Santo Tirso": 1123000,
+      "Maia": 6365000,
+      "Vila do Conde": 1895000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 1518000,
+       "var": 10.6
+      },
+      {
+       "v": 56380000,
+       "var": 36.9
+      },
+      {
+       "v": 24208000,
+       "var": 65.3
+      },
+      {
+       "v": 275007000,
+       "var": 32
+      }
+     ],
+     "concelhos": {
+      "Fafe": 711000,
+      "Guimarães": 3991000,
+      "Vila Nova de Famalicão": 6089000,
+      "Vizela": 376000,
+      "Trofa": 1518000,
+      "Santo Tirso": 1566000,
+      "Maia": 7960000,
+      "Vila do Conde": 1997000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 1458000,
+       "var": -4
+      },
+      {
+       "v": 57615000,
+       "var": 2.2
+      },
+      {
+       "v": 24642000,
+       "var": 1.8
+      },
+      {
+       "v": 324227000,
+       "var": 17.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 661000,
+      "Guimarães": 4083000,
+      "Vila Nova de Famalicão": 6220000,
+      "Vizela": 412000,
+      "Trofa": 1458000,
+      "Santo Tirso": 1730000,
+      "Maia": 8014000,
+      "Vila do Conde": 2064000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 1897000,
+       "var": 30.1
+      },
+      {
+       "v": 58894000,
+       "var": 2.2
+      },
+      {
+       "v": 25082000,
+       "var": 1.8
+      },
+      {
+       "v": 308352000,
+       "var": -4.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 624000,
+      "Guimarães": 4031000,
+      "Vila Nova de Famalicão": 6042000,
+      "Vizela": 391000,
+      "Trofa": 1897000,
+      "Santo Tirso": 1618000,
+      "Maia": 8168000,
+      "Vila do Conde": 2311000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 1456000,
+       "var": -23.2
+      },
+      {
+       "v": 74340000,
+       "var": 26.2
+      },
+      {
+       "v": 25471000,
+       "var": 1.6
+      },
+      {
+       "v": 354147000,
+       "var": 14.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 638000,
+      "Guimarães": 4371000,
+      "Vila Nova de Famalicão": 6425000,
+      "Vizela": 386000,
+      "Trofa": 1456000,
+      "Santo Tirso": 1671000,
+      "Maia": 8278000,
+      "Vila do Conde": 2246000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 1327000,
+       "var": -8.9
+      },
+      {
+       "v": 66278000,
+       "var": -10.8
+      },
+      {
+       "v": 26365000,
+       "var": 3.5
+      },
+      {
+       "v": 346790000,
+       "var": -2.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 653000,
+      "Guimarães": 4215000,
+      "Vila Nova de Famalicão": 6125000,
+      "Vizela": 337000,
+      "Trofa": 1327000,
+      "Santo Tirso": 2169000,
+      "Maia": 9054000,
+      "Vila do Conde": 2485000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 984000,
-       "var": null
+       "var": -25.8
       },
       {
        "v": 60085000,
-       "var": null
+       "var": -9.3
       },
       {
        "v": 24758000,
-       "var": null
+       "var": -6.1
       },
       {
        "v": 297458000,
-       "var": null
+       "var": -14.2
       }
      ],
      "concelhos": {
@@ -28294,29 +28914,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 2977000,
+       "var": null
+      },
+      {
+       "v": 200391000,
+       "var": null
+      },
+      {
+       "v": 66828000,
+       "var": null
+      },
+      {
+       "v": 1169347000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3457000,
+      "Guimarães": 15635000,
+      "Vila Nova de Famalicão": 11058000,
+      "Vizela": 1505000,
+      "Trofa": 2977000,
+      "Santo Tirso": 4401000,
+      "Maia": 19147000,
+      "Vila do Conde": 8648000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 3122000,
+       "var": 4.9
+      },
+      {
+       "v": 212652000,
+       "var": 6.1
+      },
+      {
+       "v": 71118000,
+       "var": 6.4
+      },
+      {
+       "v": 1230189000,
+       "var": 5.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3608000,
+      "Guimarães": 15966000,
+      "Vila Nova de Famalicão": 12053000,
+      "Vizela": 1581000,
+      "Trofa": 3122000,
+      "Santo Tirso": 4698000,
+      "Maia": 20963000,
+      "Vila do Conde": 9127000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 4477000,
+       "var": 43.4
+      },
+      {
+       "v": 213819000,
+       "var": 0.5
+      },
+      {
+       "v": 76540000,
+       "var": 7.6
+      },
+      {
+       "v": 1306671000,
+       "var": 6.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4268000,
+      "Guimarães": 16992000,
+      "Vila Nova de Famalicão": 12214000,
+      "Vizela": 1960000,
+      "Trofa": 4477000,
+      "Santo Tirso": 5597000,
+      "Maia": 18955000,
+      "Vila do Conde": 12077000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 5631000,
+       "var": 25.8
+      },
+      {
+       "v": 233102000,
+       "var": 9
+      },
+      {
+       "v": 86928000,
+       "var": 13.6
+      },
+      {
+       "v": 1468408000,
+       "var": 12.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3944000,
+      "Guimarães": 18736000,
+      "Vila Nova de Famalicão": 13828000,
+      "Vizela": 2661000,
+      "Trofa": 5631000,
+      "Santo Tirso": 6626000,
+      "Maia": 20924000,
+      "Vila do Conde": 14578000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 6159000,
+       "var": 9.4
+      },
+      {
+       "v": 244228000,
+       "var": 4.8
+      },
+      {
+       "v": 91102000,
+       "var": 4.8
+      },
+      {
+       "v": 1533474000,
+       "var": 4.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4213000,
+      "Guimarães": 19506000,
+      "Vila Nova de Famalicão": 14495000,
+      "Vizela": 2861000,
+      "Trofa": 6159000,
+      "Santo Tirso": 6941000,
+      "Maia": 21255000,
+      "Vila do Conde": 15672000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 5846000,
+       "var": -5.1
+      },
+      {
+       "v": 242168000,
+       "var": -0.8
+      },
+      {
+       "v": 89620000,
+       "var": -1.6
+      },
+      {
+       "v": 1488269000,
+       "var": -2.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4421000,
+      "Guimarães": 19463000,
+      "Vila Nova de Famalicão": 14284000,
+      "Vizela": 2934000,
+      "Trofa": 5846000,
+      "Santo Tirso": 7041000,
+      "Maia": 21313000,
+      "Vila do Conde": 14318000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 5687000,
+       "var": -2.7
+      },
+      {
+       "v": 235132000,
+       "var": -2.9
+      },
+      {
+       "v": 88224000,
+       "var": -1.6
+      },
+      {
+       "v": 1457071000,
+       "var": -2.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 3988000,
+      "Guimarães": 18615000,
+      "Vila Nova de Famalicão": 15244000,
+      "Vizela": 2690000,
+      "Trofa": 5687000,
+      "Santo Tirso": 7145000,
+      "Maia": 21039000,
+      "Vila do Conde": 13816000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 5967000,
+       "var": 4.9
+      },
+      {
+       "v": 247855000,
+       "var": 5.4
+      },
+      {
+       "v": 89737000,
+       "var": 1.7
+      },
+      {
+       "v": 1510219000,
+       "var": 3.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4100000,
+      "Guimarães": 19359000,
+      "Vila Nova de Famalicão": 15119000,
+      "Vizela": 2574000,
+      "Trofa": 5967000,
+      "Santo Tirso": 7429000,
+      "Maia": 21895000,
+      "Vila do Conde": 13294000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 5944000,
+       "var": -0.4
+      },
+      {
+       "v": 240346000,
+       "var": -3
+      },
+      {
+       "v": 88683000,
+       "var": -1.2
+      },
+      {
+       "v": 1489230000,
+       "var": -1.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4227000,
+      "Guimarães": 19153000,
+      "Vila Nova de Famalicão": 15058000,
+      "Vizela": 2472000,
+      "Trofa": 5944000,
+      "Santo Tirso": 7401000,
+      "Maia": 21910000,
+      "Vila do Conde": 12518000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 5837000,
+       "var": -1.8
+      },
+      {
+       "v": 237679000,
+       "var": -1.1
+      },
+      {
+       "v": 88842000,
+       "var": 0.2
+      },
+      {
+       "v": 1497485000,
+       "var": 0.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 4397000,
+      "Guimarães": 19523000,
+      "Vila Nova de Famalicão": 15518000,
+      "Vizela": 2495000,
+      "Trofa": 5837000,
+      "Santo Tirso": 7630000,
+      "Maia": 21655000,
+      "Vila do Conde": 11787000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 5821000,
-       "var": null
+       "var": -0.3
       },
       {
        "v": 232479000,
-       "var": null
+       "var": -2.2
       },
       {
        "v": 87314000,
-       "var": null
+       "var": -1.7
       },
       {
        "v": 1480292000,
-       "var": null
+       "var": -1.1
       }
      ],
      "concelhos": {
@@ -28471,29 +29401,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 857000,
+       "var": null
+      },
+      {
+       "v": 78670000,
+       "var": null
+      },
+      {
+       "v": 26166000,
+       "var": null
+      },
+      {
+       "v": 507567000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1069000,
+      "Guimarães": 4186000,
+      "Vila Nova de Famalicão": 4043000,
+      "Vizela": 444000,
+      "Trofa": 857000,
+      "Santo Tirso": 2383000,
+      "Maia": 4618000,
+      "Vila do Conde": 8566000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 1004000,
+       "var": 17.2
+      },
+      {
+       "v": 56027000,
+       "var": -28.8
+      },
+      {
+       "v": 17951000,
+       "var": -31.4
+      },
+      {
+       "v": 388775000,
+       "var": -23.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 724000,
+      "Guimarães": 3773000,
+      "Vila Nova de Famalicão": 3131000,
+      "Vizela": 412000,
+      "Trofa": 1004000,
+      "Santo Tirso": 1386000,
+      "Maia": 4575000,
+      "Vila do Conde": 2946000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 471000,
+       "var": -53.1
+      },
+      {
+       "v": 52291000,
+       "var": -6.7
+      },
+      {
+       "v": 14890000,
+       "var": -17.1
+      },
+      {
+       "v": 384002000,
+       "var": -1.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 641000,
+      "Guimarães": 2691000,
+      "Vila Nova de Famalicão": 2462000,
+      "Vizela": 220000,
+      "Trofa": 471000,
+      "Santo Tirso": 1343000,
+      "Maia": 3385000,
+      "Vila do Conde": 3677000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 1055000,
+       "var": 124
+      },
+      {
+       "v": 64797000,
+       "var": 23.9
+      },
+      {
+       "v": 16298000,
+       "var": 9.5
+      },
+      {
+       "v": 494622000,
+       "var": 28.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 621000,
+      "Guimarães": 3512000,
+      "Vila Nova de Famalicão": 2858000,
+      "Vizela": 382000,
+      "Trofa": 1055000,
+      "Santo Tirso": 1317000,
+      "Maia": 2812000,
+      "Vila do Conde": 3741000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 1025000,
+       "var": -2.8
+      },
+      {
+       "v": 65402000,
+       "var": 0.9
+      },
+      {
+       "v": 19239000,
+       "var": 18
+      },
+      {
+       "v": 583357000,
+       "var": 17.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 884000,
+      "Guimarães": 3743000,
+      "Vila Nova de Famalicão": 3437000,
+      "Vizela": 821000,
+      "Trofa": 1025000,
+      "Santo Tirso": 1221000,
+      "Maia": 4715000,
+      "Vila do Conde": 3393000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 1373000,
+       "var": 34
+      },
+      {
+       "v": 85776000,
+       "var": 31.2
+      },
+      {
+       "v": 27114000,
+       "var": 40.9
+      },
+      {
+       "v": 655888000,
+       "var": 12.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 809000,
+      "Guimarães": 5675000,
+      "Vila Nova de Famalicão": 4196000,
+      "Vizela": 458000,
+      "Trofa": 1373000,
+      "Santo Tirso": 1400000,
+      "Maia": 8903000,
+      "Vila do Conde": 4300000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 1016000,
+       "var": -26
+      },
+      {
+       "v": 106821000,
+       "var": 24.5
+      },
+      {
+       "v": 27666000,
+       "var": 2
+      },
+      {
+       "v": 855602000,
+       "var": 30.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1509000,
+      "Guimarães": 6079000,
+      "Vila Nova de Famalicão": 5024000,
+      "Vizela": 443000,
+      "Trofa": 1016000,
+      "Santo Tirso": 2391000,
+      "Maia": 6531000,
+      "Vila do Conde": 4673000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 1246000,
+       "var": 22.6
+      },
+      {
+       "v": 135362000,
+       "var": 26.7
+      },
+      {
+       "v": 31052000,
+       "var": 12.2
+      },
+      {
+       "v": 1004108000,
+       "var": 17.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1044000,
+      "Guimarães": 6042000,
+      "Vila Nova de Famalicão": 4637000,
+      "Vizela": 736000,
+      "Trofa": 1246000,
+      "Santo Tirso": 2432000,
+      "Maia": 10007000,
+      "Vila do Conde": 4908000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 1883000,
+       "var": 51.1
+      },
+      {
+       "v": 154190000,
+       "var": 13.9
+      },
+      {
+       "v": 33645000,
+       "var": 8.4
+      },
+      {
+       "v": 1011221000,
+       "var": 0.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1209000,
+      "Guimarães": 6870000,
+      "Vila Nova de Famalicão": 5827000,
+      "Vizela": 595000,
+      "Trofa": 1883000,
+      "Santo Tirso": 2134000,
+      "Maia": 8813000,
+      "Vila do Conde": 6314000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 1418000,
+       "var": -24.7
+      },
+      {
+       "v": 148376000,
+       "var": -3.8
+      },
+      {
+       "v": 37153000,
+       "var": 10.4
+      },
+      {
+       "v": 975293000,
+       "var": -3.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1234000,
+      "Guimarães": 5793000,
+      "Vila Nova de Famalicão": 6024000,
+      "Vizela": 402000,
+      "Trofa": 1418000,
+      "Santo Tirso": 2614000,
+      "Maia": 10610000,
+      "Vila do Conde": 9058000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 2096000,
-       "var": null
+       "var": 47.8
       },
       {
        "v": 195840000,
-       "var": null
+       "var": 32
       },
       {
        "v": 45870000,
-       "var": null
+       "var": 23.5
       },
       {
        "v": 1345079000,
-       "var": null
+       "var": 37.9
       }
      ],
      "concelhos": {
@@ -28648,29 +29888,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 672000,
+       "var": null
+      },
+      {
+       "v": 28937000,
+       "var": null
+      },
+      {
+       "v": 10971000,
+       "var": null
+      },
+      {
+       "v": 183822000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 718000,
+      "Guimarães": 2415000,
+      "Vila Nova de Famalicão": 2159000,
+      "Vizela": 311000,
+      "Trofa": 672000,
+      "Santo Tirso": 1062000,
+      "Maia": 2398000,
+      "Vila do Conde": 1236000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 761000,
+       "var": 13.2
+      },
+      {
+       "v": 32698000,
+       "var": 13
+      },
+      {
+       "v": 12585000,
+       "var": 14.7
+      },
+      {
+       "v": 208106000,
+       "var": 13.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 872000,
+      "Guimarães": 2773000,
+      "Vila Nova de Famalicão": 2470000,
+      "Vizela": 361000,
+      "Trofa": 761000,
+      "Santo Tirso": 1200000,
+      "Maia": 2723000,
+      "Vila do Conde": 1425000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 962000,
+       "var": 26.4
+      },
+      {
+       "v": 41590000,
+       "var": 27.2
+      },
+      {
+       "v": 16161000,
+       "var": 28.4
+      },
+      {
+       "v": 260294000,
+       "var": 25.1
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1201000,
+      "Guimarães": 3583000,
+      "Vila Nova de Famalicão": 3120000,
+      "Vizela": 471000,
+      "Trofa": 962000,
+      "Santo Tirso": 1620000,
+      "Maia": 3382000,
+      "Vila do Conde": 1822000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 898000,
+       "var": -6.7
+      },
+      {
+       "v": 39434000,
+       "var": -5.2
+      },
+      {
+       "v": 15443000,
+       "var": -4.4
+      },
+      {
+       "v": 248734000,
+       "var": -4.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1066000,
+      "Guimarães": 3527000,
+      "Vila Nova de Famalicão": 3087000,
+      "Vizela": 450000,
+      "Trofa": 898000,
+      "Santo Tirso": 1520000,
+      "Maia": 3193000,
+      "Vila do Conde": 1702000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 875000,
+       "var": -2.6
+      },
+      {
+       "v": 37782000,
+       "var": -4.2
+      },
+      {
+       "v": 14947000,
+       "var": -3.2
+      },
+      {
+       "v": 240674000,
+       "var": -3.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1053000,
+      "Guimarães": 3375000,
+      "Vila Nova de Famalicão": 3003000,
+      "Vizela": 440000,
+      "Trofa": 875000,
+      "Santo Tirso": 1480000,
+      "Maia": 3068000,
+      "Vila do Conde": 1653000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 897000,
+       "var": 2.5
+      },
+      {
+       "v": 38361000,
+       "var": 1.5
+      },
+      {
+       "v": 15215000,
+       "var": 1.8
+      },
+      {
+       "v": 244566000,
+       "var": 1.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1078000,
+      "Guimarães": 3434000,
+      "Vila Nova de Famalicão": 3044000,
+      "Vizela": 453000,
+      "Trofa": 897000,
+      "Santo Tirso": 1500000,
+      "Maia": 3129000,
+      "Vila do Conde": 1680000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 960000,
+       "var": 7
+      },
+      {
+       "v": 41089000,
+       "var": 7.1
+      },
+      {
+       "v": 16185000,
+       "var": 6.4
+      },
+      {
+       "v": 260478000,
+       "var": 6.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1163000,
+      "Guimarães": 3594000,
+      "Vila Nova de Famalicão": 3217000,
+      "Vizela": 494000,
+      "Trofa": 960000,
+      "Santo Tirso": 1563000,
+      "Maia": 3395000,
+      "Vila do Conde": 1799000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 1031000,
+       "var": 7.4
+      },
+      {
+       "v": 43940000,
+       "var": 6.9
+      },
+      {
+       "v": 17154000,
+       "var": 6
+      },
+      {
+       "v": 277316000,
+       "var": 6.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1214000,
+      "Guimarães": 3821000,
+      "Vila Nova de Famalicão": 3398000,
+      "Vizela": 531000,
+      "Trofa": 1031000,
+      "Santo Tirso": 1680000,
+      "Maia": 3561000,
+      "Vila do Conde": 1918000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 1067000,
+       "var": 3.5
+      },
+      {
+       "v": 45764000,
+       "var": 4.2
+      },
+      {
+       "v": 17839000,
+       "var": 4
+      },
+      {
+       "v": 287235000,
+       "var": 3.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1264000,
+      "Guimarães": 3961000,
+      "Vila Nova de Famalicão": 3571000,
+      "Vizela": 546000,
+      "Trofa": 1067000,
+      "Santo Tirso": 1744000,
+      "Maia": 3687000,
+      "Vila do Conde": 1999000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 1081000,
+       "var": 1.3
+      },
+      {
+       "v": 46049000,
+       "var": 0.6
+      },
+      {
+       "v": 17623000,
+       "var": -1.2
+      },
+      {
+       "v": 283688000,
+       "var": -1.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 1175000,
+      "Guimarães": 3896000,
+      "Vila Nova de Famalicão": 3429000,
+      "Vizela": 522000,
+      "Trofa": 1081000,
+      "Santo Tirso": 1778000,
+      "Maia": 3707000,
+      "Vila do Conde": 2035000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 1110000,
-       "var": null
+       "var": 2.7
       },
       {
        "v": 46677000,
-       "var": null
+       "var": 1.4
       },
       {
        "v": 18063000,
-       "var": null
+       "var": 2.5
       },
       {
        "v": 291048000,
-       "var": null
+       "var": 2.6
       }
      ],
      "concelhos": {
@@ -28825,29 +30375,339 @@
    ],
    "fonte": "INE, com dados de: Direção-Geral das Autarquias Locais",
    "ine": "0013908",
-   "ineAntigo": null,
+   "ineAntigo": "0009480",
    "metodoGrupo": "soma",
    "unidadeINE": "Euro (€)",
    "origem": "ine",
    "linhas": [
     {
+     "periodo": "2011",
+     "valores": [
+      {
+       "v": 402000,
+       "var": null
+      },
+      {
+       "v": 65857000,
+       "var": null
+      },
+      {
+       "v": 16373000,
+       "var": null
+      },
+      {
+       "v": 376541000,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 460000,
+      "Guimarães": 3130000,
+      "Vila Nova de Famalicão": 2547000,
+      "Vizela": 264000,
+      "Trofa": 402000,
+      "Santo Tirso": 1378000,
+      "Maia": 5946000,
+      "Vila do Conde": 2246000
+     }
+    },
+    {
+     "periodo": "2012",
+     "valores": [
+      {
+       "v": 808000,
+       "var": 101
+      },
+      {
+       "v": 69010000,
+       "var": 4.8
+      },
+      {
+       "v": 17735000,
+       "var": 8.3
+      },
+      {
+       "v": 391342000,
+       "var": 3.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 480000,
+      "Guimarães": 3300000,
+      "Vila Nova de Famalicão": 2776000,
+      "Vizela": 277000,
+      "Trofa": 808000,
+      "Santo Tirso": 1449000,
+      "Maia": 6267000,
+      "Vila do Conde": 2378000
+     }
+    },
+    {
+     "periodo": "2013",
+     "valores": [
+      {
+       "v": 808000,
+       "var": 0
+      },
+      {
+       "v": 69010000,
+       "var": 0
+      },
+      {
+       "v": 17735000,
+       "var": 0
+      },
+      {
+       "v": 392059000,
+       "var": 0.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 480000,
+      "Guimarães": 3300000,
+      "Vila Nova de Famalicão": 2776000,
+      "Vizela": 277000,
+      "Trofa": 808000,
+      "Santo Tirso": 1449000,
+      "Maia": 6267000,
+      "Vila do Conde": 2378000
+     }
+    },
+    {
+     "periodo": "2014",
+     "valores": [
+      {
+       "v": 886000,
+       "var": 9.7
+      },
+      {
+       "v": 63040000,
+       "var": -8.7
+      },
+      {
+       "v": 17879000,
+       "var": 0.8
+      },
+      {
+       "v": 334329000,
+       "var": -14.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 453000,
+      "Guimarães": 3516000,
+      "Vila Nova de Famalicão": 2863000,
+      "Vizela": 327000,
+      "Trofa": 886000,
+      "Santo Tirso": 1440000,
+      "Maia": 5963000,
+      "Vila do Conde": 2431000
+     }
+    },
+    {
+     "periodo": "2015",
+     "valores": [
+      {
+       "v": 1032000,
+       "var": 16.5
+      },
+      {
+       "v": 79772000,
+       "var": 26.5
+      },
+      {
+       "v": 22010000,
+       "var": 23.1
+      },
+      {
+       "v": 412095000,
+       "var": 23.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 619000,
+      "Guimarães": 4237000,
+      "Vila Nova de Famalicão": 3683000,
+      "Vizela": 442000,
+      "Trofa": 1032000,
+      "Santo Tirso": 1889000,
+      "Maia": 7302000,
+      "Vila do Conde": 2806000
+     }
+    },
+    {
+     "periodo": "2016",
+     "valores": [
+      {
+       "v": 1088000,
+       "var": 5.4
+      },
+      {
+       "v": 81951000,
+       "var": 2.7
+      },
+      {
+       "v": 22738000,
+       "var": 3.3
+      },
+      {
+       "v": 414465000,
+       "var": 0.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 632000,
+      "Guimarães": 4467000,
+      "Vila Nova de Famalicão": 3855000,
+      "Vizela": 453000,
+      "Trofa": 1088000,
+      "Santo Tirso": 1856000,
+      "Maia": 7473000,
+      "Vila do Conde": 2914000
+     }
+    },
+    {
+     "periodo": "2017",
+     "valores": [
+      {
+       "v": 1029000,
+       "var": -5.4
+      },
+      {
+       "v": 77139000,
+       "var": -5.9
+      },
+      {
+       "v": 21465000,
+       "var": -5.6
+      },
+      {
+       "v": 390290000,
+       "var": -5.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 597000,
+      "Guimarães": 4218000,
+      "Vila Nova de Famalicão": 3652000,
+      "Vizela": 455000,
+      "Trofa": 1029000,
+      "Santo Tirso": 1708000,
+      "Maia": 7084000,
+      "Vila do Conde": 2722000
+     }
+    },
+    {
+     "periodo": "2018",
+     "valores": [
+      {
+       "v": 1118000,
+       "var": 8.6
+      },
+      {
+       "v": 83987000,
+       "var": 8.9
+      },
+      {
+       "v": 23626000,
+       "var": 10.1
+      },
+      {
+       "v": 420505000,
+       "var": 7.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 638000,
+      "Guimarães": 4749000,
+      "Vila Nova de Famalicão": 4002000,
+      "Vizela": 515000,
+      "Trofa": 1118000,
+      "Santo Tirso": 1869000,
+      "Maia": 7726000,
+      "Vila do Conde": 3009000
+     }
+    },
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 1208000,
+       "var": 8.1
+      },
+      {
+       "v": 85777000,
+       "var": 2.1
+      },
+      {
+       "v": 24838000,
+       "var": 5.1
+      },
+      {
+       "v": 426990000,
+       "var": 1.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 673000,
+      "Guimarães": 4975000,
+      "Vila Nova de Famalicão": 4236000,
+      "Vizela": 539000,
+      "Trofa": 1208000,
+      "Santo Tirso": 1971000,
+      "Maia": 8086000,
+      "Vila do Conde": 3150000
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 1283000,
+       "var": 6.2
+      },
+      {
+       "v": 93181000,
+       "var": 8.6
+      },
+      {
+       "v": 26348000,
+       "var": 6.1
+      },
+      {
+       "v": 454059000,
+       "var": 6.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 720000,
+      "Guimarães": 5336000,
+      "Vila Nova de Famalicão": 4513000,
+      "Vizela": 524000,
+      "Trofa": 1283000,
+      "Santo Tirso": 2098000,
+      "Maia": 8501000,
+      "Vila do Conde": 3373000
+     }
+    },
+    {
      "periodo": "2021",
      "valores": [
       {
        "v": 1454000,
-       "var": null
+       "var": 13.3
       },
       {
        "v": 102048000,
-       "var": null
+       "var": 9.5
       },
       {
        "v": 28997000,
-       "var": null
+       "var": 10.1
       },
       {
        "v": 489952000,
-       "var": null
+       "var": 7.9
       }
      ],
      "concelhos": {

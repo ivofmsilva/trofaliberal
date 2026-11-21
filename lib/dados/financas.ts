@@ -181,3 +181,39 @@ export function comparacaoReceitas() {
   return linhas.filter((x): x is NonNullable<typeof x> => x !== null);
 }
 export const COLUNAS_COMPARACAO = ["Trofa", "Área Metropolitana do Porto", "Ave e concelhos vizinhos"];
+
+// Receita de cada imposto municipal (e da participação no IRS), de 2011 a 2025, do INE (com dados da DGAL; séries 0009480
+// até 2020 e 0013908 desde 2021, iguais em 2021). Total da Trofa e, por habitante, a Trofa ao lado das comparações.
+export const IMPOSTOS_MUNICIPAIS = [
+  ["receita_imi", "IMI"],
+  ["receita_imt", "IMT"],
+  ["receita_iuc", "IUC"],
+  ["receita_derrama", "Derrama"],
+  ["receita_participacao_irs", "Participação no IRS"],
+] as const;
+
+export type ReceitaImposto = {
+  slug: string;
+  nome: string;
+  periodos: string[];
+  colunas: string[];
+  total: (number | null)[];
+  porHabitante: (number | null)[][]; // uma série por coluna (Trofa, AMP, 8 concelhos, Portugal)
+};
+
+export function receitaPorImposto(): ReceitaImposto[] {
+  const pop = porSlug("populacao_media_residente");
+  return IMPOSTOS_MUNICIPAIS.flatMap(([slug, nome]) => {
+    const i = porSlug(slug);
+    if (!i || !pop) return [];
+    const periodos = i.linhas.map((l) => l.periodo);
+    const porHabitante = i.colunas.map((_, k) =>
+      i.linhas.map((l) => {
+        const p = pop.linhas.find((x) => x.periodo === l.periodo)?.valores[k]?.v;
+        const v = l.valores[k]?.v;
+        return v != null && p ? v / p : null;
+      }),
+    );
+    return [{ slug, nome, periodos, colunas: i.colunas, total: i.linhas.map((l) => l.valores[0]?.v ?? null), porHabitante }];
+  });
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ROTULO_GRUPO } from "@/lib/dados/rotulos";
 import Grafico from "@/components/dados/Grafico";
+import ImpostosMunicipais from "@/components/dados/ImpostosMunicipais";
 import TaxasLocais from "@/components/dados/TaxasLocais";
 import { compacto, milhoes, numero } from "@/lib/dados/formatar";
 import {
@@ -27,6 +28,7 @@ import {
   receitaCorrente,
   receitaTotal,
   transferenciasCorrentes,
+  receitaPorImposto,
   type SerieContas,
 } from "@/lib/dados/financas";
 
@@ -134,6 +136,7 @@ function Titulo({ id, children, texto }: { id: string; children: React.ReactNode
 }
 
 export default function Financas() {
+  const impostosMunicipais = receitaPorImposto();
   const pessoalAtual = ultimo(gastosPessoal);
   const pessoalOrc = orcamento[0];
   // Por habitante: só há valores nos anos em que há população média (INE) nos dados recolhidos.
@@ -262,6 +265,18 @@ export default function Financas() {
             .
           </p>
           <Quadros itens={[receitaTotal, receitaCorrente, transferenciasCorrentes, impostosDiretos]} />
+
+          <h3 id="impostos" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Receita de cada imposto</h3>
+          <p className="mt-2 mb-6 max-w-3xl text-texto">
+            O que a Câmara recebeu de IMI, IMT, IUC e derrama, e da participação no IRS, de {impostosMunicipais[0]?.periodos[0]} a{" "}
+            {impostosMunicipais[0]?.periodos.at(-1)}. Por habitante, a dividir pela população média de cada ano, ao lado da Área
+            Metropolitana do Porto, dos 8 concelhos próximos e de Portugal.
+          </p>
+          <ImpostosMunicipais impostos={impostosMunicipais} />
+          <p className="mt-4 max-w-3xl text-sm text-apagado">
+            Fonte: INE, com dados da Direção-Geral das Autarquias Locais (receitas das câmaras municipais). A participação no IRS não é
+            um imposto da Câmara: é a parte do IRS dos residentes que o Estado transfere para o município.
+          </p>
         </section>
 
         <section aria-label="Dívida">
