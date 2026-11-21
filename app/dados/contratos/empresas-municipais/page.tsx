@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Grafico from "@/components/dados/Grafico";
 import SubNav from "@/components/dados/SubNav";
 import { compacto, numero } from "@/lib/dados/formatar";
-import { contaEm, contas, contratoEm, contratos, contratosPublicos, recolhido, trofambiente, ultimoContrato } from "@/lib/dados/empresas";
+import { contaEm, contas, contratoEm, contratos, contratosPublicos, pessoasAoServico, recolhido, trofambiente, ultimoContrato } from "@/lib/dados/empresas";
 
 export const metadata: Metadata = {
   title: "Empresas municipais",
@@ -246,6 +246,43 @@ export default function EmpresasMunicipais() {
                 <span key={c.ano}> * {c.ano}: como corrigido no relatório de {c.relatorio}.</span>
               ))}
           </p>
+
+          <h3 id="trabalhadores" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Trabalhadores</h3>
+          <p className="mt-2 mb-6 max-w-3xl text-texto">
+            Número médio de pessoas ao serviço da empresa em cada ano. Em abril de 2015 o saneamento passou para a Águas do Norte e,
+            segundo o relatório e contas de 2015, &ldquo;grande parte da estrutura de pessoal acompanhou essa transferência&rdquo;.
+          </p>
+          <div className="max-w-3xl">
+            {(() => {
+              const anosP = Array.from({ length: pessoasAoServico.at(-1)!.ano - pessoasAoServico[0].ano + 1 }, (_, k) => pessoasAoServico[0].ano + k);
+              return (
+                <Grafico
+                  periodos={anosP.map(String)}
+                  series={[{ nome: "Número médio de pessoas ao serviço", valores: anosP.map((a) => pessoasAoServico.find((p) => p.ano === a)?.media ?? null) }]}
+                  unidade="pessoas"
+                  semComparar
+                  nivel
+                  casas={0}
+                />
+              );
+            })()}
+          </div>
+          <details className="mt-3 text-sm text-apagado">
+            <summary className="cursor-pointer hover:text-tinta">
+              Fonte: nota dos gastos com o pessoal de cada relatório e contas. Ver as páginas
+            </summary>
+            <p className="mt-2 max-w-3xl">
+              {pessoasAoServico.map((p, k) => (
+                <span key={p.ano}>
+                  {k > 0 ? " · " : ""}
+                  <Externa href={doc(new RegExp(`^Relat.rio e contas ${p.ano}$`, "i"))}>
+                    {p.ano}: {p.media}, p. {p.pagina} ↗
+                  </Externa>
+                </span>
+              ))}
+              . Página do ficheiro PDF. Não há número para 2010 e 2011. O relatório de 2014 repete o quadro de 2013.
+            </p>
+          </details>
         </section>
 
         <section aria-label="Contratos públicos">

@@ -30,6 +30,9 @@ import {
   emprestimosContraidos,
   limiteDivida,
   prazoPagamentos,
+  trabalhadoresCamara,
+  FONTE_TRABALHADORES,
+  ffdPorArea,
   type SerieContas,
 } from "@/lib/dados/financas";
 
@@ -251,6 +254,45 @@ export default function Financas() {
             Fonte: INE, com dados da Direção-Geral das Autarquias Locais (receitas das câmaras municipais). A participação no IRS não é
             um imposto da Câmara: é a parte do IRS dos residentes que o Estado transfere para o município.
           </p>
+
+          <h3 id="descentralizacao" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Competências transferidas pelo Estado</h3>
+          <p className="mt-2 mb-6 max-w-3xl text-texto">
+            Desde 2022 a Câmara tem competências que eram do Estado: na educação (desde abril de 2022), na ação social (abril de 2023) e
+            na saúde (janeiro de 2024). O Estado paga-as pelo Fundo de Financiamento da Descentralização, que entra nas receitas correntes.
+          </p>
+          <div className="max-w-2xl overflow-x-auto rounded-xl border border-linha">
+            <table className="w-full text-sm">
+              <thead className="bg-cinza text-left text-apagado">
+                <tr>
+                  <th scope="col" className="px-3 py-3 font-medium sm:px-4">Em M€</th>
+                  <th scope="col" className="px-2 py-3 text-right font-medium sm:px-3">Educação</th>
+                  <th scope="col" className="px-2 py-3 text-right font-medium sm:px-3">Ação social</th>
+                  <th scope="col" className="px-2 py-3 text-right font-medium sm:px-3">Saúde</th>
+                  <th scope="col" className="px-3 py-3 text-right font-medium sm:px-4">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...ffdPorArea].reverse().map((f) => (
+                  <tr key={f.ano} className="border-t border-linha tabular-nums">
+                    <th scope="row" className="whitespace-nowrap px-3 py-2.5 text-left font-medium text-tinta sm:px-4">
+                      {f.ano}
+                      {f.calculado ? "*" : ""}
+                    </th>
+                    <td className="px-2 py-2.5 text-right text-texto sm:px-3">{m(f.educacao)}</td>
+                    <td className="px-2 py-2.5 text-right text-texto sm:px-3">{m(f.acaoSocial)}</td>
+                    <td className="px-2 py-2.5 text-right text-texto sm:px-3">{m(f.saude)}</td>
+                    <td className="px-3 py-2.5 text-right font-medium text-tinta sm:px-4">{m(f.educacao + (f.acaoSocial ?? 0) + (f.saude ?? 0))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 max-w-3xl text-sm text-apagado">
+            Fonte: relatórios de gestão e contas (mapa da transferência de competências); os totais são iguais aos do INE. * Em 2024 o mapa
+            do relatório não soma o que foi recebido: a divisão por área é calculada a partir do relatório de 2025. Antes de 2022 a Câmara
+            já recebia do Ministério da Educação, por um contrato de execução, sobretudo para o pessoal não docente (1,72 M€ em 2021); esse
+            dinheiro não é deste fundo.
+          </p>
         </section>
 
         <section aria-label="Taxas e impostos locais">
@@ -301,6 +343,40 @@ export default function Financas() {
             </p>
           )}
           <Quadros itens={[despesaCorrente, despesaPessoalPaga, despesaBensServicos, gastosPessoal, gastosFse]} />
+
+          <h3 id="trabalhadores" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Trabalhadores da Câmara</h3>
+          <p className="mt-2 mb-6 max-w-3xl text-texto">
+            Quantas pessoas trabalham nos serviços municipais, segundo a DGAL: {trabalhadoresCamara["2016"]} em 2016 e{" "}
+            {trabalhadoresCamara["2025"]} em 2025. Não há série pública antes de 2016.
+          </p>
+          <div className="max-w-3xl">
+            <Grafico
+              periodos={Object.keys(trabalhadoresCamara)}
+              series={[{ nome: "Trabalhadores da Câmara", valores: Object.values(trabalhadoresCamara) }]}
+              unidade="pessoas"
+              semComparar
+              nivel
+              casas={0}
+            />
+          </div>
+          <ul className="mt-4 max-w-3xl list-disc space-y-1.5 pl-5 text-sm text-texto">
+            <li>
+              2018: concursos para 70 lugares, para regularizar vínculos precários, com contratos em 2018 e 2019 (relatório de contas de
+              2019).
+            </li>
+            <li>
+              Com a transferência de competências na educação, em abril de 2022, entraram mais 30 trabalhadores; o pessoal não docente das
+              escolas básicas e do pré-escolar já era da Câmara desde 2009, por contrato com o Ministério da Educação (orçamento de 2026).
+            </li>
+          </ul>
+          <p className="mt-3 max-w-3xl text-sm text-apagado">
+            Fonte:{" "}
+            <a href={FONTE_TRABALHADORES} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+              DGAL, Portal Autárquico, número de trabalhadores por município ↗
+            </a>{" "}
+            (a partir do balanço social). Os relatórios de contas dão números um pouco diferentes (em 2025, 491 no anexo), e o orçamento
+            de 2026 conta 502, dos quais 219 nas escolas.
+          </p>
         </section>
 
         <section aria-label="Dívida">

@@ -244,3 +244,22 @@ export const limiteDivida = {
   divida: porSlug("divida_total_municipio"),
 };
 export const prazoPagamentos = porSlug("prazo_medio_pagamentos");
+
+// Trabalhadores dos serviços municipais: DGAL, Portal Autárquico → Recursos Humanos, "Número de trabalhadores – por município e
+// serviço municipalizado – Série 2016–2025" (folha Serviços_municipais, linha TROFA; fonte SIIAL, a partir do balanço social e dos
+// recursos humanos trimestrais; atualizado a 30/10/2026). O ficheiro não diz a data de referência dentro do ano.
+export const trabalhadoresCamara: Record<string, number> = {
+  "2016": 294, "2017": 284, "2018": 354, "2019": 340, "2020": 335, "2021": 333, "2022": 385, "2023": 427, "2024": 474, "2025": 497,
+};
+export const FONTE_TRABALHADORES = "https://portalautarquico.dgal.gov.pt/pt-PT/recursos-humanos/";
+
+// Fundo de Financiamento da Descentralização por área (receita cobrada, euros), do mapa "Transferência de competências de órgãos
+// do Estado para órgãos das autarquias locais" dos relatórios de contas: 2022 e 2023 do relatório de 2023 (p. impressa 509), 2025
+// do de 2025 (PDF p. 551). 2024: o mapa do relatório de 2024 não soma o que foi cobrado (5 618 149 €); a ação social é a desse
+// mapa, a saúde a do mapa de 2025 ("Até N") e a educação a diferença (11 603 765,70 − 6 821 040,70). Totais iguais aos do INE.
+export const ffdPorArea: { ano: number; educacao: number; acaoSocial: number | null; saude: number | null; calculado?: boolean }[] = [
+  { ano: 2022, educacao: 2260633.7, acaoSocial: null, saude: null },
+  { ano: 2023, educacao: 4560407, acaoSocial: 303498, saude: null },
+  { ano: 2024, educacao: 4782725, acaoSocial: 409260, saude: 426164, calculado: true },
+  { ano: 2025, educacao: 4939578, acaoSocial: 412660, saude: 648710.85 },
+];

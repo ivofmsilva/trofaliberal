@@ -55,3 +55,25 @@ export const contratoEm = (ano: number) => contratos.find((c) => c.ano === ano) 
 export const contaEm = (ano: number) => contas.find((c) => c.ano === ano) ?? null;
 export const alteracoesDe = (ano: number) => trofambiente.alteracoes.filter((a) => a.ano === ano);
 export const contratosPublicos = base as unknown as ContratoPublico[];
+
+// Número médio de pessoas ao serviço da empresa (nota "Número de pessoas ao serviço" até 2009 e "Benefícios dos empregados"
+// desde 2012), com a página do PDF de cada relatório e contas. 2010 e 2011 sem número; o quadro de 2014 repete o de 2013.
+export const pessoasAoServico: { ano: number; media: number; pagina: number }[] = [
+  { ano: 2007, media: 24, pagina: 9 },
+  { ano: 2008, media: 24, pagina: 9 },
+  { ano: 2009, media: 25, pagina: 37 },
+  { ano: 2012, media: 29, pagina: 67 },
+  { ano: 2013, media: 29, pagina: 85 },
+  { ano: 2014, media: 29, pagina: 83 },
+  { ano: 2015, media: 11, pagina: 78 },
+  { ano: 2016, media: 14, pagina: 79 },
+  { ano: 2017, media: 16, pagina: 77 },
+  { ano: 2018, media: 17, pagina: 74 },
+  { ano: 2019, media: 16, pagina: 71 },
+  { ano: 2020, media: 22, pagina: 74 },
+  { ano: 2021, media: 21, pagina: 76 },
+  { ano: 2022, media: 16, pagina: 72 },
+  { ano: 2023, media: 19, pagina: 73 },
+  { ano: 2024, media: 19, pagina: 74 },
+  { ano: 2025, media: 19, pagina: 74 },
+];
