@@ -125,7 +125,7 @@ export default function TaxasLocais() {
               IMI_LISTAS[x.sessao] && x.rusticos === null ? `${pc(imiRusticos(x), 1)} †` : pc(x.rusticos, 1),
               textoVoto(x, x.sessao),
             ])}
-          />
+          >
           <p className="mt-2 max-w-3xl text-sm text-apagado">
             † Até 2017 o texto da deliberação não diz a taxa (está num anexo). Valor das listas de taxas de IMI publicadas a partir
             das da Autoridade Tributária ({Object.entries(IMI_LISTAS).map(([sessao, l], k) => (
@@ -137,6 +137,7 @@ export default function TaxasLocais() {
               </span>
             ))}).
           </p>
+          </Tabela>
           {imiFamiliar.length > 0 &&
             (() => {
               const { partes, falta, unanimesDesde } = textoIMIFamiliar();
@@ -190,7 +191,7 @@ export default function TaxasLocais() {
               x.retificacao ? "—" : IRS_FINANCAS[x.sessao] !== undefined ? `${pc(IRS_FINANCAS[x.sessao], 1)} *` : pc(x.percentagem, 1),
               textoVoto(x, x.sessao),
             ])}
-          />
+          >
           <p className="mt-2 max-w-3xl text-sm text-apagado">
             * Valor da{" "}
             <a href={FINANCAS} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
@@ -199,6 +200,7 @@ export default function TaxasLocais() {
             (taxa comunicada às Finanças para esse ano de rendimentos). Até 2017 a taxa não está no texto da deliberação; a de 3 de
             dezembro de 2020 diz 0,48% por engano e foi retificada a 19 de janeiro de 2021.
           </p>
+          </Tabela>
         </section>
 
         <section aria-label="Derrama" id="taxa-derrama" className="scroll-mt-24">
@@ -236,7 +238,9 @@ export default function TaxasLocais() {
 
         <p className="max-w-3xl text-sm text-apagado">
           Fonte: deliberações da Assembleia Municipal da Trofa (mun-trofa.pt), lidas ponto a ponto, com a votação tal como
-          está no documento. Dados até à deliberação de {dataCurta(ultimaSessao)}. Cada ligação abre o PDF original. A taxa da derrama reduzida aplica-se, segundo o texto, a quem
+          está no documento. Dados até à deliberação de {dataCurta(ultimaSessao)}. Cada ligação abre o PDF original. Nos anos
+          antigos em que a deliberação não diz a taxa do IMI ou do IRS, o valor vem de outra fonte, indicada por baixo das
+          deliberações. A taxa da derrama reduzida aplica-se, segundo o texto, a quem
           tem um volume de negócios abaixo de um limite fixado em cada deliberação. Nas votações do mandato atual (desde
           outubro de 2025) os grupos aparecem pelo nome da lista: Unidos pela Trofa (PSD e CDS-PP) e Trofa em Primeiro (PS, PAN
           e Livre).{" "}
@@ -250,9 +254,12 @@ export default function TaxasLocais() {
   );
 }
 
-function Tabela({ colunas, linhas }: { colunas: string[]; linhas: React.ReactNode[][] }) {
+// Fechada por defeito, para a página não ficar enorme; as notas (* e †) vão dentro, junto da tabela a que se referem.
+function Tabela({ colunas, linhas, children }: { colunas: string[]; linhas: React.ReactNode[][]; children?: React.ReactNode }) {
   return (
-    <div className="mt-8 overflow-x-auto rounded-xl border border-linha">
+    <details className="mt-6">
+    <summary className="cursor-pointer text-sm font-medium text-tinta hover:underline">Ver as deliberações e as votações</summary>
+    <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full text-sm">
         <thead className="bg-cinza text-left text-apagado">
           <tr>
@@ -276,5 +283,7 @@ function Tabela({ colunas, linhas }: { colunas: string[]; linhas: React.ReactNod
         </tbody>
       </table>
     </div>
+    {children}
+    </details>
   );
 }

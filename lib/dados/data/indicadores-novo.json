@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-21T11:57:24.549Z",
+ "juntado": "2026-11-21T12:03:03.499Z",
  "atualizado": "21/11/2026",
  "indicadores": [
   {
@@ -27188,7 +27188,7 @@
    "titulo": "Dívida em % do limite legal",
    "categoria": "financas",
    "unidade": "% do limite legal",
-   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita. Corresponde ao que a página das Finanças chama dívida efetiva (com pequenas diferenças entre a DGAL e o relatório de contas).",
+   "texto": "Dívida total da Câmara a dividir pelo limite que a lei lhe fixa, vezes 100. Abaixo de 100, a dívida está dentro do limite; acima de 100, ultrapassa-o. O limite é uma vez e meia a média da receita corrente dos três anos anteriores, por isso a percentagem muda tanto com a dívida como com a receita. Corresponde ao que a página das Finanças chama dívida efetiva: de 2021 em diante os dois valores quase coincidem; antes, o da DGAL é mais alto.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -27459,7 +27459,7 @@
    "titulo": "Dívida da Câmara por habitante (a que conta para o limite legal)",
    "categoria": "financas",
    "unidade": "€ por habitante",
-   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes. Corresponde ao que a página das Finanças chama dívida efetiva (com pequenas diferenças entre a DGAL e o relatório de contas).",
+   "texto": "Dívida total da Câmara no fim do ano, tal como conta para o limite legal, a dividir pela população média. Permite comparar concelhos de tamanhos diferentes. Corresponde ao que a página das Finanças chama dívida efetiva: de 2021 em diante os dois valores quase coincidem; antes, o da DGAL é mais alto.",
    "palavras": "dívida câmara",
    "colunas": [
     "Trofa",
@@ -27467,9 +27467,13 @@
     "Ave e concelhos vizinhos",
     "Portugal"
    ],
-   "fonte": "cálculo nosso: dívida total (DGAL) ÷ população média residente (INE)",
-   "metodoGrupo": "portal",
-   "origem": "portal",
+   "fonte": "cálculo nosso: dívida que conta para o limite legal (DGAL) ÷ população média residente (INE)",
+   "metodoGrupo": "razão das somas",
+   "componentes": [
+    "divida_total_municipio",
+    "populacao_media_residente"
+   ],
+   "origem": "calculado",
    "linhas": [
     {
      "periodo": "2014",
@@ -27490,7 +27494,17 @@
        "v": 616,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2015",
@@ -27511,7 +27525,17 @@
        "v": 553,
        "var": -10.2
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2016",
@@ -27532,7 +27556,17 @@
        "v": 486,
        "var": -12.1
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2017",
@@ -27553,7 +27587,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2018",
@@ -27574,7 +27618,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2019",
@@ -27595,7 +27649,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2020",
@@ -27616,7 +27680,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2021",
@@ -27637,7 +27711,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2022",
@@ -27658,7 +27742,17 @@
        "v": 329,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2023",
@@ -27679,7 +27773,17 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     },
     {
      "periodo": "2024",
@@ -27700,13 +27804,54 @@
        "v": null,
        "var": null
       }
-     ]
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 349,
+       "var": -17.7
+      },
+      {
+       "v": 242,
+       "var": -3.6
+      },
+      {
+       "v": 193,
+       "var": 0
+      },
+      {
+       "v": 339,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Trofa": null,
+      "Santo Tirso": null,
+      "Maia": null,
+      "Vila do Conde": null,
+      "Vila Nova de Famalicão": null,
+      "Guimarães": null,
+      "Vizela": null,
+      "Fafe": null
+     }
     }
    ]
   },
   {
    "slug": "divida_total_municipio",
-   "titulo": "Dívida total da Câmara (para efeitos do limite legal)",
+   "titulo": "Dívida da Câmara que conta para o limite legal",
    "categoria": "financas",
    "unidade": "€",
    "texto": "O que a Câmara deve a 31 de dezembro, calculado como manda a Lei das Finanças Locais: empréstimos, dívidas a fornecedores e outros débitos, incluindo a parte que lhe cabe nas dívidas de empresas municipais, associações de municípios e outras entidades em que participa. As dívidas de operações não orçamentais ficam de fora.",

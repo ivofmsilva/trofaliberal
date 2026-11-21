@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Grafico from "@/components/dados/Grafico";
 import ImpostosMunicipais from "@/components/dados/ImpostosMunicipais";
 import TaxasLocais from "@/components/dados/TaxasLocais";
@@ -26,6 +27,9 @@ import {
   receitaTotal,
   transferenciasCorrentes,
   receitaPorImposto,
+  emprestimosContraidos,
+  limiteDivida,
+  prazoPagamentos,
   type SerieContas,
 } from "@/lib/dados/financas";
 
@@ -47,9 +51,13 @@ const pc = (v: number | null, casas = 0) => (v === null ? "—" : `${v > 0 ? "+"
 const m = (v: number | null, casas = 2) => (v === null ? "—" : numero(v / 1_000_000, casas));
 
 function Quadros({ itens }: { itens: SerieContas[] }) {
+  // a receita total vem do INE e as outras séries dos relatórios: o resumo diz as duas fontes quando há mistura
+  const comINE = itens.some((s) => s.quadro.startsWith("INE"));
   return (
     <details className="mt-3 text-sm text-apagado">
-      <summary className="cursor-pointer hover:text-tinta">Fonte: relatórios de gestão e contas de cada ano. Ver os quadros usados</summary>
+      <summary className="cursor-pointer hover:text-tinta">
+        {comINE ? "Fontes: relatórios de gestão e contas e INE. Ver de onde vem cada série" : "Fonte: relatórios de gestão e contas de cada ano. Ver os quadros usados"}
+      </summary>
       <ul className="mt-2 space-y-1.5">
         {itens.map((s) => (
           <li key={s.id}>
@@ -70,8 +78,9 @@ function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: bool
   const crescimentos = series.map((s) => crescimento(s.valores));
   const comCrescimento = crescimentos.some((c) => c !== null);
   return (
-    <>
-    <div className="mt-6 overflow-x-auto rounded-xl border border-linha">
+    <details className="mt-6">
+    <summary className="cursor-pointer text-sm font-medium text-tinta hover:underline">Ver os valores, ano a ano</summary>
+    <div className="mt-3 overflow-x-auto rounded-xl border border-linha">
       <table className="w-full text-sm" style={{ minWidth: `${14 + anos.length * 4}rem` }}>
         <thead className="bg-cinza text-left text-apagado">
           <tr>
@@ -112,7 +121,7 @@ function Tabela({ series, euros = false }: { series: SerieContas[]; euros?: bool
       </table>
     </div>
     <AvisoDeslizar />
-    </>
+    </details>
   );
 }
 
@@ -134,6 +143,12 @@ function Titulo({ id, children, texto }: { id: string; children: React.ReactNode
 
 export default function Financas() {
   const impostosMunicipais = receitaPorImposto();
+  // Limite legal (DGAL): último ano e os anos acima de 100%
+  const pctLimite = limiteDivida.percentagem?.linhas ?? [];
+  const ultLimite = pctLimite[pctLimite.length - 1];
+  const valorNoAno = (ind: typeof limiteDivida.limite, per?: string) => ind?.linhas.find((l) => l.periodo === per)?.valores[0]?.v ?? null;
+  const acimaLimite = pctLimite.filter((l) => (l.valores[0]?.v ?? 0) > 100).map((l) => l.periodo);
+  const ultPrazo = prazoPagamentos?.linhas[prazoPagamentos.linhas.length - 1];
   const pessoalAtual = ultimo(gastosPessoal);
   // Por habitante: só há valores nos anos em que há população média (INE) nos dados recolhidos.
   const habitantes = porHabitante(despesaPessoalPaga).valores;
@@ -277,6 +292,14 @@ export default function Financas() {
             profissionais e o restante (0,05 M€) em indemnizações, outros gastos com o pessoal e outros encargos sociais. O relatório
             indica como razões do aumento a atualização remuneratória, o reforço de recursos humanos e a descentralização de competências.
           </p>
+          {ultPrazo && (
+            <p className="mt-2 max-w-3xl text-sm text-texto">
+              Prazo médio de pagamento a fornecedores (DGAL): {numero(ultPrazo.valores[0]?.v ?? 0)} dias em {ultPrazo.periodo}.{" "}
+              <Link href="/dados/indicadores/prazo_medio_pagamentos" className="underline underline-offset-2 hover:text-tinta">
+                Ver a evolução
+              </Link>
+            </p>
+          )}
           <Quadros itens={[despesaCorrente, despesaPessoalPaga, despesaBensServicos, gastosPessoal, gastosFse]} />
         </section>
 
@@ -299,6 +322,78 @@ export default function Financas() {
           </div>
           <Tabela series={[dividaTotal, dividaEfetiva]} />
           <Quadros itens={[dividaTotal, dividaEfetiva]} />
+
+          {ultLimite && (
+            <>
+              <h3 id="limite" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Limite legal da dívida</h3>
+              <p className="mt-2 mb-6 max-w-3xl text-texto">
+                A lei limita a dívida de cada câmara a uma vez e meia a média da receita corrente dos três anos anteriores. Em{" "}
+                {ultLimite.periodo}, o limite era {m(valorNoAno(limiteDivida.limite, ultLimite.periodo))} M€ e a dívida que conta para ele{" "}
+                {m(valorNoAno(limiteDivida.divida, ultLimite.periodo))} M€: {numero(ultLimite.valores[0]?.v ?? 0, 1)}% do limite.
+                {acimaLimite.length > 0 && ` Esteve acima do limite (mais de 100%) em ${acimaLimite.length === 1 ? acimaLimite[0] : `${acimaLimite.slice(0, -1).join(", ")} e ${acimaLimite[acimaLimite.length - 1]}`}.`}
+              </p>
+              <div className="max-w-3xl">
+                <Grafico
+                  periodos={pctLimite.map((l) => l.periodo)}
+                  series={[{ nome: "Dívida em % do limite legal", valores: pctLimite.map((l) => l.valores[0]?.v ?? null) }]}
+                  unidade="%"
+                  casas={1}
+                  semComparar
+                  nivel
+                />
+              </div>
+              <p className="mt-3 max-w-3xl text-sm text-apagado">
+                Fonte: DGAL, Portal Autárquico (os mesmos valores dos indicadores{" "}
+                <Link href="/dados/indicadores/divida_percentagem_limite" className="underline underline-offset-2 hover:text-tinta">
+                  dívida em % do limite legal
+                </Link>{" "}
+                e{" "}
+                <Link href="/dados/indicadores/limite_endividamento" className="underline underline-offset-2 hover:text-tinta">
+                  limite legal
+                </Link>
+                ). A dívida que a DGAL conta para o limite é quase igual à dívida efetiva dos relatórios de 2021 em diante; antes, a da DGAL é mais alta.
+              </p>
+            </>
+          )}
+
+          <h3 id="emprestimos" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Empréstimos contraídos em cada ano</h3>
+          <p className="mt-2 mb-6 max-w-3xl text-texto">
+            O dinheiro que a Câmara recebeu de empréstimos em cada ano. Entra como receita de capital no ano em que é recebido (um
+            empréstimo pode ser recebido ao longo de vários anos); o reembolso paga-se nos anos seguintes.
+          </p>
+          <div className="max-w-3xl">
+            <Grafico {...desdeOPrimeiroAno([{ nome: emprestimosContraidos.nome, valores: emprestimosContraidos.valores }])} unidade="€" emMilhoes semComparar nivel />
+          </div>
+          <h4 className="mt-8 font-bold text-tinta">Para que foram</h4>
+          <ul className="mt-3 max-w-3xl space-y-2 text-texto">
+            <li>
+              <strong className="font-semibold text-tinta">2011, 0,5 M€:</strong> empréstimo de curto prazo para tesouraria, pago no mesmo ano.
+            </li>
+            <li>
+              <strong className="font-semibold text-tinta">2013 e 2014, 30,3 M€:</strong> para pagar dívidas. 13,8 M€ da Caixa Geral de
+              Depósitos, num reequilíbrio financeiro &ldquo;destinado à regularização de dívidas a terceiros&rdquo;, e 16,6 M€ do Estado,
+              pelo Programa de Apoio à Economia Local (PAEL), recebidos em duas vezes.
+            </li>
+            <li>
+              <strong className="font-semibold text-tinta">2018, 24,1 M€:</strong> não foi dívida nova. Três empréstimos (Caixa Geral de
+              Depósitos, Santander Totta e BPI) substituíram os de 2013 e 2014.
+            </li>
+            <li>
+              <strong className="font-semibold text-tinta">2021, 13,4 M€:</strong> 10,9 M€ de dois empréstimos (BPI e EuroBic) para
+              substituir dois dos de 2018, e 2,5 M€ da linha do Banco Europeu de Investimento (BEI) para obras com fundos europeus.
+            </li>
+            <li>
+              <strong className="font-semibold text-tinta">2019, 2020, 2022, 2023 e 2025, de 1,0 a 4,7 M€ por ano:</strong> obras. Da linha
+              do BEI, para obras com fundos europeus (a primeira, em 2019, para a Escola Básica Professor Napoleão Sousa Marques), e, desde
+              2022, da Caixa de Crédito Agrícola do Médio Ave e, em 2025, da Caixa Geral de Depósitos, para investimento municipal.
+            </li>
+          </ul>
+          <Tabela series={[emprestimosContraidos]} />
+          <p className="mt-3 max-w-3xl text-sm text-apagado">
+            Fonte: INE, com dados da DGAL (receita de passivos financeiros), igual aos relatórios de gestão e contas nos anos com
+            empréstimos. Para que foram: mapas de empréstimos obtidos e textos dos relatórios de gestão e contas, e deliberações da
+            Assembleia Municipal.
+          </p>
         </section>
 
         <section aria-label="Orçamento 2026">

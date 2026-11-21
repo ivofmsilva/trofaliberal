@@ -224,3 +224,23 @@ export function receitaPorImposto(): ReceitaImposto[] {
     return [{ slug, nome, periodos, colunas: i.colunas, total: i.linhas.map((l) => l.valores[0]?.v ?? null), porHabitante }];
   });
 }
+
+// Empréstimos contraídos em cada ano: receita de "passivos financeiros" do INE (com dados da DGAL), em euros (o INE dá
+// milhares). Séries 0009480 até 2020 e 0013908 desde 2021 (iguais em 2021). Lido a 21/11/2026.
+export const emprestimosContraidos = S(
+  "emprestimosContraidos",
+  "Empréstimos contraídos (receita de passivos financeiros)",
+  "INE, com dados da DGAL: receitas das câmaras municipais, passivos financeiros (indicadores 0009480 até 2020 e 0013908 desde 2021)",
+  {
+    2011: 500000, 2012: 0, 2013: 23716000, 2014: 6603000, 2015: 0, 2016: 0, 2017: 0, 2018: 24134000, 2019: 1009000,
+    2020: 1393000, 2021: 13358000, 2022: 4726000, 2023: 1870000, 2024: 0, 2025: 1620000,
+  },
+);
+
+// Limite legal da dívida e prazo médio de pagamentos: os mesmos indicadores da DGAL que estão na página dos indicadores.
+export const limiteDivida = {
+  percentagem: porSlug("divida_percentagem_limite"),
+  limite: porSlug("limite_endividamento"),
+  divida: porSlug("divida_total_municipio"),
+};
+export const prazoPagamentos = porSlug("prazo_medio_pagamentos");
