@@ -83,7 +83,7 @@ export default function TaxasLocais() {
         </h2>
         <p className="mt-2 max-w-2xl text-texto">
           Todos os anos, em geral no fim do ano, a Assembleia Municipal fixa o IMI, a parte do IRS que fica no município e a derrama.
-          Aqui está o que foi decidido desde 2015 e como foi votada cada deliberação.
+          Aqui estão as deliberações desde 2015 e como foi votada cada uma. Nas de 2015 a 2017, o texto não diz a taxa da derrama.
         </p>
         <dl className="mt-6 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
             <div className="border-t-2 border-tinta pt-3">
@@ -204,7 +204,7 @@ export default function TaxasLocais() {
               consulta do Portal das Finanças ↗
             </a>{" "}
             (taxa comunicada às Finanças para esse ano de rendimentos). Até 2017 a taxa não está no texto da deliberação; a de 3 de
-            dezembro de 2020 diz 0,48% por engano e foi retificada a 19 de janeiro de 2021.
+            dezembro de 2020 diz 0,48% e foi retificada a 19 de janeiro de 2021.
           </p>
           </Tabela>
         </section>

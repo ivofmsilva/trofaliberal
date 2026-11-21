@@ -165,7 +165,7 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
                         <dd className="text-tinta">{p.codigo_projeto}</dd>
                       </div>
                       <div>
-                        <dt className="text-apagado">Execução neste território</dt>
+                        <dt className="text-apagado">Parte do projeto na Trofa</dt>
                         <dd className="text-tinta">{numero(p.percentagem_localizacao_municipio, 1)}%</dd>
                       </div>
                       <div>

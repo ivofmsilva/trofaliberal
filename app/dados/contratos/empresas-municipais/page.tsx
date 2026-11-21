@@ -8,7 +8,7 @@ import { contaEm, contas, contratoEm, contratos, contratosPublicos, pessoasAoSer
 export const metadata: Metadata = {
   title: "Empresas municipais",
   description:
-    "A TrofAmbiente (antes Trofáguas), a empresa municipal da Trofa: subsídio de cada contrato-programa desde 2006, contas desde 2010, contratos públicos e documentos.",
+    "A TrofAmbiente (antes Trofáguas), a empresa municipal da Trofa: subsídios dos contratos-programa, contas desde 2010, contratos públicos e documentos.",
 };
 
 const pc = (v: number | null) => (v === null ? "—" : `${v > 0 ? "+" : v < 0 ? "−" : ""}${numero(Math.abs(v), 0)}%`);

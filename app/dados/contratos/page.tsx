@@ -25,7 +25,7 @@ export default function Contratos() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Transparência</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Contratos públicos</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Os contratos celebrados pelo município da Trofa, tal como estão no Portal BASE (dados.gov.pt / IMPIC).
+            Os contratos celebrados pelo município da Trofa, tal como estão no Portal BASE (dados.gov.pt / IMPIC). Só estão carregados os contratos a partir de 2021.
           </p>
           <dl className="mt-8 grid max-w-xl grid-cols-2 gap-8">
             <div className="border-t-2 border-tinta pt-3">

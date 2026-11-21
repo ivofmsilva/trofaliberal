@@ -24,7 +24,7 @@ export default function Fundos() {
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fundos europeus</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
             Projetos financiados por fundos europeus na Trofa, de dois programas: o Portugal 2020 (fundos de coesão, 2014–2020) e o
-            PRR (Plano de Recuperação e Resiliência, 2021–2026).
+            PRR (Plano de Recuperação e Resiliência, 2021–2026). O Portugal 2030 ainda não está incluído.
           </p>
         </div>
       </section>

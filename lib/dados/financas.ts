@@ -63,16 +63,18 @@ export const despesaPessoalPaga = S(
     2021: 7345973.76, 2022: 7789984.38, 2023: 9534823.93, 2024: 10320250.96, 2025: 12264030.15,
   },
 );
-export const despesaCorrente = S("despesaCorrente", "Despesa corrente paga", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
-  2016: 13368980.91, 2017: 14592672.81, 2018: 14513456.84, 2019: 15436282.27, 2020: 14399754.75,
+// De 2011 a 2015 (2016 nas receitas correntes) vêm do INE, com dados da DGAL, em milhares de euros (despesas: 0009481;
+// receitas: 0009480). Nos anos em que há os dois, o INE é igual aos relatórios (arredondado ao milhar). Lido a 21/11/2026.
+export const despesaCorrente = S("despesaCorrente", "Despesa corrente paga", "INE, com dados da DGAL, de 2011 a 2015 (despesas das câmaras municipais, 0009481); relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
+  2011: 13588000, 2012: 13324000, 2013: 29674000, 2014: 23142000, 2015: 14811000, 2016: 13368980.91, 2017: 14592672.81, 2018: 14513456.84, 2019: 15436282.27, 2020: 14399754.75,
   2021: 16139786.01, 2022: 18250642.71, 2023: 22957602.92, 2024: 25380723.8, 2025: 28280281.17,
 });
-export const despesaBensServicos = S("despesaBensServicos", "Aquisição de bens e serviços pagos", "Relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
-  2016: 4530703.5, 2017: 5249168.74, 2018: 5270400.05, 2019: 5724235.99, 2020: 4921399.24,
+export const despesaBensServicos = S("despesaBensServicos", "Aquisição de bens e serviços pagos", "INE, com dados da DGAL, de 2011 a 2015 (0009481); relatórios de 2019 (Quadro 13, 2016 a 2019), 2020 (Quadro 13, pág. 49) e 2025 (Quadro 15)", {
+  2011: 3795000, 2012: 4229000, 2013: 13896000, 2014: 5219000, 2015: 3939000, 2016: 4530703.5, 2017: 5249168.74, 2018: 5270400.05, 2019: 5724235.99, 2020: 4921399.24,
   2021: 5277953.36, 2022: 6838317.49, 2023: 9220854.75, 2024: 9920543.94, 2025: 11107509.87,
 });
-export const receitaCorrente = S("receitaCorrente", "Receitas correntes cobradas", "Relatórios de 2020 (Quadro 9, 2017 a 2020) e 2025 (Quadro 11, pág. 114)", {
-  2017: 19345343.68, 2018: 21372588.52, 2019: 21794803.83, 2020: 21806057.77,
+export const receitaCorrente = S("receitaCorrente", "Receitas correntes cobradas", "INE, com dados da DGAL, de 2011 a 2016 (receitas das câmaras municipais, 0009480); relatórios de 2020 (Quadro 9, 2017 a 2020) e 2025 (Quadro 11, pág. 114)", {
+  2011: 14168000, 2012: 15000000, 2013: 17120000, 2014: 19390000, 2015: 19597000, 2016: 19851000, 2017: 19345343.68, 2018: 21372588.52, 2019: 21794803.83, 2020: 21806057.77,
   2021: 23139394.01, 2022: 27355802.74, 2023: 31387077.58, 2024: 33144655.31, 2025: 36830190.83,
 });
 export const impostosDiretos = S("impostosDiretos", "Impostos diretos cobrados", "Relatórios de 2020 (Quadro 9, 2017 a 2020) e 2025 (Quadro 11)", {

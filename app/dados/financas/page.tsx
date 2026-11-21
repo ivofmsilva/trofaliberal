@@ -42,7 +42,9 @@ export const metadata: Metadata = {
 };
 
 const ultimo = (s: SerieContas) => s.valores[s.valores.length - 1];
-// O gráfico começa no primeiro ano em que alguma série tem valor (a receita só existe desde 2017 e a dívida desde 2013),
+// Ano de partida dos quatro números do topo: o mesmo em todos, 10 anos antes do último relatório (há valores dos quatro).
+const BASE = String(Number(ANOS[ANOS.length - 1]) - 10);
+// O gráfico começa no primeiro ano em que alguma série tem valor (a receita corrente só existe desde 2011 e a dívida desde 2013),
 // para não ficar um espaço vazio à esquerda.
 function desdeOPrimeiroAno(series: { nome: string; valores: (number | null)[] }[]) {
   const inicios = series.map((s) => s.valores.findIndex((v) => v !== null)).filter((i) => i >= 0);
@@ -152,7 +154,6 @@ export default function Financas() {
   const valorNoAno = (ind: typeof limiteDivida.limite, per?: string) => ind?.linhas.find((l) => l.periodo === per)?.valores[0]?.v ?? null;
   const acimaLimite = pctLimite.filter((l) => (l.valores[0]?.v ?? 0) > 100).map((l) => l.periodo);
   const ultPrazo = prazoPagamentos?.linhas[prazoPagamentos.linhas.length - 1];
-  const pessoalAtual = ultimo(gastosPessoal);
   // Por habitante: só há valores nos anos em que há população média (INE) nos dados recolhidos.
   const habitantes = porHabitante(despesaPessoalPaga).valores;
   const anosHabitante = ANOS.filter((_, k) => habitantes[k] !== null);
@@ -166,34 +167,33 @@ export default function Financas() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Finanças locais</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Finanças do município</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            O que a Câmara da Trofa recebe e o que gasta, a dívida, o orçamento para 2026 e os impostos que a Assembleia fixa. Os
-            valores vêm dos relatórios de gestão e contas que a Câmara publica (de 2010 a 2025, mas nem todos os dados existem desde
-            2010), do orçamento de 2026 e, nos impostos, do INE.
+            Receitas, despesas, dívida, orçamento e impostos locais da Câmara Municipal da Trofa.
           </p>
-          <p className="mt-3 text-sm text-apagado">
-            Dados até: relatório de gestão e contas de {ANOS[ANOS.length - 1]} (o último publicado) e orçamento de 2026.
+          <p className="mt-3 max-w-2xl text-sm text-apagado">
+            Fontes: relatórios de gestão e contas do município (até {ANOS[ANOS.length - 1]}, o último publicado), orçamento de 2026 e
+            INE. Nem todas as séries começam no mesmo ano.
           </p>
-          <dl className="mt-8 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
-            <div className="border-t-2 border-tinta pt-3">
-              <dt className="text-sm text-texto">Receitas correntes, 2025</dt>
-              <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(ultimo(receitaCorrente), "€")}</dd>
-              <dd className="text-sm text-apagado">{pc(crescimento(receitaCorrente.valores))} desde {primeiroAno(receitaCorrente)}</dd>
-            </div>
-            <div className="border-t-2 border-tinta pt-3">
-              <dt className="text-sm text-texto">Despesa corrente paga, 2025</dt>
-              <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(ultimo(despesaCorrente), "€")}</dd>
-              <dd className="text-sm text-apagado">{pc(crescimento(despesaCorrente.valores))} desde {primeiroAno(despesaCorrente)}</dd>
-            </div>
-            <div className="border-t-2 border-tinta pt-3">
-              <dt className="text-sm text-texto">Gastos com pessoal, 2025</dt>
-              <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(pessoalAtual, "€")}</dd>
-              <dd className="text-sm text-apagado">{pc(crescimento(gastosPessoal.valores))} desde 2021</dd>
-            </div>
-            <div className="border-t-2 border-tinta pt-3">
-              <dt className="text-sm text-texto">Dívida efetiva, 2025</dt>
-              <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(ultimo(dividaEfetiva), "€")}</dd>
-              <dd className="text-sm text-apagado">{pc(crescimento(dividaEfetiva.valores))} desde {primeiroAno(dividaEfetiva)}</dd>
-            </div>
+          <p className="mt-8 text-sm text-texto">
+            Em {ANOS[ANOS.length - 1]} e a variação em 10 anos, desde {BASE} (em euros de cada ano, sem descontar a inflação):
+          </p>
+          <dl className="mt-3 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
+            {[
+              ["Receitas correntes", receitaCorrente],
+              ["Despesa corrente paga", despesaCorrente],
+              ["Despesas com pessoal pagas", despesaPessoalPaga],
+              ["Dívida efetiva", dividaEfetiva],
+            ].map(([nome, s]) => {
+              const serie = s as SerieContas;
+              return (
+                <div key={serie.id} className="border-t-2 border-tinta pt-3">
+                  <dt className="text-sm text-texto">{nome as string}</dt>
+                  <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{compacto(ultimo(serie), "€")}</dd>
+                  <dd className="text-sm text-apagado">
+                    {pc(crescimento(serie.valores, BASE))} desde {BASE}
+                  </dd>
+                </div>
+              );
+            })}
           </dl>
           <ul className="mt-8 flex flex-wrap gap-2">
             {[
@@ -216,7 +216,7 @@ export default function Financas() {
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-14 sm:px-6">
         <section aria-label="Receitas">
-          <Titulo id="receita" texto="O que a Câmara cobrou em cada ano, sem contar o saldo do ano anterior. Mostra-se a receita total e, em separado, as receitas correntes (impostos, taxas, transferências do Estado e vendas).">
+          <Titulo id="receita" texto="Receita cobrada em cada ano, sem o saldo do ano anterior: a receita total e, à parte, as receitas correntes (impostos, taxas, transferências do Estado e vendas).">
             Receitas
           </Titulo>
           <div className="max-w-3xl">
@@ -305,7 +305,7 @@ export default function Financas() {
             id="despesas"
             texto={
               <>
-                O que a Câmara pagou em cada ano: a despesa corrente e as suas duas maiores partes, o pessoal e a aquisição de bens e
+                Despesa paga em cada ano: a despesa corrente e as suas duas maiores partes, o pessoal e a aquisição de bens e
                 serviços. Nos gastos com pessoal, as contas dão dois valores: o que foi <strong className="font-semibold text-tinta">pago</strong> no ano (contabilidade orçamental, desde 2010) e os <strong className="font-semibold text-tinta">gastos</strong> do ano (contabilidade patrimonial, só desde 2021, quando passou a SNC-AP). Medem coisas diferentes, mas evoluem de forma parecida.
               </>
             }
@@ -326,7 +326,15 @@ export default function Financas() {
           <Tabela series={[despesaCorrente, despesaPessoalPaga, despesaBensServicos, gastosPessoal, gastosFse]} />
           <p className="mt-3 max-w-3xl text-sm text-texto">
             Em {ANOS[ANOS.length - 1]} a Câmara cobrou {m(ultimo(receitaCorrente))} M€ de receitas correntes e pagou {m(ultimo(despesaCorrente))} M€ de despesa
-            corrente. As despesas com pessoal pagas passaram de {m(valorEm(despesaPessoalPaga, "2010"))} M€ em 2010 para {m(valorEm(despesaPessoalPaga, "2025"))} M€ em 2025 (o valor mais baixo foi {m(valorEm(despesaPessoalPaga, "2012"))} M€, em 2012) e pesavam {numero(pesoPessoal[ANOS.indexOf("2016")] ?? 0, 1)}% da despesa corrente paga em 2016, {numero(pesoPessoal[ANOS.indexOf("2020")] ?? 0, 1)}% em 2020 e {numero(pesoPessoal[ANOS.indexOf("2025")] ?? 0, 1)}% em 2025.
+            corrente. As despesas com pessoal pagas passaram de {m(valorEm(despesaPessoalPaga, "2010"))} M€ em 2010 para {m(valorEm(despesaPessoalPaga, "2025"))} M€ em 2025 (o valor mais baixo foi {m(valorEm(despesaPessoalPaga, "2012"))} M€, em 2012) e pesavam {numero(pesoPessoal[ANOS.indexOf("2015")] ?? 0, 1)}% da despesa corrente paga em 2015, {numero(pesoPessoal[ANOS.indexOf("2020")] ?? 0, 1)}% em 2020 e {numero(pesoPessoal[ANOS.indexOf("2025")] ?? 0, 1)}% em 2025.
+          </p>
+          <p className="mt-2 max-w-3xl text-sm text-texto">
+            Em 2013 e 2014, os anos dos{" "}
+            <a href="#emprestimos" className="underline underline-offset-2 hover:text-tinta">
+              empréstimos para pagar dívidas
+            </a>
+            , a despesa corrente paga foi de {m(valorEm(despesaCorrente, "2013"), 1)} e {m(valorEm(despesaCorrente, "2014"), 1)} M€,
+            contra {m(valorEm(despesaCorrente, "2012"), 1)} M€ em 2012 e {m(valorEm(despesaCorrente, "2015"), 1)} M€ em 2015.
           </p>
           <p className="mt-2 max-w-3xl text-sm text-texto">
             Em 2025, o Quadro 86 desagrega os 12,00 M€ de gastos com pessoal em 9,40 M€ de remunerações do pessoal, 2,17 M€ de encargos
@@ -361,7 +369,7 @@ export default function Financas() {
           </div>
           <ul className="mt-4 max-w-3xl list-disc space-y-1.5 pl-5 text-sm text-texto">
             <li>
-              2018: concursos para 70 lugares, para regularizar vínculos precários, com contratos em 2018 e 2019 (relatório de contas de
+              2018: concursos para 70 lugares, com contratos em 2018 e 2019 (relatório de contas de
               2019).
             </li>
             <li>
@@ -434,7 +442,7 @@ export default function Financas() {
 
           <h3 id="emprestimos" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Empréstimos contraídos em cada ano</h3>
           <p className="mt-2 mb-6 max-w-3xl text-texto">
-            O dinheiro que a Câmara recebeu de empréstimos em cada ano. Entra como receita de capital no ano em que é recebido (um
+            Dinheiro recebido de empréstimos em cada ano. Entra como receita de capital no ano em que é recebido (um
             empréstimo pode ser recebido ao longo de vários anos); o reembolso paga-se nos anos seguintes.
           </p>
           <div className="max-w-3xl">
@@ -475,7 +483,7 @@ export default function Financas() {
         <section aria-label="Orçamento 2026">
           <Titulo
             id="orcamento"
-            texto="O orçamento é uma previsão: o que a Câmara se autorizou a gastar em 2026, comparado com o orçamento inicial de 2025. Foi aprovado pela Câmara a 18 de dezembro de 2025 e pela Assembleia a 29 de dezembro de 2025."
+            texto="Previsão da despesa para 2026 (o máximo que se pode gastar), comparada com o orçamento inicial de 2025. Aprovado pela Câmara a 18 de dezembro de 2025 e pela Assembleia a 29 de dezembro de 2025."
           >
             Orçamento para 2026
           </Titulo>
