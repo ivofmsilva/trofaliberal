@@ -18,14 +18,18 @@ export default function TaxasLocais() {
   const irsAtual = ultimo(irs, (x) => x.percentagem !== null && !x.retificacao)!;
   const derramaAtual = ultimo(derrama, (x) => x.normal !== null)!;
 
-  // Os três gráficos têm no eixo o ano em que a Assembleia decidiu (o IMI vale para o ano seguinte: coluna "Para o ano").
+  // Os três gráficos têm no eixo o ano em que a taxa se aplica, que é sempre o ano a seguir ao da deliberação:
+  //  - IMI: a deliberação diz "para o ano N+1" (o IMI pago nesse ano);
+  //  - IRS: a taxa é a dos rendimentos de N+1 (consulta do Portal das Finanças);
+  //  - derrama: incide sobre os lucros de N e paga-se em N+1 (Lei 73/2013: comunicada até 31 de dezembro do ano anterior ao da cobrança).
+  const seguinte = (sessao: string) => String(Number(sessao.slice(0, 4)) + 1);
   const imiComTaxa = imi.filter((x) => x.urbanos !== null);
-  const imiAnos = imiComTaxa.map((x) => x.sessao.slice(0, 4));
+  const imiAnos = imiComTaxa.map((x) => String(x.paraAno));
   const ultimaSessao = [...imi, ...irs, ...derrama].map((x) => x.sessao).sort().pop()!;
   const irsComTaxa = irs.filter((x) => !x.retificacao && taxaIRS(x) !== null);
-  const irsAnos = irsComTaxa.map((x) => x.sessao.slice(0, 4));
+  const irsAnos = irsComTaxa.map((x) => seguinte(x.sessao));
   const derramaComTaxa = derrama.filter((x) => x.normal !== null);
-  const derramaAnos = derramaComTaxa.map((x) => x.sessao.slice(0, 4));
+  const derramaAnos = derramaComTaxa.map((x) => seguinte(x.sessao));
 
   return (
     <>
@@ -51,12 +55,12 @@ export default function TaxasLocais() {
             <div className="border-t-2 border-tinta pt-3">
               <dt className="text-sm text-texto">Participação no IRS</dt>
               <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{pc(irsAtual.percentagem, 1)}</dd>
-              <dd className="text-sm text-apagado">fixada em {dataCurta(irsAtual.sessao).split(" de ").slice(1).join(" de ")}</dd>
+              <dd className="text-sm text-apagado">rendimentos de {seguinte(irsAtual.sessao)}</dd>
             </div>
             <div className="border-t-2 border-tinta pt-3">
               <dt className="text-sm text-texto">Derrama</dt>
               <dd className="mt-1 text-4xl font-bold tabular-nums tracking-tight text-tinta">{pc(derramaAtual.normal, 1)}</dd>
-              <dd className="text-sm text-apagado">reduzida: {pc(derramaAtual.reduzida)}</dd>
+              <dd className="text-sm text-apagado">paga em {seguinte(derramaAtual.sessao)}; reduzida: {pc(derramaAtual.reduzida)}</dd>
             </div>
           </dl>
       </div>
@@ -70,7 +74,7 @@ export default function TaxasLocais() {
           </p>
           <div className="max-w-3xl">
             <Grafico periodos={imiAnos} series={[{ nome: "Prédios urbanos", valores: imiComTaxa.map((x) => x.urbanos) }]} unidade="%" semComparar casas={2} />
-            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação (a taxa decidida em {imiAnos[imiAnos.length - 1]} é a de {imiAtual.paraAno}).</p>
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano em que se paga o IMI com essa taxa (a decidida em {Number(imiAtual.paraAno) - 1} é a do IMI pago em {imiAtual.paraAno}).</p>
           </div>
           <Tabela
             colunas={["Deliberação", "Para o ano", "Urbanos", "Rústicos", "Votação"]}
@@ -100,14 +104,15 @@ export default function TaxasLocais() {
               semComparar
               casas={1}
             />
-            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação.</p>
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano dos rendimentos a que a taxa se aplica (a decidida no fim de um ano vale para os rendimentos do ano seguinte).</p>
           </div>
           <Tabela
-            colunas={["Deliberação", "Percentagem", "Votação"]}
+            colunas={["Deliberação", "Rendimentos de", "Percentagem", "Votação"]}
             linhas={[...irs].reverse().map((x) => [
               <a key="u" href={x.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
                 {dataCurta(x.sessao)} ↗{x.retificacao ? " (retificação)" : ""}
               </a>,
+              x.retificacao ? "—" : seguinte(x.sessao),
               x.retificacao ? "—" : IRS_FINANCAS[x.sessao] !== undefined ? `${pc(IRS_FINANCAS[x.sessao], 1)} *` : pc(x.percentagem, 1),
               textoVoto(x, x.sessao),
             ])}
@@ -117,7 +122,7 @@ export default function TaxasLocais() {
             <a href={FINANCAS} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
               consulta do Portal das Finanças ↗
             </a>{" "}
-            (taxa comunicada para os rendimentos do ano seguinte). Até 2017 a taxa não está no texto da deliberação; a de 3 de
+            (taxa comunicada às Finanças para esse ano de rendimentos). Até 2017 a taxa não está no texto da deliberação; a de 3 de
             dezembro de 2020 diz 0,48% por engano e foi retificada a 19 de janeiro de 2021.
           </p>
         </section>
@@ -139,14 +144,15 @@ export default function TaxasLocais() {
               semComparar
               casas={2}
             />
-            <p className="mt-2 text-xs text-apagado">No eixo, o ano da deliberação.</p>
+            <p className="mt-2 text-xs text-apagado">No eixo, o ano em que se paga (a derrama incide sobre os lucros do ano anterior, o da deliberação).</p>
           </div>
           <Tabela
-            colunas={["Deliberação", "Normal", "Reduzida", "Votação"]}
+            colunas={["Deliberação", "Paga em", "Normal", "Reduzida", "Votação"]}
             linhas={[...derrama].reverse().map((x) => [
               <a key="u" href={x.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
                 {dataCurta(x.sessao)} ↗
               </a>,
+              seguinte(x.sessao),
               pc(x.normal, 1),
               pc(x.reduzida),
               textoVoto(x.votoNormal, x.sessao),
