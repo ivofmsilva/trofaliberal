@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-21T10:11:09.263Z",
+ "juntado": "2026-11-21T11:57:24.549Z",
  "atualizado": "21/11/2026",
  "indicadores": [
   {
@@ -1876,7 +1876,7 @@
    "titulo": "Receita total da Câmara",
    "categoria": "financas",
    "unidade": "€",
-   "texto": "Todo o dinheiro que a Câmara recebeu no ano: impostos e taxas municipais, transferências do Estado e de fundos europeus, venda de bens e serviços, e empréstimos contraídos. Como inclui empréstimos e fundos para obras, pode variar bastante de um ano para o outro.",
+   "texto": "Todo o dinheiro que a Câmara recebeu no ano: impostos e taxas municipais, transferências do Estado e de fundos europeus, venda de bens e serviços, empréstimos contraídos e reposições de pagamentos de anos anteriores. Não conta o saldo do ano anterior. Como inclui empréstimos e fundos para obras, pode variar bastante de um ano para o outro.",
    "palavras": null,
    "colunas": [
     "Trofa",

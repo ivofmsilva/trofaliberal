@@ -215,7 +215,7 @@ export default function Financas() {
           </div>
           <Tabela series={[receitaTotal, receitaCorrente, transferenciasCorrentes, impostosDiretos]} />
           <p className="mt-3 max-w-3xl text-sm text-texto">
-            A <strong className="font-semibold text-tinta">receita total</strong> inclui as receitas de capital (como os fundos europeus) e os empréstimos contraídos; as <strong className="font-semibold text-tinta">receitas correntes</strong> são só impostos, taxas, transferências correntes e vendas. Em 2018 a receita total inclui 24,1 M€ de empréstimos. Os impostos diretos são o IMI, o IUC, o IMT e a derrama.
+            A <strong className="font-semibold text-tinta">receita total</strong> é a do INE (com dados da DGAL), a mesma dos indicadores. Soma as <strong className="font-semibold text-tinta">receitas correntes</strong> (impostos, taxas, transferências correntes e vendas), as de capital (onde entram os fundos europeus e os empréstimos: 23,7 M€ em 2013 e 24,1 M€ em 2018) e as &ldquo;reposições não abatidas nos pagamentos&rdquo;, isto é, dinheiro que volta à Câmara de pagamentos de anos anteriores. Em 2025: 36,83 M€ de receitas correntes + 11,15 M€ de capital + 0,96 M€ de reposições = 48,94 M€, que é também o total do relatório de contas sem o saldo do ano anterior. Os impostos diretos são o IMI, o IUC, o IMT e a derrama.
           </p>
           {receitaIne && (
             <p className="mt-3 max-w-3xl text-sm text-texto">

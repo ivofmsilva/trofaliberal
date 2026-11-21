@@ -85,10 +85,17 @@ export const transferenciasCorrentes = S("transferenciasCorrentes", "Transferên
 });
 // Total geral cobrado menos o saldo do ano anterior ("outras receitas"). Inclui receitas de capital e empréstimos.
 // É o valor que o INE/DGAL publica como "receita total". Em 2018 inclui 24,1 M€ de empréstimos (refinanciamento da dívida).
-export const receitaTotal = S("receitaTotal", "Receita total cobrada (com capital e empréstimos)", "Relatórios de 2020 (Quadro 9, 2017 a 2020) e 2025 (Quadro 11): total geral menos o saldo do ano anterior", {
-  2017: 22011264.29, 2018: 46428948.49, 2019: 25705382.92, 2020: 25458131.64,
-  2021: 41158191.77, 2022: 35694245.97, 2023: 39639492.93, 2024: 38039939.77, 2025: 47976376.58,
-});
+// Receita total: a do INE (com dados da DGAL), a mesma dos indicadores. Conta as receitas correntes, as de capital e as
+// "reposições não abatidas nos pagamentos" (dinheiro que volta à Câmara de pagamentos de anos anteriores), sem o saldo do ano
+// anterior; bate com o total do Quadro 11 do relatório de 2025 menos o saldo (51 954 252,68 − 3 019 465,00 = 48 934 787,68 €).
+// Até 21/11/2026 usava-se aqui correntes + capital dos relatórios (sem as reposições): em 2025, 47 976 376,58 €.
+const receitaTotalINE = porSlug("receita_total_municipal");
+export const receitaTotal = S(
+  "receitaTotal",
+  "Receita total (com capital e empréstimos)",
+  "INE, com dados da DGAL: receitas das câmaras municipais, total (indicadores 0009480 até 2020 e 0013908 desde 2021)",
+  Object.fromEntries((receitaTotalINE?.linhas ?? []).filter((l) => l.valores[0]?.v != null).map((l) => [Number(l.periodo), l.valores[0].v as number])),
+);
 
 // Dívida a 31 de dezembro. "Efetiva" exclui os valores que a lei exceciona (Relatório de 2020, Quadro 31, pág. 69, para 2013
 // a 2020; Relatório de 2025, Quadros 29 e 30, pág. 140, para 2021 a 2025).
