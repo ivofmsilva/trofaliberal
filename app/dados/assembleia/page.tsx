@@ -4,6 +4,7 @@ import ComoVotam from "@/components/dados/ComoVotam";
 import ComposicaoAssembleia from "@/components/dados/ComposicaoAssembleia";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
 import IniciativasAM from "@/components/dados/IniciativasAM";
+import SeparadoresDocumentos from "@/components/dados/SeparadoresDocumentos";
 import Votacoes from "@/components/dados/Votacoes";
 import { assembleia, dataLonga } from "@/lib/dados/autarquia";
 
@@ -78,13 +79,11 @@ export default function Assembleia() {
                 Votações
               </a>
             </li>
-            {partes.map((p) => (
-              <li key={p.id}>
-                <a href={`#${p.id}`} className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
-                  {p.titulo}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="#documentos" className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
+                Documentos
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -125,7 +124,11 @@ export default function Assembleia() {
               <summary className="cursor-pointer font-semibold text-tinta">Sessões sem deliberações publicadas</summary>
               <p className="mt-3 max-w-2xl text-texto">
                 Só entram aqui as sessões de que o município publicou as deliberações. Destas {semDeliberacoes.length} sessões há ata
-                publicada (mais abaixo, em Atas), mas não há o documento das deliberações; por isso não aparecem nas votações nem nas
+                publicada (mais abaixo, em{" "}
+                <a href="#atas" className="underline underline-offset-2 hover:text-tinta">
+                  Atas
+                </a>
+                ), mas não há o documento das deliberações; por isso não aparecem nas votações nem nas
                 contas de “Como votam”:
               </p>
               <ul className="mt-3 grid gap-x-8 gap-y-1 sm:grid-cols-2">
@@ -138,29 +141,39 @@ export default function Assembleia() {
             </details>
           )}
         </section>
-        {partes.map((p) => {
-          const docs = assembleia.filter((d) => d.tipo === p.tipo);
-          return (
-            <section key={p.id} id={p.id} className="scroll-mt-6 border-b border-linha py-12 last:border-b-0">
-              <h2 className="text-2xl font-bold tracking-tight text-tinta">{p.titulo}</h2>
-              <p className="mt-2 mb-6 text-texto">
-                {p.texto} <span className="text-apagado">({docs.length} documentos)</span>
-              </p>
-              <DocumentosPorAno docs={docs} nomeTipo={p.nomeTipo} />
-              <p className="mt-4 text-sm text-apagado">
-                Fonte:{" "}
-                <a href={p.fonte} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
-                  mun-trofa.pt ↗
-                </a>
-                . A data {p.tipo === "am-ata" ? "e o número da ata são os que vêm" : "é a que vem"} no nome de cada ficheiro
-                {p.tipo === "am-deliberacoes" ? " ou, nos mais antigos, dentro do próprio documento" : ""}
-                {p.tipo === "am-ata"
-                  ? "; nas atas mais antigas, cujo nome não diz o ano, o ano foi posto à mão."
-                  : "; quando o nome não diz o ano, o documento fica no arquivo mais antigo."}
-              </p>
-            </section>
-          );
-        })}
+        <section id="documentos" className="scroll-mt-6 py-12">
+          <h2 className="text-2xl font-bold tracking-tight text-tinta">Documentos das sessões</h2>
+          <p className="mt-2 mb-6 max-w-2xl text-texto">
+            Os PDF das sessões, tal como o município os publica, por ano. Escolhe o tipo de documento.
+          </p>
+          <SeparadoresDocumentos
+            paineis={partes.map((p) => {
+              const docs = assembleia.filter((d) => d.tipo === p.tipo);
+              return {
+                id: p.id,
+                titulo: p.titulo,
+                n: docs.length,
+                conteudo: (
+                  <>
+                    <p className="mb-4 text-texto">{p.texto}</p>
+                    <DocumentosPorAno docs={docs} nomeTipo={p.nomeTipo} />
+                    <p className="mt-4 text-sm text-apagado">
+                      Fonte:{" "}
+                      <a href={p.fonte} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                        mun-trofa.pt ↗
+                      </a>
+                      . A data {p.tipo === "am-ata" ? "e o número da ata são os que vêm" : "é a que vem"} no nome de cada ficheiro
+                      {p.tipo === "am-deliberacoes" ? " ou, nos mais antigos, dentro do próprio documento" : ""}
+                      {p.tipo === "am-ata"
+                        ? "; nas atas mais antigas, cujo nome não diz o ano, o ano foi posto à mão."
+                        : "; quando o nome não diz o ano, o documento fica no arquivo mais antigo."}
+                    </p>
+                  </>
+                ),
+              };
+            })}
+          />
+        </section>
       </div>
     </>
   );
