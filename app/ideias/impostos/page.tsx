@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import { formatarData, itens } from "@/lib/imprensa";
 import SimuladorIMI from "@/components/SimuladorIMI";
 import SimuladorIRS from "@/components/SimuladorIRS";
 import Taxometro from "@/components/Taxometro";
@@ -24,6 +26,29 @@ const ORCAMENTO_2026 = { impostosDiretos: 13_537_113.41, taxas: 1_129_078.19 };
 // Propostas da IL (programa autárquico de 2025, área Fiscalidade).
 const PROPOSTA_IRS = 2;
 const MINIMO_IMI = 0.3;
+
+// Os cartazes da campanha sobre impostos (os mesmos de /ideias/cartazes).
+const CARTAZES = [
+  {
+    src: "/images/cartazes/cartaz-59.jpeg",
+    w: 413,
+    h: 516,
+    alt: "Cartaz: Farto de ser saco de pancada? Altos impostos, taxas e taxinhas, baixos salários. Liberta-te.",
+    legenda: "Farto de ser saco de pancada? Altos impostos, taxas e taxinhas, baixos salários.",
+  },
+  {
+    src: "/images/cartazes/cartaz-60.jpeg",
+    w: 384,
+    h: 512,
+    alt: "Tenda da Iniciativa Liberal com o jogo Chuta ao imposto: IVA, IRC e IRS, por um sistema fiscal mais justo",
+    legenda: "Chuta ao imposto: a nossa tenda na rua, por um sistema fiscal mais justo.",
+  },
+];
+
+// Os artigos de opinião sobre os impostos da Câmara (temas "impostos" e "camara"), do mais recente para o mais antigo.
+const artigos = [...itens.artigos, ...itens.noticias, ...itens.comunicados]
+  .filter((a) => a.temas?.includes("impostos") && a.temas.includes("camara"))
+  .sort((a, b) => (b.data ?? "").localeCompare(a.data ?? ""));
 
 const m = (v: number) => `${(v / 1e6).toFixed(1).replace(".", ",")} M€`;
 const grupos = (n: number) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -157,6 +182,53 @@ export default function Impostos() {
             <Link href="/autarquicas-2025/programa" className="font-bold text-sun underline underline-offset-2">
               Ver o programa
             </Link>
+          </p>
+        </section>
+
+        <section>
+          <p className={`${etiqueta} text-cyan-dark`}>Na rua</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Liberta-te</h2>
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2">
+            {CARTAZES.map((c) => (
+              <li key={c.src}>
+                <figure>
+                  <Image src={c.src} alt={c.alt} width={c.w} height={c.h} className="h-auto w-full rounded-2xl" sizes="(min-width: 640px) 50vw, 100vw" />
+                  <figcaption className="mt-3 font-bold text-navy">{c.legenda}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-ink/80">
+            Estes e os outros cartazes estão em{" "}
+            <Link href="/ideias/cartazes" className="font-bold text-cyan-dark underline underline-offset-2">
+              Cartazes
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section>
+          <p className={`${etiqueta} text-cyan-dark`}>O que temos escrito</p>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Os impostos da Câmara, há anos</h2>
+          <ul className="mt-8 divide-y divide-mist border-y border-mist">
+            {artigos.map((a) => (
+              <li key={a.href}>
+                <a href={a.href} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                  <span className="font-display text-xl font-bold text-navy group-hover:underline">{a.titulo} ↗</span>
+                  <span className="shrink-0 text-sm text-ink/70">
+                    {a.fonte ? `${a.fonte} · ` : ""}
+                    {formatarData(a.data)}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-ink/80">
+            Todos os artigos de opinião em{" "}
+            <Link href="/imprensa?t=artigos" className="font-bold text-cyan-dark underline underline-offset-2">
+              Imprensa e eventos
+            </Link>
+            .
           </p>
         </section>
 
