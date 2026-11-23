@@ -81,6 +81,14 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "A 1 de dezembro de 1640, Portugal voltou a ser dono do seu destino.",
     blocos: [
       "Durante 60 anos, desde 1580, o reino foi governado pelos reis de Espanha. Naquela manhã, um grupo de nobres, os Conjurados, entrou no Paço da Ribeira, em Lisboa, afastou quem governava em nome de Madrid e proclamou rei o Duque de Bragança, D. João IV.",
+      {
+        lista: [
+          "Porquê em 1640? No verão desse ano, a Catalunha tinha-se revoltado contra Madrid, e as tropas espanholas estavam ocupadas longe daqui.",
+          "Os Conjurados eram cerca de quarenta. Prenderam a Duquesa de Mântua, que governava Portugal em nome do rei de Espanha.",
+          "Miguel de Vasconcelos, o secretário de Estado, foi morto e atirado de uma janela do paço.",
+          "A 15 de dezembro de 1640, D. João IV subiu ao trono.",
+        ],
+      },
       "Seguiu-se uma longa guerra com a Espanha. Só em 1668, com o Tratado de Lisboa, a independência foi reconhecida.",
       { destaque: "Ser independente é poder decidir por nós próprios. Vale para um país e vale para uma terra." },
       "Na Trofa sabemos o que isso custa e o que vale: foram anos de luta até 1998, quando o concelho foi criado e a Trofa passou a decidir o seu próprio caminho.",
@@ -102,7 +110,14 @@ export const comemoracoes: Comemoracao[] = [
       "Foi em Paris, três anos depois do fim da Segunda Guerra Mundial. Depois dos campos de concentração e das ditaduras que esmagaram milhões de pessoas, o mundo escreveu os direitos que nenhum governo pode tirar a ninguém.",
       { destaque: "“Todos os seres humanos nascem livres e iguais em dignidade e em direitos.” (artigo 1.º)" },
       "A Declaração protege a vida e a liberdade, proíbe a escravatura e a tortura, e garante a liberdade de expressão, de reunião e de religião, o direito a um julgamento justo e o direito à propriedade.",
-      "Portugal, que em 1948 vivia em ditadura, só a publicou no Diário da República em 1978, já em democracia.",
+      {
+        lista: [
+          "Foi aprovada com 48 votos a favor, nenhum contra e 8 abstenções.",
+          "Tem 30 artigos. Eleanor Roosevelt presidiu à comissão que a escreveu.",
+          "É o documento mais traduzido do mundo: existe em mais de 500 línguas.",
+          "Portugal, que em 1948 vivia em ditadura, só entrou nas Nações Unidas em 1955 e só publicou a Declaração no Diário da República em 1978, já em democracia.",
+        ],
+      },
       "Para os liberais, estes direitos não são dados por ninguém: nascem com cada pessoa. Nenhum governo, nenhuma maioria e nenhuma ideologia os pode tirar.",
       "Defendê-los é defender a liberdade de cada um, sobretudo a de quem pensa de maneira diferente de nós.",
     ],
@@ -119,7 +134,14 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "12 de dezembro de 1976: as primeiras eleições autárquicas em democracia. Votar é o primeiro passo; o seguinte é acompanhar e participar.",
     abertura: "A 12 de dezembro de 1976, os portugueses elegeram pela primeira vez em democracia as câmaras municipais, as assembleias municipais e as assembleias de freguesia.",
     blocos: [
-      "Durante a ditadura, os presidentes de câmara eram nomeados pelo Governo. Depois do 25 de Abril, e até estas eleições, as câmaras e as juntas foram geridas por comissões administrativas. Em dezembro de 1976, quase dois em cada três eleitores foram votar.",
+      "Durante a ditadura, os presidentes de câmara eram nomeados pelo Governo. Depois do 25 de Abril, e até estas eleições, as câmaras e as juntas foram geridas por comissões administrativas.",
+      {
+        lista: [
+          "Votou-se em 304 concelhos, de norte a sul e nas ilhas.",
+          "Quase dois em cada três eleitores foram votar (64,6%).",
+          "A Trofa pertencia então ao concelho de Santo Tirso: foi essa a câmara que os trofenses ajudaram a eleger. O concelho da Trofa só foi criado em 1998.",
+        ],
+      },
       "O poder local é a política mais perto de nós. É na câmara e na junta que se decide a rua, a escola, a licença da casa ou do negócio. Por isso, quem governa deve prestar contas de perto: mostrar o que decide, o que gasta e o que contrata.",
       { destaque: "Votar é o primeiro passo. O seguinte é acompanhar e participar." },
       "Foi com essa ideia que lançámos o portal Dados da Trofa, com os números do concelho ao alcance de todos.",
@@ -226,7 +248,15 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "24 de março, Dia do Estudante: a coragem dos estudantes de 1962 e as nossas propostas para a educação na Trofa.",
     abertura: "A 24 de março celebra-se o Dia do Estudante.",
     blocos: [
-      "A data lembra a crise académica de 1962. Nesse ano, o governo de Salazar proibiu as comemorações do Dia do Estudante. Os estudantes não se calaram: a 24 de março, a polícia de choque carregou sobre milhares deles na Cidade Universitária, em Lisboa, e seguiram-se o luto académico e as greves. Eram jovens a enfrentar uma ditadura.",
+      "A data lembra a crise académica de 1962. Nesse ano, o governo de Salazar proibiu as comemorações do Dia do Estudante. Os estudantes não se calaram. Eram jovens a enfrentar uma ditadura.",
+      {
+        lista: [
+          "24 de março: a polícia de choque carrega sobre milhares de estudantes na Cidade Universitária, em Lisboa. Eles respondem com o «luto académico»: uma greve às aulas, com outro nome, porque a palavra greve era proibida.",
+          "O reitor da Universidade de Lisboa, Marcello Caetano, demite-se por discordar da atuação da polícia.",
+          "Em maio, 81 estudantes fazem greve de fome na cantina universitária. A polícia acaba por prendê-los.",
+          "Um dos líderes era Jorge Sampaio, que viria a ser Presidente da República (1996–2006).",
+        ],
+      },
       "Em 1987, a Assembleia da República fez do 24 de março o Dia Nacional do Estudante.",
       { destaque: "Hoje, a liberdade de um estudante mede-se pelas oportunidades que tem: aprender bem, escolher o seu caminho e não ter de sair da terra para o seguir." },
       { imagem: { src: "/images/eventos/lit/lit-02.jpg", w: 1066, h: 1600, alt: "Público no debate das Jornadas Liberais da Educação, na Trofa" }, legenda: "Debate das Jornadas Liberais da Educação, em março de 2026." },
@@ -249,8 +279,16 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "2 de abril de 1976: a Assembleia Constituinte aprovou a Constituição da República Portuguesa.",
     abertura: "A 2 de abril de 1976, a Assembleia Constituinte aprovou a Constituição da República Portuguesa.",
     blocos: [
-      "Os deputados tinham sido eleitos um ano antes, nas primeiras eleições livres. A Constituição entrou em vigor a 25 de abril de 1976. É ela que garante os nossos direitos e organiza o poder: quem governa, quem fiscaliza e quem julga.",
-      "Desde então, foi revista sete vezes: acabou com o Conselho da Revolução (1982), permitiu as privatizações (1989) e adaptou o país à União Europeia (1992).",
+      "Os 250 deputados tinham sido eleitos um ano antes, a 25 de abril de 1975, nas primeiras eleições livres. Só o CDS votou contra o texto final. A Constituição entrou em vigor a 25 de abril de 1976.",
+      "É ela que garante os nossos direitos e organiza o poder: quem governa, quem fiscaliza e quem julga.",
+      "Desde então, foi revista sete vezes, a última em 2005. Três mudanças importantes:",
+      {
+        lista: [
+          "1982: acaba o Conselho da Revolução e nasce o Tribunal Constitucional.",
+          "1989: as nacionalizações deixam de ser irreversíveis, o que permitiu as privatizações.",
+          "1992: Portugal pode ratificar o Tratado de Maastricht, que abriu caminho à moeda única.",
+        ],
+      },
       "Mas o preâmbulo ainda diz que o objetivo é “abrir caminho para uma sociedade socialista”. A Iniciativa Liberal propôs trocar essa frase por uma referência à democracia liberal.",
       { destaque: "Uma Constituição deve ser de todos, e não de uma ideologia." },
     ],
@@ -267,6 +305,14 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "A 25 de abril de 1974, acabaram 48 anos de ditadura.",
     blocos: [
       "Nessa madrugada, os militares do Movimento das Forças Armadas derrubaram o regime. As pessoas saíram à rua, os cravos chegaram às espingardas e Portugal voltou a ser livre.",
+      {
+        lista: [
+          "O primeiro sinal foi uma canção: “E Depois do Adeus”, de Paulo de Carvalho, passou na rádio às 22h55 do dia 24.",
+          "O segundo foi “Grândola, Vila Morena”, de José Afonso, às 00h20, na Rádio Renascença: a operação estava em marcha.",
+          "De Santarém saiu a coluna do capitão Salgueiro Maia, rumo a Lisboa.",
+          "Ao fim da tarde, no Quartel do Carmo, o chefe do Governo, Marcello Caetano, rendeu-se ao general Spínola.",
+        ],
+      },
       "Com Abril acabaram a censura, a polícia política e a guerra colonial. Vieram a liberdade de expressão, os partidos e os sindicatos livres. Um ano depois, a 25 de abril de 1975, mais de 90% dos eleitores foram votar, em liberdade, para eleger a Assembleia Constituinte.",
       { destaque: "Abril deu-nos a liberdade política. Falta cumprir a liberdade económica." },
       "Liberdade para trabalhar e ficar com o fruto do trabalho, para criar uma empresa sem pedir licença a cada passo, para escolher a escola dos filhos e o médico. É por essa parte de Abril que continuamos a lutar.",
@@ -284,7 +330,14 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "1 de maio, Dia do Trabalhador: quem trabalha deve ficar com mais do que ganha.",
     abertura: "O 1.º de Maio é o dia de quem trabalha.",
     blocos: [
-      "Lembra as greves de 1886 em Chicago, pela jornada de oito horas. Em Portugal, uma semana depois do 25 de Abril, o 1.º de Maio de 1974 voltou a ser celebrado em liberdade e passou a ser feriado.",
+      "Lembra as greves de 1886 em Chicago, pela jornada de oito horas. Em 1889, um congresso internacional de trabalhadores, em Paris, escolheu o 1.º de Maio como dia de luta em todo o mundo.",
+      {
+        lista: [
+          "1919: em Portugal, a lei fixa o máximo de oito horas de trabalho por dia no comércio e na indústria.",
+          "1974: uma semana depois do 25 de Abril, o 1.º de Maio volta a ser celebrado em liberdade e passa a ser feriado.",
+          "27 de maio de 1974: é criado o salário mínimo nacional, de 3300 escudos por mês.",
+        ],
+      },
       "Hoje, entre IRS e contribuições, uma boa parte do que se ganha nunca chega ao bolso de quem trabalha. E quem quer trabalhar mais, mudar de emprego ou abrir o seu negócio encontra demasiadas barreiras.",
       { destaque: "Queremos salários maiores, com menos impostos sobre o trabalho, e mais liberdade para cada um fazer o seu caminho." },
       { link: "Até que dia trabalhamos para pagar impostos? →", href: "/libertacao-dos-impostos" },
@@ -303,7 +356,14 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "A 9 de maio de 1950, Robert Schuman propôs que países que tinham estado em guerra pusessem em comum o carvão e o aço.",
     blocos: [
       "Cinco anos depois do fim da Segunda Guerra Mundial, o ministro francês dos Negócios Estrangeiros apresentou a ideia que deu origem à União Europeia: fazer com que uma guerra entre a França e a Alemanha se tornasse “não apenas impensável, mas materialmente impossível”.",
-      "Portugal entrou em 1986. Desde então, os portugueses podem viver, estudar e trabalhar em qualquer país da União, e as empresas portuguesas vendem para um mercado de centenas de milhões de pessoas.",
+      {
+        lista: [
+          "1951: seis países assinam o Tratado de Paris e criam a Comunidade Europeia do Carvão e do Aço: França, Alemanha Ocidental, Itália, Bélgica, Países Baixos e Luxemburgo.",
+          "1985: a 12 de junho, Portugal assina o tratado de adesão no Mosteiro dos Jerónimos, em Lisboa.",
+          "1986: Portugal e Espanha entram a 1 de janeiro. Passam a ser 12 países; hoje são 27.",
+        ],
+      },
+      "Desde 1986, os portugueses podem viver, estudar e trabalhar em qualquer país da União, e as empresas portuguesas vendem para um mercado de centenas de milhões de pessoas.",
       { destaque: "Queremos uma Europa de liberdade e de oportunidades, não de burocracia." },
       "A paz entre vizinhos, a liberdade de circular e um mercado aberto são conquistas a defender todos os dias.",
     ],
@@ -359,6 +419,13 @@ export const comemoracoes: Comemoracao[] = [
     blocos: [
       "A lei, a n.º 29/93, foi publicada a 2 de julho de 1993: “A vila da Trofa, do concelho de Santo Tirso, é elevada à categoria de cidade.”",
       "A Trofa já era vila desde 1984: a Assembleia da República aprovou a sua elevação a vila a 16 de maio de 1984 (Lei n.º 19/84). Nove anos depois, era cidade. Faltava um passo: o concelho, que chegou em 1998.",
+      {
+        lista: [
+          "O que era preciso? A lei de então (n.º 11/82) pedia mais de 3000 eleitores para uma vila e mais de 8000, em povoação contínua, para uma cidade, além de vários equipamentos coletivos.",
+          "Ser cidade é um título: não dá governo próprio. A Trofa continuou no concelho de Santo Tirso.",
+          "O concelho foi criado pela Lei n.º 83/98, de 14 de dezembro, com oito freguesias que saíram do concelho de Santo Tirso.",
+        ],
+      },
       { imagem: F["estacao-antiga"], legenda: "A antiga estação de comboios da Trofa, recuperada." },
       { destaque: "Uma cidade é feita das pessoas que lá vivem, trabalham e criam. É nelas que confiamos." },
       { link: "O concelho, em 1998 →", href: "/dia-do-concelho" },
@@ -378,7 +445,14 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "5 de junho, Dia Mundial do Ambiente: cuidar do rio Ave, dos montes e dos parques da Trofa, com soluções que funcionam.",
     abertura: "A 5 de junho celebra-se o Dia Mundial do Ambiente.",
     blocos: [
-      "As Nações Unidas criaram-no em 1972, no ano da primeira grande conferência mundial sobre o ambiente, em Estocolmo, que abriu precisamente a 5 de junho.",
+      "As Nações Unidas criaram-no em 1972, no ano da primeira grande conferência mundial sobre o ambiente, em Estocolmo, que abriu precisamente a 5 de junho. Celebrou-se pela primeira vez em 1973.",
+      {
+        lista: [
+          "Também em 1972, as Nações Unidas criaram o seu Programa para o Ambiente.",
+          "A Constituição portuguesa de 1976 foi das primeiras do mundo a dizer que todos têm direito a um ambiente sadio e o dever de o defender (artigo 66.º).",
+          "O rio Ave, que atravessa a Trofa, nasce na serra da Cabreira, em Vieira do Minho, corre mais de 90 quilómetros e chega ao mar em Vila do Conde.",
+        ],
+      },
       "Na Trofa, o ambiente está à porta de casa: o rio Ave, o monte de S. Gens, os parques e as margens que todos queremos limpos e bem cuidados.",
       { destaque: "Proteger o ambiente não é proibir e taxar tudo. É inovar, cuidar do que é de todos e dar a cada um razões para fazer melhor." },
       "Acreditamos em soluções que funcionam: reciclar mais e melhor, cuidar dos rios e das florestas, apostar na tecnologia e premiar quem polui menos, em vez de empobrecer as famílias.",
@@ -398,6 +472,13 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "O 10 de Junho lembra a morte de Luís de Camões, em 1580, e celebra Portugal e os portugueses espalhados pelo mundo.",
     blocos: [
       "Camões escreveu Os Lusíadas, publicados em 1572: a grande epopeia de um país pequeno que foi ver o mundo.",
+      {
+        lista: [
+          "O 10 de Junho foi celebrado pela primeira vez em 1880, nos 300 anos da morte de Camões.",
+          "Durante a ditadura, foi também chamado «Dia da Raça».",
+          "Em 1978 ganhou o nome de hoje, Dia de Portugal, de Camões e das Comunidades Portuguesas, para incluir os emigrantes.",
+        ],
+      },
       "Hoje há milhões de portugueses e lusodescendentes fora do país. Muitos trofenses também partiram à procura de uma vida melhor, e muitos voltam todos os verões.",
       { destaque: "Queremos um país onde os jovens não tenham de emigrar para ter oportunidades." },
     ],
@@ -526,6 +607,13 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "Na manhã de 5 de outubro de 1910, a República foi proclamada da varanda da Câmara Municipal de Lisboa.",
     blocos: [
       "Acabavam quase oito séculos de monarquia. O rei D. Manuel II partiu para o exílio e Portugal passou a ser uma república.",
+      {
+        lista: [
+          "Quem proclamou a República foi José Relvas, em nome do Partido Republicano.",
+          "Em 1911, o país teve uma nova Constituição e o primeiro Presidente, Manuel de Arriaga, eleito pelo Parlamento.",
+          "Em 16 anos, a Primeira República teve 45 governos e oito presidentes.",
+        ],
+      },
       "A Primeira República durou até 1926 e foi um tempo muito instável. A democracia só chegaria com o 25 de Abril.",
       "A ideia de fundo continua atual: ninguém governa por nascimento. O poder pertence aos cidadãos.",
       "Tal como o 1.º de Dezembro, o 5 de Outubro deixou de ser feriado entre 2013 e 2015 e voltou em 2016.",
