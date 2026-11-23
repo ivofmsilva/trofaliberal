@@ -56,7 +56,7 @@ function PainelImprensa({ cat, primeiro = true }: { cat: Categoria; primeiro?: b
       >
         {c.verTodos} ({todos.length})
       </Link>
-      {c.nota && <p className="mt-6 max-w-3xl text-sm text-ink/60">{c.nota}</p>}
+      {c.nota && <p className="mt-6 max-w-3xl text-sm text-ink/70">{c.nota}</p>}
     </div>
   );
 }
@@ -140,7 +140,7 @@ export default function Imprensa() {
               {!d.titulo.toLowerCase().includes(diaPorExtenso(d).toLowerCase()) && <> ({diaPorExtenso(d)})</>}
             </span>
           ))}
-          . <span className="text-ink/60">Ao longo do próximo ano vamos juntando outras. Fica atento.</span>
+          . <span className="text-ink/70">Ao longo do próximo ano vamos juntando outras. Fica atento.</span>
         </p>
       </>
     ),

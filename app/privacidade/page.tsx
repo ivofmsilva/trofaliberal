@@ -373,7 +373,7 @@ export default function Privacidade() {
               A IL reserva-se o direito de atualizar este documento a qualquer momento. Convém consultá-lo com regularidade; as
               alterações que afetem os teus direitos ou interesses serão divulgadas.
             </p>
-            <p className="text-sm text-ink/60">Última revisão: 11 de novembro de 2026.</p>
+            <p className="text-sm text-ink/70">Última revisão: 11 de novembro de 2026.</p>
           </Secao>
         </div>
       </article>

@@ -54,7 +54,7 @@ export default function OrderButton({
               type="button"
               onClick={() => janela.current?.close()}
               aria-label="Fechar"
-              className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-xl text-ink/60 transition hover:bg-mist hover:text-navy"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-xl text-ink/70 transition hover:bg-mist hover:text-navy"
             >
               ✕
             </button>

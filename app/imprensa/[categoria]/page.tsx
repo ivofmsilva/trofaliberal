@@ -54,9 +54,9 @@ export default async function Lista({ params }: { params: Promise<{ categoria: s
         ) : lista.length ? (
           grelha
         ) : (
-          <p className="rounded-2xl bg-mist p-6 font-bold text-ink/60">{c.vazio}</p>
+          <p className="rounded-2xl bg-mist p-6 font-bold text-ink/70">{c.vazio}</p>
         )}
-        {c.nota && <p className="mt-8 max-w-3xl text-sm text-ink/60">{c.nota}</p>}
+        {c.nota && <p className="mt-8 max-w-3xl text-sm text-ink/70">{c.nota}</p>}
         <Link href={`/imprensa?t=${categoria}`} className="mt-8 inline-block py-2 font-bold text-cyan-dark hover:underline">
           ← Voltar a Imprensa e Eventos
         </Link>

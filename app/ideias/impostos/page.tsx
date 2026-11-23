@@ -152,7 +152,7 @@ export default function Impostos() {
               </li>
             ))}
           </ol>
-          <p className="mt-6 text-white/80">
+          <p className="mt-6 text-white/90">
             Do nosso programa autárquico de 2025.{" "}
             <Link href="/autarquicas-2025/programa" className="font-bold text-sun underline underline-offset-2">
               Ver o programa

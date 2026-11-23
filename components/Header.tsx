@@ -87,7 +87,7 @@ export default function Header() {
                   <ul className="mb-2 ml-3 border-l border-cyan/40 pl-3">
                     {item.children.map((child) => (
                       <li key={child.label} onClick={() => setOpen(false)}>
-                        <ItemLink item={child} className="block py-1.5 text-sm text-white/80" />
+                        <ItemLink item={child} className="block py-1.5 text-sm text-white/90" />
                       </li>
                     ))}
                   </ul>

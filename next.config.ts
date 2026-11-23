@@ -25,6 +25,8 @@ const subdominios: { host: string; destino: string; mantemCaminho?: boolean }[] 
 ];
 
 const nextConfig: NextConfig = {
+  // O CSS (Tailwind, pequeno) vai dentro do HTML: a página pinta sem esperar por outro ficheiro (auditoria de 23/11/2026).
+  experimental: { inlineCss: true },
   async redirects() {
     return [
       ...subdominios.map(({ host, destino, mantemCaminho }) => ({

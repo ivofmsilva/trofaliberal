@@ -68,7 +68,7 @@ export default function VinteCincoNovembro() {
               sizes="(min-width: 768px) 720px, 100vw"
               className="w-full rounded-2xl shadow-lg"
             />
-            <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal em Lisboa.</figcaption>
+            <figcaption className="mt-2 text-sm text-ink/70">Cartaz da Iniciativa Liberal em Lisboa.</figcaption>
           </figure>
           <p className="font-display text-xl font-bold text-navy md:text-2xl">
             Abril deu-nos a liberdade; Novembro garantiu que ela ficava. Por isso dizemos que Novembro cumpriu
@@ -97,7 +97,7 @@ export default function VinteCincoNovembro() {
               sizes="(min-width: 768px) 720px, 100vw"
               className="w-full rounded-2xl shadow-lg"
             />
-            <figcaption className="mt-2 text-sm text-ink/60">Cartaz da Iniciativa Liberal.</figcaption>
+            <figcaption className="mt-2 text-sm text-ink/70">Cartaz da Iniciativa Liberal.</figcaption>
           </figure>
         </div>
         <div className="mt-8">

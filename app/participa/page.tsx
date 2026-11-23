@@ -91,9 +91,9 @@ const separadores: Separador[] = [
             <li className="rounded-2xl bg-navy p-6 text-white">
               <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota geral</p>
               <p className="font-display mt-1 text-5xl font-bold">{aderir.quotaAnual} €</p>
-              <p className="mt-1 text-sm text-white/80">por ano</p>
+              <p className="mt-1 text-sm text-white/90">por ano</p>
             </li>
-            <li className="rounded-2xl bg-pink p-6 text-white">
+            <li className="rounded-2xl bg-[#b0005f] p-6 text-white">
               <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota jovem</p>
               <p className="font-display mt-1 text-5xl font-bold">{aderir.quotaJovem} €</p>
               <p className="mt-1 text-sm text-white/90">por ano · até aos 25 anos, inclusive</p>
@@ -123,7 +123,7 @@ const separadores: Separador[] = [
           >
             Aderir agora ↗
           </a>
-          <p className="mt-2 text-xs text-ink/60">Abre o site da Iniciativa Liberal, onde se faz a adesão.</p>
+          <p className="mt-2 text-xs text-ink/70">Abre o site da Iniciativa Liberal, onde se faz a adesão.</p>
 
           <details className="mt-8 rounded-2xl bg-mist p-5">
             <summary className="cursor-pointer font-bold text-navy">Prefiro falar com alguém primeiro</summary>

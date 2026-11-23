@@ -33,7 +33,7 @@ export default function Galeria({
   }, [aberta, fechar, mover]);
 
   if (!fotos.length) {
-    return <p className="mt-6 rounded-2xl bg-white p-6 font-bold text-ink/60">Fotos em breve.</p>;
+    return <p className="mt-6 rounded-2xl bg-white p-6 font-bold text-ink/70">Fotos em breve.</p>;
   }
 
   return (

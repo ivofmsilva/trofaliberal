@@ -74,7 +74,7 @@ export default function Habitacao() {
               <li key={n.valor} className="rounded-2xl bg-white p-6 shadow-sm">
                 <p className="font-display text-5xl font-bold text-pink">{n.valor}</p>
                 <p className="mt-3 font-bold leading-snug text-navy">{n.legenda}</p>
-                <p className="mt-3 text-xs text-ink/60">{n.fonte}</p>
+                <p className="mt-3 text-xs text-ink/70">{n.fonte}</p>
               </li>
             ))}
           </ul>

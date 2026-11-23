@@ -88,7 +88,7 @@ export default function DiaDoConcelho() {
           <p className={`${etiqueta} text-pink`}>Novembro de 1998</p>
           <h2 className="font-display mt-2 text-3xl font-bold text-navy md:text-4xl">A Trofa em Lisboa</h2>
           <Galeria fotos={arquivo.map((f) => f.src)} legendas={arquivo.map((f) => f.legenda)} alt="Novembro de 1998" />
-          <p className="mt-2 text-sm text-ink/60">
+          <p className="mt-2 text-sm text-ink/70">
             Fotos: Arquivo da Câmara Municipal da Trofa e Centro Digital de Informação Local.
           </p>
         </div>

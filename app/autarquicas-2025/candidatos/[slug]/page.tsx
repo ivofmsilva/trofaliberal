@@ -33,7 +33,8 @@ export default async function Candidato({ params }: { params: Promise<{ slug: st
             alt={c.nome}
             width={640}
             height={640}
-            priority
+            loading="eager"
+            fetchPriority="high"
             className="aspect-square w-full max-w-xs rounded-2xl object-cover"
           />
           <div>

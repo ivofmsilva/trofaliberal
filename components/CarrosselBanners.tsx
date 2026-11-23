@@ -82,7 +82,7 @@ export default function CarrosselBanners({ titulos, children }: { titulos: strin
               onClick={() => ir(i)}
               aria-label={`Ver: ${t}`}
               aria-current={atual === i}
-              className="group grid h-10 place-items-center px-1"
+              className="group grid h-10 min-w-6 place-items-center px-1.5"
             >
               <span className={`block h-3 rounded-full transition-all ${atual === i ? "w-8 bg-pink" : "w-3 bg-navy/25 group-hover:bg-navy/50"}`} />
             </button>

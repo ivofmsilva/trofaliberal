@@ -2,7 +2,15 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
+
+// Lê o separador pedido no endereço (?t=…). Fica à parte, dentro de um Suspense, para os separadores serem desenhados
+// logo no servidor (com o primeiro aberto) e a página não saltar quando o JavaScript chega.
+function LerEndereco({ aoLer }: { aoLer: (t: string | null) => void }) {
+  const t = useSearchParams().get("t");
+  useEffect(() => aoLer(t), [t, aoLer]);
+  return null;
+}
 
 // Um separador tem conteúdo (abre aqui, na mesma página) ou um href (cartão que leva a outra página).
 // `aliases`: outros nomes (de ligações antigas) que abrem este separador.
@@ -20,8 +28,7 @@ export default function Separadores({
   etiqueta: string;
 }) {
   const router = useRouter();
-  const params = useSearchParams();
-  const pedido = params.get("t");
+  const [pedido, setPedido] = useState<string | null>(null);
   const comConteudo = separadores.filter((s) => s.conteudo !== undefined);
   const ativo = (comConteudo.find((s) => s.id === pedido) ?? comConteudo.find((s) => pedido && s.aliases?.includes(pedido)) ?? comConteudo[0]).id;
 
@@ -35,12 +42,16 @@ export default function Separadores({
 
   // No telemóvel os cartões enchem o ecrã: depois de escolher, desce-se até ao painel, para se ver que mudou.
   const escolher = (id: string) => {
+    setPedido(id);
     router.replace(`${caminho}?t=${id}`, { scroll: false });
     if (window.innerWidth < 1024) window.setTimeout(() => document.getElementById(`painel-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
   };
 
   return (
     <div>
+      <Suspense fallback={null}>
+        <LerEndereco aoLer={setPedido} />
+      </Suspense>
       <ul aria-label={etiqueta} className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {separadores.map((s) => (
           <li key={s.id}>
@@ -61,7 +72,7 @@ export default function Separadores({
                 }`}
               >
                 <span className="font-display text-xl font-bold leading-tight">{s.label}</span>
-                <span className={`mt-1 text-sm ${ativo === s.id ? "text-white/80" : "text-ink/70"}`}>{s.resumo}</span>
+                <span className={`mt-1 text-sm ${ativo === s.id ? "text-white/90" : "text-ink/70"}`}>{s.resumo}</span>
               </button>
             )}
           </li>

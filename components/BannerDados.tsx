@@ -37,10 +37,10 @@ export default function BannerDados() {
       <Link
         href="/dados"
         aria-label="Dados da Trofa: a Trofa em números. Abrir o portal de dados"
-        className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
+        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-12 md:py-12">
-          <span className="-skew-x-12 bg-pink px-6 py-1.5">
+          <span className="-skew-x-12 bg-[#b0005f] px-6 py-1.5">
             <span className="block skew-x-12 text-lg font-black uppercase italic tracking-[0.32em] text-sun">
               Trofa
             </span>
@@ -66,7 +66,7 @@ export default function BannerDados() {
           </div>
           <div className="hidden flex-row flex-wrap items-center gap-2 sm:flex">
             {["Demografia", "Economia", "Contratos públicos", "Orçamento municipal"].map((t) => (
-              <span key={t} className="bg-pink px-3 py-1 text-base font-black uppercase text-sun sm:px-3.5 sm:py-1.5 sm:text-lg">
+              <span key={t} className="bg-[#b0005f] px-3 py-1 text-base font-black uppercase text-sun sm:px-3.5 sm:py-1.5 sm:text-lg">
                 {t}
               </span>
             ))}

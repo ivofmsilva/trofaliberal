@@ -14,10 +14,10 @@ export default function BannerEducacao() {
       <Link
         href="/ideias/educacao"
         aria-label="Trofa no topo da Educação: liberdade para aprender, autonomia para crescer. Ver o manifesto"
-        className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
+        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-12 md:py-12">
-          <span className="-skew-x-12 bg-pink px-6 py-1.5">
+          <span className="-skew-x-12 bg-[#b0005f] px-6 py-1.5">
             <span className="block skew-x-12 text-lg font-black uppercase italic tracking-[0.32em] text-sun">
               Trofa
             </span>
@@ -47,7 +47,7 @@ export default function BannerEducacao() {
           />
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-[#0a4fa0] via-[#0a4fa0]/80 to-transparent px-6 pb-6 pt-16">
             {[`${locais} propostas para a Trofa`, `${nacionais} para exigir ao Governo`].map((t) => (
-              <span key={t} className="bg-pink px-3 py-1.5 text-base font-black uppercase text-sun sm:text-lg">
+              <span key={t} className="bg-[#b0005f] px-3 py-1.5 text-base font-black uppercase text-sun sm:text-lg">
                 {t}
               </span>
             ))}

@@ -6,7 +6,7 @@ import { links, nav } from "@/lib/site";
 export default function Footer() {
   const ligacao = "inline-block py-1 hover:text-sun";
   return (
-    <footer className="bg-navy text-white/80">
+    <footer className="bg-navy text-white/90">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-[1.2fr_1.4fr_1fr] md:gap-10 md:py-10">
         <div>
           <div className="flex items-center gap-3">
@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="font-display text-base font-bold text-white">Iniciativa Liberal Trofa</span>
           </div>
           <p className="mt-3 text-sm">Núcleo territorial da Trofa. Somos a energia de que a Trofa precisa!</p>
-          <a href={`mailto:${links.email}`} className="mt-1 inline-block py-1 text-sm font-bold text-sun">
+          <a href={`mailto:${links.email}`} className="mt-1 inline-block py-1 text-sm font-bold text-white underline underline-offset-2">
             {links.email}
           </a>
         </div>
@@ -54,7 +54,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-3 text-center text-xs text-white/80">
+      <div className="border-t border-white/10 py-3 text-center text-xs text-white/90">
         © {new Date().getFullYear()} Iniciativa Liberal — Núcleo da Trofa ·{" "}
         <Link href="/privacidade" className="underline underline-offset-2 hover:text-white">
           Privacidade e cookies

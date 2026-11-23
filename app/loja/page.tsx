@@ -96,7 +96,7 @@ export default function Loja() {
               />
               <div className="flex flex-1 flex-col p-4 sm:p-8">
                 <h3 className="font-display text-base font-bold leading-tight sm:text-2xl">{p.nome}</h3>
-                <p className="mt-2 text-sm text-white/80 sm:mt-3 sm:text-base">{p.texto}</p>
+                <p className="mt-2 text-sm text-white/90 sm:mt-3 sm:text-base">{p.texto}</p>
                 <div className="mt-auto space-y-3 pt-4 sm:space-y-4 sm:pt-6">
                   <p className="font-display text-2xl font-bold text-sun sm:text-3xl">{p.preco}</p>
                   <OrderButton produto={p.nome} tamanhos={p.tamanhos} tamanhoLabel={p.tamanhoLabel} />
@@ -105,7 +105,7 @@ export default function Loja() {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-sm text-ink/60">
+        <p className="mt-6 text-sm text-ink/70">
           A encomenda é enviada ao núcleo, que entra em contacto contigo para combinar o pagamento e a entrega.
           {packs.length > 0 && " Imagem do pack ilustrativa."} O vendedor é a Iniciativa Liberal; vê as{" "}
           <Link href="/privacidade#loja" className="underline underline-offset-2 hover:text-ink">

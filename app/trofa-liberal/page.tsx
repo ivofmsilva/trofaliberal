@@ -187,7 +187,7 @@ export default function Sobre() {
             />
           </a>
         </div>
-        <p className="mt-2 text-sm text-ink/60 md:hidden">Desliza para o lado para ver tudo →</p>
+        <p className="mt-2 text-sm text-ink/70 md:hidden">Desliza para o lado para ver tudo →</p>
       </section>
 
       <section id="equipa" className="scroll-mt-24 bg-mist py-20">

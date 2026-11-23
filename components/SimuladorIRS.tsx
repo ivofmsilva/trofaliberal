@@ -32,7 +32,7 @@ export default function SimuladorIRS({ taxa, proposta, anoRendimentos }: { taxa:
         onChange={(e) => setColeta(Number(e.target.value))}
         className="mt-3 w-full accent-pink"
       />
-      <div className="mt-1 flex justify-between text-xs text-ink/60">
+      <div className="mt-1 flex justify-between text-xs text-ink/70">
         <span>0 €</span>
         <span>20 000 €</span>
       </div>

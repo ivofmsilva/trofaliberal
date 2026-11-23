@@ -9,8 +9,8 @@ export default function CartaoEvento({ evento: e }: { evento: Evento }) {
     <div className="flex flex-col justify-center p-6 sm:p-8">
       <p className="text-sm font-bold uppercase tracking-widest text-sun">{e.data}</p>
       <h3 className="font-display mt-2 text-2xl font-bold">{e.titulo}</h3>
-      {e.local && <p className="mt-2 text-white/80">{e.local}</p>}
-      {e.texto && <p className="mt-3 text-white/80">{e.texto}</p>}
+      {e.local && <p className="mt-2 text-white/90">{e.local}</p>}
+      {e.texto && <p className="mt-3 text-white/90">{e.texto}</p>}
       {e.acao && (
         <Link href={e.acao.href} className="mt-4 inline-block font-bold text-sun hover:underline">
           {e.acao.texto}

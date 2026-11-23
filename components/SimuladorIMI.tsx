@@ -46,7 +46,7 @@ export default function SimuladorIMI({
         onChange={(e) => setVpt(Number(e.target.value))}
         className="mt-3 w-full accent-pink"
       />
-      <div className="mt-1 flex justify-between text-xs text-ink/60">
+      <div className="mt-1 flex justify-between text-xs text-ink/70">
         <span>20 000 €</span>
         <span>500 000 €</span>
       </div>

@@ -49,13 +49,13 @@ export default function RostosLiberais({ rostos }: { rostos: Rosto[] }) {
           {r.frase}”
         </blockquote>
         <p className="mt-4 font-bold text-ink/80">
-          {r.nome} <span className="font-normal text-ink/60">· membro da IL Trofa</span>
+          {r.nome} <span className="font-normal text-ink/70">· membro da IL Trofa</span>
         </p>
         <div className="mt-6 flex items-center gap-4">
           <button type="button" onClick={() => ir(-1)} aria-label="Membro anterior" className={seta}>
             ‹
           </button>
-          <span className="min-w-12 text-center text-sm font-bold text-ink/60">
+          <span className="min-w-12 text-center text-sm font-bold text-ink/70">
             {i + 1} / {total}
           </span>
           <button type="button" onClick={() => ir(1)} aria-label="Membro seguinte" className={seta}>

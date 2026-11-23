@@ -101,7 +101,7 @@ export default function ApresentacaoCandidatura() {
             {discursos.map((f) => (
               <li key={f.quem} className="rounded-2xl border-l-8 border-pink bg-mist p-6 text-navy">
                 <p className="font-display text-lg font-bold leading-snug">{f.texto}</p>
-                <p className="mt-3 text-xs font-bold uppercase tracking-widest text-pink">{f.quem}</p>
+                <p className="mt-3 text-xs font-bold uppercase tracking-widest text-[#c4006b]">{f.quem}</p>
               </li>
             ))}
           </ul>
