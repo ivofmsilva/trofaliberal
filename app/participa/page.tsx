@@ -89,7 +89,7 @@ const separadores: Separador[] = [
         <div className={caixa}>
           <ul className="grid gap-4 sm:grid-cols-2">
             <li className="rounded-2xl bg-navy p-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota anual</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-sun">Quota geral</p>
               <p className="font-display mt-1 text-5xl font-bold">{aderir.quotaAnual} €</p>
               <p className="mt-1 text-sm text-white/80">por ano</p>
             </li>
