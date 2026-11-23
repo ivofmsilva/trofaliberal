@@ -50,6 +50,7 @@ export const nav: NavItem[] = [
       { label: "Metro para a Trofa", href: "/ideias/metro" },
       { label: "Trofa no topo da Educação", href: "/ideias/educacao" },
       { label: "Construir para o futuro", href: "/ideias/habitacao" },
+      { label: "Impostos na Trofa", href: "/ideias/impostos" },
       { label: "Cartazes", href: "/ideias/cartazes" },
       { label: "Programa Autárquico ’25", href: "/autarquicas-2025/programa" },
     ],

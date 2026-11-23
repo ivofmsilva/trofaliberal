@@ -32,6 +32,12 @@ const causas = [
     cta: "Ver as medidas →",
   },
   {
+    titulo: "Impostos na Trofa",
+    texto: "Quanto a Câmara cobra, quanto pagas de IMI e de IRS municipal, e o que propomos: menos impostos, mais liberdade.",
+    href: "/ideias/impostos",
+    cta: "Fazer as contas →",
+  },
+  {
     titulo: "Cartazes",
     texto: "Os cartazes e mensagens que já espalhámos pela Trofa.",
     href: "/ideias/cartazes",
