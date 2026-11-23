@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Barras from "@/components/dados/Barras";
+import FonteFundos from "@/components/dados/FonteFundos";
 import SubNav from "@/components/dados/SubNav";
-import { compacto, dataCurta, nomeProjeto, numero } from "@/lib/dados/formatar";
+import { compacto, nomeProjeto, numero } from "@/lib/dados/formatar";
 import { fundosConcelho, fundosMunicipio, resumoFundos } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
   title: "Fundos europeus",
-  description: "Projetos do Portugal 2020 e do PRR com execução na Trofa.",
+  description: "Projetos do Portugal 2020, do PRR e do Portugal 2030 com execução na Trofa.",
 };
 
 export default function Fundos() {
   const conc = resumoFundos(fundosConcelho);
   const mun = resumoFundos(fundosMunicipio);
-  const ultimaConclusao = fundosConcelho.map((p) => p.data_efetiva_conclusao).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
 
   return (
     <>
@@ -23,8 +23,8 @@ export default function Fundos() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-apagado">Transparência</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight text-tinta md:text-5xl">Fundos europeus</h1>
           <p className="mt-4 max-w-2xl text-lg text-texto">
-            Projetos financiados por fundos europeus na Trofa, de dois programas: o Portugal 2020 (fundos de coesão, 2014–2020) e o
-            PRR (Plano de Recuperação e Resiliência, 2021–2026). O Portugal 2030 ainda não está incluído.
+            Projetos financiados por fundos europeus na Trofa, de três programas: o Portugal 2020 (fundos de coesão, 2014–2020), o
+            PRR (Plano de Recuperação e Resiliência, 2021–2026) e o Portugal 2030 (fundos de coesão, 2021–2027).
           </p>
         </div>
       </section>
@@ -85,14 +85,11 @@ export default function Fundos() {
           </ul>
         </section>
 
-        <p className="mt-12 text-sm text-apagado">
-          Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado
-          atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa). Por exemplo, os
-          32,2 M€ da Infraestruturas de Portugal são 9,7% de um projeto do PRR em várias estradas do país, entre elas a EN14. O estado
-          (“Em execução” ou “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou: há projetos que
-          continuam “Em execução” nos ficheiros com a conclusão registada há anos. Dados até: a conclusão mais recente registada
-          nos ficheiros é de {dataCurta(ultimaConclusao)}.
-        </p>
+        <FonteFundos lista={fundosConcelho} className="mt-12">
+          {" "}
+          Por exemplo, os 85,5 M€ do Metro do Porto são 90% do prolongamento da linha do ISMAI à Trofa, e os 32,2 M€ da
+          Infraestruturas de Portugal são 9,7% de um projeto do PRR em várias estradas do país, entre elas a EN14.
+        </FonteFundos>
       </div>
     </>
   );

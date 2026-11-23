@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FonteFundos from "@/components/dados/FonteFundos";
 import TabelaFundos from "@/components/dados/TabelaFundos";
-import { dataCurta } from "@/lib/dados/formatar";
-import { fundosMunicipio, type Projeto } from "@/lib/dados/transparencia";
-
-const ultimaConclusao = (l: Projeto[]) => l.map((p) => p.data_efetiva_conclusao).filter((d): d is string => Boolean(d)).sort().pop() ?? null;
+import { fundosMunicipio } from "@/lib/dados/transparencia";
 
 export const metadata: Metadata = {
   title: "Fundos europeus: projetos do Município",
@@ -28,12 +26,7 @@ export default function Municipio() {
       </section>
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <TabelaFundos ficheiro="fundos-municipio" mostrarBeneficiario={false} />
-      <p className="mt-10 max-w-3xl text-sm text-apagado">
-        Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado atribuível a este
-        território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa). O estado (“Em execução” ou
-        “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou. Dados até: a conclusão mais recente
-        registada nos ficheiros é de {dataCurta(ultimaConclusao(fundosMunicipio))}.
-      </p>
+      <FonteFundos lista={fundosMunicipio} />
       </div>
     </>
   );
