@@ -119,7 +119,7 @@ export const areas: Area[] = [
       "Baixar o IMI para o valor mínimo legal",
       "Reduzir a derrama de 1,5% para 0,75%",
       "Eliminar taxas desnecessárias",
-      "Eliminar as taxas inferiores a 10€",
+      "Isenção automática de taxas inferiores a 10€",
       "Não criar novas taxas durante o mandato",
     ],
   },
