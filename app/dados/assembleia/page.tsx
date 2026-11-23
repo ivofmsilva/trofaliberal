@@ -146,6 +146,11 @@ export default function Assembleia() {
           <p className="mt-2 mb-6 max-w-2xl text-texto">
             Os PDF das sessões, tal como o município os publica, por ano. Escolhe o tipo de documento.
           </p>
+          <p className="-mt-3 mb-6">
+            <Link href="/dados/atas" className="font-medium text-tinta underline underline-offset-2">
+              Procurar um assunto em todas as atas →
+            </Link>
+          </p>
           <SeparadoresDocumentos
             paineis={partes.map((p) => {
               const docs = assembleia.filter((d) => d.tipo === p.tipo);

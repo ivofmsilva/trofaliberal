@@ -20,6 +20,7 @@ const paginas = [
   "/dados/fundos-europeus/municipio",
   "/dados/camara",
   "/dados/assembleia",
+  "/dados/atas",
   "/dados/contratos/ajustes-diretos",
   "/dados/financas",
   "/dados/fontes",
