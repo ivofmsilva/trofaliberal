@@ -67,6 +67,12 @@ export const categorias: Record<
 export const itens: Record<Categoria, Item[]> = {
   noticias: [
     {
+      titulo: "IL Trofa cria portal de dados públicos e pede maior transparência à Câmara Municipal",
+      fonte: "Trofa TV · SAPO",
+      data: "2026-11-23",
+      href: "https://sapo.pt/artigo/il-trofa-cria-portal-de-dados-publicos-e-pede-maior-transparencia-a-camara-municipal-6b046ef82feb67ff6b8d3d66",
+    },
+    {
       titulo: "Diamantino Costa eleito para Conselho de Fiscalização da IL",
       fonte: "Jornal do Ave",
       data: "2025-02-03",
