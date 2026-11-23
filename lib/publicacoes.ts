@@ -10,8 +10,9 @@ export type Publicacao = {
   h: number;
 };
 
+// As três mais recentes do @liberaltrofa (atualizado a 23/11/2026).
 export const ultimasPublicacoes: Publicacao[] = [
+  { id: "DgC3AeRIBwN", alt: "Vira o disco e paga mais à mesma: IVA 0% nos alimentos, um alívio temporário, e fim dos benefícios fiscais para o arrendamento, rendas mais caras. O resultado? Mais cara a habitação, mas mais barato o camarão.", w: 1080, h: 1080 },
+  { id: "Df712fao88G", alt: "19 de novembro: 28 anos do Concelho da Trofa. Em 1998, os trofenses foram a Lisboa e trouxeram o concelho para casa. Bom feriado, Trofa!", w: 1080, h: 1350 },
   { id: "DfvVtWMMAsZ", alt: "Convite para o Jantar de Natal dos 11 núcleos liberais do distrito do Porto: sábado, 5 de dezembro, 20h, Casa da Agra, Maia", w: 900, h: 1125 },
-  { id: "Dc9grxpKZAR", alt: "Comunicado: Iniciativa Liberal da Trofa reafirma a defesa do Metro ligeiro até à Trofa", w: 900, h: 1125 },
-  { id: "Dco6f0dimgQ", alt: "Parlamento na Praia — Aqui Há Parlamento com Carlos Guimarães Pinto e Miguel Rangel", w: 900, h: 900 },
 ];
