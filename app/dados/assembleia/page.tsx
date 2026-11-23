@@ -153,8 +153,10 @@ export default function Assembleia() {
                   mun-trofa.pt ↗
                 </a>
                 . A data {p.tipo === "am-ata" ? "e o número da ata são os que vêm" : "é a que vem"} no nome de cada ficheiro
-                {p.tipo === "am-deliberacoes" ? " ou, nos mais antigos, dentro do próprio documento" : ""}; quando o nome não diz o ano,
-                o documento fica no arquivo mais antigo.
+                {p.tipo === "am-deliberacoes" ? " ou, nos mais antigos, dentro do próprio documento" : ""}
+                {p.tipo === "am-ata"
+                  ? "; nas atas mais antigas, cujo nome não diz o ano, o ano foi posto à mão."
+                  : "; quando o nome não diz o ano, o documento fica no arquivo mais antigo."}
               </p>
             </section>
           );

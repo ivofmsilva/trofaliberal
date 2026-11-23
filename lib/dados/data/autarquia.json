@@ -3759,7 +3759,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2020,
    "data": null,
    "numero": 21,
    "ficheiro": "ATA_N.__21",
@@ -3775,7 +3775,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2020,
    "data": null,
    "numero": 22,
    "ficheiro": "Ata nº 22",
@@ -3871,7 +3871,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2018,
    "data": null,
    "numero": null,
    "ficheiro": "AT",
@@ -4015,7 +4015,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2015,
    "data": null,
    "numero": 10,
    "ficheiro": "ATA_N.__10",
@@ -4023,7 +4023,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2015,
    "data": null,
    "numero": 11,
    "ficheiro": "ATA_N.__11",
@@ -4087,7 +4087,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2014,
    "data": null,
    "numero": 4,
    "ficheiro": "ATA_N_4",
@@ -4095,7 +4095,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2014,
    "data": null,
    "numero": 5,
    "ficheiro": "ATA_N_5",
@@ -4119,7 +4119,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2014,
    "data": null,
    "numero": null,
    "ficheiro": "2961_001",
@@ -4135,7 +4135,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "90",
@@ -4144,7 +4144,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "91",
@@ -4153,7 +4153,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "92",
@@ -4162,7 +4162,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "93",
@@ -4171,7 +4171,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "94",
@@ -4180,7 +4180,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "95",
@@ -4189,7 +4189,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2013,
    "data": null,
    "numero": null,
    "ficheiro": "96",
@@ -4198,16 +4198,15 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
-   "data": null,
+   "ano": 2013,
+   "data": "2013-12-30",
    "numero": 3,
    "ficheiro": "ATA_N__3_-_30_DE_DEZEMBRO",
-   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__3_-_30_DE_DEZEMBRO.PDF",
-   "diaMes": "12-30"
+   "url": "https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Assembleia%20Municipal/Atas/ATA_N__3_-_30_DE_DEZEMBRO.PDF"
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "73",
@@ -4216,7 +4215,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "74",
@@ -4225,7 +4224,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "75",
@@ -4234,7 +4233,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "76",
@@ -4243,7 +4242,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "77",
@@ -4252,7 +4251,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "78",
@@ -4261,7 +4260,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "79",
@@ -4270,7 +4269,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "80",
@@ -4279,7 +4278,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2012,
    "data": null,
    "numero": null,
    "ficheiro": "81",
@@ -4288,7 +4287,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2011,
    "data": null,
    "numero": null,
    "ficheiro": "60",
@@ -4297,7 +4296,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2011,
    "data": null,
    "numero": null,
    "ficheiro": "61",
@@ -4306,7 +4305,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2011,
    "data": null,
    "numero": null,
    "ficheiro": "62",
@@ -4315,7 +4314,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2011,
    "data": null,
    "numero": null,
    "ficheiro": "63",
@@ -4324,7 +4323,7 @@
   },
   {
    "tipo": "am-ata",
-   "ano": null,
+   "ano": 2011,
    "data": null,
    "numero": null,
    "ficheiro": "64",
