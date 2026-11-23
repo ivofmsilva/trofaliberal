@@ -28,7 +28,7 @@ export default function Fontes() {
     {
       nome: "INE — Instituto Nacional de Estatística",
       texto:
-        "Demografia, economia, habitação, educação, saúde, segurança, ambiente, turismo, cultura, finanças do município e eleições. Recolhemos os valores diretamente da base de dados do INE, para a Trofa, os outros 7 concelhos do grupo, a Área Metropolitana do Porto e Portugal.",
+        "Demografia, economia, salários e pensões, habitação, educação, saúde, segurança, ambiente, turismo, cultura, serviços (multibanco, bancos e correios), finanças do município e eleições. Alguns indicadores do INE vêm de outras entidades (Quadros de Pessoal do Ministério do Trabalho, Segurança Social, SIBS, Autoridade Tributária). Recolhemos os valores diretamente da base de dados do INE, para a Trofa, os outros 7 concelhos do grupo, a Área Metropolitana do Porto e Portugal.",
       ligacoes: [{ nome: "ine.pt", url: "https://www.ine.pt/" }],
     },
     {
@@ -143,7 +143,8 @@ export default function Fontes() {
           de cada concelho. Nos valores por habitante, dá o valor do conjunto, como o INE faz para a Área Metropolitana e
           para o país. Nas percentagens das eleições, o peso são os eleitores inscritos. Nos índices em que a divisão não é
           pela população (o de envelhecimento divide pelos jovens, os de dependência pelas pessoas dos 15 aos 64 anos), é
-          uma aproximação. A densidade é exata: o total de habitantes dos 8 a dividir pela área dos 8;
+          uma aproximação; o mesmo nos valores médios por trabalhador e por pensionista (ganho médio mensal, pensão média) e
+          na taxa de natalidade das empresas. A densidade é exata: o total de habitantes dos 8 a dividir pela área dos 8;
         </li>
         <li>
           <b className="text-tinta">medianas</b> (rendas, preço da habitação, rendimento, idade): a média simples das 8
@@ -152,8 +153,13 @@ export default function Fontes() {
         </li>
         <li>
           <b className="text-tinta">indicadores calculados a partir de outros</b> (a despesa em cultura por habitante, a
-          percentagem de alunos no ensino privado, o desemprego de longa duração em percentagem do total): a soma dos 8
-          numeradores a dividir pela soma dos 8 denominadores.
+          percentagem de alunos no ensino privado, o desemprego de longa duração em percentagem do total, o valor acrescentado
+          por empresa, os agregados fiscais abaixo de 10 mil €, os fogos licenciados por 10 mil habitantes): a soma dos 8
+          numeradores a dividir pela soma dos 8 denominadores;
+        </li>
+        <li>
+          <b className="text-tinta">sem valor</b> no peso das 4 maiores empresas no valor acrescentado: não há conta certa a
+          partir dos valores de cada concelho.
         </li>
       </ul>
       <p className="mt-4 text-texto">

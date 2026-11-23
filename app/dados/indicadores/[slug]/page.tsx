@@ -47,6 +47,8 @@ function comoGrupo(i: { slug: string; metodoGrupo?: string }): string {
       return "Aqui, o valor dos 8 concelhos próximos calcula-se com os totais dos 8 (a soma dos numeradores a dividir pela soma dos denominadores).";
     case "portal":
       return "Aqui, o valor dos 8 concelhos próximos vem já calculado do portal de onde partiu a recolha (ver Fontes).";
+    case "sem":
+      return "Aqui não há valor para os 8 concelhos próximos: não se pode calcular a partir dos valores de cada concelho, e o INE não o publica para este conjunto.";
     default:
       return "";
   }
