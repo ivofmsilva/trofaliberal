@@ -139,6 +139,14 @@ export default function ApresentacaoCandidatura() {
         <section>
           <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Imagens</h2>
           <Galeria fotos={fotos("candidatura-2025")} alt="Apresentação da candidatura da IL Trofa, no espaço Mordomias" />
+          <a
+            href="https://www.facebook.com/story.php?story_fbid=1328862002580673&id=100063706563640"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-block py-2 font-bold text-cyan-dark hover:underline"
+          >
+            Mais fotos na reportagem da TrofaTv ↗
+          </a>
         </section>
 
         <section>
