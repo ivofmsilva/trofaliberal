@@ -113,7 +113,10 @@ export default function ListaTemas({ temas, destaques, total }: { temas: TemaCar
                         {i.tema} · {i.periodo}
                       </span>
                     </span>
-                    <span className="shrink-0 text-right text-lg font-bold tabular-nums text-trofa">{i.valor}</span>
+                    <span className="shrink-0 text-right text-lg font-bold tabular-nums text-trofa">
+                      {i.valor}
+                      {i.legenda && <span className="block max-w-[9rem] text-xs font-normal leading-tight text-apagado">{i.legenda}</span>}
+                    </span>
                   </Link>
                 </li>
               ))}

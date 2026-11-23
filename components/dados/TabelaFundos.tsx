@@ -177,6 +177,11 @@ export default function TabelaFundos({ ficheiro, mostrarBeneficiario }: { fichei
                         <dd className="text-tinta">{data(p.data_efetiva_conclusao)}</dd>
                       </div>
                     </dl>
+                    {p.percentagem_localizacao_municipio < 100 && (
+                      <p className="text-xs text-apagado">
+                        O valor mostrado é a parte do projeto atribuída à Trofa ({numero(p.percentagem_localizacao_municipio, 1)}%), não o projeto inteiro.
+                      </p>
+                    )}
                     {p.estado === "Em execução" && p.data_efetiva_conclusao && p.data_efetiva_conclusao < hoje && (
                       <p className="text-xs text-apagado">
                         O estado é o que a fonte regista: o projeto continua “Em execução” nos ficheiros, apesar de a data de conclusão já ter passado.

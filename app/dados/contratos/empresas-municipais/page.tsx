@@ -16,6 +16,8 @@ const variacao = (a: number | null | undefined, b: number | null | undefined) =>
 const euros = (v: number | null | undefined, casas = 2) => (v === null || v === undefined ? "—" : `${v < 0 ? "−" : ""}${numero(Math.abs(v), casas)} €`);
 const dataPT = (iso: string | null) => (iso ? iso.split("-").reverse().join("/") : "—");
 const semNif = (t: string | null) => (t ?? "—").replace(/^\s*\d{8,9}\s*-\s*/, "").trim();
+// Erros que vêm tal e qual do Portal BASE: ficam como estão, marcados com [sic].
+const sic = (t: string) => t.replace("patrocícinio", "patrocícinio [sic]").replace(/^Ambiplastic,Ldª$/, "Ambiplastic,Ldª [sic]");
 const ligacao = "text-trofa underline-offset-2 hover:underline";
 
 // Documentos da empresa, procurados pelo título (ligações para o site da TrofAmbiente)
@@ -274,7 +276,7 @@ export default function EmpresasMunicipais() {
           </div>
           <details className="mt-3 text-sm text-apagado">
             <summary className="cursor-pointer hover:text-tinta">
-              Fonte: nota dos gastos com o pessoal de cada relatório e contas. Ver as páginas
+              Fonte: nota dos gastos com o pessoal de cada relatório e contas. Ver o relatório e a página de cada ano
             </summary>
             <p className="mt-2 max-w-3xl">
               {pessoasAoServico.map((p, k) => (
@@ -285,9 +287,10 @@ export default function EmpresasMunicipais() {
                   </Externa>
                 </span>
               ))}
-              . Página do ficheiro PDF. Não há número para 2010 e 2011. O relatório de 2014 repete o quadro de 2013.
+              . Página do ficheiro PDF.
             </p>
           </details>
+          <p className="mt-2 max-w-3xl text-xs text-apagado">Notas: não há número para 2010 e 2011; o relatório de 2014 repete o quadro de 2013.</p>
         </section>
 
         <section aria-label="Contratos públicos">
@@ -343,9 +346,9 @@ export default function EmpresasMunicipais() {
                     <tr key={c.idcontrato} className="border-t border-linha align-top">
                       <td className="whitespace-nowrap px-2 py-2 tabular-nums text-texto">{dataPT(c.data_celebracao)}</td>
                       <td className="px-2 py-2 text-texto">
-                        <Externa href={`https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=${c.idcontrato}`}>{c.objeto ?? "—"}</Externa>
+                        <Externa href={`https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=${c.idcontrato}`}>{c.objeto ? sic(c.objeto) : "—"}</Externa>
                       </td>
-                      <td className="px-2 py-2 text-texto">{semNif(c.adjudicatario)}</td>
+                      <td className="px-2 py-2 text-texto">{sic(semNif(c.adjudicatario))}</td>
                       <td className="px-2 py-2 text-texto">{c.tipoprocedimento ?? "—"}</td>
                       <td className="whitespace-nowrap px-2 py-2 text-right tabular-nums text-texto">{euros(c.valor_contratual)}</td>
                     </tr>

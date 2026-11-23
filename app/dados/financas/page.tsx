@@ -426,7 +426,7 @@ export default function Financas() {
               <h3 id="limite" className="mt-12 scroll-mt-24 text-xl font-bold tracking-tight text-tinta">Limite legal da dívida</h3>
               <p className="mt-2 mb-6 max-w-3xl text-texto">
                 A lei limita a dívida de cada câmara a uma vez e meia a média da receita corrente dos três anos anteriores. Em{" "}
-                {ultLimite.periodo}, o limite era {m(valorNoAno(limiteDivida.limite, ultLimite.periodo))} M€ e a dívida que conta para ele{" "}
+                {ultLimite.periodo}, o limite era {m(valorNoAno(limiteDivida.limite, ultLimite.periodo))} M€ e a dívida que conta para ele, segundo a DGAL,{" "}
                 {m(valorNoAno(limiteDivida.divida, ultLimite.periodo))} M€: {numero(ultLimite.valores[0]?.v ?? 0, 1)}% do limite.
                 {acimaLimite.length > 0 && ` Esteve acima do limite (mais de 100%) em ${acimaLimite.length === 1 ? acimaLimite[0] : `${acimaLimite.slice(0, -1).join(", ")} e ${acimaLimite[acimaLimite.length - 1]}`}.`}
               </p>

@@ -87,7 +87,8 @@ export default function Fundos() {
 
         <p className="mt-12 text-sm text-apagado">
           Fonte: Portugal 2020 e PRR, através dos ficheiros de dados.gov.pt. O valor mostrado é o valor aprovado
-          atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa). O estado
+          atribuível a este território (nos projetos que abrangem vários concelhos, só a parte que cabe à Trofa). Por exemplo, os
+          32,2 M€ da Infraestruturas de Portugal são 9,7% de um projeto do PRR em várias estradas do país, entre elas a EN14. O estado
           (“Em execução” ou “Concluído”) é o que a fonte regista, mesmo quando a data de conclusão já passou: há projetos que
           continuam “Em execução” nos ficheiros com a conclusão registada há anos. Dados até: a conclusão mais recente registada
           nos ficheiros é de {dataCurta(ultimaConclusao)}.

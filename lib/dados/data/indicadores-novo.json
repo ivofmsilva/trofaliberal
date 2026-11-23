@@ -1,5 +1,5 @@
 {
- "juntado": "2026-11-21T14:04:07.775Z",
+ "juntado": "2026-11-23T09:37:37.227Z",
  "atualizado": "21/11/2026",
  "indicadores": [
   {
@@ -3945,7 +3945,7 @@
    "titulo": "Despesa da Câmara em ambiente por habitante",
    "categoria": "ambiente",
    "unidade": "€ por habitante",
-   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento. É o valor que o INE publica, calculado com as estimativas de população anteriores à última revisão, por isso pode diferir um pouco de dividir pela população que aqui se mostra.",
+   "texto": "Despesa da Câmara em proteção do ambiente a dividir pela população média do ano. Permite comparar concelhos de tamanhos diferentes. Inclui investimento. É o valor que o INE publica, calculado com as estimativas de população anteriores à última revisão, por isso pode diferir um pouco de dividir pela população que aqui se mostra: em 2024, 2,34 M€ a dividir pela população média de 41 037 habitantes dá 57 €, e o INE publica 58 €.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -8451,7 +8451,7 @@
    "titulo": "Investimento da Câmara em biodiversidade e paisagem",
    "categoria": "ambiente",
    "unidade": "€",
-   "texto": "A parte da despesa da Câmara em proteção da biodiversidade e da paisagem que foi investimento, como obras, terrenos e equipamentos, deixando de fora as despesas correntes. Há anos sem qualquer investimento registado, em que o valor é zero.",
+   "texto": "A parte da despesa da Câmara em proteção da biodiversidade e da paisagem que foi investimento, como obras, terrenos e equipamentos, deixando de fora as despesas correntes. Há anos sem qualquer investimento registado: o 0 é o valor que o INE publica, não falta de dados.",
    "palavras": null,
    "colunas": [
     "Trofa",
@@ -9648,7 +9648,7 @@
    "titulo": "Despesa da Câmara em cultura",
    "categoria": "cultura",
    "unidade": "€",
-   "texto": "O que a Câmara gastou no ano em atividades culturais e criativas: espetáculos, património, bibliotecas, museus, artes visuais e outros domínios. Junta despesas correntes e investimento.",
+   "texto": "O que a Câmara gastou no ano em atividades culturais e criativas: espetáculos, património, bibliotecas, museus, artes visuais e outros domínios. Junta despesas correntes e investimento. Os domínios que aparecem à parte (artes do espetáculo, artes visuais, património e audiovisual) não são todos: em 2025, os outros 557 300 € foram atividades interdisciplinares (530 500 €), livros e publicações (15 100 €) e bibliotecas e arquivos (11 700 €).",
    "palavras": "cultura espetáculos",
    "colunas": [
     "Trofa",
@@ -10179,7 +10179,7 @@
    "titulo": "Despesa em cultura: audiovisual e multimédia",
    "categoria": "cultura",
    "unidade": "€",
-   "texto": "A parte da despesa da Câmara em cultura que foi para o audiovisual e multimédia, como cinema, vídeo, rádio e televisão. Zero quer dizer que não foi registada despesa neste domínio.",
+   "texto": "A parte da despesa da Câmara em cultura que foi para o audiovisual e multimédia, como cinema, vídeo, rádio e televisão. O 0 é o valor que o INE publica (não foi registada despesa neste domínio), não falta de dados.",
    "palavras": null,
    "colunas": [
     "Trofa",
