@@ -66,7 +66,8 @@ export default function ApresentacaoCandidatura() {
               <p>
                 A apresentação oficial da candidatura realizou-se no espaço Mordomias, no centro da
                 cidade. Reunimos amigos, apoiantes e candidatos que partilham a mesma visão: uma
-                Trofa mais aberta, mais justa e com futuro.
+                Trofa mais aberta, mais justa e com futuro. A apresentação contou com a presença de
+                Miguel Rangel, deputado liberal eleito pelo círculo do Porto.
               </p>
               <p>
                 Diamantino Costa foi apresentado como cabeça de lista à Câmara Municipal, a defender

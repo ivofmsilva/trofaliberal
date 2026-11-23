@@ -3,6 +3,7 @@ import Link from "next/link";
 import ComoVotam from "@/components/dados/ComoVotam";
 import ComposicaoCamara from "@/components/dados/ComposicaoCamara";
 import DocumentosPorAno from "@/components/dados/DocumentosPorAno";
+import SeparadoresDocumentos from "@/components/dados/SeparadoresDocumentos";
 import Votacoes from "@/components/dados/Votacoes";
 import { camara } from "@/lib/dados/autarquia";
 
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function Camara() {
   const atas = camara.filter((d) => d.tipo === "camara-ata");
+  const deliberacoes = camara.filter((d) => d.tipo === "camara-deliberacoes");
   return (
     <>
       <section className="topo-escuro">
@@ -27,7 +29,7 @@ export default function Camara() {
               ["composicao", "Composição"],
               ["como-votam", "Como votam"],
               ["votacoes", "Deliberações"],
-              ["atas", "Atas"],
+              ["documentos", "Documentos"],
             ].map(([id, nome]) => (
               <li key={id}>
                 <a href={`#${id}`} className="inline-block rounded-full border border-linha bg-fundo px-4 py-2 text-sm font-medium text-texto transition hover:border-tinta hover:text-tinta">
@@ -68,18 +70,53 @@ export default function Camara() {
           </p>
         </section>
 
-        <section id="atas" className="scroll-mt-6 py-12">
-          <h2 className="mb-5 text-2xl font-bold tracking-tight text-tinta">Atas das reuniões</h2>
-          <DocumentosPorAno docs={atas} nomeTipo="Ata" />
-          <p className="mt-10 text-sm text-apagado">
-            Fonte:{" "}
-            <a href="https://mun-trofa.pt/menu/107/atas" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
-              mun-trofa.pt, Atas de reuniões de Câmara ↗
-            </a>
-            . O número da ata e a data da reunião são os que vêm no nome de cada ficheiro. Os ficheiros de 2017 a 2020 não trazem
-            nem um nem outro: aparecem pela ordem em que estão no arquivo do município, que não é o número da ata. Nalguns anos o
-            município pôs na lista das atas o ficheiro das deliberações da reunião; fica assinalado.
+        <section id="documentos" className="scroll-mt-6 py-12">
+          <h2 className="text-2xl font-bold tracking-tight text-tinta">Documentos das reuniões</h2>
+          <p className="mt-2 mb-6 max-w-2xl text-texto">
+            Os PDF das reuniões, tal como a Câmara os publica, por ano. Escolhe o tipo de documento.
           </p>
+          <SeparadoresDocumentos
+            paineis={[
+              {
+                id: "deliberacoes",
+                titulo: "Deliberações",
+                n: deliberacoes.length,
+                conteudo: (
+                  <>
+                    <p className="mb-4 text-texto">O que foi decidido em cada reunião (é destes documentos que vêm as deliberações acima).</p>
+                    <DocumentosPorAno docs={deliberacoes} nomeTipo="Deliberações" />
+                    <p className="mt-4 text-sm text-apagado">
+                      Fonte:{" "}
+                      <a href="https://mun-trofa.pt/menu/108/deliberacoes" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                        mun-trofa.pt, Deliberações das reuniões de Câmara ↗
+                      </a>
+                      . A data da reunião é a que vem no nome de cada ficheiro.
+                    </p>
+                  </>
+                ),
+              },
+              {
+                id: "atas",
+                titulo: "Atas",
+                n: atas.length,
+                conteudo: (
+                  <>
+                    <p className="mb-4 text-texto">O registo completo de cada reunião.</p>
+                    <DocumentosPorAno docs={atas} nomeTipo="Ata" />
+                    <p className="mt-4 text-sm text-apagado">
+                      Fonte:{" "}
+                      <a href="https://mun-trofa.pt/menu/107/atas" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                        mun-trofa.pt, Atas de reuniões de Câmara ↗
+                      </a>
+                      . O número da ata e a data da reunião são os que vêm no nome de cada ficheiro. Os ficheiros de 2017 a 2020 não
+                      trazem nem um nem outro: aparecem pela ordem em que estão no arquivo do município, que não é o número da ata.
+                      Nalguns anos o município pôs na lista das atas o ficheiro das deliberações da reunião; fica assinalado.
+                    </p>
+                  </>
+                ),
+              },
+            ]}
+          />
         </section>
       </div>
     </>
