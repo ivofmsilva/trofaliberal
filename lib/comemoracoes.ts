@@ -81,7 +81,7 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "A 1 de dezembro de 1640, Portugal voltou a ser dono do seu destino.",
     blocos: [
       "Durante 60 anos, desde 1580, o reino foi governado pelos reis de Espanha. Naquela manhã, um grupo de nobres, os Conjurados, entrou no Paço da Ribeira, em Lisboa, afastou quem governava em nome de Madrid e proclamou rei o Duque de Bragança, D. João IV.",
-      "A independência ainda custou 28 anos de guerra, até a Espanha a reconhecer no Tratado de Lisboa, em 1668.",
+      "Seguiu-se uma longa guerra com a Espanha. Só em 1668, com o Tratado de Lisboa, a independência foi reconhecida.",
       { destaque: "Ser independente é poder decidir por nós próprios. Vale para um país e vale para uma terra." },
       "Na Trofa sabemos o que isso custa e o que vale: foram anos de luta até 1998, quando o concelho foi criado e a Trofa passou a decidir o seu próprio caminho.",
       "O 1.º de Dezembro deixou de ser feriado entre 2013 e 2015 e voltou a sê-lo em 2016.",
