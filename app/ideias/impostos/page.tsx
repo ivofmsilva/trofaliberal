@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import PageHero from "@/components/PageHero";
+import HeroImpostos from "@/components/HeroImpostos";
 import { formatarData, itens } from "@/lib/imprensa";
 import SimuladorIMI from "@/components/SimuladorIMI";
 import SimuladorIRS from "@/components/SimuladorIRS";
@@ -75,25 +75,7 @@ export default function Impostos() {
 
   return (
     <>
-      <PageHero
-        eyebrow="Ideias · Fiscalidade"
-        title="Impostos na Trofa"
-        image={{ src: CARTAZES[0].src, alt: CARTAZES[0].alt, w: CARTAZES[0].w, h: CARTAZES[0].h, vertical: true }}
-      >
-        <p>
-          A Câmara cobra cada vez mais. Em 10 anos, a receita dos impostos subiu{" "}
-          <strong className="font-bold text-white">{subida(em(B), em(A))}%</strong> e o número de habitantes só{" "}
-          <strong className="font-bold text-white">{subida(popEm(B), popEm(A))}%</strong>. Vê quanto pagas e o que propomos.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <a href="#contas" className="rounded-full bg-sun px-6 py-3 font-bold text-navy transition hover:bg-white">
-            Faz as contas
-          </a>
-          <a href="#propostas" className="rounded-full border-2 border-white px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">
-            O que propomos
-          </a>
-        </div>
-      </PageHero>
+      <HeroImpostos />
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
         <section>
@@ -111,18 +93,19 @@ export default function Impostos() {
 
         <section>
           <p className={`${etiqueta} text-cyan-dark`}>A receita dos impostos</p>
-          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">A Câmara cobra cada vez mais</h2>
+          <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Quanto rendem os impostos à Câmara</h2>
           <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <li className="rounded-2xl bg-mist p-6">
-              <p className="font-display text-5xl font-bold text-pink">+{subida(em(B), em(A))}%</p>
+              <p className="font-display text-5xl font-bold text-pink">{m(em(B))}</p>
               <p className="mt-3 font-bold leading-snug text-navy">
-                na receita de impostos em 10 anos: de {m(em(A))} em {A} para {m(em(B))} em {B}
+                em impostos em {B} ({m(em(A))} em {A}, {subida(em(B), em(A)) >= 0 ? "+" : ""}
+                {subida(em(B), em(A))}%)
               </p>
             </li>
             <li className="rounded-2xl bg-mist p-6">
-              <p className="font-display text-5xl font-bold text-pink">+{subida(popEm(B), popEm(A))}%</p>
+              <p className="font-display text-5xl font-bold text-pink">{m(de("receita_participacao_irs", B))}</p>
               <p className="mt-3 font-bold leading-snug text-navy">
-                de habitantes no mesmo tempo: de {grupos(popEm(A))} para {grupos(popEm(B))}
+                da parte do IRS dos trofenses ({m(de("receita_participacao_irs", A))} em {A})
               </p>
             </li>
             <li className="rounded-2xl bg-mist p-6">
@@ -204,14 +187,16 @@ export default function Impostos() {
         <section>
           <p className={`${etiqueta} text-cyan-dark`}>Na rua</p>
           <h2 className="font-display mt-3 text-3xl font-bold text-navy md:text-4xl">Liberta-te</h2>
-          {/* o cartaz do saco de pancada já está no topo da página; aqui fica a tenda */}
-          <div className="mt-8 grid items-center gap-8 md:grid-cols-[minmax(0,22rem)_1fr]">
-            <Image src={CARTAZES[1].src} alt={CARTAZES[1].alt} width={CARTAZES[1].w} height={CARTAZES[1].h} className="h-auto w-full rounded-2xl" sizes="(min-width: 768px) 22rem, 100vw" />
-            <div>
-              <p className="font-display text-2xl font-bold text-navy md:text-3xl">{CARTAZES[1].legenda}</p>
-              <p className="mt-4 text-lg text-ink/85">{CARTAZES[0].legenda} Foi a pergunta dos nossos cartazes.</p>
-            </div>
-          </div>
+          <ul className="mt-8 grid max-w-4xl gap-6 sm:grid-cols-2">
+            {CARTAZES.map((c) => (
+              <li key={c.src}>
+                <figure>
+                  <Image src={c.src} alt={c.alt} width={c.w} height={c.h} className="h-auto w-full rounded-2xl" sizes="(min-width: 640px) 28rem, 100vw" />
+                  <figcaption className="mt-3 font-bold text-navy">{c.legenda}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
           <p className="mt-6 text-ink/80">
             Estes e os outros cartazes estão em{" "}
             <Link href="/ideias/cartazes" className="font-bold text-cyan-dark underline underline-offset-2">
