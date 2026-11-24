@@ -91,55 +91,20 @@ export default function Impostos() {
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
         <section>
-          <Taxometro totalAno={ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs + ORCAMENTO_2026.taxas} ano={2026} />
-          <div className="mt-6 grid gap-8 md:grid-cols-2">
-            <div>
-              <h3 className="font-display text-xl font-bold text-navy">O que conta o taxómetro</h3>
-              <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {[
-                  ["IMI", ORCAMENTO_2026.imi],
-                  ["IMT", ORCAMENTO_2026.imt],
-                  ["Derrama", ORCAMENTO_2026.derrama],
-                  ["Parte do IRS", ORCAMENTO_2026.irs],
-                  ["IUC", ORCAMENTO_2026.iuc],
-                  ["Taxas", ORCAMENTO_2026.taxas],
-                ].map(([nome, v]) => (
-                  <li key={nome as string} className="rounded-xl bg-mist px-4 py-3">
-                    <p className="text-sm font-bold text-ink/70">{nome}</p>
-                    <p className="font-display text-xl font-bold text-navy">{m(v as number)}</p>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 text-sm text-ink/70">
-                No total, {m(ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs + ORCAMENTO_2026.taxas)}, previstos no{" "}
-                <a href={FONTE_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-navy">
-                  Orçamento de 2026 ↗
-                </a>{" "}
-                (Quadros 4, 6 e 10). A parte do IRS chega pelo Estado e no orçamento é uma transferência, mas é IRS dos trofenses
-                que a Câmara decide guardar, por isso conta aqui.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display text-xl font-bold text-navy">
-                Porque é menos do que os {m(em(B))} de {B}?
-              </h3>
-              <ul className="mt-4 space-y-3 text-ink/85">
-                <li className="ml-5 list-disc marker:text-pink">
-                  <strong>É uma previsão prudente.</strong> Por lei, a Câmara não pode prever mais do que a média do que cobrou nos 24
-                  meses anteriores. O IMT, por exemplo, rendeu {m(de("receita_imt", B))} em {B} e está previsto em{" "}
-                  {m(ORCAMENTO_2026.imt)}.
-                </li>
-                <li className="ml-5 list-disc marker:text-pink">
-                  <strong>A parte do IRS desce.</strong> O Estado transfere {m(ORCAMENTO_2026.irs)} em 2026, contra{" "}
-                  {m(de("receita_participacao_irs", B))} em {B}.
-                </li>
-                <li className="ml-5 list-disc marker:text-pink">
-                  <strong>Comparando o mesmo:</strong> sem as taxas, o orçamento prevê{" "}
-                  {m(ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs)} em impostos para 2026, contra os {m(em(B))} cobrados em {B}.
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Taxometro
+            totalAno={ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs + ORCAMENTO_2026.taxas}
+            ano={2026}
+            detalhe={`IMI ${m(ORCAMENTO_2026.imi)}, IMT ${m(ORCAMENTO_2026.imt)}, derrama ${m(ORCAMENTO_2026.derrama)}, parte do IRS ${m(
+              ORCAMENTO_2026.irs,
+            )}, IUC ${m(ORCAMENTO_2026.iuc)} e taxas ${m(ORCAMENTO_2026.taxas)}`}
+          />
+          <p className="mt-3 max-w-3xl text-sm text-ink/70">
+            Fonte:{" "}
+            <a href={FONTE_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-navy">
+              Relatório do Orçamento de 2026 ↗
+            </a>{" "}
+            (Quadros 4, 6 e 10).
+          </p>
         </section>
 
         <section>
@@ -177,7 +142,7 @@ export default function Impostos() {
             IMI {m(de("receita_imi", B))}, IMT {m(de("receita_imt", B))}, derrama {m(de("receita_derrama", B))}, parte do IRS{" "}
             {m(de("receita_participacao_irs", B))} e IUC {m(de("receita_iuc", B))}. A receita do IMI ficou
             perto dos 6 M€ por ano: a taxa desceu de 0,45% (em 2019) para {String(imiAtual.urbanos).replace(".", ",")}% (em{" "}
-            {imiAtual.paraAno}), mas continua acima do mínimo da lei, 0,30%. O que mais cresceu foi o IMT, pago na compra de
+            {imiAtual.paraAno}). O que mais cresceu foi o IMT, pago na compra de
             casas, seguido da parte do IRS e da derrama.
           </p>
           <div className="mt-8 max-w-4xl">

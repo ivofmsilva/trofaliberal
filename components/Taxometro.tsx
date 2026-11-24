@@ -10,7 +10,7 @@ const fmt = (v: number, casas = 2) => {
   return i.replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + (d ? "," + d : "");
 };
 
-export default function Taxometro({ totalAno, ano }: { totalAno: number; ano: number }) {
+export default function Taxometro({ totalAno, ano, detalhe }: { totalAno: number; ano: number; detalhe?: string }) {
   const inicio = Date.parse(`${ano}-01-01T00:00:00Z`);
   const fim = Date.parse(`${ano + 1}-01-01T00:00:00Z`);
   const porSegundo = totalAno / ((fim - inicio) / 1000);
@@ -41,6 +41,7 @@ export default function Taxometro({ totalAno, ano }: { totalAno: number; ano: nu
       <p className="mt-6 max-w-3xl text-white/85">
         Impostos, parte do IRS e taxas municipais previstos no orçamento de {ano} ({fmt(totalAno, 0)} € no ano), ao ritmo do
         orçamento, a contar de 1 de janeiro.
+        {detalhe && ` Contas do orçamento: ${detalhe}.`}
       </p>
     </div>
   );
