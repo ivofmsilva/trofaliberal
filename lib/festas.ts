@@ -12,6 +12,7 @@ export type Festa = {
   nome: string;
   freguesia: string;
   data: DataAnual;
+  frase?: string; // frase do banner (sem ela, a frase geral das festas)
   texto?: string;
   imagem?: Img;
 };
@@ -47,7 +48,8 @@ function festa(id: string, nome: string, freguesia: string, quando: string, regr
 
 export const festas: Festa[] = [
   festa("s-goncalo", "S. Gonçalo", "Covelas", "penúltimo domingo de janeiro", (a) => somarDias(a, ultimo(a, 1, 0), -7), {
-    texto: "A primeira festa do ano no concelho, com o rojão à mesa.",
+    texto: "A primeira festa do ano no concelho, no penúltimo domingo de janeiro, em Covelas. É uma das principais romarias do concelho e todos os anos atrai milhares de pessoas. A pé, de bicicleta, a cavalo ou de mota, todos os caminhos vão dar ao São Gonçalo. Boa festa, trofenses!",
+    frase: "A primeira festa do ano: todos os caminhos vão dar ao São Gonçalo. Boa festa, trofenses!",
   }),
   festa("senhora-do-desterro", "Senhora do Desterro", "Bougado (Santiago)", "4.º domingo de abril", (a) => nesimo(a, 4, 0, 4)),
   festa("espirito-santo", "Divino Espírito Santo", "Coronado (S. Mamede)", "domingo de Pentecostes", (a) => somarDias(a, pascoa(a), 49)),

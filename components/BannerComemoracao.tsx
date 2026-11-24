@@ -59,7 +59,7 @@ export function BannerFesta({ f, imagem, agora }: { f: Festa; imagem: Img; agora
       href={f.data.slug}
       etiqueta={dataProxima(f.data, agora)}
       titulo={f.nome}
-      frase={`Boas festas, ${lugar}! Tradição, convívio e o encontro de quem vive cá e de quem volta.`}
+      frase={f.frase ?? `Boas festas, ${lugar}! Tradição, convívio e o encontro de quem vive cá e de quem volta.`}
       imagem={f.imagem ?? imagem}
       botao="Todas as festas"
     />
