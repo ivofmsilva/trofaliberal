@@ -117,7 +117,7 @@ export default function Lit() {
           )}
           <div>
             <h2 className="font-display text-3xl font-bold">As propostas</h2>
-            <p className="mt-2 text-white/80">Das Jornadas saiu o manifesto pela Educação, com 19 propostas.</p>
+            <p className="mt-2 text-white/90">Das Jornadas saiu o manifesto pela Educação, com 19 propostas.</p>
             <Link href="/ideias/educacao" className="mt-4 inline-block font-bold text-sun hover:underline">
               Ver as 19 propostas →
             </Link>

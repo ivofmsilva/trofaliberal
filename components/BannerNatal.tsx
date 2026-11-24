@@ -9,10 +9,10 @@ export default function BannerNatal() {
       <Link
         href="/loja#natal"
         aria-label="Packs de Natal: camisola, cachecol e gorro de malha. Ver na loja"
-        className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[0.85fr_1.35fr]"
+        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[0.85fr_1.35fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-10 md:py-12">
-          <span className="-skew-x-12 bg-pink px-6 py-1.5">
+          <span className="-skew-x-12 bg-[#b0005f] px-6 py-1.5">
             <span className="block skew-x-12 text-lg font-black uppercase italic tracking-[0.32em] text-sun">
               Trofa
             </span>

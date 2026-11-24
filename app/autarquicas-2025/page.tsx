@@ -70,7 +70,7 @@ export default function Autarquicas() {
                 >
                   <span className="font-display text-sm font-bold text-sun">{String(n + 1).padStart(2, "0")}</span>
                   <h3 className="font-display mt-3 text-2xl font-bold leading-tight">{i.label}</h3>
-                  <p className="mt-3 text-white/80">{descricoes[i.href]}</p>
+                  <p className="mt-3 text-white/90">{descricoes[i.href]}</p>
                   <span className="mt-5 inline-block font-bold text-sun group-hover:underline">Abrir →</span>
                 </Link>
               </li>

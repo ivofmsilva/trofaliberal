@@ -24,7 +24,7 @@ export default function Programa() {
             <li key={p.titulo} className="flex flex-col rounded-2xl bg-navy p-8 text-white">
               <span className="font-display text-sm font-bold text-sun">{String(i + 1).padStart(2, "0")}</span>
               <h2 className="font-display mt-3 text-2xl font-bold">{p.titulo}</h2>
-              <p className="mt-3 text-white/80">{p.texto}</p>
+              <p className="mt-3 text-white/90">{p.texto}</p>
               <a href={p.href} target="_blank" rel="noopener noreferrer" className="mt-auto pt-6 font-bold text-sun hover:underline">
                 Descarregar PDF ↓
               </a>

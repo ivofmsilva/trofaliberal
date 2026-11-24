@@ -100,7 +100,7 @@ export default function Metro() {
             <p className="absolute left-0 top-0 w-[30%] text-center text-sm font-bold text-sun">
               Metro ligeiro · {projeto.metroKm}
             </p>
-            <p className="absolute right-0 top-0 w-[70%] text-center text-sm font-bold text-white/80">
+            <p className="absolute right-0 top-0 w-[70%] text-center text-sm font-bold text-white">
               Metrobus · {projeto.busKm}
             </p>
             <div className="absolute left-0 top-12 h-3 w-[30%] rounded-l-full bg-sun" />
@@ -127,7 +127,7 @@ export default function Metro() {
                   <p className="font-display text-xl font-bold">{n.nome}</p>
                   <p
                     className={`text-xs font-bold uppercase tracking-widest ${
-                      n.grande ? "mt-1 inline-block rounded-full bg-pink px-3 py-1 text-white" : "text-white/70"
+                      n.grande ? "mt-1 inline-block rounded-full bg-pink px-3 py-1 text-white" : "text-white/90"
                     }`}
                   >
                     {n.extra}
@@ -137,7 +137,7 @@ export default function Metro() {
             ))}
           </div>
 
-          <p className="mt-6 text-sm text-white/70">
+          <p className="mt-6 text-sm text-white/90">
             Valores aproximados, segundo o Estudo de Impacte Ambiental em consulta pública (fonte:{" "}
             <a href={projeto.fonte.href} target="_blank" rel="noopener noreferrer" className="font-bold text-sun hover:underline">
               {projeto.fonte.titulo}
@@ -204,7 +204,7 @@ export default function Metro() {
             <blockquote className="font-display text-lg font-bold leading-snug md:text-xl">
               “{gestao.destaque.frase}”
             </blockquote>
-            <figcaption className="mt-3 text-xs font-bold uppercase tracking-widest text-ink/60">
+            <figcaption className="mt-3 text-xs font-bold uppercase tracking-widest text-ink/70">
               {gestao.destaque.fonte}
             </figcaption>
           </figure>
@@ -283,15 +283,15 @@ export default function Metro() {
           a {consulta.fim}. A Iniciativa Liberal da Trofa participou, em representação do Grupo de
           Coordenação Local.
         </p>
-        <p className="mt-3 text-sm text-ink/60">
+        <p className="mt-3 text-sm text-ink/70">
           {participacao.processo} · assinada por {participacao.assinatura} · {participacao.data}
         </p>
 
-        <figure className="mt-10 rounded-3xl bg-pink p-8 text-white md:p-12">
+        <figure className="mt-10 rounded-3xl bg-[#b0005f] p-8 text-white md:p-12">
           <blockquote className="font-display text-2xl font-bold leading-snug md:text-4xl">
             “{destaqueParticipacao}”
           </blockquote>
-          <figcaption className="mt-5 text-sm font-bold uppercase tracking-widest text-white/80">
+          <figcaption className="mt-5 text-sm font-bold uppercase tracking-widest text-white">
             Da nossa participação no Participa.pt
           </figcaption>
         </figure>

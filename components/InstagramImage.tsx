@@ -28,7 +28,7 @@ export default function InstagramImage({
         alt={alt}
         width={w}
         height={h}
-        sizes="(min-width: 768px) 33vw, 100vw"
+        sizes="(min-width: 768px) 33vw, 50vw"
         className="aspect-square w-full object-cover transition group-hover:scale-105"
       />
     </a>

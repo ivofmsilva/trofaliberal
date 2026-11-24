@@ -33,7 +33,7 @@ export default function Candidatos() {
                 <div className="p-6">
                   <h2 className="font-display text-xl font-bold">{c.nome}</h2>
                   <p className="mt-1 text-xs font-bold uppercase tracking-widest text-sun">{c.cargo}</p>
-                  <p className="mt-3 text-sm text-white/80">“{c.frase}”</p>
+                  <p className="mt-3 text-sm text-white/90">“{c.frase}”</p>
                   <span className="mt-4 inline-block text-sm font-bold text-sun group-hover:underline">
                     Conhecer {c.nome.split(" ").slice(0, c.nome.startsWith("José ") ? 2 : 1).join(" ")} →
                   </span>

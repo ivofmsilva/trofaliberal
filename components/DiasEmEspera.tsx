@@ -64,11 +64,9 @@ export default function DiasEmEspera({ desde, inicial }: { desde: string; inicia
 
   return (
     <div ref={ref}>
-      <p
-        className="font-display text-7xl font-bold leading-none tabular-nums text-pink sm:text-8xl"
-        aria-label={`${dias} dias`}
-      >
+      <p className="font-display text-7xl font-bold leading-none tabular-nums text-pink sm:text-8xl">
         <span aria-hidden>{(animado ?? dias).toLocaleString("pt-PT")}</span>
+        <span className="sr-only">{dias} dias</span>
       </p>
       <p className="font-display mt-2 text-2xl font-bold text-navy">dias à espera do metro</p>
       <p

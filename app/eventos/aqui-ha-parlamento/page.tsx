@@ -95,7 +95,7 @@ export default function AquiHaParlamento() {
       <section className="bg-navy py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="font-display text-3xl font-bold">Parlamento na Praia</h2>
-          <p className="mt-2 max-w-3xl text-white/80">
+          <p className="mt-2 max-w-3xl text-white/90">
             A 6 de setembro de 2026, o Aqui há Parlamento juntou-se ao Destrave Liberal no “Parlamento na Praia”, com Carlos
             Guimarães Pinto e Miguel Rangel. Foi a primeira vez que se fez nestes moldes.
           </p>

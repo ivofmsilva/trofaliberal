@@ -80,7 +80,7 @@ export default function Home() {
           <h1 className="font-display mt-4 max-w-4xl text-4xl font-bold leading-[1.05] sm:mt-6 sm:text-6xl md:text-7xl">
             Uma Trofa com mais <span className="text-sun">liberdade</span> começa aqui!
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/80 sm:mt-8 md:text-xl">
+          <p className="mt-5 max-w-2xl text-lg text-white/90 sm:mt-8 md:text-xl">
             Um concelho onde cada trofense pode viver de forma livre, com mais oportunidades e futuro.
           </p>
           <p className="font-display mt-4 text-xl font-bold text-sun">
@@ -106,7 +106,8 @@ export default function Home() {
             alt="Liberais trofenses a agitar bandeiras da Iniciativa Liberal"
             width={626}
             height={782}
-            priority
+            loading="eager"
+            fetchPriority="high"
             sizes="(min-width: 1024px) 420px, 100vw"
             className="aspect-[4/3] w-full rounded-3xl object-cover object-[50%_30%] shadow-2xl shadow-black/30 ring-4 ring-white/30 lg:mx-auto lg:aspect-auto lg:max-h-[560px] lg:w-auto lg:max-w-full"
           />
@@ -202,7 +203,7 @@ export default function Home() {
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display mt-3 text-2xl font-bold leading-tight">{p.titulo}</h3>
-              <p className="mt-4 text-white/75">{p.texto}</p>
+              <p className="mt-4 text-white/90">{p.texto}</p>
             </li>
           ))}
         </ol>

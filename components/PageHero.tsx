@@ -39,7 +39,8 @@ export default function PageHero({
             alt={image.alt}
             width={image.w}
             height={image.h}
-            priority
+            loading="eager"
+            fetchPriority="high"
             style={image.foco ? { objectPosition: image.foco } : undefined}
             sizes={image.vertical ? "(min-width: 768px) 200px, 160px" : "(min-width: 768px) 300px, 100vw"}
             className={`mt-5 rounded-2xl shadow-xl shadow-black/30 ring-4 ring-white/30 md:mt-0 ${

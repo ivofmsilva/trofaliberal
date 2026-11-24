@@ -29,7 +29,7 @@ export default function Marcos({ marcos }: { marcos: Marco[] }) {
             <div className="p-6 text-left">
               <span className="font-display text-4xl font-bold text-sun">{m.ano}</span>
               <h3 className="font-display mt-3 text-lg font-bold leading-snug">{m.titulo}</h3>
-              <p className="mt-2 text-sm text-white/80">{m.texto}</p>
+              <p className="mt-2 text-sm text-white/90">{m.texto}</p>
             </div>
           );
           return (

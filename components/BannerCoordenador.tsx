@@ -15,10 +15,10 @@ export default function BannerCoordenador() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Bruno Magalhães eleito coordenador da Iniciativa Liberal da Trofa. Ler a notícia"
-        className="group grid overflow-hidden rounded-3xl bg-[#0e82da] text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
+        className="group grid overflow-hidden rounded-3xl bg-navy text-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl md:grid-cols-[1.05fr_1fr]"
       >
         <div className="relative flex flex-col items-start gap-3 px-6 py-6 sm:px-8 md:gap-5 md:px-12 md:py-12">
-          <span className="-skew-x-12 bg-pink px-6 py-1.5">
+          <span className="-skew-x-12 bg-[#b0005f] px-6 py-1.5">
             <span className="block skew-x-12 text-lg font-black uppercase italic tracking-[0.32em] text-sun">
               Trofa
             </span>
@@ -49,7 +49,7 @@ export default function BannerCoordenador() {
             sizes="228px"
             className="h-28 w-28 rounded-full ring-4 ring-white/40 sm:h-36 sm:w-36 md:h-56 md:w-56"
           />
-          <span className="bg-pink px-3 py-1 text-center text-sm font-black uppercase text-sun sm:py-1.5 sm:text-lg">
+          <span className="bg-[#b0005f] px-3 py-1 text-center text-sm font-black uppercase text-sun sm:py-1.5 sm:text-lg">
             {[noticia.fonte, data].filter(Boolean).join(" · ")}
           </span>
         </div>

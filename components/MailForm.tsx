@@ -154,7 +154,7 @@ export default function MailForm({
       >
         {estado === "a-enviar" ? "A enviar…" : submitLabel}
       </button>
-      <p className="text-xs text-ink/60">
+      <p className="text-xs text-ink/70">
         A mensagem segue por email para o núcleo, através de um serviço de envio. O site não a guarda.
       </p>
 

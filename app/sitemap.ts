@@ -11,6 +11,7 @@ const paginas = [
   "/ideias/metro",
   "/ideias/educacao",
   "/ideias/habitacao",
+  "/ideias/impostos",
   "/ideias/cartazes",
   "/dados",
   "/dados/indicadores",
