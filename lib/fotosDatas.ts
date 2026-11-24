@@ -41,6 +41,8 @@ export const fotosDatas: Record<string, Img> = {
   "museu-soares-dos-reis": { src: "/images/datas/museu-soares-dos-reis.webp", w: 1600, h: 900, alt: "Sala do Museu Nacional de Soares dos Reis, no Porto, com pinturas e mobiliário antigo", credito: {"autor":"GualdimG","licenca":"CC BY-SA 4.0","url":"https://commons.wikimedia.org/wiki/File:Interior_Museu_Nacional_de_Soares_dos_Reis_10.jpg"} },
   "pomba-paz": { src: "/images/datas/pomba-paz.webp", w: 1600, h: 1200, alt: "Escultura de uma pomba da paz num jardim", credito: {"autor":"Larraiziber","licenca":"CC BY-SA 3.0","url":"https://commons.wikimedia.org/wiki/File:Bakearen_Usoa.jpg"} },
   "rampa": { src: "/images/datas/rampa.webp", w: 1600, h: 1200, alt: "Rampa de acesso para cadeiras de rodas à entrada de um edifício", credito: {"autor":"Ross Watson","licenca":"CC BY-SA 2.0","url":"https://commons.wikimedia.org/wiki/File:Wheelchair_Accessible_-_geograph.org.uk_-_3030071.jpg"} },
+  // Foto da Iniciativa Liberal enviada pelo Ivo (24/11/2026), da festa dos 8 anos do partido.
+  "aniversario-il-bolo": { src: "/images/datas/aniversario-il-bolo.webp", w: 1364, h: 908, alt: "Bolo de aniversário com uma vela em forma de 8, na festa dos oito anos da Iniciativa Liberal" },
   // Ilustrações nossas (ícones sobre o azul do site), sem crédito.
   "acessibilidade-ilustracao": { src: "/images/datas/acessibilidade-ilustracao.webp", w: 1600, h: 900, alt: "Ilustração: o símbolo da acessibilidade, uma cadeira de rodas, junto a uma rampa amarela num passeio" },
   "voluntariado-ilustracao": { src: "/images/datas/voluntariado-ilustracao.webp", w: 1600, h: 900, alt: "Ilustração: três pessoas e, por cima, um coração cor de rosa" },

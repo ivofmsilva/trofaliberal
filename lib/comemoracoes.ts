@@ -30,6 +30,7 @@ export type Comemoracao = {
   abertura: string;
   blocos: Bloco[];
   fecho?: string;
+  assinatura?: { nome: string; cargo: string; foto?: string }; // quem assina a mensagem (ex.: o coordenador), depois do fecho
   imagem: Img; // a do banner e das partilhas
   banner: { etiqueta: string; titulo: string; frase: string };
   partilhar: string;
@@ -179,7 +180,7 @@ export const comemoracoes: Comemoracao[] = [
       { link: "Conhece o núcleo da Trofa →", href: "/trofa-liberal" },
     ],
     fecho: "Parabéns, Iniciativa Liberal!",
-    imagem: fotos.grupoNucleo,
+    imagem: F["aniversario-il-bolo"],
     banner: { etiqueta: "2017 · {anos} anos", titulo: "{anos} anos de Iniciativa Liberal", frase: "{anos} anos a defender a liberdade em Portugal. Na Trofa, desde 2022." },
     partilhar: "{anos} anos de Iniciativa Liberal: de um manifesto de cidadãos ao Parlamento.",
   },
@@ -208,18 +209,23 @@ export const comemoracoes: Comemoracao[] = [
     data: { slug: "/ano-novo", titulo: "Ano Novo", dia: [1, 1], janela: [1, 5] },
     etiqueta: "1 de janeiro",
     titulo: "Bom {ano}, Trofa!",
-    subtitulo: "Os nossos desejos para o ano que começa.",
-    descricao: "Bom ano, Trofa! Os desejos da Iniciativa Liberal Trofa para o novo ano e os anos de Portugal na Europa.",
-    abertura: "Obrigado a todos os que estiveram connosco em {anoAnterior}.",
+    subtitulo: "Uma mensagem de esperança do coordenador do núcleo, Bruno Magalhães.",
+    descricao: "Bom ano, Trofa! A mensagem de Ano Novo do coordenador da Iniciativa Liberal Trofa, Bruno Magalhães: esperança e um convite para fazer parte desta caminhada.",
+    abertura: "Obrigado a todos os que estiveram connosco em {anoAnterior}: quem nos trouxe ideias, quem nos apontou problemas, quem esteve na rua connosco e quem simplesmente nos ouviu.",
     blocos: [
+      "Começa um ano novo, e com ele a vontade de fazer mais pela nossa terra. A Trofa tem tudo para crescer: gente trabalhadora, empresas que arriscam, associações que não param e um lugar privilegiado entre o Porto e Braga. Falta deixar essa energia acontecer, com menos entraves e mais confiança em quem cá vive.",
       "Para {ano}, desejamos uma Trofa com uma Câmara mais transparente, que mostre o que decide e o que gasta; com o Metro mais perto; com escolas com mais autonomia; e com menos burocracia para quem quer construir casa, investir ou abrir um negócio.",
       "E desejamos, acima de tudo, um bom ano a cada trofense: saúde, trabalho e liberdade para fazer da sua vida o que quiser.",
-      "A 1 de janeiro lembramos também outro passo importante: em 1986, Portugal entrou na Comunidade Económica Europeia, hoje União Europeia. Faz {anosCEE} anos. A Europa abriu-nos mercados e deu-nos a liberdade de viver, estudar e trabalhar em qualquer país da União.",
+      "A 1 de janeiro lembramos também outro passo importante: em 1986, Portugal entrou na Comunidade Económica Europeia, hoje União Europeia. Faz {anosCEE} anos. A Europa abriu-nos mercados e deu-nos a liberdade de viver, estudar e trabalhar em qualquer país da União. Também aí, o futuro foi de quem teve coragem de abrir portas.",
+      { destaque: "A mudança não cai do céu. Faz-se com pessoas que decidem tomar a iniciativa." },
+      "Por isso, o meu desejo para {ano} é também um convite: toma a iniciativa. Traz as tuas ideias, conta-nos o que está mal na tua rua, aparece nas nossas conversas, junta-te a nós. Esta caminhada é de todos os trofenses que acreditam que a Trofa pode ir mais longe, e cabe mais um.",
+      { link: "Faz parte desta caminhada →", href: "/participa?t=membro" },
     ],
     fecho: "Feliz {ano}!",
-    imagem: F["trofa-vista"],
-    banner: { etiqueta: "{ano}", titulo: "Bom ano, Trofa!", frase: "Os nossos desejos para {ano}, e os {anosCEE} anos de Portugal na Europa." },
-    partilhar: "Bom {ano}, Trofa! Os nossos desejos para o ano que começa.",
+    imagem: { src: "/images/geral/comunidade-destrave-trofa.jpeg", w: 961, h: 630, alt: "Membros e amigos da IL Trofa, com bandeiras da Iniciativa Liberal e bombos" },
+    banner: { etiqueta: "{ano}", titulo: "Bom ano, Trofa!", frase: "Toma a iniciativa: faz parte desta caminhada em {ano}." },
+    partilhar: "Bom {ano}, Trofa! A mensagem do coordenador da IL Trofa, Bruno Magalhães: toma a iniciativa e faz parte desta caminhada.",
+    assinatura: { nome: "Bruno Magalhães", cargo: "Coordenador do núcleo da Trofa da Iniciativa Liberal", foto: "/images/equipa/bruno-magalhaes.png" },
     extra: (ano) => ({ anosCEE: String(ano - 1986) }),
   },
   {
@@ -1217,8 +1223,9 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "As Nações Unidas assinalam a 3 de dezembro, desde 1992, o Dia Internacional das Pessoas com Deficiência.",
     blocos: [
       "Para quem anda de cadeira de rodas, não vê ou tem dificuldade em andar, a liberdade começa à porta de casa. E pode acabar logo ali: num passeio sem rebaixamento, num carro estacionado em cima do passeio, num autocarro sem rampa ou num serviço público só com escadas.",
-      { destaque: "Liberdade é poder ir onde queremos, pelo próprio pé ou de cadeira de rodas." },
-      "Queremos passeios, passadeiras, transportes e edifícios públicos acessíveis em toda a Trofa, e mais oportunidades de emprego para as pessoas com deficiência, para que possam viver de forma independente.",
+      { destaque: "Liberdade é poder ir onde queremos." },
+      "Queremos passeios, passadeiras, transportes e edifícios públicos acessíveis em toda a Trofa.",
+      "E queremos mais oportunidades de emprego também para as pessoas com deficiência, para que possam viver de forma independente.",
       "Conheces um passeio sem rampa, uma passadeira perigosa ou outra barreira na tua rua? Conta-nos onde.",
       { link: "Denunciar uma barreira →", href: "/participa?t=denuncia" },
     ],
@@ -1235,7 +1242,7 @@ export const comemoracoes: Comemoracao[] = [
     abertura: "A 9 de dezembro de 2003, abriu à assinatura, em Mérida, no México, a Convenção das Nações Unidas contra a Corrupção. Desde então, é o Dia Internacional contra a Corrupção.",
     blocos: [
       "A corrupção é um imposto escondido que todos pagamos: encarece as obras, desvia dinheiro que devia chegar às pessoas, afasta quem quer investir e mina a confiança em quem governa.",
-      "Cresce onde há muito poder a decidir à porta fechada, regras pouco claras e ninguém a ver.",
+      "Cresce onde há muito poder a decidir à porta fechada, regras pouco claras e ninguém a ver. A transparência é a melhor arma contra a corrupção.",
       { destaque: "Dinheiro público tem de estar à vista de todos." },
       "Foi por isso que criámos o portal Dados da Trofa: os contratos públicos, as contas e as decisões da Câmara, a partir das fontes oficiais, para qualquer pessoa ver quem decide, o que se contrata, a quem e por quanto.",
       { link: "Ver os contratos públicos →", href: "/dados/contratos" },

@@ -97,6 +97,17 @@ export default function PaginaComemoracao({ c }: { c: Comemoracao }) {
             <MostrarBloco key={i} b={b} v={v} />
           ))}
           {c.fecho && <p className="font-display text-2xl font-bold text-pink">{preencher(c.fecho, v)}</p>}
+          {c.assinatura && (
+            <div className="flex items-center gap-4 pt-2">
+              {c.assinatura.foto && (
+                <Image src={c.assinatura.foto} alt="" width={72} height={72} className="h-[4.5rem] w-[4.5rem] shrink-0 rounded-full" />
+              )}
+              <p className="leading-snug">
+                <span className="font-display block text-xl font-bold text-navy">{c.assinatura.nome}</span>
+                <span className="block text-base text-ink/70">{c.assinatura.cargo}</span>
+              </p>
+            </div>
+          )}
         </div>
         <div className="mt-8">
           <PartilharBotao titulo={titulo} texto={preencher(c.partilhar, v)} />
