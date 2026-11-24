@@ -23,10 +23,13 @@ const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";
 // Orçamento de 2026 da Câmara (Relatório do Orçamento de 2026, Quadro 4, pág. 82): impostos diretos (IMI, IMT, IUC e
 // derrama) e taxas, multas e outras penalidades. Aprovado pela Câmara a 18/12/2025 e pela Assembleia a 29/12/2025.
 // Cada imposto: Quadro 6 (Receitas fiscais); somam os 13 537 113,41 € com 200 € de impostos abolidos e diversos.
-// A parte do IRS não está aqui: no orçamento é uma transferência do Estado (06.03.01.06), não um imposto direto.
+// A parte do IRS não está nos impostos diretos: no orçamento é uma transferência do Estado (06.03.01.06, "Participação
+// Fixa no IRS", Quadro 10, pág. 86: 1 639 603 € em 2026, 5,57% das transferências do Estado). O taxómetro conta-a
+// (decisão do Ivo, 24/11/2026): é IRS dos trofenses que a Câmara decide guardar.
 const ORCAMENTO_2026 = {
   impostosDiretos: 13_537_113.41,
   taxas: 1_129_078.19,
+  irs: 1_639_603,
   imi: 5_963_898.91,
   imt: 3_776_467.69,
   derrama: 2_411_434.52,
@@ -88,23 +91,24 @@ export default function Impostos() {
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
         <section>
-          <Taxometro totalAno={ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.taxas} ano={2026} />
+          <Taxometro totalAno={ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs + ORCAMENTO_2026.taxas} ano={2026} />
           <p className="mt-3 max-w-3xl text-sm text-ink/70">
             Fonte:{" "}
             <a href={FONTE_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-navy">
               Relatório do Orçamento de 2026 ↗
             </a>{" "}
-            (Quadros 4 e 6): {m(ORCAMENTO_2026.impostosDiretos)} de impostos diretos (IMI {m(ORCAMENTO_2026.imi)}, IMT{" "}
-            {m(ORCAMENTO_2026.imt)}, derrama {m(ORCAMENTO_2026.derrama)} e IUC {m(ORCAMENTO_2026.iuc)}) e {m(ORCAMENTO_2026.taxas)} de
-            taxas, multas e outras penalidades.
+            (Quadros 4, 6 e 10): IMI {m(ORCAMENTO_2026.imi)}, IMT {m(ORCAMENTO_2026.imt)}, derrama {m(ORCAMENTO_2026.derrama)}, parte
+            do IRS {m(ORCAMENTO_2026.irs)}, IUC {m(ORCAMENTO_2026.iuc)} e {m(ORCAMENTO_2026.taxas)} de taxas, multas e outras
+            penalidades. A parte do IRS vem do Estado e no orçamento entra como transferência, mas é IRS pago pelos trofenses que a
+            Câmara decide guardar, por isso conta aqui.
           </p>
           <p className="mt-3 max-w-3xl text-sm text-ink/70">
-            <strong className="text-ink/85">Porque fica abaixo dos {m(em(B))} de {B}?</strong> O taxómetro usa o valor do orçamento
-            de 2026, e há duas diferenças. Primeiro, a lei obriga a Câmara a prever os impostos no orçamento com prudência: no
-            máximo, a média do que cobrou nos 24 meses anteriores. Por isso o orçamento fica abaixo do que se cobrou em {B}: só
-            nestes quatro impostos, foram {m(em(B) - de("receita_participacao_irs", B))} (o IMT rendeu {m(de("receita_imt", B))} e
-            está previsto em {m(ORCAMENTO_2026.imt)}). Segundo, o taxómetro não conta a parte do IRS (
-            {m(de("receita_participacao_irs", B))} em {B}), que no orçamento entra como transferência do Estado e não como imposto.
+            <strong className="text-ink/85">Porque é que os impostos ficam abaixo dos {m(em(B))} de {B}?</strong> O taxómetro usa o
+            orçamento de 2026, que é uma previsão. A lei obriga a Câmara a prever os impostos com prudência: no máximo, a média do
+            que cobrou nos 24 meses anteriores. Sem as taxas, o orçamento prevê{" "}
+            {m(ORCAMENTO_2026.impostosDiretos + ORCAMENTO_2026.irs)} para estes cinco impostos. A maior diferença é o IMT: rendeu{" "}
+            {m(de("receita_imt", B))} em {B} e está previsto em {m(ORCAMENTO_2026.imt)}. A parte do IRS que o Estado transfere também
+            desce, de {m(de("receita_participacao_irs", B))} em {B} para {m(ORCAMENTO_2026.irs)} em 2026.
           </p>
         </section>
 

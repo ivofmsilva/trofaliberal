@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-// Contador do que a Câmara já terá cobrado no ano em impostos e taxas, ao ritmo do orçamento aprovado: o total anual
+// Contador do que a Câmara já terá cobrado no ano em impostos (com a parte do IRS) e taxas, ao ritmo do orçamento aprovado: o total anual
 // dividido pelos segundos do ano, a contar de 1 de janeiro (hora de Portugal continental). Depois de acabar o ano do
 // orçamento fica parado no total.
 const fmt = (v: number, casas = 2) => {
@@ -36,11 +36,11 @@ export default function Taxometro({ totalAno, ano }: { totalAno: number; ano: nu
         {agora === null ? "…" : `${fmt(valor)} €`}
       </p>
       <p className="mt-4 text-sm font-bold uppercase tracking-widest text-sun">
-        ≈ {fmt(porSegundo)} € por segundo · IMI, IMT, IUC, derrama e taxas
+        ≈ {fmt(porSegundo)} € por segundo · IMI, IMT, IUC, derrama, parte do IRS e taxas
       </p>
       <p className="mt-6 max-w-3xl text-white/85">
-        Impostos e taxas municipais previstos no orçamento de {ano} ({fmt(totalAno, 0)} € no ano), ao ritmo do orçamento,
-        a contar de 1 de janeiro.
+        Impostos, parte do IRS e taxas municipais previstos no orçamento de {ano} ({fmt(totalAno, 0)} € no ano), ao ritmo do
+        orçamento, a contar de 1 de janeiro.
       </p>
     </div>
   );
