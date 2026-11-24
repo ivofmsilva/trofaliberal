@@ -7,7 +7,6 @@ import { DadosEventos } from "@/components/DadosEstruturados";
 import ItemCard from "@/components/ItemCard";
 import PageHero from "@/components/PageHero";
 import Separadores, { type Separador } from "@/components/Separadores";
-import { datasCelebradas, diaPorExtenso } from "@/lib/datasAnuais";
 import { agendados, outros } from "@/lib/eventos";
 import { categorias, ordenados, type Categoria } from "@/lib/imprensa";
 import { links } from "@/lib/site";
@@ -128,19 +127,13 @@ export default function Imprensa() {
           ))}
         </ul>
 
-        {/* Arquivo discreto das páginas de datas (o banner só aparece na semana de cada uma). */}
+        {/* Ligação discreta ao calendário das datas (o banner de cada uma só aparece à volta do dia). */}
         <p className="mt-12 text-sm text-ink/70">
           <span className="font-bold text-navy">Datas que celebramos:</span>{" "}
-          {datasCelebradas.map((d, i) => (
-            <span key={d.slug}>
-              {i > 0 && " · "}
-              <Link href={d.slug} className="font-bold text-cyan-dark hover:underline">
-                {d.titulo}
-              </Link>
-              {!d.titulo.toLowerCase().includes(diaPorExtenso(d).toLowerCase()) && <> ({diaPorExtenso(d)})</>}
-            </span>
-          ))}
-          . <span className="text-ink/70">Ao longo do próximo ano vamos juntando outras. Fica atento.</span>
+          <Link href="/datas" className="font-bold text-cyan-dark hover:underline">
+            vê o calendário do ano
+          </Link>
+          , com as datas nacionais, as da Trofa, as do partido e as festas das freguesias.
         </p>
       </>
     ),

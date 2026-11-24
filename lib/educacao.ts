@@ -125,7 +125,7 @@ export const propostas: Proposta[] = [
     titulo: "Divulgar os projetos educativos e criar uma mostra anual de formação",
     resumo: "Dar a conhecer os projetos e as ofertas de todas as escolas, para uma escolha informada.",
     porque:
-      "Uma escolha informada é uma escolha livre. Muitos encarregados de educação desconhecem os projetos pedagógicos, as instalações, as atividades extracurriculares e as ofertas formativas das escolas públicas da Trofa. Uma mostra anual de formação de todas as escolas do concelho, integrada também em eventos como o Belive e a Expotrofa, resolve a falta de visibilidade a um custo mínimo e dá orientação vocacional neutra, que inclui todas as vias de ensino e todas as instituições do concelho.",
+      "Uma escolha informada é uma escolha livre. Muitos encarregados de educação desconhecem os projetos pedagógicos, as instalações, as atividades extracurriculares e as ofertas formativas das escolas públicas da Trofa. Uma mostra anual de formação de todas as escolas do concelho, integrada também em eventos como o BeLive e a ExpoTrofa, resolve a falta de visibilidade a um custo mínimo e dá orientação vocacional neutra, que inclui todas as vias de ensino e todas as instituições do concelho.",
   },
   {
     id: "2.3",

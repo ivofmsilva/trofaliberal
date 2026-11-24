@@ -8,7 +8,7 @@ export const participacao = {
   assinatura: "Bruno Magalhães, coordenador do núcleo",
   data: "12 de outubro de 2026",
   posicao:
-    "Defendemos metro ligeiro em toda a linha, até à Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que os documentos em consulta comparem essa escolha com o metro.",
+    "Defendemos metro ligeiro em toda a linha, até à Interface da Trofa. É a posição do núcleo desde a sua fundação. A linha de via estreita foi desativada em 2002 com a promessa do metro e, vinte e quatro anos depois, o projeto serve o centro da Trofa com autocarro, sem que os documentos em consulta comparem essa escolha com o metro.",
   pedidos: [
     "Avaliar o metro ligeiro até à Interface da Trofa face à solução proposta: procura, tempos de viagem, efeitos ambientais e custo a 30 anos.",
     "Publicar os estudos que fundamentam o metrobus, com dados atualizados, e reabrir a participação pública.",
@@ -72,7 +72,7 @@ export const cronologia: Facto[] = [
     quando: "Fevereiro de 2002",
     titulo: "O comboio sai para dar lugar ao metro",
     texto:
-      "O serviço ferroviário até à Trofa é suprimido para dar lugar ao metro. Os carris do metro nunca chegaram a ser assentes e os autocarros ocuparam o lugar do comboio.",
+      "O serviço na linha de via estreita entre o Porto e a Trofa, que passava pelo Muro, é suprimido para dar lugar ao metro. Os carris do metro nunca chegaram a ser assentes e os autocarros ocuparam o lugar do comboio.",
     fonte: {
       nome: "O Notícias da Trofa (2019)",
       href: "https://www.onoticiasdatrofa.pt/foi-ha-quase-duas-decadas-que-a-trofa-ficou-mais-pobre/",
@@ -178,7 +178,7 @@ export const cronologia: Facto[] = [
   {
     quando: "Hoje",
     titulo: "0 km de metro no concelho da Trofa",
-    texto: "Mais de duas décadas depois, o comboio não voltou e o metro ainda não chegou.",
+    texto: "Mais de duas décadas depois, o comboio da via estreita não voltou e o metro ainda não chegou.",
   },
 ];
 
@@ -191,7 +191,7 @@ export const gestao = {
     {
       titulo: "O Estado tirou o comboio e não deu o metro",
       texto:
-        "A Trofa estava no projeto inicial da Metro do Porto. Em 2002 tiram o comboio. Em 2008 o novo projeto promete a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Os governos seguintes continuam a adiar. Foram vários os avanços e recuos.",
+        "A Trofa estava no projeto inicial da Metro do Porto. Em 2002 tiram o comboio da linha de via estreita. Em 2008 o novo projeto promete a abertura em 2012. Em 2010 o prolongamento já tinha saído do plano da Metro do Porto. Os governos seguintes continuam a adiar. Foram vários os avanços e recuos.",
     },
     {
       titulo: "As obras no centro não acautelaram a passagem do metro",

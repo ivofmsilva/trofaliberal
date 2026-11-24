@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { candidatos, diario } from "@/lib/autarquicas";
+import { comemoracoes } from "@/lib/comemoracoes";
 import { indicadores } from "@/lib/dados/dados";
 import { autarquicasNav } from "@/lib/site";
 import { siteUrl } from "@/lib/url";
@@ -33,6 +34,9 @@ const paginas = [
   "/eventos/lit",
   "/dia-do-concelho",
   "/25-de-novembro",
+  "/datas",
+  "/festas-da-nossa-terra",
+  ...comemoracoes.map((c) => c.data.slug),
   "/eventos/aqui-ha-parlamento",
   "/participa",
   "/loja",
