@@ -1,6 +1,6 @@
 {
- "juntado": "2026-11-23T11:03:28.602Z",
- "atualizado": "23/11/2026",
+ "juntado": "2026-11-24T09:03:03.151Z",
+ "atualizado": "24/11/2026",
  "indicadores": [
   {
    "slug": "populacao_residente",
@@ -40018,6 +40018,245 @@
    ]
   },
   {
+   "slug": "casas_vendidas",
+   "titulo": "Casas vendidas",
+   "categoria": "habitacao",
+   "unidade": "casas",
+   "texto": "Número de casas (alojamentos familiares) vendidas no ano, segundo as vendas declaradas às Finanças.",
+   "palavras": "casa comprar vendas transações habitação",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "INE - Estatísticas de preços da habitação ao nível local (Metodologia 2022)",
+   "ine": "0014363",
+   "ineAntigo": null,
+   "metodoGrupo": "soma",
+   "unidadeINE": "Número (N.º)",
+   "origem": "ine-proprio",
+   "linhas": [
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 414,
+       "var": null
+      },
+      {
+       "v": 24492,
+       "var": null
+      },
+      {
+       "v": 7703,
+       "var": null
+      },
+      {
+       "v": 147900,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 428,
+      "Guimarães": 1456,
+      "Vila Nova de Famalicão": 1463,
+      "Vizela": 220,
+      "Trofa": 414,
+      "Santo Tirso": 500,
+      "Maia": 1986,
+      "Vila do Conde": 1236
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 375,
+       "var": -9.4
+      },
+      {
+       "v": 21559,
+       "var": -12
+      },
+      {
+       "v": 7122,
+       "var": -7.5
+      },
+      {
+       "v": 130609,
+       "var": -11.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 424,
+      "Guimarães": 1363,
+      "Vila Nova de Famalicão": 1438,
+      "Vizela": 217,
+      "Trofa": 375,
+      "Santo Tirso": 458,
+      "Maia": 1812,
+      "Vila do Conde": 1035
+     }
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 479,
+       "var": 27.7
+      },
+      {
+       "v": 25491,
+       "var": 18.2
+      },
+      {
+       "v": 8477,
+       "var": 19
+      },
+      {
+       "v": 155850,
+       "var": 19.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 489,
+      "Guimarães": 1766,
+      "Vila Nova de Famalicão": 1623,
+      "Vizela": 285,
+      "Trofa": 479,
+      "Santo Tirso": 570,
+      "Maia": 2062,
+      "Vila do Conde": 1203
+     }
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 451,
+       "var": -5.8
+      },
+      {
+       "v": 24167,
+       "var": -5.2
+      },
+      {
+       "v": 8025,
+       "var": -5.3
+      },
+      {
+       "v": 158844,
+       "var": 1.9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 519,
+      "Guimarães": 1647,
+      "Vila Nova de Famalicão": 1586,
+      "Vizela": 304,
+      "Trofa": 451,
+      "Santo Tirso": 561,
+      "Maia": 1732,
+      "Vila do Conde": 1225
+     }
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 286,
+       "var": -36.6
+      },
+      {
+       "v": 20193,
+       "var": -16.4
+      },
+      {
+       "v": 6693,
+       "var": -16.6
+      },
+      {
+       "v": 132514,
+       "var": -16.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 410,
+      "Guimarães": 1442,
+      "Vila Nova de Famalicão": 1395,
+      "Vizela": 286,
+      "Trofa": 286,
+      "Santo Tirso": 510,
+      "Maia": 1381,
+      "Vila do Conde": 983
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 361,
+       "var": 26.2
+      },
+      {
+       "v": 24336,
+       "var": 20.5
+      },
+      {
+       "v": 7990,
+       "var": 19.4
+      },
+      {
+       "v": 151784,
+       "var": 14.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 460,
+      "Guimarães": 1631,
+      "Vila Nova de Famalicão": 1546,
+      "Vizela": 259,
+      "Trofa": 361,
+      "Santo Tirso": 608,
+      "Maia": 2048,
+      "Vila do Conde": 1077
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 427,
+       "var": 18.3
+      },
+      {
+       "v": 26056,
+       "var": 7.1
+      },
+      {
+       "v": 8963,
+       "var": 12.2
+      },
+      {
+       "v": 164677,
+       "var": 8.5
+      }
+     ],
+     "concelhos": {
+      "Fafe": 565,
+      "Guimarães": 1802,
+      "Vila Nova de Famalicão": 1925,
+      "Vizela": 320,
+      "Trofa": 427,
+      "Santo Tirso": 681,
+      "Maia": 2069,
+      "Vila do Conde": 1174
+     }
+    }
+   ]
+  },
+  {
    "slug": "agregados_fiscais_menos_10mil_percentagem",
    "titulo": "Agregados fiscais com rendimento abaixo de 10 mil €",
    "categoria": "economia",
@@ -41842,6 +42081,453 @@
       "Guimarães": 44.7,
       "Vizela": 106.8,
       "Fafe": 35.7
+     }
+    }
+   ]
+  },
+  {
+   "slug": "preco_casa_100m2",
+   "titulo": "Preço de uma casa de 100 m² (estimativa nossa)",
+   "categoria": "habitacao",
+   "unidade": "€",
+   "texto": "Conta nossa: o valor mediano das casas vendidas por m² (INE) vezes 100 m². O INE não publica o preço por casa, só por metro quadrado; este número serve para ter uma ideia do preço de uma casa típica, não é uma estatística do INE. Vem dos preços das vendas feitas; os preços pedidos nos anúncios costumam ser mais altos.",
+   "palavras": "casa comprar preço venda habitação",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "cálculo nosso: valor mediano das vendas por m² (INE, Estatísticas de preços da habitação ao nível local) × 100 m²",
+   "metodoGrupo": "media",
+   "componentes": [
+    "valor_mediano_habitacao"
+   ],
+   "origem": "calculado-proprio",
+   "linhas": [
+    {
+     "periodo": "2019",
+     "valores": [
+      {
+       "v": 81500,
+       "var": null
+      },
+      {
+       "v": 110800,
+       "var": null
+      },
+      {
+       "v": 88900,
+       "var": null
+      },
+      {
+       "v": 109400,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 69200,
+      "Guimarães": 85700,
+      "Vila Nova de Famalicão": 86700,
+      "Vizela": 76300,
+      "Trofa": 81500,
+      "Santo Tirso": 83300,
+      "Maia": 116300,
+      "Vila do Conde": 112400
+     }
+    },
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 91700,
+       "var": 12.5
+      },
+      {
+       "v": 124300,
+       "var": 12.2
+      },
+      {
+       "v": 98200,
+       "var": 10.5
+      },
+      {
+       "v": 119000,
+       "var": 8.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 75300,
+      "Guimarães": 95800,
+      "Vila Nova de Famalicão": 95000,
+      "Vizela": 90500,
+      "Trofa": 91700,
+      "Santo Tirso": 85700,
+      "Maia": 128300,
+      "Vila do Conde": 123300
+     }
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 103300,
+       "var": 12.6
+      },
+      {
+       "v": 137000,
+       "var": 10.2
+      },
+      {
+       "v": 108900,
+       "var": 10.9
+      },
+      {
+       "v": 129700,
+       "var": 9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 83700,
+      "Guimarães": 102900,
+      "Vila Nova de Famalicão": 104300,
+      "Vizela": 100300,
+      "Trofa": 103300,
+      "Santo Tirso": 95100,
+      "Maia": 141300,
+      "Vila do Conde": 140600
+     }
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 122100,
+       "var": 18.2
+      },
+      {
+       "v": 160700,
+       "var": 17.3
+      },
+      {
+       "v": 118800,
+       "var": 9.1
+      },
+      {
+       "v": 148400,
+       "var": 14.4
+      }
+     ],
+     "concelhos": {
+      "Fafe": 87500,
+      "Guimarães": 111500,
+      "Vila Nova de Famalicão": 113600,
+      "Vizela": 96900,
+      "Trofa": 122100,
+      "Santo Tirso": 98600,
+      "Maia": 161300,
+      "Vila do Conde": 158600
+     }
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 127900,
+       "var": 4.8
+      },
+      {
+       "v": 180000,
+       "var": 12
+      },
+      {
+       "v": 131600,
+       "var": 10.8
+      },
+      {
+       "v": 161100,
+       "var": 8.6
+      }
+     ],
+     "concelhos": {
+      "Fafe": 96900,
+      "Guimarães": 121900,
+      "Vila Nova de Famalicão": 126400,
+      "Vizela": 107300,
+      "Trofa": 127900,
+      "Santo Tirso": 117800,
+      "Maia": 180600,
+      "Vila do Conde": 173600
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 147900,
+       "var": 15.6
+      },
+      {
+       "v": 198600,
+       "var": 10.3
+      },
+      {
+       "v": 144500,
+       "var": 9.8
+      },
+      {
+       "v": 177700,
+       "var": 10.3
+      }
+     ],
+     "concelhos": {
+      "Fafe": 107800,
+      "Guimarães": 135800,
+      "Vila Nova de Famalicão": 140200,
+      "Vizela": 108900,
+      "Trofa": 147900,
+      "Santo Tirso": 119700,
+      "Maia": 204600,
+      "Vila do Conde": 191100
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 179200,
+       "var": 21.2
+      },
+      {
+       "v": 230500,
+       "var": 16.1
+      },
+      {
+       "v": 175200,
+       "var": 21.2
+      },
+      {
+       "v": 207600,
+       "var": 16.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 126300,
+      "Guimarães": 160700,
+      "Vila Nova de Famalicão": 174700,
+      "Vizela": 142300,
+      "Trofa": 179200,
+      "Santo Tirso": 165100,
+      "Maia": 237000,
+      "Vila do Conde": 216300
+     }
+    }
+   ]
+  },
+  {
+   "slug": "renda_casa_100m2",
+   "titulo": "Renda de uma casa de 100 m² (estimativa nossa)",
+   "categoria": "habitacao",
+   "unidade": "€ por mês",
+   "texto": "Conta nossa: a renda mediana por m² dos novos contratos de arrendamento (INE) vezes 100 m². O INE não publica a renda por casa, só por metro quadrado; este número serve para ter uma ideia da renda de uma casa típica, não é uma estatística do INE. Vem dos contratos feitos no ano (não inclui os antigos); as rendas pedidas nos anúncios costumam ser mais altas.",
+   "palavras": "casa arrendar aluguer renda",
+   "colunas": [
+    "Trofa",
+    "Área Metropolitana do Porto",
+    "Ave e concelhos vizinhos",
+    "Portugal"
+   ],
+   "fonte": "cálculo nosso: renda mediana por m² dos novos contratos de arrendamento (INE, Estatísticas de rendas da habitação ao nível local) × 100 m²",
+   "metodoGrupo": "media",
+   "componentes": [
+    "valor_mediano_rendas"
+   ],
+   "origem": "calculado-proprio",
+   "linhas": [
+    {
+     "periodo": "2020",
+     "valores": [
+      {
+       "v": 419,
+       "var": null
+      },
+      {
+       "v": 614,
+       "var": null
+      },
+      {
+       "v": 404,
+       "var": null
+      },
+      {
+       "v": 579,
+       "var": null
+      }
+     ],
+     "concelhos": {
+      "Fafe": 284,
+      "Guimarães": 377,
+      "Vila Nova de Famalicão": 391,
+      "Vizela": 320,
+      "Trofa": 419,
+      "Santo Tirso": 332,
+      "Maia": 611,
+      "Vila do Conde": 501
+     }
+    },
+    {
+     "periodo": "2021",
+     "valores": [
+      {
+       "v": 459,
+       "var": 9.5
+      },
+      {
+       "v": 657,
+       "var": 7
+      },
+      {
+       "v": 429,
+       "var": 6.2
+      },
+      {
+       "v": 631,
+       "var": 9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 290,
+      "Guimarães": 408,
+      "Vila Nova de Famalicão": 408,
+      "Vizela": 360,
+      "Trofa": 459,
+      "Santo Tirso": 361,
+      "Maia": 633,
+      "Vila do Conde": 510
+     }
+    },
+    {
+     "periodo": "2022",
+     "valores": [
+      {
+       "v": 489,
+       "var": 6.5
+      },
+      {
+       "v": 729,
+       "var": 11
+      },
+      {
+       "v": 476,
+       "var": 11
+      },
+      {
+       "v": 688,
+       "var": 9
+      }
+     ],
+     "concelhos": {
+      "Fafe": 331,
+      "Guimarães": 455,
+      "Vila Nova de Famalicão": 454,
+      "Vizela": 417,
+      "Trofa": 489,
+      "Santo Tirso": 381,
+      "Maia": 692,
+      "Vila do Conde": 585
+     }
+    },
+    {
+     "periodo": "2023",
+     "valores": [
+      {
+       "v": 567,
+       "var": 16
+      },
+      {
+       "v": 821,
+       "var": 12.6
+      },
+      {
+       "v": 529,
+       "var": 11.1
+      },
+      {
+       "v": 762,
+       "var": 10.8
+      }
+     ],
+     "concelhos": {
+      "Fafe": 357,
+      "Guimarães": 506,
+      "Vila Nova de Famalicão": 510,
+      "Vizela": 407,
+      "Trofa": 567,
+      "Santo Tirso": 440,
+      "Maia": 778,
+      "Vila do Conde": 667
+     }
+    },
+    {
+     "periodo": "2024",
+     "valores": [
+      {
+       "v": 655,
+       "var": 15.5
+      },
+      {
+       "v": 914,
+       "var": 11.3
+      },
+      {
+       "v": 598,
+       "var": 13
+      },
+      {
+       "v": 847,
+       "var": 11.2
+      }
+     ],
+     "concelhos": {
+      "Fafe": 393,
+      "Guimarães": 559,
+      "Vila Nova de Famalicão": 591,
+      "Vizela": 484,
+      "Trofa": 655,
+      "Santo Tirso": 522,
+      "Maia": 867,
+      "Vila do Conde": 714
+     }
+    },
+    {
+     "periodo": "2025",
+     "valores": [
+      {
+       "v": 705,
+       "var": 7.6
+      },
+      {
+       "v": 1017,
+       "var": 11.3
+      },
+      {
+       "v": 674,
+       "var": 12.7
+      },
+      {
+       "v": 929,
+       "var": 9.7
+      }
+     ],
+     "concelhos": {
+      "Fafe": 470,
+      "Guimarães": 644,
+      "Vila Nova de Famalicão": 657,
+      "Vizela": 546,
+      "Trofa": 705,
+      "Santo Tirso": 609,
+      "Maia": 959,
+      "Vila do Conde": 804
      }
     }
    ]

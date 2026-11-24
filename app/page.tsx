@@ -9,6 +9,7 @@ import BannerEducacao from "@/components/BannerEducacao";
 import AgendaInicio from "@/components/AgendaInicio";
 import CarrosselBanners from "@/components/CarrosselBanners";
 import BannerHabitacao from "@/components/BannerHabitacao";
+import BannerImpostos from "@/components/BannerImpostos";
 import BannerMetro from "@/components/BannerMetro";
 import BannerNatal from "@/components/BannerNatal";
 import InstagramImage from "@/components/InstagramImage";
@@ -129,6 +130,7 @@ export default function Home() {
             "Construir para o futuro",
             "Novo coordenador",
             "Dados da Trofa",
+            "Impostos na Trofa",
             "Packs de Natal",
           ]}
         >
@@ -139,6 +141,7 @@ export default function Home() {
             <BannerHabitacao key="habitacao" />,
             <BannerCoordenador key="coordenador" />,
             <BannerDados key="dados" />,
+            <BannerImpostos key="impostos" />,
             <BannerNatal key="natal" />,
           ]}
         </CarrosselBanners>

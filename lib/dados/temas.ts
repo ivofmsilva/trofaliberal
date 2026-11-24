@@ -76,6 +76,9 @@ export const temas: Tema[] = [
     slugs: [
       "valor_mediano_rendas",
       "valor_mediano_habitacao",
+      "renda_casa_100m2",
+      "preco_casa_100m2",
+      "casas_vendidas",
       "valor_mediano_avaliacao_bancaria",
       "edificios_concluidos",
       "fogos_licenciados_por_10000_habitantes",

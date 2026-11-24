@@ -1,5 +1,5 @@
 // Calculadora: para fazer as contas ao que se paga de IMI e de IRS municipal.
-function Calculadora() {
+export function Calculadora() {
   const teclas = Array.from({ length: 12 }, (_, i) => i);
   return (
     <svg viewBox="0 0 220 280" role="img" aria-label="Uma calculadora com o símbolo do euro no visor" className="w-full max-w-[15rem]">
