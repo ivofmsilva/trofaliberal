@@ -22,7 +22,16 @@ const etiqueta = "text-sm font-bold uppercase tracking-[0.25em]";
 
 // Orçamento de 2026 da Câmara (Relatório do Orçamento de 2026, Quadro 4, pág. 82): impostos diretos (IMI, IMT, IUC e
 // derrama) e taxas, multas e outras penalidades. Aprovado pela Câmara a 18/12/2025 e pela Assembleia a 29/12/2025.
-const ORCAMENTO_2026 = { impostosDiretos: 13_537_113.41, taxas: 1_129_078.19 };
+// Cada imposto: Quadro 6 (Receitas fiscais); somam os 13 537 113,41 € com 200 € de impostos abolidos e diversos.
+// A parte do IRS não está aqui: no orçamento é uma transferência do Estado (06.03.01.06), não um imposto direto.
+const ORCAMENTO_2026 = {
+  impostosDiretos: 13_537_113.41,
+  taxas: 1_129_078.19,
+  imi: 5_963_898.91,
+  imt: 3_776_467.69,
+  derrama: 2_411_434.52,
+  iuc: 1_385_112.29,
+};
 // Propostas da IL (programa autárquico de 2025, área Fiscalidade).
 const PROPOSTA_IRS = 2;
 const MINIMO_IMI = 0.3;
@@ -85,9 +94,17 @@ export default function Impostos() {
             <a href={FONTE_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-navy">
               Relatório do Orçamento de 2026 ↗
             </a>{" "}
-            (Quadro 4): {m(ORCAMENTO_2026.impostosDiretos)} de impostos diretos e {m(ORCAMENTO_2026.taxas)} de taxas, multas e outras
-            penalidades. O orçamento faz a previsão pela média dos últimos dois anos; em {B} a Câmara cobrou mais do que isto em
-            impostos.
+            (Quadros 4 e 6): {m(ORCAMENTO_2026.impostosDiretos)} de impostos diretos (IMI {m(ORCAMENTO_2026.imi)}, IMT{" "}
+            {m(ORCAMENTO_2026.imt)}, derrama {m(ORCAMENTO_2026.derrama)} e IUC {m(ORCAMENTO_2026.iuc)}) e {m(ORCAMENTO_2026.taxas)} de
+            taxas, multas e outras penalidades.
+          </p>
+          <p className="mt-3 max-w-3xl text-sm text-ink/70">
+            <strong className="text-ink/85">Porque fica abaixo dos {m(em(B))} de {B}?</strong> O taxómetro usa o valor do orçamento
+            de 2026, e há duas diferenças. Primeiro, a lei obriga a Câmara a prever os impostos no orçamento com prudência: no
+            máximo, a média do que cobrou nos 24 meses anteriores. Por isso o orçamento fica abaixo do que se cobrou em {B}: só
+            nestes quatro impostos, foram {m(em(B) - de("receita_participacao_irs", B))} (o IMT rendeu {m(de("receita_imt", B))} e
+            está previsto em {m(ORCAMENTO_2026.imt)}). Segundo, o taxómetro não conta a parte do IRS (
+            {m(de("receita_participacao_irs", B))} em {B}), que no orçamento entra como transferência do Estado e não como imposto.
           </p>
         </section>
 
@@ -122,7 +139,9 @@ export default function Impostos() {
             </li>
           </ul>
           <p className="mt-6 max-w-3xl text-lg text-ink/85">
-            Conta-se o IMI, o IMT, o IUC, a derrama e a parte do IRS dos trofenses que fica na Câmara. A receita do IMI ficou
+            Conta-se o IMI, o IMT, o IUC, a derrama e a parte do IRS dos trofenses que fica na Câmara. Os {m(em(B))} de {B} são:
+            IMI {m(de("receita_imi", B))}, IMT {m(de("receita_imt", B))}, derrama {m(de("receita_derrama", B))}, parte do IRS{" "}
+            {m(de("receita_participacao_irs", B))} e IUC {m(de("receita_iuc", B))}. A receita do IMI ficou
             perto dos 6 M€ por ano: a taxa desceu de 0,45% (em 2019) para {String(imiAtual.urbanos).replace(".", ",")}% (em{" "}
             {imiAtual.paraAno}), mas continua acima do mínimo da lei, 0,30%. O que mais cresceu foi o IMT, pago na compra de
             casas, seguido da parte do IRS e da derrama.
