@@ -1374,6 +1374,51 @@ export const comemoracoes: Comemoracao[] = [
     semConvite: true,
     historia: "/historias/violencia-contra-as-mulheres",
   },
+  {
+    // Pedido do Ivo (25/11/2026). Legislativas de 6/10/2019: IL com 1,29% no país e 2,47% no círculo de Lisboa, um
+    // deputado (Infopédia, RTP). Os números de deputados seguintes são os da página do aniversário da IL.
+    data: { slug: "/iniciativa-liberal-no-parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019 },
+    etiqueta: "6 de outubro · 2019",
+    titulo: "{anos} anos da Iniciativa Liberal no Parlamento",
+    subtitulo: "O dia em que os portugueses elegeram o primeiro deputado da Iniciativa Liberal.",
+    descricao: "6 de outubro de 2019: a Iniciativa Liberal elege o seu primeiro deputado, João Cotrim de Figueiredo, por Lisboa.",
+    abertura: "A 6 de outubro de 2019, a Iniciativa Liberal elegeu o seu primeiro deputado: João Cotrim de Figueiredo, pelo círculo de Lisboa.",
+    blocos: [
+      "O partido tinha menos de dois anos. Teve 1,29% dos votos no país e 2,47% em Lisboa, o suficiente para eleger um deputado. Pela primeira vez, a Iniciativa Liberal tinha voz na Assembleia da República: menos impostos, menos Estado na vida das pessoas e mais liberdade para escolher.",
+      {
+        imagem: {
+          src: "/images/datas/campanha-il-2019-porto.webp",
+          w: 1600,
+          h: 900,
+          alt: "Cartaz da Iniciativa Liberal na campanha de 2019, no Porto: Não votes Iniciativa Liberal se gostas de esperar meses por uma consulta",
+          credito: { autor: "Joehawkins", licenca: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:N%C3%A3o_votes_Iniciativa_Liberal,_Porto_2019.jpg" },
+        },
+        legenda: "Um dos cartazes da campanha de 2019, no Porto.",
+      },
+      {
+        lista: [
+          "2022: o grupo parlamentar passa a oito deputados.",
+          "2024: mantém os oito deputados e elege os primeiros dois eurodeputados.",
+          "2025: elege nove deputados.",
+        ],
+      },
+      { destaque: "Começou com um deputado. Hoje são nove." },
+      { link: "A história da Iniciativa Liberal →", href: "/aniversario-iniciativa-liberal" },
+    ],
+    imagem: {
+      src: "/images/datas/campanha-il-2019-porto.webp",
+      w: 1600,
+      h: 900,
+      alt: "Cartaz da Iniciativa Liberal na campanha de 2019, no Porto: Não votes Iniciativa Liberal se gostas de esperar meses por uma consulta",
+      credito: { autor: "Joehawkins", licenca: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:N%C3%A3o_votes_Iniciativa_Liberal,_Porto_2019.jpg" },
+    },
+    banner: {
+      etiqueta: "2019 · {anos} anos",
+      titulo: "{anos} anos da IL no Parlamento",
+      frase: "A 6 de outubro de 2019, a Iniciativa Liberal elegeu o seu primeiro deputado.",
+    },
+    partilhar: "6 de outubro de 2019: a Iniciativa Liberal elege o seu primeiro deputado, João Cotrim de Figueiredo.",
+  },
 ];
 
 export const comemoracaoDe = (slug: string) => comemoracoes.find((c) => c.data.slug === `/${slug}`);

@@ -36,7 +36,10 @@ export default function Datas() {
   return (
     <>
       <PageHero eyebrow="Ao longo do ano" title="Datas que celebramos">
-        <p>As datas nacionais, as da Trofa, as do partido e as festas das freguesias, a começar em hoje.</p>
+        <p>
+          Às datas de sensibilização juntamos as datas nacionais, as da Trofa, as mais importantes do partido e as festas das
+          freguesias, a começar no dia de hoje.
+        </p>
       </PageHero>
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
