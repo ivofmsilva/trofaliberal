@@ -199,6 +199,27 @@ export const itens: Record<Categoria, Item[]> = {
   // Artigos de opinião de Diamantino Costa n'O Notícias da Trofa (coluna "Folha Liberal" e seguintes).
   artigos: [
     {
+      titulo: "Habitação: as boas intenções não chegam",
+      temas: ["habitacao"],
+      fonte: "Diamantino Costa · O Notícias da Trofa",
+      data: "2026-11-24",
+      href: "https://www.onoticiasdatrofa.pt/habitacao-as-boas-intencoes-nao-chegam/",
+    },
+    {
+      titulo: "A crise da habitação também exige escolhas",
+      temas: ["habitacao"],
+      fonte: "Diamantino Costa · O Notícias da Trofa",
+      data: "2026-11-05",
+      href: "https://www.onoticiasdatrofa.pt/a-crise-da-habitacao-tambem-exige-escolhas/",
+    },
+    {
+      titulo: "Quando é o Estado que não cumpre",
+      temas: ["contas"],
+      fonte: "Diamantino Costa · O Notícias da Trofa",
+      data: "2026-10-23",
+      href: "https://www.onoticiasdatrofa.pt/quando-e-o-estado-que-nao-cumpre/",
+    },
+    {
       titulo: "Portugal já sabe o que está errado",
       temas: ["economia"],
       fonte: "Diamantino Costa · O Notícias da Trofa",

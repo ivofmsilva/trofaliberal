@@ -1323,6 +1323,34 @@ export const comemoracoes: Comemoracao[] = [
     banner: { etiqueta: "14 de fevereiro", titulo: "Entre nós não é preciso um acordo escrito", frase: "Na política, mais do que juras de amor, é preciso escrutínio e prestação de contas." },
     partilhar: "Dia dos Namorados na Câmara da Trofa: entre nós não é preciso um acordo escrito.",
   },
+  {
+    // Pedido do Ivo (25/11/2026), a partir de um texto que viu. Números: Observatório de Mulheres Assassinadas (UMAR),
+    // relatório de março de 2026 (26 mulheres assassinadas em 2025). Linhas de apoio: CIG (800 202 148 e SMS 3060,
+    // gratuitas, confidenciais, 24 horas). Ligar para o 112 em código quando não se pode falar: conselho da PSP (junho de 2026).
+    data: { slug: "/violencia-contra-as-mulheres", titulo: "Dia Internacional para a Eliminação da Violência contra as Mulheres", dia: [11, 25], desde: 1999 },
+    etiqueta: "25 de novembro",
+    titulo: "Dia Internacional para a Eliminação da Violência contra as Mulheres",
+    subtitulo: "Nenhuma mulher devia viver com medo.",
+    descricao: "25 de novembro: nenhuma mulher devia viver com medo. Onde pedir ajuda: 800 202 148, SMS 3060 e, em perigo, 112.",
+    abertura: "Nenhuma mulher devia viver com medo: nem em casa, nem na rua, nem no trabalho, nem na internet.",
+    blocos: [
+      "Em 2025, 26 mulheres foram assassinadas em Portugal, segundo o Observatório de Mulheres Assassinadas. Não são números: cada uma tinha um nome, uma família e uma vida pela frente.",
+      "A data lembra as irmãs Mirabal, três ativistas assassinadas a 25 de novembro de 1960, na República Dominicana, por ordem da ditadura de Trujillo. Em 1999, as Nações Unidas fizeram deste o dia contra a violência sobre as mulheres.",
+      { destaque: "Liberdade é poder viver sem medo." },
+      "Se é contigo, ou com alguém que conheces, não estás sozinha:",
+      {
+        lista: [
+          "Liga para o 800 202 148 ou envia SMS para o 3060. É gratuito, confidencial e funciona 24 horas por dia.",
+          "Em perigo, liga para o 112. Se não puderes falar à vontade, liga na mesma: fala como se fosse outra conversa e responde às perguntas com «sim» ou «não».",
+          "Se vires alguém fazer o gesto de pedido de ajuda (a mão aberta, o polegar dobrado para dentro e os dedos a fecharem-se por cima dele), liga para o 112.",
+        ],
+      },
+      "Partilha esta página: pode chegar a quem precisa.",
+    ],
+    imagem: { src: "/images/datas/violencia-mulheres-ilustracao.webp", w: 1600, h: 900, alt: "Ilustração: uma casa, um candeeiro de rua, uma pasta de trabalho e um telemóvel, em branco sobre fundo cor de laranja" },
+    banner: { etiqueta: "25 de novembro", titulo: "Nenhuma mulher devia viver com medo", frase: "Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112." },
+    partilhar: "Nenhuma mulher devia viver com medo. Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112.",
+  },
 ];
 
 export const comemoracaoDe = (slug: string) => comemoracoes.find((c) => c.data.slug === `/${slug}`);
