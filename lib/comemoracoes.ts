@@ -1364,7 +1364,11 @@ export const comemoracoes: Comemoracao[] = [
       h: 900,
       alt: "Não estás sozinha. Nenhuma mulher devia viver com medo. 800 202 148: gratuito, 24 horas. SMS 3060: se não puderes ligar. 112: em perigo.",
     },
-    banner: { etiqueta: "25 de novembro", titulo: "Nenhuma mulher devia viver com medo", frase: "Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112." },
+    banner: {
+      etiqueta: "25 de novembro",
+      titulo: "Dia contra a Violência sobre as Mulheres",
+      frase: "Nenhuma mulher devia viver com medo. Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112.",
+    },
     partilhar: "Nenhuma mulher devia viver com medo. Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112.",
     semConvite: true,
   },
