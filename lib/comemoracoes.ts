@@ -32,6 +32,7 @@ export type Comemoracao = {
   fecho?: string;
   assinatura?: { nome: string; cargo: string; foto?: string }; // quem assina a mensagem (ex.: o coordenador), depois do fecho
   semConvite?: boolean; // sem o "Queres ajudar a Trofa a ir mais longe? Junta-te a nós" no fim (datas sensíveis)
+  historia?: string; // imagem para a história do Instagram (rota em app/historias/...): mostra o botão "Partilhar na história"
   imagem: Img; // a do banner e das partilhas
   banner: { etiqueta: string; titulo: string; frase: string };
   partilhar: string;
@@ -1371,6 +1372,7 @@ export const comemoracoes: Comemoracao[] = [
     },
     partilhar: "Nenhuma mulher devia viver com medo. Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112.",
     semConvite: true,
+    historia: "/historias/violencia-contra-as-mulheres",
   },
 ];
 

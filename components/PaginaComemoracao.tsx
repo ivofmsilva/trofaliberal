@@ -3,6 +3,7 @@ import Link from "next/link";
 import Marcos from "@/components/Marcos";
 import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
+import PartilharHistoria from "@/components/PartilharHistoria";
 import { preencher, valoresDe, type Bloco, type Comemoracao, type Img } from "@/lib/comemoracoes";
 import { marcos } from "@/lib/nucleo";
 
@@ -109,8 +110,16 @@ export default function PaginaComemoracao({ c }: { c: Comemoracao }) {
             </div>
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 space-y-6">
           <PartilharBotao titulo={titulo} texto={preencher(c.partilhar, v)} />
+          {c.historia && (
+            <PartilharHistoria
+              src={c.historia}
+              nome={`${c.data.slug.slice(1)}.png`}
+              titulo={titulo}
+              endereco={`trofaliberal.pt${c.data.slug}`}
+            />
+          )}
         </div>
       </article>
 

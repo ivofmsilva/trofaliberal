@@ -6,17 +6,11 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { anosDe, vinteCincoNovembro } from "@/lib/datasAnuais";
+import { fontesHistoria, logoHistoria, TAMANHO_HISTORIA } from "@/lib/historia";
 
 export const revalidate = 86400;
 
-// Caminhos escritos por extenso (e não numa função), para a Vercel só levar estes ficheiros.
-const [grotesk, jakartaMedio, jakartaForte, cartaz, logo] = await Promise.all([
-  readFile(join(process.cwd(), "assets/fonts/SpaceGrotesk-Bold.ttf")),
-  readFile(join(process.cwd(), "assets/fonts/PlusJakartaSans-Medium.ttf")),
-  readFile(join(process.cwd(), "assets/fonts/PlusJakartaSans-ExtraBold.ttf")),
-  readFile(join(process.cwd(), "assets/historias/25-novembro-conquistas.jpg")),
-  readFile(join(process.cwd(), "public/il-trofa-logo.png")),
-]);
+const cartaz = await readFile(join(process.cwd(), "assets/historias/25-novembro-conquistas.jpg"));
 const dataUri = (b: Buffer, tipo: string) => `data:${tipo};base64,${b.toString("base64")}`;
 
 export async function GET() {
@@ -55,19 +49,11 @@ export async function GET() {
                 trofaliberal.pt/25-de-novembro
               </div>
             </div>
-            <img src={dataUri(logo, "image/png")} width={150} height={150} style={{ borderRadius: 999 }} />
+            <img src={logoHistoria} width={150} height={150} style={{ borderRadius: 999 }} />
           </div>
         </div>
       </div>
     ),
-    {
-      width: 1080,
-      height: 1920,
-      fonts: [
-        { name: "Grotesk", data: grotesk, weight: 700, style: "normal" },
-        { name: "Jakarta", data: jakartaMedio, weight: 500, style: "normal" },
-        { name: "Jakarta", data: jakartaForte, weight: 800, style: "normal" },
-      ],
-    },
+    { ...TAMANHO_HISTORIA, fonts: fontesHistoria },
   );
 }
