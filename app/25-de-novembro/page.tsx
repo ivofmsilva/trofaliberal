@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
+import PartilharHistoria from "@/components/PartilharHistoria";
 import { anosDe, vinteCincoNovembro } from "@/lib/datasAnuais";
 
 // Página do 25 de Novembro. Fica sempre online; o banner só aparece de 24 a 26 de novembro (lib/datasAnuais.ts)
@@ -112,10 +113,16 @@ export default function VinteCincoNovembro() {
             <figcaption className="mt-2 text-sm text-ink/70">Cartaz da Iniciativa Liberal.</figcaption>
           </figure>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 space-y-6">
           <PartilharBotao
             titulo={`${anos} anos do 25 de Novembro`}
             texto="Abril deu-nos a liberdade. Novembro garantiu que ela ficava."
+          />
+          <PartilharHistoria
+            src="/25-de-novembro/historia"
+            nome={`25-de-novembro-${anos}-anos.png`}
+            titulo={`${anos} anos do 25 de Novembro`}
+            endereco="trofaliberal.pt/25-de-novembro"
           />
         </div>
       </article>
