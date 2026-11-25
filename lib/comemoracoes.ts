@@ -31,6 +31,7 @@ export type Comemoracao = {
   blocos: Bloco[];
   fecho?: string;
   assinatura?: { nome: string; cargo: string; foto?: string }; // quem assina a mensagem (ex.: o coordenador), depois do fecho
+  semConvite?: boolean; // sem o "Queres ajudar a Trofa a ir mais longe? Junta-te a nós" no fim (datas sensíveis)
   imagem: Img; // a do banner e das partilhas
   banner: { etiqueta: string; titulo: string; frase: string };
   partilhar: string;
@@ -1334,8 +1335,18 @@ export const comemoracoes: Comemoracao[] = [
     descricao: "25 de novembro: nenhuma mulher devia viver com medo. Onde pedir ajuda: 800 202 148, SMS 3060 e, em perigo, 112.",
     abertura: "Nenhuma mulher devia viver com medo: nem em casa, nem na rua, nem no trabalho, nem na internet.",
     blocos: [
-      "Em 2025, 26 mulheres foram assassinadas em Portugal, segundo o Observatório de Mulheres Assassinadas. Não são números: cada uma tinha um nome, uma família e uma vida pela frente.",
+      "Em 2025, 26 mulheres foram assassinadas em Portugal, segundo o Observatório de Mulheres Assassinadas. Por trás de cada número há uma mulher com nome, uma família que ficou sem ela e uma vida que lhe foi roubada.",
       "A data lembra as irmãs Mirabal, três ativistas assassinadas a 25 de novembro de 1960, na República Dominicana, por ordem da ditadura de Trujillo. Em 1999, as Nações Unidas fizeram deste o dia contra a violência sobre as mulheres.",
+      {
+        imagem: {
+          src: "/images/datas/irmas-mirabal-desenho.webp",
+          w: 2048,
+          h: 957,
+          alt: "Desenho a aguarela das irmãs Mirabal: Patria, María Teresa e Minerva",
+          credito: { autor: "Miriam Citlaly Ramos Lopez", licenca: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Dibujo_de_las_hermanas_mirabal.jpg" },
+        },
+        legenda: "As irmãs Mirabal: Patria, María Teresa e Minerva.",
+      },
       { destaque: "Liberdade é poder viver sem medo." },
       "Se é contigo, ou com alguém que conheces, não estás sozinha:",
       {
@@ -1347,9 +1358,15 @@ export const comemoracoes: Comemoracao[] = [
       },
       "Partilha esta página: pode chegar a quem precisa.",
     ],
-    imagem: { src: "/images/datas/violencia-mulheres-ilustracao.webp", w: 1600, h: 900, alt: "Ilustração: uma casa, um candeeiro de rua, uma pasta de trabalho e um telemóvel, em branco sobre fundo cor de laranja" },
+    imagem: {
+      src: "/images/datas/nao-estas-sozinha.webp",
+      w: 1600,
+      h: 900,
+      alt: "Não estás sozinha. Nenhuma mulher devia viver com medo. 800 202 148: gratuito, 24 horas. SMS 3060: se não puderes ligar. 112: em perigo.",
+    },
     banner: { etiqueta: "25 de novembro", titulo: "Nenhuma mulher devia viver com medo", frase: "Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112." },
     partilhar: "Nenhuma mulher devia viver com medo. Pede ajuda: 800 202 148, SMS 3060 ou, em perigo, 112.",
+    semConvite: true,
   },
 ];
 

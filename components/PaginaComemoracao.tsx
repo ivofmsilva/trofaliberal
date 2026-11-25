@@ -126,14 +126,18 @@ export default function PaginaComemoracao({ c }: { c: Comemoracao }) {
 
       <section className={`${temMarcos ? "bg-mist text-navy" : "bg-navy text-white"} py-12 text-center`}>
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <p className="font-display text-2xl font-bold md:text-3xl">Queres ajudar a Trofa a ir mais longe?</p>
-          <Link
-            href="/participa?t=membro"
-            className="mt-6 inline-block rounded-full bg-sun px-7 py-3 font-bold text-navy transition hover:bg-pink hover:text-white"
-          >
-            Junta-te a nós →
-          </Link>
-          <p className={`mt-6 text-sm ${temMarcos ? "text-ink/70" : "text-white/90"}`}>
+          {!c.semConvite && (
+            <>
+              <p className="font-display text-2xl font-bold md:text-3xl">Queres ajudar a Trofa a ir mais longe?</p>
+              <Link
+                href="/participa?t=membro"
+                className="mt-6 inline-block rounded-full bg-sun px-7 py-3 font-bold text-navy transition hover:bg-pink hover:text-white"
+              >
+                Junta-te a nós →
+              </Link>
+            </>
+          )}
+          <p className={`${c.semConvite ? "" : "mt-6 "}text-sm ${temMarcos ? "text-ink/70" : "text-white/90"}`}>
             <Link href="/datas" className="font-bold underline hover:text-sun">
               Outras datas que celebramos
             </Link>
