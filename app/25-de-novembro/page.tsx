@@ -85,6 +85,18 @@ export default function VinteCincoNovembro() {
             Cabe-nos agora trabalhar por uma democracia mais robusta e por um país onde o mérito é reconhecido e
             há oportunidades para todos.
           </p>
+          <p>
+            Queres perceber o que aconteceu nesse dia?{" "}
+            <a
+              href="https://www.instagram.com/reel/DgIqBAiTnbC/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-cyan-dark underline underline-offset-2 hover:text-navy"
+            >
+              Vê o vídeo que explica o 25 de Novembro ↗
+            </a>{" "}
+            <span className="text-ink/70">(Politicamente Factual, no Instagram, com as fontes indicadas)</span>.
+          </p>
           <p className="font-display text-2xl font-bold text-pink">
             Viva o 25 de Novembro. Viva a liberdade!
           </p>
