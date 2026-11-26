@@ -3,6 +3,7 @@ import Link from "next/link";
 import Galeria from "@/components/Galeria";
 import PageHero from "@/components/PageHero";
 import PartilharBotao from "@/components/PartilharBotao";
+import PartilharHistoria from "@/components/PartilharHistoria";
 import { anosDoConcelho, diaDoConcelho, estaNaSemana } from "@/lib/datasAnuais";
 
 // Página do Dia do Concelho (19 de novembro). Fica sempre online; o banner só aparece de 18 a 20 de novembro
@@ -75,10 +76,16 @@ export default function DiaDoConcelho() {
           </p>
           {naSemana && <p className="font-display text-2xl font-bold text-pink">Bom feriado, Trofa!</p>}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 space-y-6">
           <PartilharBotao
             titulo={`${anos} anos de Concelho da Trofa`}
             texto="19 de novembro de 1998: o dia em que a Trofa conquistou o seu concelho."
+          />
+          <PartilharHistoria
+            src="/dia-do-concelho/historia"
+            nome="dia-do-concelho.png"
+            titulo={`${anos} anos de Concelho da Trofa`}
+            endereco="trofaliberal.pt/dia-do-concelho"
           />
         </div>
       </article>

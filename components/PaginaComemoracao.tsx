@@ -112,9 +112,11 @@ export default function PaginaComemoracao({ c }: { c: Comemoracao }) {
         </div>
         <div className="mt-8 space-y-6">
           <PartilharBotao titulo={titulo} texto={preencher(c.partilhar, v)} />
-          {c.historia && (
+          {/* Todas as datas com página própria têm história: a sua rota (campo `historia`) ou a genérica (app/historias/[slug]).
+              As do partido e do núcleo (/a-nossa-historia#...) não têm. */}
+          {!c.data.slug.includes("#") && (
             <PartilharHistoria
-              src={c.historia}
+              src={c.historia ?? `/historias${c.data.slug}`}
               nome={`${c.data.slug.slice(1)}.png`}
               titulo={titulo}
               endereco={`trofaliberal.pt${c.data.slug}`}
