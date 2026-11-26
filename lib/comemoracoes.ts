@@ -184,7 +184,7 @@ export const comemoracoes: Comemoracao[] = [
       { nota: "A 13 de dezembro de 2017, duas semanas depois da convenção, o Tribunal Constitucional registou a Iniciativa Liberal como partido." },
       "Começou com um manifesto escrito por cidadãos liberais. Hoje tem nove deputados na Assembleia da República, dois eurodeputados e núcleos por todo o país, como o da Trofa.",
       { imagem: F["aniversario-il-9-anos"], legenda: "O aniversário dos 9 anos foi comemorado na festa do 25 de Novembro de 2026, no BH Foz, no Porto.", pequena: true },
-      { destaque: "{anos} anos depois, continua a ser isto: cidadãos que decidem tomar a iniciativa." },
+      { destaque: "{anos} anos depois, continua a ser isto: cidadãos liberais que decidem tomar a iniciativa." },
     ],
     fecho: "Parabéns, Iniciativa Liberal!",
     imagem: F["aniversario-il-9-anos"],
