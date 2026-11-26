@@ -21,7 +21,7 @@ import { anoDe, proximaVez, type DataAnual } from "@/lib/datasAnuais";
 //   a primeira disputa da liderança com mais de um candidato.
 // - IX Convenção, 1-2/2/2025, Loures: Rui Rocha 73,4%, Rui Malheiro 26,6% (Renascença, RTP, ECO).
 // - Rui Rocha deixou a presidência a 31/5/2025; X Convenção, 19/7/2025, Alcobaça: Mariana Leitão candidata única,
-//   73% e sem votos contra (DN, ECO, RTP).
+//   73% (DN, ECO, RTP). O "sem votos contra" das notícias não está certo, segundo o Ivo (26/11/2026): não pôr.
 // - Presidenciais: 24/1/2021 Tiago Mayan Gonçalves, 3,2%; 18/1/2026 João Cotrim de Figueiredo, 16%, 3.º lugar.
 // - XI Convenção, 30-31/1/2027, região de Lisboa (SOL/Lusa, 26/11/2026). Nomes só quando as candidaturas forem oficiais.
 export const PAGINA_HISTORIA = "/a-nossa-historia";
@@ -170,7 +170,7 @@ export const momentosIL: Momento[] = [
     tipo: "Convenção Nacional",
     titulo: "Mariana Leitão, a primeira presidente",
     texto: [
-      "A 31 de maio, Rui Rocha deixou a presidência. A 19 de julho de 2025, na X Convenção Nacional, em Alcobaça, Mariana Leitão foi eleita presidente, com 73% dos votos, sem votos contra. É a primeira mulher a liderar o partido.",
+      "A 31 de maio, Rui Rocha deixou a presidência. A 19 de julho de 2025, na X Convenção Nacional, em Alcobaça, Mariana Leitão foi eleita presidente, com 73% dos votos. É a primeira mulher a liderar o partido.",
     ],
   },
   {
