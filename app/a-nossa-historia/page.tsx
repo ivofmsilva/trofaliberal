@@ -122,7 +122,7 @@ export default function ANossaHistoria() {
       <section className="mx-auto max-w-3xl px-4 pt-14 sm:px-6">
         <p className="text-lg leading-relaxed text-ink/85">
           Em 2016 era uma associação de cidadãos. Hoje, a Iniciativa Liberal tem nove deputados na Assembleia da
-          República, dois eurodeputados e um núcleo na Trofa.
+          República, dois eurodeputados e núcleos por todo o país.
         </p>
         <nav aria-label="Anos" className="mt-6 flex flex-wrap gap-2">
           {anos.map((ano) => (
