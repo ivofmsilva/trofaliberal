@@ -24,16 +24,17 @@ function Credito({ img }: { img: Img }) {
   );
 }
 
-export function Figura({ img, legenda }: { img: Img; legenda?: string }) {
+// `pequena`: foto mais pequena, a meio da largura (ex.: o bolo do aniversário, depois da foto principal).
+export function Figura({ img, legenda, pequena }: { img: Img; legenda?: string; pequena?: boolean }) {
   return (
-    <figure className="py-2">
+    <figure className={pequena ? "max-w-sm py-2" : "py-2"}>
       <Image
         src={img.src}
         alt={img.alt}
         width={img.w}
         height={img.h}
-        sizes="(min-width: 768px) 720px, 100vw"
-        className="max-h-[32rem] w-full rounded-2xl object-cover shadow-lg"
+        sizes={pequena ? "384px" : "(min-width: 768px) 720px, 100vw"}
+        className={`${pequena ? "" : "max-h-[32rem] "}w-full rounded-2xl object-cover shadow-lg`}
       />
       {(legenda || img.credito) && (
         <figcaption className="mt-2 text-sm text-ink/70">
@@ -58,7 +59,7 @@ export function MostrarBloco({ b, v }: { b: Bloco; v: Record<string, string> }) 
       </ul>
     );
   if ("destaque" in b) return <p className="font-display text-xl font-bold text-navy md:text-2xl">{preencher(b.destaque, v)}</p>;
-  if ("imagem" in b) return <Figura img={b.imagem} legenda={b.legenda && preencher(b.legenda, v)} />;
+  if ("imagem" in b) return <Figura img={b.imagem} legenda={b.legenda && preencher(b.legenda, v)} pequena={b.pequena} />;
   if ("link" in b)
     return (
       <p>

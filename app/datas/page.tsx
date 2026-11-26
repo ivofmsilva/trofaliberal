@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { comemoracoes } from "@/lib/comemoracoes";
 import { diaDoConcelho, MESES, proximaVez, vinteCincoNovembro, type DataAnual } from "@/lib/datasAnuais";
-import { eleicoesIL } from "@/lib/eleicoesIL";
+import { momentosIL } from "@/lib/historiaIL";
 import { festas } from "@/lib/festas";
 
 // Calendário das datas que celebramos, a começar em hoje (os próximos 12 meses).
@@ -21,7 +21,7 @@ export default function Datas() {
     { data: diaDoConcelho, titulo: diaDoConcelho.titulo },
     { data: vinteCincoNovembro, titulo: vinteCincoNovembro.titulo },
     ...comemoracoes.map((c) => ({ data: c.data, titulo: c.data.titulo })),
-    ...eleicoesIL.map((e) => ({ data: e.data, titulo: e.data.titulo })),
+    ...momentosIL.filter((m) => m.calendario).map((m) => ({ data: m.data, titulo: m.data.titulo })),
     ...festas.map((f) => ({ data: f.data, titulo: f.nome, festa: f.freguesia })),
   ];
   const ordenadas = linhas.map((l) => ({ ...l, p: proximaVez(l.data) })).sort((a, b) => a.p.dias - b.p.dias);
