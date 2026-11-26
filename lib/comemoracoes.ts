@@ -165,7 +165,7 @@ export const comemoracoes: Comemoracao[] = [
     // estatutos, declaração de princípios, primeiros órgãos, Miguel Ferreira da Silva; registo "duas semanas depois") e
     // página de história da IL Oeiras (associação de setembro de 2016, Manifesto Liberal de Oxford de 1947, 8 176
     // assinaturas válidas em setembro de 2017). Festa dos 9 anos: 25 de Novembro de 2026, no BH Foz, Porto (o Ivo).
-    data: { slug: "/a-nossa-historia#fundacao", titulo: "Aniversário da Iniciativa Liberal", dia: [11, 26], desde: 2017, janela: [1, 1] },
+    data: { slug: "/a-nossa-historia#fundacao", titulo: "Aniversário da Iniciativa Liberal", dia: [11, 26], desde: 2017 },
     etiqueta: "26 de novembro · 2017",
     titulo: "{anos} anos de Iniciativa Liberal",
     naHistoria: "A Convenção Fundadora",
@@ -522,7 +522,7 @@ export const comemoracoes: Comemoracao[] = [
     partilhar: "20 de junho de 1997: São Romão e São Mamede passaram a Vila do Coronado.",
   },
   {
-    data: { slug: "/a-nossa-historia#nucleo", titulo: "Aniversário do núcleo da IL Trofa", dia: [6, 25], desde: 2022, janela: [1, 1] },
+    data: { slug: "/a-nossa-historia#nucleo", titulo: "Aniversário do núcleo da IL Trofa", dia: [6, 25], desde: 2022 },
     etiqueta: "25 de junho · 2022",
     titulo: "{anos} anos de IL Trofa",
     naHistoria: "Nasce a IL Trofa",
@@ -1383,7 +1383,7 @@ export const comemoracoes: Comemoracao[] = [
   {
     // Pedido do Ivo (25/11/2026). Legislativas de 6/10/2019: IL com 1,29% no país e 2,47% no círculo de Lisboa, um
     // deputado (Infopédia, RTP). As eleições seguintes estão na mesma página (lib/historiaIL.ts).
-    data: { slug: "/a-nossa-historia#parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019, janela: [1, 1] },
+    data: { slug: "/a-nossa-historia#parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019 },
     etiqueta: "6 de outubro · 2019",
     titulo: "{anos} anos da Iniciativa Liberal no Parlamento",
     naHistoria: "O primeiro deputado",

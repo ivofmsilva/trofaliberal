@@ -1,6 +1,6 @@
 // Datas que celebramos (Dia do Concelho, 25 de Novembro, Natal, festas das freguesias...): o banner na página
 // inicial só aparece à volta do dia. Por defeito aparece só no próprio dia; as datas grandes (Dia do Concelho,
-// 25 de Abril, 25 de Novembro, aniversários) têm três dias e os eventos de vários dias têm a sua janela. As páginas ficam sempre online (calendário em /datas e no sitemap) para quem as procurar.
+// 25 de Abril, 25 de Novembro) têm três dias, as do partido só o dia (regra do Ivo, 26/11/2026) e os eventos de vários dias têm a sua janela. As páginas ficam sempre online (calendário em /datas e no sitemap) para quem as procurar.
 // Repete-se todos os anos sozinha: a página e o banner aparecem e desaparecem com a data de Lisboa (as páginas
 // voltam a ser geradas de hora a hora). Textos das datas em lib/comemoracoes.ts; calendário completo em
 // docs/calendario-comemoracoes.md.

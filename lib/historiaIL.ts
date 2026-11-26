@@ -4,7 +4,8 @@ import { anoDe, proximaVez, type DataAnual } from "@/lib/datasAnuais";
 // Os momentos da Iniciativa Liberal e da IL Trofa na página "A nossa história" (app/a-nossa-historia), ano a ano:
 // eleições, convenções e presidenciais. Regra do Ivo (26/11/2026): só têm banner e entram no calendário (/datas) o
 // aniversário da IL (26 nov), o primeiro deputado (6 out), o aniversário do núcleo (25 jun) — os três em
-// lib/comemoracoes.ts — e a convenção que vem aí (campo banner, só nos dias dela). O resto fica só nesta página.
+// lib/comemoracoes.ts, com banner só no próprio dia — e a convenção que vem aí (campo banner, só nos dias dela). O resto
+// fica só nesta página.
 //
 // Regionais: Açores 25/10/2020, 1,93%, Nuno Barata pelo círculo de compensação; Madeira 24/9/2023, 2,62%, Nuno Morna
 // (Wikipédia em inglês e em português; em 2019 a IL concorreu na Madeira e não elegeu).
@@ -169,7 +170,7 @@ export const momentosIL: Momento[] = [
     tipo: "Convenção Nacional",
     titulo: "Mariana Leitão, a primeira presidente",
     texto: [
-      "A 31 de maio, Rui Rocha deixou a presidência. A 19 de julho de 2025, na X Convenção Nacional, em Alcobaça, Mariana Leitão foi eleita presidente. Era a única candidata e teve 73% dos votos, sem votos contra. É a primeira mulher a liderar o partido.",
+      "A 31 de maio, Rui Rocha deixou a presidência. A 19 de julho de 2025, na X Convenção Nacional, em Alcobaça, Mariana Leitão foi eleita presidente, com 73% dos votos, sem votos contra. É a primeira mulher a liderar o partido.",
     ],
   },
   {

@@ -1,7 +1,7 @@
 # Calendário de comemorações do site (dez. 2026 – nov. 2027)
 
 Cada data tem **uma página** (texto e fotos, sempre online) e **um banner** na página inicial, que aparece **só no próprio dia**
-(três dias no Dia do Concelho, 25 de Abril, 25 de Novembro e aniversários da IL e do núcleo; os eventos de vários dias têm a sua janela)
+(três dias no Dia do Concelho, 25 de Abril e 25 de Novembro; as do partido só no dia; os eventos de vários dias têm a sua janela)
 e volta sozinho todos os anos.
 Os textos estão em `lib/comemoracoes.ts`, as festas em `lib/festas.ts` e o calendário do site em `/datas`.
 
