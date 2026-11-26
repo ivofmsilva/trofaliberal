@@ -1419,6 +1419,39 @@ export const comemoracoes: Comemoracao[] = [
     },
     partilhar: "6 de outubro de 2019: a Iniciativa Liberal elege o seu primeiro deputado, João Cotrim de Figueiredo.",
   },
+  {
+    // Pedido do Ivo (26/11/2026), com a foto que mandou. Factos: ficha do partido na RTP/Lusa (convenção fundadora no
+    // Porto a 26/11/2017: estatutos, declaração de princípios, primeiros órgãos, Miguel Ferreira da Silva; registo no TC a
+    // 13/12/2017, "duas semanas depois"; associação de setembro de 2016) e página de história da IL Oeiras (8 176
+    // assinaturas válidas entregues em setembro de 2017; o Manifesto Liberal de Oxford de 1947 como ponto de partida).
+    data: { slug: "/convencao-fundadora", titulo: "Convenção Fundadora da Iniciativa Liberal", dia: [11, 26], desde: 2017 },
+    etiqueta: "26 de novembro · 2017",
+    titulo: "{anos} anos da Convenção Fundadora",
+    subtitulo: "No Porto, cidadãos que decidiram tomar a iniciativa fundaram um partido liberal.",
+    descricao: "26 de novembro de 2017: a Convenção Fundadora da Iniciativa Liberal, no Porto, aprovou os estatutos e a declaração de princípios e elegeu os primeiros dirigentes.",
+    abertura: "A 26 de novembro de 2017, no Porto, a Iniciativa Liberal realizou a sua Convenção Fundadora.",
+    blocos: [
+      "Tudo começou um ano antes, em setembro de 2016, com uma associação de cidadãos que queria juntar os liberais portugueses num partido. O ponto de partida foi o Manifesto Liberal de Oxford, de 1947, em que os liberais de vários países, logo a seguir à Segunda Guerra Mundial, escreveram os seus princípios. A partir dele, escreveu-se a várias mãos o manifesto do novo partido.",
+      {
+        lista: [
+          "Setembro de 2017: a associação entrega no Tribunal Constitucional 8 176 assinaturas válidas, com a declaração de princípios e o projeto de estatutos. A lei pede pelo menos 7 500 para formar um partido.",
+          "26 de novembro de 2017: a Convenção Fundadora aprova os estatutos e a declaração de princípios e elege os primeiros órgãos do partido. Miguel Ferreira da Silva é o primeiro presidente.",
+          "13 de dezembro de 2017: duas semanas depois, o Tribunal Constitucional regista a Iniciativa Liberal como partido.",
+        ],
+      },
+      { imagem: { src: "/images/datas/convencao-fundadora-2017.webp", w: 1023, h: 585, alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, numa fotografia de grupo à entrada do edifício, no Porto" }, legenda: "A Convenção Fundadora, no Porto, a 26 de novembro de 2017." },
+      "Começou com um manifesto escrito por cidadãos. Hoje tem nove deputados na Assembleia da República e dois eurodeputados, e núcleos por todo o país, como o da Trofa.",
+      { destaque: "{anos} anos depois, continua a ser isto: cidadãos que decidem tomar a iniciativa." },
+      { link: "A história da Iniciativa Liberal →", href: "/aniversario-iniciativa-liberal" },
+    ],
+    imagem: { src: "/images/datas/convencao-fundadora-2017.webp", w: 1023, h: 585, alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, numa fotografia de grupo à entrada do edifício, no Porto" },
+    banner: {
+      etiqueta: "2017 · {anos} anos",
+      titulo: "{anos} anos da Convenção Fundadora",
+      frase: "A 26 de novembro de 2017, no Porto, cidadãos fundaram a Iniciativa Liberal.",
+    },
+    partilhar: "26 de novembro de 2017: a Convenção Fundadora da Iniciativa Liberal, no Porto.",
+  },
 ];
 
 export const comemoracaoDe = (slug: string) => comemoracoes.find((c) => c.data.slug === `/${slug}`);
