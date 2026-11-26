@@ -1383,7 +1383,7 @@ export const comemoracoes: Comemoracao[] = [
   {
     // Pedido do Ivo (25/11/2026). Legislativas de 6/10/2019: IL com 1,29% no país e 2,47% no círculo de Lisboa, um
     // deputado (Infopédia, RTP). As eleições seguintes estão na mesma página (lib/historiaIL.ts).
-    data: { slug: "/a-nossa-historia#parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019 },
+    data: { slug: "/a-nossa-historia#parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019, janela: [1, 1] },
     etiqueta: "6 de outubro · 2019",
     titulo: "{anos} anos da Iniciativa Liberal no Parlamento",
     naHistoria: "O primeiro deputado",

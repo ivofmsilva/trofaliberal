@@ -3,6 +3,7 @@ import Link from "next/link";
 import { preencher, valoresDe, type Comemoracao, type Img } from "@/lib/comemoracoes";
 import { dataProxima } from "@/lib/datasAnuais";
 import type { Festa } from "@/lib/festas";
+import type { MomentoComBanner } from "@/lib/historiaIL";
 
 // Banners das datas que celebramos e das festas das freguesias: só entram no carrossel da página inicial à volta
 // do dia (app/page.tsx e lib/datasAnuais.ts). Mesmo desenho do banner do 25 de Novembro.
@@ -44,6 +45,11 @@ export function BannerComemoracao({ c, agora }: { c: Comemoracao; agora?: Date }
       botao="Ler mais"
     />
   );
+}
+
+// A convenção que vem aí (lib/historiaIL.ts): banner nos dias dela.
+export function BannerMomento({ m }: { m: MomentoComBanner }) {
+  return <Banner href={m.data.slug} etiqueta={m.banner.etiqueta} titulo={m.banner.titulo} frase={m.banner.frase} imagem={m.banner.imagem} botao="Ler mais" />;
 }
 
 // "Bougado (Santiago)" → "Santiago de Bougado"; "Coronado (S. Mamede)" → "S. Mamede do Coronado".

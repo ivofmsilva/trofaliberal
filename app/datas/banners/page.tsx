@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Banner25Novembro from "@/components/Banner25Novembro";
-import { BannerComemoracao, BannerFesta, lugarDe } from "@/components/BannerComemoracao";
+import { BannerComemoracao, BannerFesta, BannerMomento, lugarDe } from "@/components/BannerComemoracao";
 import BannerConcelho from "@/components/BannerConcelho";
 import PageHero from "@/components/PageHero";
 import { comemoracoes } from "@/lib/comemoracoes";
 import { diaDoConcelho, MESES, proximaVez, somarDias, vinteCincoNovembro, type DataAnual } from "@/lib/datasAnuais";
 import { festas, fotoDasFestas } from "@/lib/festas";
+import { noCalendario } from "@/lib/historiaIL";
 
 // Todos os banners das datas de uma vez, para rever (na página inicial cada um só aparece à volta do dia).
 // Não está no menu nem no Google.
@@ -37,6 +38,7 @@ export default function Banners() {
     { data: diaDoConcelho, titulo: "Dia do Concelho", banner: <BannerConcelho /> },
     { data: vinteCincoNovembro, titulo: "25 de Novembro", banner: <Banner25Novembro /> },
     ...comemoracoes.map((c) => ({ data: c.data as DataAnual, titulo: c.data.titulo, banner: <BannerComemoracao c={c} agora={noDia(c.data)} /> })),
+    ...noCalendario().map((m) => ({ data: m.data, titulo: m.data.titulo, banner: <BannerMomento m={m} /> })),
     ...festas.map((f) => ({ data: f.data, titulo: `Festa: ${f.nome} (${lugarDe(f.freguesia)})`, banner: <BannerFesta f={f} imagem={fotoDasFestas} agora={noDia(f.data)} /> })),
   ].sort((a, b) => proximaVez(a.data).dias - proximaVez(b.data).dias);
 

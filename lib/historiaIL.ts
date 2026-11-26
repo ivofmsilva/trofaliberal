@@ -1,8 +1,13 @@
-import type { DataAnual } from "@/lib/datasAnuais";
+import type { Img } from "@/lib/comemoracoes";
+import { anoDe, proximaVez, type DataAnual } from "@/lib/datasAnuais";
 
 // Os momentos da Iniciativa Liberal e da IL Trofa na página "A nossa história" (app/a-nossa-historia), ano a ano:
-// eleições, convenções e presidenciais. As três datas grandes (fundação, Parlamento, núcleo) têm banner e texto próprio
-// em lib/comemoracoes.ts. As eleições também vão para o calendário das datas (/datas); as convenções não.
+// eleições, convenções e presidenciais. Regra do Ivo (26/11/2026): só têm banner e entram no calendário (/datas) o
+// aniversário da IL (26 nov), o primeiro deputado (6 out), o aniversário do núcleo (25 jun) — os três em
+// lib/comemoracoes.ts — e a convenção que vem aí (campo banner, só nos dias dela). O resto fica só nesta página.
+//
+// Regionais: Açores 25/10/2020, 1,93%, Nuno Barata pelo círculo de compensação; Madeira 24/9/2023, 2,62%, Nuno Morna
+// (Wikipédia em inglês e em português; em 2019 a IL concorreu na Madeira e não elegeu).
 //
 // Factos (confirmados a 26/11/2026):
 // - Eleições: resultados nacionais na Wikipédia em português e em inglês, que batem nas percentagens e nos eleitos (os
@@ -27,7 +32,8 @@ export type Momento = {
   titulo: string;
   texto: string[];
   quando?: string; // a data por extenso, quando não é um só dia (ex.: "30 e 31 de janeiro de 2027")
-  calendario?: boolean; // também no calendário das datas (/datas)
+  // Só as convenções que vêm aí: banner na página inicial nos dias da convenção e entrada no calendário (/datas) até lá.
+  banner?: { etiqueta: string; titulo: string; frase: string; imagem: Img };
   link?: { texto: string; href: string };
 };
 
@@ -45,7 +51,7 @@ export const momentosIL: Momento[] = [
     tipo: "Convenção Nacional",
     titulo: "Carlos Guimarães Pinto, o segundo presidente",
     texto: [
-      "A 13 de outubro de 2018, na II Convenção Nacional, em Montemor-o-Velho (distrito de Coimbra), Carlos Guimarães Pinto foi eleito presidente da Iniciativa Liberal. Sucedeu a Miguel Ferreira da Silva, que se tinha demitido em agosto.",
+      "A 13 de outubro de 2018, na II Convenção Nacional, em Montemor-o-Velho (distrito de Coimbra), Carlos Guimarães Pinto foi eleito presidente da Iniciativa Liberal. Sucedeu a Miguel Ferreira da Silva.",
     ],
   },
   {
@@ -54,10 +60,8 @@ export const momentosIL: Momento[] = [
     tipo: "Eleições europeias",
     titulo: "As primeiras eleições",
     texto: [
-      "A 26 de maio de 2019, a Iniciativa Liberal foi a votos pela primeira vez, nas eleições para o Parlamento Europeu, com Ricardo Arroja como cabeça de lista. Teve 0,88% dos votos e não elegeu ninguém.",
-      "Nas europeias, o país inteiro é um só círculo: Portugal elege 21 eurodeputados.",
+      "A 26 de maio de 2019, a Iniciativa Liberal foi a votos pela primeira vez, nas eleições para o Parlamento Europeu, com Ricardo Arroja como cabeça de lista. Teve 0,88% dos votos.",
     ],
-    calendario: true,
   },
   {
     id: "convencao-2019",
@@ -65,7 +69,16 @@ export const momentosIL: Momento[] = [
     tipo: "Convenção Nacional",
     titulo: "João Cotrim de Figueiredo, o terceiro presidente",
     texto: [
-      "Depois das legislativas, Carlos Guimarães Pinto deixou a presidência. A 8 de dezembro de 2019, na III Convenção Nacional, em Pombal (distrito de Leiria), o primeiro deputado do partido, João Cotrim de Figueiredo, foi eleito presidente, com 96% dos votos. Era o único candidato.",
+      "Depois das legislativas, Carlos Guimarães Pinto deixou a presidência. A 8 de dezembro de 2019, na III Convenção Nacional, em Pombal (distrito de Leiria), o primeiro deputado do partido, João Cotrim de Figueiredo, foi eleito presidente, com 96% dos votos.",
+    ],
+  },
+  {
+    id: "acores-2020",
+    data: data("acores-2020", "Primeiro deputado liberal nos Açores", [10, 25], 2020),
+    tipo: "Eleições regionais",
+    titulo: "O primeiro deputado nos Açores",
+    texto: [
+      "A 25 de outubro de 2020, a Iniciativa Liberal elegeu o seu primeiro deputado na Assembleia Legislativa dos Açores: Nuno Barata, pelo círculo de compensação. Teve 1,93% dos votos.",
     ],
   },
   {
@@ -84,9 +97,7 @@ export const momentosIL: Momento[] = [
     titulo: "As primeiras autárquicas",
     texto: [
       "A 26 de setembro de 2021, a Iniciativa Liberal concorreu pela primeira vez às eleições autárquicas, em vários concelhos do país. Não elegeu presidentes de câmara, mas passou a ter dezenas de eleitos nas assembleias municipais e de freguesia.",
-      "Nas autárquicas, cada eleitor vota em três boletins: câmara municipal, assembleia municipal e assembleia de freguesia.",
     ],
-    calendario: true,
   },
   {
     id: "legislativas-2022",
@@ -97,7 +108,6 @@ export const momentosIL: Momento[] = [
       "A 30 de janeiro de 2022, a Iniciativa Liberal teve 4,91% dos votos e passou de um para oito deputados. Foi a quarta força mais votada.",
       "Dois foram eleitos pelo círculo do Porto, onde votam os trofenses: Carlos Guimarães Pinto e Patrícia Gilvaz.",
     ],
-    calendario: true,
   },
   {
     id: "convencao-2023",
@@ -109,6 +119,15 @@ export const momentosIL: Momento[] = [
     ],
   },
   {
+    id: "madeira-2023",
+    data: data("madeira-2023", "Primeiro deputado liberal na Madeira", [9, 24], 2023),
+    tipo: "Eleições regionais",
+    titulo: "O primeiro deputado na Madeira",
+    texto: [
+      "A 24 de setembro de 2023, a Iniciativa Liberal elegeu o seu primeiro deputado na Assembleia Legislativa da Madeira: Nuno Morna. Teve 2,62% dos votos.",
+    ],
+  },
+  {
     id: "legislativas-2024",
     data: data("legislativas-2024", "Legislativas de 2024", [3, 10], 2024),
     tipo: "Eleições legislativas",
@@ -116,7 +135,6 @@ export const momentosIL: Momento[] = [
     texto: [
       "A 10 de março de 2024, a Iniciativa Liberal teve 4,94% dos votos e manteve os oito deputados. Pelo Porto, voltaram a ser eleitos Carlos Guimarães Pinto e Patrícia Gilvaz.",
     ],
-    calendario: true,
   },
   {
     id: "europeias-2024",
@@ -126,7 +144,6 @@ export const momentosIL: Momento[] = [
     texto: [
       "A 9 de junho de 2024, a Iniciativa Liberal elegeu os seus primeiros eurodeputados: João Cotrim de Figueiredo e Ana Vasconcelos Martins. Teve 9,07% dos votos. Cinco anos antes, nas primeiras europeias, tinha tido 0,88%.",
     ],
-    calendario: true,
   },
   {
     id: "convencao-2025-fevereiro",
@@ -145,7 +162,6 @@ export const momentosIL: Momento[] = [
     texto: [
       "A 18 de maio de 2025, a Iniciativa Liberal teve 5,36% dos votos e elegeu nove deputados, o maior grupo parlamentar da sua história. Pelo Porto, foram eleitos Carlos Guimarães Pinto e Miguel Rangel.",
     ],
-    calendario: true,
   },
   {
     id: "convencao-2025-julho",
@@ -164,7 +180,6 @@ export const momentosIL: Momento[] = [
     texto: [
       "A 12 de outubro de 2025, a IL Trofa foi a votos pela primeira vez, com listas à Câmara, à Assembleia Municipal e às freguesias de Bougado e de Alvarelhos.",
     ],
-    calendario: true,
     link: { texto: "As nossas listas e propostas →", href: "/autarquicas-2025" },
   },
   {
@@ -178,12 +193,29 @@ export const momentosIL: Momento[] = [
   },
   {
     id: "convencao-2027",
-    data: data("convencao-2027", "XI Convenção Nacional da IL", [1, 30], 2027),
+    data: { ...data("convencao-2027", "XI Convenção Nacional da IL", [1, 30], 2027), janela: [0, 1] }, // banner a 30 e 31
     tipo: "Convenção Nacional",
     titulo: "A próxima convenção",
     quando: "30 e 31 de janeiro de 2027",
+    banner: {
+      etiqueta: "30 e 31 de janeiro",
+      titulo: "XI Convenção Nacional",
+      frase: "A Iniciativa Liberal escolhe a nova liderança do partido.",
+      imagem: {
+        src: "/images/datas/convencao-fundadora-2017.webp",
+        w: 1023,
+        h: 585,
+        alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, em 2017, numa fotografia de grupo à entrada do edifício, no Porto",
+      },
+    },
     texto: [
       "A 30 e 31 de janeiro de 2027, a XI Convenção Nacional, na região de Lisboa, vai escolher a nova liderança do partido. Os candidatos ficam aqui quando as candidaturas forem oficiais.",
     ],
   },
 ];
+
+// As convenções não se repetem todos os anos: o banner só conta no ano dela e o calendário só a mostra até lá.
+export type MomentoComBanner = Momento & { banner: NonNullable<Momento["banner"]> };
+const temBanner = (m: Momento): m is MomentoComBanner => !!m.banner;
+export const comBanner = (agora?: Date) => momentosIL.filter(temBanner).filter((m) => anoDe(m.data, agora) === m.data.desde);
+export const noCalendario = (agora?: Date) => momentosIL.filter(temBanner).filter((m) => proximaVez(m.data, agora).ano === m.data.desde);
