@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PaginaComemoracao from "@/components/PaginaComemoracao";
-import { comemoracaoDe, comemoracoes, preencher, valoresDe } from "@/lib/comemoracoes";
+import { comemoracaoDe, comPaginaPropria, preencher, valoresDe } from "@/lib/comemoracoes";
 
 // Uma página para cada data que celebramos (/restauracao-da-independencia, /natal...). Textos em lib/comemoracoes.ts.
 // Só existem as datas da lista: qualquer outro endereço dá "página não encontrada".
@@ -10,7 +10,8 @@ export const dynamicParams = false;
 export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return comemoracoes.map((c) => ({ data: c.data.slug.slice(1) }));
+  // As do partido e do núcleo estão em /a-nossa-historia (endereços antigos: next.config.ts).
+  return comPaginaPropria.map((c) => ({ data: c.data.slug.slice(1) }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ data: string }> }): Promise<Metadata> {

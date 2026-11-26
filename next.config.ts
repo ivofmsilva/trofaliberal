@@ -12,6 +12,10 @@ const antigas: [string, string][] = [
   ["/dados/taxas", "/dados/financas#taxas"],
   ["/dados/votos", "/dados/camara#como-votam"],
   ["/dados/orgaos", "/dados/camara#composicao"],
+  // As datas do partido e do núcleo passaram para uma página só (26/11/2026).
+  ["/aniversario-iniciativa-liberal", "/a-nossa-historia#fundacao"],
+  ["/iniciativa-liberal-no-parlamento", "/a-nossa-historia#parlamento"],
+  ["/aniversario-do-nucleo", "/a-nossa-historia#nucleo"],
 ];
 
 // Endereços curtos para cartazes e redes: cada subdomínio leva a uma página do site.

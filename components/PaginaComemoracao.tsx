@@ -24,7 +24,7 @@ function Credito({ img }: { img: Img }) {
   );
 }
 
-function Figura({ img, legenda }: { img: Img; legenda?: string }) {
+export function Figura({ img, legenda }: { img: Img; legenda?: string }) {
   return (
     <figure className="py-2">
       <Image
@@ -45,7 +45,7 @@ function Figura({ img, legenda }: { img: Img; legenda?: string }) {
   );
 }
 
-function MostrarBloco({ b, v }: { b: Bloco; v: Record<string, string> }) {
+export function MostrarBloco({ b, v }: { b: Bloco; v: Record<string, string> }) {
   if (typeof b === "string") return <p>{preencher(b, v)}</p>;
   if ("lista" in b)
     return (

@@ -157,34 +157,38 @@ export const comemoracoes: Comemoracao[] = [
     partilhar: "12 de dezembro de 1976: pela primeira vez, escolhemos em liberdade quem governa a nossa terra.",
   },
   {
-    data: { slug: "/aniversario-iniciativa-liberal", titulo: "Aniversário da Iniciativa Liberal", dia: [12, 13], desde: 2017, janela: [1, 1] },
-    etiqueta: "13 de dezembro · 2017",
+    // As datas do partido e do núcleo estão todas numa página só, ano a ano (app/a-nossa-historia), como as festas:
+    // estas três têm banner e o endereço é a âncora da página. As eleições estão em lib/eleicoesIL.ts.
+    // Aniversário = dia da Convenção Fundadora, como a festa dos 9 anos (pedido do Ivo, 26/11/2026); o registo no
+    // Tribunal Constitucional (13/12/2017) fica numa nota. Factos: ficha do partido na RTP/Lusa (convenção no Porto:
+    // estatutos, declaração de princípios, primeiros órgãos, Miguel Ferreira da Silva; registo "duas semanas depois") e
+    // página de história da IL Oeiras (associação de setembro de 2016, Manifesto Liberal de Oxford de 1947, 8 176
+    // assinaturas válidas em setembro de 2017). Presidenciais de 2026: 16,01%, 3.º lugar (Wikipédia pt e en).
+    data: { slug: "/a-nossa-historia#fundacao", titulo: "Aniversário da Iniciativa Liberal", dia: [11, 26], desde: 2017, janela: [1, 1] },
+    etiqueta: "26 de novembro · 2017",
     titulo: "{anos} anos de Iniciativa Liberal",
-    subtitulo: "Um partido nascido de cidadãos que acreditavam que Portugal podia ser mais livre.",
-    descricao: "A história da Iniciativa Liberal: de um manifesto de cidadãos, em 2016, ao Parlamento e à Trofa.",
-    abertura: "A 13 de dezembro de 2017, a Iniciativa Liberal passou a ser um partido político.",
+    subtitulo: "No Porto, cidadãos que decidiram tomar a iniciativa fundaram um partido liberal.",
+    descricao: "26 de novembro de 2017: a Convenção Fundadora da Iniciativa Liberal, no Porto. Como nasceu o partido.",
+    abertura: "A 26 de novembro de 2017, no Porto, a Convenção Fundadora deu início à Iniciativa Liberal.",
     blocos: [
-      "Tudo começou em setembro de 2016, com uma associação de cidadãos e um manifesto, o “Portugal Mais”. Queriam um país com mais liberdade para trabalhar, criar, escolher e viver.",
-      "A 26 de novembro de 2017, a convenção fundadora, no Porto, elegeu o primeiro presidente, Miguel Ferreira da Silva. Semanas depois, a 13 de dezembro, o Tribunal Constitucional legalizou o partido.",
+      { imagem: F["aniversario-il-9-anos"], legenda: "O bolo dos 9 anos. Na festa do 25 de Novembro, à meia-noite, cantaram-se os parabéns à Iniciativa Liberal." },
+      "Tudo começou um ano antes, em setembro de 2016, com uma associação de cidadãos que queria juntar os liberais portugueses num partido. O ponto de partida foi o Manifesto Liberal de Oxford, de 1947, em que os liberais de vários países, logo a seguir à Segunda Guerra Mundial, escreveram os seus princípios. A partir dele, escreveu-se a várias mãos o manifesto do novo partido.",
       {
         lista: [
-          "2019: chega ao Parlamento. João Cotrim de Figueiredo é eleito deputado por Lisboa.",
-          "2022: o grupo parlamentar passa a oito deputados.",
-          "2024: mantém os oito deputados e elege os primeiros dois eurodeputados.",
-          "2025: elege nove deputados. Mariana Leitão torna-se a quinta presidente do partido e a primeira mulher no cargo.",
-          "2026: João Cotrim de Figueiredo candidata-se a Presidente da República e tem 16% dos votos.",
+          "Setembro de 2017: a associação entrega no Tribunal Constitucional 8 176 assinaturas válidas, com a declaração de princípios e o projeto de estatutos. A lei pede pelo menos 7 500 para formar um partido.",
+          "26 de novembro de 2017: a Convenção Fundadora aprova os estatutos e a declaração de princípios e elege os primeiros órgãos do partido. Miguel Ferreira da Silva é o primeiro presidente.",
         ],
       },
-      "Os presidentes: Miguel Ferreira da Silva, Carlos Guimarães Pinto, João Cotrim de Figueiredo, Rui Rocha e Mariana Leitão.",
-      { imagem: fotos.plenarioFundador, legenda: "Plenário fundador do núcleo da Trofa, a 25 de junho de 2022." },
-      "Na Trofa, o núcleo nasceu a 25 de junho de 2022, no Coronado, com a presença de Rui Rocha. Em 2025 apresentou pela primeira vez listas às autárquicas: à Câmara, à Assembleia Municipal e às juntas de Bougado e Alvarelhos.",
-      { destaque: "{anos} anos depois, a ideia é a mesma: um país onde cada pessoa tem mais liberdade para decidir a sua vida." },
-      { link: "Conhece o núcleo da Trofa →", href: "/trofa-liberal" },
+      { imagem: { src: "/images/datas/convencao-fundadora-2017.webp", w: 1023, h: 585, alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, numa fotografia de grupo à entrada do edifício, no Porto" }, legenda: "A Convenção Fundadora, no Porto, a 26 de novembro de 2017." },
+      { nota: "A 13 de dezembro de 2017, duas semanas depois da convenção, o Tribunal Constitucional registou a Iniciativa Liberal como partido. É a data oficial do registo; o aniversário festeja-se no dia da fundação, 26 de novembro." },
+      "Os presidentes: Miguel Ferreira da Silva, Carlos Guimarães Pinto, João Cotrim de Figueiredo, Rui Rocha e, desde 2025, Mariana Leitão, a primeira mulher no cargo. Em 2026, João Cotrim de Figueiredo foi candidato a Presidente da República e ficou em terceiro lugar, com 16% dos votos.",
+      "Começou com um manifesto escrito por cidadãos. Hoje tem nove deputados na Assembleia da República, dois eurodeputados e núcleos por todo o país, como o da Trofa.",
+      { destaque: "{anos} anos depois, continua a ser isto: cidadãos que decidem tomar a iniciativa." },
     ],
     fecho: "Parabéns, Iniciativa Liberal!",
-    imagem: F["aniversario-il-bolo"],
-    banner: { etiqueta: "2017 · {anos} anos", titulo: "{anos} anos de Iniciativa Liberal", frase: "{anos} anos a defender a liberdade em Portugal. Na Trofa, desde 2022." },
-    partilhar: "{anos} anos de Iniciativa Liberal: de um manifesto de cidadãos ao Parlamento.",
+    imagem: F["aniversario-il-9-anos"],
+    banner: { etiqueta: "2017 · {anos} anos", titulo: "{anos} anos de Iniciativa Liberal", frase: "A 26 de novembro de 2017, no Porto, cidadãos fundaram a Iniciativa Liberal." },
+    partilhar: "{anos} anos de Iniciativa Liberal: a 26 de novembro de 2017, no Porto, cidadãos fundaram um partido liberal.",
   },
   {
     data: { slug: "/natal", titulo: "Natal", dia: [12, 25], janela: [5, 1] },
@@ -509,7 +513,7 @@ export const comemoracoes: Comemoracao[] = [
       "A lei, a n.º 82/97, foi publicada a 24 de julho de 1997. Eram ainda terras do concelho de Santo Tirso: no ano seguinte, passaram a fazer parte do novo concelho da Trofa.",
       "Em 2013, as duas freguesias juntaram-se numa só: Coronado (São Romão e São Mamede). S. Mamede do Coronado é conhecida como a terra dos santeiros, os artesãos que esculpem imagens em madeira.",
       "O Coronado tem um lugar especial na nossa história. Foi lá, a 25 de junho de 2022, no auditório da Junta de Freguesia (Polo de São Romão), que nasceu o núcleo da Iniciativa Liberal na Trofa.",
-      { link: "A história do núcleo →", href: "/aniversario-do-nucleo" },
+      { link: "A história do núcleo →", href: "/a-nossa-historia#nucleo" },
     ],
     fecho: "Parabéns, Vila do Coronado!",
     imagem: F["santeiros"],
@@ -517,7 +521,7 @@ export const comemoracoes: Comemoracao[] = [
     partilhar: "20 de junho de 1997: São Romão e São Mamede passaram a Vila do Coronado.",
   },
   {
-    data: { slug: "/aniversario-do-nucleo", titulo: "Aniversário do núcleo da IL Trofa", dia: [6, 25], desde: 2022, janela: [1, 1] },
+    data: { slug: "/a-nossa-historia#nucleo", titulo: "Aniversário do núcleo da IL Trofa", dia: [6, 25], desde: 2022, janela: [1, 1] },
     etiqueta: "25 de junho · 2022",
     titulo: "{anos} anos de IL Trofa",
     subtitulo: "Desde 2022 a lutar por um bolo maior para todos.",
@@ -1376,8 +1380,8 @@ export const comemoracoes: Comemoracao[] = [
   },
   {
     // Pedido do Ivo (25/11/2026). Legislativas de 6/10/2019: IL com 1,29% no país e 2,47% no círculo de Lisboa, um
-    // deputado (Infopédia, RTP). Os números de deputados seguintes são os da página do aniversário da IL.
-    data: { slug: "/iniciativa-liberal-no-parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019 },
+    // deputado (Infopédia, RTP). As eleições seguintes estão na mesma página (lib/eleicoesIL.ts).
+    data: { slug: "/a-nossa-historia#parlamento", titulo: "A Iniciativa Liberal chega ao Parlamento", dia: [10, 6], desde: 2019 },
     etiqueta: "6 de outubro · 2019",
     titulo: "{anos} anos da Iniciativa Liberal no Parlamento",
     subtitulo: "O dia em que os portugueses elegeram o primeiro deputado da Iniciativa Liberal.",
@@ -1395,15 +1399,7 @@ export const comemoracoes: Comemoracao[] = [
         },
         legenda: "Um dos cartazes da campanha de 2019, no Porto.",
       },
-      {
-        lista: [
-          "2022: o grupo parlamentar passa a oito deputados.",
-          "2024: mantém os oito deputados e elege os primeiros dois eurodeputados.",
-          "2025: elege nove deputados.",
-        ],
-      },
       { destaque: "Começou com um deputado. Hoje são nove." },
-      { link: "A história da Iniciativa Liberal →", href: "/aniversario-iniciativa-liberal" },
     ],
     imagem: {
       src: "/images/datas/campanha-il-2019-porto.webp",
@@ -1419,42 +1415,12 @@ export const comemoracoes: Comemoracao[] = [
     },
     partilhar: "6 de outubro de 2019: a Iniciativa Liberal elege o seu primeiro deputado, João Cotrim de Figueiredo.",
   },
-  {
-    // Pedido do Ivo (26/11/2026), com a foto que mandou. Factos: ficha do partido na RTP/Lusa (convenção fundadora no
-    // Porto a 26/11/2017: estatutos, declaração de princípios, primeiros órgãos, Miguel Ferreira da Silva; registo no TC a
-    // 13/12/2017, "duas semanas depois"; associação de setembro de 2016) e página de história da IL Oeiras (8 176
-    // assinaturas válidas entregues em setembro de 2017; o Manifesto Liberal de Oxford de 1947 como ponto de partida).
-    data: { slug: "/convencao-fundadora", titulo: "Convenção Fundadora da Iniciativa Liberal", dia: [11, 26], desde: 2017 },
-    etiqueta: "26 de novembro · 2017",
-    titulo: "{anos} anos da Convenção Fundadora",
-    subtitulo: "No Porto, cidadãos que decidiram tomar a iniciativa fundaram um partido liberal.",
-    descricao: "26 de novembro de 2017: a Convenção Fundadora da Iniciativa Liberal, no Porto, aprovou os estatutos e a declaração de princípios e elegeu os primeiros dirigentes.",
-    abertura: "A 26 de novembro de 2017, no Porto, a Iniciativa Liberal realizou a sua Convenção Fundadora.",
-    blocos: [
-      "Tudo começou um ano antes, em setembro de 2016, com uma associação de cidadãos que queria juntar os liberais portugueses num partido. O ponto de partida foi o Manifesto Liberal de Oxford, de 1947, em que os liberais de vários países, logo a seguir à Segunda Guerra Mundial, escreveram os seus princípios. A partir dele, escreveu-se a várias mãos o manifesto do novo partido.",
-      {
-        lista: [
-          "Setembro de 2017: a associação entrega no Tribunal Constitucional 8 176 assinaturas válidas, com a declaração de princípios e o projeto de estatutos. A lei pede pelo menos 7 500 para formar um partido.",
-          "26 de novembro de 2017: a Convenção Fundadora aprova os estatutos e a declaração de princípios e elege os primeiros órgãos do partido. Miguel Ferreira da Silva é o primeiro presidente.",
-          "13 de dezembro de 2017: duas semanas depois, o Tribunal Constitucional regista a Iniciativa Liberal como partido.",
-        ],
-      },
-      { imagem: { src: "/images/datas/convencao-fundadora-2017.webp", w: 1023, h: 585, alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, numa fotografia de grupo à entrada do edifício, no Porto" }, legenda: "A Convenção Fundadora, no Porto, a 26 de novembro de 2017." },
-      "Começou com um manifesto escrito por cidadãos. Hoje tem nove deputados na Assembleia da República e dois eurodeputados, e núcleos por todo o país, como o da Trofa.",
-      { destaque: "{anos} anos depois, continua a ser isto: cidadãos que decidem tomar a iniciativa." },
-      { link: "A história da Iniciativa Liberal →", href: "/aniversario-iniciativa-liberal" },
-    ],
-    imagem: { src: "/images/datas/convencao-fundadora-2017.webp", w: 1023, h: 585, alt: "Os participantes na Convenção Fundadora da Iniciativa Liberal, numa fotografia de grupo à entrada do edifício, no Porto" },
-    banner: {
-      etiqueta: "2017 · {anos} anos",
-      titulo: "{anos} anos da Convenção Fundadora",
-      frase: "A 26 de novembro de 2017, no Porto, cidadãos fundaram a Iniciativa Liberal.",
-    },
-    partilhar: "26 de novembro de 2017: a Convenção Fundadora da Iniciativa Liberal, no Porto.",
-  },
 ];
 
 export const comemoracaoDe = (slug: string) => comemoracoes.find((c) => c.data.slug === `/${slug}`);
+
+// As que têm página própria (/<slug>). As do partido e do núcleo vivem numa página só (/a-nossa-historia#...).
+export const comPaginaPropria = comemoracoes.filter((c) => !c.data.slug.includes("#"));
 
 // Troca {anos}, {ano}, {anoAnterior} e as palavras de `extra`.
 export function preencher(texto: string, valores: Record<string, string>) {
