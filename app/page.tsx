@@ -14,7 +14,8 @@ import BannerMetro from "@/components/BannerMetro";
 import BannerNatal from "@/components/BannerNatal";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
-import { BannerComemoracao, BannerFesta, BannerMomento } from "@/components/BannerComemoracao";
+import { BannerAviso, BannerComemoracao, BannerFesta, BannerMomento } from "@/components/BannerComemoracao";
+import { avisosDeHoje } from "@/lib/avisos";
 import { comemoracoes } from "@/lib/comemoracoes";
 import { ativasPorOrdem, diaDoConcelho, vinteCincoNovembro } from "@/lib/datasAnuais";
 import { festas, fotoDasFestas } from "@/lib/festas";
@@ -76,6 +77,8 @@ export default function Home() {
     ...comBanner().map((m) => ({ data: m.data, titulo: m.data.titulo, banner: <BannerMomento key={m.id} m={m} /> })),
     ...festas.map((f) => ({ data: f.data, titulo: `Festa: ${f.nome}`, banner: <BannerFesta key={f.id} f={f} imagem={fotoDasFestas} /> })),
   ]);
+  // Avisos de um dia só (lib/avisos.ts), antes de tudo.
+  const avisos = avisosDeHoje();
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
@@ -131,6 +134,7 @@ export default function Home() {
       <div className="pt-20">
         <CarrosselBanners
           titulos={[
+            ...avisos.map((a) => a.titulo),
             ...datas.map((d) => d.titulo),
             "Metro para a Trofa",
             "Trofa no topo da Educação",
@@ -142,6 +146,7 @@ export default function Home() {
           ]}
         >
           {[
+            ...avisos.map((a) => <BannerAviso key={a.id} a={a} />),
             ...datas.map((d) => d.banner),
             <BannerMetro key="metro" />,
             <BannerEducacao key="educacao" />,

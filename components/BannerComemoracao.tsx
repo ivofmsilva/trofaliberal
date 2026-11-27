@@ -3,6 +3,7 @@ import Link from "next/link";
 import { preencher, valoresDe, type Comemoracao, type Img } from "@/lib/comemoracoes";
 import { dataProxima } from "@/lib/datasAnuais";
 import type { Festa } from "@/lib/festas";
+import type { Aviso } from "@/lib/avisos";
 import type { MomentoComBanner } from "@/lib/historiaIL";
 
 // Banners das datas que celebramos e das festas das freguesias: só entram no carrossel da página inicial à volta
@@ -70,4 +71,9 @@ export function BannerFesta({ f, imagem, agora }: { f: Festa; imagem: Img; agora
       botao="Todas as festas"
     />
   );
+}
+
+// Avisos de um dia só (lib/avisos.ts), com link para fora.
+export function BannerAviso({ a }: { a: Aviso }) {
+  return <Banner href={a.href} etiqueta={a.etiqueta} titulo={a.titulo} frase={a.frase} imagem={a.imagem} botao={a.botao} />;
 }
