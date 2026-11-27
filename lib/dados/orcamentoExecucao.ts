@@ -14,7 +14,7 @@ export type AnoTrofa = {
   corrigidoCalculado?: boolean; // = pago ÷ grau de execução do relatório de 2025 (Quadro 16)
   pago: number | null;
   nota?: string;
-  fonte: { texto: string; url?: string };
+  fonte?: { texto: string; url?: string };
 };
 
 // Grau de execução da despesa total (pago ÷ dotação corrigida), Relatório de Gestão de 2025, Quadro 16 (pág. 123):
@@ -27,7 +27,6 @@ export const orcamentoTrofa: AnoTrofa[] = [
     corrigido: 42_309_000 / 0.8116,
     corrigidoCalculado: true,
     pago: 42_309_000,
-    fonte: { texto: "Ata da Assembleia Municipal de dezembro de 2020: o presidente fala em \"perto de 41 milhões\"" },
   },
   {
     ano: "2022",

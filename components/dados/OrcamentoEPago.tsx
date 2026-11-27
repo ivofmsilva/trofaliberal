@@ -92,16 +92,16 @@ export default function OrcamentoEPago() {
       <p className="mt-2 max-w-3xl text-sm text-apagado">
         ~ valor arredondado na fonte. ≈ calculado: despesa paga a dividir pelo grau de execução do relatório de 2025 (Quadro 16).
         Fontes do aprovado:{" "}
-        {orcamentoTrofa.map((a, i) => (
+        {orcamentoTrofa.filter((a) => a.fonte).map((a, i) => (
           <span key={a.ano}>
             {i > 0 && "; "}
             {a.ano}:{" "}
-            {a.fonte.url ? (
-              <a href={a.fonte.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
-                {a.fonte.texto} ↗
+            {a.fonte!.url ? (
+              <a href={a.fonte!.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-tinta">
+                {a.fonte!.texto} ↗
               </a>
             ) : (
-              a.fonte.texto
+              a.fonte!.texto
             )}
           </span>
         ))}
