@@ -35,6 +35,9 @@ export type Item = {
   tema?: "autarquicas";
   // Artigos de opinião: um ou dois temas (TEMAS).
   temas?: Tema[];
+  // Artigos com página própria: quem assina e as imagens para partilhar (aparecem no fim do artigo).
+  autor?: string;
+  imagens?: { src: string; w: number; h: number; alt: string }[];
 };
 
 export const categorias: Record<
@@ -196,8 +199,36 @@ export const itens: Record<Categoria, Item[]> = {
       href: "https://www.onoticiasdatrofa.pt/deputados-da-il-em-bougado/",
     },
   ],
-  // Artigos de opinião de Diamantino Costa n'O Notícias da Trofa (coluna "Folha Liberal" e seguintes).
+  // Artigos de opinião de Diamantino Costa n'O Notícias da Trofa (coluna "Folha Liberal" e seguintes),
+  // e artigos com página própria neste site (com slug e corpo).
   artigos: [
+    {
+      titulo: "Livres de amarras, ou Fazemos?",
+      temas: ["democracia"],
+      fonte: "Ivo Silva",
+      autor: "Ivo Silva",
+      data: "2026-11-27",
+      slug: "livres-de-amarras-ou-fazemos",
+      href: "/imprensa/artigos/livres-de-amarras-ou-fazemos",
+      corpo: [
+        {
+          paragrafos: [
+            "Nas autárquicas de 2025, o movimento “A Trofa é de Todos” (TDT) apresentou-se como a candidatura livre de amarras partidárias. Era um bom slogan, mas deixava de fora o essencial: a forma como o movimento surgiu.",
+            "O TDT nasceu de uma rutura com o PSD. Não foi, que se saiba, uma rutura por ideias ou por políticas. Aconteceu quando o PSD escolheu outro candidato e não aceitou os nomes que o grupo do então presidente, António Azevedo, queria levar nas listas. A independência não foi o ponto de partida, foi o que sobrou quando a porta do partido se fechou.",
+            "Muitos acreditaram no projeto como independente. E é justo dizê-lo: o TDT conseguiu juntar listas com gente de muito valor.",
+            "No entanto, um projeto que nasce da divisão e para disputar uma eleição tem dificuldade em sobreviver ao dia seguinte. E o facto é que a energia da campanha durou pouco. Eleito vereador, sem pelouro e na oposição, o antigo presidente da Câmara terá passado cerca de metade do ano de 2026 com o mandato suspenso. É um direito que a lei lhe dá, mas quem pediu o voto como cabeça de lista, para quatro anos, e passa o lugar a outra pessoa ao fim de poucos meses poderá provocar uma quebra na confiança depositada.",
+            "Na Assembleia Municipal, o TDT tem cinco eleitos e é, com o Chega, a única oposição. No entanto, desde a tomada de posse, o número de propostas de melhoria, recomendações ou moções apresentadas é praticamente zero. Para quem se apresentou como a alternativa aos partidos, é pouco.",
+            "Sem pelouros e numa tentativa de apanhar a onda da política nacional, o projeto local TDT encontrou na candidatura presidencial de Gouveia e Melo um abrigo momentâneo. O apoio não foi formalizado, mas foi evidente a vários níveis da campanha.",
+            "As presidenciais passaram, e esse abrigo pode agora ganhar morada. Este sábado, 28 de novembro, Isaltino Morais, um dos maiores apoiantes de Gouveia e Melo, apresenta um novo partido: o Fazemos. É natural que procure apoio entre quem esteve ao lado do almirante. Daí a pergunta, que é simples e não é uma acusação: o TDT vai continuar “livre de amarras”, ou vai voltar à política partidária, agora com o Fazemos?",
+            "Não há mal nenhum em ter partido. Mas quem fez da independência a sua principal bandeira deve uma explicação aos trofenses se a trocar por uma sigla um ano depois.",
+          ],
+        },
+      ],
+      imagens: [
+        { src: "/images/artigos/livres-de-amarras-titulo.webp", w: 1080, h: 1350, alt: "Imagem do artigo: «Livres de amarras, ou Fazemos?», de Ivo Silva, Iniciativa Liberal Trofa." },
+        { src: "/images/artigos/livres-de-amarras-frase.webp", w: 1080, h: 1350, alt: "Frase do artigo: «Não há mal nenhum em ter partido. Mas quem fez da independência a sua principal bandeira deve uma explicação aos trofenses se a trocar por uma sigla um ano depois.»" },
+      ],
+    },
     {
       titulo: "Habitação: as boas intenções não chegam",
       temas: ["habitacao"],

@@ -31,6 +31,7 @@ const paginas = [
   "/imprensa/artigos",
   "/imprensa/comunicados",
   "/imprensa/comunicados/metro-ligeiro-ate-a-trofa",
+  "/imprensa/artigos/livres-de-amarras-ou-fazemos",
   "/eventos/lit",
   "/dia-do-concelho",
   "/25-de-novembro",
