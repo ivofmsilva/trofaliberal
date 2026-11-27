@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Grafico from "@/components/dados/Grafico";
 import ImpostosMunicipais from "@/components/dados/ImpostosMunicipais";
+import OrcamentoEPago from "@/components/dados/OrcamentoEPago";
 import TaxasLocais from "@/components/dados/TaxasLocais";
 import { compacto, milhoes, numero } from "@/lib/dados/formatar";
 import {
@@ -38,7 +39,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Finanças do município",
-  description: "Receitas, despesas, dívida, orçamento e impostos locais da Câmara Municipal da Trofa, desde 2010 e para 2026, com base nos relatórios de gestão e contas do município e no INE.",
+  description: "Receitas, despesas, dívida, orçamento (o aprovado e o que se paga, comparado com os concelhos próximos) e impostos locais da Câmara Municipal da Trofa, desde 2010 e para 2027, com base nos relatórios de gestão e contas do município e no INE.",
 };
 
 const ultimo = (s: SerieContas) => s.valores[s.valores.length - 1];
@@ -201,6 +202,7 @@ export default function Financas() {
               ["taxas", "Taxas e impostos"],
               ["despesas", "Despesas"],
               ["divida", "Dívida"],
+              ["execucao", "Aprovado e pago"],
               ["orcamento", "Orçamento 2026"],
               ["habitante", "Por habitante"],
             ].map(([id, nome]) => (
@@ -493,6 +495,8 @@ export default function Financas() {
             Assembleia Municipal.
           </p>
         </section>
+
+        <OrcamentoEPago />
 
         <section aria-label="Orçamento 2026">
           <Titulo
