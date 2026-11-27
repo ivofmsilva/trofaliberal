@@ -14,7 +14,9 @@ type Artigo = {
   proposta?: { titulos?: string[]; blocos: Bloco[] };
   sugestoes?: Sugestao[];
   confirmar?: string[];
+  final?: { blocos: Bloco[]; confirmar?: string[] }; // a versão que o autor fechou; abre primeiro
 };
+type Vista = "final" | "original" | "sugestoes";
 
 const base64 = (s: string) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
 
@@ -146,16 +148,33 @@ function Sugestoes({ a }: { a: Artigo }) {
           </ol>
         </div>
       )}
-      {a.confirmar && (
-        <div>
-          <h3 className="font-display text-2xl font-bold text-navy">A confirmar antes de publicar</h3>
-          <ul className="mt-4 space-y-2 text-base">
-            {a.confirmar.map((c) => (
-              <li key={c} className="ml-5 list-disc marker:text-pink">
-                {c}
-              </li>
-            ))}
-          </ul>
+      {a.confirmar && <Confirmar itens={a.confirmar} />}
+    </div>
+  );
+}
+
+function Confirmar({ itens }: { itens: string[] }) {
+  return (
+    <div>
+      <h3 className="font-display text-2xl font-bold text-navy">A confirmar antes de publicar</h3>
+      <ul className="mt-4 space-y-2 text-base">
+        {itens.map((c) => (
+          <li key={c} className="ml-5 list-disc marker:text-pink">
+            {c}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Final({ f }: { f: NonNullable<Artigo["final"]> }) {
+  return (
+    <div className="space-y-10">
+      <Blocos blocos={f.blocos} />
+      {f.confirmar && (
+        <div className="rounded-2xl bg-sun/30 px-5 py-4">
+          <Confirmar itens={f.confirmar} />
         </div>
       )}
     </div>
@@ -165,7 +184,7 @@ function Sugestoes({ a }: { a: Artigo }) {
 export default function Artigos({ cifrado }: { cifrado: { iv: string; dados: string } }) {
   const [artigos, setArtigos] = useState<Artigo[] | null>(null);
   const [erro, setErro] = useState(false);
-  const [vista, setVista] = useState<Record<number, "original" | "sugestoes">>({});
+  const [vista, setVista] = useState<Record<number, Vista>>({});
 
   useEffect(() => {
     // A chave vem no link; fica guardada nesta sessão, para a página continuar a abrir se o fim do link se perder.
@@ -208,21 +227,21 @@ export default function Artigos({ cifrado }: { cifrado: { iv: string; dados: str
 
       {artigos.map((a, i) => {
         const temSugestoes = !!(a.proposta || a.sugestoes || a.confirmar);
-        const v = vista[i] ?? "original";
+        const separadores: [Vista, string][] = [
+          ...(a.final ? ([["final", "Versão final"]] as [Vista, string][]) : []),
+          ["original", a.final ? "Primeira versão" : "Texto original"],
+          ...(temSugestoes ? ([["sugestoes", "Sugestões"]] as [Vista, string][]) : []),
+        ];
+        const v = vista[i] ?? (a.final ? "final" : "original");
         return (
           <article key={a.titulo} id={`artigo-${i + 1}`} className="scroll-mt-24 border-t-4 border-navy/10 pt-10 mt-14">
             <p className="text-xs font-bold uppercase tracking-widest text-pink">
               Artigo {i + 1} de {artigos.length} · {a.tema}
             </p>
             <h2 className="font-display mt-2 text-3xl font-bold leading-tight text-navy md:text-4xl">{a.titulo}</h2>
-            {temSugestoes && (
-              <div role="tablist" aria-label="Ver" className="mt-5 inline-flex rounded-full bg-mist p-1 text-sm font-bold">
-                {(
-                  [
-                    ["original", "Texto original"],
-                    ["sugestoes", "Sugestões"],
-                  ] as const
-                ).map(([id, nome]) => (
+            {separadores.length > 1 && (
+              <div role="tablist" aria-label="Ver" className="mt-5 inline-flex flex-wrap rounded-full bg-mist p-1 text-sm font-bold">
+                {separadores.map(([id, nome]) => (
                   <button
                     key={id}
                     type="button"
@@ -236,7 +255,9 @@ export default function Artigos({ cifrado }: { cifrado: { iv: string; dados: str
                 ))}
               </div>
             )}
-            <div className="mt-6">{v === "sugestoes" ? <Sugestoes a={a} /> : <Blocos blocos={a.blocos} />}</div>
+            <div className="mt-6">
+              {v === "final" && a.final ? <Final f={a.final} /> : v === "sugestoes" ? <Sugestoes a={a} /> : <Blocos blocos={a.blocos} />}
+            </div>
             <button
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
