@@ -15,7 +15,7 @@ export default function ReverArtigos() {
     <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
       <p className="text-sm font-bold uppercase tracking-[0.25em] text-pink">Só para o núcleo · por publicar</p>
       <h1 className="font-display mt-2 text-4xl font-bold text-navy">Artigos de opinião para rever</h1>
-      <p className="mt-3 text-lg text-ink/80">Três artigos antes de saírem. Lê e diz o que achas.</p>
+      <p className="mt-3 text-lg text-ink/80">Os artigos antes de saírem. Lê e diz o que achas.</p>
       <div className="mt-8">
         <Artigos cifrado={CIFRADO} />
       </div>
