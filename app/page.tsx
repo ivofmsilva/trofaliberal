@@ -14,10 +14,12 @@ import BannerMetro from "@/components/BannerMetro";
 import BannerNatal from "@/components/BannerNatal";
 import InstagramImage from "@/components/InstagramImage";
 import PedirConvite from "@/components/PedirConvite";
-import { BannerComemoracao, BannerFesta } from "@/components/BannerComemoracao";
+import { BannerAviso, BannerComemoracao, BannerFesta, BannerMomento } from "@/components/BannerComemoracao";
+import { avisosDeHoje } from "@/lib/avisos";
 import { comemoracoes } from "@/lib/comemoracoes";
 import { ativasPorOrdem, diaDoConcelho, vinteCincoNovembro } from "@/lib/datasAnuais";
 import { festas, fotoDasFestas } from "@/lib/festas";
+import { comBanner } from "@/lib/historiaIL";
 import { links } from "@/lib/site";
 import { ultimasPublicacoes } from "@/lib/publicacoes";
 
@@ -72,8 +74,11 @@ export default function Home() {
     { data: diaDoConcelho, titulo: "Dia do Concelho", banner: <BannerConcelho key="concelho" /> },
     { data: vinteCincoNovembro, titulo: "25 de Novembro", banner: <Banner25Novembro key="25-novembro" /> },
     ...comemoracoes.map((c) => ({ data: c.data, titulo: c.data.titulo, banner: <BannerComemoracao key={c.data.slug} c={c} /> })),
+    ...comBanner().map((m) => ({ data: m.data, titulo: m.data.titulo, banner: <BannerMomento key={m.id} m={m} /> })),
     ...festas.map((f) => ({ data: f.data, titulo: `Festa: ${f.nome}`, banner: <BannerFesta key={f.id} f={f} imagem={fotoDasFestas} /> })),
   ]);
+  // Avisos de um dia só (lib/avisos.ts), antes de tudo.
+  const avisos = avisosDeHoje();
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0088dc] via-[#0070cb] to-[#0056ae] text-white">
@@ -129,6 +134,7 @@ export default function Home() {
       <div className="pt-20">
         <CarrosselBanners
           titulos={[
+            ...avisos.map((a) => a.titulo),
             ...datas.map((d) => d.titulo),
             "Metro para a Trofa",
             "Trofa no topo da Educação",
@@ -140,6 +146,7 @@ export default function Home() {
           ]}
         >
           {[
+            ...avisos.map((a) => <BannerAviso key={a.id} a={a} />),
             ...datas.map((d) => d.banner),
             <BannerMetro key="metro" />,
             <BannerEducacao key="educacao" />,
